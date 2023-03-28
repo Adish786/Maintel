@@ -1,0 +1,31 @@
+// Positioning container
+.net-neutrality-banner {
+    padding: 1.25em;
+    font-size: 1.25rem;
+
+    &__icon {
+        position: relative;
+        top: 18px;
+        display: inline-block;
+        width: 62px;
+        height: 49px;
+        padding-right: 70px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 0.625rem;
+        right: 1rem;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: transparent;
+    }
+}

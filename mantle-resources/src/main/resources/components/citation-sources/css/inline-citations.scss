@@ -1,0 +1,17 @@
+.mntl-inline-citation {
+    text-decoration: none;
+    vertical-align: super;
+    font-size: 75%;
+    cursor: pointer;
+    color: #0000EE;
+    position: relative;
+    padding-bottom: 15px;
+
+    &:before {
+        content: '[';
+    }
+
+    &:after {
+        content: ']';
+    }
+}

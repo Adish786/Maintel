@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-module" resourcePath="/components/digital-issue/di-module/di-module.ftl">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Default Digital Issue Module</displayName>
+            <description>The base digital issue module, with cards in a default grid layout and a title</description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES (IN "MODULES")
+                - "module-layout": set the component to use for the each section within "modules" (Ex: "mntl-di-two-column-block")
+                - "variation": set an extra class on the module (Ex: "mntl-di-two-column-block--staggered")
+                - "text-color": set the color for all text in the module (Ex: "#FFFFFF")
+                - "module-title-color": override the text color and be more specific for the title (Ex: "#FFFFFF")
+                - "card-title-color": override the text color and be more specific for the card text (Ex: "#FFFFFF")
+                - "byline-color": override the text color and be more specific for the byline (Ex: "#FFFFFF")
+                - "card-background-color": set a flat color for the card background (Ex: "#FFFFFF")
+                - "background-color": set a flat color for the background (Ex: "#FFFFFF")
+                - "background-image": set an image for the background, which will override a color (Ex: "tistheseason_bkd-6f32c18b5ff6480fb22362da1da67387.jpg")
+
+                # REQUIRED PROPERTIES/COMPONENTS
+
+                ## title
+                The title of the module
+                Default: The specified journey section's shortHeading
+
+                ## digitalIssueCssVariables
+                The map of css variables to apply to the module, pulling from the specified
+                index of the "modules" config list in the BOVD
+
+                # OPTIONAL PROPERTIES/COMPONENTS
+
+                ## titleClass
+                The class for the title
+                Default: "type--unicorn"
+            </documentation>
+
+            <!-- Set the index of the journey section to display articles from -->
+            <!-- and the index of the BOVD module configs to pull from -->
+            <for id="journeySection, digitalIssueSectionConfigs">
+                <property name="index" value="0" type="integer" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-module/di-module.css" />
+
+        <map id="digitalIssueCssVariables">
+            <property name="text-color" value="${@digitalIssueSectionConfigs?.get('text-color')}" onError="ignore" />
+            <property name="module-title-color" value="${@digitalIssueSectionConfigs?.get('module-title-color')}" onError="ignore" />
+            <property name="card-title-color" value="${@digitalIssueSectionConfigs?.get('card-title-color')}" onError="ignore" />
+            <property name="byline-color" value="${@digitalIssueSectionConfigs?.get('byline-color')}" onError="ignore" />
+            <property name="card-background-color" value="${@digitalIssueSectionConfigs?.get('card-background-color')}" onError="ignore" />
+            <property name="background-color" value="${@digitalIssueSectionConfigs?.get('background-color')}" onError="ignore" />
+        </map>
+
+        <list id="class">
+            <property name="variation" value="${@digitalIssueSectionConfigs?.get('variation')}" onError="ignore" />
+        </list>
+
+        <property name="title" value="${@digitalIssueSectionConfigs?.get('section-title-display') == false ? null : @journeySection.shortHeading}" onError="ignore" />
+
+        <component location="background" id="mntl-di-module__background" ref="mntl-universal-image">
+            <property name="tag" value="div" />
+            <property name="role" value="presentation" />
+            <property name="image" value="${@imageConfig != null ? {'objectId': @imageConfig} : null}" onError="ignore">
+                <property name="imageConfig" value="${@digitalIssueSectionConfigs?.get('background-image')}" onError="ignore" />
+            </property>
+
+            <property name="width" value="1500" type="integer" views="mobile" />
+            <property name="width" value="2000" type="integer" views="tablet, pc" />
+            <property name="height" value="0" type="integer" />
+        </component>
+
+        <component location="anchor" id="mntl-di-module__anchor" ref="mntl-toc-anchor">
+            <property name="tocId" value="${T(com.about.mantle.model.tasks.TableOfContentsTask).generateAnchorId(@journeySection.shortHeading)}" />
+        </component>
+
+        <component location="cards" id="mntl-di-module__cards" ref="mntl-document-card-list">
+            <component id="mntl-card-list__bottom" mode="remove" />
+
+            <for id="mntl-card-list-items">
+                <property name="taxonomy" mode="remove" />
+                <property name="cta" mode="remove" />
+                <property name="image" mode="remove" />
+
+                <property name="listItems" value="${@journeySection.journeyDocuments}" />
+                <property name="titleTextClass" value="type--goat-link-bold" />
+                <property name="bylineClass" value="type--rabbit" />
+                <property name="title" value="${@item.value.shortHeading}">
+                    <component-list-item id="item" ref="mntl-card-list-items" />
+                </property>
+
+                <component location="card__top" id="card__media" ref="mntl-universal-image">
+                    <property name="placeholderWidth" mode="remove" />
+                    <property name="placeholderHeight" mode="remove" />
+
+                    <property name="tag" value="div" />
+
+                    <!-- 3:2, 2x render resolution -->
+                    <!-- full content well width -->
+                    <property name="width" value="840" type="integer" views="mobile" />
+                    <property name="height" value="560" type="integer" views="mobile" />
+                    <!-- full content well width -->
+                    <property name="width" value="1600" type="integer" views="tablet" />
+                    <property name="height" value="1066" type="integer" views="tablet" />
+                    <!-- 1/2 content well width -->
+                    <property name="width" value="1220" type="integer" views="pc" />
+                    <property name="height" value="814" type="integer" views="pc" />
+                </component>
+            </for>
+
+            <for id="filters">
+                <property name="upscale" mode="remove" />
+            </for>
+
+            <for id="card__media, card__media.alt">
+                <property name="image" value="${@document?.getImageForUsage('RECIRC')?.objectId != null ? @document.getImageForUsage('RECIRC') : @fallbackImage}">
+                    <property name="document" value="${@item.value.document}">
+                        <component-list-item id="item" ref="mntl-card-list-items" />
+                    </property>
+                    <property name="fallbackImage" value="${{'objectId': messages['defaultPlaceHolderImage'], 'alt': 'placeholder image'}}" />
+                </property>
+            </for>
+        </component>
+
+        <for id="title, tocId, listItems">
+            <property name="journeySection" value="${@journeyStructure.sections[@index]}">
+                <model name="journeyStructure" />
+            </property>
+        </for>
+
+        <for id="digitalIssueCssVariables.p*, class.variation, mntl-di-module__background.image.imageConfig, title">
+            <model name="digitalIssueSectionConfigs" />
+        </for>
+
+        <for id="journeySection, digitalIssueSectionConfigs">
+            <property name="index" value="0" type="integer" />
+        </for>
+    </component>
+
+</components>

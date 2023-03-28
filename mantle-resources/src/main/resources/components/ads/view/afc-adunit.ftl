@@ -1,0 +1,1 @@
+<@component class="adsense adsense-slot afc" adsense_numlinks=model.numLinks adsense_displaylabel=model.displayLabel!"true"></@component>

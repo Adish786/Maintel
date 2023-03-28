@@ -1,0 +1,42 @@
+@import "mntlVariables";
+
+.mntl-sc-block-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title,
+    &__image,
+    &__details,
+    &__button {
+        cursor: pointer;
+    }
+
+    &__image {
+        max-width: 300px;
+    }
+
+    &__brand {
+        font-weight: bold;
+    }
+
+    &__prices:before {
+        content: '(';
+    }
+
+    &__prices:after {
+        content: ')';
+    }
+
+    &__retail-price:not(:only-child) {
+        text-decoration: line-through;
+    }
+
+    &__button {
+        text-decoration: none;
+        color: $color;
+        background-color: $secondary;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 1rem;
+    }
+}

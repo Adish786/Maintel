@@ -1,0 +1,187 @@
+@mixin vendorPrefix($rule, $declarations...) {
+    @each $prefix in '-webkit-', '-moz-', '-ms-', '-o-', '' {
+        #{$prefix}#{$rule}: $declarations;
+    }
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        clear: both;
+        content: ' ';
+        display: table;
+    }
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color;
+    }
+
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: $color;
+    }
+
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: $color;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $color;
+    }
+}
+
+@mixin all-caps($letter-spacing) {
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin circular-cutout {
+    @include border-radius( 100% );
+
+    overflow: hidden;
+}
+
+@mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
+    @if $top-right == 0 and $bottom-right == 0 and $bottom-left == 0 {
+        -webkit-border-radius: $top-left;
+        -moz-border-radius: $top-left;
+        border-radius: $top-left;
+    }
+
+    @else if $top-left > 0 or $top-right > 0 or $bottom-right > 0 or $bottom-left > 0 {
+        -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+        -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+        border-radius: $top-left $top-right $bottom-right $bottom-left;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $spread $color;
+        -moz-box-shadow: inset $top $left $blur $spread $color;
+        box-shadow: inset $top $left $blur $spread $color;
+    }
+
+    @else {
+        -webkit-box-shadow: $top $left $blur $spread $color;
+        -moz-box-shadow: $top $left $blur $spread $color;
+        box-shadow: $top $left $blur $spread $color;
+    }
+}
+
+@mixin transition($transition-property, $transition-time, $method, $delay: 0s) {
+    @include vendorPrefix(transition, $transition-property $transition-time $method $delay);
+}
+
+//TODO: consider collapsing these into 1-2 macros
+@mixin border-side($side, $width, $style, $color) {
+    border-#{$side}-width: $width;
+    border-#{$side}-style: $style;
+    border-#{$side}-color: $color;
+}
+
+@mixin makeArrowUp($width, $color) {
+    @include border-side(bottom, $width, solid, $color);
+    @include border-side(left, $width, solid, transparent);
+    @include border-side(right, $width, solid, transparent);
+}
+
+@mixin makeArrowDown($width, $color) {
+    @include border-side(top, $width, solid, $color);
+    @include border-side(left, $width, solid, transparent);
+    @include border-side(right, $width, solid, transparent);
+}
+
+@mixin makeArrowRight($width, $color) {
+    @include border-side(left, $width, solid, $color);
+    @include border-side(bottom, $width, solid, transparent);
+    @include border-side(top, $width, solid, transparent);
+}
+
+@mixin makeArrowLeft($width, $color) {
+    @include border-side( right, $width, solid, $color);
+    @include border-side( bottom, $width, solid, transparent);
+    @include border-side( top, $width, solid, transparent);
+}
+
+@mixin font-smoothing($value: on) {
+    @if $value == off {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+
+    @else {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@mixin retina($image, $width: 'auto', $height: 'auto') {
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+        background-image: url($image);
+
+        @if not($width == 'auto' or $height == 'auto') {
+            background-size: $width $height;
+        }
+    }
+}
+
+@mixin calculatorInputUnits() {
+    position: relative;
+
+    .input__pre-unit,
+    .input__post-unit {
+        top: 0.3rem;
+        position: absolute;
+        line-height: 2.5;
+    }
+
+    .input__pre-unit {
+        left: 1rem;
+    }
+
+    .input__post-unit {
+        right: 1rem;
+    }
+
+    .input__value::-ms-clear {
+        width: 20px;
+        height: 20px;
+    }
+
+    .input__pre-unit ~ .input__value {
+        padding-left: 2rem;
+    }
+
+    .input__post-unit ~ .input__value {
+        padding-right: 2rem;
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@mixin truncateText($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/**
+ * Make a component the full width of the browsers regardless of its container's layout
+ */
+ @mixin fullWidth() {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}

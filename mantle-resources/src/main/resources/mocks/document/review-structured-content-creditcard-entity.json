@@ -1,0 +1,550 @@
+{
+    "revisionId": "4686281_1559252405520",
+    "authorKey": "216535",
+    "lastEditingAuthorId": "216535",
+    "lastEditingUserId": "153546550369671",
+    "url": "https://www.thebalancemoney.com/chase-sapphire-eserve-4686281",
+    "rootUrl": "https://www.thebalancemoney.com/chase-sapphire-eserve-4686281",
+    "vertical": "MONEY",
+    "docId": 4686281,
+    "slug": "chase-sapphire-eserve",
+    "templateType": "REVIEWSC",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1559252405468
+    },
+    "dates": {
+      "created": 1557151622042,
+      "updated": 1559252405520,
+      "firstPublished": 1556122402836,
+      "lastPublished": 1559252405468
+    },
+    "medicalBoardApproved": false,
+    "noIndex": false,
+    "title": "Chase Sapphire Reserve Review",
+    "socialTitle": "Chase Sapphire Reserve Review",
+    "description": "The Chase Sapphire Reserve® is easily one of the top travel credit cards. It gives far more rewards than current favorites like the Chase Sapphire Preferred® Card or the Capital One® Venture® Rewards Credit Card. The only catch is the card’s $450 annual fee.",
+    "heading": "Chase Sapphire Reserve Review",
+    "primaryImage": {
+      "url": "https://thumbor-dotdash-stable-us-east-1.external1.continual.app.qa.aws.dotdash.com/Wk40jyzdRtbDq2UtX_ODy5NFjWo=/chase-sapphire-46cd4a4245984203a0523f273b3af526.png",
+      "caption": "Chase Sapphire",
+      "owner": "",
+      "alt": "Chase Sapphire",
+      "width": 1274,
+      "height": 802,
+      "id": "",
+      "fileName": "",
+      "objectId": "chase-sapphire-46cd4a4245984203a0523f273b3af526.png",
+      "authorId": "",
+      "user": ""
+    },
+    "primaryVideo": {},
+    "summary": {
+      "title": "Chase Sapphire Reserve Review",
+      "socialTitle": "Chase Sapphire Reserve Review",
+      "heading": "Chase Sapphire Reserve Review",
+      "description": "The Chase Sapphire Reserve® is easily one of the top travel credit cards. It gives far more rewards than current favorites like the Chase Sapphire Preferred® Card or the Capital One® Venture® Rewards Credit Card. The only catch is the card’s $450 annual fee.",
+      "image": {
+        "url": "https://thumbor-dotdash-stable-us-east-1.external1.continual.app.qa.aws.dotdash.com/Wk40jyzdRtbDq2UtX_ODy5NFjWo=/chase-sapphire-46cd4a4245984203a0523f273b3af526.png",
+        "caption": "Chase Sapphire",
+        "owner": "",
+        "alt": "Chase Sapphire",
+        "width": 1274,
+        "height": 802,
+        "id": "",
+        "fileName": "",
+        "objectId": "chase-sapphire-46cd4a4245984203a0523f273b3af526.png",
+        "authorId": "",
+        "user": ""
+      }
+    },
+    "hasTableOfContents": true,
+    "audit": {
+      "clientId": "Helios",
+      "userId": "153546550369671",
+      "lastModified": 1559252405520
+    },
+    "subheading": "Best Travel Card",
+    "guestAuthor": {
+      "link": {
+        "text": "",
+        "uri": ""
+      }
+    },
+    "pages": {
+      "list": [
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 1,
+                "type": "COMPARISONLIST",
+                "data": {
+                  "listA": {
+                    "heading": "What We Like",
+                    "items": {
+                      "list": [
+                        "<p>A large bonus</p>",
+                        "<p>High Reward Rate</p>",
+                        "<p>High Value Benefits</p>",
+                        "<p>Cool Factor - Metal Card</p>",
+                        "<p>No foreign transaction fee</p>"
+                      ],
+                      "totalSize": 5
+                    }
+                  },
+                  "listB": {
+                    "heading": "What We Don't Like",
+                    "items": {
+                      "list": [
+                        "<p>High Annual Fee</p>",
+                        "<p>Needs excellent credit</p>"
+                      ],
+                      "totalSize": 2
+                    }
+                  }
+                }
+              },
+              {
+                "id": 2,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>For years, <a href=\"https://www.lifewire.com/internet-service-provider-isp-2625924\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">Internet Service Providers</a> (ISPs) have been piping Internet access into your home through a <a href=\"https://www.lifewire.com/difference-between-modem-and-router-4159854\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"2\" rel=\"nofollow\">modem and router</a> they deliver, set up, and maintain. The downside of this arrangement is that they usually charge you a monthly equipment rental fee which might seem small on paper but adds up over time. The Motorola MG7700 is a modem and router combo that can put your ISP’s unit to shame with four gigabit-capable LAN ports, dual-band Wi-Fi, and user-friendly setup.</p>"
+                }
+              },
+              {
+                "id": 3,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>We recently reviewed the MG7700 to examine just how well it would perform in an average home environment by evaluating the design, ease of setup, network speeds, and software features.</p>"
+                }
+              },
+              {
+                "id": 4,
+                "type": "TOOL",
+                "data": {
+                  "toolId": "toc-tool"
+                }
+              },
+              {
+                "id": 5,
+                "type": "HEADING",
+                "data": {
+                  "text": "Best in Travel",
+                  "shortText": "Design"
+                }
+              },
+              {
+                "id": 6,
+                "type": "STARRATING",
+                "data": {
+                  "rating": 4.5
+                }
+              },
+              {
+                "id": 7,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The Motorola MG7700 is fairly compact at 9.1 x 2.6 x 2.6 inches with a gray finish and a black stand. On the front of the device, you’ll find several indicator lights that tell you if it’s powered up, whether any traffic is flowing through your network, and if people are connected to your wireless network. The light indicators are easy to see and understand — something you don’t typically find in a modem from your cable company.</p>"
+                }
+              },
+              {
+                "id": 8,
+                "type": "IMAGE",
+                "data": {
+                  "image": {
+                    "url": "https://thumbor-dotdash-stable-us-east-1.external1.continual.app.qa.aws.dotdash.com/oxbfMKx4uWjLO3gjw4SvjloeTPE=/chase_-836271f67ce3470397cbc33ad7d2a75f.jpg",
+                    "caption": "Priority Pass",
+                    "owner": "",
+                    "alt": "Priority Pass",
+                    "width": 1616,
+                    "height": 1080,
+                    "objectId": "chase_-836271f67ce3470397cbc33ad7d2a75f.jpg"
+                  }
+                }
+              },
+              {
+                "id": 9,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The MG7700 has a power port on the back, as well as a coaxial port for connecting your service provider’s cable to the device. There are also four <a href=\"https://www.lifewire.com/local-area-network-816382\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">local area network</a> (LAN) ports if you want to directly plug your computers and other devices into the modem using an Ethernet cable.</p>"
+                }
+              },
+              {
+                "id": 10,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Oddly, there’s a black area between the power port and the top LAN port that has nothing in it, as if there are LAN ports missing. With more devices like smart home hubs requiring you to plug in with Ethernet, it would have been nice to see a few more LAN ports on the back.</p>"
+                }
+              },
+              {
+                "id": 11,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>One thing you’ll want to keep in mind that the modem’s stand makes the nine-inch box best suited for vertical placement. You can still place it on the side but it makes for a rather untidy appearance.</p>"
+                }
+              },
+              {
+                "id": 12,
+                "type": "HEADING",
+                "data": {
+                  "text": "Best in Gas",
+                  "shortText": "Setup Process"
+                }
+              },
+              {
+                "id": 13,
+                "type": "STARRATING",
+                "data": {
+                  "rating": 4
+                }
+              },
+              {
+                "id": 14,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Since the Motorola MG7700 is a combined cable modem and router, you’ll need to plug it into <a href=\"https://www.lifewire.com/introduction-to-network-cables-817868\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">your ISP’s coaxial cable</a> in order to pipe Internet into your home. This can limit your placement locations a bit since coax cables are often installed by your provider in less-than-ideal locations, especially if you live in an apartment building.</p>"
+                }
+              },
+              {
+                "id": 15,
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>The router offered a strong Wi-Fi signal on both 2.4GHz and 5GHz bands on both floors of our home.</p>",
+                  "theme": "EXPERTTIPWARNING"
+                }
+              },
+              {
+                "id": 16,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>If you do get the choice of where it’s installed, you usually want the coax cable to come in from an unobtrusive corner, not sprouting out from the middle of the living room in an unsightly fashion. Unfortunately, that’s bad for routers which work best in a central location of your house or apartment so the signal covers everywhere you need. If you can’t get find a good spot away from other wireless devices, metal, walls, and other barriers that can impede signal, you may want to invest in a coax cable extension.</p>"
+                }
+              },
+              {
+                "id": 17,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>A last but vital thing to know: Motorola’s branding for the device makes clear that it’s designed for Comcast Xfinity, Cox, and Spectrum. If you don’t use one of those ISP carriers, your modem won’t work on the network.</p>"
+                }
+              },
+              {
+                "id": 18,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Information about approved third-party equipment can usually be found on your cable provider’s website. If not, it’s best to call and ask before you buy. We were able to set it up on Spectrum without any trouble.</p>"
+                }
+              },
+              {
+                "id": 19,
+                "type": "HEADING",
+                "data": {
+                  "text": "Annual Fees"
+                }
+              },
+              {
+                "id": 20,
+                "type": "STARRATING",
+                "data": {
+                  "rating": 2.5
+                }
+              },
+              {
+                "id": 21,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The Motorola MG7700 is a 24x8 DOCSIS 3.0 modem that doubles as a wireless router. It has 24 downstream channels (which are lanes that handle network traffic, so the more, the better) allowing it to potentially hit a 1 Gbps download speed. There are eight upstream channels for a maximum 246 Mbps upload. This is a pretty standard set of connectivity protocols that makes it a lot faster than 16x4 modems, but slower than 32x8 ones.</p>"
+                }
+              },
+              {
+                "id": 22,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>And while actual speeds will depend heavily on what your cable provider offers, we tested the modem on Spectrum&#39;s 100 Mbps plan, so although the MG7700 may be advertised to be capable of 1 Gbps download, we never actually hit it. In fact, Motorola cautions that the device is realistically recommended for actual downstream service of 650 Mbps. But since relatively few people are taking advantage of gigabit Internet today (unless you’re gaming, probably), the 24x8 should serve fine for the vast majority of users.</p>"
+                }
+              },
+              {
+                "id": 23,
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>We found that it delivered outstanding speeds, maxing out our 100Mbps Spectrum plan when hard-wired via the LAN ports.</p>",
+                  "theme": "EXPERTTIPIMPORTANT"
+                }
+              },
+              {
+                "id": 24,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>As for the router, it’s AC1900. The “AC” means it has <a href=\"https://www.lifewire.com/dual-band-wireless-networking-explained-818279\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">dual-band</a> support, allowing it to beam wireless signals over two frequencies: 2.4GHz and 5GHz. The 2.4GHz band is slower but has a longer range, while the 5GHz band is faster and less prone to interference from other wireless devices compared with the 2.4GHz band, but this comes at the cost of shorter range. These days, most devices support dual-band Wi-Fi and you can select which band you want to connect to.</p>"
+                }
+              },
+              {
+                "id": 25,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Some advice: It’s often best to connect things such as smart switches and smart bulbs to the 2.4GHz band since they tend to be scattered across the house and reserve the 5GHz one for more bandwidth-hungry devices such as streaming sticks, game consoles, and TVs.</p>"
+                }
+              },
+              {
+                "id": 26,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The “1900” represents the maximum theoretical bandwidth the router is capable of. In this case, the MG7700 could hit 1,900 Mbps, but again, this is only if your cable provider supports it, not to mention other factors like wireless interference due to congested bands and throttling from your provider.</p>"
+                }
+              },
+              {
+                "id": 27,
+                "type": "HEADING",
+                "data": {
+                  "text": "Customer Support"
+                }
+              },
+              {
+                "id": 28,
+                "type": "STARRATING",
+                "data": {
+                  "rating": 4.5
+                }
+              },
+              {
+                "id": 29,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Once we got the modem up and running, it delivered outstanding speeds, reliably maxing out our 100 Mbps Spectrum plan when we were hard-wired via the LAN ports.</p>"
+                }
+              },
+              {
+                "id": 30,
+                "type": "IMAGE",
+                "data": {
+                  "image": {
+                    "url": "https://thumbor-dotdash-stable-us-east-1.external1.continual.app.qa.aws.dotdash.com/5yTpp8LK6ock_WMFBtqQFCuDuMs=/chase_box-32f244a397a24252bc11dee8b699dc13.jpg",
+                    "caption": "Chase Sapphire Reserve Box",
+                    "owner": "",
+                    "alt": "Chase Sapphire Reserve Box",
+                    "width": 3043,
+                    "height": 1697,
+                    "objectId": "chase_box-32f244a397a24252bc11dee8b699dc13.jpg"
+                  }
+                }
+              },
+              {
+                "id": 31,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>When we went wireless, performance varied greatly. As mentioned before, you’ll want to try to place the modem in an area where you can reach the greatest number of devices around your home. But, if like us, you were forced to put the router in an area that isn’t ideal because of coax cable limitations, your wireless signal won’t go as far as you might like.</p>"
+                }
+              },
+              {
+                "id": 32,
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>Overall, if you live in a large apartment or a modestly-sized home, you won’t be disappointed by the performance of the MG7700.</p>",
+                  "theme": "EXPERTTIPTIP"
+                }
+              },
+              {
+                "id": 33,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>We tested the Motorola MG7700 in our 4,500-square-foot home while connected to a couple dozen devices (tablets, gaming consoles, computers, smartphones, etc.). The router offered a strong Wi-Fi signal on both 2.4GHz and 5GHz bands on both floors of our home. Everything from surfing the Web to streaming video was solid within an approximate 2,000-square-foot radius. In the basement and more distant locations of the house, the signal was weak, but that’s to be expected.</p>"
+                }
+              },
+              {
+                "id": 34,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>If you have a large home like us and need stronger, more reliable speeds for numerous devices, some routers come with tri-band instead of the dual-band technology you’ll find in the MG7700. These routers have an extra 5GHz band which translates to faster speeds, more bandwidth, and the ability to connect more devices at the same time. You can also purchase a Wi-Fi extender, so your signal can extend and reach all the dead areas, but those are sometimes finicky to set up.</p>"
+                }
+              },
+              {
+                "id": 35,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Overall, if you live in a large apartment or a modestly-sized home, you won’t be disappointed by the performance of the MG7700.</p>"
+                }
+              },
+              {
+                "id": 36,
+                "type": "HEADING",
+                "data": {
+                  "text": "Foreign Transaction"
+                }
+              },
+              {
+                "id": 37,
+                "type": "STARRATING",
+                "data": {
+                  "rating": 4.5
+                }
+              },
+              {
+                "id": 38,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The MG7700’s built-in software is customizable, too. Once your router is set up, you can go to a specified IP address (the instructions will tell you which one) in your Web browser to change settings, including the name of the default network, enabling password protection, toggling the channels your router will communicate on, and more. There’s also an Advanced page that allows you to set up a <a href=\"https://www.lifewire.com/definition-of-firewall-817568\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">firewall</a> or enable parental controls. Overall, the settings are well laid out, easy to understand, and simple to change.</p>"
+                }
+              },
+              {
+                "id": 39,
+                "type": "HEADING",
+                "data": {
+                  "text": "Rewards"
+                }
+              },
+              {
+                "id": 40,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>At $189.99 (MSRP), the MG7700 isn’t quite as a cheap as standalone modems, which can cost as little as $30, but incorporating both a modem and router into one device makes the price more palatable.</p>"
+                }
+              },
+              {
+                "id": 41,
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>Overall, if you live in a large apartment or a modestly-sized home, you won’t be disappointed by the performance of the MG7700.</p>",
+                  "theme": "EXPERTTIPTIP"
+                }
+              },
+              {
+                "id": 42,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Taking into account the fact that your service providers rental fees can run to $10 to $12 a month, the MG7700 could pay for itself in a little over the year. And the price isn’t unusual for the market, other bestselling modem and router units such as the $199.99 <a href=\"https://www.amazon.com/TP-Link-CR1900-DOCSIS3-0-Wireless-Certified/dp/B0743VCZ1F/?tag&#61;aboutcom02lifewire2-20\" data-component=\"amazon\" data-source=\"affiliate\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">TP-Link Archer CR1900</a> will cost you about the same for a similar set of capabilities.</p>"
+                }
+              },
+              {
+                "id": 43,
+                "type": "HEADING",
+                "data": {
+                  "text": "Similar Cards",
+                  "shortText": "Competition"
+                }
+              },
+              {
+                "id": 44,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The Motorola MG7700 has some close competition, chief among them is <a href=\"https://www.amazon.com/TP-Link-CR1900-DOCSIS3-0-Wireless-Certified/dp/B0743VCZ1F/?tag&#61;aboutcom02lifewire2-20\" data-component=\"amazon\" data-source=\"affiliate\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">TP-Link Archer CR1900 modem/router</a>. It similarly supports 24x8 DOCSIS 3.0, AC1900, and has four gigabit-capable LAN ports, allowing it to handle things such as online gaming and 4K streaming on numerous devices.</p>"
+                }
+              },
+              {
+                "id": 45,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>The one small advantage of the TP-Link Archer CR1900 is that it comes with the Tether app on Android and iOS, allowing you to manage the modem and router from your mobile device rather than being limited to just a Web portal. It’s up to you to decide if that’s worth the extra $10.</p>"
+                }
+              },
+              {
+                "id": 46,
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Check out our other top picks for the <a href=\"https://www.lifewire.com/best-cable-modems-to-buy-4082523\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">best cable modems</a> and the <a href=\"https://www.lifewire.com/best-cable-modem-router-combos-to-buy-4082541\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"2\" rel=\"nofollow\">best cable modem/router combos</a> available today.</p>"
+                }
+              },
+              {
+                "id": 47,
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "Final Verdict",
+                  "html": "<p><strong>Fast and easy to use, this modem/router combo is a must-buy. </strong></p><p><strong><span class=\"ql-cursor\">﻿</span></strong>The Motorola MG 7700 boasts four gigabit-ready LAN ports, delivered blazing fast 100Mbps speeds over dual-band Wi-Fi in our testing, and has outstanding user controls that are easy for anyone to use. It does best in homes of 2,000 square feet and can handle a dozen devices or more. That said, if you’re someone with a larger home or higher bandwidth requirements for a large number of devices, you may be better served by a tri-band router.</p>",
+                  "theme": "EXPERTTIPNOTE"
+                }
+              }
+            ],
+            "totalSize": 47
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "rating": {
+      "value": 4.5
+    },
+    "entity": {
+        "data": {
+          "type": "CREDITCARD",
+          "id": "985a58f7-db75-46b6-8399-eb19c6ba1a76",
+          "name": "darren-card",
+          "issuer": "Discover",
+          "network": "Mastercard",
+          "categories": {
+	            "list": [
+	              "PERSONAL",
+	              "RETAIL",
+	              "SECURED",
+	              "CASHBACK"
+	            ]
+	        },
+	        "creditScores": {
+	            "list": [
+	              "NOT_SPECIFIED"
+	            ]
+	        },
+          "attributes": {
+            "list": [
+              {
+                "attributeDefId": "de7f326d-f4b3-4b72-a8fa-9f61b12487c3",
+                "value": {
+                  "type": "BOOLEAN",
+                  "value": false
+                },
+                "attributeDef": {
+                  "id": "de7f326d-f4b3-4b72-a8fa-9f61b12487c3",
+                  "name": "redeemViaDirectDeposit",
+                  "displayName": "Redeem via Direct Deposit",
+                  "valueType": "BOOLEAN",
+                  "service": "CreditCard",
+                  "audit": {
+                    "userId": "148476225417930",
+                    "lastModified": 1558714089869
+                  }
+                }
+              },
+              {
+                "attributeDefId": "93ac17f3-2f78-45aa-ac0b-1c0a98382813",
+                "value": {
+                  "type": "INTEGER",
+                  "value": 1
+                },
+                "attributeDef": {
+                  "id": "93ac17f3-2f78-45aa-ac0b-1c0a98382813",
+                  "name": "tiers",
+                  "displayName": "Tiers",
+                  "valueType": "INTEGER",
+                  "service": "CreditCard",
+                  "group": "\"=COUNT(AA70:AA113)\":gasPercentage,groceriesPercentage,restaurantsPercentage,barsPercentage,genericOrAllOrOtherTravelPercentage,airlinePercentage,hotelPercentage,airbnbOrOtherShort_TermRentalPercentage,timeSharePercentage,ridesharePercentage,taxiOrLimoPercentage,carRentalPercentage,publicTransitPercentage,cruisesPercentage,trainPercentage,busesPercentage,ferriesPercentage,toursPercentage,travelAgencyPurchasesPercentage,concertTicketsPercentage,streamingServicesPercentage,moviesOrShowsTicketsPercentage,amusementParksPercentage,onlinePurchasesPercentage,autoPartsAndServiceStoresPercentage,officeSupplyStoresPercentage,clothingStoresPercentage,sportingGoodsStoresPercentage,discountStoresPercentage,amazonPercentage,charitiesPercentage,wholesaleClubsPercentage,drugStoresPercentage,homeImprovementStoresPercentage,furniturePercentage,electronicsPercentage,departmentStoresPercentage,groupOfRetailersPercentage,oneSpecificRetailerPercentage,advertisingPercentage,shippingPercentage,telecomPercentage,internetPercentage,allOtherPurchasesPercentage",
+                  "audit": {
+                    "userId": "148476225417930",
+                    "lastModified": 1558714085988
+                  }
+                }
+              }
+            ],
+            "totalSize": 2
+          }
+        }  
+    },
+    "intro": {
+      "list": [
+        {
+          "type": "HTML",
+          "data": {
+            "html": "<p>There are many compelling travel rewards cards on the market, but the Chase Sapphire Reserve is a particularly appealing option. When I evaluate credit cards, I look at three factors: sign-up bonus, points (earning and redeeming) and perks — and this card blows me away on all fronts.</p>"
+          }
+        },
+        {
+          "type": "HTML",
+          "data": {
+            "html": "<p>There’s a $450 annual fee, which, at first, seems quite steep. But when you dig into the benefits the card offers (the $300 travel rebate brings it down to $150 a year in my eyes), you quickly realize that even an infrequent traveler can get tremendous value out of the card.</p>"
+          }
+        }
+      ],
+      "totalSize": 2
+    }
+}

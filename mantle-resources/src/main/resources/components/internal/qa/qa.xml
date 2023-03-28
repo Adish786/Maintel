@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="qaScripts" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Internal</category>
+            <displayName>QA Scripts</displayName>
+            <description>Adds error logger to project.</description>
+            <documentation>
+                ### qaErrorLogger.js
+
+                __`window.onerror(error, url, lineNo, colNo)`__
+
+                ### Arguments
+
+                - __error__ (Type: **string**)
+                
+                - __url__ (Type: **string**)
+                
+                - __lineNo__ (Type: **integer**)
+                
+                - __colNo__ (Type: **integer**)
+
+                ### Returns
+                
+                * (Type: **undefined**): Pushes error object onto **Mntl.jsErrors**.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/components/internal/qa/js/qaErrorLogger.js" />
+	</component>
+
+</components>

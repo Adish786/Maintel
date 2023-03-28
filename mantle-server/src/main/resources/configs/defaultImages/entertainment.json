@@ -1,0 +1,41 @@
+{
+	"id": "image.default.entertainment",
+	"name": "image.default.entertainment",
+	"displayName": "Entertainment Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/entertainment/0/149260618.jpg",
+			"owner" : "Tetra Images/Getty Images",
+			"width" : "2086",
+			"height" : "1440"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/entertainment/0/168919209.jpg",
+			"owner" : "Yagi Studio/Digital Vision/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/entertainment/0/200429986-001.jpg",
+			"owner" : "Steve Bonini/Stone/Getty Images",
+			"width" : "2269",
+			"height" : "1541"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/entertainment/0/476302667.jpg",
+			"owner" : "Christopher Polk/Getty Images Entertainment/Getty Images",
+			"width" : "5184",
+			"height" : "3456"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/entertainment/0/476542223.jpg",
+			"owner" : "Ivan/Moment/Getty Images",
+			"width" : "1255",
+			"height" : "837"
+		}
+	]
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"></xs:include>
+
+	<xs:element name="actions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="action" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="action">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
+				<xs:element name="hostPattern" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="pathPattern" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="header" type="header" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="task" type="model" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="scheme" use="optional" type="xs:string" />
+			<xs:attribute name="method" use="optional" type="xs:string" />
+			<xs:attribute name="name" use="required" type="xs:string" />
+			<xs:attribute name="ssl" type="xs:boolean" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="header">
+		<xs:attribute name="name" use="required" type="xs:string" />
+		<xs:attribute name="value" use="required" type="xs:string" />
+	</xs:complexType>
+
+</xs:schema>

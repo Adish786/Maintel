@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-disqus" resourcePath="/components/widgets/disqus/views/disqus-thread.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Disqus</displayName>
+            <description>Display disqus component on page</description>
+            <documentation>
+                # CSS
+
+                ## .mntl-disqus
+
+                Set minimum height for disqus container. Widget height affects right rail height and therefore ad placement.
+
+                # Model
+
+                ## title
+
+                pulled from the document bessTitle
+
+                ## identifier
+
+                pulled from the documentId
+
+                ## url
+
+                pulled from the requestContext.canonicalUrl
+
+                ## forumName
+
+                Set this property in consul: com.about.globe.disqus.forumName
+            </documentation>
+            <tags>Complete</tags>
+
+            <property name="identifier" value="4148231" type="integer" mode="replace" />
+            <property name="title" value="Best Document Title" mode="replace" />
+        </info>
+        <script path="/static/mantle/components/widgets/disqus/js/disqus.js" group="bottom"></script>
+        <script path="/static/mantle/components/widgets/disqus/js/disqus.evaluated.js" group="bottom" evaluated="true"></script>
+        <stylesheet path="/static/mantle/components/widgets/disqus/css/disqus.css"></stylesheet>
+
+        <for id="identifier, title">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+         <model name="json" id="attrs">
+            <property name="string" value="{'data-scroll-defer-offset': '650'}" />
+        </model>
+
+        <property name="identifier" value="${@document.documentId}" />
+        <property name="title" value="${@document?.heading != null ? @document.heading : @document.bestTitle}" />
+        <property name="url" value="${requestContext.canonicalUrl}" />
+
+        <property id="forumName" value="${@forumNameConfig.value}">
+            <model name="externalConfig" id="forumNameConfig">
+                <property name="key" value="com.about.globe.disqus.forumName" />
+            </model>
+        </property>
+    </component>
+
+    <component id="mntl-disqus-comment-count" resourcePath="/components/widgets/disqus/views/disqus-comment-count.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Disqus Comment Count</displayName>
+        </info>
+
+        <property id="forumName" value="${@forumNameConfig.value}">
+            <model name="externalConfig" id="forumNameConfig">
+                <property name="key" value="com.about.globe.disqus.forumName" />
+            </model>
+        </property>
+    </component>
+</components>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-review-byline" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Review Byline</displayName>
+			<description />
+			<documentation>
+				# Classes
+
+				- __.mntl-review-byline__
+
+				Wraps the first bit of text (i.e. Medically Reviewed by)
+
+				- __.mntl-review-byline\_\_text__
+
+				Wrapper around reviewer name (for tooltip)
+
+				- __.mntl-review-byline\_\_link__
+
+				Wrap reviewer name/link element
+			</documentation>
+
+			<for id="mntl-review-byline__text">
+				<property name="text" value="Reviewed by" mode="replace" />
+			</for>
+
+			<for id="mntl-review-byline__link-wrapper.mntl-review-byline__link">
+				<property name="text" value="Jane Doe" mode="replace" />
+				<property name="uri" value="https://www.verywellhealth.com" mode="replace" />
+			</for>
+
+			<for id="mntl-review-byline__date">
+				<property name="text" value="on November 20, 2019" mode="replace" />
+			</for>
+
+		</info>
+
+        <for id="mntl-review-byline__link.text, mntl-review-byline__link.uri, data-tooltip">
+			<model name="AUTHOR" id="reviewer" onError="ignore">
+				<property name="id" value="${@document.metaData?.review?.authorId}" onError="ignore" />
+			</model>
+		</for>
+
+		<for id="mntl-review-byline__date.text, mntl-bio-tooltip__postlink.text">
+			<property name="lastReviewed" value="${@document.metaData?.review?.lastReviewed}" onError="collapseSilent" />
+		</for>
+
+		<for id="lastReviewed, reviewer.id">
+			<model name="DOCUMENT" id="document" />
+		</for>
+
+		<component location="content" id="mntl-review-byline__text" ref="mntl-text-block">
+			<property name="tag" value="span" />
+			<property name="text" value="Reviewed by" />
+		</component>
+
+		<component location="content" id="mntl-review-byline__prelink" ref="mntl-group" />
+
+		<component location="content" id="mntl-review-byline__link-wrapper" ref="mntl-block">
+			<map id="attrs">
+				<property name="data-tooltip" value="${str.stripToNull(@reviewer?.shortBio) != null ? '' : null}" onError="ignore" />
+			</map>
+
+			<component ref="mntl-tooltip" />
+			<component location="content" ref="mntl-bio-tooltip">
+				<for id="mntl-bio-tooltip__name">
+					<property name="arbitraryDependency" mode="remove" />
+				</for>
+
+				<for id="mntl-bio-tooltip__link">
+					<property name="text" value="${@reviewer.displayName}" mode="replace" onError="ignore" />
+					<property name="uri" value="${@reviewer.bioUrl}" mode="replace" onError="ignore" />
+
+					<property name="safelist" mode="remove" />
+				</for>
+
+				<for id="mntl-bio-tooltip__image-wrapper.class.no-image, mntl-bio-tooltip__image.image">
+					<model name="DOCUMENT" id="document" mode="replace">
+						<property name="url" value="${@reviewer.bioUrl}" onError="collapseSilent" />
+					</model>
+				</for>
+
+				<for id="mntl-bio-tooltip__prelink">
+					<property name="text" value="Reviewed by" />
+				</for>
+
+				<for id="mntl-bio-tooltip__postlink">
+					<property name="text" value="on ${@lastReviewed.toString('MMMM dd, YYYY')}" />
+				</for>
+
+				<for id="mntl-bio-tooltip__bio">
+					<property name="text" value="${@reviewer.shortBio}" mode="replace" onError="collapseSilent" />
+				</for>
+
+				<for id="mntl-bio-tooltip__learn-more.mntl-text-link">
+					<property name="text" value="review board." />
+				</for>
+
+				<property name="collapseIfNoShortBio" value="${@reviewer.shortBio}" onError="collapseSilent" mode="replace" />
+
+				<for id="text, uri, url, collapseIfNoShortBio">
+					<model name="AUTHOR" id="reviewer">
+						<property name="id" value="${@document.metaData?.review?.authorId}" onError="collapseSilent">
+							<model name="DOCUMENT" id="document" />
+						</property>
+					</model>
+				</for>
+			</component>
+
+			<component location="content" id="mntl-review-byline__link" ref="mntl-text-link">
+				<map id="attrs">
+					<property name="data-trigger-link" value="true" views="mobile, tablet" /> <!-- when enabled, will prevent default anchor click on byline link and show tooltip instead -->
+				</map>
+
+				<property name="text" value="${@reviewer?.displayName}" onError="collapseSilent" />
+				<property name="uri" value="${str.stripToNull(@reviewer?.bioUrl)}" onError="ignore" />
+			</component>
+		</component>
+
+		<component location="content" id="mntl-review-byline__date" ref="mntl-text-block">
+			<property name="tag" value="span" />
+			<property name="text" value="on ${@lastReviewed.toString(@dateFormat)}" onError="collapseSilent">
+				<property name="dateFormat" value="MMMM dd, YYYY" />
+			</property>
+
+		</component>
+
+    </component>
+
+</components>

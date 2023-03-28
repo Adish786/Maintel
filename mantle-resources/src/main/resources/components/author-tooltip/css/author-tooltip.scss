@@ -1,0 +1,16 @@
+.mntl-author-tooltip {
+    display: none;
+
+    .mntl-dynamic-tooltip & {
+        display: block;
+    }
+
+    .mntl-pl-component & {
+        display: block;
+        width: 400px;
+    }
+}
+
+.mntl-author-tooltip__image {
+    width: 100%;
+}

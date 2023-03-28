@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <!-- Deprecated - This is useless component, however to make it backward compatible we kept it here, to be removed in future versions
+    Please use the "mntl-carousel" component for a generic carousel or "mntl-carousel-\-journey" for a journey specific carousel with this same structure and behavior -->
+    <component id="mntl-journey-carousel" resourcePath="/components/widgets/journey-carousel/journey-carousel.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Journey Carousel</displayName>
+            <description>
+                A carousel containing a list of journey documents related to current document
+            </description>
+            <documentation>
+                # Properties/Components
+
+                ## postTitleText
+
+                - Optional string that comes after the journey title text (i.e. Guide)
+
+                ## journeyDocumentList
+
+                - List of journey documents related to current document
+
+                ## leftSvgName
+
+                Name of svg to use as left arrow
+
+                ## rightSvgName
+
+                Name of svg to use as right arrow
+
+                ## leftSvgClasses
+
+                Name of svg classes to add to left arrow svg. Needs to at least have __.mntl-journey-carousel--left__
+
+                ## rightSvgClasses
+
+                Name of svg classes to add to right arrow svg. Needs to at least have __.mntl-journey-carousel--right__
+
+                # Classes
+
+                - __.card\_\_current-document__
+
+                Card in carousel that matches current document ID
+
+                - __.card\_\_next-document__
+
+                Card in carousel that is next journey document OR first card if current document is a linked journey document
+
+                - __.mntl-journey-carousel--left__
+
+                Class that determines which element triggers left slide transition
+
+                - __.mntl-journey-carousel--right__
+
+                Class that determines which element triggers right slide transition
+
+                -__.mntl-journey-carousel--linked-journey__
+
+                Class that is applied if the document is linked to the journey and not actually part of the journey
+
+                - __.is-active__
+
+                Added when arrow buttons are able to be clicked
+
+                - __.allow-free-scroll__
+
+                Added when on mobile to allow for free scrolling through carousel (triggered by existence of arrows since they use views="pc")
+
+                #journey-carousel.js
+
+                ### Sets up carousel to move items in the following manner:
+
+                - a) Current card if at the beginning or middle of carousel items
+
+                - b) Right align the last card if at the end of carousel items
+
+                - Sets an on click event listener on mntl-journey-carousel\_\_left/right-arrow to move carousel items
+            </documentation>
+
+            <for id="headerTitle">
+                <property name="postTitleText" value=" Guide" mode="replace" />
+            </for>
+
+            <for id="headerTitle, isSingleSectionJourney, allJourneyDocuments, journeyListSorted, isJourneyRootDocument">
+                <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                    <property name="docId" value="2788277" onError="ignore" />
+                </model>
+            </for>
+
+            <for id="journeyListSorted, journeyRelationshipType, isJourneyRootDocument">
+                <property name="docId" value="2788277" onError="ignore" />
+            </for>
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/journey-carousel/journey-carousel.css" />
+        <script path="/static/mantle/components/widgets/journey-carousel/journey-carousel.js" />
+        <svg id="mntl-journey-carousel__arrow-icon" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+
+        <list id="class">
+            <property name="isLinkedJourney" value="${@isLinkedJourney ? 'mntl-journey-carousel--linked-journey' : ''}">
+                <property name="isLinkedJourney" value="${ 'LINKED'.equals(@journeyRelationshipType.toString())}" onError="collapseSilent">
+                    <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore" />
+                </property>
+            </property>
+        </list>
+
+        <for id="this, headerTitle, allJourneyDocuments, journeyListSorted, isJourneyRootDocument">
+            <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+            </model>
+        </for>
+
+        <for id="journeyListSorted, journeyRelationshipType, isJourneyRootDocument">
+            <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+        </for>
+
+        <!-- If single section journey, do not include root. Otherwise, include it. -->
+        <for id="this, mntl-journey-carousel__item, card__counter.text.size">
+            <property name="journeyDocumentList" value="${@allJourneyDocuments}" >
+                <model name="getAllJourneyDocuments" id="allJourneyDocuments">
+                    <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                        <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+                    </model>
+                    <property name="includeRoot" value="${!@isSingleSectionJourney}">
+                        <model name="isSingleSectionJourney">
+                            <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                                <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+                            </model>
+                        </model>
+                    </property>
+                </model>
+            </property>
+        </for>
+
+        <property name="headerCta" value="Read More In" />
+
+        <property name="headerTitle" value="${@journeyRoot.shortHeading + @postTitleText}" onError="collapseSilent">
+            <property name="postTitleText" value="" />
+        </property>
+
+        <property name="leftSvgName" value="mntl-journey-carousel__arrow-icon" views="pc" />
+        <property name="rightSvgName" value="mntl-journey-carousel__arrow-icon" views="pc" />
+
+        <component-list location="carousel-items" id="mntl-journey-carousel__item" ref="mntl-block" iterable="${@journeyDocumentList}">
+            <property name="tag" value="li" />
+
+            <for id="this, currentJourneyDocument, nextJourneyDocument, journeyDocumentItemIsNextJourney, index, ordinal, document, currentIndex">
+                <component-list-item id="journeyDocumentItem" ref="mntl-journey-carousel__item" />
+            </for>
+
+            <list id="class">
+                <property name="currentJourneyDocument" value="${@journeyDocumentItem.value.document.documentId == @requestContext.urlData.docId ? 'card--current-document' : ''}" />
+
+                <!-- Add next-document class if one of these conditions is met: -->
+                <!-- 1. First iterated item AND document we are on is a linked journey -->
+                <!-- 2. Second iterated item or beyond AND iterated item document id equals next journey document id to document we are on -->
+                <property name="nextJourneyDocument" value="${(@journeyDocumentItem.index == 0 and @isLinkedJourney) or (@journeyDocumentItem.index > 0 and @journeyDocumentItemIsNextJourney) ? 'card--next-document' : ''}">
+                    <property name="journeyDocumentItemIsNextJourney" value="${ @journeyListSorted?.size() >= 1 and @journeyListSorted[0].document.documentId == @journeyDocumentItem.value.document.documentId }" onError="collapseSilent">
+                        <model name="journeyDocumentsAfterToBeforeInclusive" id="journeyListSorted" onError="ignore" />
+                        <component-list-item id="journeyDocumentItem" ref="mntl-journey-carousel__item" />
+                    </property>
+                    <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore" />
+                    <property name="isLinkedJourney" value="${ 'LINKED'.equals(@journeyRelationshipType.toString())}" onError="collapseSilent">
+                        <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore" />
+                    </property>
+                </property>
+            </list>
+
+            <component location="content" id="mntl-journey-carousel__item-card" ref="mntl-card">
+
+                <for id="title, image, url, docId, author">
+                    <property name="document" value="${@journeyDocumentItem.value.document}" />
+                </for>
+
+                <property name="title" value="${@document.bestTitle}" />
+                <property name="image" value="${@document.getImageForUsage('RECIRC') ?: {:}}" />
+                <property name="url" value="${@document.url}" />
+                <property name="docId" value="${@document.documentId}" />
+                <property name="index" value="${@journeyDocumentItem.index}" />
+                <property name="ordinal" value="${@journeyDocumentItem.index + 1}" />
+                <property name="cta" value="Read More" />
+
+                <component location="content" id="card__byline" ref="mntl-text-block">
+                    <property name="tag" value="span" />
+                    <property name="text" value="${@bylineText + @author.displayName}">
+                        <property name="bylineText" value="By " />
+                        <model name="AUTHOR" id="author" onError="ignore" />
+                    </property>
+                </component>
+
+                <component location="card__footer" id="card__counter" ref="mntl-text-block">
+                    <property name="tag" value="span" />
+                    <property name="text" value="${@currentIndex + @textBetween + @size}">
+                        <property name="currentIndex" value="${@journeyDocumentItem.index + 1}" />
+                        <property name="textBetween" value=" of " />
+                        <property name="size" value="${@journeyDocumentList.size()}" />
+                    </property>
+                </component>
+            </component>
+        </component-list>
+
+    </component>
+
+</components>

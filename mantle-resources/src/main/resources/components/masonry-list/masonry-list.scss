@@ -1,0 +1,30 @@
+.masonry-list {
+    @media (min-width: 29em) {
+        column-gap: 0;
+        column-count: 2;
+    }
+
+    @media (min-width: 40em) {
+        column-count: 3;
+    }
+
+    @media (min-width: 56em) {
+        column-count: 4;
+    }
+}
+
+.masonry-list__item {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding: 0.625rem 0;
+
+    //IE fix for overflowing images
+    .justified-columns-wrapper {
+        width: 100%;
+    }
+
+    @media (min-width: 29em) {
+        padding: 0.625rem;
+    }
+}

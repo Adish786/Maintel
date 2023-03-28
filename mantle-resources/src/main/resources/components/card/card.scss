@@ -1,0 +1,151 @@
+@import "mntlVariables";
+
+@mixin invertCard {
+    .card__content {
+        order: 1;
+    }
+
+    .card__media {
+        order: 2;
+        margin-top: 1rem;
+        margin-bottom: auto;
+    }
+
+    &[data-tax-levels]::before {
+        display: none;
+    }
+}
+
+/******
+ * 1) Because the .card div is generated via <@component>, we can't avoid having the data attribute present on the element.
+ *    All we can do is confirm that it's not blank.
+ * 2) Stupid IE tricks
+ * 3) These class styles are used with lazySizes on images
+ * 4) this is duplicated here from image-placeholder.scss due to a historic reason of mantle-grunt (old build system) since there was an issue with Mantle-declared SASS variables with microverticals.
+      It'd be good to have this consolidated into a SASS variable as a future action item.
+ *****/
+
+.card {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 0.7rem 1rem;
+    overflow: hidden;
+    width: 100%;
+    background: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+
+    &[data-tax-levels]:not([data-tax-levels=''])::before { //1
+        display: block;
+        order: 0;
+        content: attr(data-tax-levels);
+        font-size: 0.8rem;
+    }
+
+    &__media {
+        height: 100%; //2
+        margin-bottom: 1rem;
+        order: 1;
+        position: relative;
+
+        .masonry-list-item & {
+            align-self: center;
+        }
+
+        &[data-tag]::after {
+            display: block;
+            content: attr(data-tag);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        display: block;
+
+        // 3
+        &img[data-placeholder='blurry'].lazyload,
+        &img[data-placeholder='blurry'].lazyloading {
+            filter: blur(10px);
+        }
+
+        &img[data-placeholder='blurry'].lazyloaded {
+            filter: none;
+            transition: filter 0.3s ease-in; // 4
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        order: 2;
+        width: 100%;
+    }
+
+    &__header {
+        &[data-kicker]::before {
+            display: block;
+            content: attr(data-kicker);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        box-sizing: border-box;
+        margin-bottom: 0;
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 1.2em;
+    }
+
+    &__footer {
+        order: 3;
+    }
+
+    &[data-cta]:not([data-cta=''])::after { //1
+        display: block;
+        order: 99;
+        margin-top: 1rem;
+        content: attr(data-cta);
+    }
+
+    &.card--no-image {
+        .card__content[data-tag]::before {
+            display: block;
+            content: attr(data-tag);
+        }
+    }
+
+    &.card--numbered {
+        .card__content::after {
+            content: counter;
+        }
+    }
+
+    &.is-inverted {
+        @include invertCard;
+    }
+
+    .masonry-list & {
+        border: 1px solid currentColor;
+    }
+
+    $breakpoints:  (
+        extra-small: 23em,
+        small: 29em
+    );
+
+    @each $breakpoint, $size in $breakpoints {
+        &.is-inverted-#{$breakpoint} {
+            @media (max-width: $size) {
+                @include invertCard;
+            }
+        }
+    }
+}
+
+.mntl-card__byline:after {
+    content: attr(data-byline);
+}

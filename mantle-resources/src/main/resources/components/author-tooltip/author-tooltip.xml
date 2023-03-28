@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-author-tooltip" ref="mntl-tooltip" resourcePath="/components/author-tooltip/view/author-tooltip.ftl">
+        <info>
+			<category>Mantle Components/Article</category>
+			<displayName>Author Tooltip</displayName>
+			<description>
+                This displays an author's information when hovering on their name. An author is anyone that contributes to a document (author, updater, reviewer, etc.) By default it contains the author's image (if they have one), their byline information (descriptor, name, etc.), and their short bio. This is meant to be used with the bylines component and replaces the bio-tooltip component.
+            </description>
+			<documentation>
+                # Classes
+                ## __.mntl-author-tooltip\_\_top--no-image__
+                Class on the top section of the tooltip that will be applied if there is no author image.
+
+                # Properties
+                ## imageWidth
+                Width of the author image.
+
+                ## imageHeight
+                Height of the author image.
+
+                ## imageAlt
+                Alt value of the author image.
+
+                ## imageSrcset
+                Srcset of the author image.
+
+                ## image
+                Author image object.
+
+                ## bio
+                Author's short bio.
+
+                ## learnMoreText
+                Text that prepends the learn more link (i.e. 'Learn about our ').
+
+                ## learnMoreLink
+                The URL of the learn more page.
+
+                ## learnMoreLinkText
+                Text that links to the learn more page.
+
+                # Locations
+                ## preBio
+                Location to insert any vertical specific components such as social links, education info, job info, etc.
+
+                # Dependencies/References
+                ## mntl-tooltip
+                This is ref'ed directly in the component definition of mntl-author-tooltip. It contains scripts that are necessary to load the tooltip.
+
+                ## mntl-attribution\_\_item
+                The mntl-attribution\_\_item component is reused to display the descriptor and name for the author.
+
+                ## mntl-social-nav
+                The mntl-social-nav component is added as a base component that will collapse if the current author is a guest author. Verticals can extend this component to place their desired social network links into the tooltip
+
+                ## attributionItem
+                Contains all the data to be passed in to the above properties.
+
+                ## isGuestAuthor
+                Boolean value to determine whether this is a tooltip for a guest author.
+            </documentation>
+
+            <property name="bio" value="${@attributionItem.getAuthor().shortBio}" mode="replace" />
+            <property name="image" value="${@attributionItem.getBioDocument().getImageForUsage('PRIMARY')}" mode="replace" />
+
+            <for id="mntl-author-tooltip__name">
+                <property name="isCommaSeparatedListItem" value="false" type="boolean" mode="replace" />
+                <property name="collapseIfGuestAuthor" mode="remove" />
+                <property name="descriptor" value="${@attributionItem.getAttribution().descriptor}" mode="replace" />
+                <property name="name" value="${@attributionItem.getAuthor().displayName}" mode="replace" />
+                <property name="uri" value="${@attributionItem.getAuthor().bioUrl}" mode="replace"  />
+                <property name="date" value="${@attributionItem.getAttribution().lastModified?.toString(@dateFormat)}" mode="replace" >
+                    <property name="dateFormat" value="MMMM dd, YYYY" />
+                </property>
+                <property name="dataTooltip" mode="remove" />
+                <property name="dataTriggerLink" mode="remove" />
+            </for>
+
+            <for id="bio, image, descriptor, name, uri, date, dataTooltip">
+                <property name="attributionItem" value="${ @attributionsByGroup[1] }">
+                    <model name="BYLINES" id="attributionsByGroup">
+                        <model name="mockDocument" id="document">
+                            <property name="template" value="structured-content-single-basic-author-tooltip" />
+                        </model>
+                    </model>
+                </property>
+            </for>
+		</info>
+
+        <stylesheet path="/static/mantle/components/author-tooltip/css/author-tooltip.css" />
+        <script path="/static/mantle/components/author-tooltip/js/author-tooltip.js" />
+
+        <!-- properties for author image -->
+        <property name="imageWidth" value="200" type="integer" />
+        <property name="imageHeight" value="200" type="integer" />
+        <property name="imageSrcset" value="${{'minWidth': 40, 'maxWidth': 112, 'sizes': @sizes}}">
+            <property name="sizes" value="80px" />
+        </property>
+        <property name="image" value="${!@isGuestAuthor AND @attributionItem.value.bioDocument != null AND @attributionItem.value.bioDocument.getImageForUsage('PRIMARY')?.isNotEmpty() ? @attributionItem.value.bioDocument.getImageForUsage('PRIMARY') : null}" onError="ignore" />
+
+
+        <property name="bio" value="${@isGuestAuthor ? @document?.guestAuthor?.shortBio : (@isUgcAuthor ? null : @attributionItem.value?.author?.shortBio)}" onError="collapseSilent">
+			<model name="DOCUMENT" id="document" />
+        </property>
+
+		<property name="learnMoreText" value="Learn about our " />
+        <property name="learnMoreLink" value="${messages[@attributionItem.value.attribution.type + '-board-link-url'] ?: messages['default-board-link-url']}" onError="ignore" />
+        <property name="learnMoreLinkText" value="${messages[@attributionItem.value.attribution.type + '-board-link-text'] ?: messages['default-board-link-text']}" onError="ignore" />
+
+		<component location="preBio" id="mntl-author-tooltip__name" ref="mntl-attribution__item">
+            <property name="isCommaSeparatedListItem" value="false" type="boolean" mode="replace" />
+			<property name="descriptor" value="${'AUTHOR'.equals(@attributionItem.value.attribution.type) ? '' : @attributionItem.value.attribution.descriptor}" />
+            <property name="dataTooltip" mode="remove" />
+			<property name="dataTriggerLink" mode="remove" />
+
+            <for id="mntl-attribution__item-icon">
+                <property name="name" value="${ @isNonAuthor ? @iconType : null }" onError="collapseSilent" mode="replace">
+                    <property name="iconType" value="reviewer-icon" />
+                    <property name="isNonAuthor" value="${ !'AUTHOR'.equals(@groupName.key.toString()) AND !'UGC_AUTHOR'.equals(@groupName.key.toString()) }" onError="ignore">
+                        <component-list-item id="groupName" ref="mntl-bylines__group" />
+                    </property>
+                </property>
+            </for>
+
+            <component id="mntl-attribution__author-image" mode="remove" />
+
+        </component>
+
+        <component location="preBio" id="mntl-author-tooltip__social-nav" ref="mntl-social-nav">
+            <property name="collapseIfGuestAuthor" value="${@isGuestAuthor ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <for id="bio">
+            <property name="isUgcAuthor" value="false" type="boolean" />
+        </for>
+
+        <for id="bio, image, collapseIfGuestAuthor">
+            <property name="isGuestAuthor" value="false" type="boolean" />
+        </for>
+
+        <for id="bio, image, collapseIfAuthor, learnMoreLinkText, learnMoreLink">
+			<component-list-item id="attributionItem" ref="mntl-attribution__item" />
+        </for>
+
+    </component>
+
+</components>

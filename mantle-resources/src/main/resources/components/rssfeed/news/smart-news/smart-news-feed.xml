@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../../../xsd/components.xsd">
+
+    <component id="mntl-smart-news-feed" ref="mntl-rss-feed">
+
+        <for id="rssAttributes" mode="replace">
+            <property name="xmlns:content" value="http://purl.org/rss/1.0/modules/content/" />
+            <property name="xmlns:media" value="http://search.yahoo.com/mrss/" />
+            <property name="xmlns:snf" value="http://www.smartnews.be/snf" />
+        </for>
+
+        <component ref="mntl-news-additional-fields" location="channel-additional-fields" />
+        <component ref="mntl-smart-news-additional-fields" location="channel-additional-fields" />
+
+        <for id="mntl-smart-news-item">
+            <property name="newsChannel" value="${@feed.channel}" onError="halt" />
+        </for>
+
+        <for id="channel, newsChannel">
+            <model name="feed" id="feed" onError="halt">
+                <property name="feedName" value="smart-news" />
+            </model>
+        </for>
+
+        <component-list location="channel-items" ref="mntl-smart-news-item" iterable="${@newsChannel.items}">
+            <for id="title, link, description, pubDate, guid, creator, enclosure, content">
+                <component-list-item id="thisItem" ref="mntl-smart-news-item" />
+            </for>
+
+            <property name="title" value="${@thisItem.value.title ?: null}" onError="ignore" />
+            <property name="link" value="${@thisItem.value.link ?: null}" onError="ignore" />
+            <property name="description" value="${@thisItem.value.description ?: null}" onError="ignore" />
+            <property name="pubDate" value="${@thisItem.value.pubDate ?: null}" onError="ignore" />
+            <property name="guid" value="${@thisItem.value.guid ?: null}" onError="ignore" />
+            <property name="creator" value="${@thisItem.value.creator ?: null}" onError="ignore" />
+            <property name="enclosure" value="${@thisItem.value.enclosure ?: null}" onError="ignore" />
+            <property name="content" value="${@thisItem.value.content ?: null}" onError="ignore" />
+
+        </component-list>
+
+    </component>
+
+    <component id="mntl-smart-news-item" resourcePath="/components/rssfeed/news/smart-news/item/item.ftl" />
+
+    <component id="mntl-news-additional-fields" resourcePath="/components/rssfeed/news/channel/news-channel-additional-fields.ftl" />
+
+    <component id="mntl-smart-news-additional-fields" resourcePath="/components/rssfeed/news/smart-news/channel/smart-news-channel-additional-fields.ftl">
+        <property name="path" value="${requestContext.requestUrlWithoutPath}/static/${projectInfo.version}/images/smart-news/" />
+        <property name="lightModeFileName" value="logo-light-mode.png" />
+        <property name="darkModeFileName" value="logo-dark-mode.png" />
+    </component>
+</components>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-prm-external-component-tools" ref="mntl-external-component">
+        <info>
+            <category>Mantle Components/PRM Tools</category>
+            <displayName>PRM External Component Tools</displayName>
+        </info>
+
+        <script path="/static/mantle/static/libs/js/vue.js" />
+        <model name="externalComponent">
+            <property name="serviceId" value="performance-marketing" />
+            <property name="path" value="/static-component" />
+        </model>
+    </component>
+
+    <component id="litho-quiz-tool--pregnancy-calc" ref="mntl-prm-external-component-tools">
+        <info>
+            <category>Mantle Components/PRM Tools</category>
+            <displayName>Lithosphere Quiz Tool - Pregnancy Calculator</displayName>
+        </info>
+
+        <for id="externalComponent">
+            <property name="componentId" value="quiz-tool--pregnancy-calc" />
+        </for>
+    </component>
+
+    <component id="litho-quiz-tool--pregnancy" ref="mntl-prm-external-component-tools">
+        <info>
+            <category>Mantle Components/PRM Tools</category>
+            <displayName>Lithosphere Quiz Tool - Pregnancy</displayName>
+        </info>
+
+        <for id="externalComponent">
+            <property name="componentId" value="quiz-tool--pregnancy" />
+        </for>
+    </component>
+
+    <component id="litho-quiz-tool--meal-delivery" ref="mntl-prm-external-component-tools">
+        <info>
+            <category>Mantle Components/PRM Tools</category>
+            <displayName>Lithosphere Quiz Tool - Meal Delivery</displayName>
+        </info>
+
+        <for id="externalComponent">
+            <property name="componentId" value="quiz-tool--meal-delivery" />
+        </for>
+    </component>
+
+    <component id="litho-quiz-tool--life-insurance" ref="mntl-prm-external-component-tools">
+        <info>
+            <category>Mantle Components/PRM Tools</category>
+            <displayName>Lithosphere Quiz Tool - Life Insurance</displayName>
+        </info>
+
+        <for id="externalComponent">
+            <property name="componentId" value="quiz-tool--life-insurance" />
+        </for>
+    </component>
+
+</components>

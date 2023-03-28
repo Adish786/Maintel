@@ -1,0 +1,41 @@
+{
+	"id": "image.default.people",
+	"name": "image.default.people",
+	"displayName": "People & Relationships Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/people/0/102775173.jpg",
+			"owner" : "Brooke Johnson . Queline Photography/Moment/Getty Images",
+			"width" : "1255",
+			"height" : "837"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/people/0/155954953.jpg",
+			"owner" : "Nick David/Iconica/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/people/0/168359003.jpg",
+			"owner" : "Hero Images/Getty Images",
+			"width" : "1255",
+			"height" : "837"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/people/0/171626680.jpg",
+			"owner" : "Yuri Arcurs/Getty Images",
+			"width" : "2060",
+			"height" : "1457"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/people/0/186570933.jpg",
+			"owner" : "Dougal Waters/Digital Vision/Getty Images",
+			"width" : "1120",
+			"height" : "747"
+		}
+	]
+}

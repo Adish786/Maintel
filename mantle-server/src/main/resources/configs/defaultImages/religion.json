@@ -1,0 +1,41 @@
+{
+	"id": "image.default.religion",
+	"name": "image.default.religion",
+	"displayName": "Religion & Spirituality Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/religion/0/172003644.jpg",
+			"owner" : "Iris Slootheer photography/Moment/Getty Images",
+			"width" : "1262",
+			"height" : "833"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/religion/0/179671858.jpg",
+			"owner" : "Michele Falzone/Digital Vision/Getty Images",
+			"width" : "2123",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/religion/0/200197640-001.jpg",
+			"owner" : "Grant Faint/Photodisc/Getty Images",
+			"width" : "1806",
+			"height" : "1663"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/religion/0/88510904.jpg",
+			"owner" : "Deborah Harrison/Photographer’s Choice/Getty Images",
+			"width" : "2121",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/religion/0/sb10067498d-001.jpg",
+			"owner" : "Bruno Morandi/The Image Bank/Getty Images",
+			"width" : "2117",
+			"height" : "1418"
+		}
+	]
+}

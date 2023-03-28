@@ -1,0 +1,159 @@
+.mntl-pl-component {
+    line-height: 1.3;
+    overflow: hidden;
+
+    + .mntl-pl-component {
+        border-top: 1px solid $border;
+        margin-top: 44px;
+    }
+
+    .tabs-panel {
+        padding: 0 !important;
+    }
+
+    .tabs-content {
+        background-color: $code-bg !important;
+        color: $code-color;
+        padding: 22px !important;
+        overflow-x: scroll;
+
+        ul {
+            margin: 0;
+
+            li + li {
+                margin-top: 8px;
+            }
+        }
+
+        xmp,
+        pre {
+            margin: 0;
+        }
+
+        pre {
+            overflow-x: scroll;
+        }
+
+        .pl-button {
+            display: inline-block;
+            min-width: 124px;
+            padding: 0 14px;
+            line-height: 40px;
+            background-color: $secondary;
+            color: white;
+            text-transform: uppercase;
+            border: 0;
+            box-shadow: none;
+            font-size: 1em;
+            outline: none;
+
+            @include border-radius(3px);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .documentation {
+        max-width: 600px;
+    }
+
+    @media screen and (min-width: $nav-toggle) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.mntl-pl-component-tabs {
+	padding: 0;
+	margin: 0;
+	margin-top: 22px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	background-color: $secondary;
+
+	+.tabs-content.active {
+		display: block;
+	}
+
+	+ .tabs-content {
+		display: none;
+	}
+
+	> li {
+		display: inline-block;
+		text-transform: uppercase;
+
+		&.is-active {
+			border-bottom: 3px solid white;
+		}
+
+		> a {
+			padding: 12px;
+			padding-bottom: 9px;
+			display: block;
+			color: white;
+		}
+	}
+}
+
+.tabs-panel {
+    display: none !important;
+
+    &.is-active {
+        display: block !important;
+    }
+}
+
+.breakpoint-pointers {
+    a {
+        background-color: $pl-color-gray;
+        padding: 5px;
+        border-radius: 3px;
+        border-bottom-right-radius: 0;
+        color: $pl-color-gray-3;
+
+        &.active,
+        &:hover {
+            background-color: $pl-color-primary;
+            color: white;
+
+            &:after {
+                border-top-color: $pl-color-primary;
+            }
+        }
+    }
+}
+
+.breakpoint-pointers {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .breakpoint-pointers {
+		display: flex;
+		justify-content: space-evenly;
+    }
+}
+
+.usage__repository-title,
+.usage__template-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.usage__repository-link {
+    color: #92C3FF;
+    text-decoration: underline;
+}
+
+.usage__repository {
+    margin-bottom: 1rem;
+}
+
+.usage__template-list {
+    padding-left: 1.5rem;
+}

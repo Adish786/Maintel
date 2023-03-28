@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-pushly" ref="mntl-group">
+
+        <info>
+            <category>Mantle Components/Global Elements</category>
+            <displayName>Pushly</displayName>
+
+            <documentation>
+# Depedencies
+
+## pushlyDomainKey
+
+Unique ID per vertical
+			</documentation>
+
+            <property name="pushlyDomainKey" value="J1PinBgTnfha7gKYnpPr0sKefMeCdtrdBpW4" />
+        </info>
+
+        <script group="top" evaluated="true" path="/static/components/vendor/pushly/pushly.evaluated.js" />
+
+        <property id="pushlyDomainKey" value="${@pushlyKey.value}">
+            <model id="pushlyKey" name="externalConfig" onError="collapseSilent">
+                <property name="key" value="com.about.globe.pushly.domainKey" />
+            </model>
+        </property>
+
+    </component>
+
+</components>

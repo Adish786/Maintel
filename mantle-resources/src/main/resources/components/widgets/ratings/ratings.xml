@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="mntl-rating" resourcePath="/components/widgets/ratings/view/rating.ftl">
+        <info>
+            <category>Mantle Components/Ratings</category>
+            <displayName>Rating API</displayName>
+            <description></description>
+            <documentation>
+                Uses **Mntl.utilities.readyAndDeferred** to initialize ratings **POST** events.
+
+                Adds a listener to **$container** for the **mntlRatingUpdate** event and fires an
+                ajax **POST** request when the event is triggered. A successful **POST** fires the
+                **mntlRatingUpdateSuccess** event on **$container**, a failed one fires the
+                **mntlRatingUpdateError** event on **$container**.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            <property name="documentId" value="2242174" mode="replace" />
+        </info>
+
+		<stylesheet path="/static/mantle/components/widgets/ratings/css/rating.css" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+		<script group="bottom" path="/static/mantle/components/widgets/ratings/js/ratings.js" />
+
+		<property name="documentId" value="${@document.documentId}">
+			<model name="DOCUMENT" id="document" />
+		</property>
+	</component>
+
+	<component id="mntl-star-rating" ref="mntl-rating">
+        <info>
+            <category>Mantle Components/Ratings</category>
+            <displayName>Star Rating</displayName>
+            <description></description>
+            <documentation>
+                Adds ratings template.
+
+                Uses **Mntl.utilities.readyAndDeferred** to add event handling to star ratings.
+                Adds **hover** events for non-touch devices and **click** event. **click** fires the
+                **mntlRatingUpdate** event with additional **POST** data.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+
+            <for id="this, rating.userRating">
+                <property name="documentId" value="${2242174L}" mode="replace" />
+            </for>
+            <property name="count" value="5" type="integer" />
+            <property name="text" value="*" />
+        </info>
+		<script group="top" path="/static/mantle/js/vendor/modernizr-mantle.js" />
+		<script group="bottom" path="/static/mantle/components/widgets/ratings/js/star-rating.js" />
+		<for id="this, rating.userRating">
+			<property name="type" value="starRating" />
+			<property name="documentId" value="${@document.documentId}">
+				<model name="DOCUMENT" id="document" />
+			</property>
+		</for>
+		<property name="count" value="5" type="integer" />
+		<property name="rating" value="${@userRating != null and @userRating['starRating'] != null ? @userRating['starRating'].ratingScore : 0}" onError="ignore">
+			<model name="getUserRating" id="userRating" onError="ignore" />
+		</property>
+	</component>
+
+	<component id="mntl-made-it" ref="mntl-rating">
+        <info>
+            <category>Mantle Components/Ratings</category>
+            <displayName>I Made It</displayName>
+            <description></description>
+            <documentation>
+                Adds ratings template.
+
+                Uses **Mntl.utilities.readyAndDeferred** to add **click** events on **a** tags in the
+                **.mntl-made-it** container. **click** toggles **.active** and fires the
+                **mntlRatingUpdate** event with additional **POST** data.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+
+            <for id="this, rating.userRating">
+                <property name="documentId" value="${2242174L}" mode="replace" />
+            </for>
+            <property name="rating" value="5" mode="replace" />
+            <property name="text" value="I made it" />
+        </info>
+		<script group="bottom" path="/static/mantle/components/widgets/ratings/js/made-it.js" />
+		<for id="this, rating.userRating">
+			<property name="type" value="madeIt" />
+			<property name="documentId" value="${@document.documentId}">
+				<model name="DOCUMENT" id="document" />
+			</property>
+		</for>
+		<property name="count" value="1" type="integer" />
+		<property name="rating" value="${@userRating != null and @userRating['madeIt'] != null ? @userRating['madeIt'].ratingScore : 0}">
+			<model name="getUserRating" id="userRating" onError="ignore" />
+		</property>
+	</component>
+
+	<component id="mntl-aggregate-rating" ref="mntl-text-block">
+        <info>
+            <category>Mantle Components/Ratings</category>
+            <displayName>Aggregate Rating</displayName>
+            <description></description>
+            <documentation>
+                Extends **mntl** text block.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+
+            <for id="text.aggregateRating">
+                <property name="documentId" value="2242174" mode="replace" />
+			</for>
+        </info>
+		<property name="text" value="Average ${@aggregateRating != null ? @aggregateRating['starRating'].averageRoundedToHalf : 0} / Count ${@aggregateRating != null ? @aggregateRating['starRating'].count : 0}">
+			<model name="getAggregateRating" id="aggregateRating">
+				<property name="documentId" value="${@document.documentId}">
+					<model name="DOCUMENT" id="document" />
+				</property>
+			</model>
+		</property>
+	</component>
+
+	<component id="mntl-aggregate-star-rating" ref="mntl-rating">
+        <info>
+            <category>Mantle Components/Ratings</category>
+            <displayName>Aggregate Star Rating</displayName>
+            <description></description>
+            <documentation>
+                Extends **mntl** rating.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+
+            <property name="text" value="*" />
+            <property name="rating" value="4" type="integer" mode="replace" />
+            <for id="this, rating.aggregateRating">
+                <property name="type" value="starRating" />
+                <property name="documentId" value="${2242174L}" mode="replace" />
+    		</for>
+        </info>
+		<property name="count" value="5" type="integer" />
+		<for id="this, rating.aggregateRating">
+			<property name="type" value="starRating" />
+			<property name="documentId" value="${@document.documentId}">
+				<model name="DOCUMENT" id="document" />
+			</property>
+		</for>
+		<property name="rating" value="${@aggregateRating != null ? @aggregateRating['starRating'].averageRoundedToHalf : 0}">
+			<model name="getAggregateRating" id="aggregateRating" onError='ignore'/>
+		</property>
+	</component>
+
+    <component id="mntl-recipe-star-rating" resourcePath="/components/widgets/ratings/view/recipe-rating.ftl">
+		<stylesheet path="/static/mantle/components/widgets/ratings/css/rating.css" />
+
+        <svg id="icon-star" path="/static/mantle/svg/icon-star.svg" />
+        <svg id="icon-star-half" path="/static/mantle/svg/icon-star-half.svg" />
+        <svg id="icon-star-empty" path="/static/mantle/svg/icon-star-empty.svg" />
+
+        <property name="rating" value="${@rating}" />
+    </component>
+</components>

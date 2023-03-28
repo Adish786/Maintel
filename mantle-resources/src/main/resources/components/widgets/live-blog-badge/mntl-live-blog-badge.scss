@@ -1,0 +1,12 @@
+@import 'mntlVariables';
+
+.liveBlogBadge {
+    display: block;
+    width: 3.6875rem;
+    height: 1.75rem;
+
+    @media (min-width: $mntl-bp-md) {
+        width: 4.875rem;
+        height: 2.4063rem;
+    }
+}

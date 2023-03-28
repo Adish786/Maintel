@@ -1,0 +1,36 @@
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-sc-block-inlinevideo--bc" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>SC Jumpstart Inline Video</displayName>
+            <description>Inline Jumpstart video player for Structured Content</description>
+            <documentation />
+        </info>
+
+        <component location="content" ref="mntl-bcplayer">
+            <for id="accountId, videoId, nativePlayer, videoMetadata, thumbnailUrl">
+                <property name="videoDocument" value="${@block?.value?.data?.document}" onError="collapseSilent" />
+            </for>
+        </component>
+    </component>
+
+
+    <component id="mntl-sc-block-inlinevideo-deferred--bc" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>SC Jumpstart Deferred Inline Video</displayName>
+            <description>Inline Deferred Jumpstart video player for Structured Content</description>
+            <documentation />
+        </info>
+
+        <component location="content" ref="mntl-bcplayer-deferred">
+            <for id="accountId, videoId, nativePlayer, videoMetadata, thumbnailUrl">
+                <property name="videoDocument" value="${@block?.value?.data?.document}" onError="collapseSilent" />
+            </for>
+
+            <property name="posterLazyLoad" value="true" type="boolean" />
+        </component>
+    </component>
+
+</components>

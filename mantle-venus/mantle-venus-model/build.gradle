@@ -1,0 +1,14 @@
+plugins {
+    id "com.about.plugins.globe-java-conventions"
+}
+ext.sonar_skip = "true"
+
+
+dependencies {
+    api platform(project(":mantle-venus"))
+    api "org.hamcrest:hamcrest"
+    api "com.about:venus-core"
+    api "org.apache.kafka:kafka-clients"
+    api "com.jayway.jsonpath:json-path"
+    api "org.hamcrest:hamcrest-library"
+}

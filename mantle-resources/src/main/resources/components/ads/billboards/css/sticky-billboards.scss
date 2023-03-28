@@ -1,0 +1,48 @@
+@import "mntlVariables";
+
+.mntl-sc-sticky-billboard {
+    $bp-med-2: 54em !default; // default set by structured-content.xml
+
+	height: auto;
+	position: static;
+	width: auto;
+
+    @media screen and (min-width: $bp-med-2) {
+        height: 600px;
+        position: absolute;
+        right: 0;
+        width: 300px;
+    }
+}
+
+.mntl-right-rail {
+    .mntl-sc-sticky-billboard {
+        @media screen and (min-width: $mntl-bp-md) {
+            height: 600px;
+            right: 0;
+            width: 300px;
+        }
+    }
+}
+
+.mntl-sc-sticky-billboard {
+    @media (min-width: $mntl-bp-sm) and (max-width: #{ $mntl-bp-md - .0625em }) {
+        height: auto !important;
+    }
+}
+
+.mntl-article.mntl-article--two-column-left-rail .mntl-sc-sticky-billboard {
+    @media screen and (min-width: $mntl-bp-md)  {
+        height: auto;
+        margin: 0 auto;
+        position: static;
+    }
+}
+
+@media(min-width: $mntl-bp-md) {
+    .mntl-squareFlex1-sticky {
+        &.mntl-sc-sticky-billboard {
+            height: 1050px;
+        }
+    }
+}

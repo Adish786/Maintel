@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-see-more" resourcePath="/components/widgets/see-more/view/see-more.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>See More</displayName>
+            <description>Create a see-more wrapper.</description>
+            <documentation>
+                ### see-more.ftl
+
+                - __model.height__ **number|250**
+
+                Sets data attribute that determines content height.
+
+                - __model.moreText__ **string|More**
+
+                Sets data attributed used to set button text
+
+                - __model.lessText__ **string|Less**
+
+                Sets data attributed used to set button text
+
+                - __model.arrowDirection__ **string|''**
+
+                Sets icon class
+
+                ### see-more.js
+
+                Initializes all **.see-more-wrapper** and adds event handlers to **.see-more-wrapper-btn**.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+            <for id="mntl-placeholder">
+            	<model name="json" id="attrs">
+					<property name="string" value="{'style': 'height: 500px'}"></property>
+				</model>
+            </for>
+        </info>
+
+		<stylesheet path="/static/mantle/components/widgets/see-more/css/see-more.css" />
+		<script path="/static/mantle/components/widgets/see-more/js/see-more.js" />
+		<property name="height" value="250" />
+		<property name="moreText" value="See More" />
+		<property name="lessText" value="See Less" />
+		<component location="content" ref="mntl-placeholder">
+			<model name="json" id="attrs">
+				<property name="string" value="{'style': 'height: 500px'}"></property>
+			</model>
+		</component>
+	</component>
+
+</components>

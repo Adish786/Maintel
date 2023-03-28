@@ -1,0 +1,15 @@
+{
+	"hasofferstracking.betterhelp.com" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	},
+	"/c/2027924" : { 
+		"queryParams" : {
+			"subid1" : "${REQUEST_ID}",
+			"subid2" : "${SITE}"
+			"subid3" : "link"
+		}
+	}
+}

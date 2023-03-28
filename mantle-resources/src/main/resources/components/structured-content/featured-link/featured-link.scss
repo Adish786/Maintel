@@ -1,0 +1,15 @@
+.mntl-sc-block-featuredlink {
+    &__link {
+        padding-right: 5px;
+    }
+
+    &.relateddescription-link::before {
+        content: 'Related:';
+    }
+}
+
+.mntl-sc-block-featuredlink__description {
+    display: inline;
+    padding-left: 10px;
+    border-left: 1px solid #DADADA;
+}

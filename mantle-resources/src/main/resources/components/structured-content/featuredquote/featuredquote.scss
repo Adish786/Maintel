@@ -1,0 +1,21 @@
+.mntl-sc-block-featuredquote {
+    margin: 1.2rem 0;
+
+    &__quote {
+        margin-bottom: 1rem;
+    }
+
+    &__credit {
+        margin-bottom: 0;
+    }
+
+    &__credit-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        .image {
+            width: 56px;
+        }
+    }
+}

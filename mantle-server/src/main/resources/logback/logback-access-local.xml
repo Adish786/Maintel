@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+    <appender name="ACCESS_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/tmp/mantle-logs/mantle-access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/tmp/mantle-logs/mantle-access-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>14</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${encoderPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="ACCESS_FILE"/>
+
+</included>

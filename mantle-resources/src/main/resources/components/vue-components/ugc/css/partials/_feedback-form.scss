@@ -1,0 +1,61 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  .star-rating {
+    margin-bottom: 1.5rem;
+
+    .icon {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+  }
+
+  &__field-label {
+    .feedback-form__rating & {
+      margin-bottom: 0.5rem;
+    }
+
+    .feedback-form__review & {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__input {
+    display: flex;
+    padding: 1rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    align-content: center;
+    margin-top: 1.5rem;
+  }
+
+  &__submit {
+
+    &:disabled {
+      background-color: $color-black-15;
+      cursor: not-allowed;
+
+      &:hover,
+      &:active {
+        background-color: $color-black-15;
+      }
+    }
+  }
+}

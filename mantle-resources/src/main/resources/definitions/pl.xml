@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+	<template id="mntl-pl" ref="mntl-html">
+		<component id="mntl-preconnect" mode="remove" />
+		<component id="mntl-caeslinks" mode="remove" />
+
+		<component location="head" ref="mntl-pl-fonts" />
+
+		<component id="mntl-meta" mode="remove" />
+
+		<component location="head" id="pl-meta" resourcePath="/components/head-tags/meta/view/meta.ftl">
+            <map id="directives">
+                <property name="imagePreviewLarge" value="max-image-preview:large" />
+            </map>
+
+			<property id="title" value="${@vertical} Pattern Library">
+                <property id="vertical" value="${messages['companyName'] ?: ''}" />
+			</property>
+		</component>
+
+		<component location="body" ref="mntl-pl-body" />
+	</template>
+
+	<template id="mntl-pl-json" resourcePath="/components/pl/view/pl-json.ftl">
+		<model name="plNavigation" />
+	</template>
+
+	<template id="mntl-edit-pl-component" ref="mntl-pl-component">
+		<for id="mntl-stylesheet-resources-for-component, mntl-javascript-resources-for-component, mntl-evaluated-javascript-resources-for-component, mntl-bottom-javascript-resources-for-component, mntl-bottom-evaluated-javascript-resources-for-component">
+			<model name="plEditedComponent" id="template" mode="replace">
+				<property name="xml" queryOverride="xml" />
+				<property name="id" queryOverride="id" />
+			</model>
+		</for>
+
+		<for id="mntl-pl-rendered-component.pl">
+			<model name="plEditedComponent" id="component" mode="replace">
+				<property name="xml" queryOverride="xml" />
+				<property name="id" queryOverride="id" />
+			</model>
+		</for>
+	</template>
+
+	<template id="mntl-pl-component" ref="mntl-html">
+		<stylesheet path="/static/mantle/css/reset.css" />
+		<script group="top" path="/static/mantle/js/maybe.js" />
+
+		<component id="mntl-preconnect" mode="remove" />
+		<component id="mntl-meta" mode="remove" />
+		<component id="mntl-caeslinks" mode="remove" />
+
+		<for id="mntl-stylesheet-resources-for-component, mntl-javascript-resources-for-component, mntl-svg-resources-for-component, mntl-evaluated-javascript-resources-for-component, mntl-bottom-javascript-resources-for-component, mntl-bottom-evaluated-javascript-resources-for-component">
+			<property name="manifest" value="${@pl.manifest}">
+				<model name="plRenderedComponentLibrary" id="pl">
+					<model name="plComponentByCategory" id="component">
+						<property name="id" queryOverride="id" />
+					</model>
+				</model>
+			</property>
+			<model name="plRenderedComponent" id="template" mode="replace">
+				<model name="plComponentByCategory" id="component">
+					<property name="id" queryOverride="id" />
+				</model>
+			</model>
+		</for>
+
+		<component location="head" ref="mntl-stylesheet-resources" id="mntl-stylesheet-resources-for-component" />
+		<component location="head" ref="mntl-javascript-resources" id="mntl-javascript-resources-for-component" />
+		<component location="head" ref="mntl-javascript-resources" id="mntl-evaluated-javascript-resources-for-component">
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+        <component location="body" ref="mntl-svg-resources" id="mntl-svg-resources-for-component" />
+		<component location="body" ref="mntl-layout-body">
+			<component location="main" ref="mntl-pl-rendered-component" />
+			<component id="mntl-height-change-listener" mode="remove" />
+		</component>
+
+		<component location="postBody" ref="mntl-javascript-resources" id="mntl-bottom-javascript-resources-for-component">
+			<property name="group" value="bottom" />
+		</component>
+		<component location="postBody" ref="mntl-javascript-resources"  id="mntl-bottom-evaluated-javascript-resources-for-component">
+			<property name="evaluatedOnly" value="true" type="boolean" />
+			<property name="group" value="bottom" />
+		</component>
+
+	</template>
+</templates>

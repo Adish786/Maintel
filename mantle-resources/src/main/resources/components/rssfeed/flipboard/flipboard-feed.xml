@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-flipboard-feed" ref="mntl-rss-feed">
+      <info>
+        <category>Mantle Components/Flipboard</category>
+        <displayName>Feed</displayName>
+      </info>
+
+      <for id="flipboard-item">
+        <property name="verticalChannel" value="${@feed.channel ?: null}" onError="halt" />
+          </for>
+
+          <for id="channel, verticalChannel">
+            <model name="feed" id="feed" onError="halt">
+              <property name="feedName" value="flipboard" />
+            </model>
+          </for>
+
+          <component-list location="channel-items" ref="flipboard-item" iterable="${@verticalChannel.items}">
+              <for id="title, link, description, pubDate, guid, creator, enclosure, categories">
+                <component-list-item id="thisItem" ref="flipboard-item" />
+              </for>
+
+              <property name="title" value="${@thisItem.value.title ?: null}" onError="ignore" />
+              <property name="link" value="${@thisItem.value.link ?: null}" onError="ignore" />
+              <property name="description" value="${@thisItem.value.description ?: null}" onError="ignore" />
+              <property name="pubDate" value="${@thisItem.value.pubDate ?: null}" onError="ignore" />
+              <property name="guid" value="${@thisItem.value.guid ?: null}" onError="ignore" />
+              <property name="creator" value="${@thisItem.value.creator ?: null}" onError="ignore" />
+              <property name="enclosure" value="${@thisItem.value.enclosure ?: null}" onError="ignore" />
+              <property name="categories" value="${@thisItem.value.categories ?: null}" onError="ignore" />
+
+      </component-list>
+
+    </component>
+
+    <component id="flipboard-item" resourcePath="/components/rssfeed/flipboard/item/item.ftl">
+      <info>
+        <category>Mantle Components/Flipboard</category>
+        <displayName>Item</displayName>
+      </info>
+    </component>
+
+</components>

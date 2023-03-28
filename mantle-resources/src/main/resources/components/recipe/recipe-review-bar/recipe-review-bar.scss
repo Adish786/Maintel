@@ -1,0 +1,37 @@
+.mntl-recipe-review-bar {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    &__star-rating {
+        margin-right: 0.5rem;
+    }
+
+    &__rating-count {
+        margin-right: 1rem;
+        line-height: 1.25rem;
+    }
+
+    &.has-comments.has-ratings {
+        .mntl-recipe-review-bar__rating-count {
+            padding-right: 1rem;
+        }
+    }
+
+    .mntl-recipe-review-bar__comment-count,
+    &__rating {
+        cursor: pointer;
+    }
+
+    &.read-only:not(.has-comments) {
+        .mntl-recipe-review-bar__comment-count {
+            cursor: default;
+        }
+    }
+    
+    &.has-ratings {
+        .mntl-recipe-review-bar__rating {
+            margin-right: 0.2813rem;
+        }
+    }
+}

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-meta" resourcePath="/components/head-tags/meta/view/meta.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Base Meta Tags</displayName>
+            <description></description>
+            <documentation>
+                ### meta.ftl
+
+                Insert meta tags for **charset**, **robots**, **viewport**, **description**, **revenueGroup**, **sailthru.tags**, **parsely-tags**, **parsely-section**; **&lt;link rel="canonical" /&gt;**; **&lt;title&gt;**.
+
+                Add locations for pinterest, facebook and twitter meta tags.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <property name="robots" value="NOINDEX, NOFOLLOW, NOODP, NOYDIR" onError="ignore" />
+            <property name="title" value="My Article Title" onError="ignore" />
+            <property name="description" value="My article's description would go here for the meta tags." />
+            <property name="sailthruAuthor" value="Rusty Shackleford" />
+            <property name="sailthruContentType" value="STRUCTUREDCONTENT" />
+            <property name="sailthruVertical" value="DOTDASH" />
+            <list name="sailthruTags" mode="replace">
+                <property name="tag1" value="tag1" />
+                <property name="tag2" value="tag2" />
+                <property name="tag3" value="tag3" />
+            </list>
+        </info>
+        <for id="robots, title, description, sailthruAuthor, sailthruContentType, revenueGroup, parselyTags, parselySection">
+            <model name="fetchDocumentIfValid" id="document" onError="ignore" />
+        </for>
+        <for id="parselyTags">
+             <model name="taxeneRelationParentsPrimaryAndSecondary" onError="ignore">
+                <property name="docId" value="${@document?.documentId}" onError="collapseSilent">
+                    <model name="fetchDocumentIfValid" id="document" onError="ignore" />
+                </property>
+                <property name="includeAncestors" value="true" type="boolean" />
+                <property name="limit" value="10" type="integer" />
+                <property name="projection" value="" type="string" />
+                <property name="rootDocId" value="${@externalConfig.value}">
+                    <model id="externalConfig" name="externalConfig">
+                        <property name="key" value="com.about.globe.homepage.docId" />
+                    </model>
+                </property>
+                <property name="excludeJourneys" value="true" type="boolean" />
+            </model>
+        </for>
+        <for id="sailthruTags, parselySection">
+            <model name="ancestors" onError="ignore">
+                <model name="breadcrumb" onError="ignore" />
+            </model>
+        </for>
+        <for id="sailthruAuthor">
+            <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+            <model name="AUTHOR" id="author" onError="ignore">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+            </model>
+            <model name="ATTRIBUTIONS" id="attributions" onError="ignore">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+                <list id="types">
+                    <property name="author" value="AUTHOR" />
+                </list>
+            </model>
+        </for>
+        <property name="robots" value="${@document?.noIndex == true ? (@document?.hidden == true ? 'NOINDEX, NOFOLLOW' : 'NOINDEX, FOLLOW') : 'NOODP, NOYDIR'}" onError="ignore" />
+        <map id="directives">
+            <property name="noArchive" value="noarchive" />
+            <property name="noSnippet" value="nosnippet" />
+            <property name="imagePreviewNone" value="max-image-preview:none" />
+            <property name="imagePreviewStandard" value="max-image-preview:standard" />
+            <property name="imagePreviewLarge" value="max-image-preview:large" />
+            <property name="videoPreview0" value="max-video-preview:0" />
+            <property name="noTranslate" value="notranslate" />
+            <property name="noImageIndex" value="noimageindex" />
+        </map>
+        <property name="title" value="${@document?.summary?.title}" onError="ignore" />
+        <property name="description" value="${@document?.summary?.description}" onError="ignore" />
+        <property name="revenueGroup" value="${@document?.revenueGroup}" onError="ignore" />
+        <property name="sailthruAuthor" value="${str.stripToNull(@document?.guestAuthor?.link?.text) ?: (@attributionEnabled == true ? (@attributions?.size() > 0 ? @attributions[0]?.author?.displayName : null) : @author?.displayName)}" onError="ignore" />
+        <model name="sailthruContentType" onError="ignore" />
+        <model name="sailthruVertical" onError="ignore" />
+        <model name="sailthruTags" onError="ignore" />
+        <model name="parselySection" onError="ignore" />
+        <model name="parselyTags" onError="ignore" />
+        <component location="content" ref="mntl-meta-fexy" />
+        <component location="content" ref="mntl-meta-pinterest" />
+        <component location="content" ref="mntl-meta-facebook" />
+        <component location="content" ref="mntl-meta-twitter" />
+        <component location="content" ref="mntl-meta-og-taxonomy" />
+    </component>
+
+    <component id="mntl-meta-fexy" resourcePath="/components/head-tags/meta/view/meta-fexy.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Fexy</displayName>
+            <description></description>
+            <documentation>
+                ### meta-fexy.ftl
+
+                * Add fexy meta tag **fexy-relish** .
+
+                ### Dependenciess
+
+                ### relish.enabled
+                - __com.about.globe.relish.enabled__
+                * Set to **true** to enable fexy-relish meta tag.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <property name="recipeId" value="" onError="ignore" />
+        </info>
+
+        <property name="loadRelish" value="${@isRelishEnabled?.value == 'true' and @document?.templateType?.toString() == 'RECIPESC' ? 'true' : null}" onError="collapseSilent">
+            <model name="externalConfig" id="isRelishEnabled">
+                <property name="key" value="com.about.globe.relish.enabled" />
+            </model>
+        </property>
+
+        <property name="recipeId" value="${@document?.documentId?.toString()}" onError="collapseSilent" />
+
+        <for id="recipeId, loadRelish">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+
+    </component>
+
+    <component id="mntl-meta-pinterest" resourcePath="/components/head-tags/meta/view/meta-pinterest.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Pinterest</displayName>
+            <description></description>
+            <documentation>
+                ### meta-pinterest.ftl
+
+                Add pinterest meta tags **name** and **article:section**.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <property name="title" value="My Article Title" onError="ignore" />
+        </info>
+        <property name="title" value="${@document?.bestTitle}" onError="ignore">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </property>
+        <property name="section" value="" onError="ignore" />
+    </component>
+
+    <component id="mntl-meta-facebook" resourcePath="/components/head-tags/meta/view/meta-facebook.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Facebook</displayName>
+            <description></description>
+            <documentation>
+                ###meta-facebook.ftl
+
+                Add meta tags **fb:app_id**, **og:type**, **og:site_name** and **og:url**.
+
+                Conditionally adds **og:title**, **og:description** and **og:image**.
+
+                Loops over **model.socialPresences** and outputs **article:author** meta tag for facebook.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="title" value="9 Important Birthdays to Remember When Planning for Retirement" mode="replace" />
+            <property name="description" value="There are several retirement-related birthdays and dates, some of which could be more important than 65 when it comes to managing your finances." mode="replace" />
+            <map id="image" mode="replace">
+                <property name="caption" value="" />
+                <property name="owner" value="" />
+                <property name="alt" value="retirement-dates" />
+                <property name="width" value="724" type="integer" />
+                <property name="height" value="483" type="integer" />
+                <property name="objectId" value="retirement-dates-58050a405f9b5805c2edfa33.jpg" />
+            </map>
+            <property name="socialPresences" mode="remove" />
+        </info>
+
+        <for id="title, description, opinion, image, socialPresences.author, socialPresences.attributions">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+
+        <model id="appId" name="facebookAppIdForMetaTags" onError="ignore" />
+        <property name="type" value="" />
+        <property name="siteName" value="" />
+        <property name="url" value="${requestContext.urlData.canonicalUrl}" />
+        <property name="title" value="${@document?.socialTitle ?: @document?.bestTitle}" onError="ignore" />
+        <property name="description" value="${@document?.summary?.description}" onError="ignore" />
+        <property name="opinion" value="${@document?.isOpinionContent?:false}" onError="ignore" />
+        <property name="opinionEnabled" value="${@opinionEnabledConfig?.value?:false}" onError="ignore">
+            <model id="opinionEnabledConfig" name="externalConfig" onError="ignore">
+                <property name="key" value="com.about.globe.facebook.opinionMeta.enabled" />
+                <property name="default" value="false" type="boolean" />
+                <!-- If type is not specified, config value is returned as string (causing issues for use in spel expressions) -->
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+        <property name="image" value="${@document?.getImageForUsage('FACEBOOK')}" onError="ignore" />
+        <property name="imageBackgroundColor" value="auto" />
+        <property name="socialPresences" value="${@attributionEnabled == true ? utils.flatMap(@attributions.![author.socialPresence]) : @author?.socialPresence}" onError="ignore">
+            <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+            <model name="AUTHOR" id="author" onError="ignore" />
+            <model name="ATTRIBUTIONS" id="attributions" onError="ignore">
+                <list id="types">
+                    <property name="author" value="AUTHOR" />
+                </list>
+            </model>
+        </property>
+        <list id="filters">
+            <property name="upscale" value="${imageFilter.noUpscale()}" />
+            <!-- this will be ignored if the uncapped image widths config is set to true-->
+            <property name="maxBytes" value="max_bytes(150000)" />
+            <property name="stripicc" value="strip_icc()" />
+        </list>
+
+        <property name="useUncappedImage" value="${@uncapMetaImages.value OR renderUtils.uncappedImageWidthsEnabled()}" onError="ignore">
+            <model name="externalConfig" id="uncapMetaImages">
+                <property name="key" value="com.about.globe.uncappedMetaImages" />
+                <property name="default" value="false" type="boolean"/>
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+    </component>
+
+    <component id="mntl-meta-quiz-facebook" ref="mntl-meta-facebook">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Facebook - Quiz</displayName>
+            <description></description>
+            <documentation>
+                ### meta-facebook.ftl
+
+                Allows the user to share quiz results.
+
+                Override **og:title**, **og:description** and **og:image** meta tags with quiz result meta.
+			</documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="title" value="How Many of These Surprising Lung Cancer Facts Do You Know?" mode="replace" />
+            <property name="description" value="Contrary to popular belief, lung cancer is not a &quot;smoker's disease.&quot; Take this quiz to see if you know other surprising facts about lung cancer." mode="replace" />
+            <map id="image" mode="replace">
+                <property name="caption" value="" />
+                <property name="owner" value="" />
+                <property name="alt" value="retirement-dates" />
+                <property name="width" value="724" type="integer" />
+                <property name="height" value="483" type="integer" />
+                <property name="objectId" value="retirement-dates-58050a405f9b5805c2edfa33.jpg" />
+            </map>
+            <property name="socialPresences" mode="remove" />
+        </info>
+
+        <for id="title, description, image">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+            <model name="QUIZRESULT" id="quizResult" onError="ignore">
+                <property name="quizResults" value="${@document?.results}" onError="ignore">
+                    <model name="DOCUMENT" id="document" onError="ignore" />
+                </property>
+            </model>
+        </for>
+
+        <property name="title" value="${@quizResult == null ? @document?.bestTitle : @quizResult.title}" onError="ignore" mode="replace" />
+        <property name="description" value="${@quizResult == null ? @document?.summary?.description : @quizResult.description}" onError="ignore" mode="replace" />
+        <property name="image" value="${@quizResult == null ? @document?.getImageForUsage('FACEBOOK') : @quizResult.image}" onError="ignore" mode="replace" />
+    </component>
+
+    <component id="mntl-meta-twitter" resourcePath="/components/head-tags/meta/view/meta-twitter.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Twitter</displayName>
+            <description></description>
+            <documentation>
+                ### meta-twitter.ftl
+
+                Adds twitter meta tags **twitter:card** and **twitter:site**.
+
+                Conditionally Adds twitter meta tags **twitter:title**, **twitter:description** and **twitter:image**.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="title" value="The Article Social Title" />
+            <property name="description" value="The article description would go here." />
+            <map id="image" mode="replace">
+                <property name="caption" value="" />
+                <property name="owner" value="" />
+                <property name="alt" value="retirement-dates" />
+                <property name="width" value="724" type="integer" />
+                <property name="height" value="483" type="integer" />
+                <property name="objectId" value="retirement-dates-58050a405f9b5805c2edfa33.jpg" />
+            </map>
+
+        </info>
+        <for id="title, description">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+
+        <for id="image, focal">
+            <property name="twitterImage" value="${@document?.getImageForUsage('TWITTER')}" onError="ignore">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+            </property>
+        </for>
+
+        <for id="fill">
+            <property name="imageBackgroundColor" value="auto" />
+        </for>
+
+        <property name="card" value="summary" />
+        <property name="site" value="" />
+        <property name="title" value="${@document?.socialTitle ?: @document?.bestTitle}" onError="ignore" />
+        <property name="description" value="${@document?.summary?.description}" onError="ignore" />
+        <property name="image" value="${@twitterImage}" onError="ignore" />
+
+        <list id="filters">
+            <property name="upscale" value="${imageFilter.noUpscale()}" />
+            <!-- this will be ignored if the uncapped image widths config is set to true-->
+            <property name="maxBytes" value="max_bytes(150000)" />
+            <property name="stripicc" value="strip_icc()" />
+            <property name="focal" value="${@twitterImage?.focalPoint != null ? imageFilter.focalPoint(@twitterImage?.focalPoint?.x, @twitterImage?.focalPoint?.y) : null}" onError="ignore" />
+        </list>
+
+        <property name="useUncappedImage" value="${@uncapMetaImages.value OR renderUtils.uncappedImageWidthsEnabled()}" onError="ignore">
+            <model name="externalConfig" id="uncapMetaImages">
+                <property name="key" value="com.about.globe.uncappedMetaImages" />
+                <property name="default" value="false" type="boolean"/>
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+    </component>
+
+    <component id="mntl-itemprop-article-section" ref="mntl-meta-tag">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Article Section</displayName>
+            <description></description>
+            <documentation>Extends **mntl-meta-tag**.</documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+        <property name="attributeName" value="name" />
+        <property name="attributeValue" value="articleSection" />
+        <property name="itemprop" value="articleSection" />
+        <property name="content" value="" />
+    </component>
+
+    <component id="mntl-meta-og-taxonomy" resourcePath="/components/head-tags/meta/view/meta-og.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Meta Og Taxonomy</displayName>
+            <description>Adds og meta tag for tax values</description>
+            <documentation></documentation>
+            <previewType>markup</previewType>
+
+            <property name="og:tax0" value="taxonomyValue" />
+        </info>
+    </component>
+
+
+    <component id="mntl-meta-tag" resourcePath="/components/head-tags/meta/view/meta-tag.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Meta Tag</displayName>
+            <description></description>
+            <documentation>
+                Adds arbitrary meta tag.
+
+                - __attributeName__ **String**
+
+                - __attributeValue__ **String**
+
+                - __content__ **String**
+
+                - __itemprop__ **String** [optional]
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="attributeName" value="name" />
+            <property name="attributeValue" value="value" />
+            <property name="content" value="content" />
+        </info>
+    </component>
+
+</components>

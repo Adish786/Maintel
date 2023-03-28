@@ -1,0 +1,48 @@
+.mntl-pl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $pl-color-text;
+}
+
+.mntl-pl-header__logo {
+    padding-left: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.mntl-pl-header__logo--dotdash {
+    width: 105px;
+    height: 25px;
+}
+
+.mntl-pl-header__logo__title {
+    position: relative;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    color: $pl-color-white;
+}
+
+.mntl-pl-header__design-link {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $pl-color-white;
+    padding-right: 1rem;
+
+    &:hover {
+        opacity: 0.8;
+        color: $pl-color-white;
+    }
+
+    .icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        fill: $pl-color-white;
+        top: 1px;
+        position: relative;
+        margin-left: 2px;
+        transform: rotateY(180deg);
+    }
+}

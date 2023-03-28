@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+    <appender name="ACCESS_CONSOLE_LOGSTASH" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${encoderPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="ACCESS_CONSOLE_LOGSTASH" />
+		
+</included>

@@ -1,0 +1,84 @@
+{
+    "list": [
+      {
+        "docId": 4102745,
+        "notificationItems": {
+          "list": [
+            {
+              "startDate": 1559755480000,
+              "endDate": 1565025880000,
+              "type": "PROMO",
+              "content": "Use promo code XXXXX to get mad good deals",
+              "header": "Product Review Taxonomy Deal",
+              "linkText": "Click Here",
+              "linkHref": "https://www.google.com"
+            },
+            {
+              "startDate": 1559755480000,
+              "endDate": 1565025880000,
+              "type": "OTHER",
+              "content": "This is an unrelated notification",
+              "header": "Other Parent Taxonomy Deal",
+              "linkText": "Click Here",
+              "linkHref": "https://www.google.com"
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "docId": 4589346,
+        "notificationItems": {
+          "list": [
+            {
+              "startDate": 1559755480000,
+              "endDate": 1565025880000,
+              "type": "PROMO",
+              "content": "Use promo code XXXXX to get even better deals",
+              "header": "Motorola Deal",
+              "linkText": "Click Here",
+              "linkHref": "https://www.google.com"
+            },
+            {
+              "startDate": 1559755480000,
+              "endDate": 1559755480001,
+              "type": "PROMO",
+              "content": "This deal is expired",
+              "header": "Expired Deal",
+              "linkText": "Click Here",
+              "linkHref": "https://www.google.com"
+            },
+            {
+              "startDate": 1559755480000,
+              "endDate": 1565025880000,
+              "type": "OTHER",
+              "content": "This is an unrelated notification",
+              "header": "Other Motorola Deal",
+              "linkText": "Click Here",
+              "linkHref": "https://www.google.com"
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "docId": 5324742,
+        "notificationItems": {
+          "list": [
+            {
+              "startDate": 1667430000000,
+              "endDate": 1668430000000,
+              "type": "SITEWIDE",
+              "content": "This is sitewide alert",
+              "header": "Sitewide Alert",
+              "linkText": "This is PeopleTV",
+              "linkHref": "https://peopletv.com/",
+              "moniker": "ALERT"
+            }
+          ],
+          "totalSize": 1
+         }
+      }
+    ],
+    "totalSize": 3
+}

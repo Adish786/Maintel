@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-rollaway-group" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Rollaway</displayName>
+            <description>A notification component that rollaways away when reaching a certain scroll distance from the top
+            </description>
+            <documentation>
+
+### rollaway.js
+
+#### Uses the component children to create a block that is able to scroll and rollaway after a certain distance from the top.
+
+
+
+- __rollawayBlockScrollHandler__
+
+  Handles the scroll events for the rollaway. Once the `e.scrollTop` value is greater than the `scrollheight`, the `is-collapsing` class gets applied; causing the rollaway to slide away behind the header.
+
+- __rollawayBlockCloseHandler__
+
+  A `click` event handler scoped to the `.mntl-rollaway-block`
+  component, listens and dynamically readjusts the height of the
+  spacer based on the contents left inside the
+  `.mntl-rollaway-block` DOM using the `rollawayHeightHandler`.
+
+                  Handles the scroll events for the rollaway. Once the **e.scrollTop** value is greater than the **scrollheight**, the **is-collapsing** class gets applied; causing the rollaway to slide away behind the header. 
+
+                  A **click** event handler scoped to the **.mntl-rollaway-block** 
+                  component, listens and dynamically readjusts the height of the 
+                  spacer based on the contents left inside the 
+                  **.mntl-rollaway-block** DOM using the **rollawayHeightHandler**. 
+
+                  If there isn't any content / children in said 
+                  **.mntl-rollaway-block**, then the rollaway closes and removes 
+                  itself from the DOM.
+
+
+                Checks the offsetHeight to get the height value off the 
+                total height of the contents in **.mntl-rollaway-block** and sets 
+                it to the **.mntl-rollaway-spacer**. 
+
+
+- __data-collapsepoint__ `integer`
+
+The scroll distance target from the top of the page, in pixels
+ in which the rollaway activates its `is-collapsing` class and
+ collapses/rolls away into the header.
+
+- __data-scrollheight__ `integer`
+
+                - __data-collapsepoint__ **integer**
+
+                The scroll distance target from the top of the page, in pixels 
+                in which the rollaway activates its **is-collapsing** class and 
+                collapses/rolls away into the header. 
+
+                - __data-scrollheight__ **integer** 
+
+                The distance in pixels (px) the rollaway must scroll away to 
+                activate the **is-scrolling** class.
+
+                - __data-timing__ **integer**
+
+### rollaway.scss
+
+- mntl-rollaway-spacer
+
+  Height needs to be set for the spacer through CSS, this is to stop the page from the document dropping
+  down due to Javascript loading in the height after the page loads. This causes issues in CLS.
+
+  More information can be found in this ticket - https://dotdash.atlassian.net/browse/CMRC-1376
+
+
+            </documentation>
+        </info>
+
+		<script path="/static/mantle/components/widgets/rollaway/rollaway.js" />
+		<script path="/static/mantle/js/mntl-vanilla-scroll.js" />
+		<stylesheet path="/static/mantle/components/widgets/rollaway/rollaway.css" />
+
+    	<component id="mntl-rollaway-block" ref="mntl-block"  location="content">
+            <map name="attrs">
+                <property name="data-collapsepoint" value="800" />
+                <property name="data-timing" value="500" />
+                <property name="data-scrollheight" value="50" />
+            </map>
+        </component>
+
+		<component id="mntl-rollaway-spacer" ref="mntl-block" location="content">
+        	<list id="class">
+            	<property name="js-rollaway-spacer" value="js-rollaway-spacer" />
+        	</list>
+    	</component>
+    </component>
+
+ </components>

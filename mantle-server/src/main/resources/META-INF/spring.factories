@@ -1,0 +1,6 @@
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  com.about.mantle.spring.failureanalyzer.SeleneUnavailableFailureAnalyzer,\
+  com.about.mantle.spring.failureanalyzer.MissingComponentRefsExceptionFailureAnalyzer,\
+  com.about.mantle.spring.failureanalyzer.MissingServiceExceptionFailureAnalyzer,\
+  com.about.mantle.spring.failureanalyzer.GlobeExceptionFailureAnalyzer,\
+  com.about.mantle.spring.failureanalyzer.PropertyDecryptionExceptionFailureAnalyzer

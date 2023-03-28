@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+	<template id="mntl-application-manifest" resourcePath="/components/responses/application-manifest/view/application-manifest.ftl">
+		<for id="name, shortName, description">
+			<model name="DOCUMENT" id="document">
+				<property name="url" value="${requestContext.getCanonicalUrl().replaceFirst('/manifest.json$', '/')}" />
+			</model>
+		</for>
+		<property name="name" value="${@document.summary.title}" />
+		<property name="shortName" value="${@document.shortHeading}" />
+		<property name="description" value="${@document.summary.description}" />
+		<property name="display" value="standalone" />
+		<property name="startUrl" value="/?utm_source=homescreen" />
+		<model name="icons">
+			<property name="srcBase" value="/static/${projectInfo.version}/icons/favicons/apple-touch-icon" />
+			<property name="srcExt" value="png" />
+			<property name="type" value="image/png" />
+			<property name="sizes" value="57x57,76x76,120x120,152x152" />
+		</model>
+	</template>
+</templates>

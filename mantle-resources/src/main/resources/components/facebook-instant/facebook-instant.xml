@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-facebook-instant-tracking" resourcePath="/components/facebook-instant/view/facebook-instant-tracking.ftl">
+        <info>
+            <category>Mantle Components/Analytics</category>
+            <displayName>Facebook Instant</displayName>
+            <description>Adds Facebook Instant Tracking iframes.</description>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <model name="gtmPageView" />
+
+        </info>
+	</component>
+
+
+	<component id="mntl-facebook-instant-html" resourcePath="/components/facebook-instant/view/facebook-instant-html.ftl">
+        <info>
+            <category>Mantle Components/Social</category>
+            <displayName>Facebook Instant</displayName>
+            <description>Adds Facebook Instant Tracking html to Facebook Instant Tracking iframes.</description>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="url" value="http://www.homebase.com/mytaxonomies/myarticleslug-123" onError="ignore" />
+            <property name="heading" value="My Hearty H1 Header for the Article" onError="ignore" />
+            <property name="subheading" value="Some Witty H2 Header for the Article" onError="ignore" />
+            <property name="authorName" value="Zark Muckerberg" onError="ignore" />
+            <property name="authorUrl" value="http://www.visagenovel.com" onError="ignore" />
+            <property name="firstPublished" value='${new org.joda.time.DateTime(1394406538000L)}' mode="replace" onError="ignore" />
+            <property name="lastPublished" value='${new org.joda.time.DateTime(1394406538000L)}' mode="replace" onError="ignore" />
+
+            <for id="mntl-facebook-instant-tracking">
+                <model name="gtmPageView" />
+            </for>
+        </info>
+		<component location="tracking" ref="mntl-facebook-instant-tracking" />
+		<for id="p*">
+			<model name="DOCUMENT" id="document" />
+		</for>
+		<for id="authorName, authorUrl">
+			<model name="AUTHOR" id="author">
+				<model name="DOCUMENT" id="document" />
+			</model>
+		</for>
+		<property name="url" value="${@document.url}" />
+		<property name="heading" value="${@document.heading}" />
+        <property name="headingTag" value="span" />
+		<property name="subheading" value="${@document.subheading}" onError="ignore" />
+        <property name="subheadingTag" value="span" />
+        <!--For desired behavior on facebook, firstPublished and lastPublished are intentionally set to the same value.  -->
+        <property name="kickerHeadingTag" value="span" />
+		<property name="firstPublished" value="${@document.dates.displayed}" />
+		<property name="lastPublished" value="${@document.dates.displayed}" />
+        <property name="authorName" value="${@document.guestAuthor != null ? @document.guestAuthor.link.text : @author.displayName}" />
+        <property name="authorUrl" value="${@document.guestAuthor != null ? @document.guestAuthor.link.uri : @author.bioUrl}" />
+		<property name="adPlacementId" value="490449567810408_490449897810375" />
+		<property name="adWidth" value="300" />
+		<property name="adHeight" value="250" />
+		<property name="adType" value="banner300x250" />
+	</component>
+
+</components>

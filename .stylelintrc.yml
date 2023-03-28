@@ -1,0 +1,6 @@
+# Import mantle-grunt base ruleset
+extends:
+  - './node_modules/@dotdash/mantle-frontend-build/stylelint-config/base-config.yml'
+
+rules:
+# Additional rules or overrides added here will only apply to the commerce codebase.

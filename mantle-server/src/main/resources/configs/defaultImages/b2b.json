@@ -1,0 +1,41 @@
+{
+	"id": "image.default.b2b",
+	"name": "image.default.b2b",
+	"displayName": "Industry Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/b2b/0/103201556.jpg",
+			"owner" : "Andy Sotiriou/Stone/Getty Images",
+			"width" : "1869",
+			"height" : "1608"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/b2b/0/166424227.jpg",
+			"owner" : "Cavan Images/Iconica/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/b2b/0/167455758.jpg",
+			"owner" : "Tetra Images/Brand X Pictures/Getty Images",
+			"width" : "2124",
+			"height" : "1414"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/b2b/0/476850421.jpg",
+			"owner" : "Cultura/Frank van Delft/Riser/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/b2b/0/478851671.jpg",
+			"owner" : "Alistair Berg/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+	]
+}

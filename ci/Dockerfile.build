@@ -1,0 +1,32 @@
+FROM {{BASE_REGISTRY_URL}}/common/gradle:corretto-11.0.11.9-1_gradle-7.0.2_nodejs-14.19.0
+ARG BUILD_TYPE
+ARG GIT_BRANCH
+ARG DRY_RUN
+ARG DEBUG_LOGGING
+ARG STAGING
+ARG PUBLISHED_VERSION
+ARG ARTIFACTORY_BASE_URL
+ARG ARTIFACTORY_USERNAME
+ARG ARTIFACTORY_PASSWORD
+
+# Pull down build-scripts
+ARG GIT_USERNAME
+ARG GIT_TOKEN
+ARG GIT_BUILD_SCRIPT_BRANCH=master
+RUN rm -rf /root/build-scripts && \
+    git clone --branch ${GIT_BUILD_SCRIPT_BRANCH} https://${GIT_USERNAME}:${GIT_TOKEN}@bitbucket.prod.aws.about.com/scm/cicd/build-scripts.git && \
+    rm -rf /root/build-scripts/.git
+
+RUN mkdir /root/build
+WORKDIR /root/build
+ADD . /root/build
+
+# Get Next version to publish into a local variable
+ARG INIT_SCRIPT="--init-script  /root/build-scripts/java_gradle/cicd_build.gradle"
+RUN gradle ${INIT_SCRIPT} cicd-set-version --parallel
+RUN yarn install && yarn build && gradle ${INIT_SCRIPT} clean build mergeChangelog cicd-pre-publish --parallel
+
+# Generate mantle-resources npm tar ball for nexus
+RUN cd /root/build/mantle-resources && sh /root/build-scripts/base/build/parameterized_build.sh nodejs yarn 
+
+RUN gradle ${INIT_SCRIPT} publish --parallel

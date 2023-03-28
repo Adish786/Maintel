@@ -1,0 +1,92 @@
+@import "mntlVariables";
+
+img[src='//:0'] {
+    position: relative;
+
+    &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #CCCCCC;
+        content: ' ';
+    }
+}
+
+/*
+* Styles for all images
+*/
+img {
+    height: auto;
+}
+
+/*
+* Styles for images when JS is disabled
+*/
+.img--noscript,
+.primary-img--noscript {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+    background-color: #c7c7c7;
+}
+
+.no-js {
+    img.lazyload,
+    .mntl-primary-image:not(.primary-img--noscript) {
+        display: none;
+    }
+}
+
+/*
+* Styles for all images
+*/
+img {
+    height: auto;
+}
+
+/*
+* Styles for images when JS is disabled
+*/
+.img--noscript,
+.primary-img--noscript {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+    background-color: #c7c7c7;
+}
+
+.no-js {
+    img.lazyload,
+    .mntl-primary-image:not(.primary-img--noscript),
+    .primary-image__image:not(.primary-img--noscript) {
+        display: none;
+    }
+}
+
+/******
+ * 1) These class styles are used with lazySizes on images
+ * 2) 'ease-in' (or 'linear') is required here for the transition timing as a workaround for an existing Chrome bug where
+      changing the 'filter' value causes some jittering in place on the img
+      (https://stackoverflow.com/questions/47914821/image-moves-on-hover-when-changing-filter-in-chrome/)
+ *****/
+.img-placeholder {
+    background-color: #C7C7C7;
+    height: 0;
+    overflow: hidden;
+
+    /* 1 */
+    img[data-placeholder='blurry'].lazyload,
+    img[data-placeholder='blurry'].lazyloading {
+        filter: blur(10px);
+    }
+
+    img[data-placeholder='blurry'].lazyloaded {
+        filter: none;
+        transition: filter 0.3s ease-in; /* 2 */
+    }
+}

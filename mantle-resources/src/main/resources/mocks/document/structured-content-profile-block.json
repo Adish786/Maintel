@@ -1,0 +1,197 @@
+{
+    "revisionId": "5546344_1658887706748",
+    "authorKey": "251161",
+    "lastEditingAuthorId": "251161",
+    "lastEditingUserId": "153546959002053",
+    "url": "https://www.bhg.com/gardening/plant-dictionary/vine/sweet-pea/",
+    "rootUrl": "https://www.bhg.com/gardening/plant-dictionary/vine/sweet-pea/",
+    "vertical": "BHG",
+    "docId": 5546344,
+    "templateType": "STRUCTUREDCONTENT",
+    "documentState": {
+        "state": "ACTIVE",
+        "activeDate": 1658887098046
+    },
+    "dates": {
+        "created": 1455816096000,
+        "updated": 1526999295000,
+        "firstPublished": 1455816096000,
+        "lastPublished": 1526999295000,
+        "displayed": 1526999295000,
+        "lastMaterialPublished": 1526999295000
+    },
+    "noIndex": false,
+    "title": "Sweet Pea",
+    "socialTitle": "Sweet Pea",
+    "metaDescription": "Sweet peas are one of the garden flowers you can smell before you see them. These easy-to-grow annual vines unfurl delicate blossoms in spring or early summer, perfuming the garden with a pleasing sweet, spicy fragrance. They love cool weather and will wither as soon as the heat of summer sets in. Even with their short growing season in most regions, sweet peas are a prized member of the flower garden and a coveted cutting flower for bouquets. \n\nPopular—to the point of obsession—with gardeners at the turn of the 20th century, sweet peas were the highlight of elaborate plant expositions and the sole focus of some plant societies. Gardeners collected and grew all colors and shapes of the boldly fragrant blossoms. Although they are not as commonly grown today, once you experience the intoxicating fragrance of sweet peas in a twilight garden, you’ll likely plant your own crop year after year.",
+    "description": "Sweet peas are one of the garden flowers you can smell before you see them. These easy-to-grow annual vines unfurl delicate blossoms in spring or early summer, perfuming the garden with a pleasing sweet, spicy fragrance. They love cool weather and will wither as soon as the heat of summer sets in. Even with their short growing season in most regions, sweet peas are a prized member of the flower garden and a coveted cutting flower for bouquets. Popular—to the point of obsession—with gardeners at the turn of the 20th century, sweet peas were the highlight of elaborate plant expositions and the sole focus of some plant societies. Gardeners collected and grew all colors and shapes of the boldly fragrant blossoms. Although they are not as commonly grown today, once you experience the intoxicating fragrance of sweet peas in a twilight garden, you’ll likely plant your own crop year after year.",
+    "heading": "Sweet Pea",
+    "taggedImages": {
+        "list": [
+            {
+                "image": {
+                    "url": "https://static.onecms.io/wp-content/uploads/sites/37/2016/02/31224945/101251101.jpg",
+                    "caption": "",
+                    "owner": "",
+                    "alt": "Lathyrus latifolius 'Pink Pearl' sweetpea",
+                    "width": 550,
+                    "height": 550,
+                    "id": "2c9eff876d144f35822ebd2b81a80d19",
+                    "fileName": "101251101.jpg",
+                    "objectId": "101251101-2c9eff876d144f35822ebd2b81a80d19.jpg",
+                    "encodedThumbnail": "R0lGODlhCAAIAPUAAAEACg8YABkeABslAh8oACEhAD08BD5AAT5JBUMfAEYkAEMuD0M0AFU3AUdNAEtLA0RVB1dVCFZfBlNiAFhhAF1nAFhpDWVQEWFKIGZOImBuDWFzA2pwAm53Dml8AG14AHJ/AHZ/AHeFAHqGBnyFEn6GFtspf9FHheFil+RlkPBntYCBAoyIDYCTBoyPNJSeJIyjFJKlAJujPrq6NqueUKqtVr+ybLjAR73BY9OEZveVfM3CRPSnyf7xvP///wEACiwAAAAACAAIAEUISwBb9KDhQgaMGj4UxKgA4ESKFx5shEDBwoQOEComZCBgAIGACAMedOCxwAGOHD52zLAgYQWJESUaMBABYQOFGxwwBPhQ4ECCCxoCAgA7",
+                    "focalPoint": {
+                        "x": 275,
+                        "y": 275
+                    },
+                    "rightsUsage": "all-uses"
+                },
+                "tags": {
+                    "list": [
+                        "RECIRC"
+                    ],
+                    "totalSize": 1
+                }
+            }
+        ],
+        "totalSize": 1
+    },
+    "summary": {
+        "title": "Sweet Pea",
+        "socialTitle": "Sweet Pea",
+        "heading": "Sweet Pea",
+        "description": "Sweet peas are one of the garden flowers you can smell before you see them. These easy-to-grow annual vines unfurl delicate blossoms in spring or early summer, perfuming the garden with a pleasing sweet, spicy fragrance. They love cool weather and will wither as soon as the heat of summer sets in. Even with their short growing season in most regions, sweet peas are a prized member of the flower garden and a coveted cutting flower for bouquets. Popular—to the point of obsession—with gardeners at the turn of the 20th century, sweet peas were the highlight of elaborate plant expositions and the sole focus of some plant societies. Gardeners collected and grew all colors and shapes of the boldly fragrant blossoms. Although they are not as commonly grown today, once you experience the intoxicating fragrance of sweet peas in a twilight garden, you’ll likely plant your own crop year after year."
+    },
+    "audit": {
+        "clientId": "data-pipeline-bhg",
+        "authParty": "data-services-pipeline",
+        "lastModified": 1658887706748
+    },
+    "metaData": {
+        "url": "",
+        "docId": 5546344,
+        "audit": {
+            "clientId": "data-pipeline-bhg",
+            "authParty": "data-services-pipeline",
+            "lastModified": 1658887797050
+        },
+        "nlp": {
+            "sentimentLabel": "positive",
+            "entities": {
+                "list": [
+                    {
+                        "salience": 0.569488,
+                        "name": "peas",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.13118806,
+                        "name": "Sweet Pea",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.021233367,
+                        "name": "heat",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.01845337,
+                        "name": "gardeners",
+                        "type": "PERSON"
+                    },
+                    {
+                        "salience": 0.014496689,
+                        "name": "garden",
+                        "type": "LOCATION"
+                    },
+                    {
+                        "salience": 0.014114661,
+                        "name": "garden flowers",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.011287653,
+                        "name": "blossoms",
+                        "type": "OTHER"
+                    }
+                ],
+                "totalSize": 7
+            },
+            "categories": {
+                "list": [
+                    {
+                        "name": "/Home & Garden/Gardening & Landscaping",
+                        "confidence": 0.93
+                    }
+                ],
+                "totalSize": 1
+            },
+            "sentimentScore": 0.5,
+            "sentimentMagnitude": 19.8,
+            "rollupEntities": {
+                "list": [
+                    "peas",
+                    "Sweet Pea"
+                ],
+                "totalSize": 2
+            },
+            "rollupCategories": {
+                "list": [
+                    "Home & Garden/Gardening & Landscaping"
+                ],
+                "totalSize": 1
+            },
+            "language": "en"
+        },
+        "contentDistribution": {
+            "shareWithFacebook": true,
+            "destination": "ALL_PARTNERS"
+        },
+        "mTaxonomyIds": {
+            "list": [
+                "11047"
+            ],
+            "totalSize": 1
+        }
+    },
+    "bylines": {
+        "list": [
+            {
+                "id": "0df6a42f9f43404095c8a7c40ff535ab",
+                "type": "AUTHOR",
+                "authorId": "251161",
+                "attribution": "By",
+                "descriptor": "By"
+            }
+        ],
+        "totalSize": 1
+    },
+    "legacyDocument": true,
+    "disclaimer": {
+        "affiliate": false
+    },
+    "legacyMeredith": {
+        "cmsId": "cms__onecms_posts_bhg_450341"
+    },
+    "isOpinionContent": false,
+    "pages": {
+        "list": [
+            {
+                "contents": {
+                    "list": [
+                        {
+                            "id": 1,
+                            "uuid": "8ee38a3b-f5b9-48d0-b0db-150541eadb2c",
+                            "type": "PROFILE",
+                            "data": {
+                                "profileId": "9f890eb3-aad9-4d67-833a-088108dc495a"
+                            }
+                        }
+                    ],
+                    "totalSize": 1
+                }
+            }
+        ],
+        "totalSize": 1
+    }
+}

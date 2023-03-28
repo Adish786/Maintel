@@ -1,0 +1,87 @@
+@import 'mntlMixins';
+
+/*------------------------------------*\
+   #ACCORDION
+\*------------------------------------*/
+
+$border-color: #B1AEAE;
+$background-color: #D4D4D4;
+
+/**
+* 1) Displays collapsible content panels for presenting information in a limited amount of space.
+*/
+.accordion {
+    margin-bottom: 1rem;
+}
+
+/**
+* Accordion list item
+*/
+.accordion__item {
+    margin-bottom: 0.25rem;
+    background: $background-color;
+}
+
+/**
+* Accordion Header
+* 1) Contains the accordion title and icon
+* 2) Display accordion title content in a horizontal fashion
+*/
+.accordion__header {
+    display: flex; /* 2 */
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+}
+
+/**
+* Accordion Title
+*/
+.accordion__title {
+    flex: 0 1 auto;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/**
+* Accordion Icon
+* 1) Contains the accordion title and icon
+*/
+.accordion__icon {
+    width: 1rem;
+    height: 1rem;
+    align-self: center;
+    fill: $border-color;
+    transform: rotate(0);
+    transition: transform 0.15s ease-in-out;
+
+    /**
+    * Accordion icon that appears inside an active accordion__item
+    */
+    .accordion__item.is-active & {
+        transform: rotate(180deg);
+    }
+}
+
+/**
+* Accordion Body
+* 1) The container that houses the accordion content
+*/
+.accordion__body {
+    overflow: hidden;
+    border: 1px dashed $border-color;
+    background: #FFFFFF;
+    transition: all 0.15s ease-in-out;
+    max-height: 0;
+
+    /**
+    * Accordion body that appears inside an active accordion__item
+    */
+    .accordion__item.is-active & {
+        border-top-color: $border-color;
+        max-height: 99em;
+        padding: 0.5rem;
+    }
+}

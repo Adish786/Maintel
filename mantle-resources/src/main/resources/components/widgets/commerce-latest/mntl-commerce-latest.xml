@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-commerce-latest" ref="mntl-external-component">
+        <info>
+            <category>Mantle Components/Widgets/Commerce Latest</category>
+            <displayName>Commerce Latest Widget</displayName>
+            <description>
+                A ref to the Commerce Latest component to make it available across verticals.  List of document cards showing most recently published Commerce Documents from the same Revenue group.
+            </description>
+            <documentation>
+                # Properties
+
+                - Refer to mntl-card-list for commerce-latest__list properties
+
+                The items in the list are expected to be an object containing a document, e.g. TaxeneNodeEx, DocumentTaxeneComposite, etc.
+            </documentation>
+
+            <for id="mntl-card-list-items">
+                <model name="mockDocumentTaxeneList" id="listItems">
+                    <property name="mockName" value="sample-document-taxene-list" />
+                </model>
+            </for>
+
+            <for id="mntl-card-list-items">
+                <property name="listEnd" value="3" type="integer" mode="replace" />
+                <property name="tag" value="Lifestyle" />
+                <property name="cta" mode="remove" />
+                <property name="byline" value="By Author Here" onError="ignore" />
+            </for>
+
+            <component id="mntl-card-list__bottom" mode="remove" />
+        </info>
+        
+        <model name="externalComponent">
+            <property name="serviceId" value="commerce" />
+            
+            <!-- ComponentId must be a spel expression to stop execution if dependencies are not met -->
+            <property name="componentId" value="${'commerce-latest'}">
+                <property name="revenueGroup" value="${(@document != null AND (@document.revenueGroup == 'COMMERCENEWSDEALS')) ? 'true' : null}" onError="collapseSilent">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+            </property>
+        </model>
+    </component>
+</components>

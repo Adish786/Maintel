@@ -1,0 +1,9 @@
+@import "mntlVariables";
+
+.mntl-taxonomysc {
+    padding: 0 10px;
+
+    @media (min-width: $bp-small2) {
+        padding: 0;
+    }
+}

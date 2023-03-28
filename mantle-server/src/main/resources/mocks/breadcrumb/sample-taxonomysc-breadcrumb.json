@@ -1,0 +1,285 @@
+{
+    "docId": 4158513,
+    "nodeAttributes": {
+        "nodeType": "TAXONOMY"
+    },
+    "document": {
+        "revisionId": "4158513_1606162350273",
+        "url": "https://www.verywellhealth.com/arthritis-living-with-4158513",
+        "rootUrl": "https://www.verywell.com/arthritis-living-with-4158513",
+        "vertical": "HEALTH",
+        "docId": 4158513,
+        "slug": "arthritis-living-with",
+        "templateType": "TAXONOMYSC",
+        "documentState": {
+            "state": "ACTIVE",
+            "activeDate": 1606162350255
+        },
+        "dates": {
+            "created": 1517854543504,
+            "updated": 1606162350273,
+            "firstPublished": 1517854543504,
+            "lastPublished": 1517854543504,
+            "displayed": 1517854543504
+        },
+        "title": "Living With Arthritis",
+        "metaDescription": "Make each day with arthritis as good as it can be. Learn and use strategies that can help you cope with symptoms like joint pain and stiffness",
+        "heading": "Living With Arthritis",
+        "summary": {
+            "title": "Living With Arthritis",
+            "heading": "Living With Arthritis",
+            "description": "Make each day with arthritis as good as it can be. Learn and use strategies that can help you cope with symptoms like joint pain and stiffness"
+        },
+        "stamp": {
+            "docId": 4158513,
+            "stampValue": "vwh_arthritis-living-with",
+            "adValue": "pidvwh_arthritis-living-with",
+            "audit": {
+            "clientId": "CommJS Utility - Update Stamp",
+            "lastModified": 1532442643191
+            }
+        },
+        "shortHeading": "Living With"
+    },
+    "configuration": {},
+    "relationships": {
+        "limit": 1,
+        "offset": 0,
+        "totalSize": 1,
+        "list": [
+            {
+            "name": "primaryParent",
+            "weight": 11,
+            "targetNode": {
+                "docId": 4582013,
+                "relationships": {
+                "list": [
+                    {
+                    "name": "primaryParent",
+                    "weight": 70,
+                    "targetNode": {
+                        "docId": 4014770,
+                        "relationships": {
+                        "list": [
+                            {
+                            "name": "primaryParent",
+                            "weight": 15,
+                            "targetNode": {
+                                "docId": 4014772,
+                                "document": {
+                                "revisionId": "4014772_1558706324996",
+                                "authorKey": "156569",
+                                "url": "https://www.verywellhealth.com/",
+                                "rootUrl": "https://www.verywell.com/HEALTH-4014772",
+                                "vertical": "HEALTH",
+                                "docId": 4014772,
+                                "slug": "root",
+                                "templateType": "TAXONOMY",
+                                "documentState": {
+                                    "state": "ACTIVE",
+                                    "activeDate": 1558706324973
+                                },
+                                "dates": {
+                                    "created": 1460739322446,
+                                    "updated": 1558706324996,
+                                    "firstPublished": 1460739322446,
+                                    "lastPublished": 1558706324973,
+                                    "displayed": 1558706324996
+                                },
+                                "title": "Verywell Health - Know More. Feel Better.",
+                                "metaDescription": "Verywell Health is your destination for reliable, understandable, and credible health information and expert advice that always keeps why you came to us in mind.",
+                                "description": "Verywell is your destination for reliable, understandable, and credible health information and expert advice that always keeps why you came to us in mind.",
+                                "heading": "Know more. Feel better.",
+                                "summary": {
+                                    "title": "Verywell Health - Know More. Feel Better.",
+                                    "heading": "Know more. Feel better.",
+                                    "description": "Verywell Health is your destination for reliable, understandable, and credible health information and expert advice that always keeps why you came to us in mind."
+                                },
+                                "author": {
+                                    "id": "156569",
+                                    "type": "AUTHOR",
+                                    "status": "LIVE",
+                                    "displayName": "Staff Author",
+                                    "displayNamePossessive": "",
+                                    "contributingWriter": false,
+                                    "numberOfExperts": 1
+                                },
+                                "stamp": {
+                                    "docId": 4014772,
+                                    "stampValue": "vwh_root",
+                                    "adValue": "pidvwh_root",
+                                    "audit": {
+                                    "clientId": "CommJS Utility - Update Stamp",
+                                    "lastModified": 1532442703497
+                                    }
+                                },
+                                "shortHeading": "Verywell Health"
+                                }
+                            }
+                            }
+                        ],
+                        "totalSize": 1
+                        },
+                        "document": {
+                        "revisionId": "4014770_1600442507805",
+                        "url": "https://www.verywellhealth.com/health-a-z-4014770",
+                        "rootUrl": "https://www.verywell.com/HEALTH-4014770",
+                        "vertical": "HEALTH",
+                        "docId": 4014770,
+                        "slug": "health-a-z",
+                        "templateType": "TAXONOMY",
+                        "documentState": {
+                            "state": "ACTIVE",
+                            "activeDate": 1526063397786
+                        },
+                        "dates": {
+                            "created": 1460747822497,
+                            "updated": 1600442507805,
+                            "firstPublished": 1460747822497,
+                            "lastPublished": 1515443177711,
+                            "displayed": 1515443177711
+                        },
+                        "title": "All Health - Symptoms, Diagnosis, & Treatment",
+                        "metaDescription": "Get clear and reliable information on symptoms, testing, treatment, and more so you are prepared for the next steps in managing your health condition.",
+                        "description": "Get clear and reliable information on symptoms, testing, treatment, and more so you are prepared for the next steps in managing your health condition.",
+                        "heading": "Health A-Z",
+                        "summary": {
+                            "title": "All Health - Symptoms, Diagnosis, & Treatment",
+                            "heading": "Health A-Z",
+                            "description": "Get clear and reliable information on symptoms, testing, treatment, and more so you are prepared for the next steps in managing your health condition."
+                        },
+                        "stamp": {
+                            "docId": 4014770,
+                            "stampValue": "vwh_conditions",
+                            "adValue": "pidvwh_conditions",
+                            "audit": {
+                            "clientId": "CommJS Utility - Update Stamp",
+                            "lastModified": 1532442698341
+                            }
+                        },
+                        "shortHeading": "Health A-Z",
+                        "thumbImage": {
+                            "width": 1080,
+                            "height": 1080,
+                            "id": "56fc054f5f9b5829868ebc29",
+                            "objectId": "IlloDot_Node1-Conditions-A-Z-56fc054f5f9b5829868ebc29.png",
+                            "encodedThumbnail": "R0lGODlhCAAIAPAAAAAAAP///yH5BAEAAAAALAAAAAAIAAgAQAgZAAEIHEgwQAAABwcmNEiwocOHBREiTPgwIAA7"
+                        }
+                        }
+                    }
+                    }
+                ],
+                "totalSize": 1
+                },
+                "document": {
+                "revisionId": "4582013_1614898633805",
+                "authorKey": "156569",
+                "url": "https://www.verywellhealth.com/arthritis-overview-4582013",
+                "rootUrl": "https://www.verywellhealth.com/arthritis-overview-4582013",
+                "vertical": "HEALTH",
+                "docId": 4582013,
+                "slug": "arthritis-overview",
+                "templateType": "TAXONOMYSC",
+                "documentState": {
+                    "state": "ACTIVE",
+                    "activeDate": 1610475731645
+                },
+                "dates": {
+                    "created": 1545254973890,
+                    "updated": 1614898633805,
+                    "firstPublished": 1538162598369,
+                    "lastPublished": 1610475731635,
+                    "displayed": 1608142208547
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "Arthritis: Overview and More",
+                "socialTitle": "",
+                "metaDescription": "Arthritis is a group of rheumatic diseases and related conditions that produce joint inflammation. Reviewed by a board-certified rheumatologist.",
+                "heading": "Arthritis",
+                "primaryImage": {
+                    "url": "",
+                    "caption": "",
+                    "owner": "",
+                    "alt": "",
+                    "width": 800,
+                    "height": 450,
+                    "id": "5967e70a3df78c57f4997d4c",
+                    "objectId": "Anim_Arthritis-5967e70a3df78c57f4997d4c.gif",
+                    "encodedThumbnail": "R0lGODlhCwAGAPcAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBmZgBmmQBmzABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMzADMzMzMzZjMzmTMzzDMz/zNmADNmMzNmZjNmmTNmzDNm/zOZADOZMzOZZjOZmTOZzDOZ/zPMADPMMzPMZjPMmTPMzDPM/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YzAGYzM2YzZmYzmWYzzGYz/2ZmAGZmM2ZmZmZmmWZmzGZm/2aZAGaZM2aZZmaZmWaZzGaZ/2bMAGbMM2bMZmbMmWbMzGbM/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkAM5kAZpkAmZkAzJkA/5kzAJkzM5kzZpkzmZkzzJkz/5lmAJlmM5lmZplmmZlmzJlm/5mZAJmZM5mZZpmZmZmZzJmZ/5nMAJnMM5nMZpnMmZnMzJnM/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wzAMwzM8wzZswzmcwzzMwz/8xmAMxmM8xmZsxmmcxmzMxm/8yZAMyZM8yZZsyZmcyZzMyZ/8zMAMzMM8zMZszMmczMzMzM/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8zAP8zM/8zZv8zmf8zzP8z//9mAP9mM/9mZv9mmf9mzP9m//+ZAP+ZM/+ZZv+Zmf+ZzP+Z///MAP/MM//MZv/Mmf/MzP/M////AP//M///Zv//mf//zP///xISEhgYGB4eHiQkJCoqKjAwMDY2Njw8PEJCQkhISE5OTlRUVFpaWmBgYGZmZmxsbHJycnh4eH5+foSEhIqKipCQkJaWlpycnKKioqioqK6urrS0tLq6usDAwMbGxszMzNLS0tjY2N7e3uTk5Orq6vDw8Pb29vz8/CwAAAAACwAGAEcIKwDXJCqTSCBBgwaDHUu00ODBgf8WPlyD6FHBihcxrjnG8RHGgv/+gbRIMSAAOw=="
+                },
+                "taggedImages": {
+                    "list": [
+                    {
+                        "image": {
+                        "caption": "",
+                        "owner": "",
+                        "alt": "A person with aching hands",
+                        "width": 1080,
+                        "height": 1080,
+                        "id": "46c03320b6e7429e840490c0978b0ded",
+                        "fileName": "IlloDot_Arthritis.png",
+                        "objectId": "IlloDot_Arthritis-46c03320b6e7429e840490c0978b0ded.png",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPEAAAAAAOxMZPmRNfT2+SH5BAEAAAAALAAAAAAIAAgAQQghAAEIHEhQgEEBBAEcHDhgIMKEEBUaDCDwoEGBAxpiFBgQADs="
+                        },
+                        "tags": {
+                        "list": [
+                            "PRIMARY",
+                            "RECIRC",
+                            "PINTEREST",
+                            "FACEBOOK",
+                            "TWITTER"
+                        ],
+                        "totalSize": 5
+                        }
+                    }
+                    ],
+                    "totalSize": 1
+                },
+                "summary": {
+                    "title": "Arthritis: Overview and More",
+                    "socialTitle": "",
+                    "heading": "Arthritis",
+                    "description": "Arthritis is a group of rheumatic diseases and related conditions that produce joint inflammation. Reviewed by a board-certified rheumatologist.",
+                    "image": {
+                    "url": "",
+                    "caption": "",
+                    "owner": "",
+                    "alt": "",
+                    "width": 800,
+                    "height": 450,
+                    "id": "5967e70a3df78c57f4997d4c",
+                    "objectId": "Anim_Arthritis-5967e70a3df78c57f4997d4c.gif",
+                    "encodedThumbnail": "R0lGODlhCwAGAPcAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBmZgBmmQBmzABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMzADMzMzMzZjMzmTMzzDMz/zNmADNmMzNmZjNmmTNmzDNm/zOZADOZMzOZZjOZmTOZzDOZ/zPMADPMMzPMZjPMmTPMzDPM/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YzAGYzM2YzZmYzmWYzzGYz/2ZmAGZmM2ZmZmZmmWZmzGZm/2aZAGaZM2aZZmaZmWaZzGaZ/2bMAGbMM2bMZmbMmWbMzGbM/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkAM5kAZpkAmZkAzJkA/5kzAJkzM5kzZpkzmZkzzJkz/5lmAJlmM5lmZplmmZlmzJlm/5mZAJmZM5mZZpmZmZmZzJmZ/5nMAJnMM5nMZpnMmZnMzJnM/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wzAMwzM8wzZswzmcwzzMwz/8xmAMxmM8xmZsxmmcxmzMxm/8yZAMyZM8yZZsyZmcyZzMyZ/8zMAMzMM8zMZszMmczMzMzM/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8zAP8zM/8zZv8zmf8zzP8z//9mAP9mM/9mZv9mmf9mzP9m//+ZAP+ZM/+ZZv+Zmf+ZzP+Z///MAP/MM//MZv/Mmf/MzP/M////AP//M///Zv//mf//zP///xISEhgYGB4eHiQkJCoqKjAwMDY2Njw8PEJCQkhISE5OTlRUVFpaWmBgYGZmZmxsbHJycnh4eH5+foSEhIqKipCQkJaWlpycnKKioqioqK6urrS0tLq6usDAwMbGxszMzNLS0tjY2N7e3uTk5Orq6vDw8Pb29vz8/CwAAAAACwAGAEcIKwDXJCqTSCBBgwaDHUu00ODBgf8WPlyD6FHBihcxrjnG8RHGgv/+gbRIMSAAOw=="
+                    }
+                },
+                "author": {
+                    "id": "156569",
+                    "type": "AUTHOR",
+                    "status": "LIVE",
+                    "displayName": "Staff Author",
+                    "displayNamePossessive": "",
+                    "contributingWriter": false,
+                    "numberOfExperts": 1
+                },
+                "stamp": {
+                    "docId": 4582013,
+                    "stampValue": "vwh_arthritis-overview",
+                    "adValue": "pidvwh_arthritis-overview",
+                    "audit": {
+                    "clientId": "CommJS Utility - Update Stamp",
+                    "lastModified": 1545255983106
+                    }
+                },
+                "shortHeading": "Arthritis",
+                "guestAuthor": {
+                    "link": {}
+                }
+                }
+            }
+            }
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-relish-resources" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Relish Resources</displayName>
+        </info>
+
+		<script group="bottom" path="/static/mantle/components/widgets/relish/js/relish.js" />
+		<script evaluated="true" group="bottom" path="/static/mantle/components/widgets/relish/js/relish.evaluated.js" />
+
+        <property name="key" value="${@key.value}" onError="collapseSilent">
+            <model id="key" name="externalConfig">
+                <property name="key" value="com.about.globe.relish.key" />
+            </model>
+        </property>
+
+        <property name="domain" value="${@domain.value}" onError="collapseSilent">
+            <model id="domain" name="externalConfig">
+                <property name="key" value="com.about.globe.relish.domain" />
+            </model>
+        </property>
+
+        <property name="shopButtonOffset" value="200" />
+    </component>
+
+    <component id="mntl-relish-shop-btn" resourcePath="/components/widgets/relish/relish.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Relish</displayName>
+            <description>Display relish component on page</description>
+            <documentation>
+                # CSS
+
+                ## .shop-button-wrapper
+                Sets minimum height for Relish wrapper.
+
+                ## #shop-button
+                Where the Relish button should be inserted.
+
+                # Model
+
+                Consul configs provided by Fexy.
+                ### domain
+                - __com.about.globe.relish.domain__
+
+                ### key
+                - __com.about.globe.relish.key__
+            </documentation>
+            <previewType>markup</previewType>
+		</info>
+
+        <stylesheet path="/static/mantle/components/widgets/relish/relish.css" />
+		<script path="/static/mantle/js/mntl-vanilla-scroll.js" />
+        <component ref="mntl-relish-resources" />
+    </component>
+
+    <component id="mntl-relish-save-btn" ref="mntl-button">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Relish</displayName>
+            <description>Display relish save component on page</description>
+            <documentation>
+                Triggering the event attached to this button will execute the relish script if this hasn't, followed by the **openRecipe**
+                method which opens the Relish layer with the desired recipe(**data-recipe-id** from **fexy-relish** meta tag);
+                If the relish script has already been executed triggering the event will only run the **openRecipe** method.
+            </documentation>
+            <previewType>markup</previewType>
+		</info>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="text" value="Save it" />
+    </component>
+
+    <component id="mntl-relish-saved-recipes-btn" ref="mntl-button">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Relish</displayName>
+            <description>Display relish save component on header</description>
+            <documentation>
+                Triggering the event attached to this button will execute the relish script if this hasn't, followed by the **openRecipeList**
+                method which opens the Relish layer;
+                If the relish script has already been executed triggering the event will only run the **openRecipeList** method.
+            </documentation>
+            <previewType>markup</previewType>
+        </info>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="text" value="Saved Recipes" />
+    </component>
+</components>

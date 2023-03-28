@@ -1,0 +1,27 @@
+#Ads.txt dotdash.com
+
+1rx.io, 1718414795, DIRECT, a670c89d4a324e47
+advertising.com, 12059, DIRECT
+adtech.com, 12059, DIRECT, e1a5b5b6e3255540
+appnexus.com, 6967, DIRECT
+aps.amazon.com, 3222, DIRECT
+Contextweb.com, 561314, DIRECT, 89ff185a4c4e857c
+districtm.io, 100480, DIRECT
+emxdgt.com, 435, DIRECT, 1e1d41537f7cad7f
+facebook.com, 253933668453303, DIRECT
+google.com, pub-3345963573740285, DIRECT
+indexexchange.com, 184034, DIRECT
+indexexchange.com, 183710, DIRECT
+lijit.com, 249241, DIRECT, fafdf38b16bf6b2b
+media.net, 8CUC5JT6F, DIRECT
+openx.com, 537150842, DIRECT, 6a698e2ec38604c6
+openx.com, 539077562, DIRECT, 6a698e2ec38604c6
+pubmatic.com, 156291, DIRECT, 5d62403b186f2ace
+pubmatic.com, 157455, DIRECT, 5d62403b186f2ace
+rhythmone.com, 1718414795, DIRECT, a670c89d4a324e47
+rubiconproject.com, 7499, DIRECT
+rubiconproject.com, 15898, DIRECT
+sovrn.com, 249241, DIRECT, fafdf38b16bf6b2b
+triplelift.com, 2415, DIRECT, 6c33edb13117fd86
+yieldmo.com, 1701547553554335438, DIRECT
+yieldmo.com, 2067426663448872680, DIRECT

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-universal-image" resourcePath="/components/image/view/universal-image.ftl">
+        <info>
+            <category>Mantle Components/Media</category>
+            <displayName>Universal Image</displayName>
+            <description>
+                This is the converged image component. It replaces the mntl-image component and all other image components created by the verticals. 
+                This uses a new thumbor macro with enhanced functionality for internally hosted images, and allows for externally hosted images to be displayed using a plain img tag. 
+                The new macro has gifv functionality built in, meaning any image with an extension of .gif will be served as a video in a video tag.
+            </description>
+            <documentation>
+                # Properties
+
+                ## alt
+                The text that will be used for the image alt attribute
+
+                ## class
+                Used to add any addtional classes to the img tag
+
+                ## externalUrl
+                Used to load an externally hosted image. If this is specified then this will override any image supplied in the image property
+
+                ## image
+                The image url or object to be loaded and displayed in the img tag
+
+                ## height
+                The height of the image you want to load
+
+                ## width
+                The width of the image you want to load
+
+                ## role
+                Can be used to set the aria role of the image. For example if the image is used as only for design purposes, then you should set the value to "presentation"
+
+                ## tag
+                Used to wrap the image in the specified html tag. If value is not specified then the image will not be wrapped. For example if you want to wrap the image in a figure tag, specify "figure"
+
+                ## tagClass
+                Class or classes that will be applied to the wrapping element if tag is specified.
+                
+                ## idPrefix
+                Prefix of id that will be added to img tag. Only used for SC Block images for GTM tracking.
+
+                ## fitInStyle
+                Used by thumbor to determine the best way to fit an image into the desired dimensions (only used by commerce). More info in the thumbor docs: https://thumbor.readthedocs.io/en/6.7.2/usage.html?highlight=fit-in#fit-in
+
+                ## filters
+                List of operations that thumbor will do to your image. This is commonly used to restict the size of images, and to prevent thumbor fromscaling up small images.
+
+                ## expand
+                A integer value used by the lazysizes library to determine when to start loading an offscreen image. For example a value of 100 means lazysizes will request the offscreen image when it is within 100px of the viewport.
+
+                ## lazyload
+                A boolean value used to determine whether the image should be lazily loaded.
+
+                ## placeholder
+                A boolean value used to determine whether the image should be wrapped in a placeholder div. This placeholder is useful when lazily loading images to prevent CLS
+
+                ## placeholderHeight
+                The height that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## placeholderWidth
+                The width that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## srcset
+                An map used to create the srcset url string for the image. The possible keys on the map are minWidth (the smallest width the image could be), maxWidth (the largest width the image could be), 
+                maxHeight (the largest height the image could be), and stepCount (used to determine the number of srcset urls generated). These all have integer values, and minWidth, maxWidth, and maxHeight are all integers that represent a pixel value.
+
+                ## sizes
+                The string that will be used for the sizes attribute on the image.
+
+                ## imgAttrs
+                DO NOT USE!!! Only present for compatibility with sc-block-image and masonry-list. 
+                Should only be used to set data-dim-ratio, data-img-lightbox, data-click-tracked, or data-tracking-container. 
+                Acts similarly to the attrs map to add extra data- properties to the img tag. 
+
+                # Dependencies/References
+
+                ## gif.js
+                This file uses the srcset and sizes to determine the correct size video to load. It then updates the video with the correct src
+            </documentation>
+
+            <for id="this, alt, width, height, placeholderWidth, placeholderHeight">
+                <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}">
+                    <model name="mockDocument" id="document">
+                        <property name="template" value="structured-content-basic-one-of-each" />
+                    </model>
+                </property>
+            </for>
+            <property name="lazyload" value="false" type="boolean" />
+        </info>
+
+        <script path="/static/mantle/components/image/js/gif.js" />
+        <stylesheet path="/static/mantle/components/image/css/gif.css" />
+
+        <!-- basic properties -->
+        <property name="alt" value="${@image?.alt ?: ''}" />
+        <property name="class" value="" />
+        <property name="externalUrl" value="" />
+        <property name="height" value="${@image?.height ?: 0}" />
+        <property name="width" value="${@image?.width ?: 0}" />
+        <property name="role" value="" />
+        <property name="tag" value="" />
+        <property name="tagClass" value="" />
+        <property name="idPrefix" value="" />
+
+        <!-- thumbor related properties -->
+        <property name="fitInStyle" value="" />
+        <list id="filters">
+            <property name="upscale" value="${imageFilter.noUpscale()}" />
+            <!-- the maxBytes filter is here to ensure that the requested image size does not exceed 150kb and does not impact resource loading and SEO. 
+                if you are going to override the default value and increase the maxmium size the image can be, please check with the SEO team first!!! -->
+            <property name="maxBytes" value="max_bytes(150000)" />
+            <property name="stripicc" value="strip_icc()" />
+        </list>
+
+        <!-- lightbox related properties -->
+        <property name="useHiResLightbox" value="false" type="boolean" />
+        <property name="hiResLightboxWidth" value="0" type="integer" />
+
+        <!-- lazyloading and responsive image properties -->
+        <property name="expand" value="0" type="integer" />
+        <property name="lazyload" value="true" type="boolean" />
+        <property name="placeholder" value="true" type="boolean" />
+        <property name="placeholderHeight" value="${@image?.height ?: 0}" />
+        <property name="placeholderWidth" value="${@image?.width ?: 0}" />
+        <map id="srcset">
+            <property name="minWidth" value="700" type="integer" />
+            <property name="maxWidth" value="300" type="integer" />
+            <property name="maxHeight" value="0" type="integer" />
+            <property name="stepCount" value="3" type="integer" />
+        </map>
+        <property name="sizes" value="" />
+
+        <property name="image" value="${messages['defaultPlaceHolderImage'] ?: ''}" />
+
+        <!-- DO NOT USE unless image is in masonry-list or sc-block-image components. property that is needed for backwards compatibility. 
+            Should only be used to set data-dim-ratio, data-img-lightbox, data-click-tracked, or data-tracking-container! -->
+        <map id="imgAttrs" />
+
+    </component>
+
+</components>

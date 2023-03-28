@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="v-mntl-social-share" ref="mntl-social-share">
+        <info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Vue Social Share</displayName>
+			<documentation>
+                # v-mntl-social-share 
+
+                Vue directive for interfacing between the mantle social share component and a vue application
+
+                ## Usage 
+                Insert this component into a vue application when you would like to include social share components.  Specify the social networks you would like to share on.  Any custom parameters per social network can be set as data-attrs on the **attrs** map.  Any property that needs access to data values in the vue app will need the property name bound (eg **:data-description="someVueDataProperty"**).
+
+                ## Properties required from parent **mntl-social-share** component
+
+                - socialLinks (see **mntl-social-share**)
+
+                - networks (see **mntl-social-share**)
+
+                ## data-attrs per-social network
+
+                ### All
+                - **data-utm-campaign** (required)
+                - **data-share-url** (required)
+                - **data-share-image** (required for pinterest)
+                - **data-description** (required as a default)
+                - **data-title** (required as default)
+
+                ### Pinterest
+                - **data-pinterest-description** (optional) - defaults to **data-description** if not present
+
+                ### FB
+                - **data-share-url** (required)
+
+                ### Twitter
+                - **data-twitter-handle** (required)
+
+                ### Email
+                - **data-email-subject** (optional) - defaults to **data-title**
+                - **data-email-body** (optional) - defaults to **data-description**
+
+                ### SMS
+                - **data-sms-body** (optional) - defaults to **data-description**
+			</documentation>
+			<tags>In Progress</tags>
+            <previewType>none</previewType>
+        </info>
+        <script path="/static/mantle/components/widgets/v-social-share/v-social-share.js" />
+        <map id="attrs">
+            <property name="v-mntl-social-share" value="" />
+        </map>
+        <property name="trackingContainer" value="true" type="boolean" />
+    </component>
+</components>

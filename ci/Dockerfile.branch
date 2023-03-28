@@ -1,0 +1,18 @@
+FROM {{BASE_REGISTRY_URL}}/common/gradle:corretto-11.0.11.9-1_gradle-7.0.2
+
+ARG INCREMENT_TYPE
+ARG TARGET_VERSION
+ARG DRY_RUN
+ARG DEBUG_LOGGING
+ARG ARTIFACTORY_BASE_URL
+ARG ARTIFACTORY_USERNAME
+ARG ARTIFACTORY_PASSWORD
+ARG GIT_USERNAME
+ARG GIT_TOKEN
+ARG GIT_BUILD_SCRIPT_BRANCH=master
+
+RUN mkdir /root/branch
+WORKDIR /root/branch
+ADD . /root/branch
+
+RUN gradle --init-script /root/build-scripts/java_gradle/cicd_branch.gradle cicd-branch --parallel

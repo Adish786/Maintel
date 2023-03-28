@@ -1,0 +1,24 @@
+.social-nav {
+    &__list {
+        display: flex;
+    }
+
+    &__link:before {
+        content: attr(data-text);
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__accessible-label {
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+}

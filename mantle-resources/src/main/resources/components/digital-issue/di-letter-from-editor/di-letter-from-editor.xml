@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-letter-from-the-editor" ref="mntl-di-module">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Letter from the Editor</displayName>
+            <description>Displays a hardcoded title, the content of the page as a letter from editor. The content generally includes an image, letter content and editor's name and title.</description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "editor-letter-background-color": set a flat color for the background (Ex: "#000000")
+                - "editor-letter-content-background-color": set a flat color for the content background (Ex: "#FFFFFF")
+                - "editor-letter-background-image": set an image for the background, which will override a color (Ex: "tistheseason_bkd-6f32c18b5ff6480fb22362da1da67387.jpg")
+                - "editor-letter-text-color": set a color for the content text (Ex: "#000000")
+                - "editor-letter-title-color": set a color for the title (Ex: "#000000")
+                - "editor-letter-section-title": set text for the title other than the default "Letter from the Editors" (Ex: "Letter from the Editor")
+
+                # REQUIRED PROPERTIES/COMPONENTS
+
+                ## digitalIssueCssVariables
+                The map of css variables to apply to the letter from the editor component, pulling from the root config list in the BOVD
+
+                ## digitalIssueRootConfigs
+                Pulls from the root config list in the BOVD
+
+                # OPTIONAL PROPERTIES/COMPONENTS
+
+                ## titleClass
+                The class for the title
+                Default: "type--unicorn"
+
+                ## contentClass
+                The class for the content
+                Default: "type--dog"
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-letter-from-editor/di-letter-from-editor.css" />
+
+        <map id="digitalIssueCssVariables">
+            <property name="text-color" value="${@digitalIssueRootConfigs?.get('editor-letter-text-color')}" onError="ignore" />
+            <property name="module-title-color" value="${@digitalIssueRootConfigs?.get('editor-letter-title-color')}" onError="ignore" />
+            <property name="background-color" value="${@digitalIssueRootConfigs?.get('editor-letter-background-color')}" onError="ignore" />
+            <property name="editor-letter-content-background-color" value="${@digitalIssueRootConfigs?.get('editor-letter-content-background-color')}" onError="ignore" />
+        </map>
+
+        <property name="title" value="${@titleConfig ?: 'Letter from the Editors'}" mode="replace">
+            <property name="titleConfig" value="${@digitalIssueRootConfigs?.get('editor-letter-section-title')}" onError="ignore" />
+        </property>
+
+        <component id="mntl-di-module__cards" mode="remove" />
+        
+        <component location="cards" id="mntl-di-letter-from-the-editor__content" ref="mntl-sc-page">
+            <list id="class">
+                <property name="article__body" value="article__body" />
+                <property name="contentClass" value="type--dog" />
+            </list>
+
+            <for id="mntl-sc-block%mntl-sc-block-universal-image.mntl-universal-image">
+                <!-- 2x render resolution -->
+                <property name="srcset" value="${{'minWidth': 1500, 'maxWidth': 1500}}" views="tablet, pc" />
+                <property name="sizes" value="1500px" views="tablet, pc" />
+                <property name="width" value="1500" type="integer" />
+
+                <map id="imgAttrs">
+                    <property name="data-img-lightbox" value="false" />
+                </map>
+            </for>
+
+            <for id="mntl-sc-page-contents.contents.blockList">
+                <model name="DOCUMENT" id="document" />
+            </for>
+        </component>
+
+        <for id="mntl-di-module__anchor">
+            <property name="tocId" value="letter-from-the-editor" />
+        </for>
+
+        <for id="mntl-di-module__background.image">
+            <property name="imageConfig" value="${@digitalIssueRootConfigs?.get('editor-letter-background-image')}" />
+        </for>
+
+        <for id="digitalIssueCssVariables.p*, mntl-di-module__background.image.imageConfig, titleConfig">
+            <model name="digitalIssueRootConfigs" />
+        </for>
+    </component>
+
+</components>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-height-change-listener" resourcePath="/components/widgets/heightChangeListener/heightChangeListener.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Height Change Listener</displayName>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/heightChangeListener/heightChangeListener.css" />
+        <script path="/static/mantle/js/vendor/throttle.js" />
+    	<script path="/static/mantle/components/widgets/heightChangeListener/heightChangeListener.js" />
+    </component>
+
+</components>

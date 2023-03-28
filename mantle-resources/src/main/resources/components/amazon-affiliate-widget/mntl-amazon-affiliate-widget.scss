@@ -1,0 +1,13 @@
+.mntl-amazon-affiliate-widget {
+    .mntl-amazon-affiliate-widget__regular-price {
+        text-decoration: line-through;
+    }
+
+    // For backwards compatibility, allows mantle < 3.4.131 to render as it currently does
+    // Verticals that are ready for these fields need to explicitly set their
+    // 'display' style to something other than none.
+    .mntl-amazon-affiliate-widget__regular-price,
+    .mntl-amazon-affiliate-widget__savings {
+        display: none;
+    }
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-bio-tooltip" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Bio Tooltip</displayName>
+			<description>
+This is the tooltip content that appears on hover of an author's link.
+			</description>
+			<documentation>
+# Classes
+
+- __[data-tooltip]__
+
+Required data attribute on parent element of mntl-bio-tooltip
+
+- __[data-trigger-link]__
+
+Data attribute on anchor link to prevent default behavior and trigger tooltip instead
+
+# Inner components
+
+- __.mntl-bio-tooltip__link__
+
+- Link to bio page
+
+- __.mntl-bio-tooltip__image-wrapper__
+
+Wraps around .mntl-bio-tooltip__image which is the image on bio document
+
+- __.mntl-bio-tooltip__bio__
+
+Short bio
+			</documentation>
+
+			<property name="collapseIfNoShortBio" value="true" />
+		</info>
+
+        <stylesheet path="/static/mantle/components/byline/bio-tooltip.css" />
+        <script path="/static/mantle/components/byline/bio-tooltip.js" />
+
+		<for id="text, uri, collapseIfNoShortBio">
+			<model name="AUTHOR" id="author" onError="ignore" />
+		</for>
+
+		<for id="text, uri, author, safelist, collapseIfNoShortBio">
+			<model name="DOCUMENT" id="document" />
+		</for>
+
+		<property name="collapseIfNoShortBio" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? @document?.guestAuthor?.shortBio : @author?.shortBio}" onError="collapseSilent" />
+
+		<component ref="mntl-tooltip" />
+
+		<component location="content" id="mntl-bio-tooltip__top" ref="mntl-block">
+			<component location="content" id="mntl-bio-tooltip__sidebar" ref="mntl-block">
+				<component location="content" ref="mntl-bio-tooltip__image-wrapper" defer="load" />
+				<!-- VERTICALS: add your social follow component here -->
+			</component>
+
+			<component location="content" id="mntl-bio-tooltip__main" ref="mntl-block">
+				<component location="content" ref="mntl-bio-tooltip__name" />
+				<component location="content" ref="mntl-bio-tooltip__bio" />
+			</component>
+		</component>
+
+		<component location="content" id="mntl-bio-tooltip__bottom" ref="mntl-block">
+			<component location="content" ref="mntl-bio-tooltip__learn-more" />
+		</component>
+	</component>
+
+	<component id="mntl-bio-tooltip__image-wrapper" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Bio Tooltip Image Wrapper</displayName>
+		</info>
+
+		<for id="class.no-image, mntl-bio-tooltip__image.image">
+			<model name="DOCUMENT" id="document" onError="ignore">
+				<property name="url" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? null : @author?.bioUrl}" onError="collapseSilent">
+					<model name="AUTHOR" id="author" onError="ignore">
+						<model name="DOCUMENT" id="document" />
+					</model>
+					<model name="DOCUMENT" id="document" />
+				</property>
+			</model>
+		</for>
+
+		<list id="class">
+			<property name="no-image" value="${@document != null AND (@document?.getImageForUsage('PRIMARY')?.isNotEmpty()?:false) ? '' : 'no-image'}" onError="ignore" />
+		</list>
+
+		<component location="content" id="mntl-bio-tooltip__image" ref="mntl-image">
+			<property name="width" value="200" type="integer" />
+			<property name="height" value="200" type="integer" />
+			<property name="srcset" value="${{'minWidth': 150, 'maxWidth': 300}}" />
+			<property name="image" value="${@document != null AND (@document.getImageForUsage('PRIMARY')?.isNotEmpty()?:false) ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" />
+		</component>
+	</component>
+
+    <component id="mntl-bio-tooltip__name" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Bio Tooltip Name</displayName>
+		</info>
+
+    	<property name="arbitraryDependency" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? str.stripToNull(@document.guestAuthor.link.uri) : 'true'}" onError="collapseSilent">
+			<model name="AUTHOR" id="author" onError="ignore">
+				<model name="DOCUMENT" id="document" />
+			</model>
+			<model name="DOCUMENT" id="document" />
+		</property>
+
+        <component location="content" id="mntl-bio-tooltip__prelink" ref="mntl-text-block">
+            <property name="text" value="" />
+            <property name="tag" value="span" />
+        </component>
+
+        <component location="content" id="mntl-bio-tooltip__link" ref="mntl-text-link">
+            <for id="text,uri">
+                <model name="AUTHOR" id="author" />
+            </for>
+
+            <for id="text, uri, author">
+                <model name="DOCUMENT" id="document" />
+            </for>
+
+            <property name="text" value="${str.stripToNull(@document.guestAuthor?.link?.text) ?: @author?.displayName}" />
+            <property name="uri" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? @document.guestAuthor.link.uri : @author?.bioUrl}" onError="ignore" />
+        </component>
+
+        <component location="content" id="mntl-bio-tooltip__postlink" ref="mntl-text-block">
+            <property name="text" value="" />
+            <property name="tag" value="span" />
+        </component>
+    </component>
+
+	<component id="mntl-bio-tooltip__bio" ref="mntl-text-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Bio Tooltip Bio</displayName>
+		</info>
+
+		<property name="text" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? @document?.guestAuthor?.shortBio : @author?.shortBio}" onError="collapseSilent">
+			<model name="AUTHOR" id="author" />
+			<for id="this, author">
+				<model name="DOCUMENT" id="document" />
+			</for>
+		</property>
+	</component>
+
+	<component id="mntl-bio-tooltip__learn-more" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Bio Tooltip Learn More</displayName>
+		</info>
+
+		<component location="content" ref="mntl-text-block">
+			<property name="text" value="Learn about our " />
+			<property name="tag" value="span" />
+		</component>
+
+		<component location="content" ref="mntl-text-link">
+			<for id="safelist">
+				<model name="DOCUMENT" id="document" />
+			</for>
+
+			<property name="text" value="editorial process" />
+			<property name="uri" value="https://www.dotdash.com" />
+			<property name="safelist" value="false" type="boolean" onError="ignore" />
+		</component>
+	</component>
+</components>

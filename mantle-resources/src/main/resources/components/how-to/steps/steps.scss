@@ -1,0 +1,16 @@
+.mntl-instructions-steps {
+    ol.mntl-sc-block-startgroup {
+        li.mntl-sc-block-startgroup {
+            counter-increment: instructions-steps;
+            list-style-type: none;
+
+            &::before {
+                content: 'Step ' counter(instructions-steps);
+
+                &:last-child {
+                    counter-reset: instructions-steps;
+                }
+            }
+        }
+    }
+}

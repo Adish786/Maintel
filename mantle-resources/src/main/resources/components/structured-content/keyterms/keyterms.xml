@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-sc-block-keyterms" ref="mntl-block">
+        <component location="content" id="mntl-sc-block-keyterms__title" ref="mntl-text-block">
+            <property name="text" value="Key Terms" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-keyterms__nav" ref="mntl-block" views="pc">
+            <stylesheet path="/static/mantle/components/structured-content/keyterms/keyterms.css" />
+            <script group="bottom" path="/static/mantle/components/structured-content/keyterms/keyterms.js" defer="load" />
+            
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <component-list location="content" id="mntl-sc-block-keyterms__nav-item" ref="mntl-button" iterable="${@carouselItems}">
+                <map id="attrs">
+                    <property name="data-index" value="${@keyTerm.index}" />
+                </map>
+
+                <list id="class">
+                    <property name="is-active" value="${@keyTerm.index == 0 ? 'is-active' : ''}" />
+                </list>
+
+                <property name="text" value="${@keyTerm.value.term}" />
+
+                <for id="attrs.data-index, text, class.is-active">
+                    <component-list-item id="keyTerm" ref="mntl-sc-block-keyterms__nav-item" />
+                </for>
+            </component-list>
+        </component>
+
+        <component location="content" id="mntl-sc-block-keyterms__carousel" ref="mntl-carousel--inline">
+            <for id="mntl-carousel__item">
+                <map id="attrs">
+                    <property name="data-contain-tooltips" value="true" />
+                </map>
+            </for>
+            <for id="mntl-carousel__card">
+                <component location="content" id="carousel-card__title" ref="mntl-text-block">
+                    <property name="text" value="${@keyTerm.value.term}" />
+                </component>
+
+                <component location="content" id="carousel-card__body" ref="mntl-text-block">
+                    <property name="text" value="${@keyTerm.value.definition}" />
+                </component>
+
+                <component location="content" id="carousel-card__link-wrapper" ref="mntl-block">
+                    <property name="collapseIfNoLink" value="${str.stripToNull(@keyTerm.value.featureTitle) != null and str.stripToNull(@keyTerm.value.featureLink) != null ? 'true' : null}" onError="collapseSilent" />
+                    <component location="content" id="carousel-card__link" ref="mntl-text-link">
+                        <property name="text" value="${@keyTerm.value.featureTitle}" onError="collapseSilent"/>
+                        <property name="uri" value="${@keyTerm.value.featureLink}" onError="collapseSilent"/>
+                    </component>
+                </component>
+            </for>
+
+            <for id="carousel-card__title.text,
+                carousel-card__body.text,
+                carousel-card__link.text,
+                carousel-card__link.uri,
+                carousel-card__link-wrapper.collapseIfNoLink">
+                <component-list-item id="keyTerm" ref="mntl-carousel__item" />
+            </for>
+
+        </component>
+
+        <for id="mntl-sc-block-keyterms__nav-item,
+            mntl-sc-block-keyterms__carousel,
+            mntl-carousel__item,
+            mntl-carousel__indicator-item,
+            card__counter.text.size">
+            <property name="carouselItems" value="${@block.value.data.keyTerms.list}" />
+        </for>
+    </component>
+</components>

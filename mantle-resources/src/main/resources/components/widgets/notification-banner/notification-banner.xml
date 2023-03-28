@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-notification-banner" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>Notification Banner</displayName>
+            <description>Adds an empty div to the bottom of the page. Dismissable by clicking X button</description>
+            <documentation>
+                ### notification-banner.js
+
+                Binds events to the **js-banner-dismiss** button. On click, adds **is-closed** class to parent component, 
+                if **data-show-until-dismissed** is set to true, sets **notification_banner_dismissed** cookie to true. 
+                If component has attribute data-cookie-prefix, the cookie will be set according to the prefix to mitigate 
+                interactions with the generic **notification_banner_dismissed** 
+                - eg. **vertical_announcement_notification_banner_dismissed**
+            </documentation>
+            <tags>Complete</tags>
+        </info>
+
+		<stylesheet path="/static/mantle/components/widgets/notification-banner/css/notification-banner.css" />
+		<script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script path="/static/mantle/components/widgets/notification-banner/js/notification-banner.js" />
+	</component>
+
+
+    <component id="mntl-site-wide-notification" ref="mntl-notification-banner">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>Site Wide Notification Banner</displayName>
+            <description>
+                Adds a notification banner site wide with an ability to exclude certain taxonomies (taxonomy page + it's children) and specific documents (Digital Issues etc.) through consul configs
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/notification-banner/css/site-wide-notification.css" />
+
+        <svg id="close-icon" path="/static/mantle/svg/close.svg" />
+
+        <!-- Setting to use "this" for component collapse -->
+        <for id="this, text, uri">
+            <model name="siteWideNotification" onError="collapseSilent">
+                <model name="ancestors" onError="ignore">
+                    <model name="breadcrumb" onError="ignore" />
+                </model>
+            </model>
+        </for>
+
+        <map id="attrs">
+            <property name="data-show-until-dismissed" value="true" />
+        </map>
+
+        <component location="content" ref="mntl-block" id="mntl-site-wide-notification__wrapper">
+                
+            <component location="content" ref="mntl-text-link" id="mntl-site-wide-notification__header">
+                <property name="text" value="${@siteWideNotification.header}" onError="collapseSilent" />
+                <property name="uri" value="${@siteWideNotification.linkHref}" onError="collapseSilent" />
+                <property name="safelist" value="true" type="boolean" />
+            </component>
+
+            <component id="close-icon" location="content" ref="mntl-svg">
+                <list id="class">
+                    <property name="js-banner-dismiss" value="js-banner-dismiss" />
+                    <property name="mntl-site-wide-notification__btn-close" value="mntl-site-wide-notification__btn-close" />
+                </list>
+                <property name="name" value="close-icon" />
+            </component>
+        </component>
+
+        <property name="bannerUndismissed" value="${requestContext.getCookieValue('notification_banner_dismissed') == 'true' ? null : 'true'}" onError="collapseSilent" />
+
+
+    </component>
+
+
+    <component id="net-neutrality-banner" ref="mntl-notification-banner">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>Net Neutrality Notification Banner</displayName>
+            <description>
+                Adds net-neutrality-banner to the template. Vertical to do. Add Computer Icon to **.net-neutrality-banner__icon**. 
+                Add style to **.net-neutrality-banner__content** for flexible width. See ftl for all classes.
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+        </info>
+
+
+        <stylesheet path="/static/mantle/components/widgets/notification-banner/css/net-neutrality-banner.css" />
+
+        <component location="content" ref="mntl-block" id="net-neutrality-banner__content">
+            <component location="content" ref="mntl-block" id="net-neutrality-banner__icon">
+                <property name="tag" value="span" />
+            </component>
+            <component location="content" ref="mntl-text-block" id="net-neutrality-banner__text">
+                <property name="text" value="Save the Internet!" />
+            </component>
+            <component location="content" ref="mntl-text-link" id="net-neutrality-banner__link">
+                <property name="external" value="true" type="boolean" />
+                <property name="uri" value="https://www.battleforthenet.com/" />
+                <property name="text" value="Here's What You Can Do About Net Neutrality" />
+            </component>
+            <component location="content" ref="mntl-button" id="net-neutrality-banner__btn-close">
+                <list id="class">
+                    <property name="js-banner-dismiss" value="js-banner-dismiss" />
+                </list>
+                <property name="text" value="x" />
+            </component>
+        </component>
+
+
+        <!-- isEnabled will never be false, will either be true or null -->
+        <model id="isEnabled" name="isLocalDateBetween" onError="collapseSilent">
+            <!-- formatted using https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE_TIME -->
+            <property name="start" value="2018-05-09T05:00:00.000" />
+            <property name="stop" value="2018-05-10T03:00:00.000" />
+            <property name="currentDateOverride" value="" queryOverride="currentDateOverride" />
+        </model>
+    </component>
+
+    <component id="gdpr-notification-banner" ref="mntl-notification-banner">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>GDPR Notification Banner</displayName>
+            <description>Banner notifying EU visitors of our sites' usage of cookies. On dismiss, sets cookie to ensure user only sees the notification once.</description>
+            <documentation>
+###gdpr-notification-banner
+
+#Vertical to override the properties **gdpr-notification-banner__text.text** and **gdpr-notification-banner__link.uri**
+
+<![CDATA[
+    <for id="gdpr-notification-banner__text.text">
+        <property name="brandName" value="Tripsavvy" />
+    </for>
+    <for id="gdpr-notification-banner__link">
+        <property name="uri" value="https://www.tripsavvy.com/legal#privacy" />
+    </for>
+]]>
+            </documentation>
+            <tags>Complete</tags>
+        </info>
+
+        <map id="attrs">
+            <property name="data-show-until-dismissed" value="true" />
+        </map>
+
+        <component location="content" ref="mntl-block" id="gdpr-notification-banner__content">
+
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <component location="content" ref="mntl-text-block" id="gdpr-notification-banner__text">
+                <property name="text" value="${@brandName} uses cookies to provide you with a great user experience. By using ${@brandName}, you accept our">
+                    <property name="brandName" value="[replaceme]" />
+                </property>
+            </component>
+            <component location="content" ref="mntl-text-link" id="gdpr-notification-banner__link">
+                <property name="text" value="use of cookies." />
+            </component>
+            <component location="content" ref="mntl-button" id="gdpr-notification-banner__btn-close">
+                <list id="class">
+                    <property name="js-banner-dismiss" value="js-banner-dismiss" />
+                </list>
+                <property name="text" value="x" />
+            </component>
+        </component>
+
+        <property name="bannerUndismissed" value="${requestContext.getCookieValue('notification_banner_dismissed') == 'true' ? null : 'true'}" onError="collapseSilent" />
+        <property name="isEU" value="${requestContext.geoData?.inEuropeanUnion == true ? 'true' : null}" onError="collapseSilent" />
+
+    </component>
+
+    <component id="mntl-ccpa-notification-banner" ref="mntl-notification-banner">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>CCPA Notification Banner</displayName>
+            <description>Banner notifying CA visitors to request or delete their personal information. On dismiss, sets cookie to ensure user only sees the notification once.</description>
+            <documentation>
+###ccpa-notification-banner
+
+#Vertical to override the properties **ccpa-notification-banner__text.text** and **ccpa-notification-banner__link.uri**
+            </documentation>
+            <tags>Complete</tags>
+
+            <property name="bannerUndismissed" value="true" onError="collapseSilent" />
+            <property name="isCcpaApplicableRequest" value="true" onError="collapseSilent" />
+        </info>
+
+        <map id="attrs">
+            <property name="data-show-until-dismissed" value="true" />
+        </map>
+
+        <component location="content" ref="mntl-block" id="ccpa-notification-banner__content">
+
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <component location="content" ref="mntl-text-block" id="ccpa-notification-banner__text">
+                <property name="text" value="${@brandName} uses cookies to provide you with a great user experience and for our ">
+                    <property name="brandName" value="[replaceme]" />
+                </property>
+            </component>
+            <component location="content" ref="mntl-text-link" id="ccpa-notification-banner__link">
+                <property name="text" value="business purposes." />
+                <property name="uri" value="/privacy-request" />
+            </component>
+            <component location="content" ref="mntl-button" id="ccpa-notification-banner__btn-close">
+                <list id="class">
+                    <property name="js-banner-dismiss" value="js-banner-dismiss" />
+                </list>
+                <property name="text" value="x" />
+            </component>
+        </component>
+
+        <property name="bannerUndismissed" value="${requestContext.getCookieValue('notification_banner_dismissed') == 'true' ? null : 'true'}" onError="collapseSilent" />
+        <property name="isCcpaApplicableRequest" value="${@isCcpaApplicableRequest == true ? 'true' : null}" onError="collapseSilent">
+            <model name="isCcpaApplicableRequest" onError="ignore" />
+        </property>
+
+    </component>
+
+    <component id="ie-notification-banner" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Banner</category>
+            <displayName>IE Notification Banner</displayName>
+            <description>Banner notifying IE users to upgrade their browser. On dismiss, sets a session cookie to ensure user only sees the notification once per session.</description>
+            <documentation>
+                # Properties
+                ## trackingContainer
+                Determines if it is a tracking container. Does not work on IE10 and below
+
+                ## isNotDesktop
+                Will collapse banner if the user is not on desktop browser
+
+                ## bannerUndismissed
+                Checks if user is using IE browser, if they are then check if IE cookie has been set, if not then collapse banner
+
+                # Dependencies/References
+                ## ie-notification-banner\_\_content
+                Contains all the banner content
+
+                ## ie-notification-banner\_\_icon
+                SVG alert icon used. Does not display in IE8 and below due to mantle errors
+
+                ## ie-notification-banner\_\_text-container
+                Container to wrap text content of the banner
+
+                ## ie-notification-banner\_\_text--bold
+                Bolded warning text
+
+                ## ie-notification-banner\_\_text
+                Plain warning text
+
+                ## ie-notification-banner\_\_btn-update
+                Link styled like a button to direct the user to download Chrome
+
+                ## ie-notification-banner\_\_btn-close
+                Button that will close the banner and set cookie so banner will only appear once per session
+
+            </documentation>
+            <tags>Complete</tags>
+
+            <property name="bannerUndismissed" value="true" onError="collapseSilent" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/notification-banner/css/ie-banner.css" />
+        <script path="/static/mantle/components/widgets/notification-banner/js/ie-banner.js" />
+        <svg id="icon-alert" path="/static/mantle/svg/icon-alert.svg" />
+
+        <property name="isNotDesktop" value="${null}" views="mobile, tablet" onError="collapseSilent" />
+        <property name="bannerUndismissed" value="${@isIE AND requestContext.getCookieValue('ie_notification_banner_dismissed') != 'true' ? 'true' : null}" onError="collapseSilent">
+            <property name="isIE" value="${'IE'.equals(requestContext.getUserAgent().getFamilyName())}" />
+        </property>
+
+        <component location="content" ref="mntl-block" id="ie-notification-banner__content">
+
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <component location="content" ref="mntl-svg" id="ie-notification-banner__icon">
+                <list id="class">
+                    <property name="ie-notification-banner__icon-alert" value="ie-notification-banner__icon-alert" />
+                </list>
+                <property name="name" value="icon-alert" />
+            </component>
+
+            <component location="content" ref="mntl-block" id="ie-notification-banner__text-container">
+                <component location="content" ref="mntl-text-block" id="ie-notification-banner__text--bold">
+                    <property name="tag" value="span" />
+                    <property name="text" value="${'Your web browser (Internet Explorer' + @browserVersionText + ') is out of date. '}">
+                        <property name="browserVersionText" value="${@browserVersion != null ? ' ' + @browserVersion : ''}">
+                            <property name="browserVersion" value="${requestContext.getUserAgent().getVersionMajor()}" onError="ignore" />
+                        </property>
+                    </property>
+                </component>
+                <component location="content" ref="mntl-text-block" id="ie-notification-banner__text">
+                    <property name="tag" value="span" />
+                    <property name="text" value="Update your browser for more security, speed, and the best experience on this site." />
+                </component>
+            </component>
+
+            <component location="content" ref="mntl-text-link" id="ie-notification-banner__btn-update">
+                <list id="class">
+                    <property name="ie-notification-banner__btn" value="ie-notification-banner__btn" />
+                </list>
+                <property name="text" value="Update Browser" />
+                <property name="uri" value="https://www.google.com/chrome" />
+            </component>
+
+            <component location="content" ref="mntl-button" id="ie-notification-banner__btn-close">
+                <list id="class">
+                    <property name="ie-js-banner-dismiss" value="ie-js-banner-dismiss" />
+                    <property name="ie-notification-banner__btn" value="ie-notification-banner__btn" />
+                </list>
+                <property name="text" value="Ignore" />
+            </component>
+
+        </component>
+
+    </component>
+
+</components>

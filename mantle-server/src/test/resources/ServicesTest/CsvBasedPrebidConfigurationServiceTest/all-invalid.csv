@@ -1,0 +1,6 @@
+domain,device,slot,size,bidder,account_id,domain_id,slot_id
+,pc,billboard,160x600,Index Exchange,183710-82864189120250,269294,1
+AboutEspanol,,billboard,300x250,Index Exchange,183710-82864189120250,211183,2
+AboutEspanol,desktop,billboard,300x250,Index Exchange,183710-82864189120250,211183,35
+AboutEspanol,pc,,300x600,Index Exchange,183710-82864189120250,211184,3
+AboutEspanol,pc,billboard,300x600,,183710-82864189120250,211184,27

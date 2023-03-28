@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-recipe-intro" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Recipe</category>
+            <displayName>Intro Block</displayName>
+            <description>
+                Intro block for recipes.
+            </description>
+        </info>
+
+        <component location="content" id="mntl-recipe-intro__jump-to-recipe" ref="mntl-jump-to-recipe">
+            <property name="display" value="${(@introContents?.isEmpty() OR (@introContents?.totalSize lt 2)) ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-recipe-intro__content" ref="mntl-sc-page">
+            <stylesheet path="/static/mantle/components/recipe/intro/intro.css" />
+
+            <for id="mntl-sc-page-contents">
+                <model name="processStructuredContentBlocksInSliceableList" id="contents" mode="replace">
+                    <property name="blockSliceableListEx" value="${@introContents}" />
+                    <property name="sliceHtmlAtCharCount" value="1000" type="integer" />
+                    <!-- value is the Spring bean name of an instance of StructuredContentAdInsertionStrategy -->
+                    <property name="adInsertionStrategyName" value="defaultStructuredContentAdInsertionStrategy" />
+                </model>
+            </for>
+        </component>
+
+        <for id="mntl-recipe-intro__content.mntl-sc-page-contents.contents.blockSliceableListEx, mntl-recipe-intro__jump-to-recipe.display">
+            <property name="introContents" value="${@document?.getIntroContents()}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+    </component>
+
+</components>

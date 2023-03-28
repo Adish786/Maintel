@@ -1,0 +1,18 @@
+.mntl-pl-rendered-component {
+    height: 130vh;
+    background-color: silver;
+    border: 10px solid black;
+
+    &:before {
+        display: block;
+        content: 'Scroll Down to trigger adhesive ad';
+    }
+
+    & .mntl-adhesive-ad .wrapper:before {
+        background-color: grey;
+        display: block;
+        width: 320px;
+        height: 50px;
+        content: 'This is where the ad would be';
+    }
+}

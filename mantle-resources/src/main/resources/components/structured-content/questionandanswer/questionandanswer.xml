@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-sc-block-questionandanswer" resourcePath="/components/structured-content/questionandanswer/questionandanswer.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Question and Answer</displayName>
+            <description>Single Question and Answer block to allow a vertical to insert other blocks in between Q/A pairs. This block will also populate FAQ schema similar to the original FAQ block</description>
+            <documentation>
+# Implementation
+hideOnTOC - if true, then no values in this block are included in the TOC
+shortText - if set, then this is used instead of the `question` to populate the TOC
+            </documentation>
+            <property name="question" value="What is the cheapest way to get from New York to London?" />
+            <property name="answer" value="&#x3C;p&#x3E;Because the route between New York and London is a popular one, flying is the cheapest way to get between the two cities and sometimes you can find good deals&#x2014;especially on low-cost carriers.&#x3C;/p&#x3E;" />
+            <component id="mntl-toc-anchor" mode="remove" />
+        </info>
+
+        <property name="question" value="${@block.value.data.question}" />
+        <property name="answer" value="${@block.value.data.answer}" />
+
+        <component location="toc-anchor" ref="mntl-toc-anchor">
+            <property name="tocId" value="${T(com.about.mantle.model.tasks.TableOfContentsTask).generateAnchorId(@block.value)}" />
+        </component>
+    </component>
+</components>

@@ -1,0 +1,87 @@
+@import "mntlVariables";
+
+.bc-player-mobile-adhesive {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: $color-white;
+    padding: 0.5rem;
+    z-index: 10;
+
+    &__inner {
+        display: flex;
+        border: 1px solid $color-black-65;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0.1875rem;
+        right: 0.1875rem;
+        border-width: 0;
+        border-radius: 50%;
+        width: 2.75rem;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            top: 0;
+            right: 0;
+            background-color: $color-white;
+            z-index: 2;
+        }
+
+        &-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $color-black-65;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+    }
+
+    .icon-close {
+        fill: $color-white;
+        width: 0.625rem;
+        height: 0.625rem;
+    }
+
+    .jumpstart-js-wrapper--mobile-adhesive {
+        width: 10.3125rem;
+        height: 5.875rem;
+        position: relative;
+
+        .jumpstart-recs-container,
+        .jumpstart-control-bar {
+            display: none;
+        }
+
+        .jumpstart-js:fullscreen,
+        .jumpstart-js:-webkit-full-screen {
+            .jumpstart-recs-container,
+            .jumpstart-control-bar {
+                display: block;
+            }
+        }
+    }
+
+    &__side {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        padding: 1rem 3.375rem 1rem 1rem;
+    }
+}

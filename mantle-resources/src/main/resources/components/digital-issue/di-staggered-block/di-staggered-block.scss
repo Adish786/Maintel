@@ -1,0 +1,64 @@
+@import 'mntlVariables';
+
+.mntl-di-staggered-block {
+    padding: 1.5rem 1rem;
+
+    @media (min-width: $mntl-bp-md) {
+        padding: 1.5rem;
+    }
+
+    @media (min-width: $mntl-bp-lg) {
+        padding: 1.5rem 2rem;
+    }
+
+    .mntl-card {
+        display: flex;
+        flex-direction: column;
+        text-decoration-line: none;
+
+        .card__content {
+            margin-top: 1rem;
+
+            @media (min-width: $mntl-bp-lg) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 2rem;
+            }
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            flex-direction: row;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .card__top {
+                min-width: 50%;
+            }
+        }
+    }
+
+    &--image-right {
+        .mntl-card {
+            @media (min-width: $mntl-bp-lg) {
+                flex-direction: row-reverse;
+
+                &:nth-child(even) {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    &__dek {
+        font-weight: normal;
+    }
+
+    .mntl-di-module__cards {
+        @media (min-width: $mntl-bp-md) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

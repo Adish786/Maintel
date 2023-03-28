@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-taxonomysc-article-list" ref="mntl-document-card-list">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Article List</displayName>
+            <description>Component to be used for rendering the article list of a TAXONOMYSC page.</description>
+            <previewType>none</previewType>
+        </info>
+        <stylesheet path="/static/mantle/components/taxonomysc/css/taxonomysc-article-list.css" />
+
+        <!-- populates the "all tab" on taxSC pages-->
+        <for id="mntl-card-list-items, mntl-card-list__button.arbitraryDependency">
+            <model id="listItems" name="documentTaxeneList">
+                <model id="documentList" name="filterArticles">
+                    <model id="articles" name="descendantArticles">
+                        <property name="maxDocPopulation" value="500" />
+                    </model>
+                    <model id="articlesToFilterOut" name="documentsReferencedByContentBlocks">
+                        <model name="DOCUMENT" id="document" />
+                    </model>
+                </model>
+            </model>
+        </for>
+
+        <for id="mntl-card-list-items">
+            <property name="listStart" value="4" type="integer" />
+            <property name="listEnd" value="64" type="integer" />
+        </for>
+
+        <for id="mntl-card-list__bottom">
+            <component id="mntl-card-list__button" mode="remove" />
+        </for>
+    </component>
+
+    <!-- all the other tabs but the "all" tab on taxSC pages -->
+    <component id="mntl-taxonomysc-child-article-list" ref="mntl-taxonomysc-article-list">
+        <script path="/static/mantle/components/taxonomysc/js/taxonomysc-child-article-list.js" />
+
+        <for id="mntl-card-list-items, mntl-card-list__button.arbitraryDependency">
+            <model id="listItems" name="documentTaxeneList" mode="replace">
+                <model name="descendantArticles" id="documentList">
+                    <property name="docId" value="${requestContext.urlData.docId}" queryOverride="parentDocId" />
+                    <property name="maxDocPopulation" value="500" />
+                </model>
+            </model>
+        </for>
+
+        <for id="mntl-card-list-items">
+            <property name="listStart" value="0" type="integer" />
+            <property name="listEnd" value="16" type="integer" />
+        </for>
+
+        <for id="mntl-card-list__bottom">
+            <component location="content" ref="mntl-text-link">
+                <list id="class">
+                    <property name="mntl-card-list__button" value="mntl-card-list__button" />
+                </list>
+                <property name="text" value="View All" />
+                <property name="external" value="false" type="boolean" />
+                <property name="uri" value="${@parentDocument?.url ?: ''}">
+                    <model name="DOCUMENT" id="parentDocument">
+                        <property name="url" value="${null}" queryOverride="parentDocId" onError="collapseSilent" />
+                    </model>
+                </property>
+            </component>
+        </for>
+    </component>
+
+    <!-- mntl-taxonomysc-article-list-group is intended to be used as a container for mntl-taxonomysc-article-list
+    when they are in a tabbed experience.
+    -->
+    <component id="mntl-taxonomysc-article-list-group" ref="mntl-block">
+        <map id="attrs">
+            <property name="data-scroll-offset" value="80" views="pc, tablet" />
+            <property name="data-scroll-offset" value="65" views="mobile" />
+        </map>
+
+        <component location="content" ref="mntl-taxonomysc-article-list">
+            <map id="attrs">
+                <property name="data-docId" value="${@document.documentId.toString()}">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+            </map>
+        </component>
+    </component>
+</components>

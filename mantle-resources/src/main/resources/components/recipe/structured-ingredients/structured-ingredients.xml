@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-structured-ingredients" resourcePath="/components/recipe/structured-ingredients/structured-ingredients.ftl">
+        <info>
+            <category>Mantle Components/Recipe</category>
+            <displayName>Structured Ingredients</displayName>
+            <description>
+                Displays Structured Ingredients for Carbonized Recipe SC Templates from annotatedIngredient field.
+            </description>
+            <documentation>
+                Harcoded h2 for overall Ingredients heading.
+
+                ### Properties
+
+                - __listHeadingClass__ **String**
+
+                Typography for each heading of ingredient list section, default to goat bold
+
+                - __useLRS__ **boolean**
+
+                Adds a data attribute for each ingredient for the LRS script based on meredithId field, default to false and no data attribute
+            </documentation>
+
+            <for id="list">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="carbonized-recipe-sc" />
+                </model>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/recipe/structured-ingredients/structured-ingredients.css" />
+
+        <!--Ingredients Heading -->
+        <component location="heading" id="mntl-structured-ingredients__heading" ref="mntl-text-block">
+            <property name="tag" value="h2" />
+            <property name="text" value="Ingredients" />
+        </component>
+
+        <property name="list" value="${@document.ingredientGroups != null ? @document.ingredientGroups.list : null}" onError="collapseSilent">
+            <model name="DOCUMENT" id="document" />
+        </property>
+        <property name="listHeadingClass" value="type--goat-bold" />
+        <property name="useLRS" value="false" type="boolean" />
+    </component>
+
+</components>

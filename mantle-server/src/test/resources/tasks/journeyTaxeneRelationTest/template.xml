@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template id='main' source='source_main'>
+		<component location='content' id='journeyComponent'>
+			<!-- Valid Models -->
+			<!-- Journey Breadcrumb -->
+			<model name='journeyBreadcrumb' id='breadcrumbByReqCtx' />
+
+			<model name='journeyBreadcrumb' id='breadcrumbByProjection'>
+				<property name='projection' value='{{docId}}' />
+			</model>
+
+			<!-- Journey Ancestors -->
+			<model name='journeyAncestors' id='ancestorsByReqCtx' />
+
+			<model name='journeyAncestors' id='ancestorsByProjection'>
+				<property name='projection' value='{{docId}}' />
+			</model>
+
+			<!-- Journey Ancestors From Level -->
+			<model name='journeyAncestorsFromLevel' id='ancestorsFromLevel'>
+				<property name='fromLevel' value='1' />
+			</model>
+
+			<model name='journeyAncestorsFromLevel' id='ancestorsFromLevelAndProjection'>
+				<property name='projection' value='{{docId}}' />
+				<property name='fromLevel' value='2' />
+			</model>
+
+			<!-- Invalid models -->
+			<model name='journeyBreadcrumb' id='invalidParameterBreadcrumb'>
+				<property name='invalidParam' value='Null' />
+			</model>
+
+			<model name='journeyAncestors' id='invalidParameterAncestors'>
+				<property name='invalidParam' value='{{docId}}' />
+			</model>
+
+			<model name='journeyAncestorsFromLevel' id='invalidLevelAncestors'>
+				<property name='fromLevel' value='99' />
+			</model>
+		</component>
+	</template>
+</templates>
+

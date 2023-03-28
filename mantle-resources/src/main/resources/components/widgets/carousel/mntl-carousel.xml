@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-carousel" resourcePath="/components/widgets/carousel/mntl-carousel.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Carousel - Base</displayName>
+            <description>A carousel containing a list of items</description>
+            <documentation>
+                # Properties/Components
+
+                ## carouselItems
+
+                - List of items to iterate through
+
+                ## leftSvgName
+
+                Name of svg to use as left arrow
+
+                ## rightSvgName
+
+                Name of svg to use as right arrow
+
+                ## mntl-carousel_\_indicator
+
+                Container for a list of indicators that shows which item is active
+
+                # Classes/Attributes
+
+                - __.mntl-carousel_\_item.is-active__
+
+                Item in carousel currently in view (defaults to first item)
+
+                - __.mntl-carousel_\_arrow.is-active__
+
+                Added when arrow buttons are able to be clicked
+
+                - __.mntl-carousel_\_indicator-item--active__
+
+                Added on active item's corresponding indicator
+
+                - __.allow-free-scroll__
+
+                Added when on mobile to allow for free scrolling through carousel (triggered by existence of arrows since they use views="pc")
+
+                - __.scroll-snap__
+
+                If added, items will snap into place when free scrolling through carousel.
+
+                - __data-ordinal__
+
+                Index of item
+
+                #mntl-carousel.js
+
+                ### Sets up carousel to move items in the following manner:
+
+                - a) Current item if at the beginning or middle of carousel items
+
+                - b) Right align the last item if at the end of carousel items
+
+                - Sets an on click event listener on mntl-carousel\_\_arrow to move carousel items
+
+                - Initializes indicators, if present (included by default on mobile only, but can be added for pc)
+
+            </documentation>
+
+            <for id="mntl-carousel__card">
+                <component location="content" id="carousel-card__title" ref="mntl-text-block">
+                    <property name="text" value="${@linkItem.value.title}" />
+                </component>
+
+                <component location="content" id="carousel-card__body" ref="mntl-text-block">
+                    <property name="text" value="${@linkItem.value.description}" />
+                </component>
+            </for>
+
+            <for id="carousel-card__title.text, carousel-card__body.text">
+                <component-list-item id="linkItem" ref="mntl-carousel__item" />
+            </for>
+
+            <for id="mntl-carousel__item">
+                <property name="carouselItems" value="${@list}" mode="replace">
+                    <list id="list" mode="replace">
+                        <map id="card1">
+                            <property name="title" value="Getting Pregnant" />
+                            <property name="description" value="Learn more about them so you can increase the likelihood that you'll get pregnant." />
+                        </map>
+                        <map id="card2">
+                            <property name="title" value="Pregnancy" />
+                            <property name="description" value="Follow along each passing week and be amazed by all that is accomplished in just nine short months." />
+                        </map>
+                        <map id="card3">
+                            <property name="title" value="Ages and Stages" />
+                            <property name="description" value="Learn more about them here, and raise any concerns to your pediatrician." />
+                        </map>
+                        <map id="card4">
+                            <property name="title" value="Parenting" />
+                            <property name="description" value="Finding a gameplan that works for you and your kids can help you survive and thrive." />
+                        </map>
+                        <map id="card5">
+                            <property name="title" value="Healthy Kids" />
+                            <property name="description" value="Explore resources to help your child grow daily." />
+                        </map>
+                        <map id="card6">
+                            <property name="title" value="News" />
+                            <property name="description" value="Our content is supported with research and expert insights and fact-checked for accuracy." />
+                        </map>
+                    </list>
+                </property>
+            </for>
+        </info>
+        <stylesheet path="/static/mantle/components/widgets/carousel/mntl-carousel.css" />
+        <script group="bottom" path="/static/mantle/components/widgets/carousel/mntl-carousel.js" />
+        <svg id="mntl-carousel__arrow-icon" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+
+        <list id="class">
+            <property name="allow-free-scroll" value="allow-free-scroll" views="tablet, mobile" />
+        </list>
+
+        <list id="class">
+            <property name="allow-free-scroll" value="allow-free-scroll" views="tablet, mobile" />
+        </list>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="leftSvgName" value="mntl-carousel__arrow-icon" views="pc" />
+        <property name="rightSvgName" value="mntl-carousel__arrow-icon" views="pc" />
+
+        <component-list location="carousel-items" id="mntl-carousel__item" ref="mntl-block" iterable="${@carouselItems}">
+            <property name="tag" value="li" />
+            <component location="content" id="mntl-carousel__card" ref="mntl-block">
+                <list id="class">
+                    <property name="carousel-card" value="carousel-card" />
+                </list>
+            </component>
+
+            <list id="class">
+                <property name="is-active" value="${@carouselItem.index == 0 ? 'is-active' : ''}" />
+            </list>
+
+            <map id="attrs">
+                <property name="data-ordinal" value="${@carouselItem.index}" />
+            </map>
+
+            <for id="class.is-active, attrs.data-ordinal">
+                <component-list-item id="carouselItem" ref="mntl-carousel__item" />
+            </for>
+        </component-list>
+
+        <component location="post-carousel" id="mntl-carousel__indicator" ref="mntl-block" views="tablet, mobile">
+            <property name="tag" value="ul" />
+
+            <component-list location="content" id="mntl-carousel__indicator-item" ref="mntl-block" iterable="${@carouselItems}">
+                <property name="tag" value="li" />
+            </component-list>
+        </component>
+    </component>
+
+    <component id="mntl-carousel--inline" ref="mntl-carousel">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Carousel - Inline</displayName>
+        </info>
+
+        <list id="class">
+            <property name="mntl-carousel--inline" value="mntl-carousel--inline" />
+        </list>
+    </component>
+
+    <component id="mntl-carousel--journey" ref="mntl-carousel">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Carousel - Journey</displayName>
+            <description>
+A carousel containing a list of journey documents related to current document
+            </description>
+            <documentation>
+# Properties/Components
+
+## postTitleText
+
+- Optional string that comes after the journey title text (i.e. Guide)
+
+## journeyDocumentList
+
+- List of journey documents related to current document
+
+## leftSvgName
+
+Name of svg to use as left arrow
+
+## rightSvgName
+
+Name of svg to use as right arrow
+
+# Classes
+
+- __.card\_\_current-document.is-active__
+
+Card in carousel that matches current document ID
+
+- __.card\_\_next-document__
+
+Card in carousel that is next journey document OR first card if current document is a linked journey document
+
+- __.mntl-carousel_\_arrow.is-active__
+
+Added when arrow buttons are able to be clicked
+
+-__.mntl-carousel--linked-journey__
+
+Class that is applied if the document is linked to the journey and not actually part of the journey
+            </documentation>
+
+            <for id="headerTitle">
+                <property name="postTitleText" value=" Guide" mode="replace" />
+            </for>
+
+            <for id="headerTitle, allJourneyDocuments, journeyListSorted, isJourneyRootDocument">
+                <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                    <property name="docId" value="1069493" onError="ignore" />
+                </model>
+            </for>
+
+            <for id="journeyListSorted, journeyRelationshipType, isJourneyRootDocument">
+                <property name="docId" value="1069493" onError="ignore" />
+            </for>
+
+        </info>
+
+        <list id="class">
+            <property name="isLinkedJourney" value="${@isLinkedJourney ? 'mntl-carousel--linked-journey' : ''}">
+                <property name="isLinkedJourney" value="${ 'LINKED'.equals(@journeyRelationshipType.toString())}" onError="collapseSilent">
+                    <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore" />
+                </property>
+            </property>
+        </list>
+
+        <property name="headerCta" value="Read More In" />
+        <property name="headerTitle" value="${@journeyRoot.shortHeading + @postTitleText}" onError="collapseSilent">
+            <property name="postTitleText" value="" />
+        </property>
+
+        <property name="leftSvgName" value="mntl-carousel__arrow-icon" views="pc" />
+        <property name="rightSvgName" value="mntl-carousel__arrow-icon" views="pc" />
+
+        <for id="mntl-carousel__item">
+            <property name="tag" value="li" />
+
+            <list id="class">
+                <property name="is-active" value="${@carouselItem.value.document.documentId == @requestContext.urlData.docId ? 'is-active card--current-document' : ''}" mode="replace" />
+
+                <!-- Add next-document class if one of these conditions is met: -->
+                <!-- 1. First iterated item AND document we are on is a linked journey -->
+                <!-- 2. Second iterated item or beyond AND iterated item document id equals next journey document id to document we are on -->
+                <property name="nextJourneyDocument" value="${(@carouselItem.index == 0 and @isLinkedJourney) or (@carouselItem.index > 0 and @carouselItemIsNextJourney) ? 'card--next-document' : ''}">
+                    <property name="carouselItemIsNextJourney" value="${ @journeyListSorted?.size() >= 1 and @journeyListSorted[0].document.documentId == @carouselItem.value.document.documentId }" onError="collapseSilent">
+                        <model name="journeyDocumentsAfterToBeforeInclusive" id="journeyListSorted" />
+                    </property>
+
+                    <model name="journeyRelationshipType" id="journeyRelationshipType">
+                        <!-- <property name="docId" value="${requestContext.urlData.docId}" /> -->
+                    </model>
+
+                    <property name="isLinkedJourney" value="${ 'LINKED'.equals(@journeyRelationshipType.toString())}" onError="collapseSilent">
+                        <model name="journeyRelationshipType" id="journeyRelationshipType">
+                            <!-- <property name="docId" value="${requestContext.urlData.docId}" onError="ignore" /> -->
+                        </model>
+                    </property>
+                </property>
+            </list>
+
+            <component location="content" id="mntl-carousel__card" ref="mntl-carousel--journey__card" mode="replace" />
+        </for>
+
+        <component id="mntl-carousel__indicator" mode="remove" />
+
+        <!-- If single section journey, do not include root. Otherwise, include it. -->
+        <for id="this, mntl-carousel__item, mntl-carousel__indicator, card__counter.text.size">
+            <property name="carouselItems" value="${@allJourneyDocuments}" >
+                <model name="getAllJourneyDocuments" id="allJourneyDocuments">
+                    <property name="includeRoot" value="${!@isSingleSectionJourney}">
+                        <model name="isSingleSectionJourney" />
+                    </property>
+                </model>
+            </property>
+        </for>
+
+        <for id="this, headerTitle, allJourneyDocuments, journeyListSorted, isSingleSectionJourney, isJourneyRootDocument">
+            <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+            </model>
+        </for>
+
+        <for id="mntl-carousel__item, is-active, currentJourneyDocument, nextJourneyDocument, carouselItemIsNextJourney">
+            <component-list-item id="carouselItem" ref="mntl-carousel__item" />
+        </for>
+
+        <for id="journeyListSorted">
+            <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+            </model>
+        </for>
+
+        <for id="journeyListSorted, journeyRelationshipType, isJourneyRootDocument">
+            <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+        </for>
+
+    </component>
+
+    <component id="mntl-carousel--journey__card" ref="mntl-document-card">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Carousel - Journey Card</displayName>
+        </info>
+
+        <for id="title,
+        image,
+        url,
+        docId,
+        kicker,
+        byline.bylineText,
+        author">
+            <property name="document" value="${@carouselItem.value.document}" />
+        </for>
+
+        <for id="index, ordinal, document, currentIndex">
+            <component-list-item id="carouselItem" ref="mntl-carousel__item" />
+        </for>
+
+        <property name="docId" value="${@document.documentId}" />
+        <property name="index" value="${@carouselItem.index}" />
+        <property name="ordinal" value="${@carouselItem.index + 1}" />
+        <property name="cta" value="Read More" />
+
+        <component location="content" id="card__byline" ref="mntl-text-block">
+            <property name="tag" value="span" />
+            <property name="text" value="${@bylineText + @author.displayName}">
+                <property name="bylineText" value="By " />
+                <model name="AUTHOR" id="author" onError="ignore" />
+            </property>
+            <property name="collapseOnAttributionEnabled" value="${ @attributionEnabled.value == 'true' ? null : 'true' }" onError="collapseSilent" />
+        </component>
+
+        <component location="card__footer" id="card__counter" ref="mntl-text-block">
+            <property name="tag" value="span" />
+            <property name="text" value="${@currentIndex + @textBetween + @size}">
+                <property name="currentIndex" value="${@carouselItem.index + 1}" />
+                <property name="textBetween" value=" of " />
+                <property name="size" value="${@carouselItems.size()}" />
+            </property>
+        </component>
+
+        <for id="collapseOnAttributionEnabled">
+            <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+        </for>
+    </component>
+
+</components>

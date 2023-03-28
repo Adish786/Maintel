@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-gtm" resourcePath="/components/gtm/view/gtm.ftl">
+        <info>
+            <category>Mantle Components/Analytics</category>
+            <displayName>Google Tag Manager</displayName>
+            <description>
+                Adds GTM (Google Tag Manager) to page and pushes various data points to GA (Google Analytics)
+            </description>
+            <documentation>
+                ### gtm.ftl
+
+                Adds inline GTM script to page
+
+                - __accountName__ `String`
+
+                By default uses `gtmAccountName` key in CIA
+
+                - __accountId__ `String | GTM-W9QMDMG`
+
+                By default uses `gtmAccountId` key in CIA
+
+                ### gtm.evaluated.js
+
+                Passes various data points provided by `gtmPageView` model to Google Analytics
+
+                - __gtmPageView__ `mantle.model.gtm.MantleGTM`
+
+                Mantle worktasks `gtmPageView` will return back data in `MantleGTM` object. This data gets passed to GA.
+
+                - __jsKeys__ `Object&lt;String, Object&gt;`
+
+                Additional, optional key:value pairs to pass to GA.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <model name="gtmPageView" />
+        </info>
+        <script group="top" path="/static/mantle/js/cookies.js"></script>
+        <script group="top" path="/static/mantle/js/maybe.js"></script>
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="top" path="/static/mantle/js/fn-utilities.js"></script>
+		<script group="top" path="/static/mantle/js/page-view.js"></script>
+		<script group="top" evaluated="true" path="/static/mantle/components/gtm/js/gtm.evaluated.js"></script>
+		<config id="accountName" key="gtmAccountName" onError="ignore" />
+		<config id="accountId" key="gtmAccountId" onError="ignore" />
+		<map id="jsKeys">
+			<property name="bounceExchangeId" value="'${@bounceExchangeIdConfig?.value ?: ''}'" onError="ignore">
+				<model id="bounceExchangeIdConfig" name="externalConfig" onError="ignore">
+					<property name="key" value="com.about.globe.bounceExchange.id" />
+				</model>
+			</property>
+		</map>
+        <for id="mtax">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+        <property name="mtax" value="${@document?.metaData?.mTaxonomyIds?.list ?: null}" onError="ignore" />
+	</component>
+
+</components>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-staggered-three-column-block" ref="mntl-di-module">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Staggered Three Column Block</displayName>
+            <description>A digital issue module with three columns of cards sandwiched between two staggered cards</description>
+            <documentation />
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-staggered-three-column-block/di-staggered-three-column-block.css" />
+
+        <for id="mntl-card-list-items">
+            <property name="titleTextClass" value="${@item.index % 4 == 0 ? 'type--zebra-link-bold' : 'type--gorilla-link-bold'}">
+                <component-list-item id="item" ref="mntl-card-list-items" />
+            </property>
+        </for>
+    </component>
+
+</components>

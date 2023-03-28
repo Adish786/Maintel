@@ -1,0 +1,237 @@
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-jwplayer" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>JWPlayer</displayName>
+            <description>Adds the JWPlayer Video Player</description>
+            <documentation>
+                ### jw-player.evaluated.js
+
+                ### To support lazy loading we added the following fields to use the Lazy Sizes Library
+
+                * class value lazyload
+
+                Flags the div for the lazy size library to act on
+
+                * attr value datasizes
+
+                used to set sizes for the image
+
+                * attr value data-bgset
+
+                used to tell lazy sizes to load the iage in the background-url style
+
+                #### These are the custom settings that we define on top of JWPlayer in our wrapper code:
+
+                * __model.playOnPercentInView__ **integer**
+
+                Autoplay video when this percent of the player is in the viewport.
+
+                * __model.showCaptions__ **string**
+
+                String **true** to have the video captions showing by default. String **false** to hide captions (still available to the user through the CC button).
+
+                #### These are the advertising settings that follow the [DoubleClick format](https://support.google.com/admanager/answer/1068325?hl=en) and JWPlayer documentation:
+
+                * __model.adSizes__ **array[array]**
+
+                Array of ad sizes passed to DoubleClick in the form of: [[width, height], ... ]
+
+                * __model.custParams__ **map**
+
+                A map of key value pairs to be added to the cust_params value of the **setup.advertising.schedule.tag** value
+
+                * __model.iu__ **string**
+
+                Value of the **iu** parameter in the ad server url, before being prefixed with the DFP ID. If using a hardcoded DFP ID, define the property **iu** instead with the ID already prefixed.
+
+                #### These are the video settings that follow the [JWPlayer documentation](https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/):
+
+                * __model.accountKey__ **string**
+
+                JWPlayer Account ID. Found in JWPlayer Dashboard.
+
+                * __model.playerId__ **string**
+
+                JWPlayer ID. Found in JWPlayer Dashboard.
+
+                * __model.setup__ **map**
+
+                Propeties to send to the jwplayer("myElement").setup() method. See [JW Player Configuration Reference](https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/)
+
+                * __model.setup.skin__ **map**
+
+                Either configurable [Skin Customization](https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/#skin) properties or a skin name use with css properties referenced in the [CSS Skinning Reference](https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/css-skinning/skins_reference/).
+
+                __model.mediaSize__ **integer**
+
+                Use to sort video sources returned by the delivery API and serve the specific video file appropriate to the device.
+
+                __model.intersectionMargin__ **string**
+
+                Sets the intersection Observable margin. It uses the same values as the CSS margin property. Details of its usage is found in the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+
+                __model.vpbFloorPricing__ **integer**
+
+                Sets the floor pricing of the player when using video player bidding
+
+                __model.skipExistingMediaContent__ **boolean**
+
+                If our playlist's first item has the same media id as other existing JW Player's on the page, then skip to the next video in the playlist
+
+                ### jw-player.js
+
+                * __Mntl.JWPlayer.init(options, setup)__
+                * __options__ **object**
+                * .dash setup options
+                    * accountKey: "${model.accountKey}"             // JWPlayer Account Key
+                    * defer: ${model.defer!'false'}                 // Defer initization or execute immediately
+                    * displayMode: ${model.displayMode!'none'}      // To show the playlist shelf set to shelfWidget
+                    * divId: ${manifest.instanceId}                 // ID attribute of video player DIV
+                    * eventCategoryType: ${model.eventCategoryType!''}  // Event Category for event handler pushed to data layer
+                    * intersectionMargin: ${model.intersectionMargin!'0px'} // Margin for intersection observer starting video
+                    * isPlaylist                                    // Set to false/true depending on whether or not there is a playlistUrl in the setup object
+                    * mediaSize: ${model.mediaSize}                 // Width of video to load
+                    * playerId: "${model.playerId!'oeXeniEf'}"      // Id of player to put on the page
+                    * playInView: ${model.playOnPercentInView}      // Autoplay video when this percent is in the viewport
+                    * showCaptions: ${model.showCaptions!'true'}    // set true to show captions on video player
+                    * trackingCodes                                 // optional sponsor trusted tracking codes
+                    * useMotionThumbnails: ${model.useMotionThumbnails!'false'} // set true to use Motion Thumbnail previews for video player
+                    * useTAMforVideoAds: ${model.useTAMforVideoAds} // Set to false/true depending on whether or not TAM should be used for video ads
+                * __setup__ **object**
+                    * playlistUrl                               // The JSON url for the playlist
+                    * playlistTitleSelector                     // The element selector for where the text title of the current video should be updated
+                    * playlistlistDescriptionSelector           // The element selector for where the text description of the current video should be updated
+                    * playlistLinkSelector                      // The element selector for where the href of the current video should be updated
+                    * playlistShelfId                           // The id of the container for where the playlist shelf should go
+
+                The JWPlayer setup configuration. See [JW Player Configuration Reference](https://developer.jwplayer.com/jw-player/docs/developer-guide/customization/configuration-reference/).
+
+                ### Dev Notes
+
+                Default GA integration not used. See [GLBE-5578](https://iacpublishing.atlassian.net/browse/GLBE-5578)
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+            <!-- See documentation for iuPath -->
+            <property name="iuPath" value="/verywell/vw_psychology/video" />
+            <map id="setup">
+				<property name="mediaid" value="yN00uz7b" />
+            </map>
+
+            <for id="attrs">
+                <property name="data-bgset" value="https://cdn.jwplayer.com/thumbs/yN00uz7b-720.jpg" />
+            </for>
+
+            <property name="playOnPercentInView" value="50" views="pc" type="integer" />
+        </info>
+
+        <script path="/static/mantle/components/widgets/video-player/js/jw-player.evaluated.js" evaluated="true" />
+        <script path="/static/mantle/components/widgets/video-player/js/jw-player.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/ls.bgset.js" />
+        <stylesheet path="/static/mantle/components/widgets/video-player/css/jw-player.css" />
+        <svg id="jw-player-cc" path="/static/mantle/svg/jw-player-cc.svg" />
+
+        <!-- this config should match the autostart config -->
+        <property name="playOnPercentInView" value="0" views="mobile, tablet" type="integer" />
+        <property name="playOnPercentInView" value="30" views="pc" type="integer" />
+		<property name="showCaptions" value="true" />
+
+        <!-- All values after this comment should follow our built in documentation (see above) -->
+        <property name="adSizes" value="[[320, 240], [640, 365]]" />
+        <property name="intersectionMargin" value="250px" type="string" />
+        <map id="custParams">
+            <property name="slot" value="video" />
+        </map>
+        <property name="useTAMforVideoAds" value="false" tests="useRTBforVideoAds" buckets="inactive, control" onError="ignore" />
+        <property name="useTAMforVideoAds" value="true" tests="useRTBforVideoAds" buckets="active" onError="ignore" />
+        <property name="vpbFloorPricing" value="1100" testPayload="vpbFloorPricing" type="integer" />
+
+        <property name="skipExistingMediaContent" value="false" />
+
+        <!-- property name="trackingCodes" exists to set if it is available -->
+
+        <!-- These values follow documentation on the Lazy Sizes library for the thumbnail image -->
+        <list id="class">
+            <property name="lazyload" value="lazyload" />
+        </list>
+
+        <map name="attrs">
+            <property name="data-sizes" value="auto" />
+            <property name="data-bgset" value="${(@document?.primaryVideo?.document?.thumbnailUrl)?: @document?.templateType.toString() == 'VIDEO' ? (@document?.thumbnailUrl)?: '' : ''}">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </map>
+
+        <!-- All values after this comment should follow JWPlayer documentation -->
+        <property name="accountKey" value="oxY0/BqWBX09BISmLN4/xuTz4IdZy713Cdjj4GyHOiYCUCyJ" />
+        <property name="playerId" value="oeXeniEf" />
+        <property name="displayMode" value="none" type="string" />
+
+        <for id="taxonomyStampValues.tax1">
+            <model name="ancestors" id="nodes" onError="ignore">
+                <model name="breadcrumb" onError="ignore" />
+            </model>
+        </for>
+
+        <map name="taxonomyStampValues">
+            <property name="tax1" value="${@nodes.size() gt 1 ? (@nodes[1]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+        </map>
+
+        <map id="setup">
+            <!-- If autoplay is set should always set to be mute due to browser autoplay policy  -->
+            <property name="autostart" value="false" views="mobile, tablet"  type="boolean" />
+            <property name="autostart" value="true" views="pc" type="boolean" />
+
+            <!-- For https://dotdash.atlassian.net/browse/GLBE-6895 we want to pass this setting for autoPause per JWPlayer config docs  -->
+            <!--<map id="autoPause">-->
+                <!--<property name="pauseAds" value="true" />-->
+                <!--<property name="viewability" value="true" />-->
+            <!--</map>-->
+
+            <property name="mute" value="true" views="pc" type="boolean" />
+
+            <property name="preload" value="none" views="mobile, tablet" type="string" />
+            <property name="preload" value="metadata" views="pc" type="string" />
+
+            <property name="aspectratio" value="16:9" />
+            <property name="width" value="100%" />
+
+            <property name="pauseotherplayers" value="true" />
+
+            <!-- Enable Chromecast streaming -->
+            <map id="cast" />
+
+            <map id="skin">
+                <property name="name" value="mantle" />
+            </map>
+
+            <map id="advertising">
+                <property name="client" value="googima" />
+                <!-- tag property is generated in jw-player.evaluated.js -->
+                 <property name="autoplayadsmuted" value="true" type="boolean" />
+                <property name="forceNonLinearFullSlot" value="true" type="boolean" />
+                <map id="rules">
+                    <property name="frequency" value="0" type="integer" />
+                </map>
+                <property name="vpaidcontrols" value="true" type="boolean" />
+            </map>
+        </map>
+
+        <!-- Temp value for sorting results from front end api call
+         In the final video setting for the correct video should be applied
+         directly on the setup map above.
+         -->
+        <property name="mediaSize" value="${@mediaS}">
+            <property name="mediaS" value="480" views="mobile" />
+            <property name="mediaS" value="720" views="tablet" />
+            <property name="mediaS" value="1080" views="pc" />
+        </property>
+
+        <property name="useOxygen" type="boolean" value="false" />
+        <property name="useOxygen" type="boolean" value="true" tests="useOxygen" buckets="useOxygen" />
+    </component>
+
+</components>

@@ -1,0 +1,66 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+# Strips away any suffixes with a dash and the patch version if applicable
+getConcreteMajorMinorVersion() {
+  rawVersion=$1
+  strippedDashPrefix=${rawVersion%%-*}
+
+  numDots="$(tr -cd '.' <<< "$strippedDashPrefix" | wc -c)"
+
+  if [[ numDots -gt 1 ]]; then
+    stripPatchVersion=${strippedDashPrefix%.*}
+  fi
+
+  echo "$stripPatchVersion"
+}
+
+# Takes in two concrete semantic versions A,B as arguments and returns successfully if
+# version A is the same or higher version of B
+# e.g. checkVersionCompatibility "4.12.4" "3.13.7 => true
+checkVersionCompatibility() {
+  IFS=.
+  version=($1)
+  version2=($2)
+  for i in "${!version[@]}"; do
+    if [ "${version[i]}" -lt "${version2[i]}" ]; then
+      echo "---------- COMMIT FAILED ----------"
+      printf "It looks like you are trying to merge a branch into one that is on a lower major/minor version. \n\nPlease unstage changes from that merge or talk with globe-core.\n"
+      return 1;
+    elif [ "${version[i]}" -ne "${version2[i]}" ]; then
+      return 0;
+    fi
+  done
+  unset IFS
+  return 0;
+}
+
+getMantleVersion() {
+  while IFS="=" read -r key value; do
+    if [[ $key == "version" ]]; then
+     echo "$value"
+    fi
+  done <<< "$1"
+}
+
+mergeRegex="Merge branch '(.*)'.*into.*"
+commitMessage=$(< "$1")
+
+# Detect if it's a merge by relying on the default commit message.
+# If it is, then check the version to ensure the current branch is not on a lower version excluding the patch version.
+if [[ "$commitMessage" =~ $mergeRegex ]]; then
+  currGradleProps=$(< gradle.properties)
+  currMantleVer=$(getMantleVersion "$currGradleProps")
+
+  # get the capture group from mergeRegex
+  branchName="${BASH_REMATCH[1]}"
+  remoteTrackingBranch=$(git for-each-ref --format='%(upstream:short)' $(git rev-parse --symbolic-full-name "$branchName"))
+
+  mergeFromGradleProps=$(git --no-pager show "$remoteTrackingBranch":gradle.properties)
+  mergeFromVer=$(getMantleVersion "$mergeFromGradleProps")
+
+  partialCurrentVersion=$(getConcreteMajorMinorVersion "$currMantleVer")
+  partialMergeFromVersion=$(getConcreteMajorMinorVersion "$mergeFromVer")
+
+  checkVersionCompatibility "$partialCurrentVersion" "$partialMergeFromVersion"
+fi

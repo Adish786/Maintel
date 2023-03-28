@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-taxonomysc-sibling-nodes" ref="mntl-block">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Sibling Nodes</displayName>
+            <description>
+                Component that renders text links for the sibling nodes of a TAXONOMYSC page.
+            </description>
+            <documentation>
+                # Models
+
+                ## breadcrumb
+                Returns the primary parent document ID to be used in the `taxonomyChildNodes` model and heading
+
+                ## taxonomyChildNodes
+                Returns the list of child nodes for the primary parent of the current document
+
+                ## levelByNode
+                Returns the node tax level used to only display the component on level 2 or greater
+
+                # Properties
+
+                ## hasSiblings
+                Used to determine if a document has any siblings to display
+                This is done in the following way:
+                >1. Retrieve the document's parent node
+                >2. Retrieve the parent node's child nodes (the siblings of the original document)
+                >3. Check if there are two or more children (because this list of children will always include at least the original document and the component will only show if there are OTHER siblings)
+                
+                ## isNotCurrentDocument
+                Used to check and hide the current document from the list of siblings
+
+                ## parentHeading
+                The shortHeading of the parent node
+
+                # Dependencies/References
+
+                ## siblingNode
+                Component list item containing the data (shortHeading, url) for a sibling node to display
+            </documentation>
+
+            <for id="mntl-taxonomysc-sibling-node">
+                <property name="isNotCurrentDocument" value="${ @siblingNode.value.document.documentId != @breadcrumb.docId ? true : null }" onError="collapseSilent" mode="replace">
+                    <model name="mockBreadcrumb" id="breadcrumb" mode="replace">
+                        <property name="mockName" value="sample-taxonomysc-breadcrumb" />
+                    </model>
+                    <component-list-item id="siblingNode" ref="mntl-taxonomysc-sibling-node" />
+                </property>
+            </for>
+
+            <for id="docId, parentHeading, levelByNode">
+                <model name="mockBreadcrumb" id="breadcrumb" mode="replace">
+                    <property name="mockName" value="sample-taxonomysc-breadcrumb" />
+                </model>
+            </for>
+        </info>        
+
+        <stylesheet path="/static/mantle/components/taxonomysc/css/taxonomysc-sibling-nodes.css" />
+        <property name="hasSiblings" value="${ @siblingNodes.size() > 1 ? true : null }" onError="collapseSilent" />
+
+        <component location="content" id="mntl-taxonomysc-sibling-nodes__title" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="More In ${@parentHeading}">
+                <property name="parentHeading" value="${ @breadcrumb.primaryParent.document.shortHeading }" onError="collapseSilent" />
+            </property>
+        </component>
+
+        <component location="content" id="mntl-taxonomy-sibling-node__container" ref="mntl-block">
+            <component-list location="content" id="mntl-taxonomysc-sibling-node" ref="mntl-text-link" iterable="${@siblingNodes}">
+                <property name="isNotCurrentDocument" value="${ @siblingNode.value.document.documentId != @requestContext.urlData.docId ? true : null }" onError="collapseSilent" />
+
+                <property name="text" value="${@siblingNode.value.document.shortHeading}" onError="collapseSilent" />
+                <property name="uri" value="${@siblingNode.value.document.url}" onError="collapseSilent" />
+
+                <for id="uri, text, isNotCurrentDocument">
+                    <component-list-item id="siblingNode" ref="mntl-taxonomysc-sibling-node" />
+                </for>
+            </component-list>
+        </component>
+
+        <for id="mntl-taxonomysc-sibling-node, hasSiblings">
+            <model name="taxonomyChildNodes" id="siblingNodes">
+                <property name="docId" value="${ @levelByNode.levelId gt 1 ? @breadcrumb.primaryParent.document.documentId : null }" onError="collapseSilent">
+                    <model name="levelByNode" id="levelByNode" />
+                </property>
+            </model>
+        </for>
+        
+        <for id="docId, parentHeading, levelByNode">
+            <model name="breadcrumb" id="breadcrumb" />
+        </for>
+    </component>
+</components>

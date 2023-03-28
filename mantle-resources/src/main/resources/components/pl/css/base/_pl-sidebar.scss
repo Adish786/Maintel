@@ -1,0 +1,113 @@
+.mntl-pl-sidebar {
+    border-right: $pl-border;
+    background: $pl-color-white;
+    color: $color;
+    display: block;
+    padding: 0 1rem;
+    overflow: auto;
+
+    .pl-categories {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__link {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            font-size: 14px;
+            color: $pl-color-text;
+
+            &:hover,
+            &.is-selected {
+                color: $pl-color-primary;
+            }
+        }
+
+        &__children {
+            padding-left: 20px;
+        }
+    }
+
+    .input-group:before {
+        content: 'Search';
+        display: block;
+        position: absolute;
+        top: -7px;
+        left: 9px;
+        font-size: 10px;
+        width: 30px;
+        height: 10px;
+        z-index: 2;
+        background: $pl-color-white;
+        padding: 0 2px;
+        color: $pl-color-text;
+    }
+}
+
+
+.icon-magnifying-glass {
+    height: 15px;
+    width: 15px;
+    fill: $pl-color-text;
+}
+
+.labels,
+.filter {
+    margin-top: $pl-std-top;
+    margin-bottom: $pl-std-top;
+}
+
+.filter {
+    position: relative;
+
+    label {
+        position: absolute;
+        display: block;
+        width: 16px;
+        top: 7px;
+        right: 6px;
+    }
+
+    input {
+        width: 100%;
+        padding: 4px 25px 4px 6px;
+        border: 1px solid $pl-color-gray;
+        border-radius: 2px;
+        height: 34px;
+    }
+}
+
+.accordion__trigger {
+    padding-left: 10px;
+}
+
+.accordion__content {
+    overflow: hidden;
+    transform: translateZ(0);
+
+    &.is-closed {
+        max-height: 0 !important;
+    }
+}
+
+.accordion__arrow {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    display: block;
+    transform: translateZ(0);
+    color: $pl-color-gray-3;
+
+    .is-open & {
+        transform: rotate(90deg);
+    }
+
+    &:after {
+        content: '\25BA';
+        font-size: 55%;
+    }
+}
+

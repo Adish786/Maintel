@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+	<conversionRule conversionWord="X" converterClass="com.about.globe.core.logback.layout.NoDefaultMDCAccessConverter"/>
+	<!-- the space in this string in section '"docType": {' in intentional, DO NOT REMOVE, there is an issue with the logback tokenizer which is alleviated by adding a space between the ':' and '{' -->
+	<property name="encoderPattern" value='{"actorId":%X{actorId},"actorGid":%X{actorGid},"bytesSent":"%b","client":%X{remoteIp},"docId":%X{documentId},"docType": {"id":%X{documentTypeId},"name":%X{documentType}},"globeTmpl":%X{renderTemplate},"host":"%A","isPv":%X{isPageview},"layout":%X{deviceCategory},"mimeType":"%responseHeader{Content-Type}","muid":%X{muid},"ref":%X{refererUrlComponents},"refUrl":%X{refererUrl},"reqId":%X{requestId},"reqMeth":"%m","sessId":%X{sessionId},"status":%s,"taxonomy":%X{taxonomy},"timestamp":%X{requestTimestamp},"url":%X{requestUrlComponents},"userAgent":%X{userAgent},"userId":%X{userId},"webPlatform":"globe","logType":"access"}'/>
+
+	<!-- awsAccountName is provided in deployed environments only -->
+	<if condition='isDefined("awsAccountName")'>
+		<then>
+			<include resource="logback/logback-access-deployed.xml"/>
+		</then>
+		<else>
+			<include resource="logback/logback-access-local.xml"/>
+		</else>
+	</if>
+
+</included>

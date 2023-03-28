@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-amazon-rss" resourcePath="/components/amazon-rss/amazon-rss.ftl">
+        <info>
+            <category>Mantle Components/Amazon RSS</category>
+            <displayName>Amazon RSS Feed</displayName>
+        </info>
+		<property name="title" value="${@companyName}">
+			<message key="companyName" id="companyName" />
+		</property>
+		<for id="link, description">
+			<property name="websiteUrl" value="${'https://www.' + renderUtils.getDomain('/')}" />
+		</for>
+		<property name="link" value="${@websiteUrl}" />
+		<property name="description" value="Amazon RSS feed for ${@websiteUrl}" />
+		<property name="language" value="en-us" />
+		<property name="lastBuildDate" value="${time}" />
+		<component-list location="items" id="mntl-amazon-rss-items" ref="mntl-amazon-rss-item" iterable="${@items}">
+			<model id="items" name="amazonRssItems" />
+			<property name="item" value="${@item.value}">
+				<component-list-item id="item" ref="mntl-amazon-rss-items" />
+			</property>
+			<property name="pubDateOffset" value="${!@isAmazonIntervalMode ? @offset : 0}">
+				<model name="isAmazonIntervalMode" />
+				<model id="offset" name="timeSince" >
+					<property name="start" value="2021-08-16T05:00:00.000"  />
+					<property name="temporalUnit" value="${T(java.time.temporal.ChronoUnit).DAYS}" />
+				</model>
+			</property>
+		</component-list>
+	</component>
+
+	<component id="mntl-amazon-rss-item" resourcePath="/components/amazon-rss/amazon-rss-item.ftl">
+		<info>
+            <category>Mantle Components/Feed</category>
+            <displayName>Amazon RSS Item</displayName>
+        </info>
+	</component>
+
+</components>

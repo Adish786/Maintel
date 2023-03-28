@@ -1,0 +1,20 @@
+@import "mntlVariables";
+
+.mntl-guide-crumb {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $bp-med) {
+        width: auto;
+    }
+}
+
+.mntl-guide-crumb__dropdown {
+    .mntl-guide-crumb.is-active & {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        z-index: 4;
+    }
+}

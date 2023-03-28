@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../xsd/components.xsd">
+
+    <component id="mntl-recipe-review-bar" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Recipe Review Bar</category>
+            <displayName>Recipe Review Bar</displayName>
+            <description>
+                The Recipe Review Bar component displays the recipe star rating component, the average rating of a recipe, 
+                the total number of users who rated the recipe, and the total number of reviews a recipe has.
+            </description>
+
+            <for id="commentCount, ratingCount, rating">
+                <model name="getAggregatedFeedbacks" id="userRating">
+                    <property name="docId" value="${@document.documentId}" />
+                </model>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/recipe/recipe-review-bar/recipe-review-bar.css" />
+        <script path="/static/mantle/components/recipe/recipe-review-bar/recipe-review-bar.js" />
+
+        <list id="class">
+            <property name="hasRatingCountClass" value="${@hasRatingCount ? 'has-ratings' : '' }" onError="ignore" />
+            <property name="hasCommentsClass" value="${@hasComments ? 'has-comments' : '' }" onError="ignore" />
+            <property name="readOnlyClass" value="${@ugcFeedbackReadOnly.value ? 'read-only' : '' }" onError="collapseSilent" />
+            <property name="js-recipe-review-bar" value="js-recipe-review-bar" />
+        </list>
+
+        <!-- Collapse if no rating or comments for read-only -->
+        <property name="collapseIfEmpty" value="${@ugcFeedbackReadOnly.value ? (@hasRating == false AND @hasComments == false ? null : true) : true}" onError="collapseSilent" />
+
+        <component location="content" id="mntl-recipe-review-bar__star-rating" ref="mntl-recipe-star-rating">
+            <property name="collapseIfNoRating" value="${@hasRating == false ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-recipe-review-bar__rating" ref="mntl-text-block">
+            <list id="class">
+                <property name="typography" value="type--squirrel-link" />
+            </list>
+
+            <property name="text" value="${@formattedRating}" />
+            <property name="collapseIfNoRatingCount" value="${@hasRatingCount == false ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-recipe-review-bar__rating-count" ref="mntl-text-block">
+            <list id="class">
+                <property name="typography" value="type--cat" />
+            </list>
+
+            <property name="text" value="(${renderUtils.formatNumber('#,##0;(#,##0)', @ratingCount)})" />
+            <property name="collapseIfNoRatingCount" value="${@hasRatingCount == false ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-recipe-review-bar__comment-count" ref="mntl-text-block">
+            <list id="class">
+                <property name="typography" value="${@hasComments ? 'type--squirrel-link' : 'type--cat-link'}" onError="ignore" />
+            </list>
+
+            <!-- 
+                No rating or comment: Be the first to rate &amp; review! 
+                Has rating but no comment: Add your rating &amp; review
+                Else: 1 Review or # Reviews
+            -->
+            <property name="text" value="${@hasComments ? @commentText : (@ugcFeedbackReadOnly.value ? null :  (@hasRating ? 'Add your rating &amp; review' : 'Be the first to rate &amp; review!'))}" onError="collapseSilent">
+                <property name="commentText" value="${@commentCount > 1 ? renderUtils.formatNumber('#,##0;(#,##0)', @commentCount) + ' Reviews' : '1 Review'}" />
+            </property>
+        </component>
+
+        <for id="mntl-recipe-review-bar__comment-count.text, collapseIfEmpty, class.readOnlyClass">
+            <model name="externalConfig" id="ugcFeedbackReadOnly">
+                <property name="key" value="com.about.globe.ugcFeedback.readOnly" />
+                <property name="default" value="true" type="boolean" />
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </for>
+
+        <for id="hasCommentsClass, collapseIfEmpty, mntl-recipe-review-bar__comment-count.text, typography">
+            <property name="hasComments" value="${@commentCount != null AND @commentCount != 0}" onError="ignore" />
+        </for>
+
+        <for id="hasRatingCountClass, collapseIfNoRatingCount, mntl-recipe-review-bar__comment-count.text">
+            <property name="hasRatingCount" value="${@ratingCount != null AND @ratingCount != 0}" onError="ignore" />
+        </for>
+
+        <for id="collapseIfEmpty, collapseIfNoRating, mntl-recipe-review-bar__comment-count.text">
+            <property name="hasRating" value="${@rating != null AND @rating != 0}" onError="ignore" />
+        </for>
+
+        <for id="hasComments, mntl-recipe-review-bar__comment-count.text, mntl-recipe-review-bar__comment-count.text.commentText, typography">
+            <property name="commentCount" value="${@userRating.getFeedbacks().getTotalSize()}" onError="ignore" />
+        </for>
+
+        <for id="hasRatingCount, mntl-recipe-review-bar__rating-count.text">
+            <property name="ratingCount" value="${@userRating.getAverageRating().getCount()}" onError="ignore" />
+        </for>
+
+        <for id="mntl-recipe-review-bar__rating.text">
+            <property name="formattedRating" value="${renderUtils.formatNumber('#.0', renderUtils.nearestTenth(@rating))}" onError="ignore" />
+        </for>
+
+        <for id="hasRating, formattedRating, mntl-recipe-review-bar__star-rating">
+            <property name="rating" value="${@userRating.getAverageRating().getAverage()}" onError="ignore" />
+        </for>
+    </component>
+
+</components>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-staggered-block" ref="mntl-di-module">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Staggered Content</displayName>
+            <description>A digital issue module of cards with image and text alternating per card</description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES (IN "MODULES")
+                - "deks": an array of one or more paragraphs from BOVD for each item in the staggered block.
+                  If any item within the staggered block doesn’t have a dek, put `null`. (Ex: ["dek one", null, null, "dek four"])
+
+                This module will display 1 - n number of cards, alternating the order of the image/text position per card.
+                It defaults to image on the left and text on the right. This can be overridden with a variation.
+
+                It extends the Default Digital Issue Module by adding optional properties:
+
+                Built-in variations:
+                mntl-di-staggered-block--image-right - swaps the order from image / text to text / image
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-staggered-block/di-staggered-block.css" />
+
+        <for id="mntl-card-list-items">
+            <component location="content" id="mntl-di-staggered-block__dek" ref="mntl-text-block">
+                <property name="tag" value="span" />
+                <property name="text" value="${@deks != null ? @deks[@item.index] : null}" onError="collapseSilent">
+                    <property name="deks" value="${@digitalIssueSectionConfigs?.get('deks')}" onError="ignore">
+                        <model name="digitalIssueSectionConfigs" />
+                    </property>
+                    <component-list-item id="item" ref="mntl-card-list-items" />
+                </property>
+            </component>
+        </for>
+    </component>
+
+</components>

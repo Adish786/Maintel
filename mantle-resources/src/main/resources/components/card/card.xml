@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-card" resourcePath="/components/card/card.ftl">
+        <info>
+            <category>Mantle Components/Blocks</category>
+            <displayName>Card</displayName>
+            <description>
+                The card pattern consists primarily of an (optional) image and title wrapped in a single block-styled link.
+            </description>
+            <documentation>
+                # Intro
+
+                The card can optionally be "decorated" with a number of data points that will display as CSS pseudoelements so as not to be indexed.  These include:
+
+
+                * __"taxonomy levels"__ [`.card[data-tax-levels]::before`]: a subset of the taxonomy breadcrumb chain
+                * __"tag"__ [`.card__media[data-tag]::after, .card__content[data-tag]::before`]: usually a specific taxonomy node, displayed alongside the image (or above the content if the image is absent)
+                * __"kicker"__ [`.card__header[data-kicker]::before`]: displayed above the title and usually a classification of the document's type
+                * __"call to action" or "CTA"__ [`.card[data-cta]::after`]: defaults to "Read Now &gt;" immediately below the title
+
+
+                Support for ratings and cook/prep time is provided by a location below the card content to which this information is passed.
+
+                # Classes
+
+                - __.card--no-image__
+
+                Automatically added when the card does not contain an image.
+
+                - __.card--numbered__
+
+                *EXPERIMENTAL*
+
+                Optional class that will use CSS to place a counter number on the card__header::after pseudoelement.
+
+                - __.is-inverted__
+
+                Shows the card in the following order: content, image, taxonomy.
+                Hides the CTA.
+
+                - __.is-inverted-*[breakpoint]*__
+
+                Rules to automatically invert the card (as above) at a given vertical-defined breakpoint.
+
+                # Models/Properties
+
+                ## General properties
+
+                - __title__ `string`
+
+                - __url__ `string`
+
+                - __image__ `image object`
+
+                - __docId__ `string`
+
+                - __taxonomy__ `List`
+
+                Array of Taxene nodes used for breadcrumbs, tagging, etc.
+
+                -__headingTag__ `String`
+
+                Allows you to adjust the heading tag to be any tag you want. Default is a span tag.
+
+                ## Decorator Properties
+
+                - __sponsored__ `boolean`
+
+                Sets a .card--sponsored class on the element. Not styled by default.
+
+                - __kicker__ `string`
+
+                See "kicker" description above.
+
+                - __tag__ `string`
+
+                See "tag" description above.
+
+                - __taxTag__ `integer or string`
+
+                Used to populate the tag based off of a taxonomy node's shortHeading field.
+                Integer values are treated as an index, but the special "deepest" value will select the last taxonomy node in the array.
+                Defaults to deepest if the given integer taxTag is out of bounds in the taxonomy list.
+                Overrides the `tag` property.
+
+                - __taxLevels__ `list&lt;integer&gt;`
+
+                Indexes of the taxonomy nodes to display as taxonomy levels.
+
+                - __taxLevelSep__ `string|' '`
+
+                Separator between elements in the taxonomy levels string.
+
+                - __cta__  `string`
+
+                See "cta" description above.
+
+                ## Image Properties
+
+                - __imgClass__ `string`
+
+                Additional classes for the thumborImg-generated object.
+
+                - __width__ `integer|400`
+
+                - __height__ `integer|250`
+
+                Only used to calculate the default image dimension ratio! The image object's height is used for actual display.
+
+                - __minImgRatio__ `number`
+
+                Constrains the dimensions of the image via Thumbor.
+                `1` would display a perfectly square image. `0.5` would display an image no more than twice as tall as it was wide.
+
+                - __lazyload__ `boolean|true`
+
+                - __forceSize__ `boolean|true`
+
+                Pass-through to the thumbor macro's forceSize attribute.
+
+                - __placeholder__ `string|'/static/mantle/${projectInfo.version}/images/placeholder.png'`
+
+                Image to show before the "real" image is lazyloaded.
+
+                - __srcset__ `string[]`
+
+                Used as the img srcset property.
+
+                ## Extra Properties
+
+                - __titleTextClass__  `string`
+
+                A class to add to .card__title-text
+
+                - __bylineClass__  `string`
+
+                A class to add to .card__byline
+            </documentation>
+            <tags>in-progress</tags>
+
+            <property name="title" value="This is the article title which needs to be between 20 &amp; 70 characters" />
+            <property name="kicker" value="Lorem Ipsum" />
+
+            <map id="image" mode="replace">
+                <property name="caption" value="" />
+                <property name="owner" value="saimai saelim/Getty Images" />
+                <property name="alt" value="Namche Bazaar village in the morning, Everest region, Nepal" />
+                <property name="width" value="2120" type="integer" />
+                <property name="height" value="1415" type="integer" />
+                <property name="objectId" value="GettyImages-640836084-58b5d7c65f9b586046ddb29c.jpg" />
+            </map>
+
+            <list name="taxonomy">
+                <property name="tax1" value="${{'shortHeading':'Tax 1'}}" />
+                <property name="tax2" value="${{'shortHeading':'Tax 2'}}" />
+                <property name="tax3" value="${{'shortHeading':'Tax 3'}}" />
+                <property name="tax4" value="${{'shortHeading':'Tax 4'}}" />
+            </list>
+
+            <property name="docId" value="12345" />
+            <property name="taxTag" value="2" type="integer" />
+            <property name="taxLevels" value="${{1, 2}}" />
+            <property name="taxLevelSep" value=" | " />
+            <property name="cta" value="Read More!" />
+            <property name="url" value="http://www.dotdash.com" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/card/card.css" />
+
+        <property name="width" value="400" type="integer" />
+        <property name="height" value="0" type="integer" views="pc, tablet" />
+        <property name="height" value="250" type="integer" views="mobile" />
+        <property name="forceSize" value="true" type="boolean" />
+        <property name="lazyLoad" value="true" type="boolean" />
+        <property name="headingTag" value="span" />
+    </component>
+
+    <component id="mntl-document-card" ref="mntl-card">
+        <info>
+            <category>Mantle Components/Blocks</category>
+            <displayName>Document Card</displayName>
+            <description>
+                A mntl-card representing a document (must be injected via for-targeting).
+            </description>
+
+            <for id="p*">
+                <model id="document" name="mockDocument">
+                    <property name="template" value="sample-sc-doc" />
+                </model>
+            </for>
+        </info>
+
+        <property name="sponsored" value="${@document?.revenueGroup == 'SPONSOR' ? true : false}" onError="ignore" />
+        <property name="cta" value="Read Now &#9656;" />
+        <property name="title" value="${@document.bestTitle}" />
+        <property name="image" value="${@document.getImageForUsage('RECIRC') ?: {:}}" />
+        <property name="url" value="${@document.url}" />
+        <property name="taxTag" value="deepest" />
+        <property name="kicker" value="${@document.templateType.displayName ?: ''}" onError="ignore" />
+        <property name="docId" value="${(@document.documentId ?: 0).toString()}" />
+        <property name="byline" value="${@bylineText}" onError="ignore">
+            <model name="BYLINETEXT" id="bylineText" onError="ignore">
+                <property name="document" value="${@document}" onError="ignore" />
+                <property name="attributionTypes" value="${{'AUTHOR'}}" />
+            </model>
+            <property name="collapseOnAttributionDisabled" value="${ @attributionEnabled ? 'true' : null }" onError="collapseSilent">
+                <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+            </property>
+        </property>
+    </component>
+
+</components>

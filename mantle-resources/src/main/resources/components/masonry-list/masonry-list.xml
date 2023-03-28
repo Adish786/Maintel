@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-masonry-list" ref="mntl-block">
+        <stylesheet path="/static/mantle/components/masonry-list/masonry-list.css"></stylesheet>
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js"></script>
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/justified-columns.js"></script>
+        <script group="bottom" path="/static/mantle/components/masonry-list/masonry-list.js"></script>
+        <script group="bottom" evaluated="true" path="/static/mantle/components/masonry-list/masonry-list.evaluated.js"></script>
+        <property name="justifyConfig" value="{}" />
+        <property name="tag" value="ul" />
+        <property name="class" value="masonry-list" /> <!-- backwards compatibility -->
+        <component-list id="masonry-list__item" ref="mntl-block" location="content"
+                iterable="${@listItems != null ? utils.subList(@listItems, @listStart, @listEnd) : @items}">
+                <!-- if **listItems** is added as a dependency which allows start/end offset to the list, then use that.
+                otherwise default to **items** for backwards compatibility -->
+            <property name="tag" value="li" />
+            <property name="items" value="${{}}" /><!-- override this in your implementation -->
+            <property name="listStart" value="0" type="integer" />
+            <property name="listEnd" value="20" type="integer" />
+        </component-list>
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Masonry List</displayName>
+            <description>
+                Masonry List is a list layout, built to arrange arbitrary components in columns of equal height.
+            </description>
+            <documentation>
+                The Masonry List layout is using the [CSS Multi-Column Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts) module to achieve its
+                display. There are no wrapper elements that form actual "columns".
+
+                By default, the component uses 4 columns at the widest breakpoint, but collapses to 3 for narrower displays, then down to 2 and 1 column
+                at roughly tablet and mobile widths.
+
+                Justification is achieved via the justify-column library, and so the component accepts a **justifyConfig** property, formatted as JSON, that conforms to the
+                [configuration options](https://github.com/Dotdashcom/justified-columns#initialization) available to that library. The exception is the **grid** value, which is automatically specified as the masonry-list component.
+
+                The items are simple mntl-block elements being generated as a list via the **&lt;component-list&gt;** tag; this is to ensure a semantic **ul > li** parentage
+                around the injected component.
+
+                Auto-resizing of the columns is disabled in the pattern library, to avoid a flickering problem.
+            </documentation>
+            <for id="masonry-list__item">
+                <property name="items" value="${{'foo', 'bar', 'baz', 'shaz', 'bot', 'a', 'b', 'c', 'd'}}" mode="replace" />
+                <component location="content" ref="mntl-text-block">
+                    <property name="text" value="${@item.value}">
+                        <component-list-item id="item" ref="masonry-list__item" />
+                    </property>
+                    <map id="attrs">
+                        <property name="style" value="border: 1px solid blue" />
+                    </map>
+                </component>
+                <component location="content" ref="mntl-placeholder">
+                    <map id="attrs">
+                        <property name="style" value="height: ${((@item.value.hashCode()%7)+1.25)}em">
+                            <component-list-item id="item" ref="masonry-list__item" />
+                        </property>
+                    </map>
+                </component>
+            </for>
+            <property name="justifyConfig" value="{autoResize: false, stretch: '.mntl-text-block'}" />
+        </info>
+    </component>
+
+    <component id="mntl-masonry-card-list" ref="mntl-masonry-list">
+        <property name="justifyConfig" value="{stretch: '.card__img, .card--no-image .card__content'}" />
+        <for id="masonry-list__item">
+            <component id="mntl-card" ref="mntl-document-card" location="content">
+                <for id="this, p*">
+                    <property name="document" value="${@masonryListItem.value}" />
+                </for>
+
+                <for id="this, p*">
+                    <component-list-item id="masonryListItem" ref="masonry-list__item" />
+                </for>
+
+                <list id="class">
+                    <property name="is-inverted-small" value="is-inverted-small" />
+                </list>
+
+                <property name="index" value="${@masonryListItem.index}" />
+                <property name="ordinal" value="${@masonryListItem.index + 1}" />
+            </component>
+        </for>
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Masonry Card List</displayName>
+            <description>
+                A concrete implementation of [Masonry List](/pattern-library/mantle-components/lists/masonry-list) that
+                assumes a list of documents, and uses [Cards](/pattern-library/mantle-components/blocks/card) for its items.
+            </description>
+            <documentation>See [Masonry List](/pattern-library/mantle-components/lists/masonry-list) documentation for more information.</documentation>
+            <for id="masonry-list__item">
+                <property name="items" value="${@mockArticles.list}" mode="replace">
+                    <model name="mockArticles" id="mockArticles">
+                        <property name="recircType" value="masonry-list" />
+                     </model>
+                </property>
+            </for>
+            <for id="masonry-list__item.mntl-card">
+                <component location="card__footer" ref="mntl-placeholder" />
+            </for>
+            <property name="justifyConfig" value="{autoResize: false, stretch: '.card__img, .card--no-image .card__content'}" />
+        </info>
+    </component>
+
+    <component id="mntl-masonry-tax-card-list" ref="mntl-masonry-card-list">
+        <for id="masonry-list__item.mntl-card">
+            <property name="taxonomy" value="${@masonryListItem.value.ancestors ?: {}}">
+                <!-- need to "re"-add this here; the <for> in the ref'd parent targeting p*s only applies to the state of mntl-card when it's ref'd -->
+                <component-list-item id="masonryListItem" ref="masonry-list__item" />
+            </property>
+        </for>
+        <for id="masonry-list__item.mntl-card.p*, masonry-list__item.mntl-card.byline.bylineText">
+            <property name="document" value="${@masonryListItem.value.document}" mode="replace">
+                <component-list-item id="masonryListItem" ref="masonry-list__item" />
+            </property>
+        </for>
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Masonry Card List with Taxonomy</displayName>
+            <description>
+                An extension of [Masonry Card List](/pattern-library/mantle-components/lists/masonry-card-list) that
+                expects a list of complex objects containing documents and taxonomy information.
+
+                In the example here, tax levels 2 and 3 are shown, separated by dashes.
+            </description>
+            <documentation>
+                The items in the list are expected to conform to the following signature
+
+                ```
+                {
+                    document: T(? extends BaseDocumentEx),
+                    (deprecated) taxonomyDocAllLevelList: List&lt;TaxonomyDocumentEx&gt;
+                    ancestors: List&lt;BaseDocumentEx&gt;
+                }
+                ```
+
+                (for example, DocumentTaxeneComposite)
+
+                See [Masonry List](/pattern-library/mantle-components/lists/masonry-list) documentation for more information.
+            </documentation>
+            <for id="masonry-list__item">
+                <list name="items" mode="replace">
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2533820" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="3377947" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833142" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833143" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833144" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="1692060" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="4065162" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833137" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="4102678" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833151" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833150" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2833141" /></model></model>
+                    <model name="documentTaxene"><model name="DOCUMENT" id="document"><property name="url" value="2533530" /></model></model>
+                </list>
+            </for>
+            <for id="masonry-list__item.mntl-card">
+                <property name="taxLevels" value="${{2,3}}" />
+                <property name="taxLevelSep" value=" -- " />
+            </for>
+            <property name="justifyConfig" value="{autoResize: false, stretch: '.card__img, .card--no-image .card__content'}" />
+        </info>
+    </component>
+
+<!--     "Hypothetical" extension example that adds rating info to the item object -->
+<!--     <component id="mntl-masonry-card-list-spruced-up" ref="mntl-masonry-tax-card-list"> -->
+<!--         <for id="masonry-list__item"> -->
+<!--             <model id="items" name="spruceyItemsNowWithAggregateRatings" /> -->
+<!--         </for> -->
+<!--         <for id="masonry-list__item.mntl-card"> -->
+<!--             <component location="card__footer" ref="meta-text-recipe"> -->
+<!--                 <map id="times"> -->
+<!--                     <property name="prepTime" value="${@document.templateType.toString() == 'RECIPE' ? @document.prepTime : null}" onError="collapseSilent" /> -->
+<!--                     <property name="cookTime" value="${@document.templateType.toString() == 'RECIPE' ? @document.cookTime : null}" onError="collapseSilent" /> -->
+<!--                 </map> -->
+<!--             </component> -->
+<!--             <component location="card__footer" ref="aggregate-star-rating-card"> -->
+<!--                 <property name="rating" value="${{'avgRating': @masonryListItem.value.aggregateRating['starRating'].averageRoundedToHalf}}" type="integer"> -->
+<!--                     <component-list-item id="masonryListItem" ref="masonry-list__item" /> -->
+<!--                 </property> -->
+<!--             </component> -->
+<!--         </for> -->
+<!--         <for id="masonry-list__item.mntl-card.meta-text-recipe.times.p*"> -->
+<!--             <property name="document" value="${@masonryListItem.value}"> -->
+<!--                 <component-list-item id="masonryListItem" ref="masonry-list__item" /> -->
+<!--             </property> -->
+<!--         </for> -->
+<!--     </component> -->
+
+</components>

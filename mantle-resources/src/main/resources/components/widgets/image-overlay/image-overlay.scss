@@ -1,0 +1,63 @@
+@import "mntlVariables";
+
+.mntl-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    background: gray;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+        * this works for IE11 because it does not have support for @support queries or backdrop-filter so this block will just not evaluate
+        * for other browsers, opaque background layer will only be overridden if backdrop-filter is supported
+    */
+    @supports (backdrop-filter: blur(20px)) {
+        background: transparent;
+    }
+
+    &__icon {
+        width: 53px;
+        height: 59px;
+    }
+
+    &__text {
+        text-align: center;
+        color: $color-white;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+
+    &.js-hidden {
+        display: none;
+    }
+}
+
+/* If an image block directly follows another image block, then it will render as a thumbnail in the "image carousel".
+In this case, we just want to blur the image (the overlay will disappear when user clicks button on first image)
+*/
+
+.mntl-sc-block-image + .mntl-sc-block-image .mntl-image-overlay {
+    &__icon {
+        width: 23px;
+        height: 25px;
+        fill: #F7F9F9;
+    }
+
+    &__text,
+    &__button {
+        display: none;
+    }
+}
+
+.mntl-image-overlay + .img-placeholder {
+    background: none;
+}

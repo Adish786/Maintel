@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-sc-block-profile" resourcePath="/components/structured-content/profile/profile.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Profile</displayName>
+            <description>Profile Block for Structured Content</description>
+            <documentation>
+            </documentation>
+
+            <property name="heading" value="${@profile.getRecordName()} Overview" onError="ignore" />
+            <property name="profile" value="${@profile}" onError="collapseSilent" />
+            <property name="propertyOrder" value="${@profile.getPropertyOrder()}" onError="collapseSilent" />
+
+            <for id="heading, profile, propertyOrder">
+                <property name="profile" value="${@document?.pages?.list[0]?.contents?.list[0]?.data?.profile}" onError="collapseSilent">
+                    <model name="mockDocument" id="document">
+                        <property name="template" value="structured-content-profile-block" />
+                    </model>
+                </property>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/profile/profile.css" />
+
+        <property name="heading" value="${@block?.value?.data?.profile.getRecordName()} Overview" onError="ignore" />
+        <property name="profile" value="${@block?.value?.data?.profile}" onError="collapseSilent" />
+        <property name="propertyOrder" value="${@block?.value?.data?.profile.getPropertyOrder()}" onError="collapseSilent" />
+    </component>
+</components>

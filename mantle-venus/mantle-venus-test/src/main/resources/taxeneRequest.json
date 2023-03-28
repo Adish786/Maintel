@@ -1,0 +1,10 @@
+{
+  "docId": 0,
+  "relationship": {
+    "name": "primaryParent",
+    "weight": 0,
+    "targetNode": {
+      "docId": 0
+    }
+  }
+}

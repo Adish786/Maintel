@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-vue-iframe-embed-widget" resourcePath="/components/widgets/iframe-embed/iframe-embed.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Vue Embed Widget</displayName>
+            <description>
+                A widget to be used within a vue tool allowing users to embed the tool. Includes toggle button and script to copy and paste into website. 
+            </description>
+            <documentation>
+                # Model
+
+                ## vertical
+
+                Verticals domain name. Required
+
+                ## toolId
+
+                Tool component id. Required
+
+                ## svgName
+
+                Name of svg to use as embed toggle button icon. Optional
+
+                ## transition
+
+                Name of verticals custom vue transition for showing embed script. Optional.
+
+                ## svgClasses
+
+                Classes for embed toggle button svg. Optional
+
+                ## btnText
+
+                Text shown on embed toggle button. Default to 'Embed This Tool'. Optional
+
+                ## instructionsText
+
+                Instruction text shown above script textbox. Default to 'To embed this tool on your site, copy and paste the code below:'. Optional
+
+                #Vertical will need to include iframe-embed.js in their tool component to hook into tool js.
+                #Vertical will need to send data in their tool's js to set iframe height. ex: {height: 0, embedId: 'your-tool-id'}
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/iframe-embed/iframe-embed.css" />
+    </component>
+
+    <component id="mntl-embedded-tool" ref="${@toolName}">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Embedded Tool</displayName>
+            <description>
+                Renders a tool component based on the page url. Ex: www.thespruce.com/tools/paint-calculator will render paint-calculator component.
+            </description>
+            <documentation>
+#To be referenced in verticals template for embedded tools.
+            </documentation>
+        </info>
+
+        <model name="getToolName" id="toolName">
+            <property name="url" value="${requestContext.getCanonicalUrl()}" />
+        </model>
+    </component>
+
+</components>

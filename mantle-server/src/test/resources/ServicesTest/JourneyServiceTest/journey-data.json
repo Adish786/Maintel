@@ -1,0 +1,2780 @@
+{
+	"status":
+	{
+		"code": "SUCCESS",
+		"errors":
+		[
+
+		]
+	},
+
+	"data":
+	{
+		"docId": 2059461,
+		"relationships":
+		{
+			"list":
+			[
+				{
+					"name": "journey",
+					"weight": 302.0,
+					"targetNode":
+					{
+						"docId": 4135990,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 304.0,
+									"targetNode":
+									{
+										"docId": 2059436,
+										"document":
+										{
+											"key": "3d53e247a6063d24b500e1a6",
+											"revisionKey": "395811f5ec78e4b217271bca",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/finding-contacts-target-company-2059436",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-14.htm",
+											"docId": 2059436,
+											"slug": "finding-contacts-target-company",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075899000
+											},
+
+											"dates":
+											{
+												"created": 1407338406000,
+												"updated": 1458154466000,
+												"firstPublished": 1409836005000,
+												"lastPublished": 1477572078000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 14 Find Contacts at Your Target Companies",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 14 Find Contacts at Your Target Companies",
+												"socialTitle": "30 Days to Your Dream Job: Day 14 Find Contacts at Your Target Companies",
+												"heading": "30 Days to Your Dream Job: Day 14 Find Contacts at Your Target Companies",
+												"description": "30 Days to Your Dream Job Day 14 includes advice on how to find contacts at companies who can refer you for jobs, write recommendations, and help you get interviews."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 303.0,
+									"targetNode":
+									{
+										"docId": 2059435,
+										"document":
+										{
+											"key": "3d53e2457c063724b500e1a4",
+											"revisionKey": "3757b237352f3e160f23f605",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/build-your-employer-target-list-2059435",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-13.htm",
+											"docId": 2059435,
+											"slug": "build-your-employer-target-list",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131534000
+											},
+
+											"dates":
+											{
+												"created": 1407337850000,
+												"updated": 1458154422000,
+												"firstPublished": 1409835591000,
+												"lastPublished": 1487131534000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 13 Build Your Employer Target List",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 13 Build Your Employer Target List",
+												"socialTitle": "30 Days to Your Dream Job: Day 13 Build Your Employer Target List",
+												"heading": "30 Days to Your Dream Job: Day 13 Build Your Employer Target List",
+												"description": "30 Days to Your Dream Job Day 13 includes advice on how to create a target list of companies, how to find prospect employers and how to narrow down the list."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 2
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-find-employers",
+							"rootUrl": "https://dummy-programmed-summary-find-employers",
+							"docId": 4135990,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497479344143
+							},
+
+							"dates":
+							{
+								"created": 1497479344197,
+								"updated": 1497479344197
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 60.0,
+					"targetNode":
+					{
+						"docId": 4135993,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 606.0,
+									"targetNode":
+									{
+										"docId": 2059454,
+										"document":
+										{
+											"key": "3d5408701b139b063c00e42b",
+											"revisionKey": "3757b237a62fb8160f23f71f",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/dream-job-rejection-2059454",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-30.htm",
+											"docId": 2059454,
+											"slug": "dream-job-rejection",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131538000
+											},
+
+											"dates":
+											{
+												"created": 1409839131000,
+												"updated": 1463776832000,
+												"firstPublished": 1409854487000,
+												"lastPublished": 1487131538000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 30: Shake it Off",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 30: Shake it Off",
+												"socialTitle": "30 Days to Your Dream Job Day 30: Shake it Off",
+												"heading": "30 Days to Your Dream Job Day 30: Shake it Off",
+												"description": "30 Days to Your Dream Job Day 30 shares advice on how to accept, and move on from, a job rejection."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 605.0,
+									"targetNode":
+									{
+										"docId": 2059452,
+										"document":
+										{
+											"key": "3d5407745e003112dd00e411",
+											"revisionKey": "3d582617fb0306afb8271e74",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-accept-decline-offer-2059452",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-29.htm",
+											"docId": 2059452,
+											"slug": "30-days-to-your-dream-job-accept-decline-offer",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075938000
+											},
+
+											"dates":
+											{
+												"created": 1409774685000,
+												"updated": 1478891515000,
+												"firstPublished": 1409854436000,
+												"lastPublished": 1478891517000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 29: Accept or Decline Your Offer",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 29: Accept or Decline Your Offer",
+												"socialTitle": "30 Days to Your Dream Job Day 29: Accept or Decline Your Offer",
+												"heading": "30 Days to Your Dream Job Day 29: Accept or Decline Your Offer",
+												"description": "30 Days to Your Dream Job Day 29 reviews the steps you should take when deciding whether or not to accept a job offer, and how to tell the employer."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 604.0,
+									"targetNode":
+									{
+										"docId": 2059451,
+										"document":
+										{
+											"key": "3d540770530002033900e40f",
+											"revisionKey": "3d5826162b027cafb8271e70",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/dream-job-follow-up-2059451",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-28.htm",
+											"docId": 2059451,
+											"slug": "dream-job-follow-up",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075935000
+											},
+
+											"dates":
+											{
+												"created": 1409773651000,
+												"updated": 1478891051000,
+												"firstPublished": 1409854365000,
+												"lastPublished": 1478891054000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 28: Follow Up",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 28: Follow Up",
+												"socialTitle": "30 Days to Your Dream Job Day 28: Follow Up",
+												"heading": "30 Days to Your Dream Job Day 28: Follow Up",
+												"description": "30 Days to Your Dream Job Day 28 includes advice on when and how to follow up with an employer if you don't hear back right away after a job interview."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 603.0,
+									"targetNode":
+									{
+										"docId": 2059450,
+										"document":
+										{
+											"key": "3d54076e2d000379ab00e40d",
+											"revisionKey": "3857b73d3c09be6d1626f76c",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/dream-job-say-thank-you-2059450",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-27.htm",
+											"docId": 2059450,
+											"slug": "dream-job-say-thank-you",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075934000
+											},
+
+											"dates":
+											{
+												"created": 1409773101000,
+												"updated": 1470442082000,
+												"firstPublished": 1409854232000,
+												"lastPublished": 1471626558000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 27: Say Thank You",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 27: Say Thank You",
+												"socialTitle": "30 Days to Your Dream Job Day 27: Say Thank You",
+												"heading": "30 Days to Your Dream Job Day 27: Say Thank You",
+												"description": "30 Days to Your Dream Job Day 27 includes advice on when and how to send your thank you letters after a job interview."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 602.0,
+									"targetNode":
+									{
+										"docId": 2059449,
+										"document":
+										{
+											"key": "3d540719a00dff063c00e40c",
+											"revisionKey": "3757b2379c2fb3160f23f71a",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-interview-practice-2059449",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-26.htm",
+											"docId": 2059449,
+											"slug": "30-days-to-your-dream-job-interview-practice",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131537000
+											},
+
+											"dates":
+											{
+												"created": 1409751455000,
+												"updated": 1470442086000,
+												"firstPublished": 1409853974000,
+												"lastPublished": 1487131537000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 26: Practice for Your Interviews",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 26: Practice for Your Interviews",
+												"socialTitle": "30 Days to Your Dream Job Day 26: Practice for Your Interviews",
+												"heading": "30 Days to Your Dream Job Day 26: Practice for Your Interviews",
+												"description": "30 Days to Your Dream Job Day 26 includes advice on how to prepare yourself to interview by matching your qualifications to the job and practice interviewing."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 601.0,
+									"targetNode":
+									{
+										"docId": 2059448,
+										"document":
+										{
+											"key": "3d540710c90de1063c00e409",
+											"revisionKey": "3d581cb9c5062143d7271d79",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-day-25-2059448",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-25.htm",
+											"docId": 2059448,
+											"slug": "30-days-to-your-dream-job-day-25",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075932000
+											},
+
+											"dates":
+											{
+												"created": 1409749192000,
+												"updated": 1478277572000,
+												"firstPublished": 1409853918000,
+												"lastPublished": 1478277574000
+											},
+
+											"noIndex": false,
+											"socialTitle": "30 Days to Your Dream Job Day 25: Do Your Research",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 25: Do Your Research",
+												"socialTitle": "30 Days to Your Dream Job Day 25: Do Your Research",
+												"heading": "30 Days to Your Dream Job Day 25: Do Your Research",
+												"description": "30 Days to Your Dream Job Day 25 includes advice on how to learn about a company's mission, culture, and strengths so you can prepare to interview."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 600.0,
+									"targetNode":
+									{
+										"docId": 2059447,
+										"document":
+										{
+											"key": "3d53fe43360314170c00e3be",
+											"revisionKey": "3757b2377b2f60160f23f6c7",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/refreshing-your-wardrobe-2059447",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-24.htm",
+											"docId": 2059447,
+											"slug": "refreshing-your-wardrobe",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131536000
+											},
+
+											"dates":
+											{
+												"created": 1409172277000,
+												"updated": 1458155042000,
+												"firstPublished": 1409853778000,
+												"lastPublished": 1487131536000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 24: Refresh Your Wardrobe",
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 24: Refresh Your Wardrobe",
+												"socialTitle": "30 Days to Your Dream Job Day 24: Refresh Your Wardrobe",
+												"heading": "30 Days to Your Dream Job Day 24: Refresh Your Wardrobe",
+												"description": "30 Days to Your Dream Job Day 24 includes advice on how to dress appropriately for your job interview, with tips to select the perfect interview outfit."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 7
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-interview-&-follow-up",
+							"rootUrl": "https://dummy-programmed-summary-interview-&-follow-up",
+							"docId": 4135993,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497479344311
+							},
+
+							"dates":
+							{
+								"created": 1497479344346,
+								"updated": 1497479344346
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 50.0,
+					"targetNode":
+					{
+						"docId": 4135992,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 504.0,
+									"targetNode":
+									{
+										"docId": 2059446,
+										"document":
+										{
+											"key": "3d53fe3c32004d2bd500e3bb",
+											"revisionKey": "3757b237772f5f160f23f6c6",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/writing-a-targeted-cover-letter-2059446",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-23.htm",
+											"docId": 2059446,
+											"slug": "writing-a-targeted-cover-letter",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131536000
+											},
+
+											"dates":
+											{
+												"created": 1409170482000,
+												"updated": 1458155010000,
+												"firstPublished": 1409853634000,
+												"lastPublished": 1487131536000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 23: Write Your Targeted Cover Letter",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 23: Write Your Targeted Cover Letter",
+												"socialTitle": "30 Days to Your Dream Job Day 23: Write Your Targeted Cover Letter",
+												"heading": "30 Days to Your Dream Job Day 23: Write Your Targeted Cover Letter",
+												"description": "30 Days to Your Dream Job Day 23 includes tips for writing a targeted cover letter, and advice on how to apply those tips to your job applications."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 503.0,
+									"targetNode":
+									{
+										"docId": 2059445,
+										"document":
+										{
+											"key": "3d53fe33e102f5170c00e3b9",
+											"revisionKey": "3757b237752f5e160f23f6c5",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/dream-job-get-organized-2059445",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-22.htm",
+											"docId": 2059445,
+											"slug": "dream-job-get-organized",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131535000
+											},
+
+											"dates":
+											{
+												"created": 1409168352000,
+												"updated": 1470795484000,
+												"firstPublished": 1409853457000,
+												"lastPublished": 1487131535000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 22: Get Organized",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 22: Get Organized",
+												"socialTitle": "30 Days to Your Dream Job Day 22: Get Organized",
+												"heading": "30 Days to Your Dream Job Day 22: Get Organized",
+												"description": "30 Days to Your Dream Job Day 22 includes tips to keep track of all your networking events, job searches, applications and job interviews."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 502.0,
+									"targetNode":
+									{
+										"docId": 2059444,
+										"document":
+										{
+											"key": "3d53fdf8d45a1e422600e3b8",
+											"revisionKey": "3857b739d007516d1626f5ed",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/avoiding-job-scams-2059444",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-21.htm",
+											"docId": 2059444,
+											"slug": "avoiding-job-scams",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075921000
+											},
+
+											"dates":
+											{
+												"created": 1409153236000,
+												"updated": 1458154908000,
+												"firstPublished": 1409853395000,
+												"lastPublished": 1471625681000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 21: Learn to Avoid Job Scams",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 21: Learn to Avoid Job Scams",
+												"socialTitle": "30 Days to Your Dream Job Day 21: Learn to Avoid Job Scams",
+												"heading": "30 Days to Your Dream Job Day 21: Learn to Avoid Job Scams",
+												"description": "30 Days to Your Dream Job Day 21 includes tips for learning the classic signs of a job scam, and advice for avoiding job scams."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 501.0,
+									"targetNode":
+									{
+										"docId": 2059443,
+										"document":
+										{
+											"key": "3d53fdf0b059d5422600e3b6",
+											"revisionKey": "395811f5fd78eeb217271bd4",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/search-right-job-sites-2059443",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-20.htm",
+											"docId": 2059443,
+											"slug": "search-right-job-sites",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075921000
+											},
+
+											"dates":
+											{
+												"created": 1409151151000,
+												"updated": 1458154785000,
+												"firstPublished": 1409841232000,
+												"lastPublished": 1477572095000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 20: Search the Right Job Sites",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 20: Search the Right Job Sites",
+												"socialTitle": "30 Days to Your Dream Job Day 20: Search the Right Job Sites",
+												"heading": "30 Days to Your Dream Job Day 20: Search the Right Job Sites",
+												"description": "30 Days to Your Dream Job Day 20 includes tips for finding and using job sites which will help you find the most up-to-date, relevant job openings for you."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 500.0,
+									"targetNode":
+									{
+										"docId": 2059441,
+										"document":
+										{
+											"key": "3d53ea64ef020956a800e355",
+											"revisionKey": "3857b7351d03de6d1626f482",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/dream-job-attend-a-job-fair-2059441",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-19.htm",
+											"docId": 2059441,
+											"slug": "dream-job-attend-a-job-fair",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075913000
+											},
+
+											"dates":
+											{
+												"created": 1407870188000,
+												"updated": 1458154740000,
+												"firstPublished": 1409841037000,
+												"lastPublished": 1471624478000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 19: Attend a Job Fair",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 19: Attend a Job Fair",
+												"socialTitle": "30 Days to Your Dream Job Day 19: Attend a Job Fair",
+												"heading": "30 Days to Your Dream Job Day 19: Attend a Job Fair",
+												"description": "30 Days to Your Dream Job Day 19 includes tips for finding the best job fair for you, and to make the most out of your job fair experience."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 5
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-find-job-listings",
+							"rootUrl": "https://dummy-programmed-summary-find-job-listings",
+							"docId": 4135992,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497479344255
+							},
+
+							"dates":
+							{
+								"created": 1497479344295,
+								"updated": 1497479344295
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 40.0,
+					"targetNode":
+					{
+						"docId": 4135991,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 403.0,
+									"targetNode":
+									{
+										"docId": 2059440,
+										"document":
+										{
+											"key": "3d53ea631700016e6600e353",
+											"revisionKey": "3857b7352603e26d1626f483",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-day-18-2059440",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-18.htm",
+											"docId": 2059440,
+											"slug": "30-days-to-your-dream-job-day-18",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075912000
+											},
+
+											"dates":
+											{
+												"created": 1407869717000,
+												"updated": 1470795487000,
+												"firstPublished": 1409838116000,
+												"lastPublished": 1471624487000
+											},
+
+											"noIndex": false,
+											"socialTitle": "30 Days to Your Dream Job Day 18: Join a Professional Association",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 18: Join a Professional Association",
+												"socialTitle": "30 Days to Your Dream Job Day 18: Join a Professional Association",
+												"heading": "30 Days to Your Dream Job Day 18: Join a Professional Association",
+												"description": "30 Days to Your Dream Job Day 18 includes information on how joining a professional association can help your job search and your career."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 402.0,
+									"targetNode":
+									{
+										"docId": 2059439,
+										"document":
+										{
+											"key": "3d53e5139f102d24b500e32a",
+											"revisionKey": "3757b237432f4c160f23f67c",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-day-17-2059439",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-17.htm",
+											"docId": 2059439,
+											"slug": "30-days-to-your-dream-job-day-17",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131535000
+											},
+
+											"dates":
+											{
+												"created": 1407521694000,
+												"updated": 1470442106000,
+												"firstPublished": 1409836734000,
+												"lastPublished": 1487131535000
+											},
+
+											"noIndex": false,
+											"socialTitle": "30 Days to Your Dream Job Day 17: Set Up Three Informational Interviews",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 17: Set Up Three Informational Interviews",
+												"socialTitle": "30 Days to Your Dream Job Day 17: Set Up Three Informational Interviews",
+												"heading": "30 Days to Your Dream Job Day 17: Set Up Three Informational Interviews",
+												"description": "30 Days to Your Dream Job Day 17 includes advice on who and how to ask for an informational interview, what to say and to ask, and how to follow up."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 401.0,
+									"targetNode":
+									{
+										"docId": 2059438,
+										"document":
+										{
+											"key": "3d53e5115f0fd524b500e328",
+											"revisionKey": "3757b237402f4b160f23f67b",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-conduct-cold-call-2059438",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-16.htm",
+											"docId": 2059438,
+											"slug": "30-days-to-your-dream-job-conduct-cold-call",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131534000
+											},
+
+											"dates":
+											{
+												"created": 1407521118000,
+												"updated": 1458154585000,
+												"firstPublished": 1409836503000,
+												"lastPublished": 1487131534000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 16 Conduct a Cold Call Campaign",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 16 Conduct a Cold Call Campaign",
+												"socialTitle": "30 Days to Your Dream Job: Day 16 Conduct a Cold Call Campaign",
+												"heading": "30 Days to Your Dream Job: Day 16 Conduct a Cold Call Campaign",
+												"description": "30 Days to Your Dream Job Day 16 includes advice on cold calling to expand your professional network and to find out about unadvertised jobs."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 400.0,
+									"targetNode":
+									{
+										"docId": 2059437,
+										"document":
+										{
+											"key": "3d53e50ed80fca24b500e325",
+											"revisionKey": "3957d319560742a95227070c",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/30-days-to-your-dream-job-day-15-2059437",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-15.htm",
+											"docId": 2059437,
+											"slug": "30-days-to-your-dream-job-day-15",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075901000
+											},
+
+											"dates":
+											{
+												"created": 1407520471000,
+												"updated": 1470795490000,
+												"firstPublished": 1409836269000,
+												"lastPublished": 1473452376000
+											},
+
+											"noIndex": false,
+											"socialTitle": "30 Days to Your Dream Job: Day 15 Contact Friends and Family",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 15 Contact Friends and Family",
+												"socialTitle": "30 Days to Your Dream Job: Day 15 Contact Friends and Family",
+												"heading": "30 Days to Your Dream Job: Day 15 Contact Friends and Family",
+												"description": "30 Days to Your Dream Job Day 15 includes information on how your family and friends can help your job search, and how to ask your personal network for help."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 4
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-use-your-network",
+							"rootUrl": "https://dummy-programmed-summary-use-your-network",
+							"docId": 4135991,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497479344217
+							},
+
+							"dates":
+							{
+								"created": 1497479344257,
+								"updated": 1497479344257
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 30.0,
+					"targetNode":
+					{
+						"docId": 4135989,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 301.0,
+									"targetNode":
+									{
+										"docId": 2059434,
+										"document":
+										{
+											"key": "3d53e1275f037e24b500e1a2",
+											"revisionKey": "3d57e5cced10987b26270e8f",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/visit-career-center-2059434",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-12.htm",
+											"docId": 2059434,
+											"slug": "visit-career-center",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075898000
+											},
+
+											"dates":
+											{
+												"created": 1407264606000,
+												"updated": 1474677994000,
+												"firstPublished": 1409834361000,
+												"lastPublished": 1474677999000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 12 Visit a Career Center or Career Counselor",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 12 Visit a Career Center or Career Counselor",
+												"socialTitle": "30 Days to Your Dream Job: Day 12 Visit a Career Center or Career Counselor",
+												"heading": "30 Days to Your Dream Job: Day 12 Visit a Career Center or Career Counselor",
+												"description": "30 Days to Your Dream Job Day 12 includes how to find an inexpensive, or even free, career counselor to help advise and guide you through your job search."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 300.0,
+									"targetNode":
+									{
+										"docId": 2059433,
+										"document":
+										{
+											"key": "3d53e124a7037624b500e19f",
+											"revisionKey": "3757b235a02e37160f23f3cb",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/select-and-contact-your-references-2059433",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-11.htm",
+											"docId": 2059433,
+											"slug": "select-and-contact-your-references",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131523000
+											},
+
+											"dates":
+											{
+												"created": 1407263910000,
+												"updated": 1458154349000,
+												"firstPublished": 1409834132000,
+												"lastPublished": 1487131523000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 11 Select and Contact Your References",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 11 Select and Contact Your References",
+												"socialTitle": "30 Days to Your Dream Job: Day 11 Select and Contact Your References",
+												"heading": "30 Days to Your Dream Job: Day 11 Select and Contact Your References",
+												"description": "30 Days to Your Dream Job Day 11 includes how to ask and who to ask for a reference, how to compile a reference list and how to thank your references."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 2
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-get-help",
+							"rootUrl": "https://dummy-programmed-summary-get-help",
+							"docId": 4135989,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497479343525
+							},
+
+							"dates":
+							{
+								"created": 1497479344122,
+								"updated": 1497479344122
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 20.0,
+					"targetNode":
+					{
+						"docId": 4135988,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 204.0,
+									"targetNode":
+									{
+										"docId": 2059432,
+										"document":
+										{
+											"key": "3d53e0ee7200014cc800e19d",
+											"revisionKey": "3d57e44256d0aacd3d270dd1",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/job-search-business-cards-2059432",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-10.htm",
+											"docId": 2059432,
+											"slug": "job-search-business-cards",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075897000
+											},
+
+											"dates":
+											{
+												"created": 1407250034000,
+												"updated": 1474576981000,
+												"firstPublished": 1409834011000,
+												"lastPublished": 1474576984000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 10 Make Business Cards for the Job Search",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "Make Business Cards for the Job Search",
+												"socialTitle": "30 Days to Your Dream Job: Day 10 Make Business Cards for the Job Search",
+												"heading": "30 Days to Your Dream Job: Day 10 Make Business Cards for the Job Search",
+												"description": "30 Days to Your Dream Job Day 10 includes how to develop and order business cards designed specifically for your job search, plus tips on how to use them."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 203.0,
+									"targetNode":
+									{
+										"docId": 2059460,
+										"document":
+										{
+											"key": "3d53e0eb52026024b500e19c",
+											"revisionKey": "3757b237302f3b160f23f602",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/give-and-get-linkedin-recommendations-2059460",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-9.htm",
+											"docId": 2059460,
+											"slug": "give-and-get-linkedin-recommendations",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131533000
+											},
+
+											"dates":
+											{
+												"created": 1407249233000,
+												"updated": 1458154270000,
+												"firstPublished": 1409833824000,
+												"lastPublished": 1487131533000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 9 Give and Get LinkedIn Recommendations",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 30 Days to Your Dream Job: Day 9 Give and Get LinkedIn Recommendations",
+												"socialTitle": "30 Days to Your Dream Job: Day 9 Give and Get LinkedIn Recommendations",
+												"heading": "30 Days to Your Dream Job: Day 9 Give and Get LinkedIn Recommendations",
+												"description": "30 Days to Your Dream Job Day 9 includes advice on how to give and get recommendations on LinkedIn, including how to ask for a recommendation from a contact."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 202.0,
+									"targetNode":
+									{
+										"docId": 2059459,
+										"document":
+										{
+											"key": "3d53e0e52b024f24b500e199",
+											"revisionKey": "3757b2372f2f3a160f23f601",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/expand-your-linkedin-network-2059459",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-8.htm",
+											"docId": 2059459,
+											"slug": "expand-your-linkedin-network",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131533000
+											},
+
+											"dates":
+											{
+												"created": 1407247659000,
+												"updated": 1458154242000,
+												"firstPublished": 1409833449000,
+												"lastPublished": 1487131533000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 8 Expand Your LinkedIn Network",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 8 Expand Your LinkedIn Network",
+												"socialTitle": "30 Days to Your Dream Job: Day 8 Expand Your LinkedIn Network",
+												"heading": "30 Days to Your Dream Job: Day 8 Expand Your LinkedIn Network",
+												"description": "30 Days to Your Dream Job Day 8 includes how to expand and develop LinkedIn network to include professionals and organizations that can help your job search."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 201.0,
+									"targetNode":
+									{
+										"docId": 2059458,
+										"document":
+										{
+											"key": "3d53e0e28e024724b500e197",
+											"revisionKey": "395811f5e778e3b217271bc9",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/get-active-twitter-2059458",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-7.htm",
+											"docId": 2059458,
+											"slug": "get-active-twitter",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075893000
+											},
+
+											"dates":
+											{
+												"created": 1407246989000,
+												"updated": 1458154204000,
+												"firstPublished": 1409833272000,
+												"lastPublished": 1477572073000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 7 Get Active on Twitter",
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 7 Get Active on Twitter",
+												"socialTitle": "30 Days to Your Dream Job: Day 7 Get Active on Twitter",
+												"heading": "30 Days to Your Dream Job: Day 7 Get Active on Twitter",
+												"description": "30 Days to Your Dream Job Day 7 includes how to create a Twitter profile and establish yourself as an experts, plus tips for using Twitter to job search."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 200.0,
+									"targetNode":
+									{
+										"docId": 2059457,
+										"document":
+										{
+											"key": "3d53e0e070024524b500e196",
+											"revisionKey": "3957d31955073fa952270709",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/update-profile-picture-jobs-2059457",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-6.htm",
+											"docId": 2059457,
+											"slug": "update-profile-picture-jobs",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075892000
+											},
+
+											"dates":
+											{
+												"created": 1407246447000,
+												"updated": 1458154178000,
+												"firstPublished": 1409831544000,
+												"lastPublished": 1473452375000
+											},
+
+											"noIndex": false,
+											"socialTitle": "30 Days to Your Dream Job: Day 6 Update Your Profile Picture",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 6 Update Your Profile Picture",
+												"socialTitle": "30 Days to Your Dream Job: Day 6 Update Your Profile Picture",
+												"heading": "30 Days to Your Dream Job: Day 6 Update Your Profile Picture",
+												"description": "30 Days to Your Dream Job Day 6 includes how to make sure that your online profile pictures are just as up-to-date and professional as your profiles."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 5
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-prepare-for-networking",
+							"rootUrl": "https://dummy-programmed-summary-prepare-for-networking",
+							"docId": 4135988,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497478229701
+							},
+
+							"dates":
+							{
+								"created": 1497478229720,
+								"updated": 1497478229720
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				},
+
+				{
+					"name": "journey",
+					"weight": 10.0,
+					"targetNode":
+					{
+						"docId": 4135987,
+						"relationships":
+						{
+							"list":
+							[
+								{
+									"name": "journey",
+									"weight": 104.0,
+									"targetNode":
+									{
+										"docId": 2059456,
+										"document":
+										{
+											"key": "3d53e0db8e023b24b500e193",
+											"revisionKey": "395811f5e678e2b217271bc8",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/make-sure-employers-can-find-you-2059456",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-5.htm",
+											"docId": 2059456,
+											"slug": "make-sure-employers-can-find-you",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075891000
+											},
+
+											"dates":
+											{
+												"created": 1407245196000,
+												"updated": 1458154148000,
+												"firstPublished": 1409831273000,
+												"lastPublished": 1477572071000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 5 Make Sure Employers Can Find You",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 5 Make Sure Employers Can Find You",
+												"socialTitle": "30 Days to Your Dream Job: Day 5 Make Sure Employers Can Find You",
+												"heading": "30 Days to Your Dream Job: Day 5 Make Sure Employers Can Find You",
+												"description": "30 Days to Your Dream Job Day 5 includes how to get your professional information online in a way that will attract employers searching for job candidates."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 103.0,
+									"targetNode":
+									{
+										"docId": 2059455,
+										"document":
+										{
+											"key": "3d53dfd569259e867900e192",
+											"revisionKey": "3757b237262f36160f23f5fd",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/dream-job-timeline-2059455",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-4.htm",
+											"docId": 2059455,
+											"slug": "dream-job-timeline",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131532000
+											},
+
+											"dates":
+											{
+												"created": 1407178086000,
+												"updated": 1458154122000,
+												"firstPublished": 1409829279000,
+												"lastPublished": 1487131532000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 4 Volunteer",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 4 Volunteer",
+												"socialTitle": "30 Days to Your Dream Job: Day 4 Volunteer",
+												"heading": "30 Days to Your Dream Job: Day 4 Volunteer",
+												"description": "30 Days to Your Dream Job Day 4 includes information on how volunteering can showcase your skills and help you get hired."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 102.0,
+									"targetNode":
+									{
+										"docId": 2059453,
+										"document":
+										{
+											"key": "3d53df862e2508867900e190",
+											"revisionKey": "3957d31955073ea952270708",
+											"authorKey": "2335",
+											"ownerKey": "254",
+											"url": "https://www.thebalancemoney.com/dream-job-develop-a-new-skill-2059453",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-3.htm",
+											"docId": 2059453,
+											"slug": "dream-job-develop-a-new-skill",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1479075891000
+											},
+
+											"dates":
+											{
+												"created": 1407157805000,
+												"updated": 1470795474000,
+												"firstPublished": 1409829169000,
+												"lastPublished": 1473452374000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job: Day 3 Develop a New Skill",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 3 Develop a New Skill",
+												"socialTitle": "30 Days to Your Dream Job: Day 3 Develop a New Skill",
+												"heading": "30 Days to Your Dream Job: Day 3 Develop a New Skill",
+												"description": "30 Days to Your Dream Job Day 3 includes tips on how to upgrade your skills and knowledge to meet the job requirements for your dream job."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 101.0,
+									"targetNode":
+									{
+										"docId": 2059442,
+										"document":
+										{
+											"key": "3d53df7a982460867900e18c",
+											"revisionKey": "3757b237202f34160f23f5fb",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/create-branding-statement-2059442",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-2.htm",
+											"docId": 2059442,
+											"slug": "create-branding-statement",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131532000
+											},
+
+											"dates":
+											{
+												"created": 1407154835000,
+												"updated": 1463830224000,
+												"firstPublished": 1409829030000,
+												"lastPublished": 1487131532000
+											},
+
+											"socialTitle": "30 Days to Your Dream Job Day 2: Create a Branding Statement",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job Day 2: Create a Branding Statement",
+												"socialTitle": "30 Days to Your Dream Job Day 2: Create a Branding Statement",
+												"heading": "30 Days to Your Dream Job Day 2: Create a Branding Statement",
+												"description": "30 Days to Your Dream Job Day 2 includes tips on how to write a branding statement to use for your job search, how to use it, and branding statement examples."
+											}
+										}
+									}
+								},
+
+								{
+									"name": "journey",
+									"weight": 100.0,
+									"targetNode":
+									{
+										"docId": 2059431,
+										"document":
+										{
+											"key": "3d53de86fd2321867900e18a",
+											"revisionKey": "3757b237182f32160f23f5f9",
+											"authorKey": "2335",
+											"url": "https://www.thebalancemoney.com/dream-job-refresh-your-resume-2059431",
+											"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job-day-1.htm",
+											"docId": 2059431,
+											"slug": "dream-job-refresh-your-resume",
+											"templateType": "FLEXIBLEARTICLE",
+											"documentState":
+											{
+												"state": "ACTIVE",
+												"activeDate": 1487131530000
+											},
+
+											"dates":
+											{
+												"created": 1407092477000,
+												"updated": 1468840971000,
+												"firstPublished": 1409828959000,
+												"lastPublished": 1487131530000
+											},
+
+											"socialTitle": "How to Refresh Your Resume in a Few Simple Steps",
+
+											"author":
+											{
+												"id": "2335",
+												"type": "AUTHOR",
+												"status": "LIVE",
+
+												"displayName": "Alison Doyle",
+												"displayNamePossessive": "Alison's",
+												"contributingWriter": false,
+												"language": "en_US",
+												"liveDate": 898732800000,
+												"numberOfExperts": 1,
+												"socialPresence":
+												[
+													{
+														"network": "facebook",
+														"url": "http://www.facebook.com/aboutjobsearch"
+													},
+
+													{
+														"network": "twitter",
+														"url": "https://twitter.com/alisondoyle"
+													}
+												],
+
+												"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+												"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+												"image":
+												{
+													"id": "58b849955f9b5880809d5df6",
+													"fileName": "2335.gif",
+													"objectId": "2335-58b849955f9b5880809d5df6.gif",
+													"width": 85,
+													"height": 85
+												}
+											},
+
+											"summary":
+											{
+												"title": "30 Days to Your Dream Job: Day 1 Refresh Your Resume",
+												"socialTitle": "How to Refresh Your Resume in a Few Simple Steps",
+												"heading": "30 Days to Your Dream Job: Day 1 Refresh Your Resume",
+												"description": "Follow these simple steps to take to make sure your resume will stand out in the job market. Here's how to refresh your resume and give it a quick makeover."
+											}
+										}
+									}
+								}
+							],
+
+							"totalSize": 5
+						},
+
+						"document":
+						{
+							"url": "https://dummy-programmed-summary-get-started",
+							"rootUrl": "https://dummy-programmed-summary-get-started",
+							"docId": 4135987,
+							"templateType": "PROGRAMMEDSUMMARY",
+							"documentState":
+							{
+								"state": "ACTIVE",
+								"activeDate": 1497478106507
+							},
+
+							"dates":
+							{
+								"created": 1497478134277,
+								"updated": 1497478134277
+							},
+
+							"summary":
+							{
+
+							}
+						}
+					}
+				}
+			],
+
+			"totalSize": 7
+		},
+
+		"document":
+		{
+			"key": "3d53de82912307867900e187",
+			"revisionKey": "3757b2371e2f33160f23f5fa",
+			"authorKey": "2335",
+			"url": "https://www.thebalancemoney.com/one-month-to-your-dream-job-2059461",
+			"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job.htm",
+			"docId": 2059461,
+			"slug": "one-month-to-your-dream-job",
+			"templateType": "FLEXIBLEARTICLE",
+			"documentState":
+			{
+				"state": "ACTIVE",
+				"activeDate": 1487131531000
+			},
+
+			"dates":
+			{
+				"created": 1407091345000,
+				"updated": 1470442322000,
+				"firstPublished": 1409828885000,
+				"lastPublished": 1487131531000
+			},
+
+			"socialTitle": "How to Get Hired in 30 Days or Less!",
+
+			"author":
+			{
+				"id": "2335",
+				"type": "AUTHOR",
+				"status": "LIVE",
+				"displayName": "Alison Doyle",
+				"displayNamePossessive": "Alison's",
+				"contributingWriter": false,
+				"language": "en_US",
+				"liveDate": 898732800000,
+				"numberOfExperts": 1,
+				"socialPresence":
+				[
+					{
+						"network": "facebook",
+						"url": "http://www.facebook.com/aboutjobsearch"
+					},
+
+					{
+						"network": "twitter",
+						"url": "https://twitter.com/alisondoyle"
+					}
+				],
+
+				"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+				"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+				"image":
+				{
+					"id": "58b849955f9b5880809d5df6",
+					"fileName": "2335.gif",
+					"objectId": "2335-58b849955f9b5880809d5df6.gif",
+					"width": 85,
+					"height": 85
+				}
+			},
+
+			"summary":
+			{
+				"title": "Practical Tips to Find a New Job Fast",
+				"socialTitle": "How to Get Hired in 30 Days or Less!",
+				"heading": "Practical Tips to Find a New Job Fast",
+				"description": "This guide provides practical tips to follow each day to help job seekers get advice online and get hired for a new dream job fast."
+			}
+		}
+	}
+}

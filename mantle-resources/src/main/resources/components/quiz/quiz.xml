@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-disclaimer" resourcePath="/components/quiz/disclaimer.ftl">
+        <info>
+            <category>Mantle Components/Quizzes</category>
+            <displayName>Disclaimer</displayName>
+            <description>Add disclaimer</description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+        </info>
+        <property name="disclaimer" value="Disclaimer copy goes here" />
+    </component>
+
+	<component id="mntl-quiz-questions" resourcePath="/components/quiz/questions.ftl">
+        <info>
+            <category>Mantle Components/Quizzes</category>
+            <displayName>Questions</displayName>
+            <description>Displays questions and answers</description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <!-- Actually needs mock document -->
+            <model name="mockDocument" id="document" mode="replace">
+                <property name="template" value="pattern-library/quiz" />
+            </model>
+        </info>
+
+		<stylesheet path="/static/mantle/components/quiz/questions.css" />
+        <svg id="quiz-icon-check" path="/static/mantle/svg/quiz-icon-check.svg" />
+        <svg id="quiz-icon-x" path="/static/mantle/svg/quiz-icon-x.svg" />
+
+		<model id="document" name="DOCUMENT" />
+		<property name="questionImageWidth" value="768" type="integer" />
+		<property name="questionImageHeight" value="300" type="integer" />
+		<property name="answerImageWidth" value="200" type="integer" />
+		<property name="answerImageHeight" value="200" type="integer" />
+        <property name="questionHeadingTag" value="span" />
+        <property name="revealHeadingTag" value="span" />
+
+        <component id="quiz-icon-check" location="checkbox" ref="mntl-svg">
+            <!-- TODO: Convert casing to kebab case in 3.14 -->
+            <list id="class">
+				<property name="quizicon" value="quizicon" />
+                <property name="quizicon-check" value="quizicon-check" />
+			</list>
+
+            <property name="name" value="quiz-icon-check" />
+        </component>
+
+        <component id="quiz-icon-x" location="checkbox" ref="mntl-svg">
+            <!-- TODO: Convert casing to kebab case in 3.14 -->
+            <list id="class">
+				<property name="quizicon" value="quizicon" />
+                <property name="quizicon-check" value="quizicon-x" />
+			</list>
+
+            <property name="name" value="quiz-icon-x" />
+        </component>
+	</component>
+
+	<component id="mntl-quiz-results" resourcePath="/components/quiz/results.ftl">
+        <info>
+            <category>Mantle Components/Quizzes</category>
+            <displayName>Results</displayName>
+            <description>Display quiz results</description>
+            <documentation>
+Display quiz results by looping over `model.document.results.list`. Uses
+`model.document.resultsCalc == "BEST_FIT" || model.document.resultsCalc == "PERCENT_CORRECT"`
+to modify display.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+
+            <!-- Actually needs mock document since it refs mntl-disclaimer -->
+            <for id="this, quizShare">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="pattern-library/quiz" />
+                </model>
+            </for>
+        </info>
+		<stylesheet path="/static/mantle/components/quiz/results.css" />
+
+		<for id="this, quizShare">
+			<model id="document" name="DOCUMENT" />
+		</for>
+		<property name="quizShare" value="${@document.getResultsCalc().name() == 'PERCENT_CORRECT' ? 'I got PERCENTAGE correct.' : 'I got' }" />
+        <component location="disclaimer" ref="mntl-disclaimer" />
+		<property name="imageWidth" value="768" type="integer" />
+        <property name="headingTag" value="span" />
+        <property name="resultHeadingTag" value="span" />
+        <property name="shareHeadingTag" value="span" />
+	</component>
+
+    <component id="mntl-quiz-content" ref="mntl-text-block">
+        <property name="text" value="${@document.content}" onError="collapseSilent">
+            <model id="document" name="DOCUMENT" />
+        </property>
+    </component>
+
+	<component id="mntl-quiz" resourcePath="/components/quiz/quiz.ftl">
+        <info>
+            <category>Mantle Components/Quizzes</category>
+            <displayName>Quiz</displayName>
+            <description></description>
+            <documentation>
+                ### quiz.ftl
+
+                * Adds quiz content and wrapper data atribute **data_results_calc**
+
+                ### quiz.js
+
+                * Uses **Mntl.utilities.readyAndDeferred** to initialize quiz script.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <!-- Actually needs mock document for various dependencies -->
+            <for id="c*, c*.p*">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="pattern-library/quiz" />
+                </model>
+            </for>
+        </info>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+		<script group="bottom" path="/static/mantle/components/quiz/quiz.js" />
+
+		<model id="document" name="DOCUMENT" onError="halt" />
+        <component location="content" ref="mntl-quiz-content" />
+        <component location="content" ref="mntl-quiz-questions" />
+        <component location="content" ref="mntl-quiz-results" />
+	</component>
+
+</components>

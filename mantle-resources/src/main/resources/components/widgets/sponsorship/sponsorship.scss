@@ -1,0 +1,25 @@
+.mntl-sponsorship {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__logo-wrapper {
+        display: flex; // display: flex is needed to remove unwanted spaces from code formatting of inline-block elements
+    }
+
+    &__disclaimer {
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none; // remove underline on hover so tooltip does not inherit style (https://stackoverflow.com/questions/4481318/css-text-decoration-property-cannot-be-overridden-by-child-element/4481356)
+        }
+
+        &:after {
+            cursor: auto;
+        }
+    }
+}

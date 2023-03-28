@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-robots" resourcePath="/components/robots/robots.ftl">
+
+        <info>
+            <category>Mantle Components/Robots</category>
+            <displayName>Robots</displayName>
+            <description>
+                Common **robots.txt** file.
+            </description>
+            <documentation>
+
+                Provides a common **robots.txt** for all verticals, with an optional sitemap.
+
+                ## Properties
+
+                * **additionalDisallowAllPaths**: Comma delimited string for additional vertical paths via config (com.about.globe.robots.additionalDisallowAllPaths).
+                * **sitemapUrl**: URL of the sitemap.  Defaults to **https://www.yoursite.com/sitemap.xml**, pulling your site's domain from
+                **renderUtils**.  To disable the sitemap, you must **mode="remove"** the property.
+
+            </documentation>
+        </info>
+
+        <property name="additionalDisallowAllPaths" value="${T(org.apache.commons.lang3.StringUtils).split(@additionalDisallowAllPaths.getValue(),',')}" onError="ignore">
+            <model name="externalConfig" id="additionalDisallowAllPaths">
+                <property name="key" value="com.about.globe.robots.additionalDisallowAllPaths" />
+            </model>
+        </property>
+
+        <for id="sitemapUrl, googleNewsSitemapUrl">
+            <model name="externalConfig" id="withoutWww">
+                <property name="key" value="com.about.globe.seleneDocUrls.withoutWww" />
+                <property name="default" value="false" type="boolean"/>
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </for>
+
+        <property name="sitemapUrl" value="${(@withoutWww.value ? 'https://' : 'https://www.') + renderUtils.getDomain('/') + '/sitemap.xml'}" />
+		<property name="googleNewsSitemapUrl" value="${(@hasGoogleNewsSitemap.value != null and @hasGoogleNewsSitemap.value == 'true') ? ((@withoutWww.value ? 'https://' : 'https://www.') + renderUtils.getDomain('/') + '/google-news-sitemap.xml') : null}" onError="ignore">
+            <model name="externalConfig" id="hasGoogleNewsSitemap">
+                <property name="key" value="com.about.globe.google.news.sitemap.enabled" />
+            </model>
+        </property>
+        <property name="thumborPrefix" value="${T(com.about.mantle.spring.MantleSpringConfiguration).THUMBOR_PROXY_PREFIX}" />
+        <property name="hashIdQueryParam" value="${T(com.about.mantle.spring.interceptor.CookieInterceptor).HASH_ID_QUERY_PARAM}" />
+
+    </component>
+</components>

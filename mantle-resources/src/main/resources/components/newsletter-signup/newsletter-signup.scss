@@ -1,0 +1,16 @@
+.mntl-newsletter-signup__success,
+.mntl-newsletter-signup__error {
+    display: none;
+}
+
+.mntl-newsletter-signup__success {
+    .is-submit-success & {
+        display: block;
+    }
+}
+
+.mntl-newsletter-signup__error {
+    .is-submit-error & {
+        display: block;
+    }
+}

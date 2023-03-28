@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-deferred" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Internal</category>
+            <displayName>Defer</displayName>
+            <description></description>
+            <documentation>
+### Mntl.Deferred.init($container)
+
+__Arguments__
+
+ - __$container__ _(jQery object)_ The parent element of the video player
+
+__Returns__ `undefined`
+
+
+### Mntl.Deferred.RequestContext(componentIds, [urlOverload|null], [skipGenerify|false], [htmlCallback|null], [isPageview|false])
+
+Makes componentIds int an object.
+
+__Arguments__
+
+ - __componentIds__ `object|string|array`
+ 
+ - __urlOverload__
+ 
+ - __skipGenerify__
+ 
+ - __htmlCallback__
+ 
+ - __isPageview__
+
+__Returns__ `object`
+
+
+### Mntl.Deferred.requestComponents(context)
+
+Posts form data and handle success.
+
+__Arguments__
+
+ - __context__ `object`  RequestContext
+
+__Returns__ `object`
+
+
+### Mntl.Deferred.addToBatch(component)
+
+Adds supplied component to `batchTimer.components`;
+
+__Arguments__
+
+ - __component__ `string|array`
+
+__ Returns__ `undefined`
+
+
+### Mntl.Deferred.setBtfVals
+
+Sets `component.pos` = `offset().top` for each element in the btf array.
+
+__Returns__ `undefined`
+
+
+### Mntl.Deferred.DEFAULTS[object]
+
+ - __jqSel:__ `'[data-defer]'`
+ 
+ - __requestUrl:__ window.location.href
+
+
+### Mntl.Deferred.removeEventListener(context, event, component, fn)
+
+Executes `jQuery.off` on supplied context. [See documentation](http://api.jquery.com/off/).
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+		<stylesheet path="/static/mantle/components/internal/defer/css/deferred.css"></stylesheet>
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="top" path="/static/mantle/js/fn-utilities.js"></script>
+        <script group="top" path="/static/mantle/js/dom-utilities.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js"></script>
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js"></script>
+		<script group="bottom" path="/static/mantle/components/internal/defer/js/deferred.js"></script>
+	</component>
+
+</components>

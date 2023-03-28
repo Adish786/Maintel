@@ -1,0 +1,7 @@
+.mntl-sc-block-embed--iframe {
+    display: block;
+    width: 100%;
+    height: 450px; /* approximation--true height will get set via javascript once the iframe loads successfully
+	NOTE: the above height may need to be tweaked based on the results of https://dotdash.atlassian.net/browse/GLBE-6655
+	*/
+}

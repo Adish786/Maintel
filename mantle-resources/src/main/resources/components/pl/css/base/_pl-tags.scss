@@ -1,0 +1,16 @@
+.mntl-pl-tags {
+    display: flex;
+}
+
+.mntl-pl-tags__tag {
+    padding: 0.25rem 0.5rem;
+	margin-right: 10px;
+    background-color: $label-default;
+    color: $pl-color-white;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+
+	&.complete {
+		background-color: $label-complete;
+	}
+}

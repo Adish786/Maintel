@@ -1,0 +1,68 @@
+.ie-notification-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    padding: 16px 0;
+    text-align: center;
+    background-color: #FFECA7;
+    font-family: Arial, sans-serif;
+
+    &.is-closed {
+        display: none;
+    }
+
+    &__content {
+        display: inline-block;
+    }
+
+    &__icon-alert {
+        vertical-align: top;
+        margin-top: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &__text-container {
+        display: inline-block;
+        margin: 0 8px;
+        width: 600px;
+        text-align: left;
+    }
+
+    &__text--bold {
+        font-weight: bold;
+    }
+
+    &__btn {
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 4px;
+        padding: 12px;
+        font-weight: bold;
+
+        &-update {
+            margin-right: 8px;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #2B922F;
+
+            &:hover {
+                color: #FFFFFF;
+                background-color: #126815;
+            }
+        }
+
+        &-close {
+            border: none;
+            color: #666666;
+            cursor: pointer;
+            background-color: #DEDCD0;
+
+            &:hover {
+                background-color: #BCBBB0;
+            }
+        }
+    }
+}

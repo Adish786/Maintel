@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-article" resourcePath="/components/article/view/article.ftl">
+		<info>
+            <category>Mantle Components/Article</category>
+            <displayName>Article</displayName>
+            <description></description>
+            <documentation>
+                Provides template areas `article-header`, `article-left-rail`, `article-pre-content`, `article-content`, `article-post-content`, `article-right-rail`, `article-footer`.
+            </documentation>
+        </info>
+		
+		<stylesheet id="mntl-article-styles" path="/static/mantle/components/article/css/article.css" />
+
+        <list id="class">
+            <property name="layout-type" value="" />
+        </list>
+	
+	</component>
+
+    <component id="mntl-article--external" ref="mntl-article">
+        <info>
+            <category>Mantle Components/Article</category>
+            <displayName>Article External</displayName>
+            <description>
+                Provides `mntl-external-component` component in the `article-content` to be used by PRM and Commerce.
+            </description>
+            <documentation>            
+                ### externalComponent task model
+
+                #### Arguments
+
+                - __serviceId__ _maps to a registered external service_
+                - __componentId__ _maps to a component on the service specified by serviceId_
+            </documentation>
+        </info>
+
+        <list id="class" />
+
+        <map id="attrs" />
+
+        <component location="article-content" id="external-content" ref="mntl-external-component">
+            
+            <model name="externalComponent">
+                <!-- REQUIRED -->
+                <!-- serviceId -->
+                <!-- componentId -->
+            </model>
+        </component>
+    </component>
+
+</components>

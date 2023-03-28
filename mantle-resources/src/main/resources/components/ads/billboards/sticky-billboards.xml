@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-sc-sticky-billboard" resourcePath="/components/ads/view/sticky-billboard.ftl">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard</displayName>
+            <description>
+                This mntl-block is the wrapper div around the ad div.
+            </description>
+            <documentation>
+                The intended structure is:
+                div.mntl-sc-sticky-billboard -> div.mntl-billboard -> iframe containing ad.
+
+                We expect verticals to use mode="replace" to put their billboard into the ad location tag.
+                e.g. use the following tag: component location="ad" id="mntl-billboard-placeholder" ref="your-vertical-billboard" mode="replace"
+
+                The sticky behaviour is calculated relative to the dimensions of the mntl-sc-sticky-billboard
+                which is set using the element's style height value. The default is set for pc and mobile.
+                Tablet requires the height to be set in the css, because it is not consistent between landscape and portrait mode.
+
+                Property {Integer or String} rightRailTrackHeight
+                For view="pc", this value will be used for both data-height and the inline css style height. The default value is 600.
+                For view="tablet", this value will only be used for data-height, as the css style height can't be set up inline
+                due to the fact that it is different depending on orientation.
+                For view="mobile", as there is no right rail the default value is "auto". This value will be used for the inline
+                css height style.
+                The data-height property is used by sc-ads.js to calculate the number of ads in the right rail.
+                The css height style is used for the sticky functionality.
+            </documentation>
+            <tags>Complete</tags>
+        </info>
+
+        <script path="/static/mantle/static/libs/js/stickybits.js" views="pc, tablet" />
+        <script path="/static/mantle/components/ads/billboards/js/sc-lock-billboards.js" views="pc, tablet" />
+        <stylesheet path="/static/mantle/components/ads/billboards/css/sticky-billboards.css" />
+
+        <list id="class">
+            <property name="scads-to-load" value="scads-to-load" />
+            <property name="right-rail__item" value="right-rail__item" />
+        </list>
+
+        <property name="rightRailTrackHeight" value="600" views="tablet, pc" type="integer" />
+        <property name="rightRailTrackHeight" value="auto" views="mobile" />
+
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-placeholder">
+            <map id="attrs">
+                <property name="style" value="width: 300px; height: 250px;" />
+            </map>
+        </component>
+    </component>
+
+    <component id="mntl-squareFlex1-sticky" ref="mntl-sc-sticky-billboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard for squareFlex1 ad</displayName>
+            <description>
+                This sticky ad component has the updated slot id and ad sizes for Carbon sites.
+                This component should only ever be used on pc, tablet.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+                This is the first billboard in the right rail, and has a height of 1050.
+            </documentation>
+        </info>
+        <property name="rightRailTrackHeight" value="1090" views="tablet, pc" type="integer" />
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-billboard" mode="replace">
+            <for id="gptAd">
+                <property name="id" value="square-flex-1" />
+                <list id="sizesList" mode="replace">
+                    <property name="300x250" value="[300, 250]" />
+                    <property name="299x251" value="[299, 251]" />
+                    <property name="300x600" value="[300, 600]" />
+                    <property name="300x1050" value="[300, 1050]" />
+                    <property name="160x600" value="[160, 600]" />
+                </list>
+            </for>
+        </component>
+    </component>
+
+    <component id="mntl-squareFlex2-sticky-dynamic" ref="mntl-sc-sticky-billboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard for square-flex-2 ad</displayName>
+            <description>
+                A dynamically loaded sticky Square Flexible ad component with an updated slot id 
+                and centralized sizes.
+                This component should only ever be used on pc, tablet.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-billboard" mode="replace">
+            <for id="gptAd">
+                <property name="id" value="square-flex-2" />
+                <property name="isDynamic" value="true" type="boolean" mode="replace" />
+                <list id="sizesList" mode="replace">
+                    <property name="300x250" value="[300, 250]" />
+                    <property name="299x251" value="[300, 251]" />
+                    <property name="300x600" value="[300, 600]" />
+                    <property name="300x600" value="[300, 601]" />
+                    <property name="300x600" value="[2, 1]" />
+                    <property name="160x600" value="[160, 600]" />
+                    <property name="fluid" value="'fluid'" />
+                </list>
+            </for>
+        </component>
+    </component>
+
+    <component id="mntl-squareFixed-sticky-dynamic" ref="mntl-sc-sticky-billboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard for Dynamic squareFixed ads</displayName>
+            <description>
+                This sticky ad component has the updated slot id and ad sizes for Carbon sites.
+                This component should only ever be used on pc, tablet.
+                On mobile, the components beginning with mob should be used instead.
+                The square-fixed ads have a counter appended to them in GPT.js to make these
+                ad units unique.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+            </documentation>
+        </info>
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-billboard" mode="replace">
+            <for id="gptAd">
+                <property name="id" value="square-fixed" />
+                <property name="isDynamic" value="true" type="boolean" mode="replace" />
+                <list id="sizesList" mode="replace">
+                    <property name="300x250" value="[300, 250]" />
+                    <property name="299x251" value="[299, 251]" />
+                    <property name="fluid" value="'fluid'" />
+                </list>
+            </for>
+        </component>
+    </component>
+
+    <component id="mntl-mobSquareFlex1-sticky" ref="mntl-sc-sticky-billboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard for mobSquareFlex1 ad</displayName>
+            <description>
+                This sticky ad component has the updated slot id and ad sizes for Carbon sites.
+                This component should only ever be used on mobile.
+                Although these ads are for MOBILE only and you may think you wouldn't need the "sticky container",
+                they extend the mntl-sc-sticky-billboard because the sticky billboard scripts are what injects
+                these ads into the content if the view="mobile"
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+            </documentation>
+        </info>
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-billboard" mode="replace">
+            <for id="gptAd">
+                <property name="id" value="mob-square-flex-1" />
+                <list id="sizesList" mode="replace">
+                    <property name="300x250" value="[300, 250]" />
+                    <property name="299x251" value="[299, 251]" />
+                    <property name="320x100" value="[320, 100]" />
+                    <property name="320x200" value="[320, 200]" />
+                    <property name="340x450" value="[340, 450]" />
+                    <property name="1x3" value="[1, 3]" />
+                    <property name="fluid" value="'fluid'" />
+                </list>
+            </for>
+        </component>
+    </component>
+
+    <component id="mntl-mobSquareFixed-sticky-dynamic" ref="mntl-sc-sticky-billboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>SC Sticky Billboard for Dynamic mobSquareFixed ad</displayName>
+            <description>
+                This sticky ad component has the updated slot id and ad sizes for Carbon sites.
+                This component should only ever be used on mobile.
+                Although these ads are for MOBILE only and you may think you wouldn't need the "sticky container",
+                they extend the mntl-sc-sticky-billboard because the sticky billboard scripts are what injects
+                these ads into the content if the view="mobile"
+                The mob-square-fixed ads have a counter appended to them in GPT.js to make these
+                ad units unique.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+            </documentation>
+        </info>
+        <component location="ad" id="mntl-sc-sticky-billboard-ad" ref="mntl-dynamic-billboard" mode="replace">
+            <for id="gptAd">
+                <property name="id" value="mob-square-fixed" />
+                <property name="isDynamic" value="true" type="boolean" mode="replace" />
+                <list id="sizesList" mode="replace">
+                    <property name="300x250" value="[300, 250]" />
+                    <property name="299x251" value="[299, 251]" />
+                    <property name="fluid" value="'fluid'" />
+                </list>
+            </for>
+        </component>
+    </component>
+</components>

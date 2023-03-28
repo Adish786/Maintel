@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-externalize-links" ref="mntl-group">
+        <info>
+            <category>Mantle Components/External</category>
+            <displayName>Externalize Links</displayName>
+            <description> Adds attributes to external links. </description>
+            <documentation>
+                ### externalize-links.evaluated.js
+
+                Allows attaching custom plugins to be executed after standard processing on each external link.
+
+                ```javascript
+                const plugin = {
+                processLink: function($link) {
+                        $link.attr('foo', 'bar');
+                    }
+                };
+                Mntl.externalizeLinks.addPlugin(plugin);
+                Mntl.externalizeLinks.init();
+                ```
+
+                ### Arguments
+
+                - __model.plugins__ (Type: **string[]**): Plugins must define `function processLink($link) {}`
+
+                ### Example
+
+                Adding the [Amazon Affiliate plugin](/pattern-library/mantle-components/affiliate/amazon-affiliate).
+                (Note the tags are escaped for security reasons for this rendering)
+
+                ```HTML
+                <![CDATA[
+                    <component ref="mntl-amazon-affiliate-tagger" />
+                    <component ref="mntl-externalize-links">
+                        <property name="plugins" mode="replace"
+                                value="${{'Mntl.amazonAffiliateTagger'}}" />
+                    </component>
+                ]]>
+                ```
+
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+        <script group="bottom" evaluated="true" path="/static/mantle/components/externalize-links/js/externalize-links.evaluated.js" />
+        <script group="bottom" path="/static/mantle/components/externalize-links/js/externalize-links.js" />
+        <property name="plugins" value="" />
+    </component>
+
+</components>

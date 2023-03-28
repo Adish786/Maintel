@@ -1,0 +1,3084 @@
+{
+  "node" : {
+    "docId" : 4148466,
+    "nodeAttributes" : {
+      "nodeType" : "TAXONOMY",
+      "shortHeading" : "Achieving Your Dream Retirement"
+    },
+    "document" : {
+      "revisionKey" : "",
+      "authorKey" : "156569",
+      "url" : "https://www.thebalancemoney.com/planning-for-retirement-an-introduction-4148466",
+      "rootUrl" : "https://www.thebalancemoney.com/planning-for-retirement-an-introduction-4148466",
+      "templateType" : "STRUCTUREDCONTENT",
+      "documentState" : {
+        "state" : "ACTIVE",
+        "activeDate" : 1529517223576
+      },
+      "dates" : {
+        "created" : 1503433889652,
+        "updated" : 1547150442646,
+        "firstPublished" : 1504127850458,
+        "lastPublished" : 1528385422227
+      },
+      "medicalBoardApproved" : false,
+      "noIndex" : false,
+      "title" : "Saving and Planning for Your Dream Retirement",
+      "socialTitle" : "Planning for Retirement: An Introduction",
+      "keywords" : {
+        "totalSize" : 0,
+        "list" : [ ]
+      },
+      "description" : "Saving as much money as possible is just the beginning. Here are the basics of planning for retirement.",
+      "heading" : "Planning for Retirement: An Introduction",
+      "paging" : {
+        "current" : 1,
+        "total" : 1
+      },
+      "author" : {
+        "id" : "156569",
+        "type" : "AUTHOR",
+        "status" : "LIVE",
+        "displayName" : "Staff Author",
+        "displayNamePossessive" : "",
+        "contributingWriter" : false,
+        "numberOfExperts" : 1,
+        "socialPresence" : [ ],
+        "image" : { }
+      },
+      "summary" : {
+        "title" : "Saving and Planning for Your Dream Retirement",
+        "socialTitle" : "Planning for Retirement: An Introduction",
+        "heading" : "Planning for Retirement: An Introduction",
+        "description" : "Saving as much money as possible is just the beginning. Here are the basics of planning for retirement.",
+        "image" : {
+          "url" : "https://fthmb.tqn.com/FFoxxnxhURzVZPMZ1m4JvXaM5UU=/about/GettyImages-557921273-59a869e7b501e80011080e07.jpg",
+          "caption" : "",
+          "owner" : "Getty Images",
+          "alt" : "",
+          "width" : 2121,
+          "height" : 1414,
+          "objectId" : "GettyImages-557921273-59a869e7b501e80011080e07.jpg"
+        }
+      },
+      "metaData" : {
+        "hasTableOfContents" : false,
+        "entities" : [ ],
+        "recircKeywords" : {
+          "totalSize" : 0,
+          "list" : [ ]
+        }
+      },
+      "slug" : "planning-for-retirement-an-introduction",
+      "primaryImage" : {
+        "url" : "https://fthmb.tqn.com/FFoxxnxhURzVZPMZ1m4JvXaM5UU=/about/GettyImages-557921273-59a869e7b501e80011080e07.jpg",
+        "caption" : "",
+        "owner" : "Getty Images",
+        "alt" : "",
+        "width" : 2121,
+        "height" : 1414,
+        "objectId" : "GettyImages-557921273-59a869e7b501e80011080e07.jpg"
+      },
+      "sources" : {
+        "totalSize" : 0,
+        "list" : [ ]
+      },
+      "vertical" : "MONEY",
+      "tickers" : {
+        "totalSize" : 0,
+        "list" : [ ]
+      },
+      "taggedImages" : {
+        "totalSize" : 0,
+        "list" : [ ]
+      },
+      "docId" : 4148466
+    },
+    "configuration" : { },
+    "relationships" : {
+      "totalSize" : 4,
+      "list" : [ {
+        "name" : "journey",
+        "weight" : 99.0,
+        "targetNode" : {
+          "docId" : 4163756,
+          "nodeAttributes" : {
+            "nodeType" : "DOCUMENT",
+            "shortHeading" : "Retirement Accounts"
+          },
+          "document" : {
+            "url" : "https://dummy-programmed-summary-retirement-accounts-4148466",
+            "rootUrl" : "https://dummy-programmed-summary-retirement-accounts-4148466",
+            "templateType" : "PROGRAMMEDSUMMARY",
+            "documentState" : {
+              "state" : "ACTIVE",
+              "activeDate" : 1524073859970
+            },
+            "dates" : {
+              "created" : 1524073859982,
+              "updated" : 1547150812881,
+              "lastPublished" : 1524073859970
+            },
+            "socialTitle" : "Retirement Accounts",
+            "keywords" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "paging" : {
+              "current" : 1,
+              "total" : 1
+            },
+            "summary" : {
+              "socialTitle" : "Retirement Accounts",
+              "image" : {
+                "width" : 2087,
+                "height" : 468,
+                "id" : "5c37a5dc46e0fb0001b95230",
+                "fileName" : "etradeforjourney.png",
+                "objectId" : "etradeforjourney-5c37a5dc46e0fb0001b95230.png"
+              }
+            },
+            "metaData" : {
+              "hasTableOfContents" : false,
+              "entities" : [ ],
+              "recircKeywords" : {
+                "totalSize" : 0,
+                "list" : [ ]
+              }
+            },
+            "primaryImage" : {
+              "width" : 2087,
+              "height" : 468,
+              "id" : "5c37a5dc46e0fb0001b95230",
+              "fileName" : "etradeforjourney.png",
+              "objectId" : "etradeforjourney-5c37a5dc46e0fb0001b95230.png"
+            },
+            "sources" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "vertical" : "MONEY",
+            "tickers" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "taggedImages" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "docId" : 4163756
+          },
+          "configuration" : { },
+          "relationships" : {
+            "totalSize" : 7,
+            "list" : [ {
+              "name" : "journey",
+              "weight" : 98.0,
+              "targetNode" : {
+                "docId" : 4140759,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Where to Save"
+                },
+                "document" : {
+                  "revisionKey" : "",
+                  "authorKey" : "156569",
+                  "url" : "https://www.thebalancemoney.com/simple-savings-rule-for-retirement-money-4140759",
+                  "rootUrl" : "https://www.thebalancemoney.com/simple-savings-rule-for-retirement-money-4140759",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1533737107043
+                  },
+                  "dates" : {
+                    "created" : 1496170961327,
+                    "updated" : 1533737107087,
+                    "firstPublished" : 1496171096308,
+                    "lastPublished" : 1533737107043
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Simple Savings Rule for Your Retirement Money",
+                  "socialTitle" : "The Simple Rule That Tells You Where to Put Your Retirement Money",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Considering all the different types of retirement accounts can be dizzying. Here&#39;s a three-part rule of thumb for your retirement savings.",
+                  "heading" : "This Simple Rule Tells You Where to Put Your Retirement Money",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "156569",
+                    "type" : "AUTHOR",
+                    "status" : "LIVE",
+                    "displayName" : "Staff Author",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "image" : { }
+                  },
+                  "summary" : {
+                    "title" : "Simple Savings Rule for Your Retirement Money",
+                    "socialTitle" : "The Simple Rule That Tells You Where to Put Your Retirement Money",
+                    "heading" : "This Simple Rule Tells You Where to Put Your Retirement Money",
+                    "description" : "Considering all the different types of retirement accounts can be dizzying. Here&#39;s a three-part rule of thumb for your retirement savings.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/c2asJ116N8Ntfwx5V3PP109OpSk=/GettyImages-501151044-5a85fd166edd6500362c809f.jpg",
+                      "owner" : "nongpimmy/Getty Images",
+                      "alt" : "Retirement illustration",
+                      "width" : 2121,
+                      "height" : 1414,
+                      "id" : "",
+                      "fileName" : "",
+                      "objectId" : "GettyImages-501151044-5a85fd166edd6500362c809f.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "simple-savings-rule-for-retirement-money",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/c2asJ116N8Ntfwx5V3PP109OpSk=/GettyImages-501151044-5a85fd166edd6500362c809f.jpg",
+                    "owner" : "nongpimmy/Getty Images",
+                    "alt" : "Retirement illustration",
+                    "width" : 2121,
+                    "height" : 1414,
+                    "id" : "",
+                    "fileName" : "",
+                    "objectId" : "GettyImages-501151044-5a85fd166edd6500362c809f.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 4140759
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 97.0,
+              "targetNode" : {
+                "docId" : 4135451,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "401(k) Plans"
+                },
+                "document" : {
+                  "key" : "3c58daf8580b131b44002652",
+                  "revisionKey" : "3c58dd134302386829012483",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/how-401k-plans-work-4135451",
+                  "rootUrl" : "https://www.thebalancemoney.com/how-401k-plans-work-4135451",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1545450485442
+                  },
+                  "dates" : {
+                    "created" : 1490745433308,
+                    "updated" : 1545450485481,
+                    "firstPublished" : 1490883732406,
+                    "lastPublished" : 1545450485442
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "What Is a 401(k) Plan and How Do They Work?",
+                  "socialTitle" : "Learn How Your Job's 401(k) Plan Can Work for You in the Long Run",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "If you have access to a 401(k) plan through your company, learn how it can help you save for retirement, plus employer matching and saving on taxes.",
+                  "heading" : "What Is a 401(k) Plan and How Do They Work?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "What Is a 401(k) Plan and How Do They Work?",
+                    "socialTitle" : "Learn How Your Job's 401(k) Plan Can Work for You in the Long Run",
+                    "heading" : "What Is a 401(k) Plan and How Do They Work?",
+                    "description" : "If you have access to a 401(k) plan through your company, learn how it can help you save for retirement, plus employer matching and saving on taxes.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/SBUpkjsUau0WOlNliP-iW4Rdr8g=/egg-with-dollar-sign-in-nest-128099735-5c1db1b6c9e77c00018874e0.jpg",
+                      "owner" : "Elizabeth Waugh / Getty Images",
+                      "alt" : "Egg with dollar sign in nest",
+                      "width" : 4288,
+                      "height" : 2848,
+                      "objectId" : "egg-with-dollar-sign-in-nest-128099735-5c1db1b6c9e77c00018874e0.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "how-401k-plans-work",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/SBUpkjsUau0WOlNliP-iW4Rdr8g=/egg-with-dollar-sign-in-nest-128099735-5c1db1b6c9e77c00018874e0.jpg",
+                    "owner" : "Elizabeth Waugh / Getty Images",
+                    "alt" : "Egg with dollar sign in nest",
+                    "width" : 4288,
+                    "height" : 2848,
+                    "objectId" : "egg-with-dollar-sign-in-nest-128099735-5c1db1b6c9e77c00018874e0.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 4135451
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 96.0,
+              "targetNode" : {
+                "docId" : 2894175,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "401(k) Matching"
+                },
+                "document" : {
+                  "key" : "4ffd7d6319004c50958002bd",
+                  "revisionKey" : "3957d3283b0087e2710145a5",
+                  "authorKey" : "44166",
+                  "url" : "https://www.thebalancemoney.com/maximizing-401k-match-2894175",
+                  "rootUrl" : "http://retireplan.about.com/od/401kplans/a/employer_match.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1548041908481
+                  },
+                  "dates" : {
+                    "created" : 1227306954000,
+                    "updated" : 1548041908509,
+                    "firstPublished" : 1227306954000,
+                    "lastPublished" : 1548041908481
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "How to Maximize Your Employer's 401K Match",
+                  "socialTitle" : "Tips for Getting the Most Out of Your 401(k) Match",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Taking advantage of an employer&#39;s 401K match is a critical piece of retirement planning. It provides you with &#34;free&#34; money when you know the rules.",
+                  "heading" : "Tips on Maximizing Your 401(k) Match",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "44166",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Michael Rubin",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/michael-rubin-bio-2894123",
+                    "image" : { },
+                    "shortBio" : "Michael Rubin wrote about investing and retirement planning for The Balance, and is the author of the bestselling &#34;Beyond Paycheck to Paycheck&#34;."
+                  },
+                  "summary" : {
+                    "title" : "How to Maximize Your Employer's 401K Match",
+                    "socialTitle" : "Tips for Getting the Most Out of Your 401(k) Match",
+                    "heading" : "Tips on Maximizing Your 401(k) Match",
+                    "description" : "Taking advantage of an employer&#39;s 401K match is a critical piece of retirement planning. It provides you with &#34;free&#34; money when you know the rules.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/retireplan/1/0/6/3/-/-/GettyImages-179708571.jpg",
+                      "caption" : "",
+                      "owner" : "Turnbull/Ikon Images/Getty Images",
+                      "alt" : "Businessman pulling at rope around large dollar sign money bag",
+                      "width" : 2023,
+                      "height" : 1485,
+                      "objectId" : "GettyImages-179708571-56a7fa395f9b58b7d0efcbac.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "maximizing-401k-match",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/retireplan/1/0/6/3/-/-/GettyImages-179708571.jpg",
+                    "caption" : "",
+                    "owner" : "Turnbull/Ikon Images/Getty Images",
+                    "alt" : "Businessman pulling at rope around large dollar sign money bag",
+                    "width" : 2023,
+                    "height" : 1485,
+                    "objectId" : "GettyImages-179708571-56a7fa395f9b58b7d0efcbac.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2894175
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 95.0,
+              "targetNode" : {
+                "docId" : 315495,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "How IRAs Work"
+                },
+                "document" : {
+                  "key" : "4ffc73e31900e116fb800ee8",
+                  "revisionKey" : "3d57d8406517b2865f026074",
+                  "authorKey" : "14749",
+                  "ownerKey" : "1",
+                  "url" : "https://www.thebalancemoney.com/how-iras-work-315495",
+                  "rootUrl" : "http://banking.about.com/od/investments/a/ira.htm",
+                  "templateType" : "FLEXIBLEARTICLE",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1553126835060
+                  },
+                  "dates" : {
+                    "created" : 1123206490000,
+                    "updated" : 1553126835120,
+                    "firstPublished" : 1123206490000,
+                    "lastPublished" : 1553126835060
+                  },
+                  "socialTitle" : "What an IRAs Is for and How It Helps Individuals Save for Retirement",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "paging" : {
+                    "pattern" : "_%1$d",
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "14749",
+                    "type" : "AUTHOR",
+                    "status" : "LIVE",
+                    "displayName" : "Justin Pritchard",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ {
+                      "network" : "facebook",
+                      "url" : "https://www.facebook.com/ApproachFinancial/"
+                    }, {
+                      "network" : "twitter",
+                      "url" : "http://twitter.com/ApproachFP"
+                    }, {
+                      "network" : "website",
+                      "url" : "https://approachfp.com/"
+                    } ],
+                    "bioUrl" : "https://www.thebalancemoney.com/justin-pritchard-314987",
+                    "image" : { },
+                    "shortBio" : "Justin Pritchard covers banking and loans, with over 14 years of experience writing about personal finance and working in the field."
+                  },
+                  "summary" : {
+                    "title" : "What an IRAs Is for and How It Works",
+                    "socialTitle" : "What an IRAs Is for and How It Helps Individuals Save for Retirement",
+                    "heading" : "What an IRAs Is for and How It Works",
+                    "description" : "Individual retirement accounts (IRAs) help you postpone taxes and save for retirement. Learn more about what they are and how they work.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/banking/1/0/u/B/senior-couple-walking-in-park-170202596.jpg",
+                      "caption" : "",
+                      "owner" : "Sam Edwards / Getty Images",
+                      "alt" : "senior couple walking in park",
+                      "width" : 5120,
+                      "height" : 3413,
+                      "objectId" : "senior-couple-walking-in-park-170202596-577bbebe5f9b585875805e62.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "how-iras-work",
+                  "primaryImage" : { },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "rating" : "0",
+                  "linkboxes" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "pages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 315495
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 94.0,
+              "targetNode" : {
+                "docId" : 356293,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Roth vs. Traditional IRAs"
+                },
+                "document" : {
+                  "key" : "4ffc767c1901a836df80c490",
+                  "revisionKey" : "3757b201300d6a14e30152d2",
+                  "authorKey" : "7502",
+                  "url" : "https://www.thebalancemoney.com/traditional-ira-versus-roth-ira-356293",
+                  "rootUrl" : "http://beginnersinvest.about.com/cs/iras/f/tradvsrothira.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1543862707692
+                  },
+                  "dates" : {
+                    "created" : 1073014160000,
+                    "updated" : 1543862707726,
+                    "firstPublished" : 1073014160000,
+                    "lastPublished" : 1543862707692
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Traditional IRA Versus Roth IRA",
+                  "socialTitle" : "Best Bet: Traditional IRA or Roth IRA?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Roth IRA and Traditional IRA accounts each have pros and cons. Understanding each account&#39;s benefits can help you choose which one best fits your needs.",
+                  "heading" : "Traditional IRA Versus Roth IRA",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "7502",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Joshua Kennon",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/joshua-kennon-356025",
+                    "image" : { },
+                    "shortBio" : "Joshua Kennon wrote about personal finance and investing for The Balance, and the author of &#34;The Complete Idiot&#39;s Guide to Investing&#34;."
+                  },
+                  "summary" : {
+                    "title" : "Traditional IRA Versus Roth IRA",
+                    "socialTitle" : "Best Bet: Traditional IRA or Roth IRA?",
+                    "heading" : "Traditional IRA Versus Roth IRA",
+                    "description" : "Roth IRA and Traditional IRA accounts each have pros and cons. Understanding each account&#39;s benefits can help you choose which one best fits your needs.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/beginnersinvest/1/0/H/a/Traditional-IRAs-versus-Roth-IRAs.jpg",
+                      "caption" : "",
+                      "owner" : "Nick M. Do / E&#43; / Getty Images",
+                      "alt" : "Eggs with IRA written on them",
+                      "width" : 4368,
+                      "height" : 2912,
+                      "objectId" : "Traditional-IRAs-versus-Roth-IRAs-57a520763df78cf4597fb212.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "traditional-ira-versus-roth-ira",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/beginnersinvest/1/0/H/a/Traditional-IRAs-versus-Roth-IRAs.jpg",
+                    "caption" : "",
+                    "owner" : "Nick M. Do / E&#43; / Getty Images",
+                    "alt" : "Eggs with IRA written on them",
+                    "width" : 4368,
+                    "height" : 2912,
+                    "objectId" : "Traditional-IRAs-versus-Roth-IRAs-57a520763df78cf4597fb212.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 356293
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 93.0,
+              "targetNode" : {
+                "docId" : 3859079,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Self-Employed Plans"
+                },
+                "document" : {
+                  "key" : "3a56bbab2403904dfe000ff3",
+                  "revisionKey" : "3757b20af7287d15c301446f",
+                  "authorKey" : "147054",
+                  "url" : "https://www.thebalancemoney.com/sep-ira-contribution-limits-and-deadlines-3859079",
+                  "rootUrl" : "http://retireplan.about.com/od/selfemployedplanning/fl/SEP-IRA-Contribution-Limits-and-Deadlines.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1548426693290
+                  },
+                  "dates" : {
+                    "created" : 1455139619000,
+                    "updated" : 1548426693330,
+                    "firstPublished" : 1455140084000,
+                    "lastPublished" : 1548426693290
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "SEP IRA Contribution Limits and Deadlines",
+                  "socialTitle" : "SEP IRA Contribution Limits for 2019",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "SEP IRAs provide high contribution limits for small business owners and self-employed individuals looking to save more for retirement. Learn about the 2019 SEP contribution limits.",
+                  "heading" : "SEP IRA Contribution Limits and Deadlines",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "147054",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Scott Spann",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ {
+                      "network" : "facebook",
+                      "url" : "https://www.facebook.com/FinancialFinesse/"
+                    }, {
+                      "network" : "twitter",
+                      "url" : "https://twitter.com/LifeSpanPlan"
+                    } ],
+                    "bioUrl" : "https://www.thebalancemoney.com/scott-spann-2894124",
+                    "image" : { },
+                    "shortBio" : "Scott Spann is the retirement planning expert for The Balance. Scott is also a Senior Financial Planner and a coach with Financial Finesse."
+                  },
+                  "summary" : {
+                    "title" : "SEP IRA Contribution Limits and Deadlines",
+                    "socialTitle" : "SEP IRA Contribution Limits for 2019",
+                    "heading" : "SEP IRA Contribution Limits and Deadlines",
+                    "description" : "SEP IRAs provide high contribution limits for small business owners and self-employed individuals looking to save more for retirement. Learn about the 2019 SEP contribution limits.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/retireplan/1/0/v/3/-/-/GettyImages-469768787.jpg",
+                      "caption" : "SEP IRAs allow self-employed individuals to save more.",
+                      "owner" : "vgajic/Getty Images",
+                      "alt" : "",
+                      "width" : 1255,
+                      "height" : 837,
+                      "objectId" : "GettyImages-469768787-56bba97e3df78c0b13725589.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "sep-ira-contribution-limits-and-deadlines",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/retireplan/1/0/v/3/-/-/GettyImages-469768787.jpg",
+                    "caption" : "SEP IRAs allow self-employed individuals to save more.",
+                    "owner" : "vgajic/Getty Images",
+                    "alt" : "",
+                    "width" : 1255,
+                    "height" : 837,
+                    "objectId" : "GettyImages-469768787-56bba97e3df78c0b13725589.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 3859079
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 92.0,
+              "targetNode" : {
+                "docId" : 2388807,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "401(k) Withdrawals"
+                },
+                "document" : {
+                  "key" : "4ffd46d01900e84bfa800f43",
+                  "revisionKey" : "3c57b36f6316bca570011947",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/what-age-can-funds-be-withdrawn-from-401k-2388807",
+                  "rootUrl" : "http://moneyover55.about.com/od/preretirementplanning/a/401k-Retirement-Age-55-59-1-2-Or-70-1-2-Different-Rules-Apply.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1541008297787
+                  },
+                  "dates" : {
+                    "created" : 1286760863000,
+                    "updated" : 1541008297815,
+                    "firstPublished" : 1286808128000,
+                    "lastPublished" : 1541008297787
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "At What Age Can I Withdraw Funds From My 401(k) Plan?",
+                  "socialTitle" : "Information You Need About When You Cab Tap Your 401(k) Money",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "The rules on 401(k) withdrawals vary depending on your age. Learn how the age-related rules work.",
+                  "heading" : "When Can I Withdraw Funds from My 401(k) Without Penalties?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "At What Age Can I Withdraw Funds From My 401(k) Plan?",
+                    "socialTitle" : "Information You Need About When You Cab Tap Your 401(k) Money",
+                    "heading" : "When Can I Withdraw Funds from My 401(k) Without Penalties?",
+                    "description" : "The rules on 401(k) withdrawals vary depending on your age. Learn how the age-related rules work.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/gHxl0cOK1GHoalA2iZS2SwmDkQk=/what-age-can-funds-be-withdrawn-from-401k-2388807_FINAL-5b632ba64cedfd0050ac345a.png",
+                      "owner" : "<p>Illustration by Catherine Song. © The Balance, 2018</p>",
+                      "width" : 1500,
+                      "height" : 1000,
+                      "id" : "",
+                      "fileName" : "",
+                      "objectId" : "what-age-can-funds-be-withdrawn-from-401k-2388807_FINAL-5b632ba64cedfd0050ac345a.png"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "what-age-can-funds-be-withdrawn-from-401k",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/gHxl0cOK1GHoalA2iZS2SwmDkQk=/what-age-can-funds-be-withdrawn-from-401k-2388807_FINAL-5b632ba64cedfd0050ac345a.png",
+                    "owner" : "<p>Illustration by Catherine Song. © The Balance, 2018</p>",
+                    "width" : 1500,
+                    "height" : 1000,
+                    "id" : "",
+                    "fileName" : "",
+                    "objectId" : "what-age-can-funds-be-withdrawn-from-401k-2388807_FINAL-5b632ba64cedfd0050ac345a.png"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388807
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            } ]
+          }
+        }
+      }, {
+        "name" : "journey",
+        "weight" : 91.0,
+        "targetNode" : {
+          "docId" : 4163757,
+          "nodeAttributes" : {
+            "nodeType" : "DOCUMENT",
+            "shortHeading" : "Investing"
+          },
+          "document" : {
+            "url" : "https://dummy-programmed-summary-investing-4148466",
+            "rootUrl" : "https://dummy-programmed-summary-investing-4148466",
+            "templateType" : "PROGRAMMEDSUMMARY",
+            "documentState" : {
+              "state" : "ACTIVE",
+              "activeDate" : 1524073873440
+            },
+            "dates" : {
+              "created" : 1524073873449,
+              "updated" : 1547150554478,
+              "lastPublished" : 1524073873440
+            },
+            "socialTitle" : "Investing",
+            "keywords" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "paging" : {
+              "current" : 1,
+              "total" : 1
+            },
+            "summary" : {
+              "socialTitle" : "Investing",
+              "image" : { }
+            },
+            "metaData" : {
+              "hasTableOfContents" : false,
+              "entities" : [ ],
+              "recircKeywords" : {
+                "totalSize" : 0,
+                "list" : [ ]
+              }
+            },
+            "primaryImage" : { },
+            "sources" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "vertical" : "MONEY",
+            "tickers" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "taggedImages" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "docId" : 4163757
+          },
+          "configuration" : { },
+          "relationships" : {
+            "totalSize" : 6,
+            "list" : [ {
+              "name" : "journey",
+              "weight" : 90.0,
+              "targetNode" : {
+                "docId" : 2388568,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Best Retirement Investments"
+                },
+                "document" : {
+                  "key" : "3c54ef90f8189a5d6e0020b4",
+                  "revisionKey" : "3c58e4d98f1f43d9c30124d5",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/best-retirement-investments-2388568",
+                  "rootUrl" : "http://moneyover55.about.com/od/howtoinvest/ss/10-Best-Retirement-Investments.htm",
+                  "templateType" : "LIST",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1548097312235
+                  },
+                  "dates" : {
+                    "created" : 1424986360000,
+                    "updated" : 1548097312286,
+                    "firstPublished" : 1424992529000,
+                    "lastPublished" : 1548097312235
+                  },
+                  "title" : "How to Choose the Best Retirement Investments for Your Portfolio",
+                  "socialTitle" : "Learn What the Best Retirement Investments Are for Your Portfolio",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "metaDescription" : "The best retirement investments are ones that are part of a plan. Here are the 10 best places to put your money and what you need to know about them.",
+                  "description" : "<p>Saving money to fund a comfortable retirement is perhaps the biggest reason people invest. As such, finding the right balance between risk and investment return is key to a successful retirement savings strategy. Here are a few suggestions for ensuring you make the smartest possible decisions with your retirement savings:</p>",
+                  "heading" : "Making Wise Decisions for Your Retirement Investment Portfolio",
+                  "paging" : {
+                    "pattern" : ".%1$02d",
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "How to Choose the Best Retirement Investments for Your Portfolio",
+                    "socialTitle" : "Learn What the Best Retirement Investments Are for Your Portfolio",
+                    "heading" : "Making Wise Decisions for Your Retirement Investment Portfolio",
+                    "description" : "The best retirement investments are ones that are part of a plan. Here are the 10 best places to put your money and what you need to know about them.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/J/H/-/-/GettyImages-137087914.jpg",
+                      "caption" : "",
+                      "owner" : "Getty Images",
+                      "alt" : "An elderly couple review financial statements.",
+                      "width" : 2121,
+                      "height" : 1414,
+                      "objectId" : "GettyImages-137087914-58e4d8375f9b58ef7e208ecd.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "best-retirement-investments",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/moneyover55/1/0/J/H/-/-/GettyImages-137087914.jpg",
+                    "caption" : "",
+                    "owner" : "Getty Images",
+                    "alt" : "An elderly couple review financial statements.",
+                    "width" : 2121,
+                    "height" : 1414,
+                    "objectId" : "GettyImages-137087914-58e4d8375f9b58ef7e208ecd.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "items" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "linkboxes" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "labels" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388568
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 89.0,
+              "targetNode" : {
+                "docId" : 356331,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Dollar-Cost Averaging"
+                },
+                "document" : {
+                  "key" : "4ffc768d19031736df80c304",
+                  "revisionKey" : "325890327b0b0c2c080191f7",
+                  "authorKey" : "7502",
+                  "url" : "https://www.thebalancemoney.com/dollar-cost-averaging-356331",
+                  "rootUrl" : "http://beginnersinvest.about.com/cs/newinvestors/a/041901a.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1529514651765
+                  },
+                  "dates" : {
+                    "created" : 1054227487000,
+                    "updated" : 1530823405915,
+                    "firstPublished" : 1054227487000,
+                    "lastPublished" : 1523273357332
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Dollar Cost Averaging for New Investors",
+                  "socialTitle" : "Dollar Cost Averaging Explained",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Dollar cost averaging is the practice of averaging your returns by regularly investing money, regardless of market conditions or a stock&#39;s price.",
+                  "heading" : "Dollar Cost Averaging for New Investors",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "7502",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Joshua Kennon",
+                    "displayNamePossessive" : "",
+                    "contributingWriter" : false,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/joshua-kennon-356025",
+                    "image" : { },
+                    "shortBio" : "Joshua Kennon wrote about personal finance and investing for The Balance, and the author of &#34;The Complete Idiot&#39;s Guide to Investing&#34;."
+                  },
+                  "summary" : {
+                    "title" : "Dollar Cost Averaging for New Investors",
+                    "socialTitle" : "Dollar Cost Averaging Explained",
+                    "heading" : "Dollar Cost Averaging for New Investors",
+                    "description" : "Dollar cost averaging is the practice of averaging your returns by regularly investing money, regardless of market conditions or a stock&#39;s price.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/beginnersinvest/1/0/u/W/Dollar-Cost-Averaging-Investments.jpg",
+                      "caption" : "",
+                      "owner" : "Cornstock Images / Stockbyte / Getty Images",
+                      "alt" : "Dollar Cost Averaging Your Investments",
+                      "width" : 3867,
+                      "height" : 2578,
+                      "objectId" : "Dollar-Cost-Averaging-Investments-56a093965f9b58eba4b1afcf.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "dollar-cost-averaging",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/beginnersinvest/1/0/u/W/Dollar-Cost-Averaging-Investments.jpg",
+                    "caption" : "",
+                    "owner" : "Cornstock Images / Stockbyte / Getty Images",
+                    "alt" : "Dollar Cost Averaging Your Investments",
+                    "width" : 3867,
+                    "height" : 2578,
+                    "objectId" : "Dollar-Cost-Averaging-Investments-56a093965f9b58eba4b1afcf.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 356331
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 88.0,
+              "targetNode" : {
+                "docId" : 2388518,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Asset Allocation: Stocks vs. Bonds"
+                },
+                "document" : {
+                  "key" : "4ffd46cc1900954bfa800a1d",
+                  "revisionKey" : "3c58af753e384538690123f3",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/how-much-of-my-money-should-be-in-stocks-vs-bonds-2388518",
+                  "rootUrl" : "http://moneyover55.about.com/od/howtoinvest/a/allstocksbonds.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1542666384389
+                  },
+                  "dates" : {
+                    "created" : 1220202163000,
+                    "updated" : 1542666384427,
+                    "firstPublished" : 1220202163000,
+                    "lastPublished" : 1542666384389
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "How Much of Your Money Should Be in Stocks vs. Bonds",
+                  "socialTitle" : "Here Are 4 Ways to Divide Your Money Between Stocks and Bonds",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Should you invest more in stocks or bonds? Here are four ways to see what rate of return and risk-level you can expect from a higher stock allocation.",
+                  "heading" : "How Much of Your Money Should Be in Stocks vs. Bonds",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "How Much of Your Money Should Be in Stocks vs. Bonds",
+                    "socialTitle" : "Here Are 4 Ways to Divide Your Money Between Stocks and Bonds",
+                    "heading" : "How Much of Your Money Should Be in Stocks vs. Bonds",
+                    "description" : "Should you invest more in stocks or bonds? Here are four ways to see what rate of return and risk-level you can expect from a higher stock allocation.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/2/3/-/-/478826961_BueroMonaco_Taxi_GettyImages_StocksBonds.jpg",
+                      "caption" : "",
+                      "owner" : "Buero Monaco / Taxi / Getty Images",
+                      "alt" : "Man looking at pie charts on a tablet",
+                      "width" : 3870,
+                      "height" : 2575,
+                      "objectId" : "478826961_BueroMonaco_Taxi_GettyImages_StocksBonds-56a635cb3df78cf7728bd886.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "how-much-of-my-money-should-be-in-stocks-vs-bonds",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/moneyover55/1/0/2/3/-/-/478826961_BueroMonaco_Taxi_GettyImages_StocksBonds.jpg",
+                    "caption" : "",
+                    "owner" : "Buero Monaco / Taxi / Getty Images",
+                    "alt" : "Man looking at pie charts on a tablet",
+                    "width" : 3870,
+                    "height" : 2575,
+                    "objectId" : "478826961_BueroMonaco_Taxi_GettyImages_StocksBonds-56a635cb3df78cf7728bd886.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388518
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 87.0,
+              "targetNode" : {
+                "docId" : 2388458,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "What's a Good Return?"
+                },
+                "document" : {
+                  "key" : "bc50fc37e40000dd9400155b",
+                  "revisionKey" : "3c5848a22b2da1267e012267",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/what-is-a-good-return-on-investment-2388458",
+                  "rootUrl" : "http://moneyover55.about.com/od/getbetteratinvesting/a/What-Is-A-Good-Return-On-Investment.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1544722407776
+                  },
+                  "dates" : {
+                    "created" : 1358706659000,
+                    "updated" : 1544722407806,
+                    "firstPublished" : 1358706677000,
+                    "lastPublished" : 1544722407776
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "What's a Good Return on Investment?",
+                  "socialTitle" : "Keep Reality in Mind When Looking for a Good Return on Your Investment",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Where do you find a good return on your investment? It is harder than you might think. Here&#39;s why—and how to figure out what is realistic.",
+                  "heading" : "What Is a Good Return on Investment?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "What's a Good Return on Investment?",
+                    "socialTitle" : "Keep Reality in Mind When Looking for a Good Return on Your Investment",
+                    "heading" : "What Is a Good Return on Investment?",
+                    "description" : "Where do you find a good return on your investment? It is harder than you might think. Here&#39;s why—and how to figure out what is realistic.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/c/D/-/-/GettyImages-94257083.jpg",
+                      "caption" : "Like growing a tree, getting a good return on your investment takes time",
+                      "owner" : "Andy Baker/Getty Images",
+                      "alt" : "Big and little apple tree as an example of a good return on your investment.",
+                      "width" : 2225,
+                      "height" : 1347,
+                      "objectId" : "GettyImages-94257083-578f0ea23df78c09e9cec214.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "what-is-a-good-return-on-investment",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/moneyover55/1/0/c/D/-/-/GettyImages-94257083.jpg",
+                    "caption" : "Like growing a tree, getting a good return on your investment takes time",
+                    "owner" : "Andy Baker/Getty Images",
+                    "alt" : "Big and little apple tree as an example of a good return on your investment.",
+                    "width" : 2225,
+                    "height" : 1347,
+                    "objectId" : "GettyImages-94257083-578f0ea23df78c09e9cec214.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388458
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 86.0,
+              "targetNode" : {
+                "docId" : 2388760,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Real Estate Investing"
+                },
+                "document" : {
+                  "key" : "bc50d5d9c40009ceb3801529",
+                  "revisionKey" : "395811e50a7066b21701206b",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/is-real-estate-a-good-investment-for-retirement-2388760",
+                  "rootUrl" : "http://moneyover55.about.com/od/owningrealestate/a/Is-Real-Estate-A-Good-Investment-For-Retirement.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1540248818165
+                  },
+                  "dates" : {
+                    "created" : 1356192176000,
+                    "updated" : 1540248818190,
+                    "firstPublished" : 1356192197000,
+                    "lastPublished" : 1540248818165
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Is Real Estate a Good Investment for Retirement?",
+                  "socialTitle" : "Is Real Estate a Good Retirement Investment?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Real estate can be not only a good investment; it can be a great investment. But is it a good choice for your retirement income?",
+                  "heading" : "Is Real Estate a Good Investment for Retirement?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "Is Real Estate a Good Investment for Retirement?",
+                    "socialTitle" : "Is Real Estate a Good Retirement Investment?",
+                    "heading" : "Is Real Estate a Good Investment for Retirement?",
+                    "description" : "Real estate can be not only a good investment; it can be a great investment. But is it a good choice for your retirement income?",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/DIsfuy_D3IMT9OEi5fhB2X8_t3c=/about/sunny-house-and-yard-500797715-59ab60660d327a00119b8b15.jpg",
+                      "owner" : "Caiaimage/Paul Bradbury / Getty Images",
+                      "alt" : "Sunny house and yard",
+                      "width" : 3865,
+                      "height" : 2576,
+                      "objectId" : "sunny-house-and-yard-500797715-59ab60660d327a00119b8b15.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "is-real-estate-a-good-investment-for-retirement",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/DIsfuy_D3IMT9OEi5fhB2X8_t3c=/about/sunny-house-and-yard-500797715-59ab60660d327a00119b8b15.jpg",
+                    "owner" : "Caiaimage/Paul Bradbury / Getty Images",
+                    "alt" : "Sunny house and yard",
+                    "width" : 3865,
+                    "height" : 2576,
+                    "objectId" : "sunny-house-and-yard-500797715-59ab60660d327a00119b8b15.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388760
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 85.0,
+              "targetNode" : {
+                "docId" : 2388551,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Safe Investments"
+                },
+                "document" : {
+                  "key" : "4ffd46ca1900774bfa800a40",
+                  "revisionKey" : "3c57b2155906bba5700110ff",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/making-safe-investments-2388551",
+                  "rootUrl" : "http://moneyover55.about.com/od/howtoinvest/a/safeinvesting.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1545243802685
+                  },
+                  "dates" : {
+                    "created" : 1215562467000,
+                    "updated" : 1545243802711,
+                    "firstPublished" : 1215562467000,
+                    "lastPublished" : 1545243802685
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "How to Use Safe Investments for Retirement",
+                  "socialTitle" : "6 Ways to Keep Your Nest Egg Safe",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Want to keep your nest egg safe? These six guidelines show you how to effectively evaluate and use safe investment choices for retirement.",
+                  "heading" : "How to Use Safe Investments for Retirement",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "How to Use Safe Investments for Retirement",
+                    "socialTitle" : "6 Ways to Keep Your Nest Egg Safe",
+                    "heading" : "How to Use Safe Investments for Retirement",
+                    "description" : "Want to keep your nest egg safe? These six guidelines show you how to effectively evaluate and use safe investment choices for retirement.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/A/3/-/-/138585132-F.jpg",
+                      "caption" : "Can you money be too safe? Sometimes, it can.",
+                      "owner" : "Adrianna Williams/ Stone/ Getty images",
+                      "alt" : "Bank Vault Door",
+                      "width" : 1280,
+                      "height" : 960,
+                      "objectId" : "138585132-F-56a635d85f9b58b7d0e06b87.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "making-safe-investments",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/moneyover55/1/0/A/3/-/-/138585132-F.jpg",
+                    "caption" : "Can you money be too safe? Sometimes, it can.",
+                    "owner" : "Adrianna Williams/ Stone/ Getty images",
+                    "alt" : "Bank Vault Door",
+                    "width" : 1280,
+                    "height" : 960,
+                    "objectId" : "138585132-F-56a635d85f9b58b7d0e06b87.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388551
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            } ]
+          }
+        }
+      }, {
+        "name" : "journey",
+        "weight" : 84.0,
+        "targetNode" : {
+          "docId" : 4163758,
+          "nodeAttributes" : {
+            "nodeType" : "DOCUMENT",
+            "shortHeading" : "Pensions & Annuities"
+          },
+          "document" : {
+            "url" : "https://dummy-programmed-summary-pensions-and-annuities-4148466",
+            "rootUrl" : "https://dummy-programmed-summary-pensions-and-annuities-4148466",
+            "templateType" : "PROGRAMMEDSUMMARY",
+            "documentState" : {
+              "state" : "ACTIVE",
+              "activeDate" : 1524073885049
+            },
+            "dates" : {
+              "created" : 1524073885056,
+              "updated" : 1547150638099,
+              "lastPublished" : 1524073885049
+            },
+            "socialTitle" : "Pensions & Annuities",
+            "keywords" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "paging" : {
+              "current" : 1,
+              "total" : 1
+            },
+            "summary" : {
+              "socialTitle" : "Pensions & Annuities",
+              "image" : { }
+            },
+            "metaData" : {
+              "hasTableOfContents" : false,
+              "entities" : [ ],
+              "recircKeywords" : {
+                "totalSize" : 0,
+                "list" : [ ]
+              }
+            },
+            "primaryImage" : { },
+            "sources" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "vertical" : "MONEY",
+            "tickers" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "taggedImages" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "docId" : 4163758
+          },
+          "configuration" : { },
+          "relationships" : {
+            "totalSize" : 5,
+            "list" : [ {
+              "name" : "journey",
+              "weight" : 83.0,
+              "targetNode" : {
+                "docId" : 2389015,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Are Annuities Right for You?"
+                },
+                "document" : {
+                  "key" : "bc50d5f49a000bf14580152c",
+                  "revisionKey" : "3c581615e730b510fb0120af",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/are-annuities-a-good-investment-2389015",
+                  "rootUrl" : "http://moneyover55.about.com/od/understandingannuities/a/Are-Annuities-A-Good-Investment.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1541307709076
+                  },
+                  "dates" : {
+                    "created" : 1356199013000,
+                    "updated" : 1541307709107,
+                    "firstPublished" : 1356199066000,
+                    "lastPublished" : 1541307709076
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "When Are Annuities a Good Investment?",
+                  "socialTitle" : "What to Know About Investing in Annuities",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Are annuities a good or bad investment? In the right situation, they&#39;re great, but you need to know when that situation occurs.",
+                  "heading" : "When Are Annuities a Good Investment?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "When Are Annuities a Good Investment?",
+                    "socialTitle" : "What to Know About Investing in Annuities",
+                    "heading" : "When Are Annuities a Good Investment?",
+                    "description" : "Are annuities a good or bad investment? In the right situation, they&#39;re great, but you need to know when that situation occurs.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/zz9LMn_MzhLbu3n5i3o92i48MNk=/about/couple-talking-to-financial-advisor-in-living-room-490637111-59a336c66f53ba0011a1f1b6.jpg",
+                      "owner" : "Hero Images/Getty Images",
+                      "alt" : "A couple talking to financial advisor in living room",
+                      "width" : 5760,
+                      "height" : 3840,
+                      "objectId" : "couple-talking-to-financial-advisor-in-living-room-490637111-59a336c66f53ba0011a1f1b6.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "are-annuities-a-good-investment",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/zz9LMn_MzhLbu3n5i3o92i48MNk=/about/couple-talking-to-financial-advisor-in-living-room-490637111-59a336c66f53ba0011a1f1b6.jpg",
+                    "owner" : "Hero Images/Getty Images",
+                    "alt" : "A couple talking to financial advisor in living room",
+                    "width" : 5760,
+                    "height" : 3840,
+                    "objectId" : "couple-talking-to-financial-advisor-in-living-room-490637111-59a336c66f53ba0011a1f1b6.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2389015
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 82.0,
+              "targetNode" : {
+                "docId" : 2389021,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Fixed Annuities"
+                },
+                "document" : {
+                  "key" : "4ffd46c619002c4bfa800a96",
+                  "revisionKey" : "3c58db0c5c0b481b4401245a",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/how-does-a-fixed-annuity-fit-your-retirement-plan-2389021",
+                  "rootUrl" : "http://moneyover55.about.com/od/understandingannuities/a/fixedannuity.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1541294496120
+                  },
+                  "dates" : {
+                    "created" : 1214163201000,
+                    "updated" : 1541294496152,
+                    "firstPublished" : 1214163201000,
+                    "lastPublished" : 1541294496120
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "How a Fixed Annuity Fits a Retirement Plan",
+                  "socialTitle" : "Look at How a Fixed Annuity Fits a Retirement Plan",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "A fixed annuity provides a guaranteed interest rate. This no-risk investment can fit into your retirement plan in a few ways. Here&#39;s how they work.",
+                  "heading" : "How a Fixed Annuity Fits a Retirement Plan",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "How a Fixed Annuity Fits a Retirement Plan",
+                    "socialTitle" : "Look at How a Fixed Annuity Fits a Retirement Plan",
+                    "heading" : "How a Fixed Annuity Fits a Retirement Plan",
+                    "description" : "A fixed annuity provides a guaranteed interest rate. This no-risk investment can fit into your retirement plan in a few ways. Here&#39;s how they work.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/viP_FFBKXyvAQFOIzev_K-UzfSA=/GettyImages-907936480-5ba8fe7846e0fb005765976c.jpeg",
+                      "owner" : "<p>Daqiao Photography / Getty Images </p>",
+                      "alt" : "Older woman sits on a park bench in the fall",
+                      "width" : 2121,
+                      "height" : 1414,
+                      "objectId" : "GettyImages-907936480-5ba8fe7846e0fb005765976c.jpeg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "how-does-a-fixed-annuity-fit-your-retirement-plan",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/viP_FFBKXyvAQFOIzev_K-UzfSA=/GettyImages-907936480-5ba8fe7846e0fb005765976c.jpeg",
+                    "owner" : "<p>Daqiao Photography / Getty Images </p>",
+                    "alt" : "Older woman sits on a park bench in the fall",
+                    "width" : 2121,
+                    "height" : 1414,
+                    "objectId" : "GettyImages-907936480-5ba8fe7846e0fb005765976c.jpeg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2389021
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 81.0,
+              "targetNode" : {
+                "docId" : 2388544,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Using Annuities in Your Plan"
+                },
+                "document" : {
+                  "key" : "4ffd46c519001e4bfa800b0c",
+                  "revisionKey" : "3c57edabf6015e5c4b011d76",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/retirement-asset-allocation-2388544",
+                  "rootUrl" : "http://moneyover55.about.com/od/howtoinvest/a/maximizinglifetimeincome.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1545942198828
+                  },
+                  "dates" : {
+                    "created" : 1258258674000,
+                    "updated" : 1545942198856,
+                    "firstPublished" : 1258258676000,
+                    "lastPublished" : 1545942198828
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Should My Retirement Asset Allocation Include Annuities?",
+                  "socialTitle" : "Should My Retirement Asset Allocation Include Annuities?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "New research shows how a retirement asset allocation that incorporates annuities can maximize lifetime income and reduce the risk of running out of cash.",
+                  "heading" : "Should My Retirement Asset Allocation Include Annuities?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "Should My Retirement Asset Allocation Include Annuities?",
+                    "socialTitle" : "Should My Retirement Asset Allocation Include Annuities?",
+                    "heading" : "Should My Retirement Asset Allocation Include Annuities?",
+                    "description" : "New research shows how a retirement asset allocation that incorporates annuities can maximize lifetime income and reduce the risk of running out of cash.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/JqD6dDcc3sVU6-v8xS4u3Q7kWao=/GettyImages-691048981-5c18061e46e0fb00013b2ea4.jpg",
+                      "owner" : "<p>Westend61 / Getty Images</p>",
+                      "alt" : "Couple on a Boat Trip at Sunset",
+                      "width" : 1500,
+                      "height" : 1001,
+                      "id" : "",
+                      "fileName" : "",
+                      "objectId" : "GettyImages-691048981-5c18061e46e0fb00013b2ea4.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "retirement-asset-allocation",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/JqD6dDcc3sVU6-v8xS4u3Q7kWao=/GettyImages-691048981-5c18061e46e0fb00013b2ea4.jpg",
+                    "owner" : "<p>Westend61 / Getty Images</p>",
+                    "alt" : "Couple on a Boat Trip at Sunset",
+                    "width" : 1500,
+                    "height" : 1001,
+                    "id" : "",
+                    "fileName" : "",
+                    "objectId" : "GettyImages-691048981-5c18061e46e0fb00013b2ea4.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388544
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 80.0,
+              "targetNode" : {
+                "docId" : 2388766,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "How Pensions Work"
+                },
+                "document" : {
+                  "key" : "bc50a05dbe0001c3828014f7",
+                  "revisionKey" : "3c58c9da11238e3849012427",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/what-is-a-pension-and-how-do-you-get-one-2388766",
+                  "rootUrl" : "http://moneyover55.about.com/od/pensions/a/What-Is-A-Pension.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1548610350100
+                  },
+                  "dates" : {
+                    "created" : 1352686986000,
+                    "updated" : 1548610350130,
+                    "firstPublished" : 1352687038000,
+                    "lastPublished" : 1548610350100
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "What is a Pension and How Do You Get One?",
+                  "socialTitle" : "What is a Pension Plan?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "The purpose of a pension is to provide guaranteed income in retirement. Here&#39;s a guide to how pension income plans work and how you can get one.",
+                  "heading" : "What is a Pension and How Do You Get One?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "What is a Pension and How Do You Get One?",
+                    "socialTitle" : "What is a Pension Plan?",
+                    "heading" : "What is a Pension and How Do You Get One?",
+                    "description" : "The purpose of a pension is to provide guaranteed income in retirement. Here&#39;s a guide to how pension income plans work and how you can get one.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/V2OzCT_wqSjHIfR6Tf229fnh26A=/GettyImages-673457476-5b9575c0c9e77c0082ea3e8a.jpg",
+                      "owner" : "<p>Peter Cade/Getty Images </p>",
+                      "alt" : "Older couple sat at home looking at laptop",
+                      "width" : 2121,
+                      "height" : 1414,
+                      "id" : "",
+                      "fileName" : "",
+                      "objectId" : "GettyImages-673457476-5b9575c0c9e77c0082ea3e8a.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "what-is-a-pension-and-how-do-you-get-one",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/V2OzCT_wqSjHIfR6Tf229fnh26A=/GettyImages-673457476-5b9575c0c9e77c0082ea3e8a.jpg",
+                    "owner" : "<p>Peter Cade/Getty Images </p>",
+                    "alt" : "Older couple sat at home looking at laptop",
+                    "width" : 2121,
+                    "height" : 1414,
+                    "id" : "",
+                    "fileName" : "",
+                    "objectId" : "GettyImages-673457476-5b9575c0c9e77c0082ea3e8a.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388766
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 79.0,
+              "targetNode" : {
+                "docId" : 2388767,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "When to Start Your Pension"
+                },
+                "document" : {
+                  "key" : "3c5220e8f200002c54001636",
+                  "revisionKey" : "3c57e1c7db2c5f9334011d1d",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/when-to-start-your-pension-2388767",
+                  "rootUrl" : "http://moneyover55.about.com/od/pensions/a/When-To-Start-Your-Pension.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1546538819885
+                  },
+                  "dates" : {
+                    "created" : 1377888498000,
+                    "updated" : 1546538819913,
+                    "firstPublished" : 1377888528000,
+                    "lastPublished" : 1546538819885
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Find Out What Age to Begin Your Pension Income",
+                  "socialTitle" : "Find Out What Age to Begin Your Pension Income and Reduce Risk of Loss",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "How to analyze options to decide if you should take your pension early. The right choice helps reduce the risk of running out of money.",
+                  "heading" : "Find Out What Age to Begin Your Pension Income",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "Find Out What Age to Begin Your Pension Income",
+                    "socialTitle" : "Find Out What Age to Begin Your Pension Income and Reduce Risk of Loss",
+                    "heading" : "Find Out What Age to Begin Your Pension Income",
+                    "description" : "How to analyze options to decide if you should take your pension early. The right choice helps reduce the risk of running out of money.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/1/F/-/-/GettyImages-478545993.jpg",
+                      "caption" : "",
+                      "owner" : "Tara Moore/Getty Images",
+                      "alt" : "Couple deciding when to start a pension",
+                      "width" : 2120,
+                      "height" : 1414,
+                      "objectId" : "GettyImages-478545993-57db0fb93df78c9ccef1935d.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "when-to-start-your-pension",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/moneyover55/1/0/1/F/-/-/GettyImages-478545993.jpg",
+                    "caption" : "",
+                    "owner" : "Tara Moore/Getty Images",
+                    "alt" : "Couple deciding when to start a pension",
+                    "width" : 2120,
+                    "height" : 1414,
+                    "objectId" : "GettyImages-478545993-57db0fb93df78c9ccef1935d.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388767
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            } ]
+          }
+        }
+      }, {
+        "name" : "journey",
+        "weight" : 78.0,
+        "targetNode" : {
+          "docId" : 4163759,
+          "nodeAttributes" : {
+            "nodeType" : "DOCUMENT",
+            "shortHeading" : "Income Planning"
+          },
+          "document" : {
+            "url" : "https://dummy-programmed-summary-income-planning-4148466",
+            "rootUrl" : "https://dummy-programmed-summary-income-planning-4148466",
+            "templateType" : "PROGRAMMEDSUMMARY",
+            "documentState" : {
+              "state" : "ACTIVE",
+              "activeDate" : 1524073895026
+            },
+            "dates" : {
+              "created" : 1524073895033,
+              "updated" : 1547150709040,
+              "lastPublished" : 1524073895026
+            },
+            "socialTitle" : "Income Planning",
+            "keywords" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "paging" : {
+              "current" : 1,
+              "total" : 1
+            },
+            "summary" : {
+              "socialTitle" : "Income Planning",
+              "image" : { }
+            },
+            "metaData" : {
+              "hasTableOfContents" : false,
+              "entities" : [ ],
+              "recircKeywords" : {
+                "totalSize" : 0,
+                "list" : [ ]
+              }
+            },
+            "primaryImage" : { },
+            "sources" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "vertical" : "MONEY",
+            "tickers" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "taggedImages" : {
+              "totalSize" : 0,
+              "list" : [ ]
+            },
+            "docId" : 4163759
+          },
+          "configuration" : { },
+          "relationships" : {
+            "totalSize" : 6,
+            "list" : [ {
+              "name" : "journey",
+              "weight" : 77.0,
+              "targetNode" : {
+                "docId" : 4126471,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Your Income Needs"
+                },
+                "document" : {
+                  "key" : "3b58922236166e913400209e",
+                  "revisionKey" : "3b5892334f16f4913400eca0",
+                  "authorKey" : "154100",
+                  "url" : "https://www.thebalancemoney.com/plan-your-retirement-income-needs-4126471",
+                  "rootUrl" : "https://www.thebalancemoney.com/plan-your-retirement-income-needs-4126471",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1529517213784
+                  },
+                  "dates" : {
+                    "created" : 1485972019000,
+                    "updated" : 1530823874015,
+                    "firstPublished" : 1485976179000,
+                    "lastPublished" : 1509942719746
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "How to Plan for Your Retirement Income Needs",
+                  "socialTitle" : "Your Retirement Income Needs Are More Complicated Than You Think",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "From long-term care to shifting spending patterns, there&#39;s a lot to account for when planning for your income needs in retirement.",
+                  "heading" : "Your Retirement Income Needs Are More Complicated Than You Think",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "154100",
+                    "type" : "AUTHOR",
+                    "status" : "LIVE",
+                    "displayName" : "Jean Chatzky",
+                    "displayNamePossessive" : "Jean's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1472428800000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ {
+                      "network" : "facebook",
+                      "url" : "https://www.facebook.com/JeanChatzky/"
+                    }, {
+                      "network" : "twitter",
+                      "url" : "https://twitter.com/JeanChatzky"
+                    } ],
+                    "bioUrl" : "https://www.thebalancemoney.com/jean-chatzky-4082962",
+                    "image" : { },
+                    "shortBio" : "Jean Chatzky is NBC TODAY&#39;s financial editor, an award-winning personal finance journalist, AARP&#39;s personal finance ambassador and a best-selling author."
+                  },
+                  "summary" : {
+                    "title" : "How to Plan for Your Retirement Income Needs",
+                    "socialTitle" : "Your Retirement Income Needs Are More Complicated Than You Think",
+                    "heading" : "Your Retirement Income Needs Are More Complicated Than You Think",
+                    "description" : "From long-term care to shifting spending patterns, there&#39;s a lot to account for when planning for your income needs in retirement.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/financecareers/1/0/u/3/-/-/GettyImages-103924597.jpg",
+                      "caption" : "",
+                      "owner" : "Getty Images",
+                      "alt" : "",
+                      "width" : 2123,
+                      "height" : 1412,
+                      "objectId" : "GettyImages-103924597-58922efa5f9b5874eec258ed.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "plan-your-retirement-income-needs",
+                  "primaryImage" : {
+                    "url" : "http://0.tqn.com/d/financecareers/1/0/u/3/-/-/GettyImages-103924597.jpg",
+                    "caption" : "",
+                    "owner" : "Getty Images",
+                    "alt" : "",
+                    "width" : 2123,
+                    "height" : 1412,
+                    "objectId" : "GettyImages-103924597-58922efa5f9b5874eec258ed.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 4126471
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 76.0,
+              "targetNode" : {
+                "docId" : 2388685,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Withdrawal Rates"
+                },
+                "document" : {
+                  "key" : "4ffd46d819016c4bfa800ba0",
+                  "revisionKey" : "3c58265795195d53cb012152",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/withdrawal-rate-retirement-planning-2388685",
+                  "rootUrl" : "http://moneyover55.about.com/od/investmentincome/g/withdrawalratedefinition.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1550850924818
+                  },
+                  "dates" : {
+                    "created" : 1262726687000,
+                    "updated" : 1550850924845,
+                    "firstPublished" : 1262726689000,
+                    "lastPublished" : 1550850924818
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "What Is a Safe Withdrawal Rate in My Retirement Years?",
+                  "socialTitle" : "What Is a Safe Withdrawal Rate in My Retirement Years?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "A withdrawal rate is a calculation that measures how long your money may last in retirement, helping you to plan for your future.",
+                  "heading" : "Your Withdrawal Rate and Retirement Planning",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "What Is a Safe Withdrawal Rate in My Retirement Years?",
+                    "socialTitle" : "What Is a Safe Withdrawal Rate in My Retirement Years?",
+                    "heading" : "Your Withdrawal Rate and Retirement Planning",
+                    "description" : "A withdrawal rate is a calculation that measures how long your money may last in retirement, helping you to plan for your future.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/RU7MakBUV7RhhtXwbaDC_bFfwCc=/creative-woman-working-in-industrial-office-space--945668226-5b48a72d46e0fb003730a96e.jpg",
+                      "owner" : "Ezra Bailey / Getty Images",
+                      "alt" : "Retired woman with tablet",
+                      "width" : 5642,
+                      "height" : 3761,
+                      "objectId" : "creative-woman-working-in-industrial-office-space--945668226-5b48a72d46e0fb003730a96e.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "withdrawal-rate-retirement-planning",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/RU7MakBUV7RhhtXwbaDC_bFfwCc=/creative-woman-working-in-industrial-office-space--945668226-5b48a72d46e0fb003730a96e.jpg",
+                    "owner" : "Ezra Bailey / Getty Images",
+                    "alt" : "Retired woman with tablet",
+                    "width" : 5642,
+                    "height" : 3761,
+                    "objectId" : "creative-woman-working-in-industrial-office-space--945668226-5b48a72d46e0fb003730a96e.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388685
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 75.0,
+              "targetNode" : {
+                "docId" : 2388891,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Generating Income"
+                },
+                "document" : {
+                  "key" : "3c564dbe8cd935e51b002287",
+                  "revisionKey" : "3c58e233d5000ad9c301249e",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/ways-to-generate-retirement-income-2388891",
+                  "rootUrl" : "http://moneyover55.about.com/od/retirementinvestments/ss/9-Ways-To-Generate-Retirement-Income.htm",
+                  "templateType" : "LIST",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1524081314408
+                  },
+                  "dates" : {
+                    "created" : 1447935628000,
+                    "updated" : 1518798724583,
+                    "firstPublished" : 1448411428000,
+                    "lastPublished" : 1518798724583
+                  },
+                  "title" : "How to Generate Retirement Income",
+                  "socialTitle" : "9 Ways to Generate Retirement Income",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "metaDescription" : "Are you getting closer to retirement? Here is a list of retirement income strategies to mix and match to create the cash flow you&#39;ll need.",
+                  "heading" : "9 Ways to Generate Retirement Income",
+                  "paging" : {
+                    "pattern" : ".%1$02d",
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "How to Generate Retirement Income",
+                    "socialTitle" : "9 Ways to Generate Retirement Income",
+                    "heading" : "9 Ways to Generate Retirement Income",
+                    "description" : "Are you getting closer to retirement? Here is a list of retirement income strategies to mix and match to create the cash flow you&#39;ll need.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/M/9/-/-/GettyImages-152829623.jpg",
+                      "caption" : "",
+                      "owner" : "Rowan Allan/Cultura/Getty Images",
+                      "alt" : "Older couple looking at tablet in kitchen",
+                      "width" : 2001,
+                      "height" : 1501,
+                      "objectId" : "GettyImages-152829623-565c876e5f9b5835e4756bee.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "ways-to-generate-retirement-income",
+                  "primaryImage" : { },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "items" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "linkboxes" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "labels" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388891
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 74.0,
+              "targetNode" : {
+                "docId" : 2388688,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Income Funds"
+                },
+                "document" : {
+                  "key" : "5009999578002305fa8005f9",
+                  "revisionKey" : "3c58264dde184c53cb01214c",
+                  "authorKey" : "45901",
+                  "ownerKey" : "22700",
+                  "url" : "https://www.thebalancemoney.com/retirement-income-fund-reviews-2388688",
+                  "rootUrl" : "http://moneyover55.about.com/od/investmentincome/tp/retirementincomefunds.htm",
+                  "templateType" : "LIST",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1553126834776
+                  },
+                  "dates" : {
+                    "created" : 1244606845000,
+                    "updated" : 1553126834854,
+                    "firstPublished" : 1244638184000,
+                    "lastPublished" : 1553126834776
+                  },
+                  "title" : "4 Retirement Income Funds And How They Work",
+                  "socialTitle" : "Retirement Income Funds - How They Work",
+                  "keywords" : {
+                    "totalSize" : 1,
+                    "list" : [ "retirement income funds" ]
+                  },
+                  "metaDescription" : "Retirement income funds provide an all-in-one investment solution for monthly retirement income. Here are four such funds to consider.",
+                  "description" : "<p>Retirement income funds are actively managed to be able to pay regular retirement income. They provide a great, all-in-one investment management solution, and offer more flexibility (but less guarantees) than annuities.</p><p>Four fund companies have come out with their version of a retirement income fund: Vanguard, Schwab, Fidelity and John Hancock. Additional details on each are below.</p><p>Each fund manages a portfolio of other funds, changing the allocation to meet the funds&#39; stated objectives. None of the funds provide guarantees, which means, you should expect your investment income and asset prices to fluctuate in value.</p>",
+                  "heading" : "Retirement Income Funds Offer Flexibility and Professional Management",
+                  "paging" : {
+                    "pattern" : ".%1$02d",
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "4 Retirement Income Funds And How They Work",
+                    "socialTitle" : "Retirement Income Funds - How They Work",
+                    "heading" : "Retirement Income Funds Offer Flexibility and Professional Management",
+                    "description" : "Retirement income funds provide an all-in-one investment solution for monthly retirement income. Here are four such funds to consider.",
+                    "image" : {
+                      "url" : "http://0.tqn.com/d/moneyover55/1/0/u/6/-/-/GettyImages-82255565.jpg",
+                      "caption" : "Retirement income funds provide monthly checks",
+                      "owner" : "PhotoAlto / Alix Minde / Getty Images",
+                      "alt" : "Man holding check.",
+                      "width" : 2121,
+                      "height" : 1416,
+                      "objectId" : "GettyImages-82255565-56a6369b3df78cf7728bdb01.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "retirement-income-fund-reviews",
+                  "primaryImage" : { },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "items" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "linkboxes" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "labels" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388688
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 73.0,
+              "targetNode" : {
+                "docId" : 453995,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Your Retirement Number"
+                },
+                "document" : {
+                  "key" : "af50f71bc40000ff8c0002c0",
+                  "revisionKey" : "39581221b48fd9b2170050af",
+                  "authorKey" : "99254",
+                  "url" : "https://www.thebalancemoney.com/what-s-your-retirement-number-453995",
+                  "rootUrl" : "http://budgeting.about.com/od/retirement_budget/a/Whats-Your-Retirement-Number.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1552402825000
+                  },
+                  "dates" : {
+                    "created" : 1358371780000,
+                    "updated" : 1552402825033,
+                    "firstPublished" : 1358371783000,
+                    "lastPublished" : 1552402825000
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "What Is Your Retirement Number?",
+                  "socialTitle" : "How Much Will You Need to Withdraw From Your Retirement Portfolio?",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "How much do you need to save for retirement? The answer depends on your expected annual expenses and sources of income.",
+                  "heading" : "What Is Your Retirement Number?",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "99254",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Paula Pant",
+                    "displayNamePossessive" : "Paula's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1319068800000,
+                    "terminationDate" : 1494979200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/paula-pant-personal-finance-expert-453563",
+                    "image" : { },
+                    "shortBio" : "Paula Pant wrote about budgeting and personal finance for The Balance, and is an award-winning writer and speaker."
+                  },
+                  "summary" : {
+                    "title" : "What Is Your Retirement Number?",
+                    "socialTitle" : "How Much Will You Need to Withdraw From Your Retirement Portfolio?",
+                    "heading" : "What Is Your Retirement Number?",
+                    "description" : "How much do you need to save for retirement? The answer depends on your expected annual expenses and sources of income.",
+                    "image" : {
+                      "url" : "https://fthmb.tqn.com/rSpwpSjiyX4OIobqTKfmyOzDuww=/GettyImages-483598785-5a1baf584e46ba001a202161.jpg",
+                      "caption" : "",
+                      "owner" : "Sam Edwards/Caiaimages/Getty Images",
+                      "alt" : "A senior man with newspaper using laptop",
+                      "width" : 2121,
+                      "height" : 1414,
+                      "objectId" : "GettyImages-483598785-5a1baf584e46ba001a202161.jpg"
+                    }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "what-s-your-retirement-number",
+                  "primaryImage" : {
+                    "url" : "https://fthmb.tqn.com/rSpwpSjiyX4OIobqTKfmyOzDuww=/GettyImages-483598785-5a1baf584e46ba001a202161.jpg",
+                    "caption" : "",
+                    "owner" : "Sam Edwards/Caiaimages/Getty Images",
+                    "alt" : "A senior man with newspaper using laptop",
+                    "width" : 2121,
+                    "height" : 1414,
+                    "objectId" : "GettyImages-483598785-5a1baf584e46ba001a202161.jpg"
+                  },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 453995
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            }, {
+              "name" : "journey",
+              "weight" : 72.0,
+              "targetNode" : {
+                "docId" : 2388987,
+                "nodeAttributes" : {
+                  "nodeType" : "DOCUMENT",
+                  "shortHeading" : "Taxes in Retirement"
+                },
+                "document" : {
+                  "key" : "4ffd46c51900234bfa800aef",
+                  "revisionKey" : "3c58af7a5b386638690123f4",
+                  "authorKey" : "45901",
+                  "url" : "https://www.thebalancemoney.com/taxes-in-retirement-how-much-will-you-pay-2388987",
+                  "rootUrl" : "http://moneyover55.about.com/od/taxtips/a/retirementtaxes.htm",
+                  "templateType" : "STRUCTUREDCONTENT",
+                  "documentState" : {
+                    "state" : "ACTIVE",
+                    "activeDate" : 1540993265117
+                  },
+                  "dates" : {
+                    "created" : 1255829983000,
+                    "updated" : 1540993265149,
+                    "firstPublished" : 1255829985000,
+                    "lastPublished" : 1540993265117
+                  },
+                  "medicalBoardApproved" : false,
+                  "noIndex" : false,
+                  "title" : "Estimating Taxes in Retirement",
+                  "socialTitle" : "Estimating How Your Taxes in Retirement",
+                  "keywords" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "description" : "Do I need to pay taxes in retirement? Here is a guide to what types of retirement income are taxed so you can plan accordingly.",
+                  "heading" : "How to Estimate Taxes in Retirement",
+                  "paging" : {
+                    "current" : 1,
+                    "total" : 1
+                  },
+                  "author" : {
+                    "id" : "45901",
+                    "type" : "AUTHOR",
+                    "status" : "TERMINATED",
+                    "displayName" : "Dana Anspach",
+                    "displayNamePossessive" : "Dana's",
+                    "contributingWriter" : false,
+                    "liveDate" : 1214524800000,
+                    "terminationDate" : 1496275200000,
+                    "numberOfExperts" : 1,
+                    "socialPresence" : [ ],
+                    "bioUrl" : "https://www.thebalancemoney.com/dana-anspach-2388196",
+                    "image" : { },
+                    "shortBio" : "Dana Anspach wrote about retirement for The Balance. A certified financial planner, she is the author of &#34;Control Your Retirement Destiny.&#34;"
+                  },
+                  "summary" : {
+                    "title" : "Estimating Taxes in Retirement",
+                    "socialTitle" : "Estimating How Your Taxes in Retirement",
+                    "heading" : "How to Estimate Taxes in Retirement",
+                    "description" : "Do I need to pay taxes in retirement? Here is a guide to what types of retirement income are taxed so you can plan accordingly.",
+                    "image" : { }
+                  },
+                  "metaData" : {
+                    "hasTableOfContents" : false,
+                    "entities" : [ ],
+                    "recircKeywords" : {
+                      "totalSize" : 0,
+                      "list" : [ ]
+                    }
+                  },
+                  "slug" : "taxes-in-retirement-how-much-will-you-pay",
+                  "primaryImage" : { },
+                  "sources" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "vertical" : "MONEY",
+                  "tickers" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "taggedImages" : {
+                    "totalSize" : 0,
+                    "list" : [ ]
+                  },
+                  "docId" : 2388987
+                },
+                "configuration" : { },
+                "relationships" : {
+                  "totalSize" : 0,
+                  "list" : [ ]
+                }
+              }
+            } ]
+          }
+        }
+      } ]
+    }
+  },
+  "shortHeading" : "Achieving Your Dream Retirement",
+  "document" : {
+    "revisionKey" : "",
+    "authorKey" : "156569",
+    "url" : "https://www.thebalancemoney.com/planning-for-retirement-an-introduction-4148466",
+    "rootUrl" : "https://www.thebalancemoney.com/planning-for-retirement-an-introduction-4148466",
+    "templateType" : "STRUCTUREDCONTENT",
+    "documentState" : {
+      "state" : "ACTIVE",
+      "activeDate" : 1529517223576
+    },
+    "dates" : {
+      "created" : 1503433889652,
+      "updated" : 1547150442646,
+      "firstPublished" : 1504127850458,
+      "lastPublished" : 1528385422227
+    },
+    "medicalBoardApproved" : false,
+    "noIndex" : false,
+    "title" : "Saving and Planning for Your Dream Retirement",
+    "socialTitle" : "Planning for Retirement: An Introduction",
+    "keywords" : {
+      "totalSize" : 0,
+      "list" : [ ]
+    },
+    "description" : "Saving as much money as possible is just the beginning. Here are the basics of planning for retirement.",
+    "heading" : "Planning for Retirement: An Introduction",
+    "paging" : {
+      "current" : 1,
+      "total" : 1
+    },
+    "author" : {
+      "id" : "156569",
+      "type" : "AUTHOR",
+      "status" : "LIVE",
+      "displayName" : "Staff Author",
+      "displayNamePossessive" : "",
+      "contributingWriter" : false,
+      "numberOfExperts" : 1,
+      "socialPresence" : [ ],
+      "image" : { }
+    },
+    "summary" : {
+      "title" : "Saving and Planning for Your Dream Retirement",
+      "socialTitle" : "Planning for Retirement: An Introduction",
+      "heading" : "Planning for Retirement: An Introduction",
+      "description" : "Saving as much money as possible is just the beginning. Here are the basics of planning for retirement.",
+      "image" : {
+        "url" : "https://fthmb.tqn.com/FFoxxnxhURzVZPMZ1m4JvXaM5UU=/about/GettyImages-557921273-59a869e7b501e80011080e07.jpg",
+        "caption" : "",
+        "owner" : "Getty Images",
+        "alt" : "",
+        "width" : 2121,
+        "height" : 1414,
+        "objectId" : "GettyImages-557921273-59a869e7b501e80011080e07.jpg"
+      }
+    },
+    "metaData" : {
+      "hasTableOfContents" : false,
+      "entities" : [ ],
+      "recircKeywords" : {
+        "totalSize" : 0,
+        "list" : [ ]
+      }
+    },
+    "slug" : "planning-for-retirement-an-introduction",
+    "primaryImage" : {
+      "url" : "https://fthmb.tqn.com/FFoxxnxhURzVZPMZ1m4JvXaM5UU=/about/GettyImages-557921273-59a869e7b501e80011080e07.jpg",
+      "caption" : "",
+      "owner" : "Getty Images",
+      "alt" : "",
+      "width" : 2121,
+      "height" : 1414,
+      "objectId" : "GettyImages-557921273-59a869e7b501e80011080e07.jpg"
+    },
+    "sources" : {
+      "totalSize" : 0,
+      "list" : [ ]
+    },
+    "vertical" : "MONEY",
+    "tickers" : {
+      "totalSize" : 0,
+      "list" : [ ]
+    },
+    "taggedImages" : {
+      "totalSize" : 0,
+      "list" : [ ]
+    },
+    "docId" : 4148466
+  }
+}

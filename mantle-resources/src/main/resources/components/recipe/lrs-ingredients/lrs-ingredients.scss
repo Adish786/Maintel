@@ -1,0 +1,32 @@
+@import 'mntlVariables';
+
+$lrs-width: 15rem;
+
+.mntl-lrs-ingredients {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: $mntl-bp-lg) {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    .cal-app-container {
+        min-height: 180px;
+    }
+
+    // no margin collapse on flex
+    .mntl-structured-ingredients__heading,
+    .mntl-structured-ingredients {
+        margin: 0;
+    }
+
+    .mntl-structured-ingredients {
+        @media (min-width: $mntl-bp-lg) {
+            width: calc(100% - $lrs-width);
+            padding-right: 1rem;
+        }
+    }
+}

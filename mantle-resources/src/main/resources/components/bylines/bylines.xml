@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-bylines" resourcePath="/components/bylines/view/bylines.ftl">
+        <info>
+            <category>Mantle Components/Article</category>
+            <displayName>Bylines</displayName>
+            <description>
+                This component displays a list of authors / fact checkers / reviewers on a document, their associated attribution text, tooltips, and the most recent date the document was modified.
+                It is presented as a list of lists - a list of groups (by author type) containing individuals belonging to that group and is made to work with all author types.
+                The data is pulled from the "Primary Roles" section on a document in Apollo.
+                This component replaces both the the mntl-byline and mntl-review-byline components as a complete rewrite and is effectively version 2.0 of those.
+            </description>
+            <documentation>
+                # Models
+
+                ## GROUPEDATTRIBUTIONS
+                Returns a list of contributors grouped by their type (AUTHOR, REVIEWER, FACTCHECKER, etc.)
+
+                ## BYLINESATTRIBUTIONDATE
+                Returns the document's most recent modified date and type (AUTHOR or REVIEWER)
+
+                # Properties
+
+                ## isCurrentGroup
+                Used to determine if the most recent date returned's type is the group currently being iterated through and therefore displayed
+
+                ## bylinesDateText
+                Descriptor text before date (i.e. Published on, Updated on, on, etc.)
+
+                ## stamp
+                Byline stamp (can be NEW, UPDATED, etc.)
+
+                # Locations
+
+                ## bylinesGroups
+                Location to insert the list of groups containing the individual byline items
+
+                # Dependencies/References
+
+                ## attributionsByGroup
+                The list of groups containing contributors
+
+                ## groupName.value
+                The list of individual contributors of a certain group
+
+                ## mntl-bylines\_\_item
+                The lists generated are containing a list of mntl-bylines\_\_item components
+
+                ## mntl-author-tooltip
+                The tooltip component that will be displayed on hover of the byline
+            </documentation>
+
+            <for id="mntl-bylines__group">
+                <model name="GROUPEDATTRIBUTIONS" id="attributionsByGroup" mode="replace">
+                    <model name="BYLINES" id="attributions">
+                        <model name="mockDocument" id="document" mode="replace">
+                            <property name="template" value="structured-content-single-basic-attribution" />
+                        </model>
+                    </model>
+                </model>
+            </for>
+
+            <for id="attributions, bylinesDateLogic, isGuestAuthor, name, uri">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-single-basic-attribution" />
+                </model>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/bylines/css/bylines.css" />
+
+        <property name="collapseOnAttributionDisabled" value="${ @attributionEnabled == true ? true : null }" onError="collapseSilent">
+            <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+        </property>
+
+        <component-list id="mntl-bylines__group" location="bylinesGroups" ref="mntl-block" iterable="${ @attributionsByGroup ?: {} }">
+            <model name="GROUPEDATTRIBUTIONS" id="attributionsByGroup">
+                <model name="BYLINES" id="attributions">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+            </model>
+
+            <list id="class">
+                <property name="mntl-bylines__group--with-image" value="${@displayBylineImage ? 'mntl-bylines__group--with-image' : '' }" >
+                    <property name="displayBylineImage" value="false" type="boolean" />
+                </property>
+
+                <property name="mntl-bylines__group--group" value="mntl-bylines__group--${@groupName.key.toString().toLowerCase()}" />
+            </list>
+            
+            <for id="class.mntl-bylines__group--with-image, mntl-attribution__author-image.collapseUntilEnabled">
+                <property name="displayBylineImage" value="${@isEnabled AND !@isGuestAuthor AND @isAuthorGroup AND @isFirstGroup AND @onlyAuthorHasImage}" mode="replace">
+                    <property name="isEnabled" value="false" type="boolean" />
+                    <property name="isFirstGroup" value="${@groupName.index == 0}" />
+                    <property name="onlyAuthorHasImage" value="${@groupName.value.size() == 1 AND @groupName.value[0].bioDocument != null AND (@groupName.value[0].bioDocument.getImageForUsage('PRIMARY')?.isNotEmpty()?:false) ?: false}" />
+                    <property name="isGuestAuthor" value="${ @isAuthorGroup AND str.stripToNull(@document?.guestAuthor?.link?.text) != null }" onError="ignore">
+                        <model name="DOCUMENT" id="document" />
+                    </property>
+                </property>
+            </for>
+
+            <for id="displayBylineImage.isGuestAuthor, displayBylineImage">
+                <property name="isAuthorGroup" value="${ 'AUTHOR'.equals(@groupName.key.toString()) }" />
+            </for>
+
+            <for id="isGuestAuthor, isAuthorGroup, onlyAuthorHasImage, isFirstGroup, class.mntl-bylines__group--group">
+                <component-list-item id="groupName" ref="mntl-bylines__group" />
+            </for>
+
+            <component-list id="mntl-bylines__item" location="content" ref="mntl-attribution__item" iterable="${ @groupName.value ?: {} }">
+                <property name="dateText" value="${ @bylinesDateLogic.date.equals(@document.dates.firstPublished) ? @publishDateText : @updateDateText }">
+                    <property name="publishDateText" value="${ (messages['publishDateText'] ?: 'Published on') +  ' ' }" />
+                    <property name="updateDateText" value="${ (messages['updateDateText'] ?: 'Updated on') +  ' ' }" />
+                </property>
+
+                <property name="date" value="${ @shouldDisplayDate AND (@isGuestAuthor OR @isLastItemInGroup) ? @bylinesDate : null }" onError="ignore">
+                    <property name="shouldDisplayDate" value="${ @isAuthorGroup OR @isUgcAuthor }" />
+                    <property name="isLastItemInGroup" value="${ @attributionItem.index == @groupName.value.size() - 1 }" onError="collapseSilent" />
+                    <property name="bylinesDate" value="${ @bylinesDateLogic.date.withZone(T(org.joda.time.DateTimeZone).forID(@timeZone)).toString(@dateFormat) }">
+                        <property name="dateFormat" value="${ @document.revenueGroup == 'COMMERCENEWSDEALS' ? 'MMMM d, yyyy hh:mma z' : 'MMMM dd, yyyy' }">
+                            <model name="DOCUMENT" id="document" />
+                        </property>
+                        <property name="timeZone" value="America/New_York" />
+                    </property>
+                </property>
+
+                <for id="dataTooltip, bio, shouldDisplayDate">
+                    <property name="isUgcAuthor" value="${ 'UGC_RECIPE'.equals(@groupName.key.toString())}" onError="ignore" />
+                </for>
+
+                <for id="collapseIfGuestAuthor, name, uri, dataTooltip, bio, image, date">
+                    <property name="isGuestAuthor" value="${ @isAuthorGroup AND str.stripToNull(@document?.guestAuthor?.link?.text) != null }" onError="ignore" />
+                </for>
+
+                <for id="shouldDisplayDate, isGuestAuthor">
+                    <property name="isAuthorGroup" value="${ 'AUTHOR'.equals(@groupName.key.toString()) }" />
+                </for>
+
+                <for id="this, class, isLastItemInGroup, isGuestAuthor, isAuthorGroup, isUgcAuthor">
+                    <component-list-item id="groupName" ref="mntl-bylines__group" />
+                </for>
+
+                <for id="isCurrentGroup, bylinesDate, dateText">
+                    <model name="BYLINESATTRIBUTIONDATE" id="bylinesDateLogic" />
+                </for>
+
+                <for id="isCurrentGroup,
+                        isFirstItemInNonAuthorGroup,
+                        isLastItemInGroup,
+                        collapseIfGuestAuthor,
+                        collapseUntilEnabled,
+                        isCommaSeparatedListItem,
+                        descriptor,
+                        name,
+                        uri,
+                        dataTooltip,
+                        bio,
+                        image,
+                        collapseIfAuthor,
+                        learnMoreLinkText,
+                        learnMoreLink">
+                    <component-list-item id="attributionItem" ref="mntl-bylines__item" />
+                </for>
+
+                <for id="bylinesDateLogic, isGuestAuthor, dateText">
+                    <model name="DOCUMENT" id="document" />
+                </for>
+
+                <component location="tooltip" ref="mntl-author-tooltip" />
+            </component-list>
+        </component-list>
+    </component>
+</components>

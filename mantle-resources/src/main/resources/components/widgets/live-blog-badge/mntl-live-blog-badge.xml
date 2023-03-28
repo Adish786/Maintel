@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-live-blog-badge" ref="mntl-svg">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Live Blog Badge</displayName>
+            <description>Show Live badge before breadcrumbs when webPageSchemaType is LiveBlogPost for the document.</description>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/live-blog-badge/mntl-live-blog-badge.css" />
+        
+        <svg id="liveBlogBadge" path="/static/mantle/svg/live-badge.svg" />
+
+        <model id="showLiveBlogBadge" name="isLocalDateBetween" onError="collapseSilent">
+            <property name="start" value="${{'STRUCTUREDCONTENT','LISTSC'}.contains(@document.templateType.toString()) ? @document?.liveBlogPost?.coverageStartDate?.toLocalDateTime()?.toString() : null}" onError="collapseSilent"/>
+            <property name="stop" value="${{'STRUCTUREDCONTENT','LISTSC'}.contains(@document.templateType.toString()) ? @document?.liveBlogPost?.coverageEndDate?.toLocalDateTime()?.toString() : null}" onError="collapseSilent"/>
+            <property name="currentDateOverride" value="" />
+        </model>
+
+        <for id="start, stop">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <property name="name" value="liveBlogBadge" />
+    </component>
+
+</components>

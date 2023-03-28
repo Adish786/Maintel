@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-javascript-resources" resourcePath="/components/base/view/resource-script.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Resource Script</displayName>
+            <description>
+Adds scripts to the page
+			</description>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+		<property name="inline" value="false" type="boolean" />
+		<property name="evaluatedOnly" value="false" type="boolean" />
+		<property name="group" value="top" />
+		<list name="groupOrder"> <!-- this order determines how scripts will get de-duped -->
+			<property name="prioritized" value="prioritized" />
+			<property name="top" value="top" />
+			<property name="bottom" value="bottom" />
+		</list>
+		<property name="template" value="${requestContext.templateComponent}" />
+		<property name="prefix" value="${str.htmlEscape(renderUtils.rewriteContentUrl('/static/', requestContext))}"/>
+	</component>
+
+	<component id="mntl-stylesheet-resources" resourcePath="/components/base/view/resource-stylesheet.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Resource Stylesheet</displayName>
+            <description>
+Add style tags.
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+        <property name="enableAsyncCss" value="${@externalConfig.value}">
+            <model name="externalConfig">
+                <property name="key" value="com.about.globe.assets.css.async.enabled" />
+                <property name="default" value="false" type="boolean" />
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+		<property name="evaluatedOnly" value="false" type="boolean" />
+		<property name="group" value="top" />
+		<property name="template" value="${requestContext.templateComponent}" />
+		<property name="prefix" value="${str.htmlEscape(renderUtils.rewriteContentUrl('/static/', requestContext))}"/>
+	</component>
+
+    <component id="mntl-svg-resources" resourcePath="/components/base/view/resource-svg.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Resource SVG</displayName>
+            <description>
+Add SVG definitions that can be referenced with the &lt;@svg&gt; macro.
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+    </component>
+
+</components>

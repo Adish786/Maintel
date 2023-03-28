@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-jump-to-recipe" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Recipe</category>
+            <displayName>Jump to Recipe Button</displayName>
+            <description>
+                Jump to recipe button to skip intro. This button will display if there are at least 2 intro blocks, and it will bring the user to the recipe ingredients.
+            </description>
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/recipe/jump-to-recipe/jump-to-recipe.js" />
+        <stylesheet path="/static/mantle/components/recipe/jump-to-recipe/jump-to-recipe.css" />
+
+        <property name="collapseIfNotEnoughIntro" value="${@document?.getIntroContents()?.totalSize lt 2 ? null : true}" onError="collapseSilent" />
+        <property name="collapseIfNoIngredients" value="${@document?.ingredientGroups != null ? true : null}" onError="collapseSilent" />
+
+        <component location="content" id="mntl-jump-to-recipe__button" ref="mntl-button">
+            <list id="class">
+                <property name="typography" value="type--squirrel-bold" />
+                <property name="buttonType" value="button--contained-standard" />
+            </list>
+
+            <property name="text" value="Jump to recipe" />
+        </component>
+
+        <for id="collapseIfNotEnoughIntro, collapseIfNoIngredients">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+
+</components>

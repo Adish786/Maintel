@@ -1,0 +1,20 @@
+package com.about.mantle.venus.utils;
+
+public enum Direction {
+
+	LEFT("left"),
+	RIGHT("right"),
+	UP("up"),
+	DOWN("down");
+	
+	private final String direction;
+	
+	private Direction (String direction) {
+		this.direction = direction;
+	}
+
+	public String getDirection() {
+		return direction;
+	}
+	
+}

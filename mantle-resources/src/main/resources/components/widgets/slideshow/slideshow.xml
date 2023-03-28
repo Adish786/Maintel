@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-slideshow" resourcePath="/components/widgets/slideshow/view/slideshow.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Slideshow</displayName>
+            <description></description>
+            <documentation>
+				### slideshow.ftl
+
+				Creates a new slideshow.
+
+				### slideshow.js
+
+				Adds event handlers for **.control** elements in the slideshow.
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+			<bgColor>#fff</bgColor>
+        </info>
+		<stylesheet path="/static/mantle/components/widgets/slideshow/css/slideshow.css" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+		<script group="bottom" path="/static/mantle/components/widgets/slideshow/js/slideshow.js" />
+	</component>
+
+	<component id="mntl-slideshow__control" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Slideshow Control</displayName>
+		</info>
+
+		<property name="tag" value="button" />
+		<map name="attrs">
+			<property name="type" value="button" />
+		</map>
+	</component>
+
+	<component id="mntl-slideshow__control--prev" ref="mntl-slideshow__control">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Slideshow Control Prev</displayName>
+		</info>
+
+		<for id="attrs">
+			<property name="data-direction" value="prev" />
+		</for>
+	</component>
+
+	<component id="mntl-slideshow__control--next" ref="mntl-slideshow__control">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Slideshow Control Next</displayName>
+		</info>
+
+		<for id="attrs">
+			<property name="data-direction" value="next" />
+		</for>
+	</component>
+
+</components>

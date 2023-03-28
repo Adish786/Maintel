@@ -1,0 +1,16 @@
+@import 'mntlMixins';
+
+// sets the breakpoint at which the rail breaks out of the content
+@mixin adRailBP($bp, $offset: 0) {
+    .mntl-sc-block-adslot .mntl-sc-sticky-billboard {
+        @media (min-width: $bp) {
+            position: absolute;
+            right: $offset;
+        }
+
+        @media (max-width: #{strip-unit($bp) * 16 - 1 + px}) { // subtract 1px from $bp, fixes min/max overlap
+            position: static;
+            height: auto!important;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "mntlVariables";
+
+.mntl-sc-block-keyterms {
+    display: flex;
+}
+
+.mntl-sc-block-keyterms__nav {
+    width: 50%;
+}
+
+.mntl-sc-block-keyterms__nav-item {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: $color-gray;
+    color: $color;
+    outline: none;
+}
+
+.mntl-sc-block-keyterms__carousel {
+    width: 50%;
+}

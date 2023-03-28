@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-attribution__item" resourcePath="/components/attributions/view/attribution-item.ftl">
+        <info>
+            <category>Mantle Components/Article</category>
+            <displayName>Attribution Item</displayName>
+            <description>
+                This displays a single contributor on a document, their associated attribution text, bio document URL, and the last date they modified the document (possibly - based on other logic). This component is mostly expected to be referenced within a component-list.
+            </description>
+            <documentation>
+                # Classes
+
+                ## __.mntl-attribution\_\_item-date--new__
+                Class on date to signal that is a new date (if isNewDocument property is set to true)
+
+                # Properties
+
+                #iconType
+                Name of icon to display for a non-author group
+
+                ## descriptor
+                Descriptor text before contributor name (i.e. Medically reviewed by)
+
+                ## name
+                Contributor name
+
+                ## uri
+                Contributor bio URL
+
+                ## postscript
+                Contributor job title or education
+
+                ## date
+                Last date contributor modified the document
+
+                ## dateText
+                Text that precedes the date
+
+                ## collapseIfGuestAuthor
+                If there is a guest author on document, this collapses authors after first one
+
+                ## overrideFirstNonAuthorDescriptor
+                If this flag is enabled, the secondary descriptor (i.e. "Reviewed by", "Fact checked by", etc.) can be overriden.
+
+                ## isNewDocument
+                Value to trigger whether the date gets a __--new__ class added
+
+                ## dateFormat
+                Format of date (defaults to MMMM dd, YYYY)
+
+                ## dataTooltip
+                Value of data attribute that must be on the parent element of the tooltip component
+
+                ## dataTriggerLink
+                Data attribute that will be added on mobile and tablet so that tapping the byline opens the tooltip rather than navigating to contributors's page
+
+                # Locations
+
+                ## beforeText
+                Location to insert an image, icon, etc. before the descriptor text
+
+                ## tooltip
+                Location to insert the contributor tooltip
+
+                ## non-author-descriptor-override
+                Location to override the default secondary descriptor (i.e. "Reviewed by", "Fact checked by", etc.)
+
+                # Dependencies/References
+
+                ## groupName
+                The name of the group the contributor belongs to (i.e. AUTHOR, MEDICAL\_REVIEWER, FACT\_CHECKER, etc.)
+
+                ## attributionItem
+                Contains all the data to be passed in to the above properties
+
+                ## isGuestAuthor
+                Boolean value to determine whether this is a tooltip for a guest author.
+            </documentation>
+
+            <property name="isCommaSeparatedListItem" value="false" type="boolean" mode="replace" />
+            <property name="collapseIfGuestAuthor" mode="remove" />
+            <property name="descriptor" value="${ @attributionItem.getAttribution().descriptor }" mode="replace" />
+            <property name="name" value="${ @attributionItem.getAuthor().displayName }" mode="replace" />
+            <property name="uri" value="${ @attributionItem.getAuthor().bioUrl }" mode="replace" onError="ignore" />
+
+            <for id="descriptor, name, uri">
+                <property name="attributionItem" value="${ @attributionsByGroup[4] }">
+                    <model name="BYLINES" id="attributionsByGroup">
+                        <model name="mockDocument" id="document">
+                            <property name="template" value="structured-content-single-basic-attribution" />
+                        </model>
+                    </model>
+                </property>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/attributions/css/attribution-item.css" />
+        <svg id="reviewer-icon" path="/static/mantle/svg/quiz-icon-check.svg" />
+
+        <component location="beforeText" id="mntl-attribution__author-image" ref="mntl-image" >
+            <property name="width" value="40" type="integer" /> 
+            <property name="height" value="40" type="integer" />
+            <property name="srcset" mode="remove" />
+            <property name="lazyLoad" value="true" type="boolean" /> 
+
+            <!-- Image code that may have to be cleaned up.  -->  
+            <property name="image" value="${@attributionItem.value.bioDocument != null AND (@attributionItem.value.bioDocument.getImageForUsage('PRIMARY')?.isNotEmpty()?:false) ? @attributionItem.value.bioDocument.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" />
+
+            <property name="collapseUntilEnabled" value="${@displayBylineImage  ? true : null }" onError="collapseSilent">
+                <property name="displayBylineImage" value="false" type="boolean" />
+            </property>
+
+        </component>
+
+        <component id="mntl-attribution__item-icon" location="beforeText" ref="mntl-svg">
+            <property name="class" value="mntl-attribution__item-icon" />
+            <property name="name" value="${ @isFirstItemInNonAuthorGroup ? @iconType : null }" onError="collapseSilent">
+                <property name="iconType" value="reviewer-icon" />
+            </property>
+        </component>
+
+        <property name="isCommaSeparatedListItem" value="${ @groupName.value.size() > 2 AND @attributionItem.index != @groupName.value.size() - 1 }" onError="collapseSilent" />
+        <property name="collapseIfGuestAuthor" value="${ @isGuestAuthor AND @attributionItem.index GT 0 ? null : false }" onError="collapseSilent" />
+        <property name="descriptor" value="${ @isLastItemInGroup ? 'and' : (@attributionItem.index GT 0 ?  '' : @attributionItem.value.attribution.descriptor) }">
+            <property name="isLastItemInGroup" value="${ @attributionItem.index GT 0 AND @attributionItem.index == @groupName.value.size() - 1 }" onError="collapseSilent" />
+        </property>
+        <property name="name" value="${ @isGuestAuthor ? @document.guestAuthor.link.text : @attributionItem.value.author.displayName }" />
+        <property name="uri" value="${ @isGuestAuthor ? @document.guestAuthor.link.uri : @attributionItem.value.author.bioUrl }" onError="ignore" />
+        <property name="dateText" value="" />
+        <property name="date" value="" />
+        <property name="dataTooltip" value="${@isGuestAuthor ? str.stripToNull(@document?.guestAuthor?.shortBio) : (@isUgcAuthor ? null : str.stripToNull(@attributionItem?.value?.author?.shortBio)) }" onError="ignore" />
+        <property name="dataTriggerLink" value="true" /> <!-- when enabled, will prevent default anchor click on byline link for touch devices and show tooltip instead -->
+
+        <!-- Secondary Descriptor Override Properties -->
+        <property name="overrideFirstNonAuthorDescriptor" value="false" type="boolean" />
+
+        <for id="this, mntl-attribution__item-icon.name">
+            <property name="isFirstItemInNonAuthorGroup" value="${ @isNonAuthor AND @attributionItem.index == 0 }" onError="collapseSilent" />
+        </for>
+
+        <for id="dataTooltip">
+            <property name="isUgcAuthor" value="false" type="boolean" />
+        </for>
+
+        <for id="isFirstItemInNonAuthorGroup, mntl-attribution__item-icon.name">
+            <property name="isNonAuthor" value="${ !'AUTHOR'.equals(@groupName.key.toString()) AND !'UGC_RECIPE'.equals(@groupName.key.toString()) }" onError="ignore" />
+        </for>
+
+        <for id="collapseIfGuestAuthor, collapseUntilEnabled, name, uri, dataTooltip">
+            <property name="isGuestAuthor" value="false" type="boolean" />
+        </for>
+
+        <for id="collapseIfGuestAuthor, collapseUntilEnabled, isFirstItemInNonAuthorGroup, isCommaSeparatedListItem, isLastItemInGroup, descriptor, name, uri, dataTooltip">
+            <component-list-item id="attributionItem" ref="mntl-attribution__item" />
+        </for>
+
+        <for id="isCommaSeparatedListItem, isLastItemInGroup, collapseUntilEnabled, isNonAuthor">
+            <component-list-item id="groupName" ref="mntl-bylines__group" />
+        </for>
+
+        <for id="name, uri, dataTooltip">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+
+</components>

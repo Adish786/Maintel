@@ -1,0 +1,28 @@
+@import "mntlVariables";
+
+/*
+ * 1. --native-ad-height is set through XML property "adHeight". By default, it is omitted so no placeholder height is set (as most verticals
+   have more unfilled (empty) native ads than filled: https://dotdash.looker.com/looks/4837?toggle=det,fil,pik)
+ */
+.mntl-native {
+    width: 100%;
+    height: var(--native-ad-height); /* 1 */
+}
+
+.mntl-native__adunit {
+    text-align: center;
+
+    // this is needed for DFP Blank Ad Template for unfilled ads
+    &[data-ad-width='1'][data-ad-height='3'] {
+        display: none;
+    }
+}
+
+.mntl-native--labeled .mntl-native__adunit[data-ad-width][data-ad-height] {
+    &:before {
+        content: 'Advertisement';
+        font-size: 0.625rem;
+        font-family: $font-family;
+        color: $color-dark-gray;
+    }
+}

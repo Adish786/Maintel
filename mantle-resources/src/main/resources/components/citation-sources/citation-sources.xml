@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-sources" resourcePath="/components/citation-sources/view/sources.ftl">
+		<info>
+			<category>Mantle Components/Citation Sources</category>
+			<displayName>Sources</displayName>
+			<documentation>
+				# Properties
+
+				## sources
+
+				**List** of sources (item type **String** or **Citation**) representing each list item
+
+				## sorted
+
+				**Boolean** flag to sort the list items in alphabetical order
+
+				## numbered
+
+				**Boolean** flag to make the list ordered **&lt;ol&gt;**
+
+				# Classes
+
+				## mntl-sources__content
+
+				Class name applied to the parent list element.
+
+				## mntl-sources__source
+
+				Class name applied to the list item elements.
+			</documentation>
+			<list name="sources">
+				<property name="foo" value="foo" />
+				<property name="bar" value="bar" />
+				<property name="baz" value="baz" />
+			</list>
+		</info>
+
+		<property name="trackingContainer" value="true" type="boolean" />
+	</component>
+
+	<component id="mntl-additional-reading" ref="mntl-sources">
+		<info>
+			<category>Mantle Components/Citation Sources</category>
+			<displayName>Additional Reading</displayName>
+			<documentation>
+				Variation of **mntl-sources** used in **mntl-article-sources**.
+			</documentation>
+			<list name="sources" mode="replace">
+				<property name="foo" value="foo" />
+				<property name="bar" value="bar" />
+				<property name="baz" value="baz" />
+			</list>
+		</info>
+		<property name="sorted" value="true" type="boolean" />
+		<property name="sources" value="${@document?.sources?.list}" onError="collapseSilent">
+			<model name="DOCUMENT" id="document" />
+		</property>
+	</component>
+
+	<component id="mntl-citation-sources" ref="mntl-sources">
+		<info>
+			<category>Mantle Components/Citation Sources</category>
+			<displayName>Citation Sources</displayName>
+			<documentation>
+				Variation of **mntl-sources** used in **mntl-article-sources**.
+			</documentation>
+			<list name="sources" mode="replace">
+				<map name="foo">
+					<property name="refId" value="1" type="integer" />
+					<property name="source" value="foo-source" />
+				</map>
+				<map name="bar">
+					<property name="refId" value="2" type="integer" />
+					<property name="source" value="bar-source" />
+				</map>
+				<map name="baz">
+					<property name="refId" value="3" type="integer" />
+					<property name="source" value="baz-source" />
+				</map>
+			</list>
+		</info>
+		<script path="/static/mantle/components/citation-sources/js/inline-citations.js" />
+		<stylesheet path="/static/mantle/components/citation-sources/css/inline-citations.css" />
+		<property name="numbered" value="true" type="boolean" />
+		<property name="sources" value="${@document?.citations?.list}" onError="collapseSilent">
+			<model name="DOCUMENT" id="document" />
+		</property>
+		<component ref="mntl-tooltip" />
+	</component>
+
+	<component id="mntl-article-sources" ref="mntl-expandable-block">
+		<info>
+			<category>Mantle Components/Citation Sources</category>
+			<displayName>Article Sources</displayName>
+			<documentation>
+				Combination of **mntl-citation-sources** and **mntl-additional-reading**.
+				Uses `mntl-expandable-block` to expand/collapse the component on click.
+
+				# Classes
+
+				## mntl-article-sources__heading
+
+				Heading of the whole component.
+
+				## mntl-article-sources__subheading
+
+				Subheading to separate `mntl-citation-sources` and `mntl-additional-reading` when both are present.
+
+				# Attributes
+
+				## data-scroll-offset
+
+				Set the scroll offset (in px) when the page scrolls to the component, to account for a vertical's fixed header.
+
+				# SVGs
+
+				## show-icon
+
+				Displayed when the component is collapsed.
+
+				## hide-icon
+
+				Displayed when the component is expanded.
+			</documentation>
+			<for id="mntl-article-sources__citation-sources">
+				<list name="sources" mode="replace">
+					<map name="foo">
+						<property name="refId" value="1" type="integer" />
+						<property name="source" value="foo-source" />
+					</map>
+					<map name="bar">
+						<property name="refId" value="2" type="integer" />
+						<property name="source" value="bar-source" />
+					</map>
+					<map name="baz">
+						<property name="refId" value="3" type="integer" />
+						<property name="source" value="baz-source" />
+					</map>
+				</list>
+			</for>
+			<for id="mntl-article-sources__additional-reading">
+				<list name="sources" mode="replace">
+					<property name="foo" value="foo" />
+					<property name="bar" value="bar" />
+					<property name="baz" value="baz" />
+				</list>
+			</for>
+			<for id="display">
+				<property name="hasCitationSources" value="true" />
+				<property name="hasAdditionalReading" value="true" />
+			</for>
+		</info>
+
+		<stylesheet path="/static/mantle/components/citation-sources/css/citation-sources.css" />
+
+		<map name="attrs">
+			<property name="data-scroll-offset" value="0" />
+		</map>
+
+		<component id="mntl-article-sources__wrapper" location="toggle-content" ref="mntl-block">
+			<map name="attrs">
+				<property name="data-click-tracked" value="true" />
+			</map>
+
+			<component id="mntl-article-sources__heading" location="content" ref="mntl-text-block">
+				<property name="tag" value="span" />
+				<property name="text" value="Article Sources" />
+			</component>
+
+			<svg id="show-icon" path="/static/mantle/svg/icon-circle-plus.svg" />
+			<component id="show-icon-comp" location="content" ref="mntl-svg">
+				<property name="name" value="show-icon" />
+			</component>
+
+			<svg id="hide-icon" path="/static/mantle/svg/icon-circle-minus.svg" />
+			<component id="hide-icon-comp" location="content" ref="mntl-svg">
+				<property name="name" value="hide-icon" />
+			</component>
+		</component>
+
+		<!-- Verticals can target this component to add something before citation and sources -->
+		<component id="mntl-article-sources__pre-citation-sources" location="expandable-content" ref="mntl-group" />
+
+		<component id="mntl-article-sources__citation-sources" location="expandable-content" ref="mntl-citation-sources">
+			<property name="display" value="${@hasCitationSources ? 'true' : null}" onError="collapseSilent" />
+		</component>
+
+		<component id="mntl-article-sources__subheading" location="expandable-content" ref="mntl-text-block">
+			<property name="tag" value="span" />
+			<property name="text" value="Additional Reading" />
+			<property name="display" value="${@hasCitationSources AND @hasAdditionalReading ? 'true' : null}" onError="collapseSilent" />
+		</component>
+
+		<component id="mntl-article-sources__additional-reading" location="expandable-content" ref="mntl-additional-reading">
+			<property name="display" value="${@hasAdditionalReading ? 'true' : null}" onError="collapseSilent" />
+		</component>
+
+		<!-- Collapse entire component if no sources AND citations are present -->
+		<property name="display" value="${@hasCitationSources OR @hasAdditionalReading ? 'true' : null}" onError="collapseSilent" />
+
+		<for id="display">
+			<property name="hasCitationSources" value="${@document?.citations?.list?.size() gt 0}" onError="ignore">
+				<model name="DOCUMENT" id="document" />
+			</property>
+			<property name="hasAdditionalReading" value="${@document?.sources?.list?.size() gt 0}" onError="ignore">
+				<model name="DOCUMENT" id="document" />
+			</property>
+		</for>
+	</component>
+
+</components>

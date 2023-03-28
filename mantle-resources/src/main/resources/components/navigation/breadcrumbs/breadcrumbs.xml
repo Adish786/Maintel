@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-breadcrumbs" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Navigation</category>
+            <displayName>Breadcrumb</displayName>
+            <for id="ancestors">
+                <model name="mockBreadcrumb" id="breadcrumb" mode="replace">
+                    <property name="mockName" value="sample-breadcrumb" /> 
+                </model>
+            </for>
+        </info>
+        <stylesheet path="/static/mantle/components/navigation/breadcrumbs/css/breadcrumbs.css" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="tag" value="ul" />
+
+        <component-list id="mntl-breadcrumbs__item" location="content" iterable="${@items}" ref="mntl-block">
+            <property name="items" value="${utils.subList(@ancestors, (@ancestors.size() > @depth ? @ancestors.size() - @depth : 0), @ancestors.size())}" onError="collapseSilent">
+                <property name="depth" value="2" type="integer" />
+                <model name="ancestors">
+                    <model name="breadcrumb" />
+                </model>
+            </property>
+
+            <property name="tag" value="li" />
+
+            <for id="text, uri">
+                <component-list-item id="item" ref="mntl-breadcrumbs__item" />
+            </for>
+
+            <component location="content" ref="mntl-text-link">
+                <property name="class" value="mntl-breadcrumbs__link" />
+                <property name="text" value="${@item.value.document.shortHeading}" />
+                <property name="uri" value="${@item.value.document.url}" />
+            </component>
+        </component-list>
+    </component>
+</components>

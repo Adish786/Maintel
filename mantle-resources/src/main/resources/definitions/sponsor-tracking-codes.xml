@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+	<!-- intended to be rendered by the /sponsor-tracking-codes endpoint to serve untrusted sponsor tracking codes inside an iframe -->
+	<template id="mntl-sponsor-tracking-codes-template" resourcePath="/components/tracking/sponsor-tracking-codes/view/sponsor-tracking-codes-iframe.ftl">
+		<property name="untrustedTrackingCodes" value="${@sponsor?.untrustedTrackingCodes}">
+			<property name="sponsor" value="${@document.sponsor}">
+				<model name="DOCUMENT" id="document">
+					<property name="url" value="${renderUtils.base64decode(@encodedUrl)}">
+						<property name="encodedUrl" queryOverride="url" onError="collapseSilent" />
+					</property>
+				</model>
+			</property>
+		</property>
+	</template>
+</templates>

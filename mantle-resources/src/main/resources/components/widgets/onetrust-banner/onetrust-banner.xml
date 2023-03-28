@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-onetrust-sdk" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>OneTrust SDK</displayName>
+        </info>
+
+        <script group="top" path="/static/mantle/js/pubsub.js"></script>
+        <script group="top" path="/static/mantle/js/CMP.js"></script>
+
+        <!-- initializes the CMP js module -->
+        <script group="top" evaluated="true" path="/static/mantle/js/CMP.evaluated.js"></script>
+
+        <!-- the following property is also used for populating the link header by traversing the render manifest -->
+        <property name="oneTrustEntryScript" value="//cdn.cookielaw.org/scripttemplates/otSDKStub.js" />
+        <!-- timeout (ms) value for loading OT script -->
+        <property name="scriptTimeout" value="3000" type="integer" />
+
+        <!-- this is the language the preference center will be fetched in -->
+        <model id="lang" name="externalConfig">
+            <property name="key" value="com.about.globe.cmp.oneTrust.lang" />
+            <property name="default" value="en" />
+        </model>
+        <model id="domainId" name="externalConfig">
+            <property name="key" value="com.about.globe.cmp.oneTrust.domainId" />
+        </model>
+        <model id="ignoreGA" name="externalConfig" onError="ignore">
+            <property name="key" value="com.about.globe.cmp.oneTrust.ignoreGA" />
+        </model>
+        <model name="isConsentRequired" />
+        <model name="oneTrustTemplateName" onError="collapseSilent" />
+        <model name="showConsentBanner">
+            <!-- the value of @oneTrustDomainData.culture.DomainData.ShowAlertNotice comes from the 'Show Banner' checkbox in OT's Geolocation Rules section.
+                that checkbox should be used to show/hide the consent banner for a particular Geolocation (ie. we don't want to show the banner in US but want the footer link) -->
+            <property name="showAlertNotice" value="${@oneTrustDomainData?.culture?.DomainData?.ShowAlertNotice ?: true}" />
+        </model>
+
+        <for id="this, showAlertNotice">
+            <model name="oneTrustDomainData" onError="collapseSilent" />
+        </for>
+    </component>
+
+    <component id="mntl-onetrust-banner" ref="${@isSsrEnabled.value ? 'mntl-onetrust-ssr-banner' : ('mntl-' + @oneTrustTemplateName + '-banner')}">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>OneTrust Banner</displayName>
+        </info>
+
+        <model name="externalConfig" id="isSsrEnabled">
+            <property name="key" value="com.about.globe.cmp.oneTrust.ssr.enabled" />
+            <property name="default" value="false" type="boolean"/>
+            <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+        </model>
+        <model name="oneTrustTemplateName" onError="collapseSilent" />
+        <model name="showConsentBanner">
+            <!-- the value of @oneTrustDomainData.culture.DomainData.ShowAlertNotice comes from the 'Show Banner' checkbox in OT's Geolocation Rules section.
+                that checkbox should be used to show/hide the consent banner for a particular Geolocation (ie. we don't want to show the banner in US but want the footer link) -->
+            <property name="showAlertNotice" value="${@oneTrustDomainData?.culture?.DomainData?.ShowAlertNotice ?: true}" />
+        </model>
+
+        <for id="this, showAlertNotice">
+            <model name="oneTrustDomainData" onError="collapseSilent" />
+        </for>
+    </component>
+
+    <component id="mntl-onetrust-ssr-banner" resourcePath="/components/widgets/onetrust-banner/view/onetrust-banner.ftl">
+        <stylesheet evaluated="true" path="/static/mantle/components/widgets/onetrust-banner/css/onetrust-banner.evaluated.css" />
+    </component>
+
+    <component id="mntl-gdpr-banner" resourcePath="/components/widgets/onetrust-banner/view/gdpr-banner.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>GDPR Banner</displayName>
+        </info>
+
+        <stylesheet evaluated="true" path="/static/mantle/components/widgets/onetrust-banner/css/gdpr-banner.evaluated.css" />
+    </component>
+
+    <component id="mntl-ccpa-banner" resourcePath="/components/widgets/onetrust-banner/view/ccpa-banner.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>CCPA Banner</displayName>
+        </info>
+
+        <stylesheet evaluated="true" path="/static/mantle/components/widgets/onetrust-banner/css/ccpa-banner.evaluated.css" />
+    </component>
+</components>

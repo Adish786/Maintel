@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-sc-block-featuredquote" resourcePath="/components/structured-content/featuredquote/featuredquote.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Featured Quote</displayName>
+            <description>Featured Quote Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-featuredquote__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-featuredquote__credit-wrapper__
+
+                Wraps the credit text and image
+
+                - __.mntl-sc-block-featuredquote__quote__
+
+                Wraps the html quote data
+
+                - __.mntl-sc-block-featuredquote__image__
+
+                Wraps the image
+                
+                # Components
+
+                - __mntl-universal-image__
+
+                This component handles displaying the image. All image related properties should be for-targeted into this component. Please see the docs on this component for more information.
+
+                # Models / Properties
+
+                - __heading__
+
+                The text to be placed in the **h3** heading. Optional.
+
+                - __quote__
+
+                The text to be used for the quote. The value is expected to be html text that is wrapped in **p** tags.
+
+                - __credit__
+
+                The name of the person credited for the quote. Optional.
+
+                - __uri__
+
+                The uri of the credited person's bio page used to anchor the credit. Optional.
+
+                - __symbol__
+
+                The symbol that precedes the credit. Defaults to em dash.
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/featuredquote/featuredquote.css" />
+
+         <property name="heading" value="${@block?.value?.data?.heading ?: ''}" />
+         <property name="quote" value="${@block?.value?.data?.quote ?: null}" onError="collapseSilent" />
+         <property name="credit" value="${@block?.value?.data?.creditText?.toUpperCase() ?: ''}" />
+         <property name="uri" value="${@block?.value?.data?.creditUrl ?: ''}"/>
+         <property name="symbol" value="—" />
+
+        <component location="image" id="mntl-sc-block-featuredquote__image" ref="mntl-universal-image">
+            <property name="image" value="${@block?.value?.data?.image?.objectId ?: null}" onError="collapseSilent" />
+            <property name="lazyload" value="true" type="boolean" />
+            <property name="alt" value="${@block?.value?.data?.image?.alt ?: ''}" />
+            <property name="width" value="112" type="integer" />
+            <property name="height" value="112" type="integer"/>
+        </component> 
+    </component>
+</components>

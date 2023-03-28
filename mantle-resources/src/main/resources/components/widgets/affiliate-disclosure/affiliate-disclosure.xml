@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-affiliate-disclosure" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Affiliate Disclosure</displayName>
+            <description>Affiliate disclosure statement for legal.</description>
+            <documentation>
+				Adds Affiliate Disclosure tooltip and label/icon. This component includes a mntl-text-block for the label of the tooltip and a mntl-block for the tooltip icon.
+
+				### Dependencies
+
+				- __mntl-affiliate-disclosure\__text.text__ 
+
+				Text for tooltip label
+
+				- __mntl-affiliate-disclosure\__icon.mntl-svg.more-info__ 
+
+				SVG for the tooltip icon
+
+				- __mntl-affiliate-disclosure\__icon.attrs.data-tooltip__ 
+
+				Disclosure text for the tooltip
+			</documentation>
+			
+			<property name="arbitraryDependency" mode="remove" />
+        </info>
+        
+        <stylesheet path="/static/mantle/components/widgets/affiliate-disclosure/affiliate-disclosure.css" />
+        
+        <!-- Only show affiliate disclosure when commerce disclosure does not appear and the affiliate flag is true -->
+        <property name="arbitraryDependency" value="${((@document == null OR !(@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS'))
+        	AND (@document?.disclaimer?.affiliate ?: false)) ? 'true' : null}" onError="collapseSilent">
+        	<model name="DOCUMENT" id="document" />
+        </property>
+        
+		<component ref="mntl-tooltip" />
+		<component id="mntl-affiliate-disclosure__text" location="content" ref="mntl-text-block">
+			<map id="attrs">
+				<property name="data-tooltip-trigger" value="true" />
+			</map>
+			<property name="text" value="Product Disclosure" />
+			<property name="tag" value="span" />
+		</component>
+		
+		<component id="mntl-affiliate-disclosure__icon" location="content" ref="mntl-block">
+			<component location="content" ref="mntl-svg">
+				<svg id="more-info" path="/static/mantle/svg/icon-more-info.svg" />
+				<property name="name" value="more-info" />
+			</component>
+			<map id="attrs">
+				<property name="data-tooltip" value="When you buy through links on our site, we may earn a commission." />
+			</map>	
+			<property name="tag" value="span" />
+		</component>
+		
+    </component>
+
+</components>

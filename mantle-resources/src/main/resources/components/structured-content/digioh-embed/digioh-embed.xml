@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-sc-block-digiohembed" resourcePath="/components/structured-content/digioh-embed/digioh-embed.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Digioh Embed</displayName>
+            <description>Structured Content block that will display a Digioh embed based on brand specific GUID.</description>
+            <documentation>
+                # Properties
+
+                ## digiohGUID
+                Id of digioh iframe embed
+
+                ## digiohTitle
+                Title for embed accessibility  
+
+                # Scripts
+
+                ## digioh-embed.js
+                Script lazy loads digioh script dependent on brand + account id 
+            </documentation>
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/structured-content/digioh-embed/digioh-embed.js" />
+        <stylesheet path="/static/mantle/components/structured-content/digioh-embed/digioh-embed.css" />
+
+        <property name="digiohGUID" value="${@block?.value?.data?.digiohGUID}" onError="collapseSilent" />
+        <property name="digiohTitle" value="${@block?.value?.data?.digiohTitle}" onError="collapseSilent" />
+    
+    </component>
+</components>

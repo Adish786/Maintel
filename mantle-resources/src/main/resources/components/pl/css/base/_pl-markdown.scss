@@ -1,0 +1,67 @@
+.mntl-pl-markdown {
+    max-width: 880px;
+
+    &__content {
+        &--documentation {
+            padding-left: 0.5rem;
+            border-left: 5px $pl-color-gray solid;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        h4 {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        p,
+        ul,
+        ol {
+            margin: 0;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+
+        code {
+            color: $pl-color-code;
+            background: $pl-color-gray;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        pre > code {
+            display: block;
+            padding: 10px;
+            white-space: pre;
+            overflow: auto;
+        }
+
+        a {
+            color: $pl-color-primary;
+            font-weight: 400;
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

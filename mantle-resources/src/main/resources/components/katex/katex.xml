@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-katex" ref="mntl-group">
+        <info>
+            <displayName>Katex</displayName>
+            <description>Katex library for rendering formulas with correct formatting.</description>
+            <documentation>Reference the `mntl-katex` component from your vertical.</documentation>
+            <property name="skimlinksId" value="68756X1559474" />
+        </info>
+
+        <script path="/static/mantle/components/katex/katex.js"></script>
+        <stylesheet path="/static/mantle/components/katex/katex.css"></stylesheet>
+    </component>
+
+</components>

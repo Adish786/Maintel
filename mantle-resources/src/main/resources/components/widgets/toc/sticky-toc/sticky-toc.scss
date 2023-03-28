@@ -1,0 +1,63 @@
+@import "mntlVariables";
+
+/*------------------------------------*\
+    #MNTL-STICKY-TOC
+    1. Width at which document transitions design and functionality from mobile to desktop.
+       Should mirror the __data-desktop-bp__ attribute value in mntl-sticky-toc component
+    2. Do not show TOC toggle button:
+        a. above "med2" breakpoint
+        **This should be overriden by verticals if they have different med breakpoint values**
+        b. if [data-chop-mobile]="false"
+        c. TOC is expanded
+        d. if TOC is in fixed state in mobileTOC is expanded
+    3. Display the TOC header when fixed in mobile/tablet
+       **This should be overriden by verticals if they have different height requirement for fixed TOC**
+\*------------------------------------*/
+
+$bp-desktop: 54em; /* 1, 2 */
+$fixed-toc-height: 40px;
+
+.mntl-toc-toggle {
+    .mntl-sticky-toc & {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        /* 2a */
+        @media (min-width: $bp-desktop) {
+            display: none;
+        }
+    }
+
+    .mntl-toc[data-chop-mobile='false'] &, 
+    .mntl-toc--expanded & {  /* 2c */
+        .mntl-sticky-toc & {
+            display: none;
+        }
+    }
+
+    .mntl-sticky-toc.is-fixed & { /* 2d */
+        display: none;
+    }
+}
+
+.mntl-sticky-toc.is-fixed .mntl-toc__inner {
+    position: absolute;
+    left: 0;
+    top: $fixed-toc-height; /* 3 */
+    height: $fixed-toc-height; /* 3 */
+    width: 100%;
+}
+
+.mntl-toc__mobile-toggle {
+    position: fixed;
+    top: 49px;
+    left: 0;
+    display: none;
+
+    &.is-visible {
+        display: block;
+    }
+}

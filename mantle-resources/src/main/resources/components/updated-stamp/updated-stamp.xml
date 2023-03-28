@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-updated-stamp" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Article</category>
+            <displayName>Updated Stamp</displayName>
+            <description />
+            <documentation>
+                # Classes
+
+                - __.mntl-updated-stamp__
+
+                Wraps the whole updated stamp
+
+                - __.mntl-updated-stamp\_\_text__
+
+                Wraps the updated stamp text
+            </documentation>
+
+            <for id="mntl-updated-stamp__text.text">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="structured-content-basic-one-of-each" />
+                </model>
+            </for>
+
+        </info>
+
+        <component location="content" id="mntl-updated-stamp__text" ref="mntl-text-block">
+            <property name="text" value="Updated on ${@document.dates?.displayed.toString(@dateFormat)}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+                <property name="dateFormat" value="MMMM dd, YYYY" />
+            </property>
+            <property name="tag" value="span" />
+        </component>
+
+    </component>
+
+</components>

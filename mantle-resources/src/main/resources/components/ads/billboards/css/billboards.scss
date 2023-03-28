@@ -1,0 +1,22 @@
+// Most common billboard height allocated for min-height (300x250 is the most common size)
+$billboard-height: 250px !default;
+// ~ largest ad label size observed for verticals. Size varies between 10 - 30px (give or take)
+$ad-label-height: 30px !default;
+
+.mntl-billboard {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    // Verticals will override this in SCSS/CSS to adjust to their unique billboard + ad text + padding needs.
+    // Ad text is asssumed to be doubled for two 'advertising' texts
+    min-height: calc(#{$billboard-height} + (#{$ad-label-height} * 2));
+
+    &[data-ad-height='0'] {
+        display: none;
+    }
+
+    &[data-ad-height='fluid'] {
+        min-height: 0;
+        padding: 0;
+    }
+}

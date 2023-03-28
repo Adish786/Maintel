@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-dotdash-universal-nav" resourcePath="/components/navigation/dotdash-universal-nav/view/dotdash-universal-nav.ftl">
+        <info>
+            <category>Mantle Components/Navigation</category>
+            <displayName>Dotdash Universal Nav</displayName>
+            <description>Navigation bar pointing to the Dotdash parent organization</description>
+            <documentation>
+
+###mntl-dotdash-universal-nav
+
+ * `verticalName` (String) to change the vertical name for the text
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/navigation/dotdash-universal-nav/css/dotdash-universal-nav.css" />
+        <svg id="mntl-dotdash-universal-nav__logo" path="/static/mantle/svg/dotdash-meredith-logo.svg" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <message key="companyName" id="verticalName" />
+
+    </component>
+
+</components>

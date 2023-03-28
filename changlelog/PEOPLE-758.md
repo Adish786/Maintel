@@ -1,0 +1,1 @@
+Moved Commerce PRB Resource inclusion to the body instead of the head

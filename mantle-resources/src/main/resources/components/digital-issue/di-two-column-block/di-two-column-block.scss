@@ -1,0 +1,9 @@
+@import 'mntlVariables';
+
+.mntl-di-two-column-block {
+    .mntl-di-module__cards {
+        @media (min-width: $mntl-bp-md) {
+            grid: auto / repeat(2, 1fr);
+        }
+    }
+}

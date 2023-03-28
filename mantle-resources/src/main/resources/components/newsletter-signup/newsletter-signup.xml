@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-newsletter-signup" resourcePath="/components/newsletter-signup/views/newsletter-signup.ftl">
+		<info>
+			<category>Mantle Components/Newsletter</category>
+			<displayName>Newsletter Signup</displayName>
+			<documentation>
+				### Default components
+
+				- **mntl-newsletter-signup__heading**
+
+				Location **header**. Default heading you can customize or override.
+
+				- **mntl-newsletter-submit**
+
+				Location **submit**. Default **pc, tablet** view. Contains input field, hidden **listName**, hidden **customEventName** and hidden **CSRFToken** fields, and submit button.
+
+				Placeholder text and button customizable. __**listName** must be set by vertical.__
+
+				**customEventName** is an optional field to be set by vertical to trigger a Sailthru custom event like "Welcome email series".
+
+				- **mntl-newsletter-one-tap**
+
+				Location **submit**. Default **mobile** view. Simple **a** tag with customizable **attrs.href** and **text**.
+
+				Note that **attrs.href** will be base64 encoded automatically to prevent scrapers from reading the email address in plain text.
+
+				- **mntl-newsletter-signup__success**
+
+				Location **success**. **pc, tablet** view. Default container for success message. Hidden by default, visible on successful submit / when **mntl-newsletter-signup** gets class **is-submit-success**
+
+				- **mntl-newsletter-signup__error**
+
+				Location **error**. **pc, tablet** view. Default container for error message. Hidden by default, visible on submit / when **mntl-newsletter-signup** gets class **is-submit-error**
+
+				###newsletter-signup.js
+
+				Sets callback on form **submit** to serialize form data and perform method on action.
+
+				On success, adds **is-submit-success** class to **mntl-newsletter-signup** and triggers event **submit-success** on **mntl-newsletter-signup**
+
+				On error, adds **is-submit-error** class to **mntl-newsletter-signup** and triggers event **submit-error** on **mntl-newsletter-signup**
+
+				Use the success and error classes to style as you wish. Attach event handlers for **submit-success** and **submit-error** for custom functionality.
+
+				###newsletter-one-tap.js
+
+				Sets click handler on one-tap button to decode **attrs.href** prior to setting **window.location**.
+			</documentation>
+			<for id="mntl-newsletter-submit">
+				<property name="listName" value="healthtips1" />
+			</for>
+		</info>
+		<component location="header" ref="mntl-text-block" id="mntl-newsletter-signup__heading">
+			<property name="text" value="Sign up for our Newsletter" />
+		</component>
+		<component location="submit" ref="mntl-newsletter-submit" views="pc, tablet" />
+		<component location="submit" ref="mntl-newsletter-one-tap" views="mobile" />
+        <component location="footer" ref="mntl-text-block" id="mntl-newsletter-signup__success" views="pc, tablet">
+            <property name="text" value="You're in! Thanks for signing up." />
+        </component>
+        <component location="footer" ref="mntl-text-block" id="mntl-newsletter-signup__error" views="pc, tablet">
+            <property name="text" value="There was an error. Please try again." />
+        </component>
+
+		<for id="data-shared-services, mntl-newsletter-one-tap.attrs.href, sharedservices">
+			<property name="enableSharedServices" value="${@sharedServicesConfig?.value}" onError="ignore">
+				<model id="sharedServicesConfig" name="externalConfig" onError="ignore">
+					<property name="key" value="com.about.globe.sharedservices.enabled" />
+				</model>
+			</property>
+		</for>
+
+		<for id="data-newsletter-object-ids">
+			<property name="newsletterObjectIds" value="${@newsletterObjectIdsConfig?.value}" onError="ignore">		
+				<model id="newsletterObjectIdsConfig" name="externalConfig" onError="ignore">
+					<property name="key" value="com.about.globe.sharedservices.newsletterObjectIds" />
+				</model>
+			</property>
+		</for>
+
+		<for id="mntl-newsletter-one-tap.attrs.href">
+			<property name="sharedServicesOneTapLink" value="${@sharedServicesOneTapLinkConfig?.value}" onError="ignore">
+				<model id="sharedServicesOneTapLinkConfig" name="externalConfig" onError="ignore">
+					<property name="key" value="com.about.globe.sharedservices.mobileLink" />
+				</model>
+			</property>
+		</for>
+	</component>
+
+	<component id="mntl-newsletter-submit" resourcePath="/components/newsletter-signup/views/submit.ftl">
+		<info>
+			<category>Mantle Components/Newsletter</category>
+			<displayName>Newsletter Submit</displayName>
+		</info>
+
+		<stylesheet path="/static/mantle/components/newsletter-signup/newsletter-signup.css"></stylesheet>
+		<script path="/static/mantle/components/newsletter-signup/newsletter-signup.js"></script>
+
+		<map name="attrs">
+			<property name="data-reg-source-id" value="${@regSourceId}" onError="ignore" />
+			<property name="data-newsletter-object-ids" value="${@newsletterObjectIds}" onError="ignore" />
+			<property name="data-shared-services" value="${@enableSharedServices}" onError="ignore" />
+		</map>
+
+		<property name="placeholderText" value="Enter your email" views="pc, tablet" />
+		<property name="placeholderText" value="Enter email" views="mobile" />
+		<property name="csrfToken" value="${requestContext.csrfToken}" />
+		<property name="sharedservices" value="${@enableSharedServices == 'true'}" onError="ignore" />
+
+		<component location="submitButton" id="mntl-newsletter-submit__button" ref="mntl-button">
+			<map name="attrs">
+				<property name="type" value="submit" />
+			</map>
+
+			<property name="text" value="Sign up" />
+		</component>
+	</component>
+
+	<component id="mntl-newsletter-one-tap" resourcePath="/components/newsletter-signup/views/newsletter-one-tap.ftl">
+		<info>
+			<category>Mantle Components/Newsletter</category>
+			<displayName>Newsletter One Tap</displayName>
+		</info>
+
+		<script path="/static/mantle/components/newsletter-signup/newsletter-one-tap.js"></script>
+		<property name="tag" value="a" />
+		<map id="attrs">
+			<property name="href" value="mailto:replaceme?subject=replaceme" />
+			<property name="target" value="_blank" />
+		</map>
+		<property name="text" value="One Tap Sign Up" />
+		<component location="button" ref="mntl-button" id="mntl-newsletter-one-tap__button" />
+	</component>
+</components>

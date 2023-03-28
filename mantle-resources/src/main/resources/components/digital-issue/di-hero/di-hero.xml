@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-hero" resourcePath="/components/digital-issue/di-hero/di-hero.ftl">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Hero</displayName>
+            <description>
+                A hero component for a digital issue with an image and a card that contains title, subtitle, CTA (optional), and sponsorship component (optional)
+            </description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "hero-background-color": background color of the hero on mobile, below the card (Ex: "#FFFFFF")
+                - "hero-title-color": color of the hero title (Ex: "#000000")
+                - "cta-text-color": color of the CTA button text (Ex: "#000000")
+                - "cta-background-color": color of the CTA button (Ex: "#FFFFFF")
+                - "cta-text": text for the CTA button (Ex: "Click here")
+                - "cta-uri": link for the CTA button (Ex: "https://www.bhg.com/")
+                - "subtitle-display": whether or not to show the subtitle, defaults to true (Ex: false)
+                - "hero-display-right": whether or not to put the hero text card on the right, defaults to false (Ex: true)
+
+                # REQUIRED PROPERTIES/COMPONENTS
+
+                ## title
+                Document title that shows in card overlay
+
+                ## subtitle
+                Document subtitle that shows in card overlay
+
+                ## mntl-di-hero__image
+                Image background - uses primary image for mobile, recirc image for tablet and pc
+
+                ## digitalIssueCssVariables
+                The map of css variables to apply to the hero component, pulling from the 
+                root config list in the BOVD
+
+                ## digitalIssueRootConfigs
+                Pulls from the root config list in the BOVD
+
+                # OPTIONAL PROPERTIES/COMPONENTS
+
+                ## titleClass
+                The class for the title
+                Default: "type--elephant"
+
+                ## subtitleClass
+                The class for the title
+                Default: "type--goat"
+
+                ## mntl-di-hero__cta
+                Link that will show below title and subtitle
+
+                ## mntl-di-hero__sponsor
+                Sponsor component that will show below title, subtitle and/or CTA link
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/components/digital-issue/di-hero/di-hero.css" />
+
+        <map id="digitalIssueCssVariables">
+            <property name="hero-background-color" value="${@digitalIssueRootConfigs?.get('hero-background-color')}" onError="ignore" />
+            <property name="hero-title-color" value="${@digitalIssueRootConfigs?.get('hero-title-color')}" onError="ignore" />
+            <property name="cta-text-color" value="${@digitalIssueRootConfigs?.get('cta-text-color')}" onError="ignore" />
+            <property name="cta-background-color" value="${@digitalIssueRootConfigs?.get('cta-background-color')}" onError="ignore" />
+        </map>
+
+        <list id="class">
+            <property name="mntl-di-hero--right" value="${@digitalIssueRootConfigs?.get('hero-display-right')}" onError="ignore" />
+        </list>
+
+        <property name="title" value="${@document.heading}" onError="ignore" />
+        <property name="subtitle" value="${@digitalIssueRootConfigs?.get('subtitle-display') == false ? null : @document.subheading}" onError="ignore" />
+
+        <component location="image" id="mntl-di-hero__image" ref="mntl-universal-primary-image">
+            <list id="filters">
+                <property name="maxBytes" value="max_bytes(200000)" />
+            </list>
+
+            <property name="class" value="mntl-di-hero__image" />
+            <property name="placeholderWidth" mode="remove" />
+            <property name="placeholderHeight" mode="remove" />
+
+            <component id="primary-image__figcap" mode="remove" />
+
+            <for id="providedImageSources">
+                <property name="sizes" value="750px" views="mobile" />
+                <property name="sizes" value="2000px" views="tablet" />
+                <property name="sizes" value="3000px" views="pc" />
+
+                <map id="srcset">
+                    <property name="minWidth" value="750" type="integer" views="mobile" />
+                    <property name="maxWidth" value="750" type="integer" views="mobile" />
+
+                    <property name="minWidth" value="2000" type="integer" views="tablet" />
+                    <property name="maxWidth" value="2000" type="integer" views="tablet" />
+
+                    <property name="minWidth" value="3000" type="integer" views="pc" />
+                    <property name="maxWidth" value="3000" type="integer" views="pc" />
+
+                    <property name="maxHeight" value="0" type="integer" />
+                    <property name="stepCount" value="0" type="integer" />
+                </map>
+            </for>
+
+            <for id="this, providedImageSources">
+                <!-- calculations maintain the desired aspect ratio defined in the initial di-hero ticket https://dotdash.atlassian.net/browse/UXSQD-30 -->
+                <property name="height" value="${renderUtils.uncappedImageWidthsEnabled() ? ((@image.width ?: 10000) * 1.333) : 2000}" views="mobile" />
+                <property name="height" value="${renderUtils.uncappedImageWidthsEnabled() ? ((@image.width ?: 10000) * 0.5) : 750}" views="tablet, pc" />
+            </for>
+
+            <for id="this, width, height, placeholderWidth, placeholderHeight, providedImageSources, alt">
+                <property name="image" value="${@document?.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" views="mobile" />
+                <property name="image" value="${@document?.getImageForUsage('RECIRC')?.objectId != null ? @document.getImageForUsage('RECIRC') : null}"  onError="collapseSilent" views="tablet, pc" />
+            </for>
+        </component>
+
+        <component location="post-title" id="mntl-di-hero__cta" ref="mntl-text-link">
+            <property name="text" value="${@digitalIssueRootConfigs?.get('cta-text')}" onError="collapseSilent" />
+            <property name="uri" value="${@digitalIssueRootConfigs?.get('cta-uri')}" onError="collapseSilent" />
+            <property name="class" value="type--squirrel" />
+        </component>
+
+        <component location="post-title" id="mntl-di-hero__sponsor" ref="mntl-sponsorship--universal-image">
+            <for id="mntl-sponsorship__title">
+                <list id="class">
+                    <property name="type--mouse" value="type--mouse" />
+                </list>
+            </for>
+
+            <for id="mntl-sponsorship__content">
+                <component id="mntl-sponsorship__disclaimer" mode="remove"/>
+            </for>
+        </component>
+
+        <for id="mntl-di-hero__image.image, 
+                mntl-di-hero__image.providedImageSources.image,
+                mntl-di-hero__image.providedImageSources.height.image,
+                mntl-di-hero__image.providedImageSources.width.image,
+                mntl-di-hero__image.height.image,
+                mntl-di-hero__image.width.image,
+                mntl-di-hero__image.placeholderWidth.image, 
+                mntl-di-hero__image.placeholderHeight.image, 
+                mntl-di-hero__image.alt.image, 
+                title, 
+                subtitle">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <for id="digitalIssueCssVariables.p*,
+                 class.mntl-di-hero--right,
+                 mntl-di-hero__cta.text,
+                 mntl-di-hero__cta.uri,
+                 subtitle">
+            <model name="digitalIssueRootConfigs" />
+        </for>
+    </component>
+
+</components>

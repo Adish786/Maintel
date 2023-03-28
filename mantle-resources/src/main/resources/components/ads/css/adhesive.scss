@@ -1,0 +1,46 @@
+@import "mntlVariables";
+$adHeight: 70px;
+
+.adhesive {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(#{$adHeight});
+    transition: transform 0.35s;
+    height: $adHeight;
+    z-index: 10;
+
+    &.is-visible {
+        transform: translateY(0);
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: $color-white;
+    }
+
+    .ad-label {
+        position: absolute;
+        right: 0;
+        bottom: 44px;
+        z-index: 11;
+        padding: 0.3em;
+        background-color: $color-white;
+        color: #848484;
+        font-size: 12px;
+    }
+
+    & ~ .site-notice {
+        bottom: $adHeight;
+    }
+}
+
+.footer {
+    border-bottom: $adHeight solid $color-white;
+    // To account for adhesive ad hiding copyright info.
+}

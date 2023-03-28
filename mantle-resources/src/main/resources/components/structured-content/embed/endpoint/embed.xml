@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/components.xsd">
+	<!-- intended to be used inside `mntl-embed-endpoint-template` to serve the embed content through the /embed endpoint -->
+	<component id="mntl-embed-endpoint-content" resourcePath="/components/structured-content/embed/endpoint/view/embed.ftl">
+		<model name="embed">
+			<property name="url" queryOverride="url" />
+			<property name="options" value="${renderUtils.fromJSONString(renderUtils.base64decode(@encodedOptions))}">
+				<!-- the options query param is expected to be a base64encoded json string -->
+				<property name="encodedOptions" queryOverride="options" value="e30=" /><!-- e30= is b64e for {} (empty map) -->
+			</property>
+		</model>
+	</component>
+</components>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:complexType name="filterable" abstract="true">
+        <xs:attribute name="id" type="xs:string" />
+        <xs:attribute name="mode">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="remove"></xs:enumeration>
+                    <xs:enumeration value="replace"></xs:enumeration>
+                    <xs:enumeration value="extend"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="buckets" type="xs:string" />
+        <xs:attribute name="tests" type="xs:string" />
+        <xs:attribute name="views" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="model">
+        <xs:complexContent>
+            <xs:extension base="filterable">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="model" type="model" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="property" type="property" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="config" type="config" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="message" type="message" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="map" type="map" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="list" type="list" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="component-list-item" type="component-list-item" minOccurs="0" maxOccurs="1" />
+                </xs:choice>
+                <xs:attribute name="name" type="xs:string" />
+                <xs:attribute name="onError">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="halt">
+                                <xs:annotation>
+                                    <xs:documentation>Causes rendering to halt if model is not
+                                        satisfied, resulting corresponding error.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:enumeration>
+                            <xs:enumeration value="collapse">
+                                <xs:annotation>
+                                    <xs:documentation>Causes component to collapse (not render) if
+                                        model is not satisfied.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:enumeration>
+                            <xs:enumeration value="collapseSilent">
+                                <xs:annotation>
+                                    <xs:documentation>Causes component to collapse (not render) if
+                                        model is not satisfied. No errors will be
+                                        reported.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:enumeration>
+                            <xs:enumeration value="ignore">
+                                <xs:annotation>
+                                    <xs:documentation>Causes rendering to continue even if model is
+                                        not satisfied. Proper null checks must be in
+                                        placed in view code. No errors will be reported.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="property">
+        <xs:complexContent>
+            <xs:extension base="model">
+                <xs:choice />
+                <xs:attribute name="value" type="xs:string" />
+                <xs:attribute name="queryOverride" type="xs:string" />
+                <xs:attribute name="testPayload" type="xs:string" />
+                <xs:attribute name="type">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="string"></xs:enumeration>
+                            <xs:enumeration value="boolean"></xs:enumeration>
+                            <xs:enumeration value="integer"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="config">
+        <xs:complexContent>
+            <xs:extension base="model">
+                <xs:choice />
+                <xs:attribute name="key" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="message">
+        <xs:complexContent>
+            <xs:extension base="model">
+                <xs:choice />
+                <xs:attribute name="key" type="xs:string" />
+                <xs:attribute name="testPayload" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="map">
+        <xs:complexContent>
+            <xs:extension base="model">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="list">
+        <xs:complexContent>
+            <xs:extension base="model">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="component-list-item">
+        <xs:attribute name="id" type="xs:string" />
+        <xs:attribute name="ref" type="xs:string" />
+    </xs:complexType>
+
+</xs:schema>
+

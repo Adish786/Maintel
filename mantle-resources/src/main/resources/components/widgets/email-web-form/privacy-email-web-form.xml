@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-privacy-email-form" resourcePath="/components/widgets/email-web-form/views/privacy-email-web-form.ftl">
+        <info>
+            <category>Mantle Components/Form</category>
+            <displayName>Privacy Email Form</displayName>
+            <documentation>
+                This is the general Mantle Privacy Email Form
+
+                The component uses the following properties:
+
+                - **actionEndpoint** (Type: String)
+
+                The endpoint we want to POST to. Defaults to an empty string ('') if not provided.
+
+                - **CSRFToken** (Type: String)
+                - **userId** (Type: String)
+
+                Some default components and fields set here are:
+
+                - **mntl-privacy-email-form__heading**
+
+                mntl-text-block to set a text heading for the form
+
+                - **mntl-privacy-request-form__description**
+
+                A default description field for the email form
+            </documentation>
+        </info>
+
+        <script path="/static/mantle/components/widgets/email-web-form/js/privacy-email-form.js" />
+        <stylesheet path="/static/mantle/components/widgets/email-web-form/css/privacy-email-web-form.css" />
+
+        <property name="actionEndpoint" value="/privacy-request/submit" />
+
+        <property name="userId" value="${requestContext.userId}" />
+        <property name="vertical" value="Dotdash" />
+
+        <map id="requestOptions">
+            <property name="Category Request" value="Know categories of personal information" />
+            <property name="Information Request" value="Know specific pieces of personal information" />
+            <property name="Deletion Request" value="Delete your personal information" />
+        </map>
+
+        <component id="mntl-privacy-email-form__heading" ref="mntl-text-block" location="header" >
+            <property name="tag" value="h1" />
+            <property name="text" value="Personal Information and Deletion Requests" />
+        </component>
+
+        <component ref="mntl-privacy-email-form__description" location="header" />
+    </component>
+
+    <component id="mntl-privacy-email-form__description" resourcePath="/components/widgets/email-web-form/views/privreq-email-privacy-description.ftl">
+        <info>
+            <category>Mantle Components/Form</category>
+            <displayName>Privacy Email Form Description</displayName>
+            <documentation>
+                The component uses the following properties:
+
+                - **tag** (Type: String)
+
+                The tag type that surrounds the description field (default is **p** tag)
+
+                - **link** (Type: String)
+
+                The link to the privacy documentation used in the text of the description field
+            </documentation>
+        </info>
+        <property name="link" value="https://www.dotdash.com" />
+    </component>
+</components>

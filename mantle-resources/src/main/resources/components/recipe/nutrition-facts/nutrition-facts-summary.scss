@@ -1,0 +1,60 @@
+@import 'mntlVariables';
+
+.mntl-nutrition-facts-summary {
+    margin-bottom: 1.5rem;
+
+    &__heading-aside {
+        display: block;
+        font-weight: normal;
+        margin-top: 0.5rem;
+
+        @media (min-width: $mntl-bp-sm) {
+            display: inline-block;
+        }
+    }
+
+    &__table {
+        width: 100%;
+    }
+
+    &__table-body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 1rem;
+        max-width: 18.25rem;
+
+        @media (min-width: $mntl-bp-sm) {
+            max-width: unset;
+        }
+
+        @media (min-width: $mntl-bp-md) {
+            max-width: 18.25rem;
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            max-width: unset;
+        }
+    }
+
+    &__table-row {
+        flex-grow: 1;
+        width: calc(50% - 1rem);
+        max-width: 8.625rem;
+
+        @media (min-width: $mntl-bp-sm) {
+            width: calc(25% - 1rem);
+        }
+
+        @media (min-width: $mntl-bp-md) {
+            width: calc(50% - 1rem);
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            width: calc(25% - 1rem);
+        }
+    }
+
+    &__table-cell {
+        display: block;
+    }
+}

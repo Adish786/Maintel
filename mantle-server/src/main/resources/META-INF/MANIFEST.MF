@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Mantle Server
+Implementation-Version: DEVELOPMENT
+Implementation-Vendor-Id: com.about
+About-Build-Timestamp: 0

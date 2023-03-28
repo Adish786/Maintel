@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+	
+	<template id="mntl-sitemap-index" resourcePath="/components/responses/sitemap/sitemapIndex.ftl">
+		<model name="numSiteMapIndexes" onError="halt" />
+		<model name="sitemapUrlPrefix"  onError="halt"/>
+	</template>
+
+	<template id="mntl-sitemap-page" resourcePath="/components/responses/sitemap/sitemapPage.ftl">
+		<property name="items" value="${@sitemapPage?.items}" onError="halt">
+			<model name="sitemapPage" onError="halt" />
+		</property>
+	</template>
+	
+</templates>

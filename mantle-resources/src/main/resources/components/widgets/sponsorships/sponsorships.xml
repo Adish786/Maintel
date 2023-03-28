@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-sponsorships" resourcePath="/components/widgets/sponsorships/view/sponsorships.ftl">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorships</displayName>
+	        <description>
+                This component displays a list of sponsors that are associated with the document. It iterates through the document sponsors and
+                renders a sponsorship item for each. By default it displays the title and disclaimer for the first sponsor in the sponsors list
+                and separates each sponsor with the provided separator. The structure of the list is mostly flat so that elements can be moved
+                around with styling if needed.
+            </description>
+	        <documentation>
+                # Properties
+
+                ## sponsorships
+                The list of sponsorships on the document. If the document's sponsors list is empty the then component collapses.
+
+                # Dependencies/References
+
+                ## mntl-sponsorship-item
+                This is used in a component-list. The list iterates over the document's sponsors and displays a mntl-sponsor-item for each Sponsor object.
+
+                ### mntl-sponsorship-item Properties
+
+                #### showTitle
+                This will be true for the first sponsor in the document's sponsors list. That means the title will show at the beginning of the sponsor list.
+                If the title is not wanted set this to false for each sponsorship-item.
+
+                #### showDisclaimer
+                This will be true for the first sponsor in the document's sponsors list. That means the disclaimer will show at the beginning of the sponsor 
+                list. If the disclaimer is not wanted set this to false for each sponsorship-item.
+
+                #### showSeparator
+                This will be true every sponsor except for the last in the sponsors list. That means the separator will be displayed after each sponsor 
+                except the last. If a different separator is needed as sponsor are listed, the separator property can be changed for each sponsorship-item.
+            </documentation>
+
+            <for id="sponsorships">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-multiple-sponsors" />
+                </model>
+            </for>
+
+            <for id="sponsor-logo">
+                <property name="lazyload" value="false" type="boolean" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/sponsorships/css/sponsorships.css" />
+
+        <!-- render a sponsorship item component for each sponsor -->
+        <component-list location="sponsors" id="sponsorship-item" ref="mntl-sponsorship-item" iterable="${@sponsorships}">
+
+            <!-- only show title and disclaimer if it is the first sponsor -->
+            <property name="showTitle" value="${@sponsorship.index == 0}" />
+            <property name="showDisclaimer" value="${@sponsorship.index == 0}" />
+
+            <!-- only show separator if sponsor is not last in the list -->
+            <property name="showSeparator" value="${@sponsorship.index != @sponsorships.size() - 1}" />
+
+            <for id="sponsor-logo, placeholderWidth, placeholderHeight, alt">
+                <property name="image" value="${@sponsor?.sponsorImage}" />
+            </for>
+
+            <for id="title, disclaimerText, url, image">
+                <property name="sponsor" value="${@sponsorship.value}" />
+            </for>
+
+            <for id="showSeparator, showDisclaimer, showTitle, sponsor">
+                <component-list-item id="sponsorship" ref="sponsorship-item" />
+            </for>
+
+        </component-list>
+
+        <for id="this, sponsorship-item, showSeparator">
+            <property name="sponsorships" value="${@document != null AND @document?.sponsors.getList().size() != 0 ? @document?.sponsors.getList() : null}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+            </property> 
+        </for>
+        
+
+	</component>
+
+    <component id="mntl-sponsorship-item" resourcePath="/components/widgets/sponsorships/view/sponsorship-item.ftl">
+        <info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship Item</displayName>
+	        <description>
+                A single sponsorship item used within the mntl-sponsorships component. This component displays the title, dislcaimer, and logo
+                of a sponsor. It also displays a separator after the sponsor logo if one is provided. The sponsor's logo is wrapped in an anchor
+                tag and links to the sponsor's url. The structure of this component is mostly flat so that elements can be moved around with 
+                styling if needed.
+            </description>
+	        <documentation>
+                # Properties
+
+                ## title
+                The sponsorship title text, usually the value is "Sponsored by".
+
+                ## disclaimer
+                The disclaimer which acts as a trigger for the full disclaimerText. On hover of this text the tooltip will display with the full disclaimer explanation.
+
+                ## disclaimerText
+                The disclaimer text which is contained in a tooltip.
+
+                ## url
+                The sponsor's url which is used to create a link that wraps the sponsor's logo.
+
+                ## separator
+                The text that will be used as a separator between sponsor items. If provided it displays after the sponsor's logo. Default value is &amp;.
+
+                ## showTitle
+                Boolean value to determine whether to show the sponsor's title.
+
+                ## showDisclaimer
+                Boolean value to determine whether to show the sponsor's disclaimer.
+
+                ## showSeparator
+                Boolean value to determine whether to show the separator after the sponsor's logo.
+                
+                # Dependencies/References
+
+                ## mntl-universal-image
+                This displays the sponsor's logo image. This will display the sponsorImage assocaited with the sponsor.
+
+                ## mntl-tooltip
+                Including this component ensures all the necessary tooltip scripts are included. This is needed for 
+                the tooltip that shows on hover of the disclaimer.
+            </documentation>
+
+            <property name="disclaimer" value="What is this thing?" />
+
+            <for id="sponsor-logo">
+                <property name="lazyload" value="false" type="boolean" />
+            </for>
+
+            <for id="sponsor-logo, placeholderWidth, placeholderHeight, alt">
+                <property name="image" value="${@sponsor.sponsorImage}" />
+            </for>
+
+            <for id="title, disclaimerText, url, image">
+                <property name="sponsor" value="${@document.sponsors.getList()[0]}">
+                    <model name="mockDocument" id="document">
+                        <property name="template" value="structured-content-multiple-sponsors" />
+                    </model>
+                </property>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/sponsorships/css/sponsorship-item.css" />
+
+        <!-- properites that hold the content shown in the sponsorship item -->
+        <property name="title" value="${@sponsor?.title ?: 'Sponsored by'}" />
+        <property name="disclaimer" value="What's this?" />
+        <property name="disclaimerText" value="${@sponsor?.description ?: ''}" />
+        <property name="url" value="${@sponsor?.pixelTrackingUrl ?: @sponsor?.url}" />
+        <property name="separator" value="&amp;" />
+
+        <!-- properties to hide or show parts of the sponsorship item -->
+        <property name="showTitle" value="true" type="boolean" />
+        <property name="showDisclaimer" value="true" type="boolean" />
+        <property name="showSeparator" value="false" type="boolean" />
+
+        <!-- image shown for the sponsorship item -->
+        <component location="image" id="sponsor-logo" ref="mntl-universal-image">
+            <property name="width" value="1500" type="integer" />
+            <property name="height" value="0" type="integer" />
+            <property name="placeholder" value="false" type="boolean" />
+            <property name="class" value="sponsorship-item__logo" />
+        </component>
+
+        <!-- include the mntl-tooltip component to ensure tooltip scripts are available -->
+        <component ref="mntl-tooltip" />
+
+	</component>
+
+</components>

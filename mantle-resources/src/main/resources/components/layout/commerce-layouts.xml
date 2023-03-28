@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<!-- COMMERCE LAYOUTS -->
+
+	<!-- COMMERCE - ROUNDUP -->
+	<component id="mntl-layout-body--listsc-commerce" ref="mntl-layout-body">
+
+		<!-- Adding providedImageSources to ensure that the vertical has the necessary model in the render manifest to add the required link headers for primary images -->
+		<component location="main" ref="mntl-group">
+			<model name="primaryImageLinkHeader" id="providedImageSources">
+				<property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent">
+					<model name="DOCUMENT" id="document" />
+				</property>
+				<property name="width" value="1500" type="integer" />
+				<property name="height" value="0" type="integer" />
+				<property name="sizes" value="750px" />
+				<property name="cropSetting" value="" />
+				<property name="forceSize" value="false" type="boolean" />
+				<property name="fitInStyle" value="" />
+				<property name="webpAuto" value="true" type="boolean" />
+				<property name="useGifv" value="true" type="boolean" />
+
+				<list id="filters">
+					<property name="upscale" value="${imageFilter.noUpscale()}" />
+					<property name="maxBytes" value="max_bytes(150000)" />
+					<property name="stripicc" value="strip_icc()" />
+				</list>
+
+				<map id="srcset">
+					<property name="minWidth" value="750" type="integer" />
+					<property name="maxWidth" value="750" type="integer" />
+					<property name="maxHeight" value="0" type="integer" />
+					<property name="stepCount" value="3" type="integer" />
+				</map>
+
+			</model>
+		</component>
+
+		<component location="main" ref="mntl-article--external">
+			<list id="class">
+				<property name="sc-ad-container" value="sc-ad-container" />
+				<property name="layout-type" value="mntl-article--three-column" />
+			</list>
+
+			<component location="article-left-rail" id="commerce-ext-toc" ref="mntl-external-component">
+	            <model name="externalComponent">
+	                <property name="serviceId" value="commerce" />
+	                <property name="componentId" value="${@isTocEnabled.value AND !@document.infoCatProductRecords.isEmpty() ? 'commerce-sticky-toc' : null}" onError="collapseSilent"> 
+		                <!-- ComponentId must be a spel expression to stop execution if dependencies are not met -->
+		                <model name="externalConfig" id="isTocEnabled">
+		                	<property name="key" value="com.about.globe.commerce.toc.enabled" />
+		                	<property name="default" value="false" type="boolean" />
+		                	<property name="type" value="${T(java.lang.Boolean).TYPE}" />      
+		                </model>
+	                	<model name="DOCUMENT" id="document" />
+	                </property>
+	                <property name="optional" value="true" type="boolean" />
+	            </model>
+	        </component>
+
+			<for id="external-content.externalComponent">
+				<property name="serviceId" value="commerce" />
+				<property name="componentId" value="round-up-content" />
+			</for>
+		</component>
+	</component>
+
+	<component id="mntl-commerce-roundup-layout" ref="mntl-external-layout-body">
+		<for id="mntl-external-basic-sublayout">
+			<property name="tag" value="article" />
+			<list id="class">
+				<property name="article" value="article" />
+			</list>
+		</for>
+
+		<for id="mntl-external-basic-sublayout-content">
+			<list id="class">
+				<property name="article-content" value="article-content" />
+				<property name="right-rail__offset" value="right-rail__offset" />
+			</list>
+		</for>
+
+		<for id="external-content.externalComponent">
+			<property name="serviceId" value="commerce" />
+			<property name="componentId" value="round-up-content" />
+		</for>
+	</component>
+
+	<!-- COMMERCE - APLUS -->
+	<component id="mntl-layout-body--aplus-commerce" ref="mntl-layout-body">
+		<component location="main" ref="mntl-article--external">
+			<stylesheet id="ad-styles" path="/static/components/ads/css/grid-rail.css" />
+
+			<list id="class">
+				<property name="sc-ad-container" value="sc-ad-container" />
+				<property name="layout-type" value="mntl-article--three-column" />
+			</list>
+
+			<for id="external-content.class">
+				<property name="article-content" value="article-content" />
+				<property name="right-rail" value="right-rail" />
+				<property name="right-rail__offset" value="right-rail__offset" />
+			</for>
+
+			<for id="external-content.externalComponent">
+				<property name="serviceId" value="commerce" />
+				<property name="componentId" value="round-up-content-aplus" />
+			</for>
+		</component>
+	</component>
+
+	<!-- COMMERCE - PRODUCT REVIEW -->
+	<component id="mntl-layout-body--reviewsc" ref="mntl-layout-body">
+
+		<!-- Including stickybits here until we can resolve external script load issues -->
+		<script group="bottom" path="/static/mantle/static/libs/js/stickybits.js" views="pc" />
+
+		<!-- Adding providedImageSources to ensure that the vertical has the necessary model in the render manifest to add the required link headers for primary images -->
+		<component location="main" ref="mntl-group">
+			<model name="primaryImageLinkHeader" id="providedImageSources">
+				<property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent">
+					<model name="DOCUMENT" id="document" />
+				</property>
+				<property name="width" value="1000" type="integer" />
+				<property name="height" value="1000" type="integer" />
+				<property name="sizes" value="" />
+				<property name="cropSetting" value="" />
+				<property name="forceSize" value="false" type="boolean" />
+				<property name="fitInStyle" value="" />
+				<property name="webpAuto" value="true" type="boolean" />
+				<property name="useGifv" value="true" type="boolean" />
+
+				<list id="filters">
+					<property name="upscale" value="${imageFilter.noUpscale()}" />
+					<property name="maxBytes" value="max_bytes(150000)" />
+					<property name="stripicc" value="strip_icc()" />
+				</list>
+			</model>
+		</component>
+
+		<component location="main" ref="mntl-article--external">
+			<list id="class">
+				<property name="layout-type" value="mntl-article--full-width" />
+			</list>
+	
+			<for id="external-content.externalComponent">
+				<property name="serviceId" value="commerce" />
+				<property name="componentId" value="product-review-content" />
+			</for>
+		</component>
+	</component>
+
+	<component id="mntl-commerce-product-review-layout" ref="mntl-external-layout-body">
+
+		<!-- Including stickybits here until we can resolve external script load issues -->
+		<script group="bottom" path="/static/mantle/static/libs/js/stickybits.js" views="pc" />
+
+		<for id="mntl-external-basic-sublayout">
+			<stylesheet id="mntl-sublayout-external-basic-styles" path="" mode="remove" />
+		</for>
+
+		<for id="external-content.externalComponent">
+			<property name="serviceId" value="commerce" />
+			<property name="componentId" value="product-review-content" />
+		</for>
+	</component>
+
+</components>

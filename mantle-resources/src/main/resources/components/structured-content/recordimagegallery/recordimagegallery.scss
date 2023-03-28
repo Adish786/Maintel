@@ -1,0 +1,114 @@
+@import 'mntlVariables';
+
+.mntl-sc-block-recordimagegallery {
+    .mntl-carousel {
+        &__wrapper {
+            display: grid;
+            grid: 'left right'
+                'indicator indicator'
+                / 1fr 1fr;
+        }
+
+        &__arrow {
+            display: flex;
+            position: static;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-white;
+            z-index: 1;
+
+            &--left {
+                grid-area: left;
+                place-self: center start;
+                margin-left: 1rem;
+            }
+
+            &--right {
+                grid-area: right;
+                place-self: center end;
+                margin-right: 1rem;
+            }
+
+            &-icon {
+                position: static;
+            }
+        }
+
+        &__items {
+            grid-area: left-start / left-start / right-end / right-end;
+        }
+
+        &__item {
+            flex: 0 0 100%;
+            margin-right: 1.5rem;
+        }
+
+        &__card {
+            position: relative;
+            padding: 0 0 (2/3) * 100%; // Maintain a 3:2 aspect ratio
+        }
+
+        &__indicator {
+            grid-area: indicator;
+            margin: 0.75rem 0;
+        }
+    }
+
+    &.allow-free-scroll {
+        margin: 0 -1rem;
+
+        @media (min-width: $mntl-bp-sm) {
+            margin: 0;
+        }
+
+        .mntl-carousel {
+            &__items {
+                padding: 0 2.5rem;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &:after {
+                    flex: 0 0 2.5rem;
+                }
+
+                @media (min-width: $mntl-bp-sm) {
+                    padding: 0;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+
+            &__item {
+                scroll-snap-margin-left: 2.5rem;
+                scroll-margin-left: 2.5rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @media (min-width: $mntl-bp-sm) {
+                    scroll-snap-margin-left: 0;
+                    scroll-margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .universal-image__image {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        user-select: none;
+    }
+}

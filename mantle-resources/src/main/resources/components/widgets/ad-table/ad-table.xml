@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <!-- Ad Tables -->
+    <component id="mntl-ad-table" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Ad Table</displayName>
+            <description>
+                Displays a table of performance marketing ad creatives, usually ads specifically targetted to a particular intent-driven
+                taxonomy or page type.
+            </description>
+            <documentation>
+                This component references **mntl-ad-table-column**. When implementing on your vertical, it you must configure these ad 
+                slots by passing in the correct id and pos value to each slot. 
+            </documentation>
+            <tags>In Progress</tags>
+            
+            <for id="mntl-ad-table__heading">
+                <property name="text" value="Compare Popular Online Brokers" mode="replace" />
+            </for>
+
+            <for id="mntl-ad-table-column.gptAd.id, mntl-ad-table-column.gptAd.pos">
+                <property name="tableType" value="brokertable" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/ad-table/css/ad-table.css" />
+        <script path="/static/mantle/components/widgets/ad-table/js/ad-table.js" />
+
+        <for id="id, pos">
+            <property name="tableType" value="adtable" />
+        </for>
+
+        <component location="content" id="mntl-ad-table__heading" ref="mntl-text-block">
+            <property name="text" value="Generic Ad Table Heading" />
+        </component>
+
+        <component location="content" id="mntl-ad-table__disclosure" ref="mntl-block">
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <component location="content" id="mntl-ad-table__disclosure-label" ref="mntl-button">
+                <property name="text" value="Advertiser Disclosure" />
+            </component>
+
+            <component location="content" id="mntl-ad-table__disclosure-description" ref="mntl-block">
+                <component location="content" id="mntl-ad-table__disclosure-close" ref="mntl-text-block">
+                    <property name="text" value="&amp;times;" />
+                </component>
+
+                <component location="content" id="mntl-ad-table__disclosure-content" ref="mntl-text-block">
+                    <property name="text" value="The offers that appear in this table are from partnerships from which Dotdash receives compensation." />
+                </component>
+            </component>
+        </component> <!-- /mntl-ad-table__disclosure -->
+
+        <component location="content" id="mntl-ad-table__content" ref="mntl-block">
+            <component location="content" id="mntl-ad-table__headers" ref="mntl-block">
+                <component location="content" id="mntl-ad-table__heading-1" ref="mntl-text-block">
+                    <property name="text" value="Provider" />
+                </component>
+
+                <component location="content" id="mntl-ad-table__heading-2" ref="mntl-text-block">
+                    <property name="text" value="Name" />
+                </component>
+
+                <component location="content" id="mntl-ad-table__heading-3" ref="mntl-text-block">
+                    <property name="text" value="Description" />
+                </component>
+            </component>
+
+            <component location="content" ref="mntl-ad-table-column" >
+                <for id="gptAd">
+                    <property name="id" value="${@tableType}1" />
+                    <property name="pos" value="${@tableType}1"  />
+                </for>
+            </component>
+
+            <component location="content" ref="mntl-ad-table-column" >
+                <for id="gptAd">
+                    <property name="id" value="${@tableType}2" />
+                    <property name="pos" value="${@tableType}2"  />
+                </for>
+            </component>
+
+            <component location="content" ref="mntl-ad-table-column" views="pc, tablet" >
+                <for id="gptAd">
+                    <property name="id" value="${@tableType}3" />
+                    <property name="pos" value="${@tableType}3"  />
+                </for>
+            </component>
+        </component> <!-- /mntl-ad-table__content -->
+
+    </component> <!-- /mntl-ad-table -->
+
+    <component id="mntl-ad-table--vertical" ref="mntl-ad-table" >
+        <for id="mntl-ad-table__heading-1">
+            <property name="text" value="Lender" mode="replace" />
+        </for>
+        
+        <for id="mntl-ad-table__heading-2">
+            <property name="text" value="At A Glance" mode="replace" />
+        </for>
+    </component>
+</components>

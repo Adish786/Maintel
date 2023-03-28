@@ -1,0 +1,31 @@
+.video-ad {
+    position: relative;
+}
+
+.mntl-gpt-adunit .video-placeholder {
+    background: #F0F0F0;
+
+    // targeting modifier on the .video-placeholder div
+    &[class*='leaderboard'] {
+        height: 250px;
+        max-width: 970px;
+        width: 100%;
+    }
+
+    // Deprecated to be removed in 3.13
+    &[class*='billboard'],
+    &[class*='mntl-billboard'] {
+        display: block;
+        height: 250px;
+        width: 300px;
+
+        ~ * {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    ~ * {
+        position: absolute;
+    }
+}

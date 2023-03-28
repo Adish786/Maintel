@@ -1,0 +1,39 @@
+$bp-productrecord: 60em !default;
+
+.mntl-commerce-button-list-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // hardcoded breakpont aligns with the content well on lifestyle-food. We're currently trying to
+    // find a good way to configure the breakpoint sizes on the vertical without having a ton
+    // of code duplication
+    @media all and (min-width: $bp-productrecord) {
+        align-items: baseline;
+        -ms-flex-align: start;
+    }
+}
+
+.mntl-commerce-button {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    max-width: 300px;
+
+    .link__wrapper {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 275px;
+    }
+
+    &[data-commerce-price]::after {
+        content: attr(data-commerce-price) '';
+        margin-left: 0.5rem;
+    }
+}
+
+// text-passage override
+.text-passage a.mntl-commerce-button {
+    background-image: none;
+}

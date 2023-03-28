@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #inline-chop
+\*------------------------------------*/
+/**
+ * Inline Chop
+ * A component that would chop a content with a given character count limit.
+ * 1. A button will be available to show the hidden content.
+ * 2. Left align if proceeded by amazon affiliate link.
+ */
+.inline-chop {
+    clear: both;
+}
+
+.inline-chop-content--hidden {
+    display: none;
+}
+
+.inline-chop-button.btn {
+    position: relative;
+    padding: 0.25rem 0.8rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+    border: solid 1px #D0D6D9;
+
+    /* override text decoration if the chop button is inside an anchor tag */
+    a & {
+        text-decoration: none;
+        display: inline-block;
+    }
+}

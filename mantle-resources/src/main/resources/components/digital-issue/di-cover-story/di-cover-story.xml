@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-cover-story" resourcePath="/components/digital-issue/di-cover-story/di-cover-story.ftl">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Cover Story</displayName>
+            <description></description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "background-color": set a flat color for the background (Ex: "#000000")
+                - "cta-text-color": set a flat color for the content background (Ex: "#FFFFFF")
+                - "cta-background-color": set an image for the background, which will override a color (Ex: "tistheseason_bkd-6f32c18b5ff6480fb22362da1da67387.jpg")
+                - "section-title-display": set a color for the content text (Ex: "#000000")
+
+                # REQUIRED PROPERTIES/COMPONENTS
+
+                ## digitalIssueCssVariables
+                The map of css variables to apply to the letter from the editor component, pulling from the root config list in the BOVD
+
+                ## digitalIssueRootConfigs
+                Pulls from the root config list in the BOVD
+
+                # OPTIONAL PROPERTIES/COMPONENTS
+
+                ## titleClass
+                The class for the title
+                Default: "type--unicorn"
+
+                ## contentClass
+                The class for the content
+                Default: "type--dog"
+            </documentation>
+
+            <for id="journeySection">
+                <property name="index" value="0" type="integer" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-cover-story/di-cover-story.css" />
+
+        <map id="digitalIssueCssVariables">
+            <property name="background-color" value="${@digitalIssueSectionConfigs?.get('background-color')}" onError="ignore" />
+            <property name="section-title-display" value="${@digitalIssueSectionConfigs?.get('section-title-display')}" onError="ignore" />
+            <property name="cta-text-color" value="${@digitalIssueSectionConfigs?.get('cta-text-color')}" onError="ignore" />
+            <property name="cta-background-color" value="${@digitalIssueSectionConfigs?.get('cta-background-color')}" onError="ignore" />
+        </map>
+
+        <property name="title" value="${@digitalIssueSectionConfigs?.get('section-title-display') == false ? null : @journeySection.shortHeading}" onError="ignore" />
+
+        <component location="background" id="mntl-di-cover-story__background" ref="mntl-universal-image">
+            <property name="tag" value="div" />
+            <property name="role" value="presentation" />
+            <property name="image" value="${@imageConfig != null ? {'objectId': @imageConfig} : null}" onError="ignore">
+                <property name="imageConfig" value="${@digitalIssueSectionConfigs?.get('background-image')}" onError="ignore" />
+            </property>
+
+            <property name="width" value="1500" type="integer" views="mobile" />
+            <property name="width" value="2000" type="integer" views="tablet, pc" />
+            <property name="height" value="0" type="integer" />
+        </component>
+
+        <component location="anchor" id="mntl-di-module__anchor" ref="mntl-toc-anchor">
+            <property name="tocId" value="${T(com.about.mantle.model.tasks.TableOfContentsTask).generateAnchorId(@journeySection.shortHeading)}" />
+        </component>
+
+        <component location="card" id="di-cover-story__card" ref="mntl-document-card">
+            <property name="trackingContainer" value="true" type="boolean" />
+
+            <property name="title" value="${@document.heading}" onError="ignore" />
+            <property name="image" mode="remove" />
+            <property name="byline" mode="remove" />
+            <property name="cta" mode="remove" />
+            <property name="kicker" mode="remove" />
+
+            <property name="titleTextClass" value="type--zebra" />
+
+            <component location="card__top" id="card__media" ref="mntl-universal-image">
+                <property name="videoDependency" value="${@landingPageVideo == null ? true : null}" onError="collapseSilent" />
+
+                <property name="placeholderWidth" mode="remove" />
+                <property name="placeholderHeight" mode="remove" />
+                <property name="tag" value="div" />
+                <property name="tagClass" value="card__media" />
+
+                <property name="width" value="840" type="integer" views="mobile, tablet" />
+                <property name="height" value="1080" type="integer" views="mobile, tablet" />
+
+                <property name="width" value="1020" type="integer" views="pc" />
+                <property name="height" value="1360" type="integer" views="pc" />
+
+                <property name="placeholder" value="true" type="boolean" />
+            </component>
+
+            <component location="card__top" ref="mntl-bcplayer">
+                <property name="videoDependency" value="${@landingPageVideo != null ? true : null}" onError="collapseSilent" />
+
+                <list id="class">
+                    <property name="u-autoplay-looped" value="u-autoplay-looped" />
+                </list>
+
+                <map id="attrs">
+                    <property name="style" value="--aspectRatioPaddingBottom: ${renderUtils.getVideoContainerPaddingBottomFromUrl(@videoDocument.thumbnailUrl)}; --backgroundImage: url('${@videoDocument.thumbnailUrl}'" onError="collapseSilent" />
+                </map>
+
+                <for id="style, accountId, videoId, nativePlayer, videoMetadata, thumbnailUrl">
+                    <property name="videoDocument" value="${@landingPageDocument?.primaryVideo?.document}" >
+                        <model id="landingPageDocument" name="DOCUMENT" />
+                    </property>
+                </for>
+            </component>
+
+            <component location="content" id="cover-story__text-container" ref="mntl-block">
+                <component location="content" id="cover-story__content" ref="mntl-sc-block-html">
+                    <list id="class">
+                        <property name="mntl-sc-block-html-sliced" mode="remove" />
+                        <property name="contentClass" value="type--dog" />
+                    </list>
+
+                    <property name="tag" value="div" />
+                    <property name="html" value="${@htmlContent}" onError="collapseSilent">
+                        <property name="htmlContent" value="${@coverStoryFirstBlock?.data?.html}" onError="collapseSilent" />
+                    </property>
+                </component>
+
+                <component id="cover-story__read-more" location="content" ref="mntl-button">
+                    <property name="text" value="READ MORE" />
+
+                    <list id="class">
+                        <property name="class" value="type--squirrel" />
+                    </list>
+                </component>
+            </component>
+
+            <for id="card__media, alt">
+                <property name="image" value="${@imageToUse?.objectId != null ? @imageToUse : @imageFallback}">
+                    <property name="imageToUse" value="${@document?.getImageForUsage('PRIMARY')}" onError="ignore" views="mobile, tablet" />
+                    <property name="imageToUse" value="${utils.isCuratedDocument(@document) ? @document?.programmingImage : @document?.getImageForUsage('PRIMARY')}" onError="ignore" views="pc" />
+
+                    <property name="imageFallback" value="${{objectId: messages['defaultPlaceHolderImage'], alt:'Card Placeholder Image', width: 600, height: 400}}" />
+                </property>
+            </for>
+
+            <for id="title, url, docId, imageToUse, videoDocument">
+                <property name="document" value="${@item.document}" />
+            </for>
+
+            <for id="card__media.videoDependency, mntl-bcplayer.videoDependency">
+                <property name="landingPageVideo" value="${@landingPageDocument?.primaryVideo?.document}">
+                    <model id="landingPageDocument" name="DOCUMENT" />
+                </property>
+            </for>
+        </component>
+
+        <for id="htmlContent">
+            <property name="coverStoryFirstBlock" value="${@coverStoryDocument?.getContentsListOfType('HTML')[0]}" onError="ignore" />
+        </for>
+
+        <for id="uri, coverStoryFirstBlock">
+            <model id="coverStoryDocument" name="DOCUMENT">
+                <property name="url" value="${@item?.document?.url}" onError="collapseSilent" />
+            </model>
+        </for>
+
+        <for id="url, text, document, coverStoryDocument.url">
+            <property name="item" value="${@journeySection.journeyDocuments[0]}" />
+        </for>
+
+        <for id="item, title, tocId">
+            <property name="journeySection" value="${@journeyStructure.sections[@index]}">
+                <model name="journeyStructure" />
+            </property>
+        </for>
+
+        <for id="digitalIssueCssVariables.p*, mntl-di-cover-story__background.image.imageConfig, title">
+            <model name="digitalIssueSectionConfigs" />
+        </for>
+
+        <for id="journeySection, digitalIssueSectionConfigs">
+            <property name="index" value="0" type="integer" />
+        </for>
+    </component>
+
+</components>

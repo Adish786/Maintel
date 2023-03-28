@@ -1,0 +1,93 @@
+plugins {
+    id "com.about.plugins.globe-java-conventions"
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+test {
+    systemProperty "environment", "local"
+    systemProperty "consul.enabled", true
+    systemProperty "consul.url", "https://consul-qa.a-ue1.dotdash.com:8500/"
+    systemProperty "consul.token", "dev"
+    systemProperty "datacenter", "ny"
+    systemProperty "servername", "localhost"
+    systemProperty "application", "mantle"
+}
+
+dependencies {
+    api platform(project(":"))
+    api project(":mantle-resources")
+    api "com.about:globe-core-server"
+    api "com.about:hippodrome-utilities"
+    api "com.about:hippodrome-url"
+    api "com.about:hippodrome-config"
+    api "com.about:hippodrome-jaxrs"
+    api "com.about:hippodrome-ehcache"
+    api "com.about:hippodrome-url-core"
+    api "com.about:hippodrome-restclient"
+
+    api "com.about:amazon-product-advert-api"
+    api "com.amazon.paapi5:paapi5-java-sdk"
+    api ("com.squareup.okhttp:okhttp:2.7.5") {
+        exclude group: "com.squareup.okio", module: "okio"
+    }
+    developmentOnly "org.springframework.boot:spring-boot-devtools"
+    api "org.springframework.boot:spring-boot-starter-actuator"
+    api "org.springframework.security:spring-security-web"
+    api "org.threeten:threetenbp"
+    api "io.gsonfire:gson-fire"
+    api "com.dotdash:dotdash-walmart-productlookup"
+    api "commons-validator:commons-validator:1.7"
+    /*
+      https://github.com/googlemaps/google-maps-services-java
+      Googlemaps services requires okhttp3 while amazon requires okhttp
+      We are excluding okio from okhttp to use the later version required by okhttp3
+      If this is removed, the exclusion should be removed as well from okhttp
+     */
+    api "com.google.maps:google-maps-services"
+    api "org.jsoup:jsoup"
+    api "org.glassfish.external:opendmk_jmxremote_optional_jar:1.0-b01-ea"
+    api "com.carrotsearch:hppc:0.7.1"
+    api "com.googlecode.htmlcompressor:htmlcompressor"
+    api "org.apache.commons:commons-compress:1.21"
+    api "org.apache.solr:solr-solrj:8.10.1"
+    api "com.vaadin:vaadin-sass-compiler:0.9.13"
+    api "commons-net:commons-net:3.6"
+    api "org.apache.kafka:kafka-clients:2.8.1"
+    api "javax.xml.ws:jaxws-api:2.3.1"
+    api "com.sun.xml.ws:jaxws-rt:2.3.5"
+    api "com.amazonaws:aws-java-sdk-ses:1.12.100"
+    api "com.opencsv:opencsv:5.5.2"
+    api "com.j2html:j2html:1.4.0"
+    api "org.glassfish.jersey.media:jersey-media-multipart"
+    api "org.jolokia:jolokia-spring:${jolokiaSpringVersion}"
+    api "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    api "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+
+    implementation "com.auth0:jwks-rsa:0.21.1"
+
+    testImplementation "junit:junit"
+    testImplementation "org.hamcrest:hamcrest-all"
+    testImplementation "org.mockito:mockito-all"
+}
+description = "Mantle Server"
+
+/**
+ * We copy built mantle-resources jar to mantle-server's META-INF directory and then build mantle-server jar
+ */
+jar {
+    metaInf {
+        from project(":mantle-resources").jar.archiveFile
+        into "globe/"
+        rename ".*", "mantle-resources.jar"
+    }
+    manifest {
+        from file("${projectDir}/src/main/resources/META-INF/MANIFEST.MF")
+    }
+}

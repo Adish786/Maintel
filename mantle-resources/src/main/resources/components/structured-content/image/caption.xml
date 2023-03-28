@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-figure-caption" resourcePath="/components/structured-content/image/figure-caption.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Figure Caption</displayName>
+            <documentation>
+# Classes
+
+- __.mntl-figure-caption__
+
+Wraps the entire component
+
+- __.figure-article-caption-text__
+
+Wraps the photo caption text, excluding the photo owner
+
+- __.figure-article-caption-owner__
+
+Wraps the photo owner portion of the caption
+
+# Models / Properties
+
+- __caption__
+
+The image's caption
+
+- __owner__
+
+Owner of the image. Displayed under the caption
+
+- __showCaptionIcon__
+
+Determines whether we display the camera icon next to the photo caption
+
+            </documentation>
+            <property name="caption" value="This is the test caption." onError="ignore"/>
+            <property name="owner" value="By Test Owner." onError="ignore"/>
+        </info>
+    </component>
+</components>

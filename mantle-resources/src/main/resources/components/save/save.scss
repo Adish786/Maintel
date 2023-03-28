@@ -1,0 +1,66 @@
+@import 'mntlVariables';
+
+.mntl-save {
+    &__auth0 {
+        display: none;
+    }
+
+    &__confirmation-dialog {
+        .dialog__content {
+            width: 100%;
+
+            @media (min-width: $mntl-bp-sm) {
+                width: auto;
+            }
+        }
+        .dialog__main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    
+            .icon {
+                width: 5.8331rem;
+                height: 5.8331rem;
+            }
+        }
+
+        &-text {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 0;
+        background-color: transparent;
+
+        .icon {
+            margin-left: 0.3125rem;
+            stroke: $color-black;
+            stroke-width: 0.125rem;
+            fill: transparent;
+
+            .saved & {
+                fill: $color-black;
+            }
+        }
+
+        .saved & {
+            span::after {
+                content: 'd'; // Update save to saved
+            }
+        }
+    }
+}
+
+body.save-loading {
+    cursor: 'progress';
+    
+    .mntl-save {
+        cursor: 'progress';
+    }
+}

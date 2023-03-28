@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-materials-tools" ref="mntl-block">
+        <info>
+            <category>Mantle Components/How To</category>
+            <displayName>Materials and Tools Section</displayName>
+            <description>Displays the Equipment/Tools and Materials section used in a how to template. Will collapse each group if necessary</description>
+        </info>
+        <stylesheet path="/static/mantle/components/how-to/materials-tools/materials-tools.css" />
+
+        <component location="content"  id="mntl-materials-tools__heading" ref="mntl-text-block">
+            <property name="tag" value="h2" />
+            <property name="text" value="What You'll Need" />
+        </component>
+
+        <component location="content"  id="mntl-materials-tools__wrapper" ref="mntl-block">
+            <component location="content" id="mntl-materials-group--tools" ref="mntl-materials-group">
+                <property name="collapseIfNull" value="${@document.toolGroups.list[0].materials != null ? true : null}" onError="collapseSilent" />
+
+                <for id="mntl-materials-group__heading">
+                    <property name="text" value="Equipment / Tools" />
+                </for>
+
+                <for id="mntl-material__item">
+                    <property name="groups" value="${@document.toolGroups.list}" />
+                </for>
+            </component>
+
+            <component location="content" id="mntl-materials-group--materials" ref="mntl-materials-group">
+                <property name="collapseIfNull" value="${@document.materialGroups.list[0].materials != null ? true : null}" onError="collapseSilent" />
+
+                <for id="mntl-materials-group__heading">
+                    <property name="text" value="Materials" />
+                </for>
+
+                <for id="mntl-material__item">
+                    <property name="groups" value="${@document.materialGroups.list}" />
+                </for>
+            </component>
+
+            <for id="mntl-materials-group--tools.collapseIfNull, mntl-materials-group--materials.collapseIfNull, mntl-material__item.groups">
+                <model name="DOCUMENT" id="document" />
+            </for>
+        </component>
+    </component>
+</components>

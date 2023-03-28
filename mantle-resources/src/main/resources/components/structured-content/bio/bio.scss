@@ -1,0 +1,12 @@
+.mntl-sc-block-bio {
+    display: flex;
+    flex: wrap;
+
+    &__meta {
+        max-width: 50%;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}

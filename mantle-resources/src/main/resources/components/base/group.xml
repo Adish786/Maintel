@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-group" resourcePath="/components/base/view/group.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Group</displayName>
+            <description>
+                Basic wrapper that provides "content" location hook for child components.  Same as Mantle Block component but does not provide a wrapper element.
+            </description>
+            <documentation>
+                # Locations
+
+                * __content__
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+    </component>
+
+	<component id="mntl-block" resourcePath="/components/base/view/block-group.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Mantle Block</displayName>
+            <description>
+                Outputs wrapper element for component and provides "content" location hook for child components.  Same as the Mantle Group component, but provides a wrapper element.
+            </description>
+            <documentation>
+                # Properties / Models
+
+                * __tag__: tag used for the wrapper element.  Defaults to `div`.
+
+                # Locations
+
+                * __content__
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+    </component>
+
+	<component id="mntl-expandable-block" resourcePath="/components/base/view/expandable-block.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Mantle Expandable Block</displayName>
+            <description>
+                Outputs wrapper element for component and provides "static-content", "toggle-content" and "expandable-content" location hooks for child components.
+                Components placed in "static-content" location are always shown.
+                Components placed in "expandable-content" location are shown/hidden on click of any component in "toggle-content" location.
+            </description>
+            <documentation>
+                Add the class name `is-expanded` to show the components in the "expandable-content" location by default.
+                Otherwise the components in the "expandable-content" location are hidden by default.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+        <script path="/static/mantle/components/base/js/expandable-block.js" />
+        <stylesheet path="/static/mantle/components/base/css/expandable-block.css" />
+    </component>
+
+	<component id="mntl-text-block" resourcePath="/components/base/view/text-block.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Text Block</displayName>
+            <description>
+                Outputs wrapper div for component and sets content to configured text
+            </description>
+            <documentation>
+                __text__ ```String```
+
+                Text to be displayed in component
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            
+            <property name="text" value="Sample text" />
+        </info>
+    </component>
+
+    <component id="mntl-text-link" resourcePath="/components/base/view/text-link.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Text Link</displayName>
+            <description>
+                Outputs wrapper link component and sets content to configured text. 
+                If no uri property is passed in, component will default to a passed in tag or (if not tag is passed in) defaults to span instead.
+            </description>
+            <documentation>
+                __model.text__ ```String```
+
+                Text to be displayed as link
+
+                __model.uri__ ```String```
+
+                URI where link goes
+
+                __model.external__ ```boolean|false``` [optional]
+
+                If true, will make target='_blank'
+
+                __model.trackingContainer__ ```boolean|true``` [optional]
+
+                Will add or remove tracking from component
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            
+            <property name="text" value="Sample text" />
+        </info>
+    </component>
+    
+    <component id="mntl-image" resourcePath="/components/base/view/image.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Image</displayName>
+            <description>
+                Image
+            </description>
+            <documentation>
+            </documentation>
+            <tags>Complete</tags>
+        	<property name="imageObjectId" value="about-us-mrb-5b7efad9c9e77c0024cee5a1.png" />
+            <property name="alt" value="This is a test alt text with &quot;quotations&quot; in it."  />
+            <property name="width" value="752" type="integer" />
+		    <property name="height" value="160" type="integer" />	            
+        </info>
+    </component>
+
+</components>

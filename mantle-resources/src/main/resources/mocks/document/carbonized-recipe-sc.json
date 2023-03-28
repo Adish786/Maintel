@@ -1,0 +1,722 @@
+{
+    "revisionId": "6422430_1662056707550",
+    "authorKey": "1010546",
+    "lastEditingAuthorId": "1010546",
+    "lastEditingUserId": "153546959002053",
+    "url": "https://www.foodandwine.com/recipes/linguine-and-shrimp-with-sauce-vierge",
+    "rootUrl": "https://www.foodandwine.com/recipes/linguine-and-shrimp-with-sauce-vierge",
+    "vertical": "FOODANDWINE",
+    "docId": 6422430,
+    "templateType": "RECIPESC",
+    "documentState":
+    {
+        "state": "ACTIVE",
+        "activeDate": 1662056559700
+    },
+    "dates":
+    {
+        "created": 1656509315000,
+        "updated": 1661350025000,
+        "firstPublished": 1656850909000,
+        "lastPublished": 1661350025000,
+        "displayed": 1656850909000,
+        "lastMaterialPublished": 1656850909000
+    },
+    "noIndex": false,
+    "title": "Linguine and Shrimp with Sauce Vierge",
+    "socialTitle": "Linguine and Shrimp with Sauce Vierge",
+    "metaDescription": "Justin Chapple&#39;s Linguine and Shrimp with Sauce Vierge pairs juicy shrimp with a bright French tomato sauce.",
+    "heading": "Linguine and Shrimp with Sauce Vierge",
+    "taggedImages":
+    {
+        "list":
+        [
+            {
+                "image":
+                {
+                    "url": "https://static.onecms.io/wp-content/uploads/sites/9/2022/06/16/Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722.jpg",
+                    "caption": "",
+                    "owner": "Photo by Greg DuPree / Food Styling by Margaret Monroe Dickey / Prop Styling by Claire Spollen",
+                    "alt": "Linguine and Shrimp with Sauce Vierge",
+                    "width": 2000,
+                    "height": 1334,
+                    "id": "a5cf8b21861848ebb668169f3f76f95a",
+                    "fileName": "Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722.jpg",
+                    "objectId": "Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722-a5cf8b21861848ebb668169f3f76f95a.jpg",
+                    "encodedThumbnail": "R0lGODlhCgAHAPYAAAsBABcFASIeG1kcAEM+OkZAMl10Al5XTW9pXYQKAKtRLIB9buI5Aus+Ar6DM5CGetyUJeixANOBUtqxR/28VPDLffnZbI+EgJycnKWdkMChjce+uf+9jNrJncngqPDNle/PqPrjlfrnovjjtP/zrcbExc7KydPbzt7b1OHd3OHh4eHg5e3p5urq6uvr7e7t6e/w8vLu6/Tw7/fy7v//7fHx8fHx8/Pz8/Ly9PT09Pb09fb29Pf39/f3+fn49P369fj4+Pj6+fj9+f7/+v///QsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBACwAAAAACgAHAEYIUQAPYOBho0UKEy5qsMDxIICGIRAM0Fgx40IQEAkATODgQYWOBQVyvDixoUMPH0QyABESwkEDBihKxLghQcGAChR2fCAgA8GNCCIskBghAMaPgAA7",
+                    "rightsUsage": "all-uses"
+                },
+                "tags":
+                {
+                    "list":
+                    [
+                        "TWITTER",
+                        "FACEBOOK",
+                        "PINTEREST",
+                        "RECIRC"
+                    ],
+                    "totalSize": 4
+                }
+            }
+        ],
+        "totalSize": 1
+    },
+    "primaryVideo":
+    {
+        "docId": 6502091,
+        "document":
+        {
+            "revisionId": "6502091_1661436573338",
+            "url": "https://www.foodandwine.com/6311295463112-fw-mg-linguineshrimp-web",
+            "rootUrl": "https://www.foodandwine.com/6311295463112-fw-mg-linguineshrimp-web",
+            "vertical": "FOODANDWINE",
+            "docId": 6502091,
+            "templateType": "BRIGHTCOVEVIDEO",
+            "documentState":
+            {
+                "state": "ACTIVE",
+                "activeDate": 1661264150295
+            },
+            "dates":
+            {
+                "created": 1661262918920,
+                "updated": 1661353561928,
+                "firstPublished": 1661264150295,
+                "lastPublished": 1661353561928,
+                "displayed": 1661353561928,
+                "lastMaterialPublished": 1661353561928
+            },
+            "description": "Justin Chapple uses briny capers, sweet shallots and fragrant lemon zest to add bright complexity to acidic, sun-kissed tomatoes.",
+            "summary":
+            {
+                "description": "Justin Chapple uses briny capers, sweet shallots and fragrant lemon zest to add bright complexity to acidic, sun-kissed tomatoes."
+            },
+            "videoId": "6311295463112",
+            "accountId": "1660653193",
+            "name": "Justin Chapple Makes Linguine and Shrimp with Sauce Vierge",
+            "longDescription": "Sauce vierge, named after England's Queen Elizabeth I (also known as the Virgin Queen), is a fresh chopped tomato sauce with roots in southwestern France. This sauce is a wonderful example of how minimal preparation and perfect seasoning allow seasonal ingredients to shine. In this video, Justin Chapple uses briny capers, sweet shallots and fragrant lemon zest to add bright complexity to acidic, sun-kissed tomatoes. Try it spooned over grilled fish or simply scooped up with warm, crusty bread.",
+            "tags":
+            {
+                "list":
+                [
+                    "food and wine",
+                    "foodandwine.com",
+                    "food and wine magazine",
+                    "food",
+                    "cooking",
+                    "kitchen",
+                    "recipe",
+                    "recipes",
+                    "how to",
+                    "how to make",
+                    "tips",
+                    "tricks",
+                    "hacks",
+                    "lunch",
+                    "dinner",
+                    "supper",
+                    "meal",
+                    "prep",
+                    "ideas",
+                    "best",
+                    "home",
+                    "make",
+                    "ingredients",
+                    "video",
+                    "quick",
+                    "family",
+                    "what to make",
+                    "dinner party",
+                    "prepare",
+                    "friends",
+                    "homemade",
+                    "dish",
+                    "perfect",
+                    "cuisine",
+                    "cold",
+                    "sauce",
+                    "virgin",
+                    "simple",
+                    "relish",
+                    "linguine",
+                    "classic",
+                    "fresh",
+                    "seafood",
+                    "shrimp",
+                    "justin chapple",
+                    "fw",
+                    "mad genius",
+                    "tomato",
+                    "beefsteak"
+                ],
+                "totalSize": 49
+            },
+            "duration": 369771,
+            "economics": "AD_SUPPORTED",
+            "textTracks": true,
+            "franchise": "Mad Genius Tips",
+            "syndicate": "1",
+            "thumbnailUrl": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/1660653193/b3100363-97cc-4af6-8e20-f2160a610033/1fea8609-c4a7-43af-856d-b527d3ac4abc/1280x720/match/image.jpg"
+        },
+        "isPremium": true
+    },
+    "summary":
+    {
+        "title": "Linguine and Shrimp with Sauce Vierge",
+        "socialTitle": "Linguine and Shrimp with Sauce Vierge",
+        "heading": "Linguine and Shrimp with Sauce Vierge",
+        "description": "Justin Chapple&#39;s Linguine and Shrimp with Sauce Vierge pairs juicy shrimp with a bright French tomato sauce."
+    },
+    "audit":
+    {
+        "clientId": "data-pipeline-foodandwine",
+        "authParty": "data-services-pipeline",
+        "lastModified": 1662056707550
+    },
+    "stamp":
+    {
+        "docId": 6422430,
+        "adValue": "pidnull",
+        "audit":
+        {
+            "clientId": "ward_patch_stamps_tags",
+            "authParty": "ward",
+            "lastModified": 1663193306269
+        },
+        "tags":
+        {
+            "list":
+            [
+                "faw_PastaandNoodles"
+            ],
+            "totalSize": 1
+        }
+    },
+    "metaData":
+    {
+        "url": "",
+        "docId": 6422430,
+        "audit":
+        {
+            "clientId": "data-pipeline-foodandwine",
+            "authParty": "data-services-pipeline",
+            "lastModified": 1662056919616
+        },
+        "nlp":
+        {
+            "sentimentLabel": "positive",
+            "entities":
+            {
+                "list":
+                [
+                    {
+                        "salience": 0.20085329,
+                        "name": "Shrimp",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.13412228,
+                        "name": "Sauce vierge",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.06481835,
+                        "name": "example",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.06136686,
+                        "name": "Linguine",
+                        "type": "CONSUMER_GOOD"
+                    },
+                    {
+                        "salience": 0.04459162,
+                        "name": "Elizabeth I",
+                        "type": "PERSON"
+                    },
+                    {
+                        "salience": 0.020029454,
+                        "name": "roots",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.019930463,
+                        "name": "addition",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.014859866,
+                        "name": "preparation",
+                        "type": "OTHER"
+                    },
+                    {
+                        "salience": 0.013507716,
+                        "name": "Virgin Queen",
+                        "type": "PERSON"
+                    },
+                    {
+                        "salience": 0.011870579,
+                        "name": "England",
+                        "type": "ORGANIZATION"
+                    }
+                ],
+                "totalSize": 10
+            },
+            "categories":
+            {
+                "list":
+                [
+                    {
+                        "name": "/Food & Drink/Food",
+                        "confidence": 0.88
+                    },
+                    {
+                        "name": "/Food & Drink/Cooking & Recipes",
+                        "confidence": 0.8
+                    }
+                ],
+                "totalSize": 2
+            },
+            "sentimentScore": 0.2,
+            "sentimentMagnitude": 6.4,
+            "rollupEntities":
+            {
+                "list":
+                [
+                    "Shrimp",
+                    "Sauce vierge",
+                    "example",
+                    "Linguine"
+                ],
+                "totalSize": 4
+            },
+            "rollupCategories":
+            {
+                "list":
+                [
+                    "Food & Drink/Food",
+                    "Food & Drink/Cooking & Recipes"
+                ],
+                "totalSize": 2
+            },
+            "language": "en"
+        },
+        "contentDistribution":
+        {
+            "shareWithFacebook": true,
+            "destination": "ALL_PARTNERS"
+        },
+        "mTaxonomyIds":
+        {
+            "list":
+            [
+                "11961",
+                "13125",
+                "10261",
+                "12518",
+                "11352",
+                "12213",
+                "12303",
+                "10847",
+                "13638"
+            ],
+            "totalSize": 9
+        }
+    },
+    "bylines":
+    {
+        "list":
+        [
+            {
+                "id": "9bf22048e26045cba505bb6493f23185",
+                "type": "AUTHOR",
+                "authorId": "1010546",
+                "attribution": "By",
+                "descriptor": "By"
+            }
+        ],
+        "totalSize": 1
+    },
+    "legacyDocument": true,
+    "disclaimer":
+    {
+        "affiliate": false
+    },
+    "newsType": "NewsArticle",
+    "legacyMeredith":
+    {
+        "cmsId": "cms__onecms_posts_foodandwine_8024713"
+    },
+    "isOpinionContent": false,
+    "subheading": "Sauce vierge, named after England's Queen Elizabeth I (also known as the Virgin Queen), is a fresh chopped tomato sauce with roots in southwestern France. Whether referred to as \"virgin\" due to being uncooked or because of the addition of extra virgin olive oil, this sauce is a wonderful example of how minimal preparation and perfect seasoning allow seasonal ingredients to shine. Briny capers, sweet shallots and fragrant lemon zest pair together to add bright complexity to acidic, sun-kissed tomatoes. Seek out very ripe, juicy tomatoes for the best flavor in this summery sauce. Try it spooned over grilled fish or simply scooped up with warm, crusty bread.",
+    "instruction":
+    {
+        "list":
+        [
+            {
+                "id": 1,
+                "uuid": "fccc89af-2c9d-4c63-9ea6-e69fedac58e1",
+                "type": "HTML",
+                "data":
+                {
+                    "stepType": "NUMBERED",
+                    "isLastStep": true,
+                    "html": "<p>Stir together tomatoes, oil, shallot, capers, garlic, coriander, lemon zest and juice, crushed red pepper, 1 teaspoon salt, and 1/2 teaspoon black pepper in a large heatproof serving bowl until well combined; let stand at room temperature 1 hour.</p>"
+                }
+            },
+            {
+                "id": 2,
+                "uuid": "ee24b442-cf17-4113-89d4-033c5e63e5b1",
+                "type": "HTML",
+                "data":
+                {
+                    "stepType": "NUMBERED",
+                    "isLastStep": true,
+                    "html": "<p>Bring a large saucepan of salted water to a boil over high. Add linguine; cook, stirring occasionally, 8 minutes. Add shrimp to pasta; cook, stirring occasionally, until linguine is al dente and shrimp are just cooked through, about 4 minutes.</p>"
+                }
+            },
+            {
+                "id": 3,
+                "uuid": "7be5362d-0756-4a73-a3fd-b154cb6c483c",
+                "type": "HTML",
+                "data":
+                {
+                    "stepType": "NUMBERED",
+                    "isLastStep": true,
+                    "html": "<p>Drain pasta-shrimp mixture; immediately add to tomato mixture in bowl. Vigorously toss to coat well. Fold in chives and basil; sprinkle with remaining 1/2 teaspoon salt and remaining 1/4 teaspoon black pepper. Serve, passing Parmigiano-Reggiano at the table.</p>"
+                }
+            },
+            {
+                "id": 4,
+                "uuid": "6329f265-7654-4293-a45c-05d65ee26a9a",
+                "type": "IMAGE",
+                "data":
+                {
+                    "isLastBlockOfLastStep": true,
+                    "image":
+                    {
+                        "url": "https://static.onecms.io/wp-content/uploads/sites/9/2022/06/16/Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722.jpg",
+                        "caption": "",
+                        "owner": "Photo by Greg DuPree / Food Styling by Margaret Monroe Dickey / Prop Styling by Claire Spollen",
+                        "alt": "Linguine and Shrimp with Sauce Vierge",
+                        "width": 2000,
+                        "height": 1334,
+                        "id": "a5cf8b21861848ebb668169f3f76f95a",
+                        "fileName": "Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722.jpg",
+                        "objectId": "Linguine-and-Shrimp-with-Sauce-Vierge-FT-RECIPE0722-a5cf8b21861848ebb668169f3f76f95a.jpg",
+                        "encodedThumbnail": "R0lGODlhCgAHAPYAAAsBABcFASIeG1kcAEM+OkZAMl10Al5XTW9pXYQKAKtRLIB9buI5Aus+Ar6DM5CGetyUJeixANOBUtqxR/28VPDLffnZbI+EgJycnKWdkMChjce+uf+9jNrJncngqPDNle/PqPrjlfrnovjjtP/zrcbExc7KydPbzt7b1OHd3OHh4eHg5e3p5urq6uvr7e7t6e/w8vLu6/Tw7/fy7v//7fHx8fHx8/Pz8/Ly9PT09Pb09fb29Pf39/f3+fn49P369fj4+Pj6+fj9+f7/+v///QsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBAAsBACwAAAAACgAHAEYIUQAPYOBho0UKEy5qsMDxIICGIRAM0Fgx40IQEAkATODgQYWOBQVyvDixoUMPH0QyABESwkEDBihKxLghQcGAChR2fCAgA8GNCCIskBghAMaPgAA7",
+                        "rightsUsage": "all-uses"
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "uuid": "64cd32de-9ef4-49aa-b37e-29af162bd2cc",
+                "type": "HEADING",
+                "data":
+                {
+                    "text": "Suggested Pairing"
+                }
+            },
+            {
+                "id": 6,
+                "uuid": "1ac49608-62e8-41b8-902f-a0c52c21d40e",
+                "type": "HTML",
+                "data":
+                {
+                    "html": "<p>Brisk Italian white: Marchesi Antinori Tenuta Guado al Tasso Vermentino</p>"
+                }
+            }
+        ],
+        "totalSize": 6
+    },
+    "recipeServing":
+    {
+        "unit": "",
+        "quantity":
+        {
+            "min":
+            {
+                "numerator": 4,
+                "denominator": 1
+            }
+        }
+    },
+    "typedTimeRanges":
+    {
+        "list":
+        [
+            {
+                "timeRange":
+                {
+                    "min": 1800000
+                },
+                "recipeTimeType": "ACTIVE"
+            },
+            {
+                "timeRange":
+                {
+                    "min": 6300000
+                },
+                "recipeTimeType": "TOTAL"
+            }
+        ],
+        "totalSize": 2
+    },
+    "ingredientGroups":
+    {
+        "list":
+        [
+            {
+                "ingredients":
+                {
+                    "list":
+                    [
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1</span> <span data-ingredient-unit=\"true\">pound</span> <span data-ingredient-name=\"true\">beefsteak tomatoes, cored and finely chopped (about 3 cups)</span></p>",
+                            "originalIngredientText": "1 pound beefsteak tomatoes, cored and finely chopped (about 3 cups)",
+                            "unit":
+                            {
+                                "name": "pound"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "46df9105420742ad3209a9e9f3ac1a7f"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">½</span> <span data-ingredient-unit=\"true\">cup</span> <span data-ingredient-name=\"true\">extra-virgin olive oil</span></p>",
+                            "originalIngredientText": "0.5 cup extra-virgin olive oil",
+                            "unit":
+                            {
+                                "name": "cup"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 2
+                                }
+                            },
+                            "meredithId": "4e1177eebceb9f6815801b79988b0bae"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1</span> <span data-ingredient-unit=\"true\">large</span> <span data-ingredient-name=\"true\">shallot, minced (about 1/4 cup)</span></p>",
+                            "originalIngredientText": "1 large shallot, minced (about 1/4 cup)",
+                            "unit":
+                            {
+                                "name": "large"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "4be66b4686ebd29441f1ed250797d905"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">3</span> <span data-ingredient-unit=\"true\">tablespoons</span> <span data-ingredient-name=\"true\">capers, drained</span></p>",
+                            "originalIngredientText": "3 tablespoons capers, drained",
+                            "unit":
+                            {
+                                "name": "tablespoons"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 3,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "3e4c00bde5afb0a340af4366c102458e"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">2</span> <span data-ingredient-unit=\"true\"></span> <span data-ingredient-name=\"true\">garlic cloves, minced (about 2 teaspoons)</span></p>",
+                            "originalIngredientText": "2  garlic cloves, minced (about 2 teaspoons)",
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 2,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "b4c41c7a757f24356a8c2127648dcf06"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">2</span> <span data-ingredient-unit=\"true\">teaspoons</span> <span data-ingredient-name=\"true\">coriander seeds (not ground), finely crushed</span></p>",
+                            "originalIngredientText": "2 teaspoons coriander seeds (not ground), finely crushed",
+                            "unit":
+                            {
+                                "name": "teaspoons"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 2,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "f02564176f1d3a538becf5991dbd4750"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1</span> <span data-ingredient-unit=\"true\">teaspoon</span> <span data-ingredient-name=\"true\">grated lemon zest plus 2 tablespoons fresh lemon juice (from 1 lemon)</span></p>",
+                            "originalIngredientText": "1 teaspoon grated lemon zest plus 2 tablespoons fresh lemon juice (from 1 lemon)",
+                            "unit":
+                            {
+                                "name": "teaspoon"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "378f5eb0fa6c3538872d992528d636d9"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1</span> <span data-ingredient-unit=\"true\">teaspoon</span> <span data-ingredient-name=\"true\">crushed red pepper</span></p>",
+                            "originalIngredientText": "1 teaspoon crushed red pepper",
+                            "unit":
+                            {
+                                "name": "teaspoon"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "dc0777d89a7773dbe9cf242b4028b853"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1 ½</span> <span data-ingredient-unit=\"true\">teaspoons</span> <span data-ingredient-name=\"true\">kosher salt, divided</span></p>",
+                            "originalIngredientText": "1.5 teaspoons kosher salt, divided",
+                            "unit":
+                            {
+                                "name": "teaspoons"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 3,
+                                    "denominator": 2
+                                }
+                            },
+                            "meredithId": "d92f5a0daee938616ac4639a320d8894"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">¾</span> <span data-ingredient-unit=\"true\">teaspoon</span> <span data-ingredient-name=\"true\">black pepper, divided</span></p>",
+                            "originalIngredientText": "0.75 teaspoon black pepper, divided",
+                            "unit":
+                            {
+                                "name": "teaspoon"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 3,
+                                    "denominator": 4
+                                }
+                            },
+                            "meredithId": "9be2e6415c2ffb95457decf15f789e08"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">12</span> <span data-ingredient-unit=\"true\">ounces</span> <span data-ingredient-name=\"true\">uncooked linguine</span></p>",
+                            "originalIngredientText": "12 ounces uncooked linguine",
+                            "unit":
+                            {
+                                "name": "ounces"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 12,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "1d5e07684f11dd5c9a5be10f816d2b28"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">1</span> <span data-ingredient-unit=\"true\">pound</span> <span data-ingredient-name=\"true\">peeled and deveined raw large shrimp </span></p>",
+                            "originalIngredientText": "1 pound peeled and deveined raw large shrimp",
+                            "unit":
+                            {
+                                "name": "pound"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 1
+                                }
+                            },
+                            "meredithId": "1250e610d5aa61e2ba63981094475585"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">¾</span> <span data-ingredient-unit=\"true\">cup</span> <span data-ingredient-name=\"true\">sliced (1/4- to 1/2-inch pieces) fresh chives </span></p>",
+                            "originalIngredientText": "0.75 cup sliced (1/4- to 1/2-inch pieces) fresh chives",
+                            "unit":
+                            {
+                                "name": "cup"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 3,
+                                    "denominator": 4
+                                }
+                            },
+                            "meredithId": "a9202c3764df32c9c1cce7bfcfd407d9"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\">½</span> <span data-ingredient-unit=\"true\">cup</span> <span data-ingredient-name=\"true\">chopped fresh basil</span></p>",
+                            "originalIngredientText": "0.5 cup chopped fresh basil",
+                            "unit":
+                            {
+                                "name": "cup"
+                            },
+                            "quantity":
+                            {
+                                "min":
+                                {
+                                    "numerator": 1,
+                                    "denominator": 2
+                                }
+                            },
+                            "meredithId": "94c634c34a0551a2ae503dbd32c7cc58"
+                        },
+                        {
+                            "annotatedIngredient": "<p><span data-ingredient-quantity=\"true\"></span> <span data-ingredient-unit=\"true\"></span> <span data-ingredient-name=\"true\">Freshly grated Parmigiano-Reggiano cheese, for serving</span></p>",
+                            "originalIngredientText": "Freshly grated Parmigiano-Reggiano cheese, for serving",
+                            "meredithId": "e55f90247e0d432a42e8adc533edd88e"
+                        }
+                    ],
+                    "totalSize": 15
+                }
+            }
+        ],
+        "totalSize": 1
+    },
+    "legacyMeredithRecipe": true
+}

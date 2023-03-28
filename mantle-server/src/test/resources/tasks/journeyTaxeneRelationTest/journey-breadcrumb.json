@@ -1,0 +1,340 @@
+{
+	"docId": 4135990,
+	"relationships":
+	{
+		"list":
+		[
+			{
+				"name": "journey",
+				"weight": 302.0,
+				"targetNode":
+				{
+					"docId": 2059461,
+					"relationships":
+					{
+						"list":
+						[
+							{
+								"name": "primaryParent",
+								"weight": 1.0,
+								"targetNode":
+								{
+									"docId": 4074003,
+									"relationships":
+									{
+										"list":
+										[
+											{
+												"name": "primaryParent",
+												"weight": 38.0,
+												"targetNode":
+												{
+													"docId": 4072979,
+													"relationships":
+													{
+														"list":
+														[
+															{
+																"name": "primaryParent",
+																"weight": 4.0,
+																"targetNode":
+																{
+																	"docId": 4053121,
+																	"document":
+																	{
+																		"url": "https://www.thebalancemoney.com/",
+																		"rootUrl": "https://www.thebalancemoney.com/root-4053121",
+																		"docId": 4053121,
+																		"slug": "root",
+																		"templateType": "TAXONOMY",
+																		"documentState":
+																		{
+																			"state": "ACTIVE",
+																			"activeDate": 1471267668686
+																		},
+
+																		"dates":
+																		{
+																			"created": 1471267668686
+																		},
+
+																		"title": "The Balance - Make Money Personal",
+																		"heading": "The Balance",
+
+																		"author":
+																		{
+																			"contributingWriter": false
+																		},
+
+																		"stamp":
+																		{
+																			"url": "https://www.thebalancemoney.com/",
+																			"docId": 4053121,
+																			"stampValue": "bal_root",
+																			"adValue": "pidbal_root"
+																		},
+
+																		"summary":
+																		{
+																			"title": "The Balance - Make Money Personal",
+																			"heading": "The Balance",
+																			"description": "Master every aspect of your financial life with expert advice and how-to guides on topics ranging from investing and debt management to finding a new job."
+																		},
+
+																		"shortHeading": "The Balance"
+																	}
+																}
+															}
+														],
+
+														"totalSize": 1
+													},
+
+													"document":
+													{
+														"url": "https://www.thebalancemoney.com/your-career-4072979",
+														"rootUrl": "https://www.thebalancemoney.com/your-career-4072979",
+														"docId": 4072979,
+														"slug": "your-career",
+														"templateType": "TAXONOMY",
+														"documentState":
+														{
+															"state": "ACTIVE",
+															"activeDate": 1471267668689
+														},
+
+														"dates":
+														{
+															"created": 1471267668689
+														},
+
+														"title": "Your Career",
+														"description": "Whether you're trying to find a new job or just be more successful at your current job, we can help you reach your career goals. Learn how to polish up your resume, write a resume that gets noticed, and knock it out of the park at your next interview. And once you've got the job, learn how to climb the corporate ladder and advance your career in a variety of fields and occupations.",
+														"heading": "Your Career",
+
+														"author":
+														{
+															"contributingWriter": false
+														},
+
+														"stamp":
+														{
+															"url": "https://www.thebalancemoney.com/your-career-4072979",
+															"docId": 4072979,
+															"stampValue": "bal_your-career",
+															"adValue": "pidbal_your-career"
+														},
+
+														"summary":
+														{
+															"title": "Your Career",
+															"heading": "Your Career",
+															"description": "Whether you're trying to find a new job or just be more successful at your current job, we can help you reach your career goals."
+														},
+
+														"shortHeading": "Your Career"
+													}
+												}
+											}
+										],
+
+										"totalSize": 1
+									},
+
+									"document":
+									{
+										"authorKey": "2335",
+										"url": "https://www.thebalancemoney.com/job-search-4074003",
+										"rootUrl": "https://www.thebalancemoney.com/job-search-4074003",
+										"docId": 4074003,
+										"slug": "job-search",
+										"templateType": "TAXONOMY",
+										"documentState":
+										{
+											"state": "ACTIVE",
+											"activeDate": 1471267668726
+										},
+
+										"dates":
+										{
+											"created": 1490289766334,
+											"updated": 1493229323032,
+											"firstPublished": 1490291993855,
+											"lastPublished": 1493229323032
+										},
+
+										"title": "Job Search, Career and Employment Advice",
+										"socialTitle": "Step By Step Guide for a Successful Job Search",
+										"description": "Need to find a job? We can help. Learn how to find a job in any field, and get expert advice on resumes, cover letters, job applications, and job interviews.",
+										"heading": "Job Searching",
+										"author":
+										{
+											"id": "2335",
+											"type": "AUTHOR",
+											"status": "LIVE",
+											"displayName": "Alison Doyle",
+											"displayNamePossessive": "Alison's",
+											"contributingWriter": false,
+											"language": "en_US",
+											"liveDate": 898732800000,
+											"numberOfExperts": 1,
+											"socialPresence":
+											[
+												{
+													"network": "facebook",
+													"url": "http://www.facebook.com/aboutjobsearch"
+												},
+
+												{
+													"network": "twitter",
+													"url": "https://twitter.com/alisondoyle"
+												}
+											],
+
+											"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+											"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+											"image":
+											{
+												"id": "58b849955f9b5880809d5df6",
+												"fileName": "2335.gif",
+												"objectId": "2335-58b849955f9b5880809d5df6.gif",
+
+												"width": 85,
+												"height": 85
+											}
+										},
+
+										"stamp":
+										{
+											"url": "https://www.thebalancemoney.com/job-search-4074003",
+											"docId": 4074003,
+											"stampValue": "bal_job-search",
+											"adValue": "pidbal_job-search"
+										},
+
+										"summary":
+										{
+											"title": "Job Search, Career and Employment Advice",
+											"socialTitle": "Step By Step Guide for a Successful Job Search",
+											"heading": "Job Searching",
+											"description": "Need to find a job? We can help. Learn how to find a job in any field, and get expert advice on resumes, cover letters, job applications, and job interviews."
+										},
+
+										"shortHeading": "Job Searching",
+										"thumbImage":
+										{
+											"width": 800,
+											"height": 800,
+											"objectId": "jobsearching_sm-5824dac45f9b58d5b1b85671.png"
+										}
+									}
+								}
+							}
+						],
+
+						"totalSize": 1
+					},
+
+					"document":
+					{
+						"key": "3d53de82912307867900e187",
+						"revisionKey": "3757b2371e2f33160f23f5fa",
+						"authorKey": "2335",
+						"url": "https://www.thebalancemoney.com/one-month-to-your-dream-job-2059461",
+						"rootUrl": "http://jobsearch.about.com/od/30days/fl/30-days-to-your-dream-job.htm",
+						"docId": 2059461,
+						"slug": "one-month-to-your-dream-job",
+						"templateType": "FLEXIBLEARTICLE",
+						"documentState":
+						{
+							"state": "ACTIVE",
+							"activeDate": 1487131531000
+						},
+
+						"dates":
+						{
+							"created": 1407091345000,
+							"updated": 1470442322000,
+							"firstPublished": 1409828885000,
+							"lastPublished": 1487131531000
+						},
+
+						"socialTitle": "How to Get Hired in 30 Days or Less!",
+
+						"author":
+						{
+							"id": "2335",
+							"type": "AUTHOR",
+							"status": "LIVE",
+							"displayName": "Alison Doyle",
+							"displayNamePossessive": "Alison's",
+							"contributingWriter": false,
+							"language": "en_US",
+							"liveDate": 898732800000,
+							"numberOfExperts": 1,
+							"socialPresence":
+							[
+								{
+									"network": "facebook",
+									"url": "http://www.facebook.com/aboutjobsearch"
+								},
+
+								{
+									"network": "twitter",
+									"url": "https://twitter.com/alisondoyle"
+								}
+							],
+
+							"bioUrl": "https://www.thebalancemoney.com/alison-doyle-2058389",
+							"imageUrl": "http://0.tqn.com/d/g/bw/2335.gif",
+							"image":
+							{
+								"id": "58b849955f9b5880809d5df6",
+								"fileName": "2335.gif",
+								"objectId": "2335-58b849955f9b5880809d5df6.gif",
+
+								"width": 85,
+								"height": 85
+							}
+						},
+
+						"summary":
+						{
+							"title": "Practical Tips to Find a New Job Fast",
+							"socialTitle": "How to Get Hired in 30 Days or Less!",
+							"heading": "Practical Tips to Find a New Job Fast",
+							"description": "This guide provides practical tips to follow each day to help job seekers get advice online and get hired for a new dream job fast."
+						}
+					}
+				}
+			}
+		],
+
+		"totalSize": 1
+	},
+
+	"document":
+	{
+		"url": "https://dummy-programmed-summary-find-employers",
+		"rootUrl": "https://dummy-programmed-summary-find-employers",
+		"docId": 4135990,
+		"templateType": "PROGRAMMEDSUMMARY",
+		"documentState":
+		{
+			"state": "ACTIVE",
+			"activeDate": 1497633137231
+		},
+
+		"dates":
+		{
+			"created": 1497479344197,
+			"updated": 1497633137236
+		},
+
+		"socialTitle": "Find Employers",
+		"summary":
+		{
+			"socialTitle": "Find Employers"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+
+        maven {
+            url = uri("http://nexus.prod.aws.about.com/repository/maven-releases/")
+            allowInsecureProtocol = true
+        }
+
+        maven {
+            url = uri("http://nexus.prod.aws.about.com/repository/maven-snapshots/")
+            allowInsecureProtocol = true
+        }
+
+        mavenCentral()
+
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "mantle"
+include(":mantle-resources")
+include(":mantle-server")
+include(":mantle-venus")
+include(":mantle-venus:mantle-venus-test")
+include(":mantle-venus:mantle-venus-model")
+
+//Uncomment lines below to activate local globe
+//includeBuild '../globe-core'

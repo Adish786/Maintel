@@ -1,0 +1,42 @@
+
+/*------------------------------------*\
+    #RAIL VIDEO
+\*------------------------------------*/
+
+.mntl-rail-video {
+    .rail-video__featured-text {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .rail-video__title {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        min-height: 45px;
+        font-size: 13px;
+    }
+
+    .jw-flag-small-player {
+
+        /* important needed since font-size is defined as 1rem in jw-player.scss  */
+        .jw-text-track-cue {
+            font-size: 0.8rem !important;
+        }
+
+        .jw-text-track-display {
+            /* important needed since JW player is setting these styles inline */
+            top: 114.8906px !important;
+        }
+    }
+
+    .jw-flag-small-player:not(.jw-flag-user-inactive),
+    .jw-flag-small-player.jw-state-paused {
+        .jw-text-track-display {
+            top: 67px !important;
+        }
+    }
+}
+

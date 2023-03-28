@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-csrf" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Security</category>
+            <displayName>CSRF Token</displayName>
+            <description>JavaScript handling of the CSRF token</description>
+            <documentation>Include in the template at least once to activate</documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+
+        <script group="top" path="/static/mantle/components/csrf/csrf.js" />
+        <script group="top" evaluated="true" path="/static/mantle/components/csrf/csrf.evaluated.js" />
+        <script group="bottom" path="/static/mantle/components/csrf/csrf-jquery.js" />
+
+        <property name="sessionCookiesEnabled" value="${@externalConfig.value}">
+            <model name="externalConfig">
+                <property name="key" value="${T(com.about.mantle.app.MantleExternalConfigKeys).SESSION_COOKIES_ENABLED}" />
+                <property name="default" value="false" type="boolean" />
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+    </component>
+
+</components>

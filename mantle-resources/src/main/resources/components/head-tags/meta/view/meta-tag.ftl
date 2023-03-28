@@ -1,0 +1,1 @@
+<meta ${model.attributeName}="${model.attributeValue}" content="${model.content?html}"<#if model.itemprop?has_content> itemprop="${model.itemprop?html}"</#if> />

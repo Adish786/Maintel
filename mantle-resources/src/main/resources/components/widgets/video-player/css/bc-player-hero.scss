@@ -1,0 +1,7 @@
+@import "mntlMixins";
+
+.mntl-bcplayer-hero {
+    &__video {
+        @include fullWidth;
+    }
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-universal-primary-image" resourcePath="/components/image/view/universal-primary-image.ftl">
+        <info>
+            <category>Mantle Components/Media</category>
+            <displayName>Universal Primary Image</displayName>
+            <description>
+                This is the new universal Primary Image component. It replaces the mntl-primary-image component.
+                This uses a new thumbor primary image macro that uses the new thumbor image macro.
+                The new macro has gifv functionality built in, meaning any image with an extension of .gif will be served as a video in a video tag.
+            </description>
+            <documentation>
+                # Classes
+
+                ## .mntl-primary-image
+                class of the image tag
+
+                # Models / Properties
+
+                ## providedImageSources
+                Provides srcset, src and sizes (all image attributes) in one combined hash/object. Each value is a string wrapped in escaped quotes, ready to be uses as html attributes.
+                This task is also used to get image information which is added to link header to preload the primary image.
+
+                ## alt
+                Alt text for the image
+
+                ## placeholder
+                A boolean value used to determine whether the image should be wrapped in a placeholder div. This placeholder is useful when lazily loading images to prevent CLS
+
+                ## placeholderHeight
+                The height that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## placeholderWidth
+                The width that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## height
+                The height of the image you want to load. This will be used as a fallback placeholderHeight when you want an image with a specific height and width
+
+                ## width
+                The width of the image you want to load. This will be used as a fallback placeholderWidth when you want an image with a specific height and width
+            </documentation>
+
+           <for id="providedImageSources, width, alt, this">
+              <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}">
+                  <model name="mockDocument" id="document">
+                      <property name="template" value="structured-content-basic-one-of-each" />
+                  </model>
+               </property>
+           </for>
+        </info>
+
+        <script path="/static/mantle/components/image/js/gif.js" />
+        <stylesheet path="/static/mantle/components/structured-content/image/image.css" />
+        <stylesheet path="/static/mantle/components/image/css/gif.css" />
+
+        <property name="placeholder" value="true" type="boolean" />
+        <property name="placeholderHeight" value="${@image != null ? @image.height : 0}" />
+        <property name="placeholderWidth" value="${@image != null ? @image.width : 0}" />
+        <property name="alt" value="${@image?.alt != null ? @image.alt : ''}" />
+
+        <model name="primaryImageLinkHeader" id="providedImageSources">
+            <property name="sizes" value="750px" />
+            <property name="cropSetting" value="" />
+            <property name="forceSize" value="false" type="boolean" />
+            <property name="fitInStyle" value="" />
+            <property name="webpAuto" value="true" type="boolean" />
+            <property name="useGifv" value="true" type="boolean" />
+            <property name="ignoreMaxBytesOutsideSrcset" value="${renderUtils.uncappedImageWidthsEnabled()}" />
+
+            <list id="filters">
+                <property name="upscale" value="${imageFilter.noUpscale()}" />
+                <property name="maxBytes" value="max_bytes(150000)" />
+                <property name="stripicc" value="strip_icc()" />
+            </list>
+
+            <map id="srcset">
+                <property name="minWidth" value="750" type="integer" />
+                <property name="maxWidth" value="750" type="integer" />
+                <property name="maxHeight" value="0" type="integer" />
+                <property name="stepCount" value="0" type="integer" />
+            </map>
+        </model>
+
+        <component location="bottom" id="primary-image__figcap" ref="mntl-figure-caption">
+            <property name="collapseFigcap" value="${@caption == '' AND @owner == '' ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <for id="this, providedImageSources">
+            <property name="width" value="${renderUtils.uncappedImageWidthsEnabled() ? (@image.width ?: 10000) : 1500}" />
+            <property name="height" value="0" type="integer" />
+        </for>
+
+        <for id="primary-image__figcap, primary-image__figcap.collapseFigcap">
+            <property name="caption" value="${@image?.caption != null ? @image.caption : ''}" />
+            <property name="owner" value="${@image?.owner != null ? @image.owner : ''}" />
+        </for>
+
+        <for id="this, providedImageSources, placeholderHeight, placeholderWidth, alt, caption, owner, width">
+            <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+
+    </component>
+
+</components>

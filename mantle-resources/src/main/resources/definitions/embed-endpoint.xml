@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+	<!-- intended to be rendered by the /embed endpoint to serve embed content inside an iframe -->
+	<template id="mntl-embed-endpoint-template" ref="mntl-html">
+		<component id="mntl-preconnect" mode="remove" />
+		<component id="mntl-meta" mode="remove" />
+		<component id="mntl-caeslinks" mode="remove" />
+
+		<component location="head" ref="mntl-meta-tag">
+			<property name="attributeName" value="name" />
+			<property name="attributeValue" value="robots" />
+			<property name="content" value="NOINDEX, NOODP, NOYDIR" />
+		</component>
+
+		<component location="body" ref="mntl-embed-endpoint-content" />
+		<!-- script/stylesheet are outside the scope of the component because the component will collapse on failure.
+			 if the component collapses the script is still needed to set the iframe height to 0 -->
+		<for id="baseScripts">
+			<script group="bottom" path="/static/mantle/components/structured-content/embed/endpoint/js/embed.js" />
+		</for>
+		<stylesheet path="/static/mantle/components/structured-content/embed/endpoint/css/embed.css" />
+
+		<!-- Introduced only to address tiktok IOS issues as per GLBE-8266 -->
+		<component id="mntl-embed-safari-os-only-hack-fix" ref="mntl-block">
+			<property name="overrideCheck" value="${requestContext.userAgent.getOsName().toLowerCase().contains('ios') ? 'true' : null}" onError="collapseSilent" />
+
+			<script group="bottom" path="/static/mantle/components/structured-content/embed/endpoint/js/embed-safari-ios.js" />
+		</component>
+	</template>
+</templates>

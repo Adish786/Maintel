@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-newsletter" resourcePath="/components/newsletter/newsletter.ftl">
+        <info>
+            <category>Mantle Components/Newsletter</category>
+            <displayName>Newsletter</displayName>
+            <description>Newsletter signup content to be placed inside a dialog/modal</description>
+            <documentation>
+                Supported settings on the Newsletter:
+
+                * __model.isTitleEnabled__ **boolean**
+
+                Toggle for title
+
+                * __model.isSubtitleEnabled__ **boolean**
+
+                Toggle for subtitle
+
+                * __model.isSubscriptionListHidden__ **boolean**
+
+                Visibility toggle for subscription list
+
+                * __model.isSuccessViewCustom__ **boolean**
+
+                Toggle to enable fully customizing the success view
+
+                * __model.subscriptionsHeading__ **string**
+
+                Subscriptions heading css class
+
+                * __model.successMessage__ **string**
+
+                Message when newsletter is successfully submitted
+
+                * __model.logoIcon__ **string**
+
+                Logo svg for the site
+
+                * __model.subscriptionsHeading__ **string**
+
+                Subscriptions heading css class
+
+                * __model.successIcon__ **string**
+
+                Icon shown when newsletter is successfully submitted
+
+                * __model.closeIcon__ **string**
+
+                The icon for the close of the error message
+
+                * __model.registrationSource__ **string**
+
+                Model for registration source
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/newsletter/newsletter.css" />
+        <script path="/static/mantle/components/newsletter/newsletter.js" />
+
+        <svg id="icon-close" path="/static/mantle/svg/close.svg" />
+
+        <property name="closeText" value="" />
+        <property name="isTitleEnabled" value="false" type="boolean" />
+        <property name="isSubtitleEnabled" value="false" type="boolean" />
+        <property name="isSubscriptionListHidden" value="false" type="boolean" />
+        <property name="isSuccessViewCustom" value="false" type="boolean" />
+        <property name="subscriptionsHeading" value="Newsletter Subscriptions" />
+        <property name="successMessage" value="Success!&lt;br /&gt;Thanks for signing up!" />
+        <property name="logoIcon" value="" />
+        <property name="successIcon" value="" />
+        <property name="errorIcon" value="" />
+        <property name="closeIcon" value="icon-close" />
+        <property name="accountRegistration" value="${@regSource}" />
+        <property name="displayDOBPicker" value="${@shouldShowDobOnNewsletterSignup}">
+            <model name="shouldShowDobOnNewsletterSignup" />
+        </property>
+
+        <for id="accountRegistration, shouldShowDobOnNewsletterSignup">
+            <model name="regSourceById" id="regSource">
+                <!-- Update this to the correct regsource id for your vertical -->
+                <property name="regSourceId" value="20674" />
+            </model>
+        </for>
+    </component>
+</components>

@@ -1,0 +1,52 @@
+@import "mntlVariables";
+
+.mntl-taxonomysc-child-nodes__wrapper {
+    -ms-overflow-style: none; // IE
+    display: inline-flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; // firefox
+    width: 100%;
+    position: relative;
+
+    // chrome/webkit scrollbar hidden
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        display: none;
+    }
+
+    &:after {
+        // on scroll, margin/padding doesn't work on last item, this adds 16px to the end
+        content: '';
+        flex: 0 0 1rem;
+        height: 1px;
+    }
+}
+
+.mntl-taxonomysc-child-node {
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.mntl-taxonomysc-child-node__dropdown {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+
+    .mntl-taxonomysc-child-node__more-button.is-active + & {
+        opacity: 1;
+        visibility: visible;
+    }
+}

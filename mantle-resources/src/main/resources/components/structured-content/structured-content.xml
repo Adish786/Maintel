@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <!-- GENERAL SC COMPONENTS -->
+    <component id="mntl-sc-page" ref="mntl-block">
+
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Page</displayName>
+            <description>
+                A Structured Content Page. Iterates over all contents of a Structured Content document and displays
+                each. Can be used standalone.
+            </description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-page__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __mntl-sc-page-contents.blocks.contents__
+
+                A list of **AbstractStructuredContentContentEx** elements.  Usually the result of calling
+                **getContents** on an instance of **StructuredContentDocumentEx**
+
+                # attrs
+
+                - __data-sc-content-positions__
+
+                Array of pixel heights at which to place ads. Pass **"[300,600,900,1200,1500,1800,2100]"** so the
+                data attribute can be properly parsed.
+
+                - __data-sc-breakpoint__
+
+                Breakpoint at which a right rail should be present.
+
+                - __data-sc-offset__
+
+                Offset used by scroll handler for placing and loading ads.
+
+                - __data-sc-load-immediate__
+
+                Number of ads to load immediately. Loads on **DOMContentLoaded** event. If set to 0 or less all ads will be lazy loaded.
+
+                - __data-sc-load-immediate-deferred__
+
+                Number of ads to load immediately after **data-sc-load-immediate**. These ads are loaded on the first
+                **adRendered** event fired by ads in the **data-sc-load-immediate** group.
+
+                - __data-sc-ad-label-height__
+
+                Height of **Advertisement** label.
+
+                - __data-sc-min-track-height__
+
+                Used to limit ad placement in the right rail by what visually fits the area.
+
+                - __data-sc-ad-track-spacing__
+
+                Space between ads in the right rail.
+
+                - __data-sc-sticky-offset__
+
+                Offset top argument for sticky kit's **offset_top** property. Integer.
+
+                - __data-bind-scroll-on-start__
+
+                Offset used to reduce the height of the rail to account for content positioned at bottom of rail (ie. button ads) -- default is 0
+
+                - __data-sc-ad-bottom-offset__
+
+                Bind the scroll handler on load. Defaults to true. If you use chop you should set this to false for the
+                 mobile view and toggle the scroll handler on with the chop button. See sc-ads.js for details.
+
+                - __data-sc-optimize-setup__
+
+                Place ads all at once to avoid style recalculations. Only works for inline ads that aren't floating or styled
+                based on their location in the content. Defaults to true on mobile.
+            </documentation>
+
+            <!-- Keeping mock document here since entire document contents are
+                impractical to put in xml
+            -->
+            <for id="class.mntl-sc-page--commerce, mntl-sc-page-contents.contents">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="structured-content-basic-one-of-each" />
+                </model>
+            </for>
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/css/sc-ads.css" />
+        <script path="/static/mantle/js/maybe.js" group="top" />
+        <script group="top" path="/static/mantle/js/cookies.js" />
+        <script group="top" path="/static/mantle/static/libs/js/querystring.js" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/dom-utilities.js" />
+        <script group="top" path="/static/mantle/js/vendor/throttle.js" />
+        <script group="top" path="/static/mantle/js/GPT.js" />
+        <script group="top" path="/static/mantle/components/structured-content/js/sc-ads.js" />
+        <script group="bottom" path="/static/mantle/components/ads/js/lazy-ad.js" tests="vanillaJSLazyAd" buckets="inactive, control" />
+        <script group="bottom" path="/static/mantle/components/ads/js/vanilla-lazy-ad.js" tests="vanillaJSLazyAd" buckets="active" />
+
+        <map id="attrs">
+            <property name="data-sc-content-positions" value="[300,600,900,1200,1500,1800,2100]" />
+            <property name="data-sc-breakpoint" value="54em" />
+            <!-- <property name="data-sc-offset" value="200" /> The default value of 200 is set in the JS -->
+            <property name="data-sc-load-immediate" value="1" />
+            <property name="data-sc-ad-label-height" value="24" />
+            <property name="data-sc-min-track-height" value="250" />
+            <property name="data-sc-max-track-height" value="600" />
+            <property name="data-sc-ad-track-spacing" value="100" />
+            <property name="data-sc-sticky-offset" value="60" />
+            <property name="data-bind-scroll-on-start" value="true" />
+            <property name="data-sc-optimize-setup" value="true" views="mobile" />
+        </map>
+
+        <list id="class">
+            <property name="mntl-sc-page--commerce" value="${@document.hasCommerceInfo() ? 'mntl-sc-page--commerce' : ''}" onError="ignore" />
+        </list>
+
+        <for id="class.mntl-sc-page--commerce, mntl-sc-page-contents.contents.blockList">
+            <model name="DOCUMENT" id="document" onError="halt" />
+        </for>
+
+        <component-list location="content" id="mntl-sc-page-contents" iterable="${@contents}" ref="mntl-group">
+
+            <model name="processStructuredContentBlocksInList" id="contents">
+                <property name="sliceHtmlAtCharCount" value="1000" type="integer" />
+                <property name="blockList" value="${@document.getContentsList()}" />
+                <!-- value is the Spring bean name of an instance of StructuredContentAdInsertionStrategy -->
+                <property name="adInsertionStrategyName" value="defaultStructuredContentAdInsertionStrategy" />
+            </model>
+
+            <component id="mntl-sc-block" ref="${renderUtils.resolveScBlockName(@block.value, requestContext)}" location="content">
+                <for id="this, p*">
+                    <!-- 'block' ends up being an instance of "IterationModelValue" (https://bitbucket.prod.aws.about.com/projects/FRON/repos/globe-core/browse/globe-core-server/src/main/java/com/about/globe/core/definition/common/IterationModel.java?at=797d420f41d6b54daf0068a284219bd60e33533c#86)
+                    where the **block.value** is an instance of a subclass of **AbstractStructuredContentContentEx** (https://bitbucket.prod.aws.about.com/projects/FRON/repos/mantle/browse/mantle-server/src/main/java/com/about/mantle/model/extended/docv2/sc/AbstractStructuredContentContentEx.java?at=d53ee8aaa326d5b6581bc5f550468d8694fb0eae#26)
+                    Which subclass depends on the type of structured content block.
+                     -->
+                    <component-list-item id="block" ref="mntl-sc-page-contents" />
+                </for>
+            </component>
+
+        </component-list>
+
+    </component>
+
+    <!-- SC CONTENT COMPONENTS -->
+
+    <!-- This section should contain a component per structured content type.  Their IDs *must* be prefixed
+         with **mntl-sc-block-**, and end with the name type of the content as defined in Selene, in lower case.
+         For instance blocks of type **HTML** will be handled by component **mntl-sc-block-html**.
+         When authoring new components, you can assume the presence of the **block** SpEL variable in all
+         properties that are immediate dependencies of the component, or are immediate dependencies of models
+         that themselves are immediate dependencies of the component. -->
+
+    <component id="mntl-sc-block-adslot" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Ad Slot</displayName>
+            <description>Ad Slot for Structured Content</description>
+            <documentation>
+                Added by the **processStructuredContentDocument** to allow room for ads.  Has no content from the server,
+                it is expected that the client side will add content
+                # Classes
+
+                - __.mntl-sc-block-adslot__
+
+                Wraps the entire component
+            </documentation>
+        </info>
+    </component>
+
+    <component id="mntl-sc-block-heading" resourcePath="/components/structured-content/heading/heading.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Heading</displayName>
+            <description>Heading for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-heading__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __tag__
+
+                The HTML header tag used. Defaults to **h3**.
+
+                - __text__
+
+                The text used for the header. Required.  Can contain a subset of HTML
+
+                - __uri__
+
+                URI for the header, if the header is a link.  Optional.
+            </documentation>
+
+            <for id="mntl-toc-anchor">
+                <model name="tocId">
+                    <property name="text" value="Removing Dog Pee From Shag Carpeting" />
+                </model>
+            </for>
+            <property name="text" value="Removing Dog Pee From Shag Carpeting" />
+            <property name="uri" value="https://www.petmd.com/dog/care/evr_dg_tips-for-removing-dog-urine-smell-from-carpet" onError="ignore" />
+        </info>
+
+        <component location="toc-anchor" ref="mntl-toc-anchor">
+            <model name="tocId">
+                <property name="text" value="${@block.value.data.text}" />
+            </model>
+        </component>
+
+        <property name="tag" value="h3" />
+        <property name="text" value="${@block.value.data.text}" />
+        <property name="uri" value="${@block.value.data.uri}" onError="ignore" />
+
+    </component>
+
+    <component id="mntl-sc-block-subheading" resourcePath="/components/structured-content/subheading/subheading.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Subheading</displayName>
+            <description>Subheading for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-subheading__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __tag__
+
+                The HTML header tag used. Defaults to **h4**.
+
+                - __text__
+
+                The text used for the subheader. Required.  Can contain a subset of HTML
+
+                - __uri__
+
+                URI for the subheader, if the subheader is a link.  Optional.
+            </documentation>
+
+            <property name="text" value="Removing Dog Pee From Shag Carpeting" />
+            <property name="uri" value="https://www.petmd.com/dog/care/evr_dg_tips-for-removing-dog-urine-smell-from-carpet" onError="ignore" />
+
+            <for id="mntl-toc-anchor">
+                <model name="tocId">
+                    <property name="text" value="Removing Dog Pee From Shag Carpeting" />
+                </model>
+            </for>
+        </info>
+
+        <component location="toc-anchor" ref="mntl-toc-anchor">
+            <property name="display" value="${@document?.templateType?.toString() == 'HOWTO' ? true : null}" onError="collapseSilent">
+                <model id="document" name="DOCUMENT" />
+            </property>
+
+            <model name="tocId">
+                <property name="text" value="${@block.value.data.text}" />
+            </model>
+        </component>
+
+        <property name="tag" value="h4" />
+        <property name="text" value="${@block.value.data.text}" />
+        <property name="uri" value="${@block.value.data.uri}" onError="ignore" />
+
+    </component>
+
+    <component id="mntl-sc-block-html" resourcePath="/components/structured-content/html/html.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>HTML</displayName>
+            <description>An HTML block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-html__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __tag__
+
+                The HTML tag used for the block. Defaults to the tag wrapping the block html content or **div** if no wrapping tag present.
+
+                - __html__
+
+                HTML content.  If content has a wrapping HTML tag, this tag is removed.
+            </documentation>
+
+            <for id="html, class.p*">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-single-basic-html" />
+                </model>
+            </for>
+
+            <property name="tag" value="p" />
+            <property name="html" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices nulla vel mauris mollis, vel vestibulum erat finibus. Nam dignissim sapien consectetur, pharetra ligula in, tincidunt nunc. Etiam ac tellus viverra, pellentesque arcu eu, scelerisque arcu. Morbi semper enim eget ex cursus volutpat. Nulla imperdiet at elit non condimentum. Quisque nulla turpis, ultricies nec pharetra commodo, elementum ac quam. Aenean arcu elit, lacinia sed imperdiet gravida, accumsan sed nisi.  Sed blandit nunc dolor, sit amet egestas nisi dignissim eget. Duis ut tortor rutrum, pellentesque purus euismod, rutrum ligula. Quisque scelerisque tortor vel purus convallis, at cursus felis facilisis. Fusce viverra porta elit ac luctus. Suspendisse magna est, porttitor tristique ullamcorper id, varius ac mi. Duis volutpat ultrices eleifend. Nulla blandit eros ut ipsum egestas molestie. Aliquam tincidunt varius auctor. Cras rutrum egestas lorem, sed vehicula eros consequat eu. Curabitur facilisis ante non pulvinar efficitur. Aliquam ac fringilla odio, eu tempor turpis. Phasellus a tortor nec tortor maximus porta eget quis enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  Mauris interdum id diam non tempus. Donec non commodo magna, venenatis pulvinar orci. Maecenas sagittis fringilla sollicitudin. Duis non luctus dolor. Nunc ullamcorper velit vel diam faucibus, quis lacinia nibh molestie. Duis egestas bibendum fermentum. Duis lorem lectus, molestie a eros vitae, pretium pharetra justo. Morbi in sapien venenatis, ultricies tellus vitae, finibus urna. Morbi aliquet turpis a imperdiet aliquet. Phasellus gravida dolor vel tellus tempus, eu tempus urna pellentesque. Praesent blandit, lectus a sodales ultrices, ligula sem fringilla velit, vitae imperdiet velit arcu at ligula.  Sed viverra urna enim, at vestibulum felis auctor id. Aenean tristique enim pulvinar urna malesuada lacinia. Morbi nibh purus, cursus nec ornare in, vulputate vel dui. Quisque volutpat, elit id suscipit venenatis, libero arcu mollis tellus, ac rutrum felis nibh sed lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare ex lacus, accumsan fringilla erat consectetur at. Ut dictum urna et dui egestas viverra. Morbi pulvinar tempor tortor vitae posuere. Maecenas a porta elit. Cras sit amet erat et quam lacinia iaculis lobortis vitae sapien. Sed vitae metus posuere, cursus urna et, vestibulum nisi. Phasellus tempus, dui a tincidunt dapibus, arcu ex iaculis orci, vitae blandit magna est vel orci. Sed cursus, purus eget laoreet porta, turpis leo aliquet turpis, nec pharetra ligula eros non ligula. Mauris nec erat ultricies, scelerisque odio fringilla, dictum risus. Suspendisse nulla mauris, vulputate dignissim porta eu, egestas eu eros.  Nullam et justo id magna hendrerit sagittis. Cras et efficitur velit, at maximus mi. Vivamus vulputate sed quam ac hendrerit. Nulla quis elit sollicitudin, sollicitudin est a, pulvinar nibh. Cras lacinia ullamcorper sodales. Aenean nec risus lacinia, sollicitudin nibh ac, vehicula nibh. Donec venenatis bibendum dui quis iaculis. Aliquam laoreet lacus eros, eget feugiat augue ultrices at." />
+            <property name="class" value="" />
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/html/html.css" />
+        <property name="tag" value="${renderUtils.getTag(@block.value.data.html) ?: 'div'}" />
+        <property name="html" value="${renderUtils.stripOuterTag(@block.value.data.html)}" />
+        <list id="class">
+            <property name="mntl-sc-block-html-sliced" value="${@block.value.wasSliced ? 'mntl-sc-block-html-sliced' : ''}" />
+        </list>
+
+    </component>
+
+    <component id="mntl-sc-block-gallery-endgroup" resourcePath="/components/structured-content/gallery/gallery-endgroup.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Gallery Endgroup</displayName>
+        </info>
+    </component>
+
+    <component id="mntl-sc-block-gallery" resourcePath="/components/structured-content/gallery/gallery.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Gallery</displayName>
+            <description>Gallery Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-gallery__
+
+                Wraps the entire component (including mntl-sc-block-galleryslide, not technically part of mntl-sc-block-gallery from a
+                Globe component standpoint but is part of the HTML structure due to a special exception set in gallery.ftl)
+
+                - __.mntl-sc-block-galleryslide__
+
+                The mntl-sc-block-galleryslide can technically contain any content block but is only used in gallery to contain a single
+                mntl-sc-block-image.
+
+                - __.mntl-sc-block-carousel__
+
+                Carousel component has thumbnails which allow clicking to navigate to
+
+                # Models / Properties
+
+                - __data-carousel-size (for carousel)__
+
+                The number of thumbnails to display at one time in the carousel
+            </documentation>
+            <previewType>none</previewType>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/gallery/gallery.css" />
+        <script path="/static/mantle/components/structured-content/gallery/gallery.js" />
+        <svg id="icon-gallery-arrow" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+
+        <!-- having the gallery title be an h2 is listed as a requirement here: https://dotdash.atlassian.net/browse/AXIS-14 -->
+        <property name="titleTag" value="h2" />
+        <property name="title" value="${@block.value.data.title}" onError="ignore" />
+
+        <list id="class">
+            <property name="theme" value="theme-${@block.value.data.theme?.toString().toLowerCase()}" onError="ignore" />
+        </list>
+
+        <component location="gallery" id="carousel" ref="mntl-block">
+            <map id="attrs">
+                <property name="data-carousel-size" value="3" views="mobile" />
+                <property name="data-carousel-size" value="5" views="pc, tablet" />
+            </map>
+
+            <component location="content" id="carousel__slider-wrapper" ref="mntl-block">
+                <component location="content" id="carousel__slider" ref="mntl-block">
+                    <component-list location="content" id="carousel__item" ref="mntl-block" iterable="${@blocks}">
+                        <property name="blocks" value="${@block.value.data.contents.list}" />
+
+                        <component location="content" id="carousel__image" ref="mntl-image">
+                            <property name="image" value="${@item.value.data.contents.list[0].data.image}">
+                                <component-list-item id="item" ref="carousel__item" />
+                            </property>
+                            <property name="width" value="250" type="integer" />
+                            <property name="height" value="150" type="integer" />
+                        </component>
+                    </component-list>
+                </component>
+            </component>
+
+            <component location="content" id="carousel__left-arrow" ref="mntl-block" />
+            <component location="content" id="carousel__right-arrow" ref="mntl-block" />
+        </component>
+
+        <component location="slides" id="slides__left-arrow" ref="mntl-block" views="pc" />
+        <component location="slides" id="slides__right-arrow" ref="mntl-block" views="pc" />
+
+        <for id="carousel__left-arrow, carousel__right-arrow, slides__left-arrow, slides__right-arrow">
+            <component location="content" id="arrow-icon" ref="mntl-svg">
+                <svg id="icon-gallery-arrow" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+                <property name="name" value="icon-gallery-arrow" />
+            </component>
+        </for>
+
+        <for id="slides__left-arrow, carousel__left-arrow">
+            <list id="class">
+                <property name="left-arrow" value="left-arrow" />
+            </list>
+        </for>
+
+        <for id="slides__right-arrow, carousel__right-arrow">
+            <list id="class">
+                <property name="right-arrow" value="right-arrow" />
+            </list>
+        </for>
+    </component>
+
+    <component id="mntl-sc-block-galleryslide" resourcePath="/components/structured-content/gallery/galleryslide.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Gallery Slide</displayName>
+        </info>
+
+        <list id="class">
+            <property name="theme" value="theme-${@block.value.data.theme?.toString().toLowerCase()}" />
+        </list>
+
+        <property name="tag" value="${@block.value.data.groupType}" />
+    </component>
+
+    <component id="mntl-sc-block-galleryslide-image" ref="mntl-sc-block-image">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Gallery Slide Image</displayName>
+        </info>
+
+        <property name="lightbox" value="false" type="boolean" />
+        <property name="placeholder" value="false" type="boolean" />
+
+        <component id="mntl-figure-caption" mode="remove" />
+    </component>
+
+    <component id="mntl-sc-block-image" resourcePath="/components/structured-content/image/image.ftl">
+
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Image</displayName>
+            <description>Image Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-image__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __lazyload__
+
+                Defaults to false. If true, a place-holder image will be displayed on the page until the actual image loads from thumbor
+
+                - __srcset__
+
+                The **srcset** passed to the Thumbor service
+
+                - __alt__
+
+                The image's **alt** attribute.
+
+                - __height__
+
+                The image's height as passed in to Thumbor
+
+                - __imageOrientation__
+
+                Possible values found in **com.about.mantle.model.extended.docv2.ImageOrientation**. Drives whether or not the **figure** HTML element has a **figure-portrait** or **figure-landscape** class.
+
+                - __imageResolution__
+
+                Possible values found in **com.about.mantle.model.extended.docv2.ImageResolution**. Low Res images are given a **figure-portrait** class
+
+                - __objectId__
+
+                Selene objectId for the image. Required
+
+                - __image__
+
+                Object for the image. Overrides objectId.
+
+                - __width__
+
+                The image's height as passed in to Thumbor
+            </documentation>
+
+            <for id="mntl-figure-caption, mntl-figure-caption.collapse">
+                <property name="caption" value="Chrissy Pk" />
+                <property name="owner" value="Chrissy Pk" />
+            </for>
+
+            <property name="alt" value="How to Make Origami Earrings" onError="ignore" />
+            <property name="caption" value="Chrissy Pk" onError="ignore" />
+            <property name="height" value="1066" type="integer" />
+            <property name="imageOrientation" value="LANDSCAPE" />
+            <property name="imageResolution" value="HIGH_RES" />
+            <property name="objectId" value="origami-earrings-03-59506c673df78cae81341c10.jpg" onError="collapse" />
+            <property name="owner" value="Chrissy Pk" onError="ignore" />
+            <property name="srcset" value="${{'minWidth': 300, 'maxWidth':1600 ?: 768}}" onError="ignore" />
+            <property name="width" value="1600" type="integer" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/image/image.css" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/dom-utilities.js" />
+        <script group="bottom" path="/static/mantle/js/vendor/throttle.js" />
+        <script group="bottom" path="/static/mantle/components/structured-content/image/createLightboxCarousel.js" />
+        <svg id="light-box-arrow" path="/static/mantle/svg/light-box-arrow.svg" />
+
+        <!-- When adding new properties to this block, please remember to check the corresponding ref of
+**mntl-sc-block-image** in commerce block (mntl-sc-block-commerce) as it contains an implementation
+of the image block without an image. -->
+        <for id="this, mntl-figure-caption, mntl-figure-caption.collapse">
+            <property name="caption" value="${@block.value.type == 'IMAGE' ? @block.value.data.image?.caption : null}" onError="ignore" />
+            <property name="owner" value="${@block.value.type == 'IMAGE' ? @block.value.data.image?.owner : null}" onError="ignore" />
+        </for>
+
+        <component location="bottom" ref="mntl-figure-caption">
+            <property name="collapse" value="${((@caption == null OR @caption == '') AND (@owner == null OR @owner == '')) ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <!-- ensures that the image component is the base block and not within another component -->
+        <list id="class">
+            <property name="theme" value="${@block.value.getType().toString().toLowerCase() == 'image' ? (str.stripToNull(@block.value.data.theme) != null ? 'theme-'.concat(@block.value.data.theme?.toString().toLowerCase()) : '' ) : ''}" onError="ignore" />
+        </list>
+
+        <property name="lazyLoad" value="true" type="boolean" />
+        <property name="lightbox" value="true" type="boolean" />
+        <!-- everything below is usually populated by an ImageEx instance -->
+        <property name="srcset" value="${{'minWidth': 300, 'maxWidth':@block.value.data.image.width ?: 768}}" onError="ignore" />
+        <property name="alt" value="${@block.value.data.image.alt}" onError="ignore" />
+        <property name="height" value="${@block.value.data.image.height}" onError="ignore" />
+        <property name="imageOrientation" value="${@block.value.data.image.imageOrientation}" onError="collapse" />
+        <property name="imageResolution" value="${@block.value.data.image.imageResolution}" onError="collapse" />
+        <property name="objectId" value="${@block.value.data.image.objectId}" onError="collapse" />
+        <!-- Image is onError="ignore" as property is new and verticals will not have proper for targeting where necessary -->
+        <property name="image" value="${(@block.value instanceof
+				T(com.about.mantle.model.extended.docv2.sc.blocks.StructuredContentImageEx)) ? @block.value.data.image : null}" onError="ignore" />
+        <property name="width" value="${@block.value.data.image.width}" mode="replace" onError="ignore" />
+    </component>
+
+    <component id="mntl-sc-block-table" resourcePath="/components/structured-content/table/table.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Table</displayName>
+            <description>Table for Structured Content</description>
+            <documentation></documentation>
+
+            <property name="title" value="black theme" />
+            <property name="caption" value="A very nice table." />
+            <property name="tableData" value='"data": {"list": [{"list": [{"value": "abc"},{"value": "dfe"}],"totalSize": 2},{"list": [],"totalSize": 0}],"totalSize": 2}' />
+            <property name="rowAttributes" value='"rowAttributes": {"list": [{"isHeading": true}],"totalSize": 1}' />
+            <property name="columnAttributes" value='"columnAttributes": {"list": [{"isHeading": true,"width": {"unit": "%","value": 1}}],"totalSize": 1}' />
+        </info>
+        <stylesheet path="/static/mantle/components/structured-content/table/sc-table.css" />
+        <script path="/static/mantle/components/structured-content/table/sc-table.js" />
+
+        <property name="title" value="${@block.value.data.title}" onError="ignore" />
+        <property name="caption" value="${@block.value.data.caption}" onError="ignore" />
+        <property name="tableData" value="${@block.value.data.tableData}" />
+        <property name="rowAttributes" value="${@block.value.data.rowAttributes}" />
+        <property name="columnAttributes" value="${@block.value.data.columnAttributes}" />
+    </component>
+
+    <component id="mntl-sc-block-featuredlink" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Featured Link</displayName>
+            <description>Featured Link for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-featuredlink__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __uri__
+
+                The featured link. Required.
+
+                - __text__
+
+                The text used for the featured link. If caption/text is blank, it will default to the best title of the selected link.
+            </documentation>
+            <for id="mntl-sc-block-featuredlink__link">
+                <property name="uri" value="https://www.lifewire.com/best-usb-flash-drives-4141193" />
+                <property name="text" value="The 9 Best USB Flash Drives to Buy in 2018" />
+                <list id="class" mode="replace">
+                    <property name="theme" value="related-link" mode="replace" />
+                </list>
+
+            </for>
+        </info>
+
+        <list id="class">
+            <property name="theme" value="${@block.value.data.theme?.toString().toLowerCase()}-link" onError="ignore" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-featuredlink__link" ref="mntl-text-link">
+            <property name="uri" value="${@block.value.data.uri}" />
+            <property name="text" value="${@block.value.data.effectiveAnchorText}" />
+
+            <map name="attrs">
+                <property name="data-tracking-id" value="featured-link" />
+            </map>
+        </component>
+
+        <component location="content" id="mntl-sc-block-featuredlink__description" ref="mntl-text-block">
+            <stylesheet path="/static/mantle/components/structured-content/featured-link/featured-link.css" />
+
+            <property name="text" value="${@block.value.type == 'FEATUREDLINK' ? (@block.value.data.description != null ? @block.value.data.description : (@block.value.data.document?.description != null ? @block.value.data.document?.description : @block.value.data.document?.metaDescription)) : null}" onError="collapseSilent" />
+            <property name="themeDependency" value="${@block.value.type == 'FEATUREDLINK' and @block.value.data.theme == 'RELATEDDESCRIPTION' ? true : null}" onError="collapseSilent" />
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-code" resourcePath="/components/structured-content/code-block/code-block.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Code Block</displayName>
+            <description>
+                Wraps code written by editors in code block.
+            </description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-code__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __theme__
+
+                Theming of the component. Defaults to non-numbered.
+
+                - __text__
+
+                Code to be inside code block. Required
+            </documentation>
+            <for id="codeLines, theme">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-single-basic-code" />
+                </model>
+            </for>
+
+            <for id="class">
+                <property name="theme" value="${@document?.items?.list[0]?.contents?.list[0]?.data.theme}" onError="ignore" />
+            </for>
+
+            <property name="codeLines" value="${@document?.items?.list[0]?.contents?.list[0]?.data.getCodeList()}" />
+        </info>
+
+        <list id="class">
+            <property name="theme" value="${@block.value.data.theme}" onError="ignore" />
+        </list>
+
+        <property name="codeLines" value="${@block.value.data.getCodeList()}" />
+
+    </component>
+
+    <component id="mntl-sc-block-groupcallout" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Group Callout</displayName>
+            <description>
+                This block displays a list of callout item blocks each containing an image, heading, caption, date, button text and/or link (all optional).
+            </description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-groupcallout__
+                Wraps the entire component
+
+                - __.mntl-sc-block-groupcallout-items__
+                Wraps each callout item component
+
+                - __.theme-**ThemeName**__
+                Class on entire groupcallout component, only present if provided in data
+                The data's theme property is the source of the **ThemeName**
+
+                # Models / Properties / Components
+
+                - __mntl-sc-block-groupcallout\_\_title__
+                Heading on groupcallout (outside of the callout items list)
+
+                - __mntl-sc-block-groupcallout\_\_subheading__
+                Subheading on groupcallout (outside of the callout items list)
+
+                - __blocks__
+                List of callout item blocks
+
+                - __uri__
+                Callout item link
+
+                - __mntl-sc-block-groupcallout-image__
+                Callout item image
+
+                - __mntl-sc-block-groupcallout-heading__
+                Callout item heading
+
+                - __mntl-sc-block-groupcallout-body__
+                Callout item caption
+
+                - __mntl-sc-block-groupcallout-date__
+                Callout item date
+
+                - __mntl-sc-block-groupcallout-buttonText__
+                Callout item button text
+            </documentation>
+        </info>
+
+        <list id="class">
+            <property name="theme" value="theme-${@block.value.data.theme?.toString()?.toLowerCase()}" onError="ignore" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-groupcallout__title" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@block.value.data.heading}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-groupcallout__subheading" ref="mntl-text-block">
+            <property name="tag" value="p" />
+            <property name="text" value="${@block.value.data.subheading}" onError="collapseSilent" />
+        </component>
+
+        <component-list location="content" id="mntl-sc-block-groupcallout-items" ref="mntl-text-link" iterable="${@blocks}">
+
+            <property name="blocks" value="${@block.value.data.callOuts}" />
+
+            <for id="mntl-sc-block-groupcallout-date.text, mntl-sc-block-groupcallout-heading.text, mntl-sc-block-groupcallout-body.text, mntl-sc-block-groupcallout-image.image, mntl-sc-block-groupcallout-image.objectId, mntl-sc-block-groupcallout-image.alt, mntl-sc-block-groupcallout-image.imageResolution, mntl-sc-block-groupcallout-image.imageOrientation, mntl-sc-block-groupcallout-image.width, mntl-sc-block-groupcallout-image.height, uri, mntl-sc-block-groupcallout-button.text">
+                <component-list-item id="item" ref="mntl-sc-block-groupcallout-items" />
+            </for>
+
+            <property name="uri" value="${@item.value.url}" onError="ignore" />
+
+            <component location="content" id="mntl-sc-block-groupcallout-image" ref="mntl-sc-block-image">
+                <property name="image" value="${@item.value.image}" onError="ignore" />
+                <property name="objectId" value="${@item.value.image?.objectId ?: null}" onError="collapseSilent" />
+                <property name="width" value="${@item.value.image?.width}" mode="replace" onError="ignore" />
+                <property name="height" value="${@item.value.image?.height}" mode="replace" onError="ignore" />
+                <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" onError="ignore" />
+                <property name="placeholder" value="false" type="boolean" />
+                <property name="lightbox" value="false" type="boolean" />
+                <component id="mntl-figure-caption" mode="remove" />
+                <property name="alt" value="${@item.value.image?.alt}" onError="ignore" />
+                <property name="imageOrientation" value="${@item.value.image?.imageOrientation}" onError="collapseSilent" />
+                <property name="imageResolution" value="${@item.value.image?.imageResolution}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-groupcallout-heading" ref="mntl-text-block">
+                <property name="tag" value="h3" />
+                <property name="text" value="${@item.value.title ?: null}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-groupcallout-body" ref="mntl-text-block">
+                <property name="text" value="${@item.value.caption ?: null}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-groupcallout-date" ref="mntl-text-block">
+                <property name="text" value="${@item.value?.date?.toString(@dateFormat)}" onError="collapseSilent">
+                    <property name="dateFormat" value="MMMM dd, yyyy" />
+                </property>
+            </component>
+
+            <component location="content" id="mntl-sc-block-groupcallout-button" ref="mntl-button">
+                <property name="text" value="${@item.value.buttonText}" onError="collapseSilent" />
+            </component>
+
+        </component-list>
+    </component>
+
+    <component id="mntl-sc-block-starrating" resourcePath="/components/structured-content/starrating/starrating.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Star Rating</displayName>
+            <description>Star Rating for Structured Content</description>
+            <documentation>
+# Classes
+
+- __.mntl-sc-block-starrating__
+
+Wraps the entire component
+
+# Models / Properties
+
+- __icon__
+
+The id of the svg icons to fill.
+
+- __count__
+
+The whole-number highest possible rating. Defaults to 5.
+
+- __showLabel__
+
+Defaults to true. If false, does not display the label next to the icons.
+
+- __label__
+
+The label to display next to the icons. Defaults to the rating.
+
+- __rating__
+
+The numerical rating for the star block.
+
+# Implementation
+
+- The svg should be a square-shaped mask. Make sure the size of the cutout in the svg is slightly smaller than the size of the total svg, i.e. give it some padding around the edges.
+
+            </documentation>
+
+            <property name="rating" value="3.7" />
+            <property name="label" value="3.7" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/starrating/starrating.css" />
+        <property name="icon" value="mntl-sc-block-starrating-icon" />
+        <property name="count" value="5" type="integer" />
+        <property name="showLabel" value="true" type="boolean" />
+        <property name="label" value="${@block.value.data.rating}" />
+        <property name="rating" value="${@block.value.data.rating}" />
+    </component>
+
+    <component id="mntl-sc-list-item" ref="mntl-sc-page">
+        <info>
+            <category>Mantle Components/Structured Content List Item</category>
+            <displayName>List Item</displayName>
+            <description>
+A Structured Content List Item. Iterates over all contents of a Structured Content List document and displays each.
+            </description>
+            <documentation></documentation>
+            <!-- Keeping mock document here since entire document contents are
+                impractical to put in xml
+            -->
+            <for id="class.mntl-sc-page--commerce, mntl-sc-page-contents.contents">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="structured-content-basic-one-of-each" />
+                </model>
+            </for>
+        </info>
+
+        <for id="mntl-sc-page-contents.mntl-sc-block%mntl-sc-block-heading">
+            <list id="class">
+                <property name="mntl-sc-list-item-title" value="mntl-sc-list-item-title" />
+            </list>
+        </for>
+
+        <stylesheet path="/static/mantle/components/structured-content/css/sc-content-list.css" />
+    </component>
+
+    <component id="mntl-sc-block-commerce" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>SC Block Commerce</displayName>
+            <description>
+                The mntl-sc-block-commerce component should hold all commerce buttons links for retailers.
+                The entire container will link to the url of its first commerce button child.
+            </description>
+            <documentation>
+                # Models / Properties
+
+                - __model.trackingContainer__ **boolean|true** [optional]
+
+                Will add or remove tracking from component
+
+                # attrs
+
+                - __attrs.data-click-tracked__
+
+                Used by click-tracking.js to set tracking data attributes.
+
+                - __attrs.data-use-child-url__
+
+                Child element selector from wich to get the href attibute for click tracking. Used by click-tracking.js
+
+                - __attrs.data-click-event__
+
+                Used by extended-commerce-sc-info.js to set different event tracking values for GTM optimized verticals.
+
+                - __attrs.data-use-external-image__
+
+                Used by extended-commerce-sc-info.js to set the href attribute on and attach click event to commerce item logo.
+
+                - __attrs.data-link-closest-header__
+
+                Used by extended-commerce-sc-info.js to set the href attribute on and attach click event to commerce item header.
+
+                # Components
+
+                - __mntl-sc-block-commerce__image__
+
+                **mntl-sc-block-image** is referenced here to provide a template to **extended-commerce-sc-info.js**. The template is
+                provided here to ensure a single source of truth for image output. **extended-commerce-sc-info.js** replaces any images provided by CMS or
+                inerts images if none are provided with current images returned by amazon.
+            </documentation>
+            <for id="mntl-sc-block-commerce__button">
+                <property name="retailers" value='${{{"id": "https://www.amazon.com/Mpow-One-piece-Self-portrait-Extendable-Bluetooth/dp/B00UV3MCK2/?tag=aboutcom02lifewire2-20","type": "amazon"},{"id": "https://www.walmart.com/ip/Mpow-Selfie-Stick-Bluetooth-iSnap-X-Extendable-Monopod-Built-in-Bluetooth-Remote-Shutter-iPhone-8-7-7P-6s-6P-5S-Galaxy-S5-S6-S7-S8-Google-LG-V20-Huaw/132174111","type": "skimlinks"}}}' />
+            </for>
+        </info>
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/dom-utilities.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+        <script group="bottom" evaluated="true" path="/static/mantle/components/structured-content/js/extended-commerce-sc-info.evaluated.js" />
+        <script group="bottom" path="/static/mantle/components/structured-content/js/extended-commerce-sc-info.js" />
+        <stylesheet path="/static/mantle/components/structured-content/commerce/commerce.css" />
+
+        <map id="attrs">
+            <property name="data-click-tracked" value="false" />
+            <property name="data-use-child-url" value=".mntl-sc-commerce-btn-list__btn" />
+        </map>
+
+        <!-- If config is set, disable pricing for commerce buttons -->
+        <property name="pricingDisabled" value="${configs['disableRetailerPricing'] != null AND configs['disableRetailerPricing'] ? true : null}" onError="ignore" />
+
+        <component-list id="mntl-sc-block-commerce__button" location="content" ref="mntl-commerce-btn" iterable="${@retailers ?: {}}">
+            <for id="text, uri, rel">
+                <component-list-item id="retailer" ref="mntl-sc-block-commerce__button" />
+            </for>
+            <model id="retailers" name="retailerSort">
+                <property name="commerceInfo" value="${@block.value.data.commerceInfo.list}" />
+                <!-- These can be included per vertical to change allowed domains and priority-->
+
+                <!-- e.g. If available, Amazon will always be first, Walmart will always be second-->
+                <!--
+					<list name="priorityDomains">
+						<property name="amazon" value="amazon.com" />
+						<property name="walmart" value="walmart.com" />
+					</list>
+				-->
+                <!--e.g. If included here, retailers of that domain will be allowed but will have no guarantee of order-->
+
+                <!-- TODO: Flagged by GLBE-7712 to update 'whitelist' but cannot change due to commerce downstream components -->
+                <!--
+					<list name="safeListDomains">
+						<property name="adobe" value="adobe.com" />
+                    	<property name="apple" value="apple.com" />
+					</list>
+				-->
+
+            </model>
+            <property name="text" value="${renderUtils.getCallToAction(@block.value.data.callToAction, @retailer.value.id)}" />
+            <property name="uri" value="${@retailer.value.id}" />
+            <property name="rel" value="${@retailersEnabledForSkimlinks.contains(@retailer.value.type) ? '' : 'noskim'}">
+                <list name="retailersEnabledForSkimlinks">
+                    <property name="walmart" value="walmart" />
+                    <!-- to be removed as part of GLBE-5534 -->
+                    <property name="skimlinks" value="skimlinks" />
+                </list>
+            </property>
+        </component-list>
+
+        <!-- Image added here to provide a template to JS. This was done to keep
+             client side "template" in synch with server side implementation.
+        -->
+        <component id="mntl-sc-block-commerce__image" ref="mntl-sc-block-image" location="content">
+            <property name="lazyLoad" value="false" type="boolean" />
+            <property name="srcset" value="" mode="remove" />
+            <property name="src" value="//:0" />
+            <property name="alt" value="" />
+            <property name="width" value="1" type="integer" />
+            <property name="height" value="1" type="integer" />
+            <property name="imageOrientation" value="portrait" />
+            <property name="imageResolution" value="high" />
+            <property name="objectId" value="${null}" onError="ignore" />
+            <property name="placeholder" value="false" type="boolean" />
+            <property name="lightbox" value="false" type="boolean" />
+            <property name="clickTracked" value="false" type="boolean" />
+
+            <for id="this, mntl-figure-caption, mntl-figure-caption.collapse">
+                <property name="caption" value="" mode="replace" />
+                <property name="owner" value="" mode="replace" />
+            </for>
+
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-comparisonlist" resourcePath="/components/structured-content/comparison-list/comparison-list.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Comparison List</displayName>
+            <description>Comparison List for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-comparisonlist__
+
+                Wraps the entire component
+
+                - __.theme-**ThemeName**__
+
+                Class on entire comparison list component, only present if provided in data.
+                The data's theme property is the source of the **ThemeName**.
+
+                - __.mntl-sc-block-comparisonlist\_\_comparison-list-heading__
+
+                Class on the comparison list overall heading (if provided)
+
+                - __.mntl-sc-block-comparisonlist\_\_wrapper__
+
+                Wraps each paired heading and list.
+
+                - __.mntl-sc-block-comparisonlist\_\_heading__
+
+                Class on each heading
+
+                - __.mntl-sc-block-comparisonlist\_\_list__
+
+                Class on each list
+
+                - __.mntl-sc-block-comparisonlist\_\_summary-text__
+
+                Class on the comparison list summary text (if provided)
+
+                # Models / Properties
+
+                - __headingTag__
+
+                Allows you to adjust the heading tag to be any tag you want. Default is a span tag.
+
+                - __listTag__
+
+                HTML tag to use for list tags. Defaults to **&lt;ul&gt;**.
+
+                - __heading__
+
+                Heading for the entire comparison list.
+
+                - __summaryText__
+
+                Summary text for the entire comparison list.
+
+                - __headingA__
+
+                Heading for the first list of items in the comparison.
+
+                - __headingB__
+
+                Heading for the second list of items in the comparison.
+
+                - __listA__
+
+                The first list of items in the comparison.
+
+                - __listB__
+
+                The second list of items in the comparison.
+
+                - __theme__
+
+                Used to name the theme class for the entire comparison list component. This theme class will
+                not be added if the theme property is not present.
+            </documentation>
+
+            <property name="heading" value="Heading" mode="replace" />
+            <property name="summaryText" value="Summary Text" mode="replace" />
+            <property name="headingA" value="Heading A" mode="replace" />
+            <property name="headingB" value="Heading B" mode="replace" />
+            <property name="listA" value='${{"items1", "items2"}}' mode="replace" />
+            <property name="listB" value='${{"items1", "items2"}}' mode="replace" />
+            <property name="theme" value="Versus" mode="replace" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/comparison-list/comparison-list.css" />
+
+        <list id="class">
+            <property name="theme" value="theme-${@block.value.data.theme?.toString()?.toLowerCase()}" onError="ignore" />
+        </list>
+
+        <property name="heading" value="${@block.value.data.comparisonListHeading}" onError="ignore" />
+        <property name="headingA" value="${@block.value.data.listA.heading}" />
+        <property name="headingB" value="${@block.value.data.listB.heading}" />
+        <property name="listA" value="${@block.value.data.listA?.items?.list}" />
+        <property name="listB" value="${@block.value.data.listB?.items?.list}" />
+        <property name="headingTag" value="span" />
+        <property name="listTag" value="ul" />
+        <property name="summaryText" value="${@block.value.data.summaryText}" onError="ignore" />
+    </component>
+
+    <component id="mntl-sc-block-inlinevideo" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>SC Inline Video</displayName>
+            <description>Inline video player for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-inlinevideo__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-inlinevideo\_\_video-container__
+
+                Wraps the video and duration components
+
+                - __mntl-sc-block-inlinevideo\_\_feature-link-wrapper__
+
+                Wraps the feature link (optional)
+            </documentation>
+
+            <for id="mntl-sc-block-inlinevideo__title">
+                <property name="text" value="Pattern Library Video Title" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__video-container.mntl-sc-block-inlinevideo__video.setup">
+                <property name="mediaid" value="yN00uz7b" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__video-container.mntl-sc-block-inlinevideo__video.attrs">
+                <property name="data-bgset" value="https://content.jwplatform.com/thumbs/yN00uz7b-1280.jpg" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__video-container.mntl-sc-block-inlinevideo__duration.mntl-text-block">
+                <property name="text" value="2:31" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__caption">
+                <property name="text" value="This is a caption for the video." mode="replace" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__feature-link-wrapper">
+                <property name="hasContent" mode="remove" />
+            </for>
+
+            <for id="mntl-sc-block-inlinevideo__feature-link-wrapper.mntl-sc-block-inlinevideo__feature-link">
+                <property name="text" value="Click here for more details." />
+                <property name="uri" value="https://verywellhealth.com" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/inlinevideo/inlinevideo.css" />
+
+        <for id="hasDetails, mntl-sc-block-inlinevideo__title.text">
+            <property name="hasTitle" value="${@block?.value?.data?.showTitle != null and @block?.value?.data?.showTitle ? true : null }" onError="ignore" />
+        </for>
+
+        <list id="class">
+            <property name="hasDetails" value="${@hasTitle != null or @block?.value?.data?.caption != null or @block?.value?.data?.featureLink != null ? 'has-details' : ''}" onError="collapseSilent" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-inlinevideo__video-container" ref="mntl-block">
+            <component id="mntl-sc-block-inlinevideo__video" location="content" ref="mntl-jwplayer">
+                <property name="playerId" value="McEYYUGW" mode="replace" />
+                <property name="playOnPercentInView" value="0" type="integer" mode="replace" />
+                <property name="eventCategoryType" value="Inline" />
+                <property name="disablePreroll" value="true" type="boolean" />
+                <property name="defer" value="true" />
+                <property name="showCaptions" value="false" />
+
+                <!-- Per GLBE-7010/PCR-105 we only are using TRUSTED tracking pixels only. This also is a point for security concerns if JWPlayer's tracking pixel becomes malicious. -->
+                <property name="trackingCodes" value="${@block?.value?.data?.document?.sponsor?.trustedTrackingCodes}" onError="ignore" />
+
+                <for id="attrs">
+                    <property name="data-bgset" value="${@block.value.data.document.thumbnailUrl}" />
+                </for>
+
+                <for id="setup">
+                    <property name="mute" value="false" type="boolean" mode="replace" />
+                    <property name="mediaid" value="${@block.value.data.document.mediaId}" />
+                    <property name="autostart" value="false" type="boolean" mode="replace" />
+                    <property name="aspectratio" value="${renderUtils.videoAspectRatio(@block?.value?.data?.document?.height, @block?.value?.data?.document?.width)}" mode="replace" />
+                </for>
+            </component>
+
+            <component id="mntl-sc-block-inlinevideo__duration" location="content" ref="mntl-block">
+                <component location="content" ref="mntl-text-block">
+                    <property name="text" value="${utils.formatDurationSeconds(@block.value.data.document.duration, 'm:ss')}" />
+                </component>
+            </component>
+        </component>
+
+        <component location="content" id="mntl-sc-block-inlinevideo__title" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@hasTitle != null ? @block?.value?.data?.bestTitle : null}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-inlinevideo__caption" ref="mntl-text-block">
+            <property name="text" value="${@block?.value?.data?.caption}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-inlinevideo__feature-link-wrapper" ref="mntl-block">
+            <property name="hasContent" value="${@block?.value?.data?.featureTitle != null and @block?.value?.data?.featureLink != null ? true : null}" onError="collapseSilent" />
+
+            <component location="content" id="mntl-sc-block-inlinevideo__feature-link" ref="mntl-text-link">
+                <property name="text" value="${@block?.value?.data?.featureTitle}" onError="collapseSilent" />
+                <property name="uri" value="${@block?.value?.data?.featureLink}" onError="collapseSilent" />
+            </component>
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-iframe" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Iframe</displayName>
+            <description>Iframe for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-iframe__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                - __uri__
+
+                The iframe source. Required.
+
+                - __caption__
+
+                The caption used for the iframe. If caption is blank, it will remove the cite tag following the iframe.
+            </documentation>
+            <for id="mntl-sc-block-iframe__uri.attrs">
+                <property name="data-src" value="https://upload.wikimedia.org/wikipedia/en/f/ff/SuccessKid.jpg" mode="replace" />
+                <property name="title" value="This is an iframe title attribute" mode="replace" />
+            </for>
+            <for id="mntl-sc-block-iframe__caption">
+                <property name="text" value="This is a caption" mode="replace" />
+            </for>
+        </info>
+
+        <component location="content" id="mntl-sc-block-iframe__uri" ref="mntl-block">
+            <property name="tag" value="iframe" />
+            <list id="class">
+                <property name="lazyload" value="lazyload" />
+            </list>
+            <map id="attrs">
+                <property name="allow" value="encrypted-media 'src'" />
+                <property name="allowfullscreen" value="false" />
+                <property name="frameborder" value="0" />
+                <property name="data-src" value="${@block.value.data.uri}" />
+                <property name="title" value="${@block.value.data.title}" onError="ignore" />
+            </map>
+        </component>
+
+        <component location="content" id="mntl-sc-block-iframe__caption" ref="mntl-text-block">
+            <property name="tag" value="cite" />
+            <property name="text" value="${@block.value.data.caption}" onError="collapseSilent" />
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-location" resourcePath="/components/structured-content/location/location.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Location</displayName>
+            <description>Location for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-location__
+
+                Wraps the entire component
+
+                # Models / Properties
+
+                -__headingTag__ **String**
+
+                Allows you to adjust the heading tag to be any tag you want. Default is a span tag.
+
+                - __adrAddress__
+
+                The Google place address in the adr microformat
+
+                - __phone__
+
+                The Google place phone
+
+                - __website__
+
+                The Google place website
+
+                - __url__
+
+                The Google place directions url
+
+                - __lat__
+
+                The Google place directions lat
+
+                - __lng__
+
+                The Google place directions lng
+            </documentation>
+            <property name="adrAddress" value="&lt;span class=&quot;street-address&quot;&gt;1500 Broadway&lt;/span&gt;, &lt;span class=&quot;locality&quot;&gt;New York&lt;/span&gt;, &lt;span class=&quot;region&quot;&gt;NY&lt;/span&gt; &lt;span class=&quot;postal-code&quot;&gt;10036&lt;/span&gt;, &lt;span class=&quot;country-name&quot;&gt;USA&lt;/span&gt;" mode="replace" />
+            <property name="phone" value="212.204.1496" mode="replace" />
+            <property name="website" value="https://www.dotdash.com/" mode="replace" />
+            <property name="url" value="https://maps.google.com/?cid=1455335883113928959" mode="replace" />
+            <property name="lat" value="40" type="integer" mode="replace" />
+            <property name="lng" value="40" type="integer" mode="replace" />
+
+            <for id="mntl-sc-block-location__name">
+                <property name="text" value="Times Square Studios" mode="replace" />
+            </for>
+        </info>
+
+        <for id="adrAddress,phone,website,url,lat,lng,mntl-sc-block-location__name.text">
+            <model name="getLocationData" id="googleLocation" onError="ignore">
+                <property name="placeId" value="${@block?.value?.data?.placeId}" onError="ignore" />
+            </model>
+        </for>
+
+        <property name="headingTag" value="span" />
+        <property name="addressHeader" value="Address" />
+        <property name="adrAddress" value="${@googleLocation?.adrAddress}" onError="ignore" />
+        <property name="phone" value="${@googleLocation?.phone}" onError="ignore" />
+        <property name="website" value="${@googleLocation?.website}" onError="ignore" />
+        <property name="url" value="${@googleLocation?.url}" onError="ignore" />
+        <property name="lat" value="${@googleLocation?.lat}" onError="ignore" />
+        <property name="lng" value="${@googleLocation?.lng}" onError="ignore" />
+
+        <component location="mntl-sc-block-location__pre-content" ref="mntl-text-block" id="mntl-sc-block-location__name">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@googleLocation?.name}" />
+        </component>
+
+    </component>
+
+    <!-- This handles SC block types unknown to Globe -->
+    <component id="mntl-sc-block-unknown" resourcePath="/components/structured-content/unknown/unknown.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Unknown</displayName>
+        </info>
+
+        <property name="unknownBlockType" value="${@block.value.actualType}" />
+    </component>
+
+    <component id="mntl-sc-block-callout" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Callout</displayName>
+            <description>Callout for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-callout__
+
+                Wraps the entire component
+
+                # Models / Properties
+            </documentation>
+            <for id="mntl-sc-block-callout-heading">
+                <property name="text" value="Call Your Doctor." />
+            </for>
+            <for id="mntl-sc-block-callout-body">
+                <property name="text" value="You should not wait for your child to have symptoms, even if you aren't positive if your child swallowed any of the poison, or if you aren't sure it is poisonous." />
+            </for>
+            <for id="class">
+                <property name="theme" value="theme-takeaway" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/commerce/commerce-disable.css" tests="disableRetailers" buckets="disabled" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+
+        <map id="attrs">
+            <property name="data-tracking-id" value="mntl-sc-block-callout" />
+        </map>
+
+        <list id="class">
+            <property name="theme" value="theme-${@block.value.data.theme?.toString().toLowerCase()}" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-callout-heading" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@block.value.data.heading ?: null}" onError="collapseSilent" />
+        </component>
+        <component location="content" id="mntl-sc-block-callout-body" ref="mntl-text-block">
+            <list id="class"></list>
+            <property name="text" value="${@block.value.data.html ?: null}" onError="collapseSilent" />
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-definition" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Definition</displayName>
+            <description>Definition for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-definition__
+
+                Wraps the entire component
+
+                # Models / Properties
+            </documentation>
+
+            <for id="mntl-sc-block-definition-heading">
+                <property name="text" value="Future" />
+            </for>
+            <for id="mntl-sc-block-definition-body">
+                <property name="text" value="the time or a period of time following the moment of speaking or writing; time regarded as still to come." />
+            </for>
+            <for id="class">
+                <property name="theme" value="theme-takeaway" />
+            </for>
+        </info>
+
+        <property name="tag" value="dl" />
+
+        <component location="content" id="mntl-sc-block-definition-heading" ref="mntl-text-block">
+            <property name="tag" value="dt" />
+            <property name="text" value="${@block.value.data.heading ?: null}" onError="collapseSilent" />
+        </component>
+        <component location="content" id="mntl-sc-block-definition-body" ref="mntl-text-block">
+            <property name="tag" value="dd" />
+            <list id="class"></list>
+            <property name="text" value="${@block.value.data.content ?: null}" onError="collapseSilent" />
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-guide" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Guide</displayName>
+            <description>Guide for Structured Content</description>
+            <documentation>
+                The guide block contains an image block and a featured link block with the "download-link" theme.
+
+                # Classes
+
+                - __.mntl-sc-block-guide__
+
+                Wraps the entire component
+
+                - __.has-image__
+
+                Added if guide block contains an image
+
+                # Models / Properties
+
+                - __mntl-sc-block-image.objectId__
+
+                Object id of the guide block image
+
+                - __mntl-sc-block-featuredlink\_\_link.uri__
+
+                Url of the guide to download
+
+                - __mntl-sc-block-guide-heading.text__
+
+                Text for guide block heading
+
+                - __mntl-sc-block-guide-description.text__
+
+                Text for guide block body
+            </documentation>
+            <for id="mntl-sc-block-image">
+                <property name="objectId" value="illo_Doctor-discussion-guide-5c2d10d946e0fb00012064e3.png" onError="collapse" />
+                <property name="imageOrientation" value="LANDSCAPE" />
+                <property name="imageResolution" value="HIGH_RES" />
+                <property name="alt" value="Doctor illustration" />
+            </for>
+            <for id="mntl-sc-block-featuredlink__link">
+                <property name="uri" value="https://files.verywellhealth.com/doctor-discussion-guides/Ankylosing+Spondylitis+Doctor+Discussion+Guide.pdf" mode="replace" />
+            </for>
+            <for id="class">
+                <property name="hasImage" value="has-image" mode="replace" />
+            </for>
+            <for id="mntl-sc-block-guide-heading">
+                <property name="text" value="Cholesterol Doctor Discussion Guide" mode="replace" />
+            </for>
+            <for id="mntl-sc-block-guide-description">
+                <property name="text" value="Get our printable guide for your next doctor&#39;s appointment to help you ask the right questions and learn as much as you can about managing your condition." mode="replace" />
+            </for>
+        </info>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+
+        <list id="class">
+            <property name="hasImage" value="${@block.value.data.image?.objectId != null ? 'has-image' : null}" onError="ignore" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-guide-heading" ref="mntl-text-block">
+            <property name="tag" value="h4" />
+            <property name="text" value="${@block.value.data.title}" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-guide-description" ref="mntl-text-block">
+            <property name="tag" value="p" />
+            <property name="text" value="${@block.value.data.content ?: null}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-guide-image" ref="mntl-sc-block-image">
+            <property name="objectId" value="${@block.value.data.image?.objectId ?: null}" onError="collapseSilent" />
+            <property name="width" value="270" type="integer" />
+            <property name="height" value="180" type="integer" />
+            <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" onError="ignore" />
+            <property name="placeholder" value="false" type="boolean" />
+            <property name="lightbox" value="false" type="boolean" />
+            <component id="mntl-figure-caption" mode="remove" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-guide-link" ref="mntl-sc-block-featuredlink">
+            <for id="class">
+                <property name="theme" value="download-link" mode="replace" />
+            </for>
+            <for id="mntl-sc-block-featuredlink__link">
+                <property name="uri" value="${@block.value.data.downloadLink}" mode="replace" />
+                <property name="text" value="Download" mode="replace" />
+            </for>
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-tool" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Tool</displayName>
+            <description>Tools for Structured Content</description>
+            <documentation>
+                The guide block contains a tool content block which loads a component through the deferred library.
+
+                # Classes
+
+                - __.mntl-sc-block-tool__
+
+                Wraps the entire component
+            </documentation>
+            <script group="top" path="/static/mantle/js/utilities.js" />
+            <script path="/static/mantle/components/internal/defer/js/deferred.js" />
+        </info>
+
+
+        <!--
+            Do not defer **litho-** tools, otherwise defer on load,
+            deferred components doesn't collapse with null value and onError="collapseSilent"
+            so going by the **mntl-group** workaround.
+        -->
+        <!--
+            toolId property is required outside of the deferred component. Properties/models of deferred components
+            should not be evaluated but the refId requires the value to be resolved. The outer property's value is
+            created and can be referenced as the 'value' attributes are identical. The property names do not need
+            to be the same. This is a workaround due to a correction in how IteratedTemplateComponent processes
+            deferred components.
+         -->
+        <property name="toolId" value="${(@block.value.data.toolId.substring(0,6) == 'litho-') ? 'mntl-group' : @block.value.data.toolId}" />
+        <component location="content" ref="${@toolId}" defer="load">
+            <property name="toolId" value="${(@block.value.data.toolId.substring(0,6) == 'litho-') ? 'mntl-group' : @block.value.data.toolId}" />
+        </component>
+
+        <component location="content" ref="${@toolId}">
+            <property name="isLithoTool" value="${(@block.value.data.toolId.substring(0,6) == 'litho-') ? true : null}" onError="collapseSilent" />
+            <property name="toolId" value="${@block.value.data.toolId}" />
+        </component>
+
+        <list id="class">
+            <property name="mntl-sc-block--${@block?.value?.data?.toolId}" value="mntl-sc-block--${@block?.value?.data?.toolId}" onError="ignore" />
+        </list>
+    </component>
+
+    <component id="mntl-sc-block-review" resourcePath="/components/structured-content/review/review.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Review</displayName>
+            <description>Block for Structured Content Review</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-review__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-review__header-link__
+
+                Wraps the entity image / review link section
+
+                - __.mntl-sc-block-review__article-link__
+
+                Wraps the link to the full review article
+
+                - __.mntl-sc-block-review__entity-link__
+
+                Wraps the external link to the url for the entity being reviewed
+
+                - __.mntl-sc-block-review__entity-trailing-link__
+
+                Wraps the second external link to the entity being reviewed
+
+                - __.mntl-sc-block-review__quick-facts__
+
+                Wraps the fast facts section
+
+                # Models / Properties
+
+                - __articleLinkText__
+
+                The text displayed on the link to the review article.
+
+                - __articleUrl__
+
+                Url for the review article.
+
+                - __entityLinkText__
+
+                The text displayed on the link to the url for the entity being reviewed.
+
+                - __image__
+
+                Image to be displayed at header of block.
+
+                - __reviewEntity__
+
+                Reference to ReviewEntityData object.
+            </documentation>
+
+            <for id="mntl-sc-block-review__rating">
+                <property name="rating" value="4.3" mode="replace" />
+                <property name="label" value="4.3" mode="replace" />
+            </for>
+
+            <map id="image">
+                <property name="objectId" value="origami-earrings-03-59506c673df78cae81341c10.jpg" />
+                <property name="width" value="2122" type="integer" />
+            </map>
+
+            <for id="this,mntl-sc-block-review__entity-link.uri">
+                <model name="json" id="reviewEntity">
+                    <property name="string" value="{
+                            'name': 'Charles Schwab',
+                            'url': 'https://www.schwab.com/',
+                            'quickFacts': {
+                              'list': [
+                                '100+ locations',
+                                'Founded 1975'
+                              ],
+                              'totalSize': 2
+                            }
+                          }" />
+                    <property name="class" value="java.util.Map" />
+                </model>
+            </for>
+
+            <for id="this,mntl-sc-block-review__article-link.uri,mntl-sc-block-review__article-link.display">
+                <property name="articleUrl" value="https://www.dotdash.com" mode="replace" />
+            </for>
+
+            <property name="arbitraryDependency" value="FINANCE" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/review/review.css" />
+
+        <property name="arbitraryDependency" value="${@block?.value?.data?.document?.entity?.data?.type.toString() == 'FINANCE' ? 'true' : null}" onError="collapseSilent" />
+
+        <property name="image" value="${@block?.value?.data?.entity?.data?.image ?: null}" onError="ignore" />
+
+        <for id="this,mntl-sc-block-review__entity-link.uri">
+            <property name="reviewEntity" value="${@block.value.data.entity.data}" />
+        </for>
+
+        <for id="this,mntl-sc-block-review__article-link.uri,mntl-sc-block-review__article-link.display">
+            <property name="articleUrl" value="${@block.value.data.document.url}" />
+        </for>
+
+        <component location="entity-link" id="mntl-sc-block-review__entity-link" ref="mntl-text-link">
+            <property name="text" value="Visit this site" />
+            <property name="uri" value="${@reviewEntity.url}" />
+            <property name="external" value="true" type="boolean" />
+        </component>
+
+        <component location="article-link" id="mntl-sc-block-review__article-link" ref="mntl-text-link">
+            <property name="text" value="Read full review" />
+            <property name="uri" value="${@articleUrl}" />
+            <property name="external" value="true" type="boolean" />
+            <property name="display" value="${requestContext.canonicalUrl.equals(@articleUrl) ? null : 'true'}" onError="collapseSilent" />
+        </component>
+
+        <component location="rating" id="mntl-sc-block-review__rating" ref="mntl-sc-block-starrating">
+            <property name="rating" value="${@block.value.data.rating.value}" />
+            <property name="label" value="${@block.value.data.rating.value}" />
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-product" resourcePath="/components/structured-content/product/product.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Product</displayName>
+            <description>Product Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-product__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-product\_\_title__
+
+                Wraps the title/heading
+
+                - __.mntl-sc-block-product\_\_image__
+
+                Wraps the image
+
+                - __.mntl-sc-block-product\_\_details__
+
+                Wraps the brand, style name, and prices
+
+                - __.mntl-sc-block-product\_\_brand__
+
+                Wraps the brand
+
+                - __.mntl-sc-block-product\_\_style-name__
+
+                Wraps the style name
+
+                - __.mntl-sc-block-product\_\_prices__
+
+                Wraps the retail price and sale price
+
+                - __.mntl-sc-block-product\_\_retail-price__
+
+                Wraps the retail price
+
+                - __.mntl-sc-block-product\_\_sale-price__
+
+                Wraps the sale price
+
+                - __.mntl-sc-block-product\_\_button__
+
+                Wraps the commerce button
+
+                # Models
+
+                - __title__
+
+                _Optional_. Used for title/heading text.
+
+                - __brand__
+
+                _Required_. Brand name.
+
+                - __headingTag__
+
+                HTML tag to use for list headings. Defaults to **span**.
+
+                - __styleName__
+
+                _Required_. Style/product name.
+
+                - __retailPrice__
+
+                _Required_. Retail price.
+
+                - __salePrice__
+
+                _Optional_. Sale price.
+
+                - __mntl-sc-block-product\_\_image.image__
+
+                _Required_. Product image.
+
+                - __mntl-sc-block-product\_\_image.srcset__
+
+                _Optional_. Product image srcset.
+
+                - __mntl-sc-block-product\_\_button.uri__
+
+                _Required_. Product button link.
+
+                - __mntl-sc-block-product\_\_button.text__
+
+                _Optional_. Product button text.
+            </documentation>
+
+            <property name="title" value="Really Good Skin Stick" />
+            <property name="brand" value="Fenty Beauty" />
+            <property name="styleName" value="Match Stix Matte Skin Stick" />
+            <property name="retailPrice" value="$21" />
+            <property name="salePrice" value="$15" />
+
+            <for id="mntl-sc-block-product__image">
+                <map id="image">
+                    <property name="owner" value="Byrdie" />
+                    <property name="caption" value="Really Good Skin Stick" />
+                    <property name="alt" value="Really Good Skin Stick" />
+                    <property name="objectId" value="rihanna-beauty-tips-275071-1544740783308-main.1200x0c-5c78056946e0fb000140a3d0.jpg" />
+                    <property name="width" value="1200" type="integer" />
+                    <property name="height" value="1200" type="integer" />
+                </map>
+            </for>
+
+            <for id="mntl-sc-block-product__button">
+                <property name="uri" value="https://www.harveynichols.com/int/brand/fenty-beauty/645004-match-stix-matte-skinstick/p2986097/" />
+            </for>
+        </info>
+
+        <script path="/static/mantle/components/structured-content/product/product.js" />
+        <stylesheet path="/static/mantle/components/structured-content/product/product.css" />
+
+        <property name="title" value="${str.stripToNull(@block?.value?.data?.image?.data?.image?.caption)}" onError="ignore" />
+        <property name="headingTag" value="span" />
+        <property name="brand" value="${str.stripToNull(@block?.value?.data?.brand)}" />
+        <property name="styleName" value="${str.stripToNull(@block?.value?.data?.styleName)}" />
+        <property name="retailPrice" value="${str.stripToNull(@block?.value?.data?.price?.displayText)}" onError="ignore" />
+        <property name="salePrice" value="${str.stripToNull(@block?.value?.data?.salePrice?.displayText)}" onError="ignore" />
+
+        <component location="image" id="mntl-sc-block-product__image" ref="mntl-image">
+            <property name="image" value="${@block?.value?.data?.image?.data?.image}" />
+            <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 300}}" />
+        </component>
+
+        <component location="button" id="mntl-sc-block-product__button" ref="mntl-text-link">
+            <property name="text" value="Shop" />
+            <property name="uri" value="${str.stripToNull(@block?.value?.data?.commerceButton?.data?.commerceInfo?.list[0]?.id)}" onError="collapseSilent" />
+            <property name="external" value="true" type="boolean" />
+            <property name="trackingContainer" value="true" type="boolean" />
+        </component>
+
+    </component>
+
+    <component id="mntl-sc-block-bio" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Bio</displayName>
+            <description>Bio Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-bio__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-bio\_\_person__
+
+                Wraps the name and job title
+
+                - __.mntl-sc-block-bio\_\_meta__
+
+                Wraps the image and social media icons (optional)
+
+                - __.mntl-sc-block-bio\_\_image__
+
+                Wraps the bio image
+
+                - __.mntl-sc-block-bio\_\_content__
+
+                Wraps the description and CTA.
+
+                - __.mntl-sc-block-bio\_\_detail--header__
+
+                Wraps the mntl-sc-block personal detail header. Contains the text property to override with per vertical/template content
+
+                - __.mntl-sc-block-bio\_\_detail--content__
+
+                Wraps the mntl-sc-block personal detail content. Pulls this info from the selene data
+
+                # Models
+
+                - __linkText__
+
+                _Optional_. Text of link to full bio page. (defaults to "read more")
+            </documentation>
+
+            <for id="text, uri, image">
+                <property name="bioDocument" value="${@mockDocument}">
+                    <model name="mockDocument" id="mockDocument">
+                        <property name="template" value="mntl-bio-sc-block" />
+                    </model>
+                </property>
+            </for>
+
+            <for id="mntl-sc-block-bio__link">
+                <property name="showLink" value="true" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/bio/bio.css" />
+
+        <for id="text, uri, image">
+            <property name="bioDocument" value="${@block.value.data.document}" />
+        </for>
+
+        <component location="content" id="mntl-sc-block-bio__person" ref="mntl-block">
+            <component location="content" id="mntl-sc-block-bio__name" ref="mntl-text-block">
+                <property name="text" value="${@bioDocument.author.displayName}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-bio__title" ref="mntl-text-block">
+                <property name="text" value="${@bioDocument.jobTitle}" onError="collapseSilent" />
+            </component>
+        </component>
+
+        <component location="content" id="mntl-sc-block-bio__meta" ref="mntl-block">
+            <component location="content" id="mntl-sc-block-bio__image" ref="mntl-image">
+                <property name="image" value="${@bioDocument.getImageForUsage('PRIMARY')?.isNotEmpty() ? @bioDocument.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" />
+                <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-bio__detail" ref="mntl-block">
+                <component location="content" id="mntl-sc-block-bio__detail--header" ref="mntl-text-block">
+                    <property name="text" value="Personal Detail" onError="collapseSilent" />
+                </component>
+
+                <component location="content" id="mntl-sc-block-bio__detail--content" ref="mntl-text-block">
+                    <property name="text" value="${@bioDocument.personalDetail}" onError="collapseSilent" />
+                </component>
+            </component>
+        </component>
+
+        <component location="content" id="mntl-sc-block-bio__content" ref="mntl-block">
+            <component location="content" id="mntl-sc-block-bio__excerpt" ref="mntl-text-block">
+                <property name="text" value="${@bioDocument.excerpt}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-bio__link" ref="mntl-text-link">
+                <property name="showLink" value="${@block.value.data.showLink ? 'true' : null}" onError="collapseSilent" />
+                <property name="uri" value="${@bioDocument.url}" onError="collapseSilent" />
+                <property name="text" value="Read more" />
+            </component>
+        </component>
+    </component>
+
+    <component id="mntl-sc-block-productrecord" ref="mntl-external-component">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>External Product Record</displayName>
+            <description>Mantle external component calling the Commerce productrecord-block to make it available to the verticals</description>
+            <documentation>
+                # Classes
+                - __.mntl-sc-block-productrecord__
+                Wraps the entire component
+
+                - __.js-extended-commerce__block
+                Used by extended-commerce Designates this container as a commerce block, a singular product with one or more retailers
+
+                - __.mntl-sc-block-productrecord\_\_image__
+                Wraps the image block An image that, when clicked, triggers a click on the 1st commerce button in the list
+
+                - __.mntl-sc-block-productrecord\_\_image .js-extended-commerce__image__
+                Used by extended-commerce Designates this container as a commerce image, which can be populated by infocat, amazon or a placeholder
+
+                - __.mntl-sc-block-productrecord\_\_link__
+                Wraps the link block A text link that, when clicked, triggers a click on the 1st commerce button in the list
+
+                - __.mntl-sc-block-productrecord__commerce-button-list__
+                Wraps the commerce button list Shows a list of retailers associated with the current product in infocat
+            </documentation>
+        </info>
+
+        <model name="externalScBlockComponent" id="externalComponent">
+                <property name="serviceId" value="commerce" />
+                <property name="componentId" value="productrecord-block" />
+                <property name="uuid" value="${@block.value.uuid}" />
+        </model>
+    </component>
+
+    <component id="mntl-sc-block-productsummary" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Product Summary</displayName>
+            <description>Product Summary Block for Structured Content</description>
+
+            <for id="deserializedProductSummaryScBlock.text">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-single-basic-productsummary" />
+                </model>
+            </for>
+
+            <component id="deserializedProductSummaryScBlock" location="content" ref="mntl-text-block">
+                <property name="text" value="${@document?.pages?.list[0]?.contents?.list[0]?.toString()}" onError="collapseSilent" />
+            </component>
+        </info>
+
+    </component>
+
+    <component id="mntl-sc-block-startgroup" resourcePath="/components/structured-content/nesting/start-group.ftl">
+
+        <!-- no info section because this isn't a real component, just exists for nesting reasons -->
+
+        <property name="tag" value="${@block.value.data.groupType}" />
+
+        <list id="class">
+            <property name="mntl-sc-block-group" value="mntl-sc-block-group--${@block.value.data.groupType}" />
+        </list>
+
+    </component>
+
+    <component id="mntl-sc-block-endgroup" resourcePath="/components/structured-content/nesting/end-group.ftl">
+
+        <!-- no info section because this isn't a real component, just exists for nesting reasons -->
+
+        <property name="tag" value="${@block.value.data.groupType}" />
+
+    </component>
+
+    <component id="mntl-sc-block-embed" resourcePath="/components/structured-content/embed/embed.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Embed Block</displayName>
+            <description>Embed Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-sc-block-embed__
+
+                Wraps the entire component
+
+                - __.mntl-sc-block-embed--iframe__
+
+                The inner iframe element
+
+                # Models / Properties
+
+                - __url__
+
+                The embed source. Required.
+
+                - __title__
+
+                The embed title. Optional.
+
+                - __options__
+
+                Options passed down to the embed providers. Optional. For example,
+
+                ```
+                <![CDATA[
+                <map id="options">
+                    <map id="instagram">
+                        <property name="hidecaption" value="true" />
+                    </map>
+                    <map id="twitter">
+                        <property name="hide_media" value="true" />
+                    </map>
+                </map>
+                ]]>
+                ```
+
+                -__expand__
+
+                data-expand attribute used to to determine the space above the viewport in px to load the embedded content via lazySizes. Default 300
+                per recommendation in the docs.
+            </documentation>
+            <property name="url" value="https://twitter.com/Interior/status/463440424141459456" mode="replace" />
+            <property name="title" value="Sunsets don't get much better than this one" mode="replace" />
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/structured-content/embed/embed.js" />
+        <stylesheet path="/static/mantle/components/structured-content/embed/embed.css" />
+
+        <property name="url" value="${@block.value.data.uri}" />
+        <property name="title" value="${@block.value.data.title}" onError="ignore" />
+        <property name="expand" value="300" type="integer" />
+    </component>
+
+    <component id="mntl-sc-block-recordimagegallery" ref="mntl-carousel">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Record Image Gallery</displayName>
+            <description>Block for Structured Content Record Image Gallery</description>
+            <documentation></documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/recordimagegallery/recordimagegallery.css" />
+
+        <list id="class">
+            <property name="scroll-snap" value="scroll-snap" views="tablet, mobile" />
+        </list>
+
+        <map id="attrs">
+            <property name="data-tracking-id" value="mntl-sc-block-recordimagegallery-${@block?.value?.data?.recordId}" />
+        </map>
+
+        <for id="this, mntl-carousel__item, mntl-carousel__indicator-item">
+            <property name="carouselItems" value="${@block?.value?.data?.getImages()}" />
+        </for>
+
+        <for id="mntl-carousel__card">
+            <component id="image-carousel__image" location="content" ref="mntl-universal-image">
+                <property name="fitInStyle" value="NORMAL" />
+                <property name="placeholder" value="false" type="boolean" />
+                <property name="expand" value="300" type="integer" />
+                <property name="width" value="1500" type="integer" />
+                <map id="srcset">
+                    <property name="minWidth" value="750" type="integer" />
+                    <property name="maxWidth" value="750" type="integer" />
+                </map>
+                <property name="sizes" value="750px" />
+            </component>
+        </for>
+
+        <for id="mntl-carousel__item">
+            <component id="mntl-sc-block-recordimagegallery__caption" location="content" ref="mntl-figure-caption">
+                <property name="collapseCaption" value="${@caption == null AND @owner == null ? null : false}" onError="collapseSilent" />
+                <property name="showCaptionIcon" value="false" type="boolean" />
+            </component>
+        </for>
+
+        <for id="mntl-sc-block-recordimagegallery__caption, mntl-sc-block-recordimagegallery__caption.collapseCaption">
+            <property name="caption" value="${@image?.caption}" onError="ignore" />
+            <property name="owner" value="${@image?.owner}" onError="ignore" />
+        </for>
+
+        <for id="image-carousel__image, alt, width, height, caption, owner">
+            <property name="image" value="${@item.value}" />
+        </for>
+
+        <for id="image">
+            <component-list-item id="item" ref="mntl-carousel__item" />
+        </for>
+
+        <!-- Enabling on all views here as indicator is only enabled on tablet and mobile by default -->
+        <component id="mntl-carousel__indicator" views="pc, tablet, mobile" />
+    </component>
+
+    <component id="mntl-sc-block-spotlight" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Spotlight</displayName>
+            <description>Block for Structured Content Spotlight</description>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/spotlight/spotlight.css" />
+
+        <list id="class">
+            <property name="theme" value="${str.stripToNull(@block.value.data.theme) != null ? 'theme-'.concat(@block.value.data.theme?.toString().toLowerCase()) : '' }" onError="ignore" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-spotlight__heading" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@block.value.data.heading ?: null}" onError="collapseSilent" />
+        </component>
+
+        <component ref="mntl-document-spotlight" id="mntl-sc-block-spotlight__articles" location="content">
+            <for id="mntl-card-list-items.listItems">
+                <property name="documentList" value="${@block.value.data.documents.![document]}" mode="replace" />
+            </for>
+        </component>
+
+    </component>
+
+    <component id="mntl-sc-block-journeynav" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Journey Nav Block</displayName>
+            <description>Journey Nav for Structured Content</description>
+            <documentation>Nav list for TaxonomySC Journey Nav</documentation>
+        </info>
+        <stylesheet path="/static/mantle/components/structured-content/journey-nav/journey-nav.css" />
+
+        <property name="collapse" value="${@isJourneyDocument ? null : true}" onError="collapseSilent">
+            <model name="isJourneyDocument">
+                <model name="journeyStructure" id="journeyRoot">
+                    <property name="docId" value="${@block.value.data.rootDocId}" onError="ignore" />
+                </model>
+            </model>
+        </property>
+
+        <list id="class">
+            <property name="theme" value="${str.stripToNull(@block.value.data.theme) != null ? 'theme-'.concat(@block.value.data.theme?.toString().toLowerCase()) : '' }" onError="ignore" />
+        </list>
+
+        <component location="content" id="mntl-sc-block-journeynav__heading" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="${@block.value.data.heading ?: null}" onError="collapseSilent" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-journeynav__top" ref="mntl-block">
+            <for id="hasContent, hasImageAndContent">
+                <property name="hasImage" value="${str.stripToNull(@block.value.data?.image?.objectId) ?: null}" onError="ignore" />
+                <property name="hasTitleOrContent" value="${str.stripToNull(@block.value.data.title) != null or str.stripToNull(@block.value.data.text) != null ? true : null}" onError="ignore" />
+            </for>
+
+            <property name="hasImageAndContent" value="${@hasImage != null or @hasTitleAndContent != null ? true : null}" onError="collapseSilent" />
+
+            <component location="content" id="mntl-sc-block-journeynav__image" ref="mntl-image">
+                <property name="image" value="${@block?.value?.data?.image}" onError="collapseSilent" />
+                <property name="width" value="250" type="integer" />
+                <property name="height" value="150" type="integer" />
+            </component>
+
+            <component location="content" id="mntl-sc-block-journeynav__content" ref="mntl-block">
+                <property name="hasContent" value="${@hasTitleAndContent != null ? true : null}" onError="collapseSilent" />
+
+                <component location="content" id="mntl-sc-block-journeynav__title" ref="mntl-text-block">
+                    <property name="text" value="${@block?.value?.data?.title}" onError="collapseSilent" />
+                </component>
+
+                <component location="content" id="mntl-sc-block-journeynav__text" ref="mntl-text-block">
+                    <property name="text" value="${@block?.value?.data?.text}" onError="collapseSilent" />
+                </component>
+            </component>
+        </component>
+
+        <component id="mntl-sc-block-journeynav__list" location="content" ref="mntl-block">
+            <property name="tag" value="ul" />
+
+            <component-list location="content" id="mntl-sc-block-journeynav__list-item" ref="mntl-block" iterable="${@items}">
+                <property name="tag" value="li" />
+                <property name="items" value="${@isJourneyDocument ? @journeyRoot.sections[0]?.journeyDocuments : null}" onError="collapseSilent">
+                    <model name="isJourneyDocument" />
+                </property>
+
+                <for id="items, isJourneyDocument">
+                    <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                        <property name="docId" value="${@block.value.data.rootDocId}" onError="ignore" />
+                    </model>
+                </for>
+
+                <component location="content" id="mntl-sc-block-journeynav__link" ref="mntl-text-link">
+                    <property name="text" value="${@item.value.shortHeading}" />
+                    <property name="uri" value="${@item.value.node.document.url}" />
+                    <for id="text, uri">
+                        <component-list-item id="item" ref="mntl-sc-block-journeynav__list-item" />
+                    </for>
+                </component>
+            </component-list>
+        </component>
+    </component>
+
+    <!-- Components that use the new converged images -->
+    <component id="mntl-sc-block-universal-image" resourcePath="/components/structured-content/image/universal-image.ftl">
+        <!-- Temporary component to be used by verticals upgrading to converged images, until everyone is upgraded
+            Once everyone has upgraded this should be moved into the mntl-sc-block-image component, and should all verticals should change their reference back to mntl-sc-block-image -->
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Universal Image Block</displayName>
+            <description>Unversal Image Block for Structured Content</description>
+            <documentation>
+                # Classes
+
+                ## mntl-sc-block-image
+                Wraps the entire component
+
+                ## theme class
+                This is a dynamic class that gets added based on the theme of the block
+
+                # Components
+
+                ## mntl-universal-image
+                This component handles displaying the image. All image related properties should be for-targeted into this component. Please see the docs on this component for more information
+
+                ## mntl-figure-caption
+                This component displays the caption for the image.
+
+                # Models / Properties
+
+                ## image
+                Image object used by the mntl-universal-image
+
+                ## imageOrientation
+                Possible values found in **com.about.mantle.model.extended.docv2.ImageOrientation**. Drives whether or not the **figure** HTML element has a **figure-portrait** or **figure-landscape** class.
+
+                ## imageResolution
+                Possible values found in **com.about.mantle.model.extended.docv2.ImageResolution**. Low Res images are given a **figure-portrait** class
+
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/image/image.css" />
+        <stylesheet path="/static/mantle/components/image/css/gif.css"></stylesheet>
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/dom-utilities.js" />
+        <script group="bottom" path="/static/mantle/js/vendor/throttle.js" />
+        <script group="bottom" path="/static/mantle/components/structured-content/image/createLightboxCarousel.js" />
+        <svg id="light-box-arrow" path="/static/mantle/svg/light-box-arrow.svg" />
+
+        <list id="class">
+            <property name="theme" value="${@block.value.getType().toString().toLowerCase() == 'image' ? (str.stripToNull(@block.value.data.theme) != null ? 'theme-'.concat(@block.value.data.theme?.toString().toLowerCase()) : '' ) : ''}" onError="ignore" />
+            <property name="mntl-sc-block-image" value="mntl-sc-block-image" />
+        </list>
+
+        <property name="imageOrientation" value="${@block.value.data.image.imageOrientation}" onError="collapse" />
+        <property name="imageResolution" value="${@block.value.data.image.imageResolution}" onError="collapse" />
+
+        <component location="image" ref="mntl-universal-image">
+            <property name="lazyload" value="true" type="boolean" />
+            <property name="srcset" value="${{'minWidth': 750, 'maxWidth': 750}}" onError="ignore" />
+            <property name="sizes" value="750px" />
+            <property name="alt" value="${@block.value.data.image.alt ?: ''}" />
+            <property name="width" value="${renderUtils.uncappedImageWidthsEnabled() ? (@block.value.data.image.width ?: 10000) : 1500}" />
+            <property name="height" value="0" type="integer" />
+            <property name="expand" value="300" type="integer" />
+            <property name="idPrefix" value="mntl-sc-block-image_" />
+
+            <property name="useHiResLightbox" value="false" type="boolean" />
+            <property name="hiResLightboxWidth" value="1500" type="integer" views="tablet, pc" />
+
+            <map id="imgAttrs">
+                <property name="data-click-tracked" value="true" type="boolean" />
+                <property name="data-tracking-container" value="true" type="boolean" />
+                <property name="data-img-lightbox" value="${!@image?.objectId?.contains('.gif')}" />
+            </map>
+
+            <for id="this, placeholderHeight, placeholderWidth, imgAttrs.data-img-lightbox">
+                <property name="image" value="${(@block.value instanceof
+                    T(com.about.mantle.model.extended.docv2.sc.blocks.StructuredContentImageEx)) ? @block.value.data.image : null}" onError="ignore" />
+            </for>
+        </component>
+
+        <component location="bottom" ref="mntl-figure-caption">
+            <property name="collapse" value="${((@caption == null OR @caption == '') AND (@owner == null OR @owner == '')) ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <for id="mntl-figure-caption, mntl-figure-caption.collapse">
+            <property name="caption" value="${@block.value.type == 'IMAGE' ? @block.value.data.image?.caption : null}" onError="ignore" />
+            <property name="owner" value="${@block.value.type == 'IMAGE' ? @block.value.data.image?.owner : null}" onError="ignore" />
+        </for>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-galleryslide-image -->
+    <component id="mntl-sc-block-galleryslide-universal-image" ref="mntl-universal-image">
+        <property name="tag" value="figure" />
+        <property name="placeholder" value="false" type="boolean" />
+        <property name="alt" value="${@block.value.data.image.alt}" onError="ignore" />
+        <property name="width" value="${@block.value.data.image.width}" mode="replace" onError="ignore" />
+        <property name="height" value="${@block.value.data.image.height}" onError="ignore" />
+        <property name="expand" value="300" type="integer" />
+        <map id="imgAttrs">
+            <property name="data-click-tracked" value="true" type="boolean" />
+            <property name="data-tracking-container" value="true" type="boolean" />
+        </map>
+
+        <for id="this, placeholderHeight, placeholderWidth">
+            <property name="image" value="${(@block.value instanceof
+                T(com.about.mantle.model.extended.docv2.sc.blocks.StructuredContentImageEx)) ? @block.value.data.image : null}" onError="ignore" />
+        </for>
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-groupcallout -->
+    <component id="mntl-sc-block-groupcallout--universal-image" ref="mntl-sc-block-groupcallout">
+
+        <for id="mntl-sc-block-groupcallout-items">
+            <component location="content" id="mntl-sc-block-groupcallout-image" ref="mntl-universal-image" mode="replace">
+                <property name="image" value="${@item.value.image}" onError="ignore" />
+                <property name="width" value="${@item.value.image.width}" mode="replace" onError="ignore" />
+                <property name="height" value="${@item.value.image.height}" mode="replace" onError="ignore" />
+                <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" onError="ignore" />
+                <property name="placeholder" value="false" type="boolean" />
+                <property name="alt" value="${@item.value.image?.alt}" onError="ignore" />
+                <property name="lazyload" value="true" type="boolean" />
+                <property name="expand" value="300" type="integer" />
+
+                <map id="imgAttrs">
+                    <property name="data-click-tracked" value="true" type="boolean" />
+                    <property name="data-tracking-container" value="true" type="boolean" />
+                </map>
+            </component>
+        </for>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-commerce  -->
+    <component id="mntl-sc-block-commerce--universal-image" ref="mntl-sc-block-commerce">
+
+        <component location="content" id="mntl-sc-block-commerce__image" ref="mntl-universal-image" mode="replace">
+            <property name="tag" value="div" />
+            <property name="lazyload" value="false" type="boolean" />
+            <property name="srcset" value="" />
+            <property name="externalUrl" value="//:0" />
+            <property name="image" value="" />
+            <property name="alt" value="" />
+            <property name="width" value="1" type="integer" />
+            <property name="height" value="1" type="integer" />
+            <property name="placeholder" value="false" type="boolean" />
+            <property name="expand" value="300" type="integer" />
+        </component>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-guide -->
+    <component id="mntl-sc-block-guide--universal-image" ref="mntl-sc-block-guide">
+
+        <component location="content" id="mntl-sc-block-guide-image" ref="mntl-universal-image" mode="replace">
+            <property name="objectId" value="${@block.value.data.image?.objectId ?: null}" onError="collapseSilent" />
+            <property name="width" value="270" type="integer" />
+            <property name="height" value="180" type="integer" />
+            <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" onError="ignore" />
+            <property name="placeholder" value="false" type="boolean" />
+            <property name="alt" value="${@block.value.data.image.alt}" onError="ignore" />
+            <property name="expand" value="300" type="integer" />
+            <property name="lazyload" value="true" type="boolean" />
+            <property name="image" value="${(@block.value instanceof
+                T(com.about.mantle.model.extended.docv2.sc.blocks.StructuredContentImageEx)) ? @block.value.data.image : null}" onError="ignore" />
+        </component>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-gallery -->
+    <component id="mntl-sc-block-gallery--universal-image" ref="mntl-sc-block-gallery">
+
+        <for id="carousel__item">
+            <component location="content" id="carousel__image" ref="mntl-universal-image" mode="replace">
+                <property name="image" value="${@item.value.data.contents.list[0].data.image}">
+                    <component-list-item id="item" ref="carousel__item" />
+                </property>
+                <property name="width" value="250" type="integer" />
+                <property name="height" value="150" type="integer" />
+                <property name="sizes" value="" />
+            </component>
+        </for>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-product -->
+    <component id="mntl-sc-block-product--universal-image" ref="mntl-sc-block-product">
+
+        <component location="image" id="mntl-sc-block-product__image" ref="mntl-universal-image" mode="replace">
+            <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 300}}" />
+            <for id="this, alt, height, width, placeholderHeight, placeholderWidth">
+                <property name="image" value="${@block?.value?.data?.image?.data?.image}" />
+            </for>
+        </component>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-bio -->
+    <component id="mntl-sc-block-bio--universal-image" ref="mntl-sc-block-bio">
+
+        <for id="mntl-sc-block-bio__meta">
+            <component location="content" id="mntl-sc-block-bio__image" ref="mntl-universal-image" mode="replace">
+                <property name="srcset" value="${{'minWidth': 300, 'maxWidth': 768}}" />
+                <for id="this, alt, height, width, placeholderWidth, placeholderHeight">
+                    <property name="image" value="${@bioDocument.getImageForUsage('PRIMARY')?.isNotEmpty() ? @bioDocument.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" />
+                </for>
+            </component>
+        </for>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-productrecord -->
+    <component id="mntl-sc-block-productrecord--universal-image" ref="mntl-sc-block-productrecord">
+
+        <component id="mntl-sc-block-productrecord__image" location="figure" ref="mntl-block" mode="replace">
+            <component location="content" ref="mntl-universal-image">
+                <list id="class">
+                    <property name="js-extended-commerce__image" value="js-extended-commerce__image" />
+                    <property name="js-extended-commerce__default-image" value="${@hasInfoCatImage ? '' : 'js-extended-commerce__default-image'}" />
+                </list>
+
+                <property name="placeholder" value="true" type="boolean" />
+                <property name="fitInStyle" value="NORMAL" />
+                <property name="lazyload" value="${@hasInfoCatImage}" />
+                <property name="srcset" value="${@hasInfoCatImage ? {'minWidth': 200, 'maxWidth': 230, 'maxHeight' : 230 } : ''}" />
+
+                <for id="this, alt, width, height, placeholderWidth, placeholderHeight">
+                    <property name="image" value="${@hasInfoCatImage ? @productRecord.product.getImageForUsage('PRIMARY') : @defaultImage}">
+                        <property name="defaultImage" value="${{objectId: 'commerce_default_image_icon-d30e3fe926f54a6a9f8165be26203dbf.png', width: 230, height: 184}}" />
+                        <property name="productRecord" value="${@block.value.data}" onError="collapseSilent" />
+                    </property>
+                </for>
+                <for id="js-extended-commerce__default-image, image, lazyload, srcset">
+                    <property name="hasInfoCatImage" value="${@block?.value?.data?.product?.getImageForUsage('PRIMARY') != null ? true : false}" />
+                </for>
+            </component>
+        </component>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-journeynav -->
+    <component id="mntl-sc-block-journeynav--universal-image" ref="mntl-sc-block-journeynav">
+
+        <for id="mntl-sc-block-journeynav__top">
+            <component location="content" id="mntl-sc-block-journeynav__image" ref="mntl-universal-image">
+                <property name="width" value="250" type="integer" />
+                <property name="height" value="150" type="integer" />
+
+                <for id="this, alt, placeholderWidth, placeholderHeight">
+                    <property name="image" value="${@block?.value?.data?.image}" onError="collapseSilent" />
+                </for>
+            </component>
+        </for>
+
+    </component>
+
+    <!-- IMAGE CONVERGENCE: replaces mntl-sc-block-review -->
+    <component id="mntl-sc-block-review--universal-image" ref="mntl-sc-block-review" resourcePath="/components/structured-content/review/review--universal-image.ftl">
+
+        <component location="review-image" id="mntl-sc-block-review__entity-image" ref="mntl-universal-image">
+            <property name="lazyload" value="false" type="boolean" />
+            <property name="placeholder" value="false" type="boolean" />
+            <for id="this, alt, width, height">
+                <property name="image" value="${@block?.value?.data?.entity?.data?.image ?: null}" />
+            </for>
+        </component>
+
+    </component>
+
+</components>

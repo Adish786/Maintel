@@ -1,0 +1,229 @@
+{
+    "revisionKey":"4148195_1502912517633",
+    "revisionId":"4148231_1503001525552",
+    "mongoId":"5995fbb5b38d0c001006c2a8",
+    "authorKey":"115876",
+    "lastEditingAuthorId":"156569",
+    "lastEditingUserId":"148484752568203",
+    "url":"https://www.verywell.com/slug-placeholder-4148231",
+    "rootUrl":"https://www.verywell.com/slug-placeholder-4148231",
+    "vertical":"HEALTH",
+    "docID":4148231,
+    "docId":4148231,
+    "slug":"slug-placeholder",
+    "templateType":"STRUCTUREDCONTENT",
+    "documentState":{
+        "state":"ACTIVE",
+        "activeDate":1502916444255
+    },
+    "dates":{
+        "created":1502916444255,
+        "updated":1502916444255,
+        "firstPublished":0,
+        "lastPublished":0
+    },
+    
+    "taggedImages": {
+      "list": [
+        {
+          "image": {
+            "url": "https://fthmb.tqn.com/eBV2CtQggXAGZb0Xyidk5Vwksnc=/500x350/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/promo-633a8059e5084f36bdef5e673b0ad31a.jpg",
+            "caption": "Google Ambient Computing",
+            "owner": "<p> Lifewire / Maritsa Patrinos</p>",
+            "alt": "Person lying on a \"google couch\" looking at a smartphone",
+            "width": 2000,
+            "height": 1333,
+            "id": "",
+            "fileName": "",
+            "objectId": "promo-633a8059e5084f36bdef5e673b0ad31a.jpg",
+            "authorId": "",
+            "user": ""
+          },
+          "tags": {
+            "list": [
+              "FACEBOOK",
+              "PINTEREST",
+              "PRIMARY",
+              "RECIRC",
+              "TWITTER",
+              "SCHEMA"
+            ],
+            "totalSize": 6
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "medicalBoardApproved":false,
+    "editingAuthorKey":"",
+    "noIndex":false,
+    "socialTitle":"structured content: social title",
+    "description":"structured content: description",
+    "heading":"structured content: heading",
+    "primaryImage":{
+        "url":"http://placehold.it/350x150",
+        "caption":"",
+        "owner":"",
+        "alt":"",
+        "width":0,
+        "height":0,
+        "id":"",
+        "fileName":"",
+        "objectId":"",
+        "authorId":"",
+        "user":""
+    },
+    "paging":{
+        "current":1,
+        "total":1
+    },
+    "audit":{
+        "lastModified":1503001525552
+    },
+    "summary":{
+        "socialTitle":"structured content: social title",
+        "heading":"structured content: heading",
+        "description":"structured content: description",
+        "image":{
+            "url":"http://placehold.it/350x150",
+            "caption":"",
+            "owner":"",
+            "alt":"",
+            "width":0,
+            "height":0,
+            "id":"",
+            "fileName":"",
+            "objectId":"",
+            "authorId":"",
+            "user":""
+        }
+    },
+    "guestAuthor":{
+        "link":{
+            "text":"bob",
+            "uri":"bobsUrl"
+        }
+    },
+    "pages":{
+        "list":[
+            {
+                "contents":{
+                    "list":[
+                        {
+                            "id":12345671,
+                            "type":"HEADING",
+                            "data":{
+                                "text":"How to make some origami thing"
+                            }
+                        },
+                        {
+                            "id":12345673,
+                            "type":"IMAGE",
+                            "data":{
+                                "image":{
+                                    "url":"https://nypeimgsrv.about.com/xog5iVoPs5hXl2ZdPOWRi_9_XhE=/about/origami-earrings-03-59506c673df78cae81341c10.jpg",
+                                    "owner":"Chrissy Pk",
+                                    "alt":"How to Make Origami Earrings",
+                                    "width":1600,
+                                    "height":1066,
+                                    "id":"59506c673df78cae81341c10",
+                                    "objectId":"origami-earrings-03-59506c673df78cae81341c10.jpg"
+                                }
+                            }
+                        },
+                        {
+                            "id":149790636039923,
+                            "type":"HTML",
+                            "data":{
+                                "html":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices nulla vel mauris mollis, vel vestibulum erat finibus. Nam dignissim sapien consectetur, pharetra ligula in, tincidunt nunc. Etiam ac tellus viverra, pellentesque arcu eu, scelerisque arcu. Morbi semper enim eget ex cursus volutpat. Nulla imperdiet at elit non condimentum. Quisque nulla turpis, ultricies nec pharetra commodo, elementum ac quam. Aenean arcu elit, lacinia sed imperdiet gravida, accumsan sed nisi.  Sed blandit nunc dolor, sit amet egestas nisi dignissim eget. Duis ut tortor rutrum, pellentesque purus euismod, rutrum ligula. Quisque scelerisque tortor vel purus convallis, at cursus felis facilisis. Fusce viverra porta elit ac luctus. Suspendisse magna est, porttitor tristique ullamcorper id, varius ac mi. Duis volutpat ultrices eleifend. Nulla blandit eros ut ipsum egestas molestie. Aliquam tincidunt varius auctor. Cras rutrum egestas lorem, sed vehicula eros consequat eu. Curabitur facilisis ante non pulvinar efficitur. Aliquam ac fringilla odio, eu tempor turpis. Phasellus a tortor nec tortor maximus porta eget quis enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  Mauris interdum id diam non tempus. Donec non commodo magna, venenatis pulvinar orci. Maecenas sagittis fringilla sollicitudin. Duis non luctus dolor. Nunc ullamcorper velit vel diam faucibus, quis lacinia nibh molestie. Duis egestas bibendum fermentum. Duis lorem lectus, molestie a eros vitae, pretium pharetra justo. Morbi in sapien venenatis, ultricies tellus vitae, finibus urna. Morbi aliquet turpis a imperdiet aliquet. Phasellus gravida dolor vel tellus tempus, eu tempus urna pellentesque. Praesent blandit, lectus a sodales ultrices, ligula sem fringilla velit, vitae imperdiet velit arcu at ligula.  Sed viverra urna enim, at vestibulum felis auctor id. Aenean tristique enim pulvinar urna malesuada lacinia. Morbi nibh purus, cursus nec ornare in, vulputate vel dui. Quisque volutpat, elit id suscipit venenatis, libero arcu mollis tellus, ac rutrum felis nibh sed lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare ex lacus, accumsan fringilla erat consectetur at. Ut dictum urna et dui egestas viverra. Morbi pulvinar tempor tortor vitae posuere. Maecenas a porta elit. Cras sit amet erat et quam lacinia iaculis lobortis vitae sapien. Sed vitae metus posuere, cursus urna et, vestibulum nisi. Phasellus tempus, dui a tincidunt dapibus, arcu ex iaculis orci, vitae blandit magna est vel orci. Sed cursus, purus eget laoreet porta, turpis leo aliquet turpis, nec pharetra ligula eros non ligula. Mauris nec erat ultricies, scelerisque odio fringilla, dictum risus. Suspendisse nulla mauris, vulputate dignissim porta eu, egestas eu eros.  Nullam et justo id magna hendrerit sagittis. Cras et efficitur velit, at maximus mi. Vivamus vulputate sed quam ac hendrerit. Nulla quis elit sollicitudin, sollicitudin est a, pulvinar nibh. Cras lacinia ullamcorper sodales. Aenean nec risus lacinia, sollicitudin nibh ac, vehicula nibh. Donec venenatis bibendum dui quis iaculis. Aliquam laoreet lacus eros, eget feugiat augue ultrices at.</p>"
+                            }
+                        },
+                        {
+                            "id":123456733213,
+                            "type":"TABLE",
+                            "data": {
+                                "title": "The best origami paper colours",
+                                "caption": "In Canada they spell colour with a u.",
+                                "data": {
+                                    "list": [
+                                        {
+                                            "list": [
+                                                {
+                                                    "value": ""
+                                                },
+                                                {
+                                                    "value": "Paper Colour"
+                                                },
+                                                {
+                                                    "value": "Niceness"
+                                                }
+                                            ],
+                                            "totalSize": 3
+                                        },
+                                        {
+                                            "list": [
+                                                {
+                                                    "value": "Row 1"
+                                                },
+                                                {
+                                                    "value": "Red"
+                                                },
+                                                {
+                                                    "value": "10"
+                                                }
+                                            ],
+                                            "totalSize": 3
+                                        },
+                                        {
+                                            "list": [
+                                                {
+                                                    "value": "Row 2"
+                                                },
+                                                {
+                                                    "value": "Yellow"
+                                                },
+                                                {
+                                                    "value": "7"
+                                                }
+                                            ],
+                                            "totalSize": 3
+                                        }
+                                    ],
+                                    "totalSize": 3
+                                },
+                                "rowAttributes": {
+                                    "list": [
+                                        {
+                                            "isHeading": true
+                                        }
+                                    ],
+                                    "totalSize": 1
+                                },
+                                "columnAttributes": {
+                                    "list": [
+                                        {
+                                            "isHeading": true,
+                                            "width": {
+                                                "unit": "%",
+                                                "value": 10
+                                            }
+                                        },
+                                        {
+                                            "width": {
+                                                "unit": "%",
+                                                "value": 33
+                                            }
+                                        }
+                                    ],
+                                    "totalSize": 2
+                                }
+                            }
+                        }
+                    ],
+                    "totalSize":4
+                }
+            }
+        ],
+        "totalSize":1
+    }
+}

@@ -1,0 +1,41 @@
+{
+	"id": "image.default.style",
+	"name": "image.default.style",
+	"displayName": "Style Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/style/0/161485386.jpg",
+			"owner" : "Ines Perkovic/Moment Open/Getty Images",
+			"width" : "2077",
+			"height" : "1446"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/style/0/167066833.jpg",
+			"owner" : "Vincent Besnault/Photographer’s Choice/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/style/0/176740205.jpg",
+			"owner" : "Peter Dazeley/The Image Bank/Getty Images",
+			"width" : "2162",
+			"height" : "1389"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/style/0/181217666.jpg",
+			"owner" : "Ruth Hornby Photography/Moment Open/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/style/0/481063559.jpg",
+			"owner" : "Bloom Productions/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+	]
+}

@@ -1,0 +1,102 @@
+{
+  "revisionKey":"4148195_1502912517633",
+  "revisionId":"4148231_1503001525552",
+  "mongoId":"5995fbb5b38d0c001006c2a8",
+  "authorKey":"115876",
+  "lastEditingAuthorId":"156569",
+  "lastEditingUserId":"148484752568203",
+  "url":"https://www.verywell.com/slug-placeholder-4148231",
+  "rootUrl":"https://www.verywell.com/slug-placeholder-4148231",
+  "vertical":"HEALTH",
+  "docID":4148231,
+  "docId":4148231,
+  "slug":"slug-placeholder",
+  "templateType":"STRUCTUREDCONTENT",
+  "documentState":{
+    "state":"ACTIVE",
+    "activeDate":1502916444255
+  },
+  "dates":{
+    "created":1502916444255,
+    "updated":1502916444255,
+    "firstPublished":0,
+    "lastPublished":0
+  },
+  "medicalBoardApproved":false,
+  "editingAuthorKey":"",
+  "noIndex":false,
+  "socialTitle":"structured content: social title",
+  "description":"structured content: description",
+  "heading":"structured content: heading",
+  "primaryImage":{
+    "url":"http://placehold.it/350x150",
+    "caption":"",
+    "owner":"",
+    "alt":"",
+    "width":0,
+    "height":0,
+    "id":"",
+    "fileName":"",
+    "objectId":"",
+    "authorId":"",
+    "user":""
+  },
+  "paging":{
+    "current":1,
+    "total":1
+  },
+  "audit":{
+    "lastModified":1503001525552
+  },
+  "summary":{
+    "socialTitle":"structured content: social title",
+    "heading":"structured content: heading",
+    "description":"structured content: description",
+    "image":{
+      "url":"http://placehold.it/350x150",
+      "caption":"",
+      "owner":"",
+      "alt":"",
+      "width":0,
+      "height":0,
+      "id":"",
+      "fileName":"",
+      "objectId":"",
+      "authorId":"",
+      "user":""
+    }
+  },
+  "guestAuthor":{
+    "link":{
+      "text":"bob",
+      "uri":"bobsUrl"
+    }
+  },
+  "pages":{
+    "list":[
+      {
+        "contents":{
+          "list":[
+            {
+              "id":12345673,
+              "type":"IMAGE",
+              "data":{
+                "image":{
+                  "url":"https://nypeimgsrv.about.com/xog5iVoPs5hXl2ZdPOWRi_9_XhE=/about/origami-earrings-03-59506c673df78cae81341c10.jpg",
+                  "owner":"Chrissy Pk",
+                  "alt":"How to Make Origami Earrings",
+                  "width":1600,
+                  "height":1066,
+                  "id":"59506c673df78cae81341c10",
+                  "objectId":"origami-earrings-03-59506c673df78cae81341c10.jpg"
+                }
+              }
+            }
+          ],
+          "totalSize":1
+        }
+      }
+    ],
+    "totalSize":1
+  }
+}

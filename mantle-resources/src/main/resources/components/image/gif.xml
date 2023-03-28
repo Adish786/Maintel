@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-gif" resourcePath="/components/image/view/gif.ftl">
+        <info>
+            <category>Mantle Components/Media</category>
+            <displayName>Gif</displayName>
+            <description>
+                This displays a gif as a video in an html video tag. This works by using thumbor to convert the gif into a webm or mp4 video and setting that as the source of the video tag. These videos will always be lazily loaded.
+            </description>
+            <documentation>
+                # Classes
+
+                ## __.video__
+                Class on video tag
+
+                # Properties
+
+                ## class
+                Text that will be added to the class attribute on the video tag
+
+                ## image
+                The image object of the gif
+
+                ## objectId
+                The image objectId of the gif (this is used as a fallback if the full image object is not available)
+
+                ## width
+                Width of the gif
+
+                ## height
+                Height of the gif
+
+                ## alt
+                The alt txt for image which will be used to create an aria-description property on the video
+
+                ## placeholder
+                Whether to wrap the video in a placeholder to prevent CLS
+
+                ## placeholderHeight
+                The height that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## placeholderWidth
+                The width that the image placeholder should be. This is important when setting specific heights and widths on lazily loaded images.
+
+                ## srcset
+                The srcset that will be used with the sizes to determing the correct size of video to use. Must specify sizes if this is used
+                
+                ## sizes
+                The sizes that will be used with the srcset to determine the correct size of video to use. Must be specified if srcset is used. It is preferred that px or vw units be used to get the best performance. If a css calc function is used there is fallback code in place, but may result in worse performance.
+
+                # Dependencies/References
+
+                ## gif.js
+                This file uses the srcset and sizes to determine the correct size video to load. It then updates the video with the correct src
+            </documentation>
+
+            <for id="this, alt, width, height, placeholderWidth, placeholderHeight">
+                <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}">
+                    <model name="mockDocument" id="document" mode="replace">
+                        <property name="template" value="structured-content-single-basic-gif" />
+                    </model>
+                </property>
+            </for>
+
+        </info>
+
+        <script path="/static/mantle/components/image/js/gif.js"></script>
+        <stylesheet path="/static/mantle/components/image/css/gif.css"></stylesheet>
+        
+        <!-- basic properties -->
+        <property name="class" value="mntl-gif" />
+        <property name="alt" value="${@image != null AND @image.alt != null ? @image.alt : ''}" />
+        <property name="height" value="${@image != null ? @image.height : 0}" />
+        <property name="width" value="${@image != null ? @image.width : 0}" />
+
+        <!-- thumbor related properties -->
+        <property name="fitInStyle" value="" />
+
+        <!-- lazyloading and responsive image properties -->
+        <property name="placeholder" value="true" type="boolean" />
+        <property name="placeholderHeight" value="${@image != null ? @image.height : 0}" />
+        <property name="placeholderWidth" value="${@image != null ? @image.width : 0}" />
+        <map id="srcset">
+            <property name="minWidth" value="700" type="integer" />
+            <property name="maxWidth" value="300" type="integer" />
+            <property name="maxHeight" value="0" type="integer" />
+            <property name="stepCount" value="3" type="integer" />
+        </map>
+        <property name="sizes" value="(max-width: 768px) 300px, 700px" />
+        
+        <for id="this, alt, width, height, placeholderHeight, placeholderWidth">
+            <property name="image" value="${@document != null ? @document.getImageForUsage('PRIMARY') : null}" onError="ignore">
+                <model name="DOCUMENT" id="document">
+                    <property name="url" value="${messages['defaultImageUrl']}" />
+                </model>
+            </property>
+        </for>
+    </component>
+
+</components>

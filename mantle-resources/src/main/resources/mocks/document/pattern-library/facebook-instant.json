@@ -1,0 +1,564 @@
+{
+  "key": "315314e3be1d5dad59002180",
+  "revisionKey": "3158750ae819121fdd0216ea",
+  "revisionId": "1087514_1530118934063",
+  "authorKey": "119718",
+  "lastEditingAuthorId": "119718",
+  "lastEditingUserId": "148484222683549",
+  "url": "https://www.verywellhealth.com/you-can-eat-fruit-if-you-have-diabetes-1087514",
+  "rootUrl": "http://diabetes.about.com/od/nutrition/fl/If-I-Have-Type-2-Diabetes-Can-I-Eat-Fruit.htm",
+  "vertical": "HEALTH",
+  "docID": 1087514,
+  "docId": 1087514,
+  "slug": "you-can-eat-fruit-if-you-have-diabetes",
+  "templateType": "STRUCTUREDCONTENT",
+  "documentState": {
+    "state": "ACTIVE",
+    "activeDate": 1530118934010
+  },
+  "dates": {
+    "created": 1393877949000,
+    "updated": 1530118934063,
+    "firstPublished": 1394406538000,
+    "lastPublished": 1528765324122
+  },
+  "medicalBoardApproved": true,
+  "noIndex": false,
+  "title": "What Fruit Can You Eat If You Have Diabetes?",
+  "socialTitle": "What Fruit Can You Eat If You Have Diabetes?",
+  "description": "It is not true that you have to give up fruit because you have diabetes. However, you will need to keep portions in check and choose certain fruits.",
+  "heading": "What Fruit Can You Eat If You Have Diabetes?",
+  "primaryImage": {
+    "url": "http://0.tqn.com/d/diabetes/1/0/T/G/-/-/Stocksy_txpf2d29376fhw000_Medium_519523-copy.jpg",
+    "caption": "",
+    "owner": "Helen Yin/Stocksy United",
+    "alt": "Oranges and pomegranate",
+    "width": 1731,
+    "height": 1155,
+    "objectId": "Stocksy_txpf2d29376fhw000_Medium_519523-copy-572101295f9b58857d4b944c.jpg"
+  },
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "sources": {
+    "list": [
+      "American Diabetes Association. <a href=\"http://www.diabetes.org/food-and-fitness/food/what-can-i-eat/understanding-carbohydrates/glycemic-index-and-diabetes.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"10\">Glycemic Index and Diabetes. </a>",
+      "American Diabetes Association. Making Healthy Food Choices: Fruits. ",
+      "Higdon J, et al. <a href=\"http://lpi.oregonstate.edu/mic/minerals/potassium\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"11\">Micronutrient Information Center: Potassium</a>. Linus Pauling Institute.",
+      "Wallace TC. <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3042791/\" rel=\"noopener\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"12\">Anthocyanins in Cardiovascular Disease</a>. <em>Advances in Nutrition: An International Review Journal</em>. 2011;2(1):1-7. doi:10.3945/an.110.000042."
+    ],
+    "totalSize": 4
+  },
+  "stamp": {
+    "docId": 1087514,
+    "stampValue": "1351",
+    "adValue": "pid1351",
+    "audit": {
+      "lastModified": 1471286240961
+    }
+  },
+  "metaData": {
+    "url": "https://www.verywell.com/you-can-eat-fruit-if-you-have-diabetes-1087514",
+    "docId": 1087514,
+    "entities": [
+      {
+        "id": "01sh2",
+        "name": "Carbohydrate",
+        "score": 9.430426274876455
+      },
+      {
+        "id": "01z1kdw",
+        "name": "Juice",
+        "score": 6.573914365494341
+      },
+      {
+        "id": "027gwyh",
+        "name": "Linus Pauling Institute",
+        "score": 6.480745447131788
+      },
+      {
+        "id": "06rzq5",
+        "name": "American Diabetes Association",
+        "score": 6.183967615071104
+      },
+      {
+        "id": "01qd35",
+        "name": "Blood Sugar",
+        "score": 6.1788577019296484
+      },
+      {
+        "id": "08hdmx",
+        "name": "Fruit snack",
+        "score": 5.933839330319316
+      },
+      {
+        "id": "01pd2g",
+        "name": "Raspberry",
+        "score": 5.795153467150792
+      },
+      {
+        "id": "01jy1_",
+        "name": "Tangerine",
+        "score": 5.7760079761968965
+      },
+      {
+        "id": "0246vm",
+        "name": "Glycemic index",
+        "score": 5.740492422140206
+      },
+      {
+        "id": "03qcb98",
+        "name": "Almond butter",
+        "score": 5.537192129454435
+      },
+      {
+        "id": "06x4c",
+        "name": "Sugar",
+        "score": 5.532837236156385
+      },
+      {
+        "id": "0d9t0",
+        "name": "Fructose",
+        "score": 5.306008828604346
+      },
+      {
+        "id": "0jhv_",
+        "name": "Blackberry",
+        "score": 5.094304758263887
+      },
+      {
+        "id": "0kpqd",
+        "name": "Watermelon",
+        "score": 4.966383733442128
+      },
+      {
+        "id": "04f8p",
+        "name": "Kiwifruit",
+        "score": 4.902273215708445
+      },
+      {
+        "id": "04bg_k",
+        "name": "Micronutrient",
+        "score": 4.885169468978666
+      },
+      {
+        "id": "025s7j4",
+        "name": "Potassium",
+        "score": 4.877711433774129
+      },
+      {
+        "id": "02npt1",
+        "name": "Dried fruit",
+        "score": 4.809341092165507
+      },
+      {
+        "id": "010dpm",
+        "name": "Bountiful",
+        "score": 4.8091775607565905
+      },
+      {
+        "id": "01fd1t",
+        "name": "Cottage cheese",
+        "score": 4.759208127688856
+      },
+      {
+        "id": "02vklym",
+        "name": "Greek yogurt",
+        "score": 4.738990626289791
+      },
+      {
+        "id": "069yks",
+        "name": "Dried cranberry",
+        "score": 4.667774155527563
+      },
+      {
+        "id": "03dnxh",
+        "name": "White bread",
+        "score": 4.585229662098546
+      },
+      {
+        "id": "09qck",
+        "name": "Banana",
+        "score": 4.420557247346066
+      },
+      {
+        "id": "0146bp",
+        "name": "Type 2 diabetes",
+        "score": 4.325486415112733
+      },
+      {
+        "id": "0fp6w",
+        "name": "Pineapple",
+        "score": 4.2115495462650046
+      },
+      {
+        "id": "0ftbs",
+        "name": "Blueberry",
+        "score": 4.194983771524726
+      },
+      {
+        "id": "0dj6p",
+        "name": "Peach",
+        "score": 4.164972563456635
+      },
+      {
+        "id": "0fnfy",
+        "name": "Apricot",
+        "score": 4.1255278654510255
+      },
+      {
+        "id": "07fbm7",
+        "name": "Strawberry",
+        "score": 4.102002912683089
+      },
+      {
+        "id": "0fp5h",
+        "name": "Plum",
+        "score": 4.097239696785485
+      },
+      {
+        "id": "0dwgb",
+        "name": "Orange juice",
+        "score": 4.064946793640527
+      },
+      {
+        "id": "04tc_",
+        "name": "Mineral",
+        "score": 4.046025796655095
+      },
+      {
+        "id": "0fldg",
+        "name": "Mango",
+        "score": 4.043490749727304
+      },
+      {
+        "id": "0c58k",
+        "name": "Diabetes mellitus",
+        "score": 4.028650675002343
+      },
+      {
+        "id": "061_f",
+        "name": "Pear",
+        "score": 3.959002027616625
+      },
+      {
+        "id": "01w_3",
+        "name": "Cholesterol",
+        "score": 3.7749641646942687
+      },
+      {
+        "id": "0fmq1",
+        "name": "Blood pressure",
+        "score": 3.757867943704734
+      },
+      {
+        "id": "05wvs",
+        "name": "Protein",
+        "score": 3.731979407280692
+      },
+      {
+        "id": "014l8n",
+        "name": "Yogurt",
+        "score": 3.6027432833876634
+      },
+      {
+        "id": "03qmh",
+        "name": "Honey",
+        "score": 3.271310594575419
+      },
+      {
+        "id": "05vtc",
+        "name": "Potato",
+        "score": 3.0632199669046827
+      },
+      {
+        "id": "04zpv",
+        "name": "Milk",
+        "score": 2.7706778816320226
+      }
+    ],
+    "review": {
+      "authorId": "",
+      "userId": 148122857049973,
+      "type": "|medical_approved|",
+      "lastReviewed": 1
+    },
+    "audit": {
+      "clientId": "CommJS Utility - Initialize Medical Review Data",
+      "lastModified": 1508940627222
+    },
+    "appleArticleId": "692f9ce7-9b60-47dd-aa52-02ba671adbeb"
+  },
+  "audit": {
+    "clientId": "Helios",
+    "userId": "148484222683549",
+    "lastModified": 1530118934063
+  },
+  "summary": {
+    "title": "What Fruit Can You Eat If You Have Diabetes?",
+    "socialTitle": "What Fruit Can You Eat If You Have Diabetes?",
+    "heading": "What Fruit Can You Eat If You Have Diabetes?",
+    "description": "It is not true that you have to give up fruit because you have diabetes. However, you will need to keep portions in check and choose certain fruits.",
+    "image": {
+      "url": "http://0.tqn.com/d/diabetes/1/0/T/G/-/-/Stocksy_txpf2d29376fhw000_Medium_519523-copy.jpg",
+      "caption": "",
+      "owner": "Helen Yin/Stocksy United",
+      "alt": "Oranges and pomegranate",
+      "width": 1731,
+      "height": 1155,
+      "objectId": "Stocksy_txpf2d29376fhw000_Medium_519523-copy-572101295f9b58857d4b944c.jpg"
+    }
+  },
+  "pages": {
+    "list": [
+      {
+        "contents": {
+          "list": [
+            {
+              "id": 0,
+              "type": "HTML",
+              "data": {
+                "html": "<p>You may have heard at some point that you cannot eat fruit if you have diabetes. Perhaps someone even told you that watermelon and bananas are off limits because they are too sweet. Neither of these is entirely true. You can enjoy fruit, you simply need to make smart decisions about which fruits and how much you eat.</p>"
+              }
+            },
+            {
+              "id": 1,
+              "type": "HEADING",
+              "data": {
+                "text": "Fruits and Diabetes"
+              }
+            },
+            {
+              "id": 2,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Fruits have many health benefits&#x2014;they contain vitamins, minerals, filling fiber and antioxidants. Fruit can be beneficial to a diabetes meal plan if eaten in moderation. The key to eating fruit is to make sure you eat the right kinds&#xA0;in&#xA0;the appropriate&#xA0;portions.</p>"
+              }
+            },
+            {
+              "id": 3,
+              "type": "HTML",
+              "data": {
+                "html": "<p>The fiber found in fruit can help to prevent blood sugar spikes, may aid in pullilng cholesterol away from your heart, and increase feelings of fullness, resulting in less food intake. Fruit is also an excellent source of&#xA0;vitamins and&#xA0;minerals, such as&#xA0;potassium, which can help reduce your&#xA0;<a data-inlink=\"ujLWKDl7KtcYHDMG1YZ3Rg==\" href=\"https://www.verywellhealth.com/blood-pressure-and-diabetes-1087597\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">blood pressure</a>.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 4,
+              "type": "HTML",
+              "data": {
+                "html": "<p>On the flip side, fruit is a carbohydrate and it&#xA0;contains a natural sugar&#xA0;called fructose. Carbohydrates, whether from bread, milk, yogurt, potatoes,&#xA0;or fruit,&#xA0;get broken down and turn into sugar or glucose. For this reason, it&apos;s recommended that people who have diabetes <a href=\"https://www.verywellhealth.com/carbohydrate-counting-should-you-do-it-1087500\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\">monitor&#xA0;how many carbohydrates</a> they eat, including fruit servings.</p>"
+              }
+            },
+            {
+              "id": 5,
+              "type": "HTML",
+              "data": {
+                "html": "<p>When choosing fruit you&apos;ll want to take a few tips into consideration.</p>"
+              }
+            },
+            {
+              "id": 6,
+              "type": "HEADING",
+              "data": {
+                "text": "Avoid Dried Fruit and Fruit Juices"
+              }
+            },
+            {
+              "id": 7,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Dried fruit, especially if it is sweetened,&#xA0;is&#xA0;higher in carbohydrates per serving than natural whole fruit. It also contains more sugar because sugars are added to flavor it and can be lower in fiber&#xA0;if the skin has been removed.&#xA0;Just two tablespoons of raisins (1 ounce)&#xA0;will cost you: 100 calories, 23 grams carbohydrate, and 18 grams sugar. This yields almost 5 teaspoons of sugar.</p>"
+              }
+            },
+            {
+              "id": 8,
+              "type": "HTML",
+              "data": {
+                "html": "<p>It&apos;s also best to <a href=\"https://www.verywellhealth.com/sugary-drinks-that-damage-your-diet-and-your-diabetes-1087526\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"3\">avoid all fruit juices</a>. Even 100 percent fruit juice, causes instant spikes in blood sugars because the flesh of the fruit, which contains fiber, is discarded. It is also easy to drink an excess amount of calories without realizing it. For example, 4 ounces of 100 percent fruit juice contains&#xA0;60 calories, 15 grams carbohydrate, and 15 grams sugar.</p>"
+              }
+            },
+            {
+              "id": 9,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Instead of dried fruit or fruit juice, opt for whole fruit&#x2014;fresh, frozen, or canned&#x2014;without added sugars.</p>"
+              }
+            },
+            {
+              "id": 10,
+              "type": "HEADING",
+              "data": {
+                "text": "Keep Portions in Check"
+              }
+            },
+            {
+              "id": 11,
+              "type": "HTML",
+              "data": {
+                "html": "<p>If you are following a fixed, consistent&#xA0;carbohydrate meal plan, you need to factor in fruit as a carbohydrate choice. When choosing fruit, try to stick with one fruit serving per meal or <a href=\"https://www.verywellhealth.com/snacking-with-type-2-diabetes-1087495\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"4\">snack</a> and limit your fruit servings to no more than about two to three per day.</p>"
+              }
+            },
+            {
+              "id": 12,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Keep in mind that one fruit serving is about 15 grams of carbohydrate. How much of each fruit you can eat within that one-serving limit will depend on the type of fruit. Here is a list of what is considered one serving for common whole fruits:&#xA0;</p>"
+              }
+            },
+            {
+              "id": 13,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li>1 small piece (4 ounces) apple, orange, peach, pear, or plum&#xA0;</li><li>1/2 medium banana</li><li>2 small or 1 large tangerine (4 ounces total)</li><li>2 small (2 ounces each) kiwi&#xA0;</li><li>4 small (1 ounce each) apricots</li><li>~1 cup of melon (cantaloupe, watermelon, or honeydew)</li><li>15 grapes or cherries&#xA0;</li><li>1/3 medium mango</li><li>1 1/4 cup strawberries</li><li>3/4 cup blueberries</li><li>1 cup raspberries and blackberries (contain 8 grams of fiber)</li></ul>"
+              }
+            },
+            {
+              "id": 14,
+              "type": "HTML",
+              "data": {
+                "html": "<p>There are some fruits that you should be more cautious about. For instance, it&apos;s recommended that bananas, cherries, grapes, mango, and pineapple be eaten only in the limited quantities noted (or <a href=\"https://www.verywellhealth.com/fruits-to-avoid-if-you-have-diabetes-1087587\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"5\">avoided completely</a>) as they can cause a fast spike in blood sugars.</p>"
+              }
+            },
+            {
+              "id": 15,
+              "type": "HTML",
+              "data": {
+                "html": "<p>If you are looking to get the most value for the biggest portion, you will want to choose fruits that are very high in fiber, such as berries. For example, you can eat 1 1/4 cup of strawberries for 60 calories, 15 grams carbohydrate, 3.5 grams fiber, and 7.5 grams sugar or only 1/2 medium&#xA0;banana which is 60 calories, 15 grams carbohydrate, 2 grams fiber, and 8 grams sugar.</p>"
+              }
+            },
+            {
+              "id": 16,
+              "type": "HEADING",
+              "data": {
+                "text": "Choose Fruits With a Lower Glycemic Index"
+              }
+            },
+            {
+              "id": 17,
+              "type": "HTML",
+              "data": {
+                "html": "<p><a href=\"http://www.diabetes.org/food-and-fitness/food/what-can-i-eat/making-healthy-food-choices/fruits.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"6\">The American Diabetes Association suggests</a> that you choose fruits that have a low <a data-inlink=\"36_1PddD2z_xB9jwB1A_7w==\" href=\"https://www.verywellhealth.com/glycemic-index-chart-for-common-foods-1087476\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"7\">glycemic index</a>.&#xA0;The&#xA0;glycemic index, or GI, is used as a reference to measure&#xA0;how a&#xA0;carbohydrate-containing food raises&#xA0;blood glucose.</p>"
+              }
+            },
+            {
+              "id": 18,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Foods are rated based on <a href=\"https://www.verywellhealth.com/how-do-carbohydrates-affect-blood-sugar-1087511\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"8\">how they raise blood sugars</a> in comparison to a reference food such as&#xA0;sugar&#xA0;or white bread. A food with a high GI will raise blood glucose more than that of a food with a medium or low GI.</p>"
+              }
+            },
+            {
+              "id": 19,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Most fruits have a low to moderate GI, with the exception of pineapple and melon. That doesn&apos;t mean you can never eat pineapple and melon, but if you notice that your blood sugar spikes after eating either, it&apos;s best to avoid them in the future. It&apos;s also important to note that the GI of a food is different when eaten alone than it is when combined with other foods. For example, if you are eating a high GI fruit, such as melon, pairing it with a low GI index food, such as low-fat cheese can help to balance out the effect on blood sugar levels. Here are some examples of low, moderate, and high GI fruits:&#xA0;</p>"
+              }
+            },
+            {
+              "id": 20,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li>Low GI fruits (55 or less): apples, pears, blueberries, strawberries, kiwi, grapefruit, pear, nectarine, organge</li><li>Moderate GI fruits (55-69): cherries, mango, papaya, grapes</li><li>High GI fruits (70 or greater): watermelon, pineapple&#xA0;</li></ul>"
+              }
+            },
+            {
+              "id": 21,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Note this information, while also keeping in mind that everyone has their own trigger foods, which will spike blood sugars more than others. Additionaly, the riper a fruit is, the more it affects your blood sugar.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 22,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Lastly, consider this: some nutritious foods have a higher GI than foods with little nutritional value. For example, oatmeal has a higher GI than chocolate. When using the GI, balance it with basic nutrition principals and eat a variety of healthy foods and less of foods with few nutrients.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 23,
+              "type": "HEADING",
+              "data": {
+                "text": "Pair it With Protein"
+              }
+            },
+            {
+              "id": 24,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Some people find that pairing fruit with a protein can help slow down a rise in the blood sugars. You can do this by incorporating fruit into your meal allotment for carbohydrates or add protein to your fruit snack.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 25,
+              "type": "HTML",
+              "data": {
+                "html": "<p>For example:&#xA0;</p>"
+              }
+            },
+            {
+              "id": 26,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li>1 4-ounce appled slice with 1 tablespoon almond butter&#xA0;</li><li>1 cup raspberries with 1 small non-fat Greek yogurt&#xA0;</li><li>1 small peach with 1/2 cup low-fat cottage cheese</li></ul>"
+              }
+            },
+            {
+              "id": 27,
+              "type": "HEADING",
+              "data": {
+                "text": "Get the Most Out of Your Fruit Choices"
+              }
+            },
+            {
+              "id": 28,
+              "type": "HTML",
+              "data": {
+                "html": "<p>When choosing fruit, you&apos;ll want to think about portion size, convenience, cost, and flavor, but also health benefits. Certain types of fruit, such as berries, and citrus fruits, can be beneficial for people with diabetes.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 29,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Berries are richi n vitamin C, folic acid, fiber, and disease fighting phytochemicals. &#xA0;Vitamin C is an important water-soluble vitamin that is involved in repairing cells (particularly important for wound healing), slowing down aging, and boosting immunity.Additionally their rich color&#x2014;red, blue, and black comes from anthocyanins. Research&#xA0;suggests that anthocyanins may help fend off certain chronic disease, including cardiovascular disease.</p>"
+              }
+            },
+            {
+              "id": 30,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Citrus fruits, such as tangerines, also contain vitamin C, and potassium (which can reduce blood pressure) and are&#xA0;a good source of fat soluble vitamin A, an important vitamin for eye health. Citrus fruits, also contain&#xA0;<a href=\"https://www.verywellfit.com/phytonutrients-phytochemicals-2242002\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"9\" rel=\"nofollow\">phytonutrients</a>&#xA0;which can protect cells from damage, reduce inflammation, lower the risk of cardiovascular disease, and provide other health benefits. But, if you are on a potassium restricted diet or take cholesterol lowering medication you may have to watch your intake of citrus fruits so make sure you discuss intake with your physician before adding them to your meal plan.&#xA0;</p>"
+              }
+            },
+            {
+              "id": 31,
+              "type": "HEADING",
+              "data": {
+                "text": "A Word From Verywell"
+              }
+            },
+            {
+              "id": 32,
+              "type": "HTML",
+              "data": {
+                "html": "<p>The notion that you have to avoid fruit on a diabetic diet is a myth. However, it is important that you make the best choices and always consider the carbohydrates in fruits, which will convert to sugar and may cause a spike in your blood sugar. Choose wisely and keep your portions under control and you should be able to enjoy some fruits. If you have questions, be sure to ask a member of your healthcare team.</p>"
+              }
+            },
+            {
+              "id": 33,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Sources:</p>"
+              }
+            }
+          ],
+          "totalSize": 34
+        }
+      }
+    ],
+    "totalSize": 1
+  },
+  "subheading": "4 Tips for Incorporating Fruit Into Your Meal Plan"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="mntl-add-to-homescreen" resourcePath="/components/head-tags/add-to-homescreen/view/add-to-homescreen.ftl">
+		<script group="bottom" path="/static/mantle/components/head-tags/add-to-homescreen/js/add-to-homescreen.js" />
+	</component>
+</components>

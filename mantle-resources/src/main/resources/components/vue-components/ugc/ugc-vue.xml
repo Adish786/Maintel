@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../../mantle/mantle-resources/src/main/resources/xsd/components.xsd">
+    <component id="mntl-ugc-vue" ref="mntl-vue-base">
+        <info>
+            <category>Mantle Components/VueJS Components</category>
+            <displayName>UGC</displayName>
+            <description>
+                The mantle vue component version to support user generated content. This component requires vuex.
+            </description>
+            <documentation>
+                ### Vue components
+                - **UgcVue**: Component entrypoint, only visible if reviews exist and UGC is read-only. ***AddFeedback*** is only visible if Auth0 is enabled and UGC is in read/write mode. ***Sort*** is only visible in read/write mode. Renders list of reviews (i.e. ***Feedback***). Load more button is visible when reviews are paginated; when clicked, the next page of reviews will get lazy loaded 
+                - **AddFeedback**: Child component of ***UgcVue***. Add Rating &amp; Review CTA. When clicked, the CTA button will show the feedback form for the user to submit, view, or edit a rating/review
+                - **FeedbackForm**: The form for allowing an authenticated user to enter in and submit a star rating and review text
+                - **StarRating**: Child component of ***FeedbackForm***. Allows a user during review submission to leave a star rating
+                - **FeedbackSummary**: Submitted review summary with a moderation message and ability for user to edit review based on submission status
+                - **Sort**: Child component of ***UgcVue***. Sort options dropdown, allows the user to toggle sorting order of ***Feedback*** reviews (e.g. descending vs. ascending)
+                - **Feedback**: Child component of ***UgcVue*** and ***FeedbackSummary***. An instance of a user review that includes a user's avatar, display name, star rating, and review
+                - **Stars**: Child component of ***Feedback***. Shows a user's ratings in star icons (out of 5 stars total)
+                - **UgcSvg**: A reusable subcomponent to render a SVG icon based on `id` prop. Used in ***AddFeedback***, ***Feedback***, and ***Stars***
+                - **MessageBanner**: Child component of **UgcVue**. Displays a dismissable banner that can display alert messages.
+                - **PhotoUpload**: Child component of ***FeedbackForm***. Allows a user to upload a photo during review submission
+                - **RatingsHistogram**: Child component of **AddFeedback**. Displays a histogram representing the user submitted ratings associated with a document
+                - **HelpfulButton**: Child component of ***Feedback***. Displays the helpful count in a review and is a clickable button when enabled
+
+                ### Vuex state
+                - `rootState.feedbackList` **(array)**: All feedback data from API response. Updated when UGC loads, reviews are sorted, or paginated reviews are lazy loaded
+                - `rootState.auth0Enabled` **(boolean)**: See prop below
+                - `rootState.readOnly` **(boolean)**: See prop below
+                - `rootState.apiBase` **(string)**: See prop below; used to construct the AJAX request URL with query params
+                - `rootState.page` **(integer)**: See prop below; updated when UGC loads, reviews are sorted, or paginated reviews are lazy loaded
+                - `rootState.numberPerPage` **(integer)**: See prop below
+                - `rootState.total` **(integer)**: Total number of reviews from API response
+                - `rootState.loadMoreLoading` **(boolean)**: Tracks load more button state
+                - `addFeedbackStore.cta` **(string)**: Feedback call-to-action message
+                - `addFeedbackStore.ratingsHistogramEnabled` **(boolean)**: See `ratingsHistogramEnabled` prop below
+                - `addFeedbackStore.showMostHelpfulReviews` **(boolean)**: See prop below
+                - `feedbackFormStore.photoUploadEnabled` **(boolean)**: See `photoUploadEnabled` prop below
+                - `feedbackFormStore.contentGraphEnabled` **(boolean)**: See `contentGraphEnabled` prop below
+                - `feedbackFormStore.articleTitle` **(string)**: See prop below
+                - `feedbackSummaryStore.status` **(string)**: See feedbackStatus prop below
+                - `feedbackSummaryStore.statusText` **(object)**: Collection of review status moderation text from `feedbackStatusPendingText` and `feedbackStatusRejectedText` props
+                - `feedbackSummaryStore.resoundSubmitError` **(boolean)**: Tracks when POST call to resound on submit returns an error status
+                - `feedbackSummaryStore.isEditedReview` **(boolean)**: For distinguishing the submit button tracking event whether user submission is a new or edited review
+                - `feedbackStore.helpfulEnabled` **(boolean)**: See `helpfulEnabled` prop below
+                - `feedbackStore.linkDisplayName` **(boolean)**: See prop below
+                - `feedbackStore.fallbackAvatars` **(array)**: See prop below
+                - `feedbackStore.numberOfFallbackAvatars` **(integer)**: See prop below
+                - `feedbackStore.showPhotoNextToReview` **(boolean)**: See `showPhotoNextToReview` prop below
+                - `feedbackStore.helpfulClickableEnabled` **(boolean)**: See prop below
+                - `messageBannerStore.genericFormError` **(string)**: See `errorMessageFormGeneric` prop below
+                - `photoUploadStore.fileLimitSize` **(integer)**: See photoUploadFileLimitSize prop below
+                - `photoUploadStore.requirementsText` **(string)**: See photoUploadRequirementsText prop below
+                - `photoUploadStore.error` **(object)**: Collection of photo upload error message text from `errorMessageUploadImageSize`, `errorMessageUploadFileSize`, and `errorMessageUploadCombined` props
+                - `sortStore.sort` **(string)**: See prop below; updated when reviews are sorted
+                - `sortStore.sortEnabled` **(boolean)**: See prop below
+                - `sortStore.sortLoading` **(boolean)**: Tracks sorting dropdown state
+                - `userSubmissionStore.data` **(object)**: Collected data from a user-submitted review (e.g. display name, date created, star rating, review text)
+
+                ### Props
+                - `auth0Enabled` **(boolean)**: Flag to determine if Auth0 is enabled for user authentication (true if UGC is read/write mode, false if UGC is read-only). Value is retrieved from consul config
+                - `readOnly` **(boolean)**: Flag to set whether or not UGC is read-only vs. read/write mode
+                - `apiBase` **(string)**: Path for API URL base. Requires a recipe docId in order to pull in feedback data
+                - `page` **(integer)**: Page number to keep track of lazy loading reviews when pagination is needed. Default is 1 (i.e. first page)
+                - `type` **(string)**: Type of UGC ("review" or "comment"). Default is "review"
+                - `numberPerPage` **(integer)**: Limit of reviews per page when reviews need to be paginated
+                - `showMostHelpfulReviews` **(boolean)**: Flag to show most helpful positive and/or critical reviews
+                - `auth0Enabled` **(boolean)**: Flag to enable or disable reviews sorting
+                - `defaultSort` **(string)**: Default sorting method/`sort` query param value (e.g. descending or ascending, etc.) appended to API base
+                - `fallbackAvatars` **(string)**: JSON format of names of default/fallback avatars SVG icons for users without an avatar, ex: `value='["icon-avatar-1", "icon-avatar-2", "icon-avatar-3", "icon-avatar-4", "icon-avatar-5"]'`
+                - `numberOfFallbackAvatars` **(integer)**: Number of total fallback avatar icon variations allowed
+                - `guidelinesUrl` **(string)**: URL for vertical's user reviews guidelines
+                - `addFeedbackGuidelinesText` **(string)**: Vertical's CTA text for adding a review that contains `guidelinesUrl` link-out
+                - `articleTitle` **(string)**: Recipe title of the document
+                - `hasReviewAds` **(boolean)**: Flag to determine whether or not we have ads within UGC
+                - `adIteration` **(integer)**: After how many reviews do we want to insert an ad
+                - `addFeedbackCta` **(string)**: Add review CTA text
+                - `feedbackStatus` **(string)**: 'awaitingReview', 'accepted', or 'rejected' review status
+                - `feedbackStatusPendingText` **(string)**: 'awaitingReview' review moderation text
+                - `feedbackStatusRejectedText` **(string)**: 'rejected' review moderation text
+                - `photoUploadFileLimitSize` **(integer)**: size of photo upload file limit
+                - `photoUploadRequirementsText` **(string)**: Image requirement text in JSON format for text beside photo upload
+                - `errorMessageUploadImageSize` **(string)**: image size photo upload error message text
+                - `errorMessageUploadFileSize` **(string)**: file size photo upload error message text
+                - `errorMessageUploadCombined` **(string)**: combined photo upload error message text
+                - `errorMessageFormGeneric` **(string)**: catchall form error message text
+                - `addFeedbackIcon` **(string)**: Name of SVG icon in Add Rating &amp; Review CTA
+                - `availableSortOptions` **(string)**: Sort options in JSON format for the sorting dropdown, where `option` should be set to the appropriate `sort` query param value (e.g. descending vs. ascending, etc.)
+                - `hashId` **(string)**: ID of the currently logged in user. Default is '' when no user is logged in
+                - `docId` **(string)**: ID of the current document
+                - `legacyMeredithId` **(string)**: ID of the legacy meredith document
+                - `linkDisplayName` **(boolean)**: Flag to determine if display names can be linked with their profile urls
+                - `photoUploadEnabled` **(boolean)**: Flag to determine if photos can be uploaded with reviews
+                - `contentGraphEnabled` **(boolean)**: Flag to determine if content graph is enabled. Value is retrieved from config
+                - `showPhotoNextToReview` **(boolean)**: Flag to determine if an uploaded photo (if available) should appear next to each review
+                - `ratingsHistogramEnabled` **(boolean)**: Flag to determine if the ratings histogram should be displayed
+                - `helpfulEnabled` **(boolean)**: Flag to determine if most helpful/most critical review section should be displayed
+                - `aggregatedFeedbacks` **(string)**: JSON format of all feedback submitted to a document
+                - `helpfulClickableEnabled` **(boolean)**: Flag to enable clickable helpful count button in reviews to mark/unmark a review as helpful
+            </documentation>
+            <map id="props">
+                <property name="page" value="1" type="integer" />
+                <property name="numberPerPage" value="9" type="integer" />
+                <property name="defaultSort" value="DATE_DESC" />
+                <property name="type" value="review" />
+                <property name="apiBase" value="/static/mantle/ugc-vue-demo.json?modelId=feedbacks" />
+                <!-- we will get these from document -->
+                <property name="total" value="23" />
+                <property name="articleTitle" value="Lemon Butter Chicken Breasts" />
+            </map>
+            <for id="apiBase, articleTitle, docId, legacyMeredithId, aggregatedFeedbacks">
+                <model id="document" name="mockDocument" mode="replace">
+                    <property name="template" value="pattern-library/ugc" />
+                </model>
+            </for>
+        </info>
+
+        <!-- Star svg icons for rating -->
+        <svg id="ugc-icon-star" path="/static/mantle/svg/icon-star.svg" />
+        <svg id="ugc-icon-star-half" path="/static/mantle/svg/icon-star-half.svg" />
+        <svg id="ugc-icon-star-outline" path="/static/mantle/svg/icon-star-empty.svg" />
+        <!-- Avatar fallback svg icons -->
+        <svg id="ugc-icon-avatar" path="/static/mantle/svg/avatar.svg" />
+        <!-- Speech bubble svg icon for add feedback -->
+        <svg id="ugc-icon-add-feedback" path="/static/mantle/svg/add-feedback.svg" />
+        <!-- Feedback form svg icons -->
+        <svg id="ugc-icon-review-edit" path="/static/mantle/svg/icon-review-edit.svg" />
+        <svg id="ugc-icon-review-awaitingReview" path="/static/mantle/svg/icon-review-pending.svg" />
+        <svg id="ugc-icon-review-rejected" path="/static/mantle/svg/icon-review-rejected.svg" />
+        <svg id="ugc-icon-add-photo" path="/static/mantle/svg/icon-add-photo.svg" />
+        <svg id="ugc-icon-remove-photo" path="/static/mantle/svg/icon-remove-photo.svg" />
+        <svg id="ugc-icon-zoom-photo" path="/static/mantle/svg/icon-zoom-photo.svg" />
+        <svg id="ugc-icon-thumb-up" path="/static/mantle/svg/icon-thumb-up.svg" />
+
+        <!-- Load the corresponding css file based on the type -->
+        <stylesheet path="/static/mantle/components/vue-components/ugc/css/ugc-review.css" />
+
+        <script path="/static/mantle/static/libs/js/vuex.js" />
+        <!-- Load Vue App JS -->
+        <script path="/static/mantle/components/vue-components/ugc/mntl-ugc-vue.js" />
+
+        <!-- App id -->
+        <property name="appId" value="ugcVue" />
+
+        <!-- App properties -->
+        <map id="props">
+            <property name="auth0Enabled" value="false" type="boolean" />
+            <property name="readOnly" value="true" type="boolean" />
+            <property name="apiBase" value="/servemodel/model.json?modelId=feedbacks&amp;docId=${@document.documentId}" />
+            <property name="docId" value="${@document.documentId}" />
+            <property name="legacyMeredithId" value="${str.isNotEmpty(@document.legacyMeredith?.cmsId) ? @document.legacyMeredith.cmsId : ''}" onError="ignore" />
+            <property name="page" value="1" type="integer" />
+            <property name="type" value="review" />
+            <property name="numberPerPage" value="9" type="integer" />
+            <property name="showMostHelpfulReviews" value="false" type="boolean" />
+            <property name="aggregatedFeedbacks" value="${@data.toJSONString}">
+                <model id="data" name="json">
+                    <model id="object" name="aggregatedFeedbacks">
+                        <property name="docId" value="${@document.documentId}" />
+                    </model>
+                </model>
+            </property>
+            <property name="sortEnabled" value="false" type="boolean" />
+            <property name="helpfulEnabled" value="false" type="boolean" />
+            <property name="helpfulClickableEnabled" value="false" type="boolean" />
+            <property name="defaultSort" value="DATE_DESC" />
+            <property name="fallbackAvatars" value='["ugc-icon-avatar"]' />
+            <property name="numberOfFallbackAvatars" value="5" type="integer" />
+            <property name="articleTitle" value="${str.htmlUnescape(@document.heading)}" />
+            <property name="hasReviewAds" value="true" type="boolean" views="mobile" />
+            <property name="adIteration" value="3" type="integer" views="mobile" />
+            <!-- Custom text content -->
+            <property name="guidelinesUrl" value="//www.allrecipes.com/article/how-to-submit-recipes/" />
+            <property name="linkDisplayName" value="false" type="boolean" />
+            <property name="addFeedbackGuidelinesText" value="Check out our &lt;a href=&quot;${@guidelinesUrl}&quot;&gt;Community Guidelines&lt;/a&gt; about reviews." />
+            <property name="addFeedbackCta" value="What do you think of this recipe? Share your experience to help others." />
+            <property name="feedbackStatusPendingText" value="&lt;strong&gt;Hang tight!&lt;/strong&gt; Your submission is currently pending moderation and will be posted soon." />
+            <property name="feedbackStatusRejectedText" value="&lt;strong&gt;Uh oh.&lt;/strong&gt; Your submission does not comply with our guidelines. Please edit your feedback and resubmit." />
+            <property name="photoUploadFileLimitSize" value="30" type="integer" />
+            <property name="photoUploadRequirementsText" value='["PNG, GIF, JPEG formats only", "Minimum dimensions 960x960", "Max file size: ${@photoUploadFileLimitSize}MB"]' type="string" />
+            <property name="errorMessageUploadImageSize" value="Uh oh. Your photo size needs to be at least 960x960 pixels. Please try again." />
+            <property name="errorMessageUploadFileSize" value="Uh oh. Your photo needs to be under ${@photoUploadFileLimitSize}mb. Please try again." />
+            <property name="errorMessageUploadCombined" value="Uh oh. Your photo size needs to be at least 960x960 pixels and under ${@photoUploadFileLimitSize}mb. Please try again." />
+            <property name="errorMessageFormGeneric" value="Uh oh. Something went wrong. Please &lt;a href=&quot;#&quot; class=&quot;ugc-logout&quot; data-click-tracked=&quot;false&quot;&gt;log out&lt;/a&gt;  and log back in to try again." />
+            <!-- Ids below should match the ids of the svg files -->
+            <property name="addFeedbackIcon" value="ugc-icon-add-feedback" />
+            <!-- Available sort options should be provided in json format where option should be the api param value -->
+            <property name="availableSortOptions" value='[ {"label": "Newest", "option": "DATE_DESC"}, {"label": "Oldest", "option": "DATE_DESC"} ]' />
+            <property name="photoUploadEnabled" value="false" type="boolean" />
+            <property name="contentGraphEnabled" value="${@externalConfig.value}">
+                <model name="externalConfig">
+                    <property name="key" value="com.about.globe.contentGraph.enabled" />
+                    <property name="default" value="false" type="boolean" />
+                    <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+                </model>
+            </property>
+            <property name="showPhotoNextToReview" value="false" type="boolean" />
+            <property name="ratingsHistogramEnabled" value="false" type="boolean" />
+        </map>
+        <for id="apiBase, articleTitle, docId, legacyMeredithId, aggregatedFeedbacks">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <for id="addFeedbackGuidelinesText">
+            <property name="guidelinesUrl" value="//www.allrecipes.com/about-allrecipes/#cd326cd992a83bca85b96d7782028fd2" />
+        </for>
+        <for id="errorMessageUploadFileSize, errorMessageUploadCombined, photoUploadRequirementsText">
+            <property name="photoUploadFileLimitSize" value="30" type="integer" />
+        </for>
+    </component>
+
+    <component id="mntl-ugc-vue-with-auth" ref="mntl-block">
+        <component location="content" ref="mntl-auth0" id="mntl-ugc-vue-with-auth-auth0">
+            <property name="cta" value="" />
+        </component>
+        <component location="content" ref="mntl-auth0-sign-out" id="mntl-ugc-vue-with-auth-auth0-sign-out">
+            <property name="cta" value="" />
+        </component>
+        <component location="content" ref="mntl-ugc-vue">
+            <map id="props">
+                <property name="auth0Enabled" value="${@externalConfigName.value == 'true' ? true : false}">
+                    <model name="externalConfig" id="externalConfigName" onError="ignore">
+                        <property name="key" value="com.about.globe.auth0.enabled" />
+                        <property name="default" value="false" />
+                    </model>
+                </property>
+                <property name="hashId" value="${str.isNotEmpty(requestContext?.accountInfo?.hashId) ? requestContext.accountInfo.hashId : ''}" />
+            </map>
+        </component>
+        <for id="mntl-ugc-vue-with-auth-auth0.attrs, mntl-ugc-vue-with-auth-auth0-sign-out.attrs">
+            <property name="data-click-tracked" value="false" />
+        </for>
+    </component>
+</components>

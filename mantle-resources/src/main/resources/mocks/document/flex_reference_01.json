@@ -1,0 +1,328 @@
+{
+    "key": "4ffdb5051900429f4e801b5c",
+    "revisionKey": "3155fee9eb6ebcc2c50126c8",
+    "mongoId": "564f61a75f9b5843e1e46ca0",
+    "authorKey": "12794",
+    "ownerKey": "1",
+    "url": "https://www.microverss.com/how-to-start-doing-yoga-3566735",
+    "rootUrl": "http://yoga.about.com/od/beginningyoga/a/howtostart.htm",
+    "vertical": "HEALTH",
+    "docId": 3566735,
+    "slug": "how-to-start-doing-yoga",
+    "templateType": "FLEXIBLEARTICLE",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1442769384000
+    },
+    "circulationsettings": {
+      "global": 1
+    },
+    "dates": {
+      "created": 1144026039000,
+      "updated": 1442769384000,
+      "firstPublished": 1144026039000,
+      "lastPublished": 1442769389000,
+      "scheduledStart": 1442769384000
+    },
+    "medicalBoardApproved": true,
+    "socialTitle": "7 Tips for Getting Started With Yoga",
+    "paging": {
+      "pattern": "_%1$d",
+      "current": 1,
+      "total": 1
+    },
+    "categoryPromos": {
+      "list": [
+        {
+          "categoryName": "beginningyoga",
+          "heading": "How to Start Doing Yoga",
+          "annotation": "I often hear from people who have been thinking about trying yoga for awhile but don't know how to start. This article gives you all the advice you need to have a positive experience."
+        }
+      ],
+      "totalSize": 1
+    },
+    "audit": {
+      "lastModified": 1448042919950
+    },
+    "summary": {
+      "title": "How to Start Doing Yoga - Advice for Beginners",
+      "socialTitle": "7 Tips for Getting Started With Yoga",
+      "heading": "How to Start Doing Yoga",
+      "description": "Practical advice on how to start doing yoga for beginners. You will need to pick a type of yoga, find a class, and get the appropriate clothing and equipment, among other steps that will prepare you to have the best initial yoga experience.",
+      "image": {
+        "url": "http://0.tqn.com/d/yoga/1/0/Q/B/yogastudio.jpg",
+        "caption": "Yoga Class",
+        "owner": "Luis Alvarez/Vetta/Getty Images",
+        "alt": "yogastudio.jpg",
+        "width": 1500,
+        "height": 1000,
+        "objectId": "yogastudio-56aa41dc3df78cf772aee29b.jpg"
+      }
+    },
+    "rating": "0",
+    "linkboxes": {
+      "list": [
+        {
+          "heading": "More Resources on How to Start Doing Yoga",
+          "links": {
+            "list": [
+              {
+                "text": "Overview of Yoga Styles",
+                "uri": "/od/typesofyoga/a/yogatypes.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Toga Tips",
+                "uri": "/od/beginningyoga/a/Yoga-Tips.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Yoga Etiquette",
+                "uri": "/od/beginningyoga/a/yogaetiquette.htm",
+                "frame": "off",
+                "external": false
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "heading": "Suggested Reading",
+          "links": {
+            "list": [
+              {
+                "text": "Yoga on the Cheap",
+                "uri": "/od/lifestyle/tp/budgetyoga.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Yoga for Weight Loss",
+                "uri": "/od/yogafa1/f/loseweight.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Bikram Yoga and Hot Yoga",
+                "uri": "/od/bikramyogahotyoga/a/bikram.htm",
+                "frame": "off",
+                "external": false
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "heading": "Suggested Reading",
+          "links": {
+            "list": [
+              {
+                "text": "What is Yoga?",
+                "uri": "/od/beginningyoga/a/whatisyoga.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Yoga Men: How to Take to Yoga Plunge When You're a Dude",
+                "uri": "/od/beginningyoga/a/Yoga-For-Men.htm",
+                "frame": "off",
+                "external": false
+              },
+              {
+                "text": "Best Basic Yoga Pants for Women",
+                "uri": "/od/yogagear/tp/yogapants.htm",
+                "frame": "off",
+                "external": false
+              }
+            ],
+            "totalSize": 3
+          }
+        }
+      ],
+      "totalSize": 3
+    },
+    "pages": {
+      "list": [
+        {
+          "title": "How to Start Doing Yoga - Advice for Beginners",
+          "description": "Practical advice on how to start doing yoga for beginners. You will need to pick a type of yoga, find a class, and get the appropriate clothing and equipment, among other steps that will prepare you to have the best initial yoga experience.",
+          "heading": "How to Start Doing Yoga",
+          "subheading": "7 Tips for Beginners",
+          "content": {
+            "list": [
+              {
+                "content": "<p>Deciding that you want to start doing yoga is the first step. It&#39;s easy to get stuck here, though. Don&#39;t be intimidated! Here is the information you will need to take that next step and start enjoying the <a href=\"/od/beginningyoga/a/benefits.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">pleasures and benefits of yoga</a>.</p>",
+                "characterCount": 236,
+                "wordCount": 43,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>1. Pick a Yoga Type</strong></h3>",
+                "characterCount": 19,
+                "wordCount": 4,
+                "isHeading": true
+              },
+              {
+                "content": "<p>A little research will be required on your part. Many yoga classes are out there, and you may be turned off if you pick one that does not suit your personality and state of physical fitness.</p>",
+                "characterCount": 190,
+                "wordCount": 36,
+                "isHeading": false
+              },
+              {
+                "content": "<p>Take a few minutes to read this <a href=\"/od/typesofyoga/a/yogatypes.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\">overview of yoga styles</a>. For most beginners, a <a href=\"/od/typesofyoga/a/hatha.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"3\">hatha</a> or <a href=\"/od/typesofyoga/a/vinyasa.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"4\">vinyasa</a> class will be most appropriate, depending on whether you want a slow or fast-paced class. These are basic styles, and you can always try something fancier later.</p>",
+                "characterCount": 257,
+                "wordCount": 45,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>2. Find a Class</strong></h3>",
+                "characterCount": 15,
+                "wordCount": 3,
+                "isHeading": true
+              },
+              {
+                "content": "<p>Online resources will help you <a href=\"/od/findingayogateacher/a/findaclass.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"5\">find a yoga class</a> in your area. You can also check local alternative newspapers or wellness magazines for listings or search online for &#34;yoga&#34; and the name of your town.</p>",
+                "characterCount": 200,
+                "wordCount": 35,
+                "isHeading": false
+              },
+              {
+                "content": "<p>Pick a studio that is convenient to your home or work so getting to class will be easy. Make sure you start with a basic level class. Many <a href=\"/od/beginningyoga/a/studiovsgym.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"6\">gyms</a> also offer yoga classes; this is a good place to start if you already belong to a gym. Finding a <a href=\"/od/findingayogateacher/qt/How-To-Find-A-Good-Yoga-Teacher.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"7\">good teacher</a> will help you stick with it. If you don&#39;t click with the first teacher you go to, keep trying until you find one you like.</p>",
+                "characterCount": 376,
+                "wordCount": 76,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>3. What to Bring</strong></h3>",
+                "characterCount": 16,
+                "wordCount": 3,
+                "isHeading": true
+              },
+              {
+                "content": "<p>On the first day, you will not need to bring much except yourself and some comfortable, breathable clothing. Read up on <a href=\"/od/yogagear/a/basicyogagear.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"8\">basic yoga equipment</a> you will encounter. Most studios have yoga mats that can be rented.</p>",
+                "characterCount": 208,
+                "wordCount": 36,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>4. Learn What to Expect</strong></h3>",
+                "characterCount": 23,
+                "wordCount": 4,
+                "isHeading": true
+              },
+              {
+                "content": "<p>In a typical yoga class, the students place their mats facing the front of the room (often identifiable by a small altar or by the teacher&#39;s mat) in a loose grid. It&#39;s best not to line up your mat exactly with the one next to it because you and your neighbor will need some space in certain poses. The students often sit in a <a href=\"/od/yogaposes/a/sukasana.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"9\">cross-legged position</a> waiting for class to start or do some gentle stretching.</p>",
+                "characterCount": 404,
+                "wordCount": 76,
+                "isHeading": false
+              },
+              {
+                "content": "<p>The teacher may start class by leading the class in chanting <a href=\"/od/howtospeakyoga/g/om.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"10\">&#34;om&#34;</a> three times. Depending on the teacher, there may be a <a href=\"/od/breathing/a/pranayamahub.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"11\">breathing exercise</a> or short meditation at the start of class.</p>",
+                "characterCount": 181,
+                "wordCount": 32,
+                "isHeading": false
+              },
+              {
+                "content": "<p>This is followed by warm-up poses, more vigorous poses, then stretches and <a href=\"/od/yogaposes/a/savasana.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"12\">final relaxation</a>. At any time, take <a href=\"/od/yogaposes/a/childspose.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"13\">child&#39;s pose</a> if you need some rest.</p>",
+                "characterCount": 146,
+                "wordCount": 25,
+                "isHeading": false
+              },
+              {
+                "content": "<p>Sometimes the teacher will go around to each student during final relaxation and give them a little massage. Most teachers end class with another round of <a href=\"/od/howtospeakyoga/g/om.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"14\">oms</a>.</p>",
+                "characterCount": 159,
+                "wordCount": 27,
+                "isHeading": false
+              },
+              {
+                "content": "<p>Know that you may be <a href=\"/od/yogafa1/f/soreness.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"15\">a little sore</a> the day after your first class.</p>",
+                "characterCount": 66,
+                "wordCount": 14,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>5. What if I Have No Access to Yoga Classes?</strong></h3>",
+                "characterCount": 44,
+                "wordCount": 9,
+                "isHeading": true
+              },
+              {
+                "content": "<p>While many great <a href=\"/od/yogagear/\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"16\">yoga books and videos</a> are available, there is no substitute from learning directly from a good teacher in a yoga class. That said, if you cannot get to a yoga class, I recommend starting with any beginner&#39;s video, as this will give you more visuals to follow than a book.</p>",
+                "characterCount": 288,
+                "wordCount": 53,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>6. Dos and Don&#39;ts</strong></h3>",
+                "characterCount": 17,
+                "wordCount": 3,
+                "isHeading": true
+              },
+              {
+                "content": "<p><strong>Don&#39;t...</strong></p>",
+                "characterCount": 8,
+                "wordCount": 1,
+                "isHeading": true
+              },
+              {
+                "content": "<ul><li>have a big meal right before class. Try <a href=\"/od/yogafa1/f/When-To-Eat-Before-Yoga.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"17\">eating lightly</a> a few hours before class starts.</li><li> <a href=\"/od/yogafa1/f/Should-I-Drink-Water-During-Yoga.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"18\">drink water</a> during most classes, but have some before and after.</li><li>wear shoes or socks during class.</li></ul>",
+                "characterCount": 185,
+                "wordCount": 33,
+                "isHeading": false
+              },
+              {
+                "content": "<p><strong>Do...</strong></p>",
+                "characterCount": 5,
+                "wordCount": 1,
+                "isHeading": true
+              },
+              {
+                "content": "<ul><li>check out our <a href=\"/od/beginningyoga/a/Yoga-Tips.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"19\">yoga tips</a> for more on what to expect.</li><li>review <a href=\"/od/beginningyoga/a/yogaetiquette.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"20\">yoga etiquette</a> so you feel very comfortable entering an unfamiliar situation.</li><li>tell the teacher it&#39;s your first class (you probably won&#39;t be the only one).</li><li>ask the teacher for help if you need it.</li><li>familiarize yourself with some <a href=\"/od/yogaposes/a/beginnersposes.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"21\">beginners&#39; yoga poses</a> before you take your first class.</li><li>come back in a few days for your next class!</li></ul>",
+                "characterCount": 381,
+                "wordCount": 69,
+                "isHeading": false
+              },
+              {
+                "content": "<h3><strong>7. Want to Know More?</strong></h3>",
+                "characterCount": 21,
+                "wordCount": 4,
+                "isHeading": true
+              },
+              {
+                "content": "<p>Sign up for my <a href=\"/c/ec/1.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"22\">Yoga for Beginners Crash Course</a>. Through weekly email newsletters, you will find out how to pick a yoga style, lose weight, observe proper yoga etiquette, and avoid injury. Each week you will also get the answer to a frequently asked question (<a href=\"/od/yogafa1/a/faqhub.htm\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"23\">FAQ</a>). At the end of this seven-week course, you will understand the principles and origins of yoga, and know how to practice beginning-level poses.</p>",
+                "characterCount": 406,
+                "wordCount": 69,
+                "isHeading": false
+              }
+            ],
+            "totalSize": 24
+          },
+          "images": {
+            "list": [
+              {
+                "url": "http://0.tqn.com/d/yoga/1/0/Q/B/yogastudio.jpg",
+                "caption": "Yoga Class",
+                "owner": "Luis Alvarez/Vetta/Getty Images",
+                "alt": "yogastudio.jpg",
+                "width": 1500,
+                "height": 1000
+              }
+            ],
+            "totalSize": 1
+          },
+          "labels": {
+            "list": [
+              "yoga etiquette",
+              "yoga equipment",
+              "yoga styles",
+              "yoga for beginners"
+            ],
+            "totalSize": 4
+          }
+        }
+      ],
+      "totalSize": 1
+    }
+}

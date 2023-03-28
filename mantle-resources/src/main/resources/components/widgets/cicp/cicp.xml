@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-cicp" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>CICP Site Beacon</displayName>
+            <previewType>none</previewType>
+            <description>Component gets the vertical specific url from config and Base64 encodes it in order to obfuscate its readability for people copying Dotdash verticals/sites. It is then used in the evaluated JavaScript file as part of CyberInt's Copy-Protection to track down these copied sites.</description>
+        </info>
+
+        <property name="encodedDomain" value="${renderUtils.base64encode(@domain.value)}">
+            <model id="domain" name="externalConfig">
+                <property name="key" value="com.about.globe.domain" />
+            </model>
+        </property>
+
+        <script bottom="true" evaluated="true" path="/static/mantle/components/widgets/cicp/cicp.evaluated.js"></script>
+    </component>
+</components>

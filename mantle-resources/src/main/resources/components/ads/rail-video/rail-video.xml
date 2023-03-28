@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-rail-video" resourcePath="/components/ads/view/rail-video.ftl">
+        <info>
+            <category>Mantle Components/Media</category>
+            <displayName>Rail Video</displayName>
+            <description>JW Video Player contained in the right rail</description>
+            <documentation>
+                Required Fields to set:
+                    * playlistUrl
+                    * iuPath
+                Notable Fields set
+                    * title: Set to blank because we're pulling the title from the playlistUrl
+                    * heading: Static to be displayed above the video
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/ads/rail-video/css/rail-video.css" />
+
+        <list id="class">
+            <property name="wrapper" value="wrapper" />
+        </list>
+
+        <map id="attrs">
+            <property name="data-scroll-defer-offset" value="650" />
+            <property name="data-sizes" value="[[]]" />
+            <property name="style" value="width:300px" />
+        </map>
+
+        <property name="title" value="" onError="ignore" />
+        <property name="heading" value="Featured Video" onError="ignore" />
+
+        <component id="mntl-rail-jwplayer" location="video" ref="mntl-jwplayer">
+            <property name="adSizes" value="[[300, 170]]" />
+            <for id="custParams">
+                <property name="slot" value="video-rail" mode="replace" />
+            </for>
+            <property name="playOnPercentInView" value="50" testPayload="rightRailPlayerPlayOnPercentInView" views="pc" onError="ignore" />
+            <property name="intersectionMargin" value="250px" testPayload="railVideoMargin" onError="ignore" />
+            <property name="playerId" value="QaHgHrjx" />
+
+            <property name="skipExistingMediaContent" value="true" />
+
+            <!-- iuPath and playlistUrl should be changed by the verticals -->
+            <property name="iuPath" value="/video-rail" />
+            <for id="setup">
+                <property name="playlistUrl" value="https://cdn.jwplayer.com/v2/playlists/txNyq8kR" onError="collapseSilent" />
+                <!-- End of values that should be changed by the vertical -->
+
+                <property name="playlistTitleSelector" value=".rail-video__title" />
+                <property name="mediaid" mode="remove" />
+                <map id="autoPause" />
+            </for>
+        </component>
+    </component>
+</components>

@@ -1,0 +1,70 @@
+{
+	"hasofferstracking.betterhelp.com" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	},
+	"policygenius.go2cloud.org" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	},
+	"consumeraffairs.go2cloud.org" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	},
+	"click.linksynergy.com" : { 
+		"queryParams" : {
+			"u1" : "${REQUEST_ID}-${DOC_ID}"
+		}
+	},
+	"www.topresume.com" : { 
+		"queryParams" : {
+			"utm_content" : "${REQUEST_ID}-${DOC_ID}"
+		}
+	},
+	"www.topcv.com" : { 
+		"queryParams" : {
+			"utm_content" : "${REQUEST_ID}-${DOC_ID}"
+		}
+	},
+	"/c/328256" : { 
+		"queryParams" : {
+			"subid1" : "${REQUEST_ID}",
+			"subid2" : "${SITE}",
+			"subid3" : "link"
+		}
+	},
+	"/c/2027924" : { 
+		"queryParams" : {
+			"subid1" : "${REQUEST_ID}",
+			"subid2" : "${SITE}",
+			"subid3" : "link"
+		}
+	},
+	"/click-8900828" : { 
+		"queryParams" : {
+			"sid" : "${REQUEST_ID}"
+		}
+	},
+	"/click-8366961" : { 
+		"queryParams" : {
+			"sid" : "${REQUEST_ID}"
+		}
+	},
+	"net/c/2104074" : { 
+		"queryParams" : {
+			"subid1" : "${DOC_ID}",
+			"subid2" : "${REQUEST_ID}"
+		}
+	},
+	"/click-100125493" : { 
+		"queryParams" : {
+			"sid" : "${REQUEST_ID}-${DOC_ID}"
+		}
+	}
+}

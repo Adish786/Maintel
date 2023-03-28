@@ -1,0 +1,63 @@
+.mntl-privacy-email-form,
+.mntl-email__block {
+    padding: 0.25rem 1rem;
+    margin: 0.25rem 0;
+}
+
+.mntl-email-form {
+    &__background {
+        background-color: #E9E9E9;
+        border-radius: 10px;
+        padding: 0.75rem;
+    }
+
+    &__flexblock {
+        display: flex;
+        align-items: center;
+    }
+
+    &__checkbox {
+        margin: 1rem;
+    }
+
+    &__list {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__example {
+        padding: 1em;
+        background-color: white;
+        border: 1px solid grey;
+        word-break: break-word;
+    }
+
+    &__step {
+        margin: 1rem 0;
+        font-weight: bold;
+    }
+
+    &__message {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    &--success {
+        background-color: #B9F6CA;
+        border: 1px solid #1B5E20;
+        border-radius: 10px;
+    }
+
+    &--error {
+        background-color: #FF8A80;
+        border: 1px solid #B71C1C;
+        border-radius: 10px;
+    }
+}
+
+.mntl-email-input__name,
+.mntl-email-input__email {
+    padding: 1rem 0;
+    margin: 0.75rem 0;
+    width: 100%;
+}

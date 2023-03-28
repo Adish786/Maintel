@@ -1,0 +1,1 @@
+<@component tag="p" class="quiz-disclaimer">${model.disclaimer}</@component>

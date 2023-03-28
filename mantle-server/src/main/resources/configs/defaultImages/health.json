@@ -1,0 +1,209 @@
+{
+	"id": "image.default.health",
+	"name": "image.default.health",
+	"displayName": "Health Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/114146991.jpg",
+			"owner" : "Thomas Barwick/Stone/Getty Images",
+			"width" : "2001",
+			"height" : "1501"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/114147005.jpg",
+			"owner" : "Thomas Barwick/Stone/Getty Images",
+			"width" : "2001",
+			"height" : "1501"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/123467485.jpg",
+			"owner" : "RunPhoto/Stone/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/124205718.jpg",
+			"owner" : "Blend Images/ERproductions Ltd/Brand X Pictures/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/140175502.jpg",
+			"owner" : "Reza Estakhrian/Stone/Getty Images",
+			"width" : "2060",
+			"height" : "1457"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/145897369.jpg",
+			"owner" : "Katrina Wittkamp/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/160018779.jpg",
+			"owner" : "Tetra Images/Brand X Pictures/Getty Images",
+			"width" : "2124",
+			"height" : "1414"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/163392141.jpg",
+			"owner" : "Blend Images/John Fedele/Brand X Pictures/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/168360290.jpg",
+			"owner" : "Hero Images/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/168360291.jpg",
+			"owner" : "Hero Images/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/168360295.jpg",
+			"owner" : "Hero Images/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/168360314.jpg",
+			"owner" : "Hero Images/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/169066473.jpg",
+			"owner" : "Stanislaw Pytel/Photodisc/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/175178520.jpg",
+			"owner" : "Tetra Images - Daniel Grill/Brand X Pictures/Getty Images",
+			"width" : "2019",
+			"height" : "1488"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/185730739.jpg",
+			"owner" : "Buero Monaco/Taxi/Getty Images",
+			"width" : "2123",
+			"height" : "1414"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/200470360-001.jpg",
+			"owner" : "Jochen Sand/Digital Vision/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/450859061.jpg",
+			"owner" : "Jordan Siemens/Iconica/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/457992393.jpg",
+			"owner" : "Cultura Science/Matt Lincoln/Riser/Getty Images ",
+			"width" : "2124",
+			"height" : "1414"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/459093169.jpg",
+			"owner" : "Klaus Vedfelt/Riser/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/459361009.jpg",
+			"owner" : "Jordan Siemens/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/459361025.jpg",
+			"owner" : "Hero Images/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/466361349.jpg",
+			"owner" : "Aping Vision/STS/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/467179149.jpg",
+			"owner" : "Tetra Images/Brand X Pictures/Getty Images",
+			"width" : "2082",
+			"height" : "1443"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/469316695.jpg",
+			"owner" : "Jordan Siemens/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/479169159.jpg",
+			"owner" : "Hans Lans/Iconica/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/481665907.jpg",
+			"owner" : "Jordan Siemens/The Image Bank/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/486499003.jpg",
+			"owner" : "Han Lans/Iconica/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/489582965.jpg",
+			"owner" : "AMV Photo/Digital Vision/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/health/0/86504947.jpg",
+			"owner" : "Jupiterimages/Stockbyte/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+	]
+}

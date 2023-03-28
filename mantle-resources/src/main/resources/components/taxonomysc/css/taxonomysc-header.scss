@@ -1,0 +1,45 @@
+@import "mntlVariables";
+
+.mntl-taxonomysc-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.mntl-taxonomysc-header__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $bp-small2) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.mntl-taxonomysc-header__bottom {
+    padding: 0.5rem;
+    background-color: $color-gray;
+
+    &:empty {
+        display: none;
+    }
+}
+
+.mntl-taxonomysc-header-group {
+    @media (min-width: $bp-small2) {
+        padding-right: 2rem;
+    }
+}
+
+.mntl-taxonomysc-image {
+    width: 100%;
+}
+
+.mntl-taxonomysc-image-wrapper {
+    max-width: 300px;
+
+    @media (min-width: $bp-small2) {
+        order: 1;
+    }
+}

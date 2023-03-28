@@ -1,0 +1,14 @@
+plugins {
+    id "com.about.plugins.globe-java-conventions"
+}
+description = "mantle-resources"
+
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Implementation-Vendor-Id': project.group
+        )
+    }
+}

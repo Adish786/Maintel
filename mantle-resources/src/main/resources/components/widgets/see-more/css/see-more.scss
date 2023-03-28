@@ -1,0 +1,42 @@
+@import 'mntlMixins';
+
+$link-color: #0099CC !default;
+
+.mntl-see-more {
+    .see-more-content {
+        overflow: hidden;
+    }
+
+    .link-arrowed {
+        .text {
+            position: relative;
+
+            &:after {
+                content: ' ';
+                height: 0;
+                width: 0;
+                position: absolute;
+                top: 50%;
+                right: -15px;
+                margin-left: 1em;
+
+                @include makeArrowUp(5px, $link-color);
+            }
+        }
+
+        color: $link-color;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    &.collapsed {
+        .link-arrowed {
+            .text {
+                &:after {
+                    @include makeArrowUp(0, $link-color);
+                    @include makeArrowDown(5px, $link-color);
+                }
+            }
+        }
+    }
+}

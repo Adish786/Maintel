@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-article-feedback" resourcePath="/components/widgets/article-feedback/article-feedback.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Article Feedback</displayName>
+            <description>Allows user to leave a rating (thumbs up/down) and comment on articles.</description>
+            <documentation>
+                ### **rating-section** location
+
+                Used for the thumb rating buttons. Requires the class **js-rating-button** to trigger a rating on click.
+
+                Buttons meant to leave a thumbs-up rating require the data attribute **data-thumbs-signal="THUMBS_UP"**.
+
+                A thumbs-up rating will display the **success-section**. A thumbs-down rating will display the **feedback-section**.
+
+                ### **success-section** location
+
+                Shown after a rating is submitted.
+
+                ### **feedback-section** location
+
+                Shown after a rating button with the class **js-rating-button**, and without the data attribute **data-thumbs-signal="THUMBS_UP"** is clicked.
+
+                Includes an **Other** button by default, which opens a text form on click. Requires the class **js-open-form-button** to trigger form opening.
+
+                Used to include any other feedback buttons. Requires the class **js-submit-feedback-button** to submit the rating. The **succcess-section** will be shown
+                after clicking a feedback button, or submitting the text form.
+            </documentation>
+
+            <property name="docId" value="2000278" type="integer" mode="replace" />
+
+            <component location="rating-section" ref="mntl-button" id="thumbs-up-button">
+                <property name="text" value="Yes!" />
+                <property name="attrs" value="${{'data-thumbs-signal': 'THUMBS_UP'}}" />
+            </component>
+            <component location="rating-section" ref="mntl-button" id="thumbs-down-button">
+                <property name="text" value="No" />
+            </component>
+            <component location="feedback-section" ref="mntl-button" id="not-enough-details-button">
+                <property name="text" value="Not enough details" />
+            </component>
+            <component location="feedback-section" ref="mntl-button" id="wrong-article-button">
+                <property name="text" value="Wrong article" />
+            </component>
+            <for id="thumbs-up-button, thumbs-down-button">
+                <list id="class">
+                    <property name="article-feedback__rating-button" value="article-feedback__rating-button" />
+                    <property name="js-rating-button" value="js-rating-button" />
+                </list>
+            </for>
+            <for id="not-enough-details-button, wrong-article-button">
+                <list id="class">
+                    <property name="article-feedback__feedback-button" value="article-feedback__feedback-button" />
+                    <property name="js-submit-feedback" value="js-submit-feedback" />
+                </list>
+            </for>
+        </info>
+
+        <script path="/static/mantle/components/widgets/article-feedback/article-feedback.js" />
+
+        <component location="feedback-section" ref="mntl-button" id="article-feedback__open-form-button">
+            <property name="text" value="Other" />
+            <list id="class">
+                <property name="article-feedback__feedback-button" value="article-feedback__feedback-button" />
+                <property name="js-open-form-button" value="js-open-form-button" />
+            </list>
+        </component>
+
+        <component location="submit-button" ref="mntl-button" id="article-feedback__submit-button">
+            <property name="text" value="Submit" />
+        </component>
+
+        <property name="docId" value="${requestContext.urlData.docId}" />
+        <property name="ratingSectionHeading" value="Was this page helpful?" />
+        <property name="successSectionHeading" value="Thanks for letting us know!" />
+        <property name="feedbackSectionHeading" value="Tell us why!" />
+        <property name="placeholderText" value="Tell us more..." />
+    </component>
+
+</components>

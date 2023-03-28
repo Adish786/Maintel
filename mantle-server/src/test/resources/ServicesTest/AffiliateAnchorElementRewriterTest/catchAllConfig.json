@@ -1,0 +1,26 @@
+{
+	"www.impact.com/?partner=1234" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}",
+			"partner_id": "13123"
+		}
+	},
+	"consumeraffairs.go2cloud.org" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	},
+	"click.linksynergy.com" : { 
+		"queryParams" : {
+			"u1" : "${REQUEST_ID_DOC_ID_COMBINED}"
+		}
+	},
+	"www.impact.com" : { 
+		"queryParams" : {
+			"aff_sub2" : "${DOC_ID}",
+			"aff_sub3" : "${REQUEST_ID}"
+		}
+	}
+}

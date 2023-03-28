@@ -1,0 +1,43 @@
+@import "mntlVariables";
+
+.mntl-attribution__item,
+.mntl-attribution__item-date {
+    display: inline;
+}
+
+.mntl-bylines__group--with-image {
+    &.mntl-bylines__group {
+        .mntl-bylines__item {
+            display: grid;
+            position: relative;
+            grid-template-areas: 
+                "image image by auth auth";
+        }
+
+        .mntl-bylines__item + .mntl-bylines__item {
+            margin-left: 0.05rem;
+        }
+    }
+
+    .mntl-attribution__author-image {
+        grid-area: image;
+    }
+    
+    .mntl-attribution__item-descriptor {
+        margin-right: 0.25rem;
+        grid-area: by;
+    }
+    
+    .mntl-dynamic-tooltip--trigger {
+        grid-area: auth;
+    }
+}
+
+.mntl-attribution__author-image {
+    border-radius: 100%;
+    position: absolute;
+
+    @media (min-width: $mntl-bp-sm) {
+        align-self: baseline;
+    }
+}

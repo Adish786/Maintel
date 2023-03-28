@@ -1,0 +1,916 @@
+{
+    "key": "4ffc9b4619010918ed807020",
+    "revisionId": "4740909_1558995707649",
+    "authorKey": "8976",
+    "lastEditingAuthorId": "8976",
+    "lastEditingUserId": "153194049224846",
+    "url": "https://www.lifewire.com/what-is-thunderbolt-4740909",
+    "rootUrl": "https://www.lifewire.com/what-is-thunderbolt-4740909",
+    "vertical": "TECH",
+    "docId": 4740909,
+    "slug": "what-is-thunderbolt",
+    "templateType": "STRUCTUREDCONTENT",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1543959420185
+    },
+    "dates": {
+      "created": 1558995707649,
+      "updated": 1558995707649,
+      "firstPublished": 1543959420185,
+      "lastPublished": 1543959420185,
+      "displayed": 1558995707649
+    },
+    "medicalBoardApproved": false,
+    "noIndex": false,
+    "title": "What Is Thunderbolt?",
+    "socialTitle": "Latest Thunderbolt Interface Is Faster and More Flexible",
+    "description": "An article that looks at the new Thunderbolt interface technology from Intel and how it is looking to change how we think of computer interfaces.",
+    "heading": "What Is Thunderbolt?",
+    "primaryImage": {
+      "url": "http://0.tqn.com/d/compreviews/1/0/-/f/thunderbolt_logo.jpg",
+      "caption": "",
+      "owner": "<p>Intel</p>",
+      "alt": "Thunderbolt logo",
+      "width": 1280,
+      "height": 853,
+      "objectId": "thunderbolt_logo-56a1b47f3df78cf7726d3aec.jpg"
+    },
+    "summary": {
+      "title": "What Is Thunderbolt?",
+      "socialTitle": "Latest Thunderbolt Interface Is Faster and More Flexible",
+      "heading": "What Is Thunderbolt?",
+      "description": "An article that looks at the new Thunderbolt interface technology from Intel and how it is looking to change how we think of computer interfaces.",
+      "image": {
+        "url": "http://0.tqn.com/d/compreviews/1/0/-/f/thunderbolt_logo.jpg",
+        "caption": "",
+        "owner": "<p>Intel</p>",
+        "alt": "Thunderbolt logo",
+        "width": 1280,
+        "height": 853,
+        "objectId": "thunderbolt_logo-56a1b47f3df78cf7726d3aec.jpg"
+      }
+    },
+    "audit": {
+      "userId": "154774898907466",
+      "lastModified": 1558995707649
+    },
+    "disclaimer": {
+      "affiliate": false
+    },
+    "pages": {
+      "list": [
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 1,
+                "type": "PRODUCTSUMMARY",
+                "data": {
+                  "products": {
+                    "list": [
+                      {
+                        "id": "985a58f7-db75-46b6-8399-eb19c6ba1a76",
+                        "type": "CREDITCARD",
+                        "name": "darren-card",
+                        "issuer": "Discover",
+                        "network": "Mastercard",
+                        "categories": {
+	                        "list": [
+	                          "PERSONAL",
+	                          "RETAIL",
+	                          "SECURED",
+	                          "CASHBACK"
+	                        ]
+                        },
+                        "creditScores": {
+	                        "list": [
+	                          "NOT_SPECIFIED"
+	                        ]
+                        },
+                        "attributes": {
+                          "list": [
+                            {
+                              "attributeDefId": "de7f326d-f4b3-4b72-a8fa-9f61b12487c3",
+                              "value": {
+                                "type": "TESTING UNKONWN TYPE",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "de7f326d-f4b3-4b72-a8fa-9f61b12487c3",
+                                "name": "redeemViaDirectDeposit",
+                                "displayName": "Redeem via Direct Deposit",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714089869
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "93ac17f3-2f78-45aa-ac0b-1c0a98382813",
+                              "value": {
+                                "type": "INTEGER",
+                                "value": 1
+                              },
+                              "attributeDef": {
+                                "id": "93ac17f3-2f78-45aa-ac0b-1c0a98382813",
+                                "name": "tiers",
+                                "displayName": "Tiers",
+                                "valueType": "INTEGER",
+                                "service": "CreditCard",
+                                "group": "\"=COUNT(AA70:AA113)\":gasPercentage,groceriesPercentage,restaurantsPercentage,barsPercentage,genericOrAllOrOtherTravelPercentage,airlinePercentage,hotelPercentage,airbnbOrOtherShort_TermRentalPercentage,timeSharePercentage,ridesharePercentage,taxiOrLimoPercentage,carRentalPercentage,publicTransitPercentage,cruisesPercentage,trainPercentage,busesPercentage,ferriesPercentage,toursPercentage,travelAgencyPurchasesPercentage,concertTicketsPercentage,streamingServicesPercentage,moviesOrShowsTicketsPercentage,amusementParksPercentage,onlinePurchasesPercentage,autoPartsAndServiceStoresPercentage,officeSupplyStoresPercentage,clothingStoresPercentage,sportingGoodsStoresPercentage,discountStoresPercentage,amazonPercentage,charitiesPercentage,wholesaleClubsPercentage,drugStoresPercentage,homeImprovementStoresPercentage,furniturePercentage,electronicsPercentage,departmentStoresPercentage,groupOfRetailersPercentage,oneSpecificRetailerPercentage,advertisingPercentage,shippingPercentage,telecomPercentage,internetPercentage,allOtherPurchasesPercentage",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714085988
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "7f0f3554-9099-4eb1-b327-63c837b535a1",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "7f0f3554-9099-4eb1-b327-63c837b535a1",
+                                "name": "hasSign_UpBonus",
+                                "displayName": "has Sign-up Bonus",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714098367
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "a9a40311-66a9-4f26-b67b-cf45871fcaf6",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "a9a40311-66a9-4f26-b67b-cf45871fcaf6",
+                                "name": "redeemForFlight",
+                                "displayName": "Redeem for Flight",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714098889
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "8d767ca2-0783-4ebb-bf7f-e6e8e7d8f0e8",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "8d767ca2-0783-4ebb-bf7f-e6e8e7d8f0e8",
+                                "name": "redeemForCarRental",
+                                "displayName": "Redeem for Car Rental",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714087722
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "3c20526b-fd62-4661-923f-a05df1afb9cc",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "3c20526b-fd62-4661-923f-a05df1afb9cc",
+                                "name": "redeemForCharityDonation",
+                                "displayName": "Redeem for Charity Donation",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714082799
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "44339193-deb8-4c85-8534-f85768acc806",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "44339193-deb8-4c85-8534-f85768acc806",
+                                "name": "redeemAsGiftCard",
+                                "displayName": "Redeem as Gift Card",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714077741
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "9bfced74-4572-4621-939d-fa973f0bb86e",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "9bfced74-4572-4621-939d-fa973f0bb86e",
+                                "name": "redeemViaCheck",
+                                "displayName": "Redeem via Check",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714098508
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "03d1c4f4-89c8-4736-9c4f-fed4d7ac3909",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "03d1c4f4-89c8-4736-9c4f-fed4d7ac3909",
+                                "name": "redeemForCruiseBooking",
+                                "displayName": "Redeem for Cruise Booking",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714085688
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "b3e271a2-4313-4d36-8a3d-3177a3a7b8e1",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "b3e271a2-4313-4d36-8a3d-3177a3a7b8e1",
+                                "name": "numberOfAirlinePartners",
+                                "displayName": "Number of Airline Partners",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "group": "\"=COUNTIF(AA202:AA321,Y\")\"\"\":americanAirlines,unitedAirlines,deltaAirLines,adria,aegean,airCanada,airChina,airIndia,airNewZealand,ana,asianaAirlines,austrian,avianca,brusselsAirline,copaairlines,croatiaAirlines,egyptair,ethiopian,evaAir,lotPolishAirlines,lufthansa,sas,shenzhenAirlines,singaporeAirlines,southAfricanAirways,swiss,tapAirportugal,thai,turkishAirlines,aerLingus,airFrance,klm,britishAirways,iberia,jetblue,southwestAirlines,virginAtlantic,cathayPacific,finnair,japanAirlines,latam,malaysiaAirlines,qantas,qatar,royalJordanian,s7Airlines,srilankanAirlines,fijiAirways,aeroflot,aerolineasArgentina,aeromexico,aireuropa,alitalia,chinaAirlines,chinaEastern,czechAirlines,garudaIndonesia,kenyaAirways,koreanAir,mea,saudia,tarom,vietnamAirlines,xiamenair,alaskaAir,condor,emirates,hainanAirlines,icelandair,penair,ravnAlaska,allegiant,frontierAirlines,hawaiianAirlines,virginAustralia,silverAirways,seaborne,porter,jetsuitex,capeAir,spiritAirlines,bangkokAirways,cathayDragon,gulfAir,jetAirways,airCorsica,airMauritius,aircalin,chalairAviation,chinaSouthernAirlines,gol,hop,taag,transvia,twinJet,uiaUkraineInteranationalAirlines,westjet,wijet,easyjet,etihad,airSerbia,airSeychelles,omanAir,philippineAirlines,royalAirMaroc,luckyAir,suparnaAirlines,grandChinaAirlines,capitalAirlines,guangxiBeibuGulfAirlines,urumqiAir,tianjinAirlines,hongKongAirlines,fuzhouAirlines,eurowings,flybe,scootAirline,silkair,vistara,elAl",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714079383
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "c1b28707-c6e7-4c44-8ca9-9ae07e33c835",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "c1b28707-c6e7-4c44-8ca9-9ae07e33c835",
+                                "name": "redeemAsStatementCredit",
+                                "displayName": "Redeem as Statement Credit",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714083937
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "40a1081d-1672-445f-873f-79a60f52fb81",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "40a1081d-1672-445f-873f-79a60f52fb81",
+                                "name": "redeemForMerchandise",
+                                "displayName": "Redeem for Merchandise",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714087190
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "1d09cbd7-44a9-40d8-b2f9-ff500b276342",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "1d09cbd7-44a9-40d8-b2f9-ff500b276342",
+                                "name": "excellentPerks",
+                                "displayName": "Excellent Perks",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "group": "\"=COUNTIF(AA162:AA171,Y\")\"\"\":hasPriorityBoarding,hasLoungeAccess,hasGlobalEntryOrPrecheckCredit,hasFreeCheckedBag,hasCompanionPass,hasEliteStatus,hasTravelCredit,hasBaggageInsurance,hasTravelAccidentInsurance,hasTravelCancellationInsurance",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714095969
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "4274497a-25ca-4c24-b991-0548a17c3649",
+                              "value": {
+                                "type": "PERCENTAGE",
+                                "value": 500
+                              },
+                              "attributeDef": {
+                                "id": "4274497a-25ca-4c24-b991-0548a17c3649",
+                                "name": "amazonPercentage",
+                                "displayName": "Amazon (%)",
+                                "valueType": "PERCENTAGE",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714095110
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "e389392e-fbb6-4579-a2fd-b8351d481260",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "e389392e-fbb6-4579-a2fd-b8351d481260",
+                                "name": "hasRemptionThreshold",
+                                "displayName": "has Remption Threshold",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714089157
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "4c49b119-0510-490d-9585-18c7500d5fcf",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 0
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "4c49b119-0510-490d-9585-18c7500d5fcf",
+                                "name": "sign_UpBonusSpendingRequirementCurrency",
+                                "displayName": "Sign-up bonus spending requirement ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714093900
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "138cf900-7a92-41d8-a0a2-07f8fbcb874a",
+                              "value": {
+                                "type": "INTEGER",
+                                "value": 0
+                              },
+                              "attributeDef": {
+                                "id": "138cf900-7a92-41d8-a0a2-07f8fbcb874a",
+                                "name": "overallPerks",
+                                "displayName": "Overall Perks",
+                                "valueType": "INTEGER",
+                                "service": "CreditCard",
+                                "group": "\"=COUNT(AA173:AA181)+AA161\":perkNumber1,perkNumber2,perkNumber3,perkNumber4,perkNumber5,perkNumber6,perkNumber7,perkNumber8,perkNumber9",
+                                "weights": {
+                                  "list": [
+                                    {
+                                      "category": "PERSONAL",
+                                      "weight": 20
+                                    },
+                                    {
+                                      "category": "TRAVEL",
+                                      "weight": 20
+                                    },
+                                    {
+                                      "weight": 35
+                                    }
+                                  ],
+                                  "totalSize": 3
+                                },
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714079841
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "93b8dbd6-d9e3-47c1-9f86-99a599b90131",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "93b8dbd6-d9e3-47c1-9f86-99a599b90131",
+                                "name": "redemtionMethods",
+                                "displayName": "Redemtion Methods",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "group": "\"=COUNTIF(AA183:AA192,Y\")\"\"\":redeemForFlight,redeemForHotelStay,redeemForCruiseBooking,redeemForCarRental,redeemAsStatementCredit,redeemViaCheck,redeemViaDirectDeposit,redeemAsGiftCard,redeemForMerchandise,redeemForCharityDonation",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714096880
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "82b9a87b-8e56-49f0-a82b-8d7f1ae0f1a7",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD"
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "82b9a87b-8e56-49f0-a82b-8d7f1ae0f1a7",
+                                "name": "limitOnHighestTier",
+                                "displayName": "Limit on Highest Tier",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "group": "\"=IF(MAX(AA116:AA159)=0,N\",\"Y\")\"\"\":gasCurrency,groceriesCurrency,restaurantsCurrency,barsCurrency,genericOrAllOrOtherTravelCurrency,airlineCurrency,hotelCurrency,airbnbOrOtherShort_TermRentalCurrency,timeShareCurrency,rideshareCurrency,taxiOrLimoCurrency,carRentalCurrency,publicTransitCurrency,cruisesCurrency,trainCurrency,busesCurrency,ferriesCurrency,toursCurrency,travelAgencyPurchasesCurrency,concertTicketsCurrency,streamingServicesCurrency,moviesOrShowsTicketsCurrency,amusementParksCurrency,onlinePurchasesCurrency,autoPartsAndServiceStoresCurrency,officeSupplyStoresCurrency,clothingStoresCurrency,sportingGoodsStoresCurrency,discountStoresCurrency,amazonCurrency,charitiesCurrency,wholesaleClubsCurrency,drugStoresCurrency,homeImprovementStoresCurrency,furnitureCurrency,electronicsCurrency,departmentStoresCurrency,groupOfRetailersCurrency,oneSpecificRetailerCurrency,advertisingCurrency,shippingCurrency,telecomCurrency,internetCurrency,allOtherPurchasesCurrency",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714083410
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "c4b4be0b-0918-4593-a025-6f4dc1f5c009",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "c4b4be0b-0918-4593-a025-6f4dc1f5c009",
+                                "name": "redeemForHotelStay",
+                                "displayName": "Redeem for Hotel Stay",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714079767
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "62c630fe-c25d-4928-82f0-46e18a4f879a",
+                              "value": {
+                                "type": "PERCENTAGE",
+                                "value": 500
+                              },
+                              "attributeDef": {
+                                "id": "62c630fe-c25d-4928-82f0-46e18a4f879a",
+                                "name": "highestRewardsEarningRatePercentage",
+                                "displayName": "Highest Rewards Earning Rate (%)",
+                                "valueType": "PERCENTAGE",
+                                "service": "CreditCard",
+                                "group": "\"=MAX(AA70:AA113)\":gasPercentage,groceriesPercentage,restaurantsPercentage,barsPercentage,genericOrAllOrOtherTravelPercentage,airlinePercentage,hotelPercentage,airbnbOrOtherShort_TermRentalPercentage,timeSharePercentage,ridesharePercentage,taxiOrLimoPercentage,carRentalPercentage,publicTransitPercentage,cruisesPercentage,trainPercentage,busesPercentage,ferriesPercentage,toursPercentage,travelAgencyPurchasesPercentage,concertTicketsPercentage,streamingServicesPercentage,moviesOrShowsTicketsPercentage,amusementParksPercentage,onlinePurchasesPercentage,autoPartsAndServiceStoresPercentage,officeSupplyStoresPercentage,clothingStoresPercentage,sportingGoodsStoresPercentage,discountStoresPercentage,amazonPercentage,charitiesPercentage,wholesaleClubsPercentage,drugStoresPercentage,homeImprovementStoresPercentage,furniturePercentage,electronicsPercentage,departmentStoresPercentage,groupOfRetailersPercentage,oneSpecificRetailerPercentage,advertisingPercentage,shippingPercentage,telecomPercentage,internetPercentage,allOtherPurchasesPercentage",
+                                "weights": {
+                                  "list": [
+                                    {
+                                      "category": "CASHBACK",
+                                      "weight": 70
+                                    },
+                                    {
+                                      "weight": 90
+                                    }
+                                  ],
+                                  "totalSize": 2
+                                },
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714088114
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "7b779758-5b6d-45d5-982c-9c1924827b7f",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "7b779758-5b6d-45d5-982c-9c1924827b7f",
+                                "name": "cardAcceptance",
+                                "displayName": "Card Acceptance",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714099111
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "26ab5299-3563-4683-876a-99b859e795c6",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "26ab5299-3563-4683-876a-99b859e795c6",
+                                "name": "allowsCreditLimitIncreaseWithinFirstYear",
+                                "displayName": "Allows credit limit increase within first year",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714099334
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "d01d7c5e-4127-41a3-bf26-f4791a4ffa2a",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "d01d7c5e-4127-41a3-bf26-f4791a4ffa2a",
+                                "name": "allowsUpgradeToUnsecuredCard",
+                                "displayName": "Allows upgrade to unsecured card ",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714099829
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "6d7c2c41-8c20-4354-9aff-2bba761e43ce",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "6d7c2c41-8c20-4354-9aff-2bba761e43ce",
+                                "name": "opportunitiesToBuildCredit",
+                                "displayName": "Opportunities to Build Credit",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "group": "\"=COUNTIF(AA323:AA327,Y\")\"\"\":reportsTo3CreditBureaus,reportsTo2CreditBureaus,allowsCreditLimitIncreaseWithinFirstYear,canGetCreditLimitIncreaseInLessThanAYear,allowsUpgradeToUnsecuredCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714099402
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "967aeec9-307a-4e00-bd67-50f5764b922b",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": false
+                              },
+                              "attributeDef": {
+                                "id": "967aeec9-307a-4e00-bd67-50f5764b922b",
+                                "name": "haveLimitGreaterThanDeposit",
+                                "displayName": "Have limit greater than deposit",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714099472
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "1dc6bf95-f6fe-4c34-a9fc-6db6969ebc94",
+                              "value": {
+                                "type": "STRING",
+                                "value": "6,12,24"
+                              },
+                              "attributeDef": {
+                                "id": "1dc6bf95-f6fe-4c34-a9fc-6db6969ebc94",
+                                "name": "introPurchaseAprLength",
+                                "displayName": "Intro Purchase APR Length  (number of months)",
+                                "valueType": "STRING",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714101784
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "679c47fb-8dd6-40a9-837e-29fca3267181",
+                              "value": {
+                                "type": "PERCENTAGE",
+                                "value": 2824
+                              },
+                              "attributeDef": {
+                                "id": "679c47fb-8dd6-40a9-837e-29fca3267181",
+                                "name": "regularApr_HighPercentage",
+                                "displayName": "Regular APR - high (%)",
+                                "valueType": "PERCENTAGE",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714101858
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "db45e977-8ea0-4688-90a7-bf13106bfc04",
+                              "value": {
+                                "type": "PERCENTAGE",
+                                "value": 2274
+                              },
+                              "attributeDef": {
+                                "id": "db45e977-8ea0-4688-90a7-bf13106bfc04",
+                                "name": "regularApr_LowPercentage",
+                                "displayName": "Regular APR - low (%)",
+                                "valueType": "PERCENTAGE",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714102147
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "d1109622-4b24-4b05-84a5-eb02f33c74e5",
+                              "value": {
+                                "type": "PERCENTAGE",
+                                "value": 0
+                              },
+                              "attributeDef": {
+                                "id": "d1109622-4b24-4b05-84a5-eb02f33c74e5",
+                                "name": "introPurchaseAprPercentage",
+                                "displayName": "Intro Purchase APR (%)",
+                                "valueType": "PERCENTAGE",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714101561
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "87b2ae6c-c587-44a5-88c1-0061c6483eba",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 0
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "87b2ae6c-c587-44a5-88c1-0061c6483eba",
+                                "name": "annualFeeYear2Currency",
+                                "displayName": "Annual Fee Year 2 ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103415
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "29fe7103-4542-4428-89ea-48b530342095",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 38
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "29fe7103-4542-4428-89ea-48b530342095",
+                                "name": "maxLatePaymentFeeCurrency",
+                                "displayName": "Max Late Payment Fee ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714102884
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "9d8dfa04-15cd-4ab3-8915-7cb3e551bd36",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 0
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "9d8dfa04-15cd-4ab3-8915-7cb3e551bd36",
+                                "name": "annualFeeYear1Currency",
+                                "displayName": "Annual Fee Year 1 ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103342
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "b9f6286d-8523-4aba-82ae-8b942c653511",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 0
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "b9f6286d-8523-4aba-82ae-8b942c653511",
+                                "name": "annualFeeYear3Currency",
+                                "displayName": "Annual Fee Year 3 ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714105049
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "fdb23c3e-1008-414b-a896-31e0041c600b",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 1.5
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "fdb23c3e-1008-414b-a896-31e0041c600b",
+                                "name": "minimumFinanceCharge",
+                                "displayName": "Minimum Finance Charge",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103109
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "b8441c30-c1e0-491f-b38b-b67635122b12",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 0
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "b8441c30-c1e0-491f-b38b-b67635122b12",
+                                "name": "annualFee3_YearAverageCurrency",
+                                "displayName": "Annual Fee 3-year Average ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "group": "\"=AVERAGE(AA31:AA33)\":annualFeeYear1Currency,annualFeeYear2Currency,annualFeeYear3Currency",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103258
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "765a649c-50bc-4e95-a0c0-7ca15ed70056",
+                              "value": {
+                                "type": "INTEGER",
+                                "value": 1
+                              },
+                              "attributeDef": {
+                                "id": "765a649c-50bc-4e95-a0c0-7ca15ed70056",
+                                "name": "totalNumberOfOtherFees",
+                                "displayName": "Total Number of Other Fees",
+                                "valueType": "INTEGER",
+                                "service": "CreditCard",
+                                "group": "\"=COUNT(AA46:AA53)\":cardReplacementFee,creditLimitRequestFee,expeditedPaymentFee,minimumFinanceCharge,overLimitFee,statementFee,applicationFee,inactiveAccountFee",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103033
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "7508a553-fb04-447e-abb1-248029cd211a",
+                              "value": {
+                                "type": "CURRENCY",
+                                "value": {
+                                  "code": "USD",
+                                  "value": 27
+                                }
+                              },
+                              "attributeDef": {
+                                "id": "7508a553-fb04-447e-abb1-248029cd211a",
+                                "name": "firstLatePaymentFeeCurrency",
+                                "displayName": "First Late Payment Fee ($)",
+                                "valueType": "CURRENCY",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714103934
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "dd1ccc2a-bbcc-4532-a3ca-418b1915c70a",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "dd1ccc2a-bbcc-4532-a3ca-418b1915c70a",
+                                "name": "dollar0FraudLiability",
+                                "displayName": "$0 Fraud Liability",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714106004
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "373e3372-bb39-45d9-b56f-36ba694e3bbb",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "373e3372-bb39-45d9-b56f-36ba694e3bbb",
+                                "name": "hasFreeCreditScore",
+                                "displayName": "has Free Credit Score",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714107342
+                                }
+                              }
+                            },
+                            {
+                              "attributeDefId": "4aa5095d-9200-4565-80ac-10f367776e3c",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "value": true
+                              },
+                              "attributeDef": {
+                                "id": "4aa5095d-9200-4565-80ac-10f367776e3c",
+                                "name": "hasIssuerApp",
+                                "displayName": "has Issuer App",
+                                "valueType": "BOOLEAN",
+                                "service": "CreditCard",
+                                "audit": {
+                                  "userId": "148476225417930",
+                                  "lastModified": 1558714107264
+                                }
+                              }
+                            }
+                          ],
+                          "totalSize": 41
+                        },
+                        "audit": {
+                          "userId": "154774898907466",
+                          "lastModified": 1558632718920
+                        }
+                      }
+                    ],
+                    "totalSize": 1
+                  }
+                }
+              }
+            ],
+            "totalSize": 1
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "subheading": "The High Speed Peripheral Port for Data and Video"
+  }

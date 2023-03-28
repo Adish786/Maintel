@@ -1,0 +1,11 @@
+.mntl-expandable-block {
+    .expandable-content {
+        display: none;
+    }
+
+    &.is-expanded {
+        .expandable-content {
+            display: block;
+        }
+    }
+}

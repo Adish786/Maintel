@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-taxonomysc" resourcePath="/components/taxonomysc/view/taxonomysc.ftl">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Base</displayName>
+            <description>Base component to be used for rendering the TAXONOMYSC template type.</description>
+            <previewType>none</previewType>
+        </info>
+        <stylesheet path="/static/mantle/components/taxonomysc/css/taxonomysc.css" />
+
+        <component location="header" ref="mntl-taxonomysc-header" />
+
+        <component location="structuredContent" id="mntl-taxonomysc-content" ref="mntl-sc-page">
+            <for id="mntl-sc-page-contents.contents">
+                <property name="blockList" value="${@document.contents.list}" mode="replace">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+                <property name="adInsertionStrategyName" value="noAdsStructuredContentAdInsertionStrategy" />
+            </for>
+        </component>
+
+        <component location="fixedContent" ref="mntl-document-spotlight">
+            <for id="mntl-card-list-items, mntl-card-list__button.arbitraryDependency">
+                <model id="listItems" name="documentTaxeneList" mode="replace">
+                    <model id="documentList" name="filterArticles">
+                        <model id="articles" name="descendantArticles" />
+                        <model id="articlesToFilterOut" name="documentsReferencedByContentBlocks">
+                            <model name="DOCUMENT" id="document" />
+                        </model>
+                    </model>
+                </model>
+            </for>
+        </component>
+
+        <!-- Intended for verticals to mode replace with their own newsletter component -->
+        <component location="fixedContent" id="mntl-taxonomysc-newletter" ref="mntl-group" />
+        <component location="fixedContent" ref="mntl-taxonomysc-child-nodes" />
+        <component location="fixedContent" ref="mntl-taxonomysc-article-list-group" />
+
+        <component id="mntl-taxonomysc-child-list" ref="mntl-taxonomysc-child-article-list" />
+
+        <component location="fixedContent" ref="mntl-taxonomysc-child-block" />
+
+        <component location="fixedContent" ref="mntl-taxonomysc-sibling-nodes" />
+
+        <component location="fixedContent" id="mntl-taxonomysc-sources" ref="mntl-article-sources">
+            <for id="mntl-article-sources__heading">
+                <property name="text" value="Page Sources" />
+            </for>
+        </component>
+
+        <!-- Though `mntl-document-spotlight` only needs a small amount of articles (~24) we are changing the limit here because that means globe will only do one call instead of two -->
+        <for id="mntl-document-spotlight.mntl-card-list-items.listItems.documentList.articles, 
+        mntl-document-spotlight.mntl-card-list__button.arbitraryDependency.listItems.documentList.articles,
+        mntl-taxonomysc-child-list.mntl-card-list-items.listItems.documentList.articles,
+        mntl-taxonomysc-child-list.mntl-card-list__button.arbitraryDependency.listItems.documentList.articles,
+        mntl-taxonomysc-child-list.mntl-card-list-items.listItems.documentList,
+        mntl-taxonomysc-child-list.mntl-card-list-items.mntl-card-list__button.arbitraryDependency.documentList,
+        mntl-taxonomysc-article-list-group.mntl-taxonomysc-article-list.mntl-card-list-items.listItems.documentList.articles,
+        mntl-taxonomysc-article-list-group.mntl-taxonomysc-article-list.mntl-card-list__button.arbitraryDependency.listItems.documentList.articles
+        ">
+            <property name="relationships" value="primaryParent,secondaryParent" />
+            <property name="limit" value="500" type="integer" />
+        </for>
+
+    </component>
+</components>

@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <!-- RTB Ads -->
+    <component id="mntl-rtb-definition" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Real-Time Bidding</displayName>
+            <description>Our Real-Time Bidding Library. Allows configured partners to bid on ad slots in real time.</description>
+            <documentation>
+                ### rtb-definition.evaluated.js
+
+                #### Sets timeout and partner ids as defined in configuration.
+
+                - __trackEvents__ **String**
+
+                Set to method of tracking RTB plug-in library load times and ad call times. Either noEvents or newEvents.
+
+                - __rtbTimeout__ **Array | [500, 800] (desktop/tablet), [900, 1000] (mobile)**
+
+                rtbTimeout[0] Time in milliseconds to wait for bidder libraries to load. rtbTimeout[1] Time in milliseconds to retrieve bids before abandoning. Takes Proctor values from rtbTimeout or rtbTimeoutMobile tests if present.
+
+                - __rtbConfigIds__ **Object&lt;String, String&gt;**
+
+                Partner key:value map (e.g. {'rubicon': '7499'})
+
+                Some partner configuration currently managed in Proctor under test name RTBPartners (http://ab-testing.ops.about.com/proctor/definition/RTBPartners)
+
+                -__taxonomyStampValues__ **Object&lt;String, String&gt;**
+
+                Map of all the taxonomy stamp values to be referenced by the RTB partner plugins.
+
+                -__prebidPriceGranularity__ **Object**
+
+                Prebid configuration for price granularity. See http://prebid.org/dev-docs/publisher-api-reference.html#setConfig-Price-Granularity
+
+                - __amazonSection__ **String**
+
+                Taxonomy heading value to be passed in amazon RTB apstag.init(). Defaults to using tax3 or tax2 if tax3 does not exist.
+
+                - __amazonSlotName__ **Boolean**
+
+                Temporary value to test performance of slotName. Set to true to pass slotName. default is false.
+
+                - __mapFBValues__ **Object&lt;String, String&gt;**
+
+                A map of all the key value pairs in { slotID, fbPlacementID } used for Facebook ads in use with the Amazon bidding system.
+
+                -__mapTaxValues__ **Object&lt;String, String&gt;**
+
+                A map of 0 - 3 level taxonomy passed for the Amazon bidding system as { key: value } pairs. Currently the defaults require the ancestors/breadcrumb task to fetch the data. Can be overridden/added to. As of GLBE-6499 we only care about tax0 - 3.
+
+                -__amazonConfigs__  **Object&lt;String, dynamicValue&gt;**
+
+                This map will contain all the amazon bidder configs. It will be keyed on a **string** and the value will be determined by the field.
+
+                -__amazonConfigs.blockedBidders__ **List[String]**
+
+                A list of blocked bidders to be passed to Amazon bidding. Passed in as a list of strings. Default is not set or an [].
+
+                ### RTB.js
+
+                - __init(gptSlots, fn)__
+
+                Completes any preload tasks, loads configured partner scripts, and kicks off bidding requests for passed slots. Fires passed callback function when requests are complete or on timeout.
+
+                - Array&lt;Mntl.GPT.Slot&gt;= gptSlots
+
+                slot objects to bid on
+
+                - Function= fn
+
+                callback function when RTB request ends for slot objects
+
+                - __refresh(gptSlots, fn)__
+
+                Kicks off new bidding requests for passed slots that need to be dynamically refreshed.
+
+                - Array&lt;Mntl.GPT.Slot&gt;= gptSlots
+
+                slot objects to refresh
+
+                - Function= fn
+
+                callback function when RTB request ends for slot objects
+
+                - __RTB.Plugins__
+
+                Module containing bidding implementation for RTB partners.
+
+                Each partner implementation consists of three functions:
+
+                - __src(config)__
+
+                returns source url of partner script
+
+                - __preload(slots, config)__
+
+                executes any setup tasks that need to run before partner script is loaded
+
+                - __setup(slots, config, done)__
+
+                executes the bid request and fires a passed callback function when complete
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            <map id="rtbConfigIds">
+                <property name="index" value="190900" />
+            </map>
+            <property name="amazonSection" value="" />
+        </info>
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/pubsub.js" />
+        <script group="top" path="/static/mantle/js/RTB.js" />
+        <script group="top" path="/static/mantle/js/trackRtbEvents.js" />
+        <script group="top" path="/static/mantle/static/libs/js/querystring.js" />
+        <script group="top" path="/static/mantle/js/maybe.js" />
+        <script group="top" evaluated="true" path="/static/mantle/components/ads/js/rtb-definition.evaluated.js" />
+        <script group="top" path="/static/mantle/static/js/prebidjs/default/dev/prebid.js" tests="bundlePrebid" buckets="active" />
+
+        <stylesheet path="/static/mantle/components/ads/css/video.css" />
+
+        <property name="trackEvents" value="noEvents" tests="rtbTracking" buckets="control, inactive, noevents" />
+        <property name="trackEvents" value="newEvents" tests="rtbTracking" buckets="newevents" />
+        <!-- override rtbTracking if orion bucket is active -->
+        <property name="trackEvents" value="noEvents" tests="orion" buckets="active" />
+
+        <property name="rtbTimeout" value="${{500, 800}}" views="pc, tablet" />
+        <property name="rtbTimeout" value="${{900, 1000}}" views="mobile" />
+
+        <!-- latencyBuffer is experimental! Don't override unless advised.  See GLBE-6026 and #defcon2018 for more info-->
+        <property name="latencyBuffer" value="0" type="integer" />
+
+        <map id="rtbConfigIds">
+            <property name="prebid" value="true" />
+            <property name="ixid" value="${requestContext.geoData?.isoCode?.toUpperCase() == 'US' ? 'true' : null}" onError="ignore" />
+            <property name="amazon" value="3222" />
+            <!-- <property name="msg" value="true" /> Enable only on Carbon/LMD sites -->
+        </map>
+
+		<map id="indexSiteIds" views="pc, tablet">
+            <property name="billboard-160x600" value="190933" />
+            <property name="billboard-300x1050" value="190899" />
+            <property name="billboard-300x250" value="190894" />
+            <property name="billboard2-300x250" value="190895" />
+            <property name="billboard3-300x250" value="190896" />
+            <property name="billboard4-300x250" value="190897" />
+            <property name="billboard5-300x250" value="190911" />
+            <property name="billboard6-300x250" value="190912" />
+            <property name="billboard7-300x250" value="190913" />
+            <property name="billboard-300x600" value="190898" />
+            <property name="billboard3-300x600" value="190935" />
+            <property name="billboard5-300x600" value="190910" />
+            <property name="dynamicinline-728x90" value="190924" />
+            <property name="leaderboard-728x90" value="190900" />
+            <property name="leaderboard2-728x90" value="190925" />
+            <property name="leaderboard3-728x90" value="190915" />
+            <property name="leaderboard4-728x90" value="190927" />
+            <property name="leaderboard6-728x90" value="190929" />
+            <property name="leaderboardfooter-728x90" value="190930" />
+            <property name="leaderboardfooter2-728x90" value="190932" />
+            <property name="leaderboard3-728x91" value="190883" />
+            <property name="leaderboard-970x250" value="190901" />
+            <property name="leaderboardfooter-970x250" value="190931" />
+        </map>
+        <map id="indexSiteIds" views="mobile">
+            <property name="billboard-300x250" value="192556" />
+            <property name="billboard2-300x250" value="192557" />
+            <property name="billboard3-300x250" value="192558" />
+            <property name="billboard4-300x250" value="192559" />
+            <property name="billboardfooter-300x250" value="192560" />
+            <property name="billboardfooter2-300x250" value="192561" />
+            <property name="dynamicinline-300x250" value="192562" />
+            <property name="adhesive-320x50" value="192563" />
+        </map>
+
+        <for id="mapTaxValues.tax0, mapTaxValues.tax1, mapTaxValues.tax2, mapTaxValues.tax3, mapTaxValues.si_section,
+                lotameConfig.tax0, lotameConfig.tax1, lotameConfig.tax2, lotameConfig.tax3, lotameConfig.tax4, lotameConfig.tax5,
+                taxonomyStampValues.tax0, taxonomyStampValues.tax1, taxonomyStampValues.tax2, taxonomyStampValues.tax3, taxonomyStampValues.tax4, taxonomyStampValues.tax5">
+            <model name="ancestors" id="nodes" onError="ignore">
+                <model name="breadcrumb" onError="ignore" />
+            </model>
+        </for>
+
+        <!-- Taxonomy Stamp Values
+             You will notice this pattern repeated often for various RTB partners, e.g. Amazon, etc.
+             Instead of repeating this all the time I would prefer to have a single object available to the entire RTB module
+             that can be referenced by the plugins as needed. I would use **mapTaxValues** below but it is already tied to
+             the Amazon plugin and moved underneath that config in 3.12.
+             This new one is explicitly meant to be used for _ALL_ partner plugins. See the following ticket
+             https://dotdash.atlassian.net/browse/AXIS-139
+             to address the technical debt of consolidating all the plugins to use this central object.
+        -->
+        <map name="taxonomyStampValues">
+            <!-- all known tax values are provided for free; verticals may override as necessary -->
+            <property name="tax0" value="${@nodes.size() gt 0 ? (@nodes[0]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+            <property name="tax1" value="${@nodes.size() gt 1 ? (@nodes[1]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+            <property name="tax2" value="${@nodes.size() gt 2 ? (@nodes[2]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+            <property name="tax3" value="${@nodes.size() gt 3 ? (@nodes[3]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+            <property name="tax4" value="${@nodes.size() gt 4 ? (@nodes[4]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+            <property name="tax5" value="${@nodes.size() gt 5 ? (@nodes[5]?.document?.stamp?.stampValue ?: null) : null}" onError="ignore" />
+        </map>
+
+        <model name="prebidConfig" onError="ignore" />
+
+        <!-- we had originally hoped that this could be hooked up to a proctor test map type payload to allow
+             a/b testing various granularity configurations without a release cycle, but it turns out that
+             map type payloads are not working at this time: https://dotdash.slack.com/archives/C2MLDF9NX/p1583773373085300 -->
+        <map name="prebidPriceGranularity">
+            <list name="buckets">
+                <map name="bucket1">
+                    <property name="max" value="20" />
+                    <property name="increment" value="0.05" />
+                </map>
+                <map name="bucket2">
+                    <property name="max" value="100" />
+                    <property name="increment" value="0.5" />
+                </map>
+            </list>
+        </map>
+
+        <map name="amazonConfigs">
+            <property name="amazonSection" value="${@tax3?.document?.heading ?: @tax2?.document?.heading}" onError="ignore">
+                <model name="ancestor" id="tax3" onError="ignore">
+                    <model name="breadcrumb" onError="ignore" />
+                    <property name="taxeneLevel" value="3" type="integer" />
+                </model>
+                <model name="ancestor" id="tax2" onError="ignore">
+                    <model name="breadcrumb" onError="ignore" />
+                    <property name="taxeneLevel" value="2" type="integer" />
+                </model>
+            </property>
+
+            <property name="amazonSlotName" value="false" type="boolean" />
+
+            <!--list name="blockedBidders" avaliable to use to specify blocked bidders for Amazon -->
+
+            <!-- fbPlacementMap or fbMap settings for Amazon bidding in RTB -->
+            <map id="mapFBValues" name="mapFBValues" views="pc,tablet">
+                <property name="adunitid" value="mapFBID" />
+            </map>
+            <map id="mapFBValues" name="mapFBValues" views="mobile">
+                <property name="adunitid" value="mapFBID" />
+            </map>
+
+            <map name="mapTaxValues">
+                <property name="tax0" value="${@nodes.size() gt 0 and @nodes[0]?.document?.stamp?.stampValue != null ? @nodes[0]?.document?.stamp?.stampValue : 'null' }" onError="ignore" />
+                <property name="tax1" value="${@nodes.size() gt 1 and @nodes[1]?.document?.stamp?.stampValue != null ? @nodes[1]?.document?.stamp?.stampValue : 'null' }" onError="ignore" />
+                <property name="tax2" value="${@nodes.size() gt 2 and @nodes[2]?.document?.stamp?.stampValue != null ? @nodes[2]?.document?.stamp?.stampValue : 'null' }" onError="ignore" />
+                <property name="tax3" value="${@nodes.size() gt 3 and @nodes[3]?.document?.stamp?.stampValue != null ? @nodes[3]?.document?.stamp?.stampValue : 'null' }" onError="ignore" />
+                <property name="si_section" value="${@nodes.size() gt 2 and @nodes[2]?.document?.stamp?.stampValue != null ? @nodes[2]?.document?.stamp?.stampValue : 'null' }" onError="ignore" />
+            </map>
+        </map>
+
+    </component>
+
+    <!-- GPT Ads -->
+    <component id="mntl-gpt-definition" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>GPT Definition</displayName>
+            <description>You must include this in your template to display ads. Individual ads are included with the **mntl-gpt-adunit** component.</description>
+            <documentation>
+                ### gpt-definition.evaluated.js
+
+                Uses component dependencies to construct a config object and initializes GPT by passing the config object to Mntl.GPT.init
+
+                - __pageTargeting__ **Object&lt;String, Object&gt;**
+
+                Map of targeting values that will not change and will be applied to all slots page-wide and session-wide. Will be serialized as **cust_params** query parameter on ad requests.
+
+                - __baseSlotTargeting__ **Object&lt;String, Object&gt;**
+
+                Map of targeting values that may vary by slot and/or page and will be applied to each slot individually. Will be serialized as **scp** query parameter on ad requests.
+
+                - __refreshAdhesive__
+
+                Map of settings to trigger an adhesive refresh.  There are three values that can be set to trigger a refresh, none of which are turned on by default.
+                1. afterAdSlotRenderedElement **String** - Example **billboard3**	will refresh the adhesive once the specified ad slot has been rendered.
+                2. afterAdhesiveRenderedTimeout **Integer** - Time in ms to refresh the adhesive after the adhesive has originally been rendered. Example **60000**
+
+                - __gptPlugins__
+
+                Array of function names (e.g. 'MyVertical.GPT.functionName') that accept with **pageTargeting** and **baseSlotTargeting** as parameters, in case you need a function to add additional key:value pairs to the map(s)
+
+                - __domain__ **String**
+
+                Module server name
+
+                - __isMobile__ **Boolean**
+
+                Whether it is a mobile page
+
+                - __initOnScroll__ **Boolean**
+
+                Delays Mntl.GPT.init() until first scroll
+
+                - __singleRequest__ **Boolean | false**
+
+                Whether to use SRA (single request architecture) which will make requests for all ad slots in one call. If not using SRA, each ad slot will be requested individually
+
+                - __useLmdFormat__ **Boolean | false**
+
+                Whether to use the legacy Meridith ad unit path structure of network/site/tier/pageType/channel
+
+                - __lmdSiteCode__ **string**
+
+                Site code used to bild the top-level ad unit for each site. E.g. hlt.mdp.com
+
+                - __gptAdSet__ **Array&lt;Object&lt;String, Object&gt;&gt;**
+
+                Mantle worktask model that will return an array of **mantle.model.extended.GptAd** objects. As you configure each **gptAd** worktask model, pass **gptAdSet** as a dependency model in order to store the ad in **gptAdSet**
+
+                - __gptUtils__ **Object&lt;String, String&gt;**
+
+                Map of utility function references. **buildGptUrl** is required ()
+
+                ### GPT.js
+
+                - __init(config)__
+
+                Extends config object passed from gpt-definition.evaluated.js with default configuration. Sets page targeting values. Displays initial slots (those with **priority** less than or equal to **priorityThreshold**) and sets callback for remaining slots to display on page load
+
+                - __updateBaseSlotTargeting(slotTargeting)__
+
+                Extends the private key:value map used to create targeting values on newly defined slots. Passing a key with value as **undefined**, **null** or as an empty string will delete the key from the map.
+
+                - __registerCallback(slotIds, callback)__
+
+                Sets callback function **callback** to fire on **slotIds** after it has been rendered. **slotIds** is a string with comma separated slot IDs (e.g. 'leaderboard, billboard'). You may also use ***** to more broadly set the callback (e.g. 'billboard*' will set the callback on all billboards) and this is especially useful for Chapters / dynamic ad slots
+
+                - __Slot__
+
+                The class used in Mntl.GPT for slot objects.
+
+                - __config__ **Object&lt;String, Object&gt;**
+
+                Map containing **id**, **type** and **sizes**, which are required for the actual Google API call **googletag.defineSlot()**
+
+                - __targeting__ **Object&lt;String, Object&gt;**
+
+                Map containing custom targeting values to be set on slot
+
+                - __gptSlot__ **Object&lt;String, Object&gt;**
+
+                The slot object returned from Google after calling **googletag.defineSlot()**
+
+                - __el__ HTML DOM element of slot
+
+                - __displayState__ **String**
+
+                Display state of slot (**null**, **displayed**, or **displaying**)
+
+                - __byConfig(config, targeting, el)__
+
+                Creates a new Slot object by taking in config, targeting and HTML element (optional). This is mainly used only internally in GPT.js.
+
+                - __byElement(el, overrideId, targeting)__
+
+                Creates a new Slot object by taking in an HTML element, overrideId (optional) and targeting (optional). This method will construct the **config** and **targeting** properties automatically based on the HTML element. However, you may also override the slot id using **overrideId** and pass in additional targeting parameters using **targeting**. This is most likely the method you will use to create dynamic slots in your vertical.
+
+                - __setEl(el)__
+
+                Sets the HTML element on the Slot object
+
+                - __updateTargeting(targeting)__
+
+                Update targeting values on slot. For example, you may want to update targeting values before a slot refresh. Passing a key with value as **undefined**, **null** or as an empty string will delete the key from the targeting map.
+
+                - __displaySlots(slots)__
+
+                Renders slots on page
+
+                **Array&lt;Mntl.GPT.Slot&gt;= slots**
+
+                - __clearSlots(slots)__
+
+                Calls **googletag.pubads().clear()** on each slot's **gptSlot** object
+
+                **Array&lt;Mntl.GPT.Slot&gt;= slots**
+
+                - __destroySlots(slots)__
+
+                Calls **googletag.destroy()** on each slot's **gptSlot** object
+
+                **Array&lt;Mntl.GPT.Slot&gt;= slots**
+
+                - __sortSlotsByPriority(slots)__
+
+                Takes slots and return back a sorted list of ad slots based on the targeting key value pair: "priority" : number .
+
+                Slots are sorted in order according to each slot's **priority** property (1 - 100, lower values have higher priority).
+
+                **Array&lt;Mntl.GPT.Slot&gt;= slots**
+
+                **Number= threshold**
+
+                Returns **Object&lt;String,Array&lt;Mntl.GPT.Slot&gt;&gt;**
+
+                - __removeRequestSizeFromSlot(slotId, size)__
+
+                Removes size from previously displayed slot and refreshes that slot.
+
+                **String= slotId**
+
+                **Array&lt;String, String&gt;= size**
+
+                - __updatePageview()__
+
+                Proxy for **googletag.pubads().updateCorrelator()**
+
+                - __getGptSlotsFromSlots(slots)__
+
+                Returns property **gptSlot** from each slot
+
+                **Array&lt;Mntl.GPT.Slot&gt;= slots**
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+
+            <property name="domain" value="testDomain" />
+            <property name="isMobile" value="false" type="boolean" />
+            <model name="gptAdSet" />
+            <map id="gptUtils">
+                <property name="buildGptUrl" value="MyVertical.GPT.buildGPTUrl" />
+            </map>
+            <map id="pageTargeting">
+                <property name="testProperty" value="testValue" />
+            </map>
+            <map id="baseSlotTargeting" mode="replace">
+                <property name="testProperty" value="testValue" />
+            </map>
+        </info>
+        <script group="top" path="/static/mantle/static/libs/js/querystring.js" />
+        <script group="top" path="/static/mantle/js/maybe.js" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" evaluated="true" path="/static/mantle/components/ads/js/gpt-definition.evaluated.js" />
+        <script group="top" path="/static/mantle/components/ads/js/unique-slot-size.js" />
+        <script group="top" path="/static/mantle/components/ads/js/targeting-safelist.js" />
+
+        <model name="auctionFloors" onError="ignore" tests="useFloorSearch" buckets="active" />
+        <property name="useAuctionFloorSearch" type="boolean" value="true" onError="ignore" tests="useFloorSearch" buckets="active" />
+        <property name="useAuctionFloorSearch" type="boolean" value="false" onError="ignore" tests="useFloorSearch" buckets="inactive,control" />
+
+        <for id="baseSlotTargeting.p*, docId, sentiment, concepts, taxons, pageTargeting.customSeries, pageTargeting.custom, mtax, templateName, vid.hasVideo, vid.isVideoPage">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+
+        <property name="mtax" value="${@document?.metaData?.adTaxonomyIds?.list ?: null}" onError="ignore" />
+        <property name="sentiment" value="${@document?.metaData?.nlp?.sentimentLabel ?: ''}" onError="ignore" />
+        <property name="concepts" value="${@document?.metaData?.nlp?.entities?.list ?: null}" onError="ignore" />
+        <property name="taxons" value="${@document?.metaData?.nlp?.categories?.list ?: null}" onError="ignore" />
+
+        <property name="templateName" value="${@document?.templateType?.name()?.toLowerCase() ?: 'other'}" onError="ignore" />
+
+        <map id="baseSlotTargeting">
+            <property name="t" value="${'' + @document?.templateType?.templateId ?: '10'}" /> <!-- force to string -->
+            <property name="aid" value="${@document?.key ?: ''}" onError="ignore" />
+            <property name="docId" value="${@document?.documentId?.toString() ?: ''}" onError="ignore" />
+            <property name="id" value="${@document?.documentId?.toString() ?: ''}" onError="ignore" />
+            <property name="viewtype" value="${@document?.viewType?.toLowerCase() ?: ''}" onError="ignore" />
+            <property name="type" value="${@document?.viewType?.toLowerCase() == 'home' ? 'homepage' : (@document?.templateType?.displayName?.toLowerCase() ?: 'other')}" onError="ignore" />
+            <property name="gtemplate" value="${@document?.templateType?.displayName?.toLowerCase() ?: 'other'}" onError="ignore" />
+            <property name="au" value="${@document?.authorKey ?: ''}" onError="ignore" />
+            <property name="leaid" value="${@document?.lastEditingAuthorId ?: ''}" onError="ignore" />
+            <property name="leuid" value="${@document?.lastEditingUserId ?: ''}" onError="ignore" />
+            <property name="sbj" value="${@document?.stamp?.adValue ?: ''}" onError="ignore" />
+            <property name="vid" value="${@hasVideo OR @isVideoPage ? '1' : '0'}" onError="ignore"> <!-- '0' for no video, '1' for video -->
+                <property name="hasVideo" value="${@document?.primaryVideo?.document != null OR (@document instanceof T( com.about.mantle.model.extended.docv2.sc.StructuredContentBaseDocumentEx) AND @document?.getContentsListOfType('INLINEVIDEO').size() > 0)}" />
+                <property name="isVideoPage" value="${'BROADVIDEO'.equals(@document?.viewType?.toString()) OR 'JWPLAYERVIDEO'.equals(@document?.templateType?.toString())}" />
+            </property>
+            <property name="tier" value="${configs['tier']}" onError="ignore" />
+            <property name="ptax" value="${configs['ptax']}" onError="ignore" />
+            <property name="jny" value="${@journeyRelationshipType.toString() == 'MEMBER' ? '1' : '0'}" onError="ignore">
+                <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore">
+                    <property name="docId" value="${@document?.documentId ?: null}" onError="ignore" />
+                </model>
+            </property>
+            <property name="jnyroot" value="${@journeyRelationshipType.toString() == 'MEMBER' ? @journeyRoot?.document?.documentId?.toString() : ''}" onError="ignore">
+                <model name="journeyRelationshipType" id="journeyRelationshipType" onError="ignore">
+                    <property name="docId" value="${@document?.documentId ?: null}" onError="ignore" />
+                </model>
+                <model name="journeyStructure" id="journeyRoot" onError="ignore">
+                    <property name="docId" value="${@document?.documentId ?: null}" onError="ignore" />
+                </model>
+            </property>
+            <property name="revenueGroup" value="${@document?.revenueGroup ?: ''}" onError="ignore" />
+        </map>
+
+        <map id="pageTargeting">
+            <property name="customSeries" value="${str.join(@document?.stamp?.tags?.list ?: {})}" onError="ignore" />
+            <property name="custom" value="${@document?.sponsor != null ? 1 : ''}" onError="ignore" />
+        </map>
+
+        <map id="refreshAdhesive" />
+
+        <property name="dfpId" value="${@prodDfp || (@externalConfigName == null || @externalConfigName.value == null) ? @prodDfpValue : @externalConfigName.value}">
+            <!-- 479 is default production dfp network for L-DD -->
+            <property name="prodDfpValue" value="479" />
+            <property name="prodDfpValue" value="3865" tests="useOxygen" buckets="useOxygen" />
+            <property name="prodDfp" value="false" type="boolean" queryOverride="prodDfp" />
+            <property name="prodDfp" value="true" type="boolean" tests="useOxygen" buckets="useOxygen" />
+            <model id="externalConfigName" name="externalConfig" onError="ignore">
+                <property name="key" value="com.about.globe.dfpId" />
+            </model>
+        </property>
+
+        <property name="displayOnConsent" value="true" type="boolean" />
+        <property name="publisherProvidedId" value="${requestContext.muid ?: ''}" onError="ignore" />
+        <!-- As of GLBE-7543 this feature should only be on for mobile only. -->
+        <property name="displayOnScroll" value="false" views="pc, tablet" />
+        <property name="displayOnScroll" value="true" views="mobile" queryOverride="gptInitOnScroll" />
+        <property name="useLmdFormat" type="boolean" value="false" />
+        <property name="useLmdFormat" type="boolean" value="true" tests="useOxygen" buckets="useOxygen" />
+        <property name="useOxygen" type="boolean" value="false" />
+        <property name="useOxygen" type="boolean" value="true" tests="useOxygen" buckets="useOxygen" />
+        <property name="bundlePrebid" type="boolean" value="false" />
+        <property name="bundlePrebid" type="boolean" value="true" tests="bundlePrebid" buckets="active" />
+        <property name="lmdSiteCode" value="hlt" />
+    </component>
+
+    <component id="mntl-gpt-adunit" resourcePath="/components/ads/view/gpt-adunit.ftl">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>GPT Standard Ad Unit</displayName>
+            <description>
+                Base template for GPT ad slot components
+            </description>
+            <documentation>
+                ### Dependencies
+
+                - __gptAd__
+
+                - __id__ **String**
+
+                ID of ad slot
+
+                - __sizes__ **String** (deprecated)
+
+                (deprecated) String that represents a 2D array of available sizes for the ad slot (e.g. **'[[250, 300], [250, 600]]'**)
+
+                -__sizesList__ **List of generics**
+
+                List of sizes represented by 2d array of avaliable sizes for the ad slot. Generic used because 'fluid' is a valid size. (e.g. **'[[250, 300], [250, 600], 'fluid']'**).
+
+                - __type__ **String**
+
+                Type of ad slot (e.g. **'billboard'**)
+
+                - __pos__ **String**
+
+                Position targeting value for ad slot (e.g. **'atf'** for 'above the fold' or **'btw'** for 'below the fold')
+
+                - __isDynamic__ **Boolean**
+
+                Whether this ad is requested manually after page load (dynamic)
+
+                -__timedRefresh__ **Integer**
+
+                After how many milliseconds do we want to refresh this ad unit
+
+                -__timeoutRefreshOnceOnly__ **Boolean**
+
+                Decide if we want to refresh only once
+
+                -__refreshAfterSlotRenderedElement__ **String**
+
+                Refresh ad unit after another ad unit has been rendered
+
+                - __priority__ **String**
+
+                Value (by convention from 1 - 100) representing the priority of the slot against other slots. Slots with a __lower__ priority will be requested __first__.
+
+                - __rtb__ **Boolean**
+
+                Whether to request real-time bids for this slot
+
+                - __waitForThirdParty__ **Boolean**
+
+                Whether to wait for header bidding to finish and 3rd party tracking to be available before being requested.
+
+                - __targeting__ **Map**
+
+                Optional arbitrary slot targeting values
+
+                - __gptAdSet__ [Mantle worktask]
+
+                Pass this model with every mntl-gpt-unit reference in order to keep track of all configured ad slot components. This model will be used in **mntl-gpt-definition** to loop through all the slots.
+            </documentation>
+            <previewType>markup</previewType>
+            <for id="gptAd">
+                <property name="id" value="leaderboard" />
+                <property name="type" value="leaderboard" />
+                <property name="sizes" value="[[780, 90]]" />
+                <property name="priority" value="1" />
+            </for>
+        </info>
+        <property name="useOxygen" value="false" type="boolean" />
+        <property name="useOxygen" value="true" type="boolean" tests="useOxygen" buckets="useOxygen" />
+
+        <model name="gptAd" id="gptAd">
+            <property name="pos" value="atf" />
+            <property name="isDynamic" value="${requestContext.isDeferred()}" />
+            <property name="timedRefresh" value="0" type="integer" />
+            <property name="timeoutRefreshOnceOnly" value="false" type="boolean" />
+            <property name="refreshAfterSlotRenderedElement" value="" />
+            <property name="rtb" value="true" type="boolean" />
+            <property name="waitForThirdParty" value="false" type="boolean" />
+            <map id="targeting" />
+            <model name="gptAdSet" />
+        </model>
+    </component>
+
+    <component id="mntl-gpt-dynamic-adunit" ref="mntl-gpt-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>GPT Dynamic Ad Unit</displayName>
+            <description>
+                Base for __dynamic__ GPT ad slot components
+            </description>
+            <documentation>
+                This component references **mntl-gpt-adunit** and simply sets **gptAd.isDynamic** to **true**
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            <for id="gptAd">
+                <property name="id" value="leaderboard" />
+                <property name="type" value="leaderboard" />
+                <property name="sizes" value="[[780, 90]]" />
+                <property name="priority" value="1" />
+            </for>
+        </info>
+        <for id="gptAd">
+            <property name="isDynamic" value="true" type="boolean" mode="replace" />
+        </for>
+    </component>
+
+    <component id="mntl-lazy-ad" ref="mntl-gpt-dynamic-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>GPT Lazy Ad Unit</displayName>
+            <description>
+                Base for lazy GPT ad slots
+            </description>
+            <documentation>
+                This component will add a class to an ad slot, and include the JS library required for lazy loading ads.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            <for id="gptAd">
+                <property name="id" value="leaderboard" />
+                <property name="type" value="leaderboard" />
+                <property name="sizes" value="[[780, 90]]" />
+                <property name="priority" value="1" />
+            </for>
+        </info>
+
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+        <script group="bottom" path="/static/mantle/components/ads/js/lazy-ad.js" tests="vanillaJSLazyAd" buckets="inactive, control" />
+        <script group="bottom" path="/static/mantle/components/ads/js/vanilla-lazy-ad.js" tests="vanillaJSLazyAd" buckets="active" />
+
+        <list id="class">
+            <property name="js-lazy-ad" value="js-lazy-ad" />
+        </list>
+    </component>
+
+    <component id="mntl-lazy-flexible-ad" ref="mntl-flexible-ad">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>GPT Lazy Flexible Ad Unit</displayName>
+            <description>
+                Base for lazy GPT Flexible ad slots
+            </description>
+            <documentation>
+                This component will add a class to an ad slot, and include the JS library required for lazy loading ads.
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+            <for id="gptAd">
+                <property name="id" value="leaderboard" />
+                <property name="type" value="leaderboard" />
+                <property name="sizes" value="[[780, 90]]" />
+                <property name="priority" value="1" />
+            </for>
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/ads/js/lazy-ad.js" tests="vanillaJSLazyAd" buckets="inactive, control" />
+        <script group="bottom" path="/static/mantle/components/ads/js/vanilla-lazy-ad.js" tests="vanillaJSLazyAd" buckets="active" />
+        <property name="class" value="js-lazy-ad" />
+
+        <for id="gptAd">
+            <property name="isDynamic" value="true" type="boolean" mode="replace" />
+        </for>
+    </component>
+
+    <component id="mntl-google-cpc-refresh" resourcePath="/components/ads/view/google-cpc-refresh.ftl">
+        <info>
+            <category>Mantle Components/Ads/Adsense</category>
+            <displayName>AFC Refresh</displayName>
+            <description>
+                Used for CPC (cost per click) ads reloading on deferred articles
+            </description>
+            <documentation>
+                ### Dependencies
+                - __domain__ (**String**): Vertical server name
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+        <property name="domain" value="${requestContext.serverName}" />
+    </component>
+
+    <component id="mntl-adsense-script" resourcePath="/components/ads/view/adsense-script.ftl" views="pc, tablet">
+        <info>
+            <category>Mantle Components/Ads/Adsense</category>
+            <displayName>Adsense Script</displayName>
+            <description>Required component for Adsense ads</description>
+            <documentation>
+                This component will add an inline script tag to your page the requests the base Adsense library.
+            </documentation>
+            <previewType>markup</previewType>
+        </info>
+    </component>
+
+    <!-- Google CPC AFC Ads -->
+    <component id="mntl-afc-adunit" resourcePath="/components/ads/view/afc-adunit.ftl">
+        <info>
+            <category>Mantle Components/Ads/Adsense</category>
+            <displayName>AFC Ad Unit</displayName>
+            <description>
+                Base template for AFC (ads for content) components
+            </description>
+            <documentation>
+                ### Dependencies
+
+                - __numLinks__ **String**
+
+                Number of links to display in the ad unit
+
+                - __displayLabel__ **String**
+
+                Label for ad unit
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+
+            <property name="displayLabel" value="Ads" />
+            <property name="numLinks" value="3" />
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/ads/js/afc-adunit.js" />
+    </component>
+
+    <component id="mntl-afc-setup" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Adsense</category>
+            <displayName>AFC Setup</displayName>
+            <description>
+                Required component for AFC (ads for content) component
+            </description>
+            <documentation>
+                Adds an inline script tag with configuration necessary to display AFC
+
+                ### Dependencies
+
+                - __adTitleUrl__ **String**
+
+                Hyperlink for title on ad unit
+
+                - __channel__ **String**
+
+                ID used for channel
+
+                - __url__ **String**
+
+                URL of page
+
+                - __clientId__ **String**
+
+                ID used for vertical
+
+                - __googleSafeLevel__ **String|'medium'**
+
+                Safety level of ads
+            </documentation>
+            <previewType>none</previewType>
+        </info>
+        <stylesheet path="/static/mantle/components/ads/css/afc.css" />
+        <script group="bottom" evaluated="true" path="/static/mantle/components/ads/js/afc-setup.evaluated.js" />
+    </component>
+
+    <component id="mntl-flexible-ad" ref="mntl-gpt-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Ad</displayName>
+            <description>
+                Flexible size ad unit
+            </description>
+            <documentation>
+                This component references **mntl-gpt-adunit** and includes basic scripts and styles to support flexible ad sizes.
+            </documentation>
+            <tags>In Progress</tags>
+            <for id="gptAd">
+                <property name="id" value="leaderboard" />
+                <property name="type" value="leaderboard" />
+                <property name="sizes" value="[[780, 90]]" />
+                <property name="priority" value="1" />
+            </for>
+        </info>
+        <script group="top" path="/static/mantle/js/fn-utilities.js" />
+        <script group="top" path="/static/mantle/js/dom-utilities.js" />
+        <!-- flexible-ad.js can't go to group=top because it depends on document.body -->
+        <script group="bottom" path="/static/mantle/components/ads/js/flexible-ad.js" />
+        <stylesheet path="/static/mantle/components/ads/css/flexible-ads.css" />
+    </component>
+
+    <component id="mntl-adhesive-ad" ref="mntl-gpt-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Adhesive</displayName>
+            <documentation>
+                It is expected that the adhesive ad component will never be deferred. Mntl.GPT sets up the refresh settings using
+                Mntl.utilities.ready and not readyAndDeferred.
+            </documentation>
+            <stylesheet path="/static/mantle/components/ads/css/adhesive.css" />
+        </info>
+        <stylesheet path="/static/mantle/components/ads/css/adhesive.css" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/vendor/throttle.js" />
+        <script group="top" path="/static/mantle/js/refreshableAds.js" />
+        <script group="bottom" path="/static/mantle/js/mntl-vanilla-scroll.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+        <script group="bottom" path="/static/mantle/components/ads/js/adhesive.js" />
+        <for id="gptAd">
+            <property name="type" value="adhesive" />
+            <property name="id" value="adhesive" />
+            <property name="sizes" value="[[320, 50]]" />
+            <property name="pos" value="atf" />
+            <property name="priority" value="1" />
+        </for>
+        <component location="preAd" id="ad-label" ref="mntl-text-block">
+            <property name="tag" value="span" />
+            <property name="text" value="Ad" />
+        </component>
+    </component>
+
+    <component id="mntl-mob-adhesive-banner-fixed-ad" ref="mntl-adhesive-ad">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Adhesive Banner Fixed</displayName>
+            <description>
+                Adhesive ad unit with updated slot id and sizes for Carbon sites.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+            </documentation>
+        </info>
+        <for id="gptAd">
+            <property name="id" value="mob-adhesive-banner-fixed" />
+            <property name="sizes" value="[[320, 50], [319, 51]]" />
+        </for>
+    </component>
+
+    <component id="mntl-ad-table-column" ref="mntl-gpt-dynamic-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Ad Table Column</displayName>
+            <description>
+                Used in **mntl-ad-tables**. Displays an ad unit.
+            </description>
+            <documentation>
+                This component references **mntl-gpt-dynamic-adunit** and is configured to retrieve the appropriate size and type of ad for ad-tables.
+
+                Is usually overloaded to point to an ad-table unit. These are named and numbered ie. brokertable1, mortgagetable2, etc.
+            </documentation>
+            <tags>In Progress</tags>
+
+            <for id="gptAd">
+                <property name="pos" value="brokertable1" />
+                <property name="id" value="brokertable1" />
+            </for>
+        </info>
+
+        <for id="gptAd">
+            <property name="type" value="adtable" />
+            <property name="sizes" value="['fluid']" />
+            <property name="priority" value="9" />
+            <property name="rtb" value="false" type="boolean" />
+        </for>
+    </component>
+
+</components>

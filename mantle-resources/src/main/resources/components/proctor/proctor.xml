@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-proctor-injection-css" resourcePath="/components/proctor/proctor-injection-css.ftl">
+		<info>
+            <category>Mantle Components/Proctor</category>
+			<displayName>Proctor CSS Injection</displayName>
+			<description>Component to inject CSS from Proctor test payloads</description>
+			<documentation>
+                In Proctor, ensure your test name begins with "cssJsInjection".
+
+                Set each bucket's payload type to String Array. Index 0 is the CSS payload. Index 1 is the JS payload.
+
+                Example:
+
+                ### Inactive bucket
+                ```
+                ["", ""]
+                ```
+
+                ### Control bucket
+                ```
+                ["", ""]
+                ```
+
+                ### Active bucket
+                ```
+                [".foo{color:red}", "$('.title').text('Injected')"]
+                ```
+			</documentation>
+		</info>
+	</component>
+    
+    <component id="mntl-proctor-injection-js" resourcePath="/components/proctor/proctor-injection-js.ftl">
+        <info>
+            <category>Mantle Components/Proctor</category>
+            <displayName>Proctor JS Injection</displayName>
+            <description>Component to inject JS from Proctor test payloads</description>
+            <documentation>
+                In Proctor, ensure your test name begins with "cssJsInjection".
+
+                Set each bucket's payload type to String Array. Index 0 is the CSS payload. Index 1 is the JS payload.
+
+                Example:
+
+                ### Inactive bucket
+                ```
+                ["", ""]
+                ```
+
+                ### Control bucket
+                ```
+                ["", ""]
+                ```
+
+                ### Active bucket
+                ```
+                [".foo{color:red}", "$('.title').text('Injected')"]
+                ```
+            </documentation>
+        </info>
+    </component>
+
+</components>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-amazon-affiliate-widget" resourcePath="/components/amazon-affiliate-widget/amazon-affiliate-widget.ftl">
+        <info>
+            <category>Mantle Components/Affiliate</category>
+            <displayName>Amazon Affiliate Widget</displayName>
+            <description>Displays Amazon link button for Amazon products</description>
+            <documentation>
+                The script will find any list items containing links to amazon products and retrieve the product picture, 
+                price, and Amazon Prime eligibility.
+
+
+                ### **imageSize** property
+                Valid values for imageSize are **small**, **medium**, or **large**.
+
+                Overwriting this property using "tests"/"buckets" attributes in a component that refs mntl-amazon-affiliate-widget 
+                won't work. Instead, you'll have to pass in the overwriting value in the **&lt;@location&gt;** macro, e.g:
+
+                ```
+                &lt;@location
+                    name="amazon-affiliate"
+                    tags=""
+                    models={
+                        "imageSize": model.testImageSize &lt;#-- Passed in from xml where your component is being included --&gt;
+                    }
+                /&gt;
+                ```
+
+                This only applies to proctor test values. Overwriting it with a value not from a test will work like normal (ref'ing 
+                this component and adding your own **imageSize** property with **mode=replace**).
+            </documentation>
+            <property name="amazonLinkDependency" value="true" mode="replace" />
+        </info>
+
+		<script path="/static/mantle/components/amazon-affiliate-widget/amazon-affiliate-widget.js"></script>
+		<stylesheet path="/static/mantle/components/amazon-affiliate-widget/mntl-amazon-affiliate-widget.css"></stylesheet>
+
+		<!--Include Amazon tagging when commerce info or affiliate-->
+		<property name="display" value="${((@document != null AND (@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')) OR
+                (@document?.disclaimer?.affiliate ?: false)) ? true : null}" onError="collapseSilent" />
+		
+		<property name="label" value="Buy from Amazon" />
+        <property name="amazonLinkDependency" value="${renderUtils.itemLinkContains(@linkItems, 'amazon.com') ? 'true' : null}" onError="collapseSilent">
+            <property name="linkItems" value="${@document?.templateType?.name() == 'LIST' ? @document?.items?.list : null}" onError="collapseSilent" />
+        </property>
+        
+        <for id="display, linkItems">
+        	<model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+        <property name="primeImagePath" value="/image/${projectInfo.version}/static/mantle/images/amazon-prime.png" />
+
+        <!-- 
+            - Valid values for imageSize are "small", "medium", or "large".
+            - Overwriting this property using "tests"/"buckets" attributes in a component that refs mntl-amazon-affiliate-widget won't work.
+              Instead, you'll have to pass in the overwriting value in the <@location> macro, e.g:
+                <@location
+                    name="amazon-affiliate"
+                    tags=""
+                    models={
+                        "imageSize": model.testImageSize // Passed in from list.xml, or wherever your component is being included
+                    }
+                />
+            - This only applies to proctor test values. Overwriting it with a value not from a test will work like normal
+              (ref'ing this component and adding your own "imageSize" property with mode=replace).
+        -->
+        <property name="imageSize" value="medium" />
+	</component>
+
+</components>

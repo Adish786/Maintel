@@ -1,0 +1,41 @@
+{
+  "id": "c8159611-501d-4123-8da1-d5253f0c4e3a",
+  "shortName": "Kindle Fire",
+  "technicalName": "Technically a Kindle Fire",
+  "vendorBrand": "Amazon",
+  "rating": "4.8",
+  "audit": {
+    "createdDate": 1583788841086,
+    "createdUserFullName": "System",
+    "lastUpdatedDate": 1583858991201,
+    "lastUpdatedUserFullName": "System"
+  },
+  "categoryId": "8611e0e3-a560-4c50-b231-ea51b4be4fcc",
+  "retailers": [
+    {
+      "id": "d124eaef-d3ed-4784-a73a-00be4ee7c491",
+      "url": "https://www.amazon.com/Apple-iPhone-Fully-Unlocked-64GB/dp/B077578W38/ref=sr_1_3?keywords=iphone+X&qid=1580477550&sr=8-3",
+      "type": "AMAZON"
+    },
+    {
+      "id": "5ebcd0b0-5aad-456c-a109-f4d07867342d",
+      "url": "https://www.bestbuy.com/site/iphone/iphone-x-shop-by-carrier/pcmcat1504817590528.c?id=pcmcat1504817590528",
+      "type": "SKIMLINKS"
+    }
+  ],
+  "images": [
+    {
+      "tags": [
+        "PRIMARY"
+      ],
+      "image": {
+        "objectId": "j0gld2s2skq31-38f88c3c667d43d794859ccef1af86dd.jpg",
+        "caption": "",
+        "owner": "<p><br></p>",
+        "alt": "Java Bros",
+        "height": 1369,
+        "width": 700
+      }
+    }
+  ]
+}

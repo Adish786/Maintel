@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+        <component id="mntl-accordion" resourcePath="/components/widgets/accordion/accordion.ftl">
+            <info>
+                <category>Mantle Components/Widgets</category>
+                <displayName>Accordion</displayName>
+
+                <description>Displays collapsible content panels for presenting information in a limited amount of space.</description>
+
+                <documentation>
+                    ### **accordion-header** location
+
+                    This location is always visible and used as a toggle to show/hide it's content. 
+
+                    ### **accordion-content** location
+
+                    This location is collapsed unless it's corresponding **accordion-header** is clicked. the **accordion-header** toggles the state of this location from being collapsed/shown.
+
+                    ### **icon** Property
+
+                    Inserts an icon before the **accordion-header** content. this fields only requires the name of the icon.
+
+                    ### **itemContenMap** Property **string**
+
+                    To support dynamic content, this configuration will map which property of the list data will be passed to the body.
+
+                    ### **itemContentDataWrapper** Property **string**
+
+                    If the body requires a specific property name, this configuration can be used to wrap the data object. 
+
+                    ### **isListofDocumentList** Property **boolean**
+
+                    If the list is a list of Document List (i.e journey structure) this can be flagged true to enable a default **is-active** state when the **activeItemId** is the documentID of one of the Document on the list.
+
+                    ### **itemPropId** Property **integer**
+
+                    Specify which field is the unique identifier for the list items.
+
+                    ### **activeItemId** Property **integer**
+
+                    Specify the ID of the item that should have an **is-active** state by default. (all item are collapsed by default)
+
+                    ### **headingTag** Property **String**
+
+                    Allows you to adjust the heading tag to be any tag you want. Default is a span tag.
+
+            </documentation>
+
+                <model id="list" name="json" >
+                    <property name="string" value="[
+                        {
+                            'heading' : 'Meal Types',
+                            'text' : 'How to Make Microwave Fudge',
+                            'id' : 1,
+                            'url': 'http://www.example.com',
+                            'image': 'microwave-fudge-56a0ecf45f9b58eba4b542c3.jpg'
+                        },{
+                            'heading' : 'Cuisine',
+                            'text' : 'Popular Drinks Every Bartender Should Know',
+                            'id' : 2,
+                            'url': 'http://www.example.com',
+                            'image': 'PopularDrinks-186894675-56a1733c5f9b58b7d0bf6330.jpg'
+                        },{
+                            'heading' : 'Ingredient',
+                            'text' : 'How To Cook Bacon in the Oven',
+                            'id' : 3,
+                            'url': 'http://www.example.com',
+                            'image': 'bacon-01-2500-56a20faf5f9b58b7d0c62669.jpg'
+                        }]" />
+                    <property name="class" value="java.util.List" />
+                </model>
+
+                <component location="accordion-content" ref="mntl-text-block" />
+
+                <property name="itemPropId" value="id" />
+                <property name="activeItemId" value="1" type="integer" />
+            </info>
+
+            <stylesheet path="/static/mantle/components/widgets/accordion/accordion.css" />
+
+            <component id="mntl-accordion-scripts" ref="mntl-group">
+                <script group="top" path="/static/mantle/js/utilities.js" />
+                <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+                <script group="bottom" path="/static/mantle/js/animation-utilities.js" />
+                <script group="bottom" path="/static/mantle/components/widgets/accordion/accordion.js" />
+            </component>
+
+            <property name="headingTag" value="span" />
+            <property name="icon" value="icon-arrow-down" />
+            <property name="isExpanded" value="false" type="boolean" />
+            
+        </component>
+
+        <component id="mntl-accordion--document-list" ref="mntl-accordion">
+            <info>
+                <category>Mantle Components/Widgets</category>
+                <displayName>Accordion - Document List</displayName>
+                <documentation>Displays collapsible content panels for presenting information in a limited amount of space.</documentation>
+
+                <property name="isListofDocumentList" value="true" type="boolean" />
+                <property name="activeItemId" value="1" type="integer" />
+                <property name="itemContentDataWrapper" value="list" />
+                <property name="itemHeadingMap" value="shortHeading" />
+                <property name="itemContentMap" value="journeyDocuments" />
+
+                <property name="list" value="${@journey?.sections}" >
+                    <model name="mockJourney" id="journey" mode="replace">
+                        <property name="template" value="journey-example" />
+                    </model>
+                </property>
+
+                <component location="accordion-content" ref="mntl-masonry-card-list">
+                    <list name="list" mode="remove" />
+                </component>
+                
+            </info>
+
+            <property name="isListofDocumentList" value="true" type="boolean" />
+            <property name="itemContentDataWrapper" value="list" />
+            <property name="itemHeadingMap" value="shortHeading" />
+
+        </component>
+
+</components>

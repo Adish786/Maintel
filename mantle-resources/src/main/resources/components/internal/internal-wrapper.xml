@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-internal-wrapper" ref="mntl-block">
+		<info>
+			<displayName>Internal Wrapper</displayName>
+			<category>Mantle Components/Internal</category>
+			<description>Wrapper component to clearly distinguish components for internal use. Will only display if user IP is safe listed. </description>
+			<documentation>Reference your internal component at location `content`.</documentation>
+			<for id="this, text">
+				<property name="display" value="${renderUtils.isInternalIp(requestContext.headers.remoteIp)}" onError="ignore" />
+			</for>
+			<component location="content" ref="mntl-text-block">
+				<property name="text" value="${@display == true ? 'Your IP is safe. I will display.' : 'Your IP is not safe listed. I would normally be hidden outside of pattern library'}" />
+			</component>
+		</info>
+		<stylesheet path="/static/mantle/components/internal/css/internal-wrapper.css" />
+		<property name="display" value="${renderUtils.isInternalIp(requestContext.headers.remoteIp) == true ? true : null}" onError="collapseSilent" />
+	</component>
+
+</components>

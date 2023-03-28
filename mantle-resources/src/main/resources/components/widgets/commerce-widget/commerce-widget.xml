@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-commerce-widget" resourcePath="/components/widgets/commerce-widget/view/commerce-widget.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Commerce Container</displayName>
+            <description>The commerce widget should hold all the elements of a commerce list item. This will include the items image and list of commerce button links, in addition to any other optional elements related to the item (heading, description). The entire container will link to the url of its first commerce button child.</description>
+            <documentation>
+                # **image** location
+
+                Where item image should be inserted
+
+                # **mntl-commerce-btn-list** location
+
+                Where commerce buttons should be inserted
+            </documentation>
+
+            <for id="mntl-commerce-btn-list__btn">
+                <map id="retailers">
+                    <map id="amazon">
+                        <property name="id" value="https://www.amazon.com/Mpow-One-piece-Self-portrait-Extendable-Bluetooth/dp/B00UV3MCK2/?tag=aboutcom02lifewire2-20" />
+                        <property name="type" value="amazon" />
+                    </map>
+                    <map id="walmart">
+                        <property name="id" value="https://www.walmart.com/ip/Mpow-Selfie-Stick-Bluetooth-iSnap-X-Extendable-Monopod-Built-in-Bluetooth-Remote-Shutter-iPhone-8-7-7P-6s-6P-5S-Galaxy-S5-S6-S7-S8-Google-LG-V20-Huaw/132174111" />
+                        <property name="type" value="skimlinks" />
+                    </map>
+                </map>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/commerce-widget/css/commerce-widget.css"></stylesheet>
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="top" path="/static/mantle/js/fn-utilities.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js"></script>
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js"></script>
+        <script group="bottom" path="/static/mantle/components/widgets/commerce-widget/js/commerce-widget.js"></script>
+        <script group="bottom" path="/static/mantle/components/widgets/commerce-widget/js/extended-commerce-info.js"></script>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <map id="attrs">
+            <property name="data-click-tracked" value="true" />
+            <property name="data-use-child-url" value=".mntl-commerce-btn-list__btn" />
+        </map>
+        <component-list id="mntl-commerce-btn-list__btn" location="mntl-commerce-btn-list" ref="mntl-commerce-btn" iterable="${@retailers ?: {}}">
+            <for id="text, uri, rel">
+                <component-list-item id="retailer" ref="mntl-commerce-btn-list__btn" />
+            </for>
+            <property name="text" value="Buy on ${str.getCapitalization(renderUtils.getRetailerName(@retailer.value.id))}" onError="collapseSilent" />
+            <property name="uri" value="${@retailer.value.id}" />
+            <property name="rel" value="${@retailersEnabledForSkimlinks.contains(@retailer.value.type) ? '' : 'noskim'}">
+                <list name="retailersEnabledForSkimlinks">
+                    <property name="walmart" value="walmart" /> <!-- to be removed as part of GLBE-5534 -->
+                    <property name="skimlinks" value="skimlinks" />
+                </list>
+            </property>
+        </component-list>
+    </component>
+
+    <component id="mntl-commerce-btn" ref="mntl-text-link">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Commerce Button</displayName>
+            <description>The commerce button is for a commerce list item and links out to buy that item on one of our partner retailer websites.</description>
+            <documentation>
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/commerce-widget/css/commerce-btn.css" />
+
+        <property name="external" value="true" type="boolean" />
+        <property name="trackingContainer" value="false" type="boolean" />
+    </component>
+
+</components>

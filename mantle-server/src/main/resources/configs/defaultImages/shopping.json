@@ -1,0 +1,13 @@
+{
+	"id": "image.default.shopping",
+	"name": "image.default.shopping",
+	"displayName": "Shopping Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/shopping/0/456593249.jpg",
+			"owner" : "Dougal Waters/Digital Vision/Getty Images",
+			"width" : "2125",
+			"height" : "1414"
+		}
+	]
+}

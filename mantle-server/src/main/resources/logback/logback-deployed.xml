@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+    <jmxConfigurator/>
+
+    <appender name="CONSOLE_LOGSTASH" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <includeCallerData>true</includeCallerData>
+            <includeMdcKeyName>documentId</includeMdcKeyName>
+            <includeMdcKeyName>url</includeMdcKeyName>
+            <includeMdcKeyName>requestId</includeMdcKeyName>
+            <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                <rootCauseFirst>true</rootCauseFirst>
+                <inlineHash>true</inlineHash>
+                <exclusions>${STE_EXCLUSIONS}</exclusions>
+            </throwableConverter>
+            <!--<customFields>-->
+            <!--</customFields>-->
+        </encoder>
+    </appender>
+    <appender name="ASYNC_CONSOLE_LOGSTASH" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <appender-ref ref="CONSOLE_LOGSTASH"/>
+    </appender>
+
+    <root level="ERROR">
+        <appender-ref ref="ASYNC_CONSOLE_LOGSTASH"/>
+    </root>
+    
+    <!-- Recording warn for mantle and globe -->
+    <logger name="com.about" level="WARN"/>
+    <logger name="com.dotdash" level="WARN"/>
+    
+    <!-- Loggers set to error from Mantle and Globe as the warning level is too noisy -->
+    <logger name="com.about.mantle.definition.action.NewsletterSignupService" level="ERROR"/>
+    <logger name="com.about.mantle.model.commerce" level="ERROR"/>
+    <logger name="com.about.mantle.amazon.productAdvertisingApi" level="ERROR"/>
+	
+    <logger name="freemarker.runtime" level="OFF"/>
+    
+    <!-- We want to log stats for amazon rss service at info level -->
+    <logger name="com.about.mantle.model.services.commerce.AmazonRssService" level="INFO"/>
+
+	<logger name="com.about.mantle.spring.MantleSpringConfiguration" level="WARN"/>
+
+    <!-- We want to log thumbor pool size messages at info level -->
+    <logger name="com.about.mantle.spring.MantleSpringConfiguration.ThumborPool" level="INFO"/>
+
+    <!-- We want to log messages about resources not being available in git repo -->
+    <logger name="com.about.mantle.model.services.impl.BusinessOwnedVerticalDataServiceImpl" level="WARN"/>
+
+	<logger name="com.about.mantle.model.services.cache.CachedEmbedService" level="WARN"/>
+
+    <logger name="org.eclipse.jetty.servlets.DoSFilter" level="WARN"/>
+
+	<logger name="org.eclipse.jetty.server.AcceptRateLimit" level="WARN"/>
+	
+	<!-- Logs that only appear during phising attacks we want to record at the info level -->
+	<logger name="com.about.globe.core.definition.resource.aggregate.DeflaterAggregateKeyGenerator" level="INFO"/>
+
+</included>

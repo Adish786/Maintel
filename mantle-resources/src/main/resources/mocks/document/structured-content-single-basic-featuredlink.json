@@ -1,0 +1,130 @@
+{
+  "revisionKey":"4148195_1502912517633",
+  "revisionId":"4148231_1503001525552",
+  "mongoId":"5995fbb5b38d0c001006c2a8",
+  "authorKey":"115876",
+  "lastEditingAuthorId":"156569",
+  "lastEditingUserId":"148484752568203",
+  "url":"https://www.verywell.com/slug-placeholder-4148231",
+  "rootUrl":"https://www.verywell.com/slug-placeholder-4148231",
+  "vertical":"HEALTH",
+  "docID":4148231,
+  "docId":4148231,
+  "slug":"slug-placeholder",
+  "templateType":"STRUCTUREDCONTENT",
+  "documentState":{
+    "state":"ACTIVE",
+    "activeDate":1502916444255
+  },
+  "dates":{
+    "created":1502916444255,
+    "updated":1502916444255,
+    "firstPublished":0,
+    "lastPublished":0
+  },
+  "medicalBoardApproved":false,
+  "editingAuthorKey":"",
+  "noIndex":false,
+  "socialTitle":"structured content: social title",
+  "description":"structured content: description",
+  "heading":"structured content: heading",
+  "primaryImage":{
+    "url":"http://placehold.it/350x150",
+    "caption":"",
+    "owner":"",
+    "alt":"",
+    "width":0,
+    "height":0,
+    "id":"",
+    "fileName":"",
+    "objectId":"",
+    "authorId":"",
+    "user":""
+  },
+  "paging":{
+    "current":1,
+    "total":1
+  },
+  "audit":{
+    "lastModified":1503001525552
+  },
+  "summary":{
+    "socialTitle":"structured content: social title",
+    "heading":"structured content: heading",
+    "description":"structured content: description",
+    "image":{
+      "url":"http://placehold.it/350x150",
+      "caption":"",
+      "owner":"",
+      "alt":"",
+      "width":0,
+      "height":0,
+      "id":"",
+      "fileName":"",
+      "objectId":"",
+      "authorId":"",
+      "user":""
+    }
+  },
+  "guestAuthor":{
+    "link":{
+      "text":"bob",
+      "uri":"bobsUrl"
+    }
+  },
+  "pages":{
+    "list":[
+      {
+        "contents":{
+          "list":[
+            {
+              "id":12345673,
+              "type":"FEATUREDLINK",
+              "data":{
+                "uri": "https://www.lifewire.com/best-usb-flash-drives-4141193",
+                "theme": "RELATED",
+                "document": {
+                	"templateType": "LIST",
+                	"docID": 4141193,
+					"docId": 4141193,
+					"title": "The 9 Best USB Flash Drives to Buy in 2018",
+					"socialTitle": "The 9 Best USB Flash Drives to Buy in 2018",
+					"metaDescription": "Save and transfer files, documents, movies and songs with these best USB flash drives from top-rated companies such as Samsung, SanDisk, Lexar and more.",
+					"description": "<p>With the growth of cloud computing and storage, physical memory is less essential for transporting data. But while emails and Dropbox are great for sharing a few documents at a time, flashdrives are a faster and more secure method of sharing large files. With USB 3.0 technology, the fastest USB flash drives can even compete with external HDDs (hard disc drives) for speed, with the advantage of being far more portable. Whether you are looking for speed, value, or security, our list of the best USB flash drives has a perfect suggestion for you. </p>",
+					"heading": "The 9 Best USB Flash Drives to Buy in 2018",
+					"primaryImage": {
+				      "url": "https://fthmb.tqn.com/rRVaXF1gi4V1fttp0V0Pt2Ckj6U=/Samsung16GBUSB3.0FlashDrive-5a7c8239a18d9e0036269ae1.jpg",
+				      "caption": "",
+				      "owner": "Courtesy of Amazon.com",
+				      "alt": "Samsung 16GB USB 3.0 Flash Drive",
+				      "width": 1500,
+				      "height": 1000,
+				      "objectId": "Samsung16GBUSB3.0FlashDrive-5a7c8239a18d9e0036269ae1.jpg"
+				   },
+				   "summary": {
+				      "title": "The 9 Best USB Flash Drives to Buy in 2018",
+				      "socialTitle": "The 9 Best USB Flash Drives to Buy in 2018",
+				      "heading": "The 9 Best USB Flash Drives to Buy in 2018",
+				      "description": "Save and transfer files, documents, movies and songs with these best USB flash drives from top-rated companies such as Samsung, SanDisk, Lexar and more.",
+				      "image": {
+				         "url": "https://fthmb.tqn.com/rRVaXF1gi4V1fttp0V0Pt2Ckj6U=/Samsung16GBUSB3.0FlashDrive-5a7c8239a18d9e0036269ae1.jpg",
+				         "caption": "",
+				         "owner": "Courtesy of Amazon.com",
+				         "alt": "Samsung 16GB USB 3.0 Flash Drive",
+				         "width": 1500,
+				         "height": 1000,
+				         "objectId": "Samsung16GBUSB3.0FlashDrive-5a7c8239a18d9e0036269ae1.jpg"
+				      }
+				   },
+				   "subheading": "Transfers files and documents at the drop of a hat"
+                }
+              }
+            }
+          ],
+          "totalSize":1
+        }
+      }
+    ],
+    "totalSize":1
+  }
+}

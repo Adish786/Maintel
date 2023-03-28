@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "./node_modules/@dotdash/mantle-frontend-build/.eslintrc"
+    ],
+    "globals": {
+        "ANOutstreamVideo": "readonly",
+        "__tcfapi": "readonly",
+        "stickybits": "readonly", // node_modules library
+        "A11yDialog": "readonly" // node_modules library
+    }
+}

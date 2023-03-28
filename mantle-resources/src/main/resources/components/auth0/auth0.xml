@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-auth0" resourcePath="/components/auth0/auth0.ftl">
+        <info>
+            <category>Mantle Components/Auth</category>
+            <displayName>Auth0</displayName>
+            <description>Integrate with auth0 for authentication</description>
+            <documentation />
+        </info>
+        <stylesheet path="/static/mantle/components/auth0/auth0.css" />
+        <script group="top" path="/static/mantle/components/auth0/auth0Constants.js" />
+        <script path="/static/mantle/components/auth0/auth0.js" />
+        
+        <map id="attrs">
+            <property name="data-auth0-enabled" value="${@externalConfigName.value}" onError="ignore">
+                <model name="externalConfig" id="externalConfigName">
+                    <property name="key" value="com.about.globe.auth0.enabled" />
+                    <property name="default" value="false" />
+                </model>
+            </property>
+            <property name="data-auth0-domain" value="${@externalConfigName.value}" onError="ignore">
+                <model name="externalConfig" id="externalConfigName">
+                    <property name="key" value="com.about.globe.auth0.domain" />
+                </model>
+            </property>
+            <property name="data-auth0-client-id" value="${@externalConfigName.value}" onError="ignore">
+                <model name="externalConfig" id="externalConfigName">
+                    <property name="key" value="com.about.globe.auth0.clientId" />
+                </model>
+            </property>
+            <property name="data-auth0-audience" value="${@externalConfigName.value}" onError="ignore">
+                <model name="externalConfig" id="externalConfigName">
+                    <property name="key" value="com.about.globe.auth0.audience" />
+                </model>
+            </property>
+            <property name="data-auth0-type" value="signin" />
+        </map>
+        <property name="logoutUrl" value="/auth0/logout"/>
+        <property name="cta" value="Log In"/>
+    </component>
+
+    <component id="mntl-auth0-sign-out" ref="mntl-auth0">
+        <map id="attrs">
+            <property name="data-auth0-type" value="signout" />
+        </map>
+        <property name="cta" value="Log Out"/>
+    </component>
+</components>

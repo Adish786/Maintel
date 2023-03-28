@@ -1,0 +1,24 @@
+.mntl-pl-nav {
+    grid-area: nav;
+    background-color: $pl-color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    &__arrow {
+        padding: 0 0.5rem;
+    }
+
+    a {
+        color: $pl-color-white;
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+
+        &:hover {
+            color: $pl-color-white;
+            opacity: 0.8;
+        }
+    }
+}

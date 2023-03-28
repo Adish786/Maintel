@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-digital-issue" resourcePath="/components/digital-issue/digital-issue.ftl">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Landing Page</displayName>
+            <description>A landing page for a digital issue journey</description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "text-color": set the color for all text in the module
+                - "toc-hide": override the display of the TOC component
+
+                See https://dotdash.atlassian.net/wiki/spaces/GLBE/pages/3246227465/Mantle+Digital+Issue+Implementation
+                for an overview.
+
+                Digital issues use the BOVD to set their per-issue visuals without a release. Each component with BOVD support
+                has a "SUPPORTED BOVD PROPERTIES" section explaining what can be controlled. All properties are set outside of
+                the "modules" below with the exception of the ones for di-module.xml.
+
+                The format of the BOVD data is:
+                - JSON file with the path: {app name}/digital-issues/{docid of landing page}.json
+                - JSON format below, where the entries in "modules" maps to the sections of the journey:
+                    {
+                        "landing-page-config-example": "landing-page-value-example",
+                        "landing-page-config-example": "landing-page-value-example",
+                        "modules": [
+                            {
+                                "module-config-example": "module-value-example",
+                                "module-config-example": "module-value-example"
+                            },
+                            {
+                                "module-config-example": "module-value-example",
+                                "module-config-example": "module-value-example"
+                            }
+                        ]
+                    }
+            </documentation>
+        </info>
+
+        <list id="class">
+            <property name="di-docid" value="di-${requestContext.urlData.docId}" />
+        </list>
+
+        <map id="digitalIssueCssVariables">
+            <property name="text-color" value="${@digitalIssueRootConfigs?.get('text-color')}" onError="ignore" />
+        </map>
+
+        <component location="hero" id="mntl-digital-issue__hero" ref="mntl-di-hero" />
+
+        <component location="toc" id="mntl-digital-issue__toc" ref="mntl-di-toc">
+            <property name="display" value="${@tocHide != null AND @tocHide == true ? null : false}" onError="collapseSilent">
+                <property name="tocHide" value="${@digitalIssueRootConfigs?.get('toc-hide')}" onError="ignore" />
+            </property>
+        </component>
+
+        <component location="modules" id="mntl-digital-issue__modules" ref="mntl-di-modules" />
+
+        <for id="digitalIssueCssVariables.p*, mntl-digital-issue__toc.display.tocHide">
+            <model name="digitalIssueRootConfigs" />
+        </for>
+    </component>
+
+</components>

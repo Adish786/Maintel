@@ -1,0 +1,42 @@
+@import "breakpoints";
+
+$color: #333333;
+$color-white: #ffffff;
+$primary: #03a9f4;
+$secondary: #1E88E5;
+$border: #D4D4D4;
+$code-bg: #282B2E;
+$code-color: #E0E2E4;
+$error: #FF3100;
+$color-gray: #EFEFEF;
+$color-dark-gray: #707070;
+$color-black-15: rgba(0, 0, 0, 0.15);
+$color-black-30: rgba(0, 0, 0, 0.30);
+$color-black-65: rgba(0, 0, 0, 0.65);
+$color-black-95: rgba(0, 0, 0, 0.95);
+$color-black: #000000;
+
+// Carbon
+$color-carbon-primary: #0053C0;
+$color-carbon-secondary: #4294FF;
+$color-carbon-tertiary: #E7F2FF;
+$carbon-header-size: 3.75rem;
+$carbon-header-size-md: 4rem;
+$carbon-header-size-xl: 9.25rem;
+
+// Social Colors
+$color-social-facebook: #3B5998;
+$color-social-facebook-tint: darken($color-social-facebook, 05%);
+$color-social-pinterest: #CB2027;
+$color-social-pinterest-tint: darken($color-social-pinterest, 05%);
+$color-social-flipboard: #E02828;
+$color-social-flipboard-tint: darken($color-social-flipboard, 05%);
+
+$font-family: 'RobotoDraft', sans-serif;
+$nav-toggle: 800px;
+
+// Breakpoints
+$bp-small2: '35em' !default;
+$bp-med: '45em' !default;
+$bp-med2: '54em' !default;
+$bp-large: '65em' !default;

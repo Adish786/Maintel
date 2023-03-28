@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-page-not-found" resourcePath="/components/responses/error/view/pageNotFound.ftl">
+        <info>
+            <category>Mantle Components/Errors</category>
+            <displayName>Page Not Found</displayName>
+            <description>
+Adds 404 page
+            </description>
+            <documentation></documentation>
+            <tags>Complete, Response</tags>
+            <previewType>markup</previewType>
+        </info>
+	</component>
+
+</components>

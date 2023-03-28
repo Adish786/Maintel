@@ -1,0 +1,7 @@
+.mntl-bio-tooltip {
+    display: none;
+
+    .mntl-dynamic-tooltip & {
+        display: block;
+    }
+}

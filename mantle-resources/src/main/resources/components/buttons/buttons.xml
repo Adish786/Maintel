@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-chop-button" resourcePath="/components/buttons/view/mntl-chop-button.ftl">
+		<info>
+			<category>Mantle Components/Buttons</category>
+            <displayName>Mantle Chop Button</displayName>
+			<description></description>
+			<documentation>
+Location Tag: `svg` provided to attach any mntl-svg as necessary.
+            </documentation>
+			<property name="title" value="Continue Reading" />
+			<property name="text" value="5 minute read" />
+		</info>
+		<stylesheet path="/static/mantle/components/buttons/css/mntl-chop-button.css"/>
+	</component>
+
+	<component id="mntl-button" resourcePath="/components/buttons/view/button.ftl">
+        <info>
+            <category>Mantle Components/Buttons</category>
+            <displayName>Button</displayName>
+            <documentation>
+
+            </documentation>
+            <property name="text" value="Placeholder text" />
+        </info>
+    </component>
+
+    <component id="mntl-print-button" resourcePath="/components/buttons/view/mntl-print-button.ftl">
+        <info>
+            <category>Mantle Components/Buttons</category>
+            <displayName>Print Button</displayName>
+        </info>
+        <property name="trackingContainer" value="true" type="boolean" />
+        <stylesheet path="/static/mantle/components/buttons/css/mntl-print-button.css"/>
+    </component>
+
+</components>

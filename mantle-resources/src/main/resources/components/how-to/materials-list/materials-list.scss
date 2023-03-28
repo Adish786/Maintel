@@ -1,0 +1,13 @@
+.mntl-materials-group {
+    flex: 1 1 50%;
+}
+
+.mntl-materials-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__item::first-letter {
+        text-transform: capitalize;
+    }
+}

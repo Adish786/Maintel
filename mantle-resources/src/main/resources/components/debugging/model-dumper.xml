@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-debug-model-dumper"
+               resourcePath="/components/debugging/model-dumper.ftl">
+        <!-- lacking an info element on purpose, as we don't want these to display in a vertical's PL -->
+    </component>
+
+</components>

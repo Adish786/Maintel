@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-truste-badge" ref="mntl-block">
+
+        <info>
+            <category>Mantle Components/Global Elements</category>
+            <displayName>TRUSTe Badge</displayName>
+            <documentation>
+                # Dependencies
+
+                ## trusteId
+                TRUSTe id of the vertical. This id will link the badge to the correct TRUSTe page and validate the badge.
+
+                # Example
+                ```
+                <![CDATA[
+				```
+				<for id="attrs.href, badge-image.attrs.data-src">
+                    <property name="trusteId" value="33c36249-6102-4b62-8673-787e6e3429a0" />
+                </for>
+				```
+				]]>
+                ```
+            </documentation>
+            <previewType>none</previewType>
+        </info>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="tag" value="a" />
+
+        <map id="attrs">
+            <property name="href" value="//privacy.truste.com/privacy-seal/validation?rid=${@trusteId}" onError="ignore" />
+            <property name="target" value="_blank" />
+            <property name="aria-label" value="Access TRUSTe's Enterprise Privacy Certification program" />
+        </map>
+
+        <component location="content" id="badge-image" ref="mntl-block">
+            <property name="tag" value="img" />
+
+            <list id="class">
+                <property name="lazyload" value="lazyload" />
+            </list>
+
+            <map id="attrs">
+                <property name="data-src" value="//privacy-policy.truste.com/privacy-seal/seal?rid=${@trusteId}" onError="ignore" />
+                <property name="alt" value="TRUSTe" />
+            </map>
+        </component>
+    </component>
+
+</components>

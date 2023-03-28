@@ -1,0 +1,24 @@
+plugins {
+    id "com.about.plugins.globe-java-conventions"
+}
+
+ext.orgProjectlombokVersion = "1.18.12"
+ext.sonarSkip = "true"
+ext.projectBuildSourceEncoding= "UTF-8"
+
+dependencies {
+    api platform(project(":mantle-venus"))
+    api project(":mantle-venus:mantle-venus-model")
+    api "org.hamcrest:hamcrest"
+    api "io.rest-assured:rest-assured"
+    api "com.jayway.jsonpath:json-path"
+    api "com.dotdash.services.core:services-core:${servicesCorePomVersion}"
+    api "org.hamcrest:hamcrest-library:${hamcrestJavaVersion}"
+    api "com.google.guava:guava:30.1-jre"
+    api "net.sourceforge.htmlunit:htmlunit:2.52.0"
+    api "javax.ws.rs:javax.ws.rs-api:2.0"
+    api "io.rest-assured:json-schema-validator:${ioRestAssuredVersion}"
+    compileOnly "org.projectlombok:lombok:${orgProjectlombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${orgProjectlombokVersion}"
+    runtimeOnly "org.postgresql:postgresql:${postgreSqlVersion}"
+}

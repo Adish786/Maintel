@@ -1,0 +1,35 @@
+.mntl-article-sources {
+    &__heading {
+        margin: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    svg {
+        width: 16px;
+        height: 18px;
+        margin-left: 5px;
+    }
+
+    svg.show-icon {
+        display: inline-block;
+    }
+
+    svg.hide-icon {
+        display: none;
+    }
+
+    &.is-expanded {
+        svg.show-icon {
+            display: none;
+        }
+
+        svg.hide-icon {
+            display: inline-block;
+        }
+    }
+}

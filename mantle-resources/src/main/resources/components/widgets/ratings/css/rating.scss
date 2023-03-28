@@ -1,0 +1,20 @@
+.mntl-rating {
+    display: inline-block;
+
+    a {
+        display: inline-block;
+    }
+}
+
+.mntl-recipe-star-rating {
+    display: flex;
+
+    &__star {
+        display: flex;
+    }
+
+    .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-dialog" resourcePath="/components/dialog/dialog.ftl">
+        <info>
+            <category>Mantle Components/Global Elements</category>
+            <displayName>Dialog</displayName>
+            <description>Generic accessible dialog/modal component</description>
+            <documentation>
+                Supported settings on the Dialog:
+
+                * __model.heading__ **string**
+
+                The heading text for the dialog
+
+                * __model.closeIcon__ **string**
+
+                The svg icon for the close of the dialog
+
+                * __model.headingClass__ **string**
+
+                The css class for the heading of the dialog
+
+                * You must provide content by adding to location content or you will have an empty dialog.
+                * To give your dialog an unique ID add an attribute **data-a11y-dialog**. And this ID can be used to link your dialog via attribute **data-a11y-dialog-show**.
+                * Use dialog-link component for your trigger of the modal if there exists deferred items inside the component.
+            </documentation>
+
+            <property name="heading" value="Newsletter Sign Up" />
+            <property name="headingClass" value="type--monkey-bold" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/dialog/dialog.css" />
+        <script path="/static/mantle/static/libs/js/a11y-dialog.js" />
+        <script path="/static/mantle/components/dialog/dialog.js" />
+
+        <svg id="icon-close" path="/static/mantle/svg/close.svg" />
+
+        <map id="attrs">
+            <property name="aria-hidden" value="true" />
+        </map>
+        <property name="heading" value="Dialog Heading" />
+        <property name="closeIcon" value="icon-close" />
+        <property name="enableCloseButtonTracking" value="true" type="boolean" />
+    </component>
+
+    <component id="dialog-link" ref="mntl-text-link">
+        <script path="/static/mantle/components/dialog/dialog-link.js" />
+    </component>
+
+    <component id="mntl-dialog--campaign" ref="mntl-dialog" defer="load">
+        <info>
+            <category>Mantle Components/Global Elements</category>
+            <displayName>Dialog Campaign</displayName>
+            <description>Generic accessible dialog/modal component specifically used for campaigns</description>
+        </info>
+
+        <property name="backgroundUrl" value="${@regSource.backgroundUrl}" onError="ignore" />
+        <property name="enableCloseButtonTracking" value="false" type="boolean" />
+        <property name="display" value="${@regSource.submitButtonText == '' ? null : @regSource.submitButtonText }" onError="collapseSilent" />
+
+        <map id="attrs">
+            <property name="data-a11y-dialog" value="newsletter-dialog" />
+            <property name="data-campaign-name" value="${@campaign.name}" onError="ignore" />
+            <property name="data-campaign-regsource" value="${@campaign.dialog.regSource}" onError="ignore" />
+            <property name="data-campaign-trigger-inactivity-timer" value="${@campaign.trigger.timer.containsKey('desktop') ? @campaign.trigger.timer.desktop.toString() : null}" views="pc" onError="ignore" />
+            <property name="data-campaign-trigger-inactivity-timer" value="${@campaign.trigger.timer.containsKey('tablet') ? @campaign.trigger.timer.tablet.toString() : null}" views="tablet" onError="ignore" />
+            <property name="data-campaign-trigger-inactivity-timer" value="${@campaign.trigger.timer.containsKey('mobile') ? @campaign.trigger.timer.mobile.toString() : null}" views="mobile" onError="ignore" />
+        </map>
+
+        <component location="content" id="newsletter" ref="mntl-newsletter">
+            <property name="isTitleEnabled" value="true" type="boolean" />
+            <property name="isSubtitleEnabled" value="true" type="boolean" />
+            <property name="isSubscriptionListHidden" value="${@campaign.dialog.isSubscriptionListHidden}" onError="ignore" />
+            <property name="accountRegistration" value="${@regSource}" />
+            <property name="displayDOBPicker" value="${@shouldShowDobOnNewsletterSignup}">
+                <model name="shouldShowDobOnNewsletterSignup" />
+            </property>
+        </component>
+
+        <for id="
+            this,
+            backgroundUrl,
+            display,
+            newsletter.accountRegistration,
+            newsletter.shouldShowDobOnNewsletterSignup"
+        >
+            <model name="regSourceById" id="regSource">
+                <property name="regSourceId" value="${@campaign.dialog.regSource}" onError="collapseSilent" />
+            </model>
+        </for>
+
+        <for id="
+            this,
+            regSourceId,
+            newsletter.isSubscriptionListHidden,
+            mntl-dialog--campaign.attrs.data-campaign-name,
+            mntl-dialog--campaign.attrs.data-campaign-regsource,
+            mntl-dialog--campaign.attrs.data-campaign-trigger-inactivity-timer
+        ">
+            <model name="CAMPAIGN" id="campaign" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+                <model name="ancestors" onError="ignore">
+                    <model name="breadcrumb" onError="ignore" />
+                </model>
+            </model>
+        </for>
+    </component>
+</components>

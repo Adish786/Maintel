@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-sc-block-cheetahembed" resourcePath="/components/structured-content/cheetahembed/cheetahembed.ftl">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>Cheetah Embed</displayName>
+            <description>Structured content block that will display a Cheetah embed based on the specified cheetahId.</description>
+            <documentation>
+                # Properties
+
+                ## cheetahId
+                Id of Cheetah embed
+
+                # Scripts
+
+                ## cheetahembed.js
+                This script lazily loads the necessary cheetah script and the cheetah embeds
+            </documentation>
+
+            <property name="cheetahId" value="ba072cf7-5599-49b5-afc6-5a098a1278c1" />
+        </info>
+
+        <script group="bottom" path="/static/mantle/components/structured-content/cheetahembed/cheetahembed.js" />
+
+        <property name="cheetahId" value="${@block?.value?.data?.cheetahId}" onError="collapseSilent" />
+
+    </component>
+</components>

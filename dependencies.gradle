@@ -1,0 +1,23 @@
+// Please retain alphabetical order for merge reasons
+ext.aboutAmazonPaapi5Version = "1.0.0"
+ext.aboutAmazonProductAdvertApiVersion = "3.0.1"
+ext.aboutGlobeCoreVersion = "3.13.46"
+ext.aboutVenusVersion= "4.33.0"
+ext.aboutWalmartProductapiVersion = "1.1.0"
+ext.apacheCommonsBeanutilsVersion = "1.9.1"
+ext.comGoogleGoogleMapsServicesVersion = "0.2.10"
+ext.comSquareupOkhttp = "2.7.5"
+ext.ioGsonfireVersion = "1.8.0"
+ext.ioNettyAllVersion = "4.1.77.Final"
+ext.ioNettyVersion = "4.1.76.Final"
+ext.jacksonVersion = "2.12.3"
+ext.jacocoVersion = "0.8.3"
+ext.orgAntlrVersion = "3.5.2"
+ext.orgJsoupVersion = "1.13.1"
+ext.orgThreetenVersion = "1.3.5"
+ext.jolokiaSpringVersion = "1.2.3"
+ext.springSecurityVersion = "5.7.3"
+
+//Sonar Configurations
+ext.sonarExclusions = "**/*.xml"
+ext.sonarTestExclusions = "**/src/test/**/*"

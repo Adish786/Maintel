@@ -1,0 +1,12 @@
+.mntl-layout-row {
+    > .comp {
+        float: left;
+
+        @for $i from 1 through 10 {
+            &:first-child:nth-last-child(#{$i}),
+            &:first-child:nth-last-child(#{$i}) ~ * {
+                width: (1 / $i) * 100%;
+            }
+        }
+    }
+}

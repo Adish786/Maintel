@@ -1,0 +1,119 @@
+{
+    "revisionId": "4139747_1590698177659",
+    "authorKey": "214297",
+    "lastEditingAuthorId": "156569",
+    "lastEditingUserId": "148615461500375",
+    "url": "https://www.lifewire.com/best-mini-projectors-4139747",
+    "rootUrl": "https://www.lifewire.com/best-mini-projectors-4139747",
+    "vertical": "TECH",
+    "docId": 4139747,
+    "slug": "best-mini-projectors",
+    "templateType": "LISTSC",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1590698177587
+    },
+    "dates": {
+      "created": 1494856217275,
+      "updated": 1590698177659,
+      "firstPublished": 1494968393898,
+      "lastPublished": 1590698177587,
+      "displayed": 1590698177659
+    },
+    "medicalBoardApproved": false,
+    "noIndex": false,
+    "title": "The 8 Best Mini Projectors of 2020",
+    "socialTitle": "The 8 Best Mini Projectors of 2020",
+    "metaDescription": "The best mini projector is compact and portable. We tested the top options from Anker, ZTE, and more so you can find one that best suits your needs.",
+    "heading": "The 8 Best Mini Projectors of 2020",
+    "primaryImage": {
+      "url": "https://fthmb.tqn.com/Wa03GjqXEHYdllJJypIOXuhY5rU=/2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+      "width": 1500,
+      "height": 1001,
+      "id": "",
+      "fileName": "",
+      "objectId": "2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+      "authorId": "",
+      "user": ""
+    },
+    "taggedImages": {
+      "list": [
+        {
+          "image": {
+            "url": "https://fthmb.tqn.com/Wa03GjqXEHYdllJJypIOXuhY5rU=/2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+            "width": 1500,
+            "height": 1001,
+            "id": "",
+            "fileName": "",
+            "objectId": "2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+            "authorId": "",
+            "user": ""
+          },
+          "tags": {
+            "list": [
+              "RECIRC",
+              "PINTEREST",
+              "FACEBOOK",
+              "TWITTER"
+            ],
+            "totalSize": 4
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "summary": {
+      "title": "The 8 Best Mini Projectors of 2020",
+      "socialTitle": "The 8 Best Mini Projectors of 2020",
+      "heading": "The 8 Best Mini Projectors of 2020",
+      "description": "The best mini projector is compact and portable. We tested the top options from Anker, ZTE, and more so you can find one that best suits your needs.",
+      "image": {
+        "url": "https://fthmb.tqn.com/Wa03GjqXEHYdllJJypIOXuhY5rU=/2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+        "width": 1500,
+        "height": 1001,
+        "id": "",
+        "fileName": "",
+        "objectId": "2LW4139747-5-5c1f1620c9e77c0001494ce7.jpg",
+        "authorId": "",
+        "user": ""
+      }
+    },
+    "hasSummaryList": true,
+    "audit": {
+      "clientId": "Helios",
+      "userId": "148615461500375",
+      "lastModified": 1590698177659
+    },
+    "disclaimer": {
+      "affiliate": true
+    },
+    "revenueGroup": "COMMERCE",
+    "subheading": "Watch movies and give presentations with these portable mini projectors",
+    "listOptions": {
+      "documentType": "Product",
+      "markerType": "numbers",
+      "sortOrder": "asc",
+      "supportSearch": true
+    },
+    "items": {
+      "list": [
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 1,
+                "uuid": "99b683e2-63f3-456b-bdc0-30d640c82713",
+                "type": "CODE",
+                "data": {
+                  "theme": "theme1",
+                  "code": "Hello World! xx and another really really long that that will hopefull be cut of and have fun things like that happen to it and we want to make sure this doesn't happen or see what happen when we do"
+                }
+              }
+            ],
+            "totalSize": 1
+          }
+        }
+      ],
+      "totalSize": 1
+    }
+  }

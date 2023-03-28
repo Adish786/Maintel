@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-guide-crumb" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Blocks</category>
+            <displayName>Guide Crumb</displayName>
+            <description />
+            <documentation>
+                # Properties/Components
+
+                ## postButtonText
+
+                - Optional string that comes after the button text
+
+                ## mntl-guide-crumb-header
+                - Header component in guide-crumb nav
+
+                ## items
+
+                - List of items in the guide-crumb nav
+
+                # Classes
+
+                - __.is-active__
+
+                Added when button is clicked
+
+                #guide-crumb.js
+
+                Sets an on click event listener on mntl-guide-crumb__button to open and close the dropdown
+            </documentation>
+
+            <for id="journey">
+                <property name="docId" value="1069493" mode="replace" />
+            </for>
+
+            <for id="mntl-guide-crumb__button.text">
+                <property name="postButtonText" value=" Guide" mode="replace" />
+            </for>
+
+            <for id="mntl-guide-crumb-list__item">
+                <property name="items" value="${{'Item 1', 'Item 2', 'Item 3', 'Item 4'}}" mode="replace" />
+            </for>
+
+            <for id="mntl-guide-crumb-header">
+                <component location="content" ref="mntl-text-block">
+                    <property name="text" value="Nav Heading" />
+                </component>
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/guide-crumb/guide-crumb.css" />
+        <stylesheet path="/static/mantle/components/widgets/tooltip/tooltip.css" />
+        <script path="/static/mantle/components/guide-crumb/guide-crumb.js" />
+
+        <component location="content" ref="mntl-guide-crumb__button" />
+        <component location="content" ref="mntl-guide-crumb__dropdown" />
+    </component>
+
+    <component id="mntl-guide-crumb__button" location="content" ref="mntl-button">
+        <property name="text" value="${@journey.shortHeading + @postButtonText}">
+            <model name="journeyStructure" id="journey" onError="ignore">
+                <property name="docId" value="${@requestContext.urlData.docId}" onError="ignore" />
+            </model>
+
+            <property name="postButtonText" value="" />
+        </property>
+
+        <list id="class">
+            <property name="btn" value="btn" />
+            <property name="btn-padded" value="btn-padded" />
+        </list>
+
+        <map id="attrs">
+            <property name="data-event-trigger" value="click" />
+        </map>
+
+        <property name="trackingContainer" value="true" type="boolean" />
+    </component>
+
+    <component id="mntl-guide-crumb__dropdown" ref="mntl-block">
+        <list id="class">
+            <property name="mntl-dynamic-tooltip" value="mntl-dynamic-tooltip" />
+        </list>
+
+        <component location="content" id="mntl-guide-crumb__content" ref="mntl-block">
+            <list id="class">
+                <property name="mntl-dynamic-tooltip--content" value="mntl-dynamic-tooltip--content" />
+            </list>
+
+            <component location="content" ref="mntl-guide-crumb__nav" />
+        </component>
+    </component>
+
+    <component location="content" id="mntl-guide-crumb__nav" ref="mntl-block">
+        <component location="content" id="mntl-guide-crumb-header" ref="mntl-block" />
+        <component location="content" id="mntl-guide-crumb-list" ref="mntl-block">
+            <property name="tag" value="ul" />
+
+            <component-list id="mntl-guide-crumb-list__item" ref="mntl-block" location="content" iterable="${@items}">
+                <property name="tag" value="li" />
+                <property name="items" value="${{}}" />
+
+                <component location="content" id="mntl-guide-crumb-list__item-text" ref="mntl-text-block">
+                    <property name="text" value="${@item.value}">
+                        <component-list-item id="item" ref="mntl-guide-crumb-list__item" />
+                    </property>
+                </component>
+            </component-list>
+        </component>
+    </component>
+
+</components>

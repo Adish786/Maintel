@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-outofpage" ref="mntl-gpt-adunit">
+        <list id="class">
+            <property name="mntl-outofpage" value="mntl-outofpage" />
+        </list>
+
+        <for id="gptAd">
+            <model name="gptAdSet" />
+            <property name="id" value="oop" />
+            <property name="rtb" value="false" type="boolean" />
+            <property name="waitForThirdParty" value="true" type="boolean" />
+            <property name="priority" value="0" />
+            <list id="sizesList">
+                <property name="1x1" value="[1, 1]" type="string" />
+            </list>
+            <property name="type" value="outofpage" />
+        </for>
+    </component>
+</components>

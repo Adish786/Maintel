@@ -1,0 +1,78 @@
+@import "mntlVariables";
+
+.mntl-card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card {
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+
+        .card {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: $bp-small2) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+            flex: 0 1 48%;
+        }
+
+        @supports (display: grid) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (min-width: $bp-med2) {
+        .card {
+            flex: 0 1 32%;
+        }
+
+        @supports (display: grid) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: $bp-large) {
+        .card {
+            flex: 0 1 24%;
+        }
+
+        @supports (display: grid) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.mntl-document-card-list {
+    .card {
+        /*
+        * by default, mntl-card adds taxonomy info as data-tag to card__media above the image
+        * and also on card__content below it. however, card.scss only has styles for card__media
+        * so we are adding card__content styles here for mntl-document-card-list
+        */
+        &__content[data-tag]:before {
+            display: block;
+            content: attr(data-tag);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.mntl-card-list__bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: 100%;
+}

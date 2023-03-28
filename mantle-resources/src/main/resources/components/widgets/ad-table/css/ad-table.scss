@@ -1,0 +1,128 @@
+@import "mntlVariables";
+
+.mntl-ad-table {
+    display: none;
+    margin-bottom: 1.75rem;
+    width: 100%;
+
+    &.mntl-ad-table--active {
+        display: block;
+    }
+
+    .mntl-pl-component & {
+        display: block;
+        margin-bottom: 10rem;
+    }
+}
+
+.mntl-ad-table__content {
+    display: flex;
+    height: 352px;
+
+    .mntl-ad-table--vertical & {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.mntl-ad-table-column {
+    flex-grow: 1;
+    display: none;
+
+    &[data-ad-width] {
+        display: flex;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.mntl-ad-table__headers {
+    display: none;
+    flex-direction: column;
+    max-width: 150px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+
+    @media all and (min-width: 800px) {
+        display: flex;
+    }
+
+    .mntl-ad-table--vertical & {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    > div {
+        padding: 15px;
+    }
+}
+
+.mntl-ad-table__heading-1 {
+    height: 111px;
+    margin-bottom: -9px;
+
+    .mntl-ad-table--vertical & {
+        height: auto;
+        width: 160px;
+    }
+}
+
+.mntl-ad-table__heading-2 {
+    height: 51px;
+
+    .mntl-ad-table--vertical & {
+        height: auto;
+        flex: 1;
+    }
+}
+
+.mntl-ad-table__heading-3 {
+    height: 190px;
+
+    .mntl-ad-table--vertical & {
+        display: none;
+    }
+}
+
+.mntl-ad-table__disclosure {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+}
+
+.mntl-ad-table__disclosure-label {
+    padding: 0;
+    outline: 0;
+    margin-bottom: -5px;
+}
+
+.mntl-ad-table__disclosure-description {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: center;
+    width: 300px;
+    padding: 30px 10px 20px;
+    line-height: 1.5;
+
+    .mntl-ad-table__disclosure--active & {
+        display: block;
+    }
+}
+
+.mntl-ad-table__disclosure-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    padding-right: 7px;
+    cursor: pointer;
+}

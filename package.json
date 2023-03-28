@@ -1,0 +1,58 @@
+{
+  "name": "@dotdash/mantle",
+  "version": "1.0.0",
+  "description": "Mantle contains all the FE dependencies and build code to compile Mantle FE assets",
+  "author": "Dotdash - Globe Core",
+  "engines": {
+    "node": ">= 14.19.0",
+    "yarn": ">= 1.0.0"
+  },
+  "scripts": {
+    "build": "gulp build --webpackMode=production --sassCompiler=dartSass",
+    "cleanAll": "gulp clean",
+    "buildCSS": "gulp css --sassCompiler=dartSass",
+    "buildSVG": "gulp svg",
+    "lintCSS": "gulp stylelint",
+    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
+    "devBuildJS": "gulp copyJS && webpack --mode=development",
+    "prodBuildJS": "gulp copyJS && webpack --mode=production",
+    "watchJS": "webpack --mode=development --watch",
+    "prepare": "husky install",
+    "precommit": "echo \"Running linting on staged files\" && lint-staged",
+    "xmllint": "node ./node_modules/@dotdash/mantle-frontend-build/xmllint-configs/run-validate-xml.js"
+  },
+  "lint-staged": {
+    "mantle-resources/src/main/resources/**/!(*evaluated|*spec).js": [
+      "yarn run eslint"
+    ],
+    "mantle-resources/src/main/resources/**/*.vue": [
+      "yarn run eslint -c .eslintrc-vue"
+    ],
+    "mantle-resources/src/main/resources/**/*.scss": [
+      "yarn run stylelint"
+    ]
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "1.22.0",
+    "@dotdash/mantle-frontend-build": "1.0.38",
+    "@dotdash/mantle-vue-components": "1.1.2",
+    "@dotdash/prebidjs": "1.2.19",
+    "@highlightjs/cdn-assets": "11.3.1",
+    "a11y-dialog": "7.4.0",
+    "autocompleter": "6.1.0",
+    "gulp-eslint": "^6.0.0",
+    "jquery": "3.6.0",
+    "jquery-lazyload": "Dotdashcom/jquery_lazyload.git#master",
+    "lazysizes": "5.3.1",
+    "markdown-it": "13.0.1",
+    "picturefill": "3.0.3",
+    "querystring": "Dotdashcom/querystring.git",
+    "sticky-kit": "1.1.3",
+    "stickybits": "3.7.9",
+    "vue": "2.6.12",
+    "vuex": "3.6.2"
+  },
+  "devDependencies": {
+    "@dotdash/mantle-dev-deps": "1.0.4"
+  }
+}

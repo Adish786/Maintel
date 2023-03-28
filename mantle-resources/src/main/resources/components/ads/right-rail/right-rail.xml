@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-right-rail" ref="mntl-block">
+        <stylesheet path="/static/mantle/components/ads/css/right-rail.css" />
+        <script group="top" path="/static/mantle/components/ads/js/right-rail.js" />
+        <script group="top" path="/static/mantle/components/ads/js/infinite-right-rail-manager.js" />
+    </component>
+</components>

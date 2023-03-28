@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-document-spotlight" ref="mntl-document-card-list">
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Spotlight</displayName>
+            <for id="mntl-card-list-items, mntl-card-list__button.arbitraryDependency">
+                <model name="mockDocumentTaxeneList" id="listItems" mode="replace">
+                    <property name="mockName" value="sample-document-taxene-list" />
+                </model>
+            </for>
+        </info>
+
+        <for id="mntl-card-list-items, mntl-card-list__button.arbitraryDependency">
+            <model id="listItems" name="documentTaxeneList">
+                <model id="documentList" name="descendantArticles">
+                    <property name="limit" value="24" type="integer" />
+                </model>
+            </model>
+        </for>
+
+        <for id="mntl-card-list-items">
+            <property name="listEnd" value="4" type="integer" />
+            <property name="width" value="${@item.index == 0 ? 600 : 400 }" views="pc, tablet" />
+            <property name="height" value="${@item.index == 0 ? 450 : 300 }" views="pc, tablet" />
+        </for>
+
+        <component id="mntl-card-list__bottom" mode="remove" />
+
+    </component>
+
+</components>

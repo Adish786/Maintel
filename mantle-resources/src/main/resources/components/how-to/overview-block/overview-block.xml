@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-overview-block" resourcePath="/components/how-to/overview-block/overview-block.ftl">
+        <info>
+            <category>Mantle Components/How To</category>
+            <displayName>Overview Block</displayName>
+            <description>
+                Meta information for how to -- includes time, yield, skill level, estimated cost 
+            </description>
+        </info>
+        <stylesheet path="/static/mantle/components/how-to/overview-block/overview-block.css" />
+
+        <model name="DOCUMENT" id="document" />
+        <property name="overviewHeadingClass" value="type--goat-bold" />
+        <property name="labelClass" value="type--cat-bold" />
+        <property name="valueClass" value="type--cat" />
+    </component>
+
+</components>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-toc-list" resourcePath="/components/toc/toc-list.ftl">
+    	<info>
+            <category>Mantle Components/Navigation</category>
+            <displayName>Table of Contents List</displayName>
+            <description />
+            <documentation>
+                ### **jsScroll** Property (boolean)
+
+                Turns on JS page scroll when clicking a TOC link. Takes over natural browser hash jump.
+
+                ### **columnNum** Property (integer)
+
+                Splits the list of links in multiple **toc-list__col** containers which can be styled in columns for specic breakpoints.
+
+                ### **limit** Property (integer)
+
+                This property is used to set a class name on "hidden" items. To be used with some sort of "view all" button.
+
+                ### **toc__truncated** class)
+
+                This class is set on the toc list when at least 1 item is hidden. This can be used to show/hide the "view all" button.
+            </documentation>
+
+            <list name="tocItems" mode="replace">
+                <map id="one">
+                    <property name="id" value="symptoms" />
+                    <property name="heading" value="Symptoms" />
+                </map>
+                <map id="two">
+                    <property name="id" value="diagnosis" />
+                    <property name="heading" value="Diagnosis" />
+                </map>
+                <map id="three">
+                    <property name="id" value="genetic-profiling-and-pd-l1-testing" />
+                    <property name="heading" value="Genetic Profiling and PD-L1 Testing" />
+                </map>
+                <map id="four">
+                    <property name="id" value="stages" />
+                    <property name="heading" value="Stages" />
+                </map>
+                <map id="five">
+                    <property name="id" value="treatment-options" />
+                    <property name="heading" value="Treatment Options" />
+                </map>
+            </list>
+            <property name="class" value="toc__truncated" mode="replace" />
+            <model id="tableOfContents" mode="remove" />
+        </info>
+
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js"></script>
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js"></script>
+        <script group="bottom" path="/static/mantle/components/toc/toc-list.js"></script>
+
+        <for id="this, class.toc__truncated, tocItems">
+            <model name="tableOfContents" id="tableOfContents" onError="ignore" >
+                <model name="DOCUMENT" id="document" onError="halt" />
+            </model>
+
+            <!-- Sets "secondary" class name on items which can be hidden -->
+            <property name="limit" value="4" type="integer" />
+        </for>
+
+        <!-- Enables JS scroll instead of natural jump -->
+        <property name="jsScroll" value="false" type="boolean" />
+        <!-- Splits TOC list in x number of columns. -->
+        <property name="columnNum" value="1" type="integer" />
+
+        <list id="class">
+            <property name="toc__truncated" value="${@tableOfContents != null and @tableOfContents.items.size() gt @limit ? 'toc__truncated' : ''}" />
+        </list>
+        <property name="trackingContainer" value="true" type="boolean" />
+
+        <property name="tocItems" value="${@tableOfContents != null and @tableOfContents.items.size() gt 0 ? @tableOfContents.items : null}" onError="collapseSilent" />
+
+    </component>
+
+</components>

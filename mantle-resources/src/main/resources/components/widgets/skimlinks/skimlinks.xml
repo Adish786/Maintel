@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="mntl-skimlinks" ref="mntl-group">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Skimlinks</displayName>
+			<description>
+				Loads a third party skimlinks javascript on page load. URL of the JS file is vertical-specific and dependent 
+				on the skimlinksId property
+			</description>
+			<property name="skimlinksId" value="68756X1559474" />
+		</info>
+
+		<!-- Include Skimlinks when commerce info or affiliate -->
+		<property name="display" value="${((@document != null AND (@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')) OR
+				(@document?.disclaimer?.affiliate ?: false)) ? true : null}" onError="collapseSilent">
+			<model name="DOCUMENT" id="document" />
+		</property>
+
+		<script group="top" path="/static/mantle/js/utilities.js"></script>
+		<script group="bottom" evaluated="true" path="/static/mantle/components/widgets/skimlinks/js/skimlinks.evaluated.js"></script>
+	</component>
+</components>

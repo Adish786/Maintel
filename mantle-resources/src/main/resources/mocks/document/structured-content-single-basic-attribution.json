@@ -1,0 +1,785 @@
+{
+    "revisionId": "5092953_1612801549014",
+    "authorKey": "204294",
+    "lastEditingAuthorId": "204294",
+    "lastEditingUserId": "148129386942441",
+    "url": "https://www.verywellhealth.com/vaccine-side-effects-and-adverse-events-5092953",
+    "rootUrl": "https://www.verywellhealth.com/vaccine-side-effects-and-adverse-events-5092953",
+    "vertical": "HEALTH",
+    "docId": 5092953,
+    "slug": "vaccine-side-effects-and-adverse-events",
+    "templateType": "STRUCTUREDCONTENT",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1612801548964
+    },
+    "dates": {
+      "created": 1608281211098,
+      "updated": 1612801549014,
+      "firstPublished": 1608302072731,
+      "lastPublished": 1612801548964,
+      "firstPending": 1608299692835,
+      "displayed": 1608829608113
+    },
+    "medicalBoardApproved": true,
+    "noIndex": false,
+    "title": "Vaccine Side Effects and Adverse Events",
+    "socialTitle": "Vaccine Side Effect vs. an Adverse Effect",
+    "description": "Vaccines commonly cause mild, temporary side effects such as fever. True significant adverse events like anaphylaxis are exceedingly rare.",
+    "heading": "Vaccine Side Effects and Adverse Events",
+    "taggedImages": {
+      "list": [
+        {
+          "image": {
+            "caption": "",
+            "owner": "<p>Geber 86 / E+ / Getty Images</p>",
+            "alt": "Child getting vaccinated at the pediatrician's office",
+            "width": 2121,
+            "height": 1414,
+            "id": "badadb2a2b864e5496d5132ce2e86872",
+            "fileName": "GettyImages-1266488183.jpg",
+            "objectId": "GettyImages-1266488183-badadb2a2b864e5496d5132ce2e86872.jpg",
+            "sensitive": false,
+            "original": false,
+            "encodedThumbnail": "R0lGODlhCgAHAPYAAA8MDRsMCRwZHQA7ODQgHD4lHCwpLCE4Qk07MVdfYlh3dWJaXH9OUG52bndjYHV1f3J+jHx5hXyKiXmJkG6XrX6om5BLM4xZSq2CZ4SMnYuPn5aUnYOUrZOXp4Gonpi0u62bk6Wuo6KvwK63yK28z6++0bq+xp3Cv67Bza7Mza/NzqzO0LvHzL3IyrfD1bLK27fJ2sfOyMHK0MLL0dDb3sXe6tbZ5dXf5crw383u9NLg6tLj79vh4OTr7uju7erq8uL47vnp9/Lz9fn6/v7+/g8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDQ8MDSwAAAAACgAHAEYIUQA/BCGSw0MFHzxihDCBYUSJDi4CbBgwAwaOGgAIrKBwg0YLBA4gZFigwYIAAxJQACEyJMUJIT1+2HihYweHCSoOXCggI0GDBxFEkGAAQgGLgAA7"
+          },
+          "tags": {
+            "list": [
+              "RECIRC",
+              "PINTEREST",
+              "FACEBOOK",
+              "TWITTER"
+            ],
+            "totalSize": 4
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "primaryVideo": {
+    },
+    "citations": {
+      "list": [
+        {
+          "source": "<p>Kwok R. <a href=\"https://doi.org/10.1038/473436a\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Vaccines: The real issues in vaccine safety</a>. <em>Nature</em>. 2011 May 26;473(7348):436-8. doi:10.1038/473436a</p>",
+          "refId": 1
+        },
+        {
+          "source": "<p>Centers for Disease Control and Prevention. <a href=\"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/how-they-work.html?CDC_AA_refVal&#61;https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fvaccines%2Fabout-vaccines%2Fhow-they-work.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Understanding how COVID-19 vaccines work</a>. November 2, 2020. </p>",
+          "refId": 2
+        },
+        {
+          "source": "<p>Hervé C, Laupèze B, Del Giudice G, Didierlaurent AM, Tavares Da Silva F. <a href=\"https://doi.org/10.1038/s41541-019-0132-6\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">The how&#39;s and what&#39;s of vaccine reactogenicity</a>. <em>NPJ Vaccines</em>. 2019 Sep 24;4:39. doi:10.1038/s41541-019-0132-6</p>",
+          "refId": 3
+        },
+        {
+          "source": "<p>Spencer JP, Trondsen Pawlowski RH, Thomas S. <a href=\"https://www.aafp.org/afp/2017/0615/p786.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Vaccine adverse events: Separating myth from reality</a>. <em>Am Fam Physician</em>. 2017 Jun 15;95(12):786-794.</p>",
+          "refId": 4
+        },
+        {
+          "source": "<p>Smith DK, Sadler KP, Benedum M. <a href=\"https://www.aafp.org/afp/2019/0401/p445.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Febrile seizures: Risks, evaluation, and prognosis</a>. <em>Am Fam Physician</em>. 2019 Apr 1;99(7):445-450.</p>",
+          "refId": 5
+        },
+        {
+          "source": "<p>Wang J, Peng Y, Xu H, Cui Z, Williams RO 3rd. <a href=\"https://doi.org/10.1208/s12249-020-01744-7\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">The COVID-19 vaccine race: challenges and opportunities in vaccine formulation</a>. <em>AAPS PharmSciTech</em>. 2020 Aug 5;21(6):225. doi:10.1208/s12249-020-01744-7</p>",
+          "refId": 7
+        },
+        {
+          "source": "<p>Wadman M. <a href=\"https://doi.org/10.1126/science.370.6520.1022\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Public needs to prep for vaccine side effects</a>. <em>Science. </em>2020 Nov 27; 370(6520):1022. doi:10.1126/science.370.6520.1022</p>",
+          "refId": 6
+        },
+        {
+          "source": "<p>Food and Drug Administration. <a href=\"https://www.fda.gov/media/75191/download\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">MMRII label</a>. 2020. </p>",
+          "refId": 8
+        },
+        {
+          "source": "<p>Ledent E, Arlegui H, Buyse H, Basile P, Karkada N, Praet N, Nachbaur G. <a href=\"https://doi.org/10.1007/s40259-018-0273-6\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Benefit versus risk assessment of rotavirus vaccination in France: a simulation and modeling analysis</a>. <em>BioDrugs</em>. 2018 Apr;32(2):139-152. doi:10.1007/s40259-018-0273-6</p>",
+          "refId": 9
+        },
+        {
+          "source": "<p>Dreskin SC, Halsey NA, Kelso JM, et al. <a href=\"https://doi.org/10.1186/s40413-016-0120-5\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">International Consensus (ICON): Allergic reactions to vaccines</a>. <em>World Allergy Organ J</em>. 2016;9(1):32. doi:10.1186/s40413-016-0120-5</p>",
+          "refId": 10
+        },
+        {
+          "source": "<p>Centers for Disease Control and Prevention. <a href=\"https://www.cdc.gov/vaccinesafety/concerns/guillain-barre-syndrome.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Guillain-Barre syndrome and vaccines</a>. August 14, 2020. </p>",
+          "refId": 11
+        },
+        {
+          "source": "<p>Shimabukuro TT, Nguyen M, Martin D, DeStefano F. <a href=\"https://doi.org/10.1016/j.vaccine.2015.07.035\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Safety monitoring in the Vaccine Adverse Event Reporting System (VAERS)</a>. <em>Vaccine</em>. 2015 Aug 26;33(36):4398-405. doi:10.1016/j.vaccine.2015.07.035</p>",
+          "refId": 12
+        }
+      ],
+      "totalSize": 12
+    },
+    "summary": {
+      "title": "Vaccine Side Effects and Adverse Events",
+      "socialTitle": "Vaccine Side Effect vs. an Adverse Effect",
+      "heading": "Vaccine Side Effects and Adverse Events",
+      "description": "Vaccines commonly cause mild, temporary side effects such as fever. True significant adverse events like anaphylaxis are exceedingly rare."
+    },
+    "hasTableOfContents": true,
+    "audit": {
+      "clientId": "Helios",
+      "userId": "148129386942441",
+      "lastModified": 1612801549014
+    },
+    "metaData": {
+      "url": "",
+      "docId": 5092953,
+      "review": {
+        "authorId": "231698",
+        "userId": 158162425651594,
+        "type": "|medical_approved|",
+        "lastReviewed": 1608448362000
+      },
+      "audit": {
+        "lastModified": 1608658208548
+      }
+    },
+    "bylines": {
+      "list": [
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "AUTHOR",
+          "authorId": "235845",
+          "descriptor": "by",
+          "attribution": "by"
+        },
+        {
+         "id": "c8db796df3e24b909e2b0adba6328c0e",
+         "type": "AUTHOR",
+         "authorId": "231684",
+         "descriptor": "by",
+         "attribution": "by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "AUTHOR",
+          "authorId": "233450",
+          "descriptor": "by",
+          "attribution": "by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "MEDICAL_REVIEWER",
+          "authorId": "231698",
+          "lastModified": 1608448362000,
+          "descriptor": "reviewed by",
+          "attribution": "reviewed by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "FACT_CHECKER",
+          "authorId": "204294",
+          "lastModified": 1612801549014,
+          "descriptor": "fact checked by",
+          "attribution": "fact checked by"
+        }
+      ],
+      "totalSize": 5
+    },
+    "taglines": {
+      "list": [
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "UPDATER",
+          "authorId": "231649",
+          "lastModified": 1608448362000,
+          "descriptor": "updated by",
+          "attribution": "updated by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "UPDATER",
+          "authorId": "231551",
+          "lastModified": 1608448362000,
+          "descriptor": "updated by",
+          "attribution": "updated by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "EDITOR",
+          "authorId": "236044",
+          "lastModified": 1612801549014,
+          "descriptor": "edited by",
+          "attribution": "edited by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "ORIGINAL_WRITER",
+          "authorId": "212883",
+          "lastModified": 1612801549014,
+          "descriptor": "originally written by",
+          "attribution": "originally written by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "ADDITIONAL_RESEARCHER",
+          "authorId": "230431",
+          "lastModified": 1612801549014,
+          "descriptor": "additional research by",
+          "attribution": "additional research by"
+        },
+        {
+          "id": "c8db796df3e24b909e2b0adba6328c0e",
+          "type": "ADDITIONAL_RESEARCHER",
+          "authorId": "145635",
+          "lastModified": 1612801549014,
+          "descriptor": "additional research by",
+          "attribution": "additional research by"
+        }
+      ],
+      "totalSize": 6
+    },
+    "disclaimer": {
+      "affiliate": false
+    },
+    "pages": {
+      "list": [
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 1,
+                "uuid": "00f567f6-a4dc-4d42-974a-0dd58ca94488",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Not infrequently, people experience mild side effects after getting vaccinated. They might notice a little swelling at the injection site, or they might develop a slight fever—all symptoms that go away within a few days.</p>"
+                }
+              },
+              {
+                "id": 2,
+                "uuid": "0a9abebd-8fc4-4707-8e56-6d6daf11ef63",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Such <a href=\"https://www.verywellhealth.com/top-vaccines-you-should-know-about-4138556\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">vaccine</a> side effects are quite understandable, given that the purpose of the vaccine is to prime your immune system and put it on alert. On the other hand, truly significant vaccine adverse events are exceedingly rare.<span class=\"ql-inline-citation\" data-cite=\"1\">﻿</span>﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 3,
+                "uuid": "1448a812-d688-49fe-9ed6-825d3cb22d4c",
+                "type": "HEADING",
+                "data": {
+                  "text": "Vaccine Side Effects vs. Adverse Events",
+                  "shortText": "Definitions"
+                }
+              },
+              {
+                "id": 4,
+                "uuid": "7e6fdba7-3943-4485-906d-a2847355e5f7",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>People often talk about vaccine side effects and adverse events interchangeably. However, it may be more precise to think about common, mild vaccine side effects versus very rare, much more medically significant, adverse events.</p>"
+                }
+              },
+              {
+                "id": 5,
+                "uuid": "1db50f85-f40f-45db-a3e2-593fe99581fc",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Alternatively, one can think of a spectrum, with very mild side effects being the most common, more bothersome side effects being less common, and very medically significant adverse events being extremely uncommon.</p>"
+                }
+              },
+              {
+                "id": 6,
+                "uuid": "bc0445f4-e98e-4a00-a731-e49c07e05dcc",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Common side effects occur in more than 1 in 100 people. On the other extreme, significant adverse events may occur in 1 in 100,000 people or even 1 in 1,000,000.<span class=\"ql-inline-citation\" data-cite=\"1\">﻿</span>﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 7,
+                "uuid": "c78c9002-dd47-4cf4-a6c5-b537998513d2",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Mild vaccine side effects are to be expected in many people (although the specific rates may differ according to the specific vaccine). True adverse events, in contrast, are much more unexpected and idiosyncratic.</p>"
+                }
+              },
+              {
+                "id": 8,
+                "uuid": "49986c7b-0ef2-4dff-b9cc-42213cc8104c",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>A truly significant adverse event is a sign that something has gone wrong with a person’s response to vaccination, leading to serious symptoms. But some vaccine side effects may actually indicate that the vaccination process is working.</p>"
+                }
+              },
+              {
+                "id": 9,
+                "uuid": "1cd66b27-6686-4880-8972-562ce99ecee1",
+                "type": "HEADING",
+                "data": {
+                  "text": "Immune System Response",
+                  "shortText": "Immune Response"
+                }
+              },
+              {
+                "id": 10,
+                "uuid": "a9eeb3df-5575-47a5-9b59-e253c5cb5078",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>To think about why this makes sense, it helps to understand a little bit about <a href=\"https://www.verywellhealth.com/how-do-vaccines-work-4153906\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">how vaccination works</a> in relationship to the immune system. A vaccine works by presenting your immune system with a pathogen or part of a pathogen (such as from a virus or bacteria).</p>"
+                }
+              },
+              {
+                "id": 11,
+                "uuid": "0ab8e7a2-eb86-469d-a4f6-78dfc55cd23b",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Different vaccines do this in different ways. “Live vaccines” use live organisms that have been specifically altered to trigger an immune response. Other types of vaccines use killed pathogens, or part of those pathogens, to trigger an immune response.</p>"
+                }
+              },
+              {
+                "id": 12,
+                "uuid": "1f13d9a9-567b-4417-b457-3c6843b6225d",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Even newer vaccine technologies, such as the <a href=\"https://www.verywellhealth.com/fda-advisory-committee-pfizer-vaccine-authorization-5091885\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">mRNA vaccine used by Pfizer to block the virus that causes COVID-19</a>, use this same principle. They prime the immune system by showing it something to rev it up.<span class=\"ql-inline-citation\" data-cite=\"2\">﻿</span>﻿﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 13,
+                "uuid": "b2e2dfed-ee99-4cfc-9500-f5b472ebd9b2",
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p><strong>COVID-19 Vaccines:</strong> <a href=\"https://www.verywellhealth.com/covid-19-coronavirus-vaccine-5093230\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Stay up to date on which vaccines are available, who can get them, and how safe they are.</a></p>",
+                  "theme": "TAKEAWAY"
+                }
+              },
+              {
+                "id": 14,
+                "uuid": "47f1901c-0b8a-470b-a263-1c1bc3229014",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>In response, the immune cells go into action. Eventually, this results in the production of antibodies by special immune cells called B cells, though this doesn’t happen right away.</p>"
+                }
+              },
+              {
+                "id": 15,
+                "uuid": "5f4eb8a1-da15-4fcc-857e-b7a664ebb63e",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>These cells provide part of the long-term immune protection that we need from vaccines. If they are ever exposed to the pathogen in the future, special memory B cells <a href=\"https://www.verywellhealth.com/antibodies-from-vaccines-and-from-natural-infection-5092564\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">ramp up antibody production</a>.</p>"
+                }
+              },
+              {
+                "id": 16,
+                "uuid": "2f51f169-9722-431d-ac21-233866bce9c0",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Hopefully, this keeps you from getting sick if you are ever exposed to someone who is contagious with that disease. Or in some cases, you might get a mild illness without severe symptoms.<span class=\"ql-inline-citation\" data-cite=\"2\">﻿</span>﻿﻿﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 17,
+                "uuid": "7a93c969-47ad-4b4e-9cdc-0d11ccb431be",
+                "type": "SUBHEADING",
+                "data": {
+                  "text": "Innate Immune Response"
+                }
+              },
+              {
+                "id": 18,
+                "uuid": "0241613b-90b9-438e-85b1-2bc0d7a1f1eb",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>One of the challenges for vaccine developers is that the <a href=\"https://www.verywellhealth.com/how-does-the-immune-system-work-3232652\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">immune system</a> is very complex. It’s not just B cells that respond when your body is infected or when it’s vaccinated. Various parts of your innate immune system respond too. They are actually part of what triggers the long-term immunity that we are looking for from other parts of the immune system.</p>"
+                }
+              },
+              {
+                "id": 19,
+                "uuid": "fe68de50-0241-4bdc-aef1-c23858429895",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Evolutionarily, the <a href=\"https://www.verywellhealth.com/types-of-white-blood-cells-and-immunity-2252553\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">innate immune system</a> is an older part of the body’s immune system that helps put up general immune defenses. Unlike the part of the immune system that can provide very targeted attacks and long-term memory and protection from reinfection, it doesn’t have memory, and it isn’t specific.</p>"
+                }
+              },
+              {
+                "id": 20,
+                "uuid": "ccbf244f-73de-4ab9-ad73-54ca8aae1f51",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Through the production of many different immune signaling molecules (called cytokines), this part of the immune system can secondarily cause many of the symptoms which we associate with being ill. For example, fever, general muscle aches, headache, and fatigue may all be triggered by cytokines if the body is responding to an infection.<span class=\"ql-inline-citation\" data-cite=\"3\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 21,
+                "uuid": "beff7625-fd32-4a92-b071-b64ae09e67b9",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Sometimes, these responses can also come into play when a person has been vaccinated. It’s hard to design a vaccine that is effective that doesn’t cause at least some of these temporary responses in at least some people.</p>"
+                }
+              },
+              {
+                "id": 22,
+                "uuid": "2c753574-133a-4e94-90cc-0fac70f70ae6",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Scientists have a term for these types of reactions occurring soon after vaccination that are part of the body’s normal inflammatory response: reactogenicity.<span class=\"ql-inline-citation\" data-cite=\"3\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 23,
+                "uuid": "8fd46233-3869-4e6f-92ab-3f7a2a4a2509",
+                "type": "HEADING",
+                "data": {
+                  "text": "Relatively Common Vaccine Side Effects",
+                  "shortText": "Common Side Effects"
+                }
+              },
+              {
+                "id": 24,
+                "uuid": "85a26d16-2cb7-4273-aa5d-cbe9c57ad850",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Side effects at the injection site are relatively common. These might include pain, redness, and swelling. Other relatively common vaccine side effects can include:</p>"
+                }
+              },
+              {
+                "id": 25,
+                "uuid": "65db1f6d-3a0e-40e3-aca1-fb5fc35b96a6",
+                "type": "HTML",
+                "data": {
+                  "html": "<ul><li>Fever</li><li>Headaches</li><li>Joint pain</li><li>Muscle aches</li><li>Nausea</li><li>Rash</li><li>General sense of not feeling well (malaise)</li><li>Fussiness in an infant<span class=\"ql-inline-citation\" data-cite=\"4\">﻿</span>﻿</li></ul>"
+                }
+              },
+              {
+                "id": 26,
+                "uuid": "7b0bbbdb-53ee-46dc-a713-452c444565fe",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Some of these effects may be due to normal immune response after vaccination and others may just be undesirable side effects. Not every vaccine poses the same risk of exactly these same common side effects, and others may have additional ones.</p>"
+                }
+              },
+              {
+                "id": 27,
+                "uuid": "f06b0087-b348-4b07-af9a-185c6af5ac18",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Fainting is another not-infrequent side effect that sometimes occurs just after getting a vaccine. This is particularly common in teenagers who receive the vaccine for <a href=\"https://www.verywellhealth.com/should-preteens-get-the-hpv-vaccine-2979709\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">HPV</a> (human papillomavirus), the vaccine to <a href=\"https://www.verywellhealth.com/menactra-vaccine-for-meningococcal-disease-2633687\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\" rel=\"noopener noreferrer\">prevent meningococcal meningitis</a>, or the <a href=\"https://www.verywellhealth.com/tdap-more-than-just-a-tetanus-vaccine-49660\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"3\" rel=\"noopener noreferrer\">Tdap vaccine</a> (booster shot for tetanus, diphtheria, and pertussis).</p>"
+                }
+              },
+              {
+                "id": 28,
+                "uuid": "a22ff9a6-1ff2-4017-ad8c-5c851ee238dc",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Because of this, it’s standard to monitor adolescents for 15 minutes or so after giving these vaccines.<span class=\"ql-inline-citation\" data-cite=\"4\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 29,
+                "uuid": "03d2d41d-dbc6-41e2-9abb-b148984d3f14",
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>If you are feeling dizzy or lightheaded after getting a vaccine, stay seated and let someone know. Having a little something to drink and eat can help. The feeling should pass relatively soon.</p>",
+                  "theme": "TAKEAWAY"
+                }
+              },
+              {
+                "id": 30,
+                "uuid": "f873accf-dd35-4724-9585-78fef36b5947",
+                "type": "SUBHEADING",
+                "data": {
+                  "text": "Febrile Seizures"
+                }
+              },
+              {
+                "id": 31,
+                "uuid": "4951d6d2-7707-4d1b-88b1-3dc35fad9aa3",
+                "type": "HTML",
+                "data": {
+                  "html": "<p><a href=\"https://www.verywellhealth.com/what-is-febrile-seizure-770346\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Febrile seizures</a> are an important complication that some children experience after a vaccine. Such seizures can be caused by a fever in children 6 months to 5 years of age, whether that fever is from an infection or a side effect of vaccination.<span class=\"ql-inline-citation\" data-cite=\"5\">﻿</span>﻿﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 32,
+                "uuid": "7b83a330-2928-4fec-801c-ed99d2d80403",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Although they are alarming, such seizures usually aren’t serious. Children grow out of having these types of seizures, and they don’t require long-term anti-seizure drugs. They also don’t increase a child’s risk of death or cause any long-term neurological problems.<span class=\"ql-inline-citation\" data-cite=\"5\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 33,
+                "uuid": "efb4fc7f-c0ef-4a4b-9a13-cea3071e71b7",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Such seizures can be caused by any type of vaccine that causes a fever (especially in kids who are prone to getting them). But they are more common after certain types of vaccines.</p>"
+                }
+              },
+              {
+                "id": 34,
+                "uuid": "76a4ee09-8d1c-4170-838a-6f65229dc8df",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>For example, such seizures were more common in kids who received an older version of the pertussis vaccine that is no longer used in most parts of the world. The newer version of the vaccine causes high fevers and febrile seizures much less commonly.<span class=\"ql-inline-citation\" data-cite=\"1\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 35,
+                "uuid": "5d9dc982-b397-4443-8c31-322d33ca73b5",
+                "type": "HEADING",
+                "data": {
+                  "text": "Who Gets Side Effects?"
+                }
+              },
+              {
+                "id": 36,
+                "uuid": "be94c135-3498-4190-b395-33b8093fabec",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Vaccines for different diseases—and even different types of vaccines for the same disease—may be more likely to cause general side effects such as fever.</p>"
+                }
+              },
+              {
+                "id": 37,
+                "uuid": "2417a863-9fc9-4741-a575-2a8ecbcad936",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>For example, someone getting a <a href=\"https://www.verywellhealth.com/live-vaccines-and-vaccine-shedding-2633700\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">live-type vaccine</a> may be more likely to experience some of these symptoms than people getting other types of vaccines. An example is the MMR vaccine given in childhood, the one used to prevent <a href=\"https://www.verywellhealth.com/measles-4012845\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\" rel=\"noopener noreferrer\">measles</a>, mumps, and rubella.<span class=\"ql-inline-citation\" data-cite=\"7\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 38,
+                "uuid": "e42492d0-5ad3-42f8-8e4b-7ed05befd363",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>People who get the live version of the flu vaccine may also be more likely to experience these sorts of symptoms than people who get other versions of the vaccine.</p>"
+                }
+              },
+              {
+                "id": 39,
+                "uuid": "e9cee1e7-b52c-41fb-857a-bd366424ba8a",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>You also might notice a difference in side effects if you are taking a vaccine that requires a multiple-dose series. In this case, you might note more side effects after a later dose because the immune system has already been primed to respond by the first dose.</p>"
+                }
+              },
+              {
+                "id": 40,
+                "uuid": "66287cc4-b536-49df-a3d6-1f3ece31b0bf",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>For example, this may be true for the <a href=\"https://www.verywellhealth.com/acip-expect-mild-side-effects-covid-19-vaccine-5090145\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Pfizer vaccine against COVID-19</a>.<span class=\"ql-inline-citation\" data-cite=\"6\">﻿</span>﻿﻿﻿﻿﻿ Kids receiving later doses in the series of shots needed for the <a href=\"https://www.verywellhealth.com/what-you-need-to-know-about-the-dtap-vaccine-4156747\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\" rel=\"noopener noreferrer\">DTaP vaccine</a> (for diphtheria, tetanus, and pertussis), may also be more likely to experience side effects like fever.<span class=\"ql-inline-citation\" data-cite=\"4\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 41,
+                "uuid": "6383ef54-6fbd-4602-9d8d-ac6fa94d6c80",
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>If you have a very high fever from a vaccine, or if your fever or other symptoms don’t resolve within a few days, contact your physician. Your symptoms might not be related to vaccination.</p>",
+                  "theme": "TAKEAWAY"
+                }
+              },
+              {
+                "id": 42,
+                "uuid": "94fdbe9a-d816-4b4c-828c-94a66edb5e23",
+                "type": "HEADING",
+                "data": {
+                  "text": "Can I Take Medicines to Reduce Side Effect Symptoms? ",
+                  "shortText": "Reducing Symptoms "
+                }
+              },
+              {
+                "id": 43,
+                "uuid": "6b12928f-8dc8-43eb-a2c4-b23467f89068",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>You may wonder whether it is OK to take medicines for side effects like fever after a vaccination. Your child may seem fussy and uncomfortable for a while, so it’s natural to want to help. Or you may feel out of sorts yourself.</p>"
+                }
+              },
+              {
+                "id": 44,
+                "uuid": "4adf404b-31ff-4679-b914-f6280121705b",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Unless there is an unusual medical situation, it is generally safe to give a standard dose of a pain reliever like <a href=\"https://www.verywellhealth.com/tylenol-acetaminophen-things-you-should-know-189125\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">acetaminophen</a> (Tylenol), using adjusted pediatric doses for children as indicated on package labels. These often decrease side effect symptoms.</p>"
+                }
+              },
+              {
+                "id": 45,
+                "uuid": "79e00848-4e62-4278-8aae-e994d68aa76e",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>However, some evidence suggests that in certain situations, the antibody response may not be as strong if you give such medications. Theoretically, that might mean decreased protection.</p>"
+                }
+              },
+              {
+                "id": 46,
+                "uuid": "ed00e32c-ee5c-4e08-8a7c-27b7887be500",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Still, pain-relieving medications may be the right choice in some situations. Don’t hesitate to discuss the possibility with your healthcare professional, to help make an informed choice in your situation.</p>"
+                }
+              },
+              {
+                "id": 47,
+                "uuid": "1b362f7b-0347-435e-b665-e529f061ed8a",
+                "type": "HEADING",
+                "data": {
+                  "text": "Vaccine Adverse Events",
+                  "shortText": "Adverse Events"
+                }
+              },
+              {
+                "id": 48,
+                "uuid": "b6f47a8f-a867-42e9-b030-d8b48ffa6aa5",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Serious vaccine adverse events are extremely rare. Specific risks of these occurrences vary based on the vaccine. For example, for the MMR vaccine, some of the rare adverse events that have been documented include <a href=\"https://www.verywellhealth.com/stevens-johnson-syndrome-2633506\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Stevens Johnson syndrome</a> and <a href=\"https://www.verywellhealth.com/vasculitis-overview-190542\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\" rel=\"noopener noreferrer\">Henoch-Schönlein purpura</a>. The MMR can also extremely rarely cause neurological issues such as encephalitis.<span class=\"ql-inline-citation\" data-cite=\"8\">﻿</span>﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 49,
+                "uuid": "527f9ff0-d438-4bd9-9962-d4c2aa8cf980",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Live vaccines such as the MMR are usually not advised for people who have serious problems with their immune system, either because of a medical condition or because they are taking an immunosuppressive drug.<span class=\"ql-inline-citation\" data-cite=\"8\">﻿</span>﻿﻿﻿﻿﻿ That’s because there is very small risk of the vaccine causing infection.</p>"
+                }
+              },
+              {
+                "id": 50,
+                "uuid": "3eb11785-7bb5-4f6b-a90e-1c811f757de6",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Another good example is the <a href=\"https://www.verywellhealth.com/can-adults-get-rotavirus-289879\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">rotavirus</a> vaccine. Although this vaccine is very effective at reducing deaths from gastroenteritis caused by rotavirus, it may lead to intussusception in about 1 in 100,000 infants.<span class=\"ql-inline-citation\" data-cite=\"9\">﻿</span>﻿﻿﻿﻿﻿ (That’s a serious disorder in which part of the intestine slides inside another part.)</p>"
+                }
+              },
+              {
+                "id": 51,
+                "uuid": "8d69e42c-04aa-47c3-b8a7-fa9481d15037",
+                "type": "SUBHEADING",
+                "data": {
+                  "text": "Severe Allergic Reactions"
+                }
+              },
+              {
+                "id": 52,
+                "uuid": "70327fe6-e6a9-40f9-a858-7644df7da330",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>A very rare potential adverse event from all vaccinations are allergic reactions. In some cases, an allergic reaction might just cause mild symptoms, like a rash and itchy skin.</p>"
+                }
+              },
+              {
+                "id": 53,
+                "uuid": "6ed409fe-f8e7-49bc-aefd-ef4dc376ca8d",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>But sometimes allergic reactions can cause life-threatening swelling of the airway, causing difficulty breathing (<a href=\"https://www.verywellhealth.com/symptoms-of-anaphylactic-shock-1298253\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">anaphylaxis</a>). Although potentially very serious, severe allergic reactions are thought to occur in roughly 1 to 100,000 or 1 in 1,000,000 vaccinations.<span class=\"ql-inline-citation\" data-cite=\"10\">﻿</span>﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 54,
+                "uuid": "6c1cba4b-056d-4d0c-8e67-4f65a3648554",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Symptoms of a severe allergic reaction usually occur within a few minutes to an hour of getting vaccinated.</p>"
+                }
+              },
+              {
+                "id": 55,
+                "uuid": "0799faa5-5ea7-42cf-b15a-532205cf83bf",
+                "type": "CALLOUT",
+                "data": {
+                  "heading": "",
+                  "html": "<p>Potential symptoms of a serious allergic reaction could include:</p><ul><li>Difficulty breathing</li><li>Rapid swelling of the throat, face, or other parts of your body</li><li>Sensation of a rapid heartbeat</li><li>Dizziness</li><li>Full body rash (not just redness at the injection site)<span class=\"ql-inline-citation\" data-cite=\"10\">﻿</span>﻿</li></ul><p>Call 911 if you have any of these serious symptoms. Also seek immediate medical attention if you might be having other potentially life-threatening symptoms of a vaccine adverse event, like chest pain, or neurological symptoms such as muscular paralysis.</p>",
+                  "theme": "TAKEAWAY"
+                }
+              },
+              {
+                "id": 56,
+                "uuid": "1a96e0fa-01aa-4ffa-a9d2-71d1501f1a13",
+                "type": "HEADING",
+                "data": {
+                  "text": "Studying Vaccine Adverse Events",
+                  "shortText": "Studies"
+                }
+              },
+              {
+                "id": 57,
+                "uuid": "e11690f5-f526-40a2-b577-7d167603b1fa",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>One of the challenges of studying vaccine adverse events is their rarity. Because they are so rare, it can be difficult to determine exactly how common they are.</p>"
+                }
+              },
+              {
+                "id": 58,
+                "uuid": "7d732c12-f6f2-490f-ac27-57c53f250130",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Another challenge is that sometimes, medical problems occur after a vaccination coincidentally. The vaccine didn’t have anything to do with the problem happening. But the problem might be documented and go into the medical literature as an adverse event from a vaccine. </p>"
+                }
+              },
+              {
+                "id": 59,
+                "uuid": "8d1ba836-3aa3-4ef7-a314-70a40e77054f",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>One contentious topic has been whether getting the flu vaccine increases the risk of getting <a href=\"https://www.verywellhealth.com/introduction-to-guillain-barre-syndrome-2488658\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">Guillain-Barré syndrome </a>(GBS), a very rare but serious condition that can cause muscle weakness or paralysis.</p>"
+                }
+              },
+              {
+                "id": 60,
+                "uuid": "4ab656a8-b21f-4921-8038-7fadaa743817",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Getting the flu vaccine may slightly increase the risk of getting GBS, but if so, it’s only about 1 in 1,000,000 or so. Also, getting the flu itself also increases one’s risk of GBS. So it’s not clear that getting vaccinated poses more risk overall.<span class=\"ql-inline-citation\" data-cite=\"11\">﻿</span>﻿﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 61,
+                "uuid": "0017d619-aac9-48d4-a1a6-ce59abfb603b",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>To study the risks of adverse events, the Centers for Disease Control and the US Food and Drug Administration continue to monitor for such issues after a vaccine has been released. Using the Vaccine Adverse Event Reporting System, individuals can submit information about potential adverse events related to vaccination.</p>"
+                }
+              },
+              {
+                "id": 62,
+                "uuid": "8900f888-e65b-46e2-83d5-3d552d59c217",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>This helps ensure that experts can continue to learn about any unexpected rare adverse events, especially for a new vaccine.<span class=\"ql-inline-citation\" data-cite=\"12\">﻿</span>﻿﻿﻿﻿﻿﻿</p>"
+                }
+              },
+              {
+                "id": 63,
+                "uuid": "23c02402-6561-4007-8c39-fdaeeebaba9f",
+                "type": "HEADING",
+                "data": {
+                  "text": "Reducing Vaccine Side Effects and Adverse Events",
+                  "shortText": "Reducing Risks"
+                }
+              },
+              {
+                "id": 64,
+                "uuid": "5f6fbba5-7e13-418f-b2b3-14bf56898b99",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>As technology has improved, we’ve been able to produce vaccines that pose less of a chance of causing vaccine side effects and rare adverse events. For example, new versions of the <a href=\"https://www.verywellhealth.com/what-are-common-flu-shot-reactions-770528\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\" rel=\"noopener noreferrer\">flu vaccine</a> may be less likely to induce anaphylactic reactions compared to older versions.<span class=\"ql-inline-citation\" data-cite=\"1\">﻿</span>﻿﻿</p>"
+                }
+              },
+              {
+                "id": 65,
+                "uuid": "a06c0944-423c-497a-a812-77d97a66caad",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>However, at present we know of no way to design a vaccine that doesn’t cause side effects in at least a subset of people. That may be the price we have to pay for protective immunity.</p>"
+                }
+              }
+            ],
+            "totalSize": 65
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "subheading": "Mild Side Effects Are Common—Serious Adverse Events Are Rare"
+  }

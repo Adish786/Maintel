@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-native" resourcePath="/components/ads/view/mntl-native.ftl">
+        <info>
+            <category>Mantle Components/Ads/Native</category>
+            <displayName>Ad Container</displayName>
+            <description>
+                Native ad wrapper component with fixed height to prevent CLS when native ad renders
+            </description>
+            <documentation>
+                Properties
+                    adHeight {Integer or String}
+                        - This property is an integer pixel value which is used to set the placeholder height (using CSS variable) for
+                        the native ad container. Removing this property sets height to be the default value of 'auto'.
+                    labeled {Boolean}
+                        - Adds "Advertisement" text as pseudo-element to **mntl-native__adunit** (ad slot component)
+
+                Classes:
+                    mntl-native--labeled
+                        - Toggled by "labeled" property
+
+                Data Attributes:
+                    data-selector
+                        - A custom DOM selector that can be used to place this component
+                        - Only relevant if **mntl-native** is outside of the scope of mntl-sc-page/sc-ads.js
+                    data-manual-load-on-scroll
+                        - If manual load is specified by removing scads-to-load class, then this data attribute is honored. If it is true,
+                          then request native ad on user scroll
+            </documentation>
+            <tags>Complete</tags>
+
+            <property name="adHeight" value="350" type="integer" />
+            <property name="labeled" value="true" type="boolean" />
+        </info>
+
+        <stylesheet path="/static/mantle/components/ads/native/css/mntl-native.css" />
+        <script path="/static/mantle/components/ads/native/js/mntl-native.js" />
+
+        <property name="labeled" value="false" type="boolean" />
+
+        <component location="content" ref="mntl-native__adunit" />
+    </component>
+
+    <component id="mntl-native__adunit" ref="mntl-gpt-dynamic-adunit">
+        <info>
+            <category>Mantle Components/Ads/Native</category>
+            <displayName>Ad Unit</displayName>
+            <description>
+                Native ad slot with default values that can be overridden by the vertical
+            </description>
+            <documentation>
+                Classes:
+                    scads-to-load
+                        - Class used to allow sc-ads.js to handle the placement and loading of the native ad
+            </documentation>
+            <tags>Complete</tags>
+        </info>
+
+    	<list id="class">
+            <property name="scads-to-load" value="scads-to-load" />
+        </list>
+
+        <for id="gptAd">
+            <property name="type" value="native" />
+            <property name="id" value="native" />
+            <list id="sizesList">
+                <property name="1x3" value="[1, 3]" />
+                <property name="fluid" value="'fluid'" />
+            </list>
+            <property name="pos" value="native" />
+            <property name="priority" value="4" />
+            <property name="rtb" value="false" type="boolean" />
+            <model name="gptAdSet" />
+        </for>
+    </component>
+
+    <component id="mntl-native-fluid" ref="mntl-native">
+        <info>
+            <category>Mantle Components/Ads/Native</category>
+            <displayName>Native Ad Container</displayName>
+            <description>
+                Native ad unit with updated sizes for Carbon sites.
+            </description>
+            <documentation>
+                The verticals should not override the size settings of this ad slot. This slot size config
+                is consistent across all Legacy Meredith sites.
+            </documentation>
+        </info>
+        <for id="mntl-native__adunit.gptAd">
+            <list id="sizesList" mode="replace">
+                <property name="1x3" value="[1, 3]" />
+                <property name="fluid" value="'fluid'" />
+            </list>
+        </for>
+    </component>
+</components>

@@ -1,0 +1,132 @@
+@import "mntlVariables";
+
+/*------------------------------------*\
+    1. Remove arrows from input type number element
+\*------------------------------------*/
+
+.newsletter {
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        .icon-logo {
+            height: 2rem;
+            width: auto;
+        }
+
+        .icon {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        margin-bottom: 1.5rem;
+    }
+
+    &__email-address {
+        &-button {
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        &-wrapper {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__date-picker {
+        max-width: 14.875rem;
+        margin: 1.5rem 0;
+
+        &-title {
+            margin-bottom: 0.5rem;
+        }
+
+        &-labels,
+        &-inputs {
+            display: grid;
+            grid-template-columns: 3.8125rem 3.4375rem 4.375rem;
+            grid-column-gap: 1.625rem;
+        }
+
+        &-month-input-wrapper,
+        &-day-input-wrapper,
+        &-year-input-wrapper {
+            input[type='number'] {
+                -moz-appearance: textfield;
+            }
+        }
+
+        &-month-input,
+        &-day-input,
+        &-year-input {
+            padding-left: 0.875rem;
+            padding-right: 0.875rem;
+
+            &::-webkit-inner-spin-button, // 1
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+        }
+
+        &-month-input-wrapper,
+        &-day-input-wrapper {
+            position: relative;
+
+            &::after {
+                content: '/';
+                position: absolute;
+                right: -1rem;
+                bottom: 0.4375rem;
+            }
+        }
+
+        .message-banner {
+            &--error {
+                .icon-error {
+                    position: relative;
+                    bottom: 0.75rem;
+                }
+            }
+        }
+    }
+
+    &__subscriptions {
+        &-title {
+            padding: 1.5rem 0 0;
+            text-align: center;
+        }
+
+        &-list {
+            margin: 0;
+            list-style: none;
+            padding: 1.5rem 1rem 0;
+        }
+
+        &-item {
+            padding-bottom: 1rem;
+            display: flex;
+        }
+    }
+
+    &__form-success {
+        text-align: center;
+
+        .icon-check-circle {
+            width: 6.25rem;
+            height: 6.25rem;
+            margin: 4.5rem 0 1.5rem;
+        }
+
+        &-message {
+            margin-bottom: 2rem;
+        }
+
+        &-button {
+            display: inline-flex;
+        }
+    }
+}

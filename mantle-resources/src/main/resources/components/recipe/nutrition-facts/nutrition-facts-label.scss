@@ -1,0 +1,108 @@
+@import 'mntlVariables';
+
+.mntl-nutrition-facts-label {
+    &__button {
+        border: 0;
+        border-radius: 0;
+        background: unset;
+        padding: 0;
+
+        &-text {
+            display: none;
+        }
+
+        &--show {
+            .mntl-nutrition-facts-label__button-text:nth-child(1) {
+                display: block;
+            }
+        }
+
+        &--hide {
+            .mntl-nutrition-facts-label__button-text:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        max-height: 187.5rem;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.5s, opacity 0.5s;
+        margin-bottom: 3rem;
+
+        &--collapsed {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: max-height 0.5s, opacity 0.5s, visibility 0s 0.5s;
+        }
+    }
+
+    &__contents {
+        border: 1px solid $color-black-15;
+        margin: 1.5rem 0 3rem;
+        padding: 1.5rem 1rem;
+
+        @media (min-width: $mntl-bp-sm) {
+            padding: 1.5rem;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    &__table-head {
+        text-align: left;
+    }
+
+    &__table-head-title {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        padding: 0;
+    }
+
+    &__table-head-subtitle {
+        font-weight: normal;
+        padding: 0;
+    }
+
+    &__table-body {
+        &:before {
+            content: '';
+            display: block;
+            margin-top: 2rem;
+        }
+
+        tr:not(:first-child) td {
+            border-bottom: 1px solid $color-black-15;
+            padding: 0.25rem 0;
+        }
+
+        td:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    &__table-dv-row {
+        td {
+            border-top: 1px solid $color-black-15;
+            border-bottom: 1px solid $color-black-15;
+            padding: 0.5rem 0;
+            text-align: right;
+        }
+    }
+
+    &__nutrient-name {
+        font-weight: bold;
+    }
+
+    &__table-head-pretext:after,
+    &__nutrient-name--has-postfix:after {
+        content: ':';
+        display: inline-block;
+    }
+}

@@ -1,0 +1,41 @@
+{
+	"id": "image.default.autos",
+	"name": "image.default.autos",
+	"displayName": "Autos Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/autos/0/102585995.jpg",
+			"owner" : "Michael Turek/The Image Bank/Getty Images",
+			"width" : "2121",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/autos/0/143133458.jpg",
+			"owner" : "Jordan Siemens/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/autos/0/144738048.jpg",
+			"owner" : "Cavan Images/Stone/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/autos/0/144738086.jpg",
+			"owner" : "Cavan Images/Stone/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/autos/0/82876023.jpg",
+			"owner" : "Simeone Huber/Photographer’s Choice/Getty Images",
+			"width" : "2110",
+			"height" : "1421"
+		}
+	]
+}

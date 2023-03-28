@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-taxonomysc-child-nodes" ref="mntl-block">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Child Node Tabs</displayName>
+            <description>Component to be used for rendering the child node tabs of a TAXONOMYSC page.</description>
+            <previewType>none</previewType>
+        </info>
+
+        <stylesheet path="/static/mantle/components/taxonomysc/css/taxonomysc-child-nodes.css" />
+
+        <property name="collapseIfNoChildren" value="${@taxonomyChildNodes.size() > 0 ? true : null}" onError="collapseSilent" />
+
+        <component location="content" id="mntl-taxonomysc-child-nodes__heading" ref="mntl-text-block">
+            <property name="tag" value="h3" />
+            <property name="text" value="Explore ${@document.shortHeading}">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </component>
+
+        <component location="content" id="mntl-taxonomysc-child-nodes__wrapper" ref="mntl-block">
+            <list id="class">
+                <property name="has-dropdown" value="${ @taxonomyChildNodes.size() > @listStart ? 'has-dropdown' : '' }" views="pc" />
+            </list>
+
+            <component location="content" id="mntl-taxonomysc-child-node__view-all" ref="mntl-text-link">
+                <list id="class">
+                    <property name="mntl-taxonomysc-child-node" value="mntl-taxonomysc-child-node" />
+                    <property name="is-active" value="is-active" />
+                    <property name="is-loaded" value="is-loaded" />
+                </list>
+
+                <map id="attrs">
+                    <property name="data-docId" value="${requestContext.urlData.docId.toString()}" />
+                </map>
+
+                <property name="text" value="All" />
+            </component>
+
+            <component location="content" id="mntl-taxonomysc-child-node" ref="mntl-taxonomysc-child-links">
+                <for id="mntl-taxonomysc-child-links__list">
+                    <list id="class">
+                        <property name="mntl-taxonomysc-child-node" value="mntl-taxonomysc-child-node" />
+                    </list>
+
+                    <property name="listStart" value="0" type="integer" />
+                    <property name="listEnd" value="4"  type="integer" views="pc" />
+                    <property name="uri" mode="remove" />
+                </for>
+            </component>
+
+            <component location="content" id="mntl-taxonomysc-child-node__dropdown-wrapper" ref="mntl-block" views="pc">
+                <property name="collapseIfNoRemainingTabs" value="${ @taxonomyChildNodes.size() > @listStart ? true : null }" onError="collapseSilent" />
+
+                <component location="content" id="mntl-taxonomysc-child-node__more-button" ref="mntl-button">
+                    <property name="text" value="More" />
+
+                    <map id="attrs">
+                        <property name="data-event-trigger" value="click" />
+                    </map>
+
+                    <property name="trackingContainer" value="true" type="boolean" />
+                </component>
+
+                <component location="content" id="mntl-taxonomysc-child-node__dropdown" ref="mntl-block">
+                    <component location="content" id="mntl-taxonomysc-child-node__list" ref="mntl-taxonomysc-child-links">
+                        <for id="mntl-taxonomysc-child-links__list">
+                            <list id="class">
+                                <property name="mntl-taxonomysc-child-node" value="mntl-taxonomysc-child-node" />
+                                <property name="mntl-taxonomysc-child-node__list-item" value="mntl-taxonomysc-child-node__list-item" />
+                            </list>
+
+                            <property name="listStart" value="4" type="integer" />
+                            <property name="uri" mode="remove" />
+                        </for>
+                    </component>
+                </component>
+            </component>
+        </component>
+
+        <for id="mntl-taxonomysc-child-node, mntl-taxonomysc-child-node__list-item, has-dropdown, collapseIfNoChildren, collapseIfNoRemainingTabs, listEnd">
+            <model name="taxonomyChildNodes">
+                <property name="docId" value="${requestContext.urlData.docId}" />
+            </model>
+        </for>
+
+        <for id="mntl-taxonomysc-child-node__list-item, has-dropdown, collapseIfNoRemainingTabs">
+            <property name="listStart" value="4" type="integer" />
+        </for>
+
+    </component>
+
+    <component id="mntl-taxonomysc-child-links" ref="mntl-group">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC List of Child Node Links</displayName>
+            <description>Component to be used for rendering a list of child node links of a TAXONOMYSC page. Intended to be reused
+            across the child node tabs/dropdown and the bottom of the page child node links (can override listStart and listEnd per instance).
+            </description>
+            <previewType>none</previewType>
+        </info>
+
+        <component-list location="content" id="mntl-taxonomysc-child-links__list" ref="mntl-text-link" iterable="${ utils.subList(@taxonomyChildNodes, @listStart, @listEnd) }">
+            <map id="attrs">
+                <property name="data-docId" value="${@taxonomyScChildNode.value.document.documentId.toString()}" />
+            </map>
+
+            <property name="text" value="${@taxonomyScChildNode.value.document.shortHeading}" />
+            <property name="uri" value="${@taxonomyScChildNode.value.document.url}" />
+            <property name="listStart" value="0" type="integer" />
+            <property name="listEnd" value="${@taxonomyChildNodes.size()}" />
+
+            <property name="removeSinglePageChildren" value="${@children.size() > 0 ? true : null}" onError="collapseSilent">
+                <model name="descendantArticles" id="children" onError="collapseSilent">
+                    <property name="docId" value="${@taxonomyScChildNode.value.document.documentId}" />
+                    <property name="limit" value="100" />
+                    <property name="maxDocPopulation" value="500" />
+                </model>
+            </property>
+
+            <for id="text,
+                uri,
+                attrs.data-docId,
+                removeSinglePageChildren.children.docId">
+                <component-list-item id="taxonomyScChildNode" ref="mntl-taxonomysc-child-links__list" />
+            </for>
+
+            <for id="this, listEnd">
+                <model name="taxonomyChildNodes">
+                    <property name="docId" value="${requestContext.urlData.docId}" />
+                </model>
+            </for>
+        </component-list>
+    </component>
+
+    <component id="mntl-taxonomysc-child-block" resourcePath="/components/taxonomysc/view/taxonomysc-child-block.ftl">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Block with Heading and Child Tax Node Links</displayName>
+            <description>Component to be used for rendering a list of child node links of a TAXONOMYSC page.</description>
+            <documentation>
+                # Properties
+
+                ## collapseUntilEnabled
+                This property takes an inner property "enabled" which is set to false by default. When "enabled" is false, this collapses
+                the mntl-taxonomysc-child-block component on default. This acts as a safeguard for the shared taxonomySC template in that
+                it allows new components to be added to the template without having it be unexpectedly displayed on verticals when they
+                upgrade mantle version.
+
+                ## collapseIfNoChildren
+                Collapses the component if the current taxonomy node has no children
+
+                # Locations
+
+                ## links
+                Intended for the reusable 'mntl-taxonomysc-child-links' component
+            </documentation>
+        </info>
+
+        <property name="collapseUntilEnabled" value="${@enabled ? 'true' : null}" onError="collapseSilent">
+            <property name="enabled" value="false" type="boolean" />
+        </property>
+
+        <property name="collapseIfNoChildren" value="${@taxonomyChildNodes.size() > 0 ? true : null}" onError="collapseSilent">
+            <model name="taxonomyChildNodes">
+                <property name="docId" value="${requestContext.urlData.docId}" />
+            </model>
+        </property>
+
+        <property name="heading" value="Explore ${@document.shortHeading}">
+            <model name="DOCUMENT" id="document" />
+        </property>
+
+        <component location="links" ref="mntl-taxonomysc-child-links" />
+    </component>
+</components>

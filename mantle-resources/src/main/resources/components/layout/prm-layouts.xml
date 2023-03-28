@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<!-- PERFORMANCE MARKETING LAYOUTS -->
+
+	<!-- PRM - BASE -->
+	<component id="mntl-prm-base-layout" ref="mntl-external-layout-body">
+
+		<for id="mntl-external-basic-sublayout">
+			<property name="tag" value="article" />
+			<list id="class">
+				<property name="article" value="article" />
+			</list>
+	  	</for>
+
+	  	<for id="mntl-external-basic-sublayout-content">
+			<list id="class">
+				<property name="article-content" value="article-content" />
+			</list>
+	 	</for>
+
+		<for id="external-content.externalComponent">
+			<property name="serviceId" value="performance-marketing" />
+	  	</for>
+	</component>
+
+	<!-- PRM - LIST SC -->
+	<component id="mntl-prm-listsc-layout" ref="mntl-prm-base-layout">
+
+	  	<for id="external-content.externalComponent">
+			<property name="componentId" value="list-sc-content" />
+	  	</for>
+	</component>
+
+	<!-- PRM - FULL PAGE PRODUCT REVIEW -->
+	<component id="mntl-prm-fpr-layout" ref="mntl-prm-base-layout">
+		<!-- Including stickybits here until we can resolve external script load issues -->
+		<script group="bottom" path="/static/mantle/static/libs/js/stickybits.js" />
+
+	  	<for id="external-content.externalComponent">
+			<property name="componentId" value="product-review-content" />
+	  	</for>
+	</component>
+
+	<!-- PRM - PRODUCT ROUNDUP -->
+	<component id="mntl-prm-product-roundup-layout" ref="mntl-prm-base-layout">
+		<!-- Including stickybits here until we can resolve external script load issues -->
+		<script group="bottom" path="/static/mantle/static/libs/js/stickybits.js" />
+
+	  	<for id="external-content.externalComponent">
+			<property name="componentId" value="product-roundup-content" />
+	  	</for>
+	</component>
+
+	<!-- PRM - PRODUCT ROUNDUP 2 - Intro/Body Split -->
+	<component id="mntl-prm-product-roundup-split-layout" ref="mntl-prm-product-roundup-layout">
+		<!-- Intro Content -->
+		<for id="mntl-external-basic-sublayout.mntl-external-basic-sublayout-content">
+			<component location="content-top" id="external-intro-content" ref="mntl-external-component">
+				<model name="externalComponent">
+					<property name="serviceId" value="performance-marketing" />
+					<property name="componentId" value="product-roundup-intro-content" />
+				</model>
+			</component>
+	  	</for>
+	</component>
+</components>

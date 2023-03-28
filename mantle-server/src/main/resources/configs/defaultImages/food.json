@@ -1,0 +1,76 @@
+{
+	"id": "image.default.food",
+	"name": "image.default.food",
+	"displayName": "Food Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/103731656.jpg",
+			"owner" : "Lara Hata/Photodisc/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/126364029.jpg",
+			"owner" : "Thomas Barwick/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/143070391.jpg",
+			"owner" : "Robert Nicholas/OJO Images/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/145083591.jpg",
+			"owner" : "Cultura/Nils Hendrik Mueller/Riser/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/145083600.jpg",
+			"owner" : "Cultura/Nils Hendrik Mueller/Riser/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/168328228.jpg",
+			"owner" : "Alexandra Grablewski/Taxi/Getty Images",
+			"width" : "2001",
+			"height" : "1501"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/169707541.jpg",
+			"owner" : "Betsie Van Der Meer/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/181519614.jpg",
+			"owner" : "A.Y. Photography/Moment/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/466713641.jpg",
+			"owner" : "Jordan Siemens/Taxi/Getty Images",
+			"width" : "2001",
+			"height" : "1501"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/food/0/sb10065363c-001.jpg",
+			"owner" : "Maren Caruso/Photographer’s Choice/Getty Images",
+			"width" : "1999",
+			"height" : "1501"
+		}
+	]
+}

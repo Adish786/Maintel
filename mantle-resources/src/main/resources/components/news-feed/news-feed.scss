@@ -1,0 +1,34 @@
+.mntl-news-feed {
+    .news-feed__feed {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .mntl-document-card {
+        flex-direction: row;
+    }
+
+    .card__content {
+        margin-left: 1rem;
+    }
+
+    .card__title {
+        display: block;
+    }
+
+    .card__byline {
+        display: inline-block;
+    }
+
+    .card__date {
+        display: inline-block;
+
+        &::before {
+            content: " | ";
+        }
+
+        &::after {
+            content: attr(data-block-date);
+        }
+    }
+}

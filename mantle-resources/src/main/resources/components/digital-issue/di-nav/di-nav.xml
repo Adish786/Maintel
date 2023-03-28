@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-nav" resourcePath="/components/digital-issue/di-nav/di-nav.ftl">
+        <info>
+            <category>Mantle Components/Navigation</category>
+            <displayName>Digital Issue Navigation</displayName>
+            <description>
+                A fixed navigation bar for a digital issue, for plug-and-play on Carbon sites. Can still be used on non-Carbon sites.
+                Uses an accordion on mobile and a full-width display on tablet and desktop.
+            </description>
+            <documentation>
+                # REQUIRED CSS
+                See the "NOTE:" in the stylesheet
+
+                # REQUIRED PROPERTIES
+
+                ## journeyRoot
+                The root journey node for the digital issue
+                Default: root node for the current URL's journey
+
+                ## journeySectionSizeMap
+                A special array that holds single-article journey nodes in index 0, and multiple-article
+                journey nodes in index 1
+                Default: special array for the current URL's journey
+
+                ## currentJourneySection
+                The journey node containing the current article
+                Default: curret node for the current URL's journey
+
+                # OPTIONAL PROPERTIES
+
+                ## titleClass
+                The class for the title
+                Default: "type--dog-link-bold"
+
+                ## title
+                The title in the nav
+                Default: the root node's shortHeading
+
+                ## navIcon
+                The icon next to the nav title
+                Default: "icon-caret"
+
+                ## overviewImageTag
+                Which image tag to use for the overview thumbnail
+                Default: "PRIMARY"
+
+                ## overviewThumbnailWidth
+                How wide the overview thumbnail is
+                Default: 128
+
+                ## overviewThumbnailHeight
+                How tall the overview thumbnail is
+                Default: 171
+
+                ## singularTitleClass
+                The class for the titles of the single sections
+                Default: "type--monkey-link-bold"
+
+                ## singularDocumentTitleClass
+                The class for the document titles of the single sections
+                Default: "type--cat-link"
+
+                ## overviewTitle
+                The title for the overview
+                Default: "${root node's shortHeading} Overview"
+
+                ## singularSectionImageTag
+                Which image tag to use for the single-article section thumbnails
+                Default: "RECIRC"
+
+                ## singularSectionThumbnailWidth
+                How wide the single-article section thumbnails are
+                Default: 80
+
+                ## singularSectionThumbnailHeight
+                How tall the single-article section thumbnails are
+                Default: 80
+
+                ## multipleSectionImageTag
+                Which image tag to use for the multiple-article section thumbnails
+                Default: "PRIMARY"
+
+                ## sectionTitleIcon
+                The icon next to the multiple-article section titles when in accordion mode
+                Default: "icon-caret"
+
+                ## multipleSectionThumbnailWidth
+                How wide the multiple-article section thumbnails are
+                Default: 80
+
+                ## multipleSectionThumbnailHeight
+                How tall the multiple-article section thumbnails are
+                Default: 80
+
+                ## multipleHeadingClass
+                The class for the headings of the multiple sections
+                Default: "type--cat-bold"
+
+                ## multipleTitleClass
+                The class for the titles of the multiple sections
+                Default: "type--cat-link"
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-nav/di-nav.css" />
+        <script path="/static/mantle/components/digital-issue/di-nav/di-nav.js" />
+        <svg id="icon-caret" path="/static/mantle/svg/icon-caret.min.svg" />
+
+        <property name="journeyRoot" value="${(!@isJourneyRootDocument AND @journeyStructure?.document?.viewType != null AND @journeyStructure.document.viewType.contains('DIGITALISSUE')) ? @journeyStructure : null}" onError="collapseSilent">
+            <model name="journeyStructure" onError="ignore" />
+            <model name="isJourneyRootDocument" />
+        </property>
+
+        <model name="journeySectionSizeMap" onError="collapseSilent" />
+        <model name="currentJourneySection" onError="ignore" />
+
+        <component location="thumbnail" id="mntl-di-nav__thumbnail" ref="mntl-universal-image">
+            <property name="tag" value="div" />
+        </component>
+    </component>
+
+</components>

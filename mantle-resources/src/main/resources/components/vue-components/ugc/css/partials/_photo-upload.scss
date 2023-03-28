@@ -1,0 +1,78 @@
+.photo-upload {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    margin-top: 1.5rem;
+
+    &__requirements {
+        .article-content & {
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+            margin-bottom: 0;
+
+            > .photo-upload__requirements-item {
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+
+    &__uploader {
+        position: relative;
+        margin-right: 1rem;
+        width: 7rem;
+        height: 7rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    &__add-photo {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+
+        .ugc-icon-add-photo {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .ugc-icon-remove-photo {
+            width: 0.75rem;
+            height: 0.9375rem;
+        }
+    }
+
+    &__field-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__remove-photo {
+        position: absolute;
+        bottom: 0.4375rem;
+        right: 0.3125rem;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+    }
+}

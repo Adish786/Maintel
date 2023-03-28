@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-toc" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents</displayName>
+			<description>
+				A list of links to anchor tags corresponding to h3 headings in the content.
+				Heading and expand/collapse option available.
+			</description>
+
+			<for id="display, mntl-toc__list-item">
+				<map id="tableOfContents" mode="replace">
+					<list id="items">
+						<map id="1">
+							<property name="heading" value="Heading 1" />
+							<property name="id" value="id1" />
+						</map>
+						<map id="2">
+							<property name="heading" value="Heading 2" />
+							<property name="id" value="id2" />
+						</map>
+					</list>
+				</map>
+			</for>
+		</info>
+
+		<script path="/static/mantle/components/widgets/toc/toc.js" />
+
+		<for id="display, mntl-toc__list-item">
+			<model name="tableOfContents" onError="ignore">
+				<model name="DOCUMENT" id="document" onError="halt" />
+			</model>
+		</for>
+
+		<map id="attrs">
+			<property name="data-offset" value="60" views="pc, tablet" />
+			<property name="data-offset" value="50" views="mobile" />
+		</map>
+
+		<property name="display" value="${@tableOfContents?.items?.size() gt 0 ? true : null}" onError="collapseSilent" />
+
+		<component location="content" id="mntl-toc__inner" ref="mntl-block">
+			<component location="content" id="mntl-toc__heading-group" ref="mntl-group">
+				<component location="content" id="mntl-toc__heading" ref="mntl-block">
+					<component location="content" id="mntl-toc__heading-text" ref="mntl-text-block">
+						<property name="tag" value="span" />
+						<property name="text" value="Table of Contents" />
+					</component>
+					<component location="content" ref="mntl-toc-toggle" />
+				</component>
+			</component>
+
+			<component location="content" ref="mntl-toc__list" />
+
+		</component>
+	</component>
+
+	<component id="mntl-toc__list" resourcePath="/components/widgets/toc/view/toc-list.ftl">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents List</displayName>
+		</info>
+
+		<component-list location="content" id="mntl-toc__list-item" ref="mntl-block" iterable="${@tableOfContents.items}">
+			<property name="tag" value="li" />
+
+			<component location="content" id="mntl-toc__list-item-heading" ref="mntl-block">
+				<component location="content" id="mntl-toc__list-item-link" ref="mntl-text-link">
+					<property name="safelist" value="false" type="boolean" />
+					<property name="class" value="mntl-toc__list-item-link js-mntl-toc-link" />
+
+					<for id="text, uri">
+						<component-list-item id="item" ref="mntl-toc__list-item" />
+					</for>
+
+					<property name="text" value="${@item.value.heading}" />
+					<property name="uri" value="#toc-${@item.value.id}" />
+				</component>
+			</component>
+		</component-list>
+	</component>
+
+	<component id="mntl-toc-toggle" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents Toggle</displayName>
+		</info>
+
+		<component location="content" id="mntl-toc-toggle__btn" ref="mntl-text-block">
+			<list name="class">
+				<property name="js-mntl-toc-toggle" value="js-mntl-toc-toggle" />
+			</list>
+
+			<property name="tag" value="button" />
+			<property name="text" value="Expand" />
+
+			<map id="attrs">
+				<property name="data-collapsed-text" value="Expand" />
+				<property name="data-expanded-text" value="Collapse" />
+			</map>
+		</component>
+	</component>
+
+	<component id="mntl-toc-anchor" resourcePath="/components/widgets/toc/view/toc-anchor.ftl">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents Anchor</displayName>
+		</info>
+	</component>
+
+	<component id="mntl-sticky-toc" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Sticky Table of Contents</displayName>
+			<description>
+				A list of links to anchor tags corresponding to h3 headings in the content.
+				Heading and expand/collapse option available.
+				TOC sticks on left side of screen on desktop, on top of screen on mobile/tablet as user scrolls content.
+			</description>
+			<documentation>
+				# classes
+
+				-__.js-sticky-container__
+
+					Must be added to the sticky TOC's container
+
+				# attrs
+
+				- __[data-desktop-bp]__ **String**
+
+					Represents the width at which a document transitions design and functionality from mobile/tablet to desktop/large tablet
+
+				### **displayJourneyCta** Property
+
+				Property inside of mntl-toc-journey. Determines whether the journey cta will show at the bottom of the sticky toc.
+				Defaults to false for backwards compatability for health. Could be updated to depend on being in a journey if health made necessary adjustments.
+
+				### **mntl-toc__mobile-toggle** component
+
+				Is injected in **mntl-toc__heading-group**. This component is hidden until we want to trigger the fixed TOC on smaller breakpoints.
+				On click it will bring the actual TOC without creating layout shift.
+			</documentation>
+
+			<for id="display, mntl-toc__list-item">
+				<map id="tableOfContents" mode="replace">
+					<list id="items">
+						<map id="1">
+							<property name="heading" value="Heading 1" />
+							<property name="id" value="id1" />
+						</map>
+						<map id="2">
+							<property name="heading" value="Heading 2" />
+							<property name="id" value="id2" />
+						</map>
+					</list>
+				</map>
+			</for>
+		</info>
+
+		<stylesheet path="/static/mantle/components/widgets/toc/sticky-toc/sticky-toc.css" />
+        <script path="/static/mantle/static/libs/js/stickybits.js" />
+		<script path="/static/mantle/components/widgets/toc/sticky-toc/sticky-toc.js" />
+
+		<component location="content" id="mntl-sticky-toc__marker" ref="mntl-toc-marker" />
+
+		<property id="arbitraryDependency" value="${@tableOfContents == null ? null : 'true' }" onError="collapseSilent">
+			<model name="tableOfContents" onError="ignore">
+				<model name="DOCUMENT" id="document" />
+			</model>
+		</property>
+
+		<map id="attrs">
+			<property name="data-desktop-bp" value="54em" /> <!-- Data attribute that determines breakpoint for sticky behavior between desktop (or iPad Pro) and mobile/tablet -->
+		</map>
+
+		<list id="class">
+			<property name="sticky-toc-widget" value="sticky-toc-widget" />
+		</list>
+
+		<component location="content" id="toc-wrapper" ref="mntl-toc">
+			<property name="trackingContainer" value="true" type="boolean" />
+
+			<for id="mntl-toc__heading">
+				<list id="class">
+					<property name="js-toc-toggle" value="js-toc-toggle" />
+				</list>
+			</for>
+
+			<for id="mntl-toc__list">
+				<list id="class">
+					<property name="mntl-toc__list-heading" value="mntl-toc__list-heading" />
+					<property name="expert-content" value="expert-content" />
+				</list>
+
+				<component location="content" ref="mntl-toc-journey" />
+			</for>
+
+			<for id="mntl-toc__heading-group">
+				<component location="content" id="mntl-toc__mobile-toggle" ref="mntl-block">
+					<list id="class">
+						<property name="class" value="js-sticky-toggle" />
+					</list>
+
+					<component location="content" id="mntl-toc__heading-text" ref="mntl-text-block">
+						<property name="tag" value="span" />
+						<property name="text" value="Table of Contents" />
+					</component>
+				</component>
+			</for>
+		</component>
+	</component>
+
+	<component id="mntl-toc-journey" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents Journey</displayName>
+		</info>
+
+        <property name="displayJourneyCta" value="${null}" onError="collapseSilent" />
+
+        <property name="tag" value="li" />
+
+        <component location="content" ref="mntl-text-block" id="mntl-toc-journey__heading">
+            <property name="text" value="Next Article in" />
+        </component>
+
+        <component location="content" ref="mntl-text-block" id="mntl-toc-journey__title">
+            <property name="text" value="${@journey?.shortHeading}" />
+		</component>
+
+        <component location="content" ref="mntl-text-link" id="mntl-toc-journey__article-link">
+            <property name="text" value="${@nextDoc.document.bestTitle}" />
+            <property name="uri" value="${@nextDoc.document.url}" />
+
+            <for id="text, uri">
+                <property name="nextDoc" value="${@nextDocument?.size() >= 1 ? @nextDocument[0] : null}" onError="collapseSilent">
+                    <model name="journeyDocumentsAfterToBeforeInclusive" id="nextDocument">
+                        <property name="journeyRoot" value="${@journey}" />
+                        <property name="docId" value="${@requestContext.urlData.docId}" />
+                    </model>
+                </property>
+            </for>
+		</component>
+
+        <for id="journeyRoot, mntl-toc-journey__title.text">
+            <model name="journeyStructure" id="journey" onError="ignore">
+                <property name="docId" value="${requestContext.urlData.docId}" />
+                <property name="includeDocumentSummaries" value="true" type="boolean" />
+            </model>
+        </for>
+    </component>
+
+	<component id="mntl-toc-marker" ref="mntl-group">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Table of Contents Marker</displayName>
+		</info>
+
+		<script path="/static/mantle/js/mntl-vanilla-scroll.js" />
+		<script path="/static/mantle/components/widgets/toc/toc-marker/toc-marker.js" />
+		<stylesheet path="/static/mantle/components/widgets/toc/toc-marker/toc-marker.css" />
+	</component>
+
+	<component id="mntl-toc-list-item" resourcePath="/components/widgets/toc/view/toc-list-item.ftl">
+		<info>
+			<category>Mantle Components/Navigation</category>
+			<displayName>TOC List Item</displayName>
+			<description>
+				This component will produce a single item for a TOC.
+				Helpful to add hardcoded items into the TOC.
+				FTL contains the classes that are typical to mntl toc list items.
+				Properties:
+				- text
+				- uri
+			</description>
+
+			<property name="text" value="Text to Display" />
+			<property name="uri" value="#jump-link" />
+
+		</info>
+	</component>
+
+	<component id="mntl-toc__listsc-items" ref="mntl-group">
+		<info>
+			<category>Mantle Components/Navigation</category>
+			<displayName>TOC List-SC Items</displayName>
+			<description>
+				This component will produce a list of TOC items from a given set of list-sc items.
+				Intended to be added to the mntl-toc__list component via its pre-content location.
+				Properties:
+				- text
+				- uri
+			</description>
+		</info>
+
+		<component-list location="content" id="listsc-items-list" iterable="${@items}" ref="mntl-group">
+			<property name="items" value="${@document.items}">
+				<model name="DOCUMENT" id="document" onError="halt" />
+			</property>
+
+			<for id="mntl-toc__list-item.text, mntl-toc__list-item.uri">
+				<component-list-item id="item" ref="listsc-items-list" />
+			</for>
+
+			<component location="content" id="mntl-toc__list-item" ref="mntl-toc-list-item">
+				<property name="text" value="Text to Display" />
+				<property name="uri" value="#jump-link" />
+			</component>
+		</component-list>
+	</component>
+
+</components>

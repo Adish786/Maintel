@@ -1,0 +1,27 @@
+.mntl-auth0 {
+    cursor: pointer;
+}
+
+.mntl-auth0-sign-out {
+    display: none;
+}
+
+.signed-in {
+    [data-auth0-type="signin"],
+    .mntl-auth0-sign-in {
+        display: none;
+    }
+
+    [data-auth0-type="signout"],
+    .mntl-auth0-sign-out {
+        display: inherit;
+    }
+}
+
+body.auth0-lib-loading {
+    cursor: 'progress';
+    
+    .mntl-auth0 {
+        cursor: 'progress';
+    }
+}

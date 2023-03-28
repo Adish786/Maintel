@@ -1,0 +1,112 @@
+.pl-edit {
+    &-window {
+        max-height: 400px;
+        overflow-y: scroll;
+        margin-bottom: 1em;
+
+        @media screen and (min-width: $nav-toggle) {
+            padding-right: 50%;
+        }
+
+        + .pl-button {
+            margin-top: 22px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        + ul {
+            margin-top: 22px !important;
+        }
+
+        ul {
+            padding-left: 8px;
+        }
+    }
+
+    li {
+        position: relative;
+
+        &:not(.no-border) {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #616161;
+        }
+
+        &.disabled {
+            border-bottom: 1px dashed #616161;
+            color: #616161;
+        }
+
+        + li {
+            margin-top: 22px !important;
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 0.75em;
+        color: #616161;
+
+        + input {
+            display: block;
+            width: 100%;
+            border: 0;
+            box-shadow: none;
+            background: none;
+            line-height: 1;
+            margin: 4px 0 0;
+            font-size: 1em;
+            outline: none;
+            color: #E0E2E4;
+
+            @include placeholder(#616161);
+
+            + .pl-edit-highlight {
+                opacity: 0;
+            }
+
+            &:active,
+            &:focus {
+                + .pl-edit-highlight {
+                    opacity: 1;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    width: 100%;
+                    height: 1px;
+                    border-bottom: 2px solid $secondary;
+
+                    @include transition(opacity, 0.3s, ease);
+                }
+            }
+        }
+    }
+
+    .login-error {
+        display: none;
+        font-weight: bold;
+        padding: 10px 0;
+        color: $error;
+    }
+
+    &.error {
+        .login-error {
+            display: block;
+        }
+    }
+
+    &.authenticated {
+        .auth-fields {
+            display: none;
+        }
+
+        @media screen and (min-width: $nav-toggle) {
+            input[type=submit] {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.mntl-pl-colors {
+    font-family: RobotoDraft, sans-serif;
+    color: #222222;
+    padding: 37px 2px;
+
+    .colors {
+        @include clearfix;
+
+        list-style: none;
+        margin: 0;
+
+        > li {
+            width: 12rem;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px 0;
+        }
+    }
+
+    .swatch {
+        margin: 0 auto;
+        height: 2rem;
+        width: 75%;
+    }
+
+    .swatch-hex {
+        margin-top: 0.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .swatch-name {
+        line-height: 1;
+        text-align: center;
+    }
+}

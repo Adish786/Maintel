@@ -1,0 +1,24 @@
+.sponsorship-item {
+
+    &__logo {
+        max-width: 150px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__disclaimer {
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:after {
+            cursor: auto;
+        }
+    }
+}

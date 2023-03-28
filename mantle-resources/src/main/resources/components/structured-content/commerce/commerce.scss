@@ -1,0 +1,56 @@
+@import "mntlVariables";
+
+/*------------------------------------*\
+    #MNTL-SC-BLOCK-COMMERCE
+    1. Hide the image block when it's within the commerce block. It is an empty
+       template at this time.
+\*------------------------------------*/
+
+.mntl-sc-block-commerce {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: $bp-small2) {
+        align-items: flex-start;
+        width: auto;
+        vertical-align: top;
+    }
+
+    .mntl-sc-block-image,
+    .mntl-universal-image {
+        display: none; /* 1 */
+    }
+}
+
+/**
+ * 1. Sometimes the next el is an <a> tag used as an anchor which won't clear
+ *    because it's an in-line element. Elements should otherwise be blocks.
+ */
+
+.mntl-sc-block-commerce + .mntl-sc-block-comparisonlist + *,
+.mntl-sc-block-commerce + *:not(.mntl-sc-block-comparisonlist) {
+    display: block; /* 1 */
+    clear: left;
+}
+
+// Show price on button
+.mntl-sc-block-commerce__button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem 0.5rem 0;
+    text-decoration: none;
+    color: $color;
+    background-color: $secondary;
+
+    &[data-commerce-price]::before {
+        content: attr(data-commerce-price);
+    }
+}
+
+.mntl-sc-block-heading--link {
+    cursor: pointer;
+}

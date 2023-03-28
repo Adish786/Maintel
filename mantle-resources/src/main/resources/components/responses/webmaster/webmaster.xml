@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-webmaster-bing" resourcePath="/components/responses/webmaster/view/webmaster-bing.ftl">
+        <info>
+            <category>Mantle Components/Analytics</category>
+            <displayName>Webmaster Verification (Bing)</displayName>
+            <description>
+Adds BING webmaster verification.
+            </description>
+            <documentation></documentation>
+            <tags>Complete, Response</tags>
+            <previewType>markup</previewType>
+        </info>
+		<property name="user" value="" />
+	</component>
+
+	<component id="mntl-webmaster-google" resourcePath="/components/responses/webmaster/view/webmaster-google.ftl">
+        <info>
+            <category>Mantle Components/Analytics</category>
+            <displayName>Webmaster Verification (Google)</displayName>
+            <description>
+Adds Google webmaster verification.
+            </description>
+            <documentation></documentation>
+            <tags>Complete, Response</tags>
+            <previewType>markup</previewType>
+        </info>
+		<property name="verification" value="" />
+	</component>
+
+</components>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-vue-base" resourcePath="/components/common-vue-utilities/mntl-vue-base/templates/mntl-vue-base.ftl">
+        <info>
+            <category>Mantle Components/VueJS Components/</category>
+            <displayName>Mntl Vue Base</displayName>
+            <description>
+                This component is the common shell Vue Props Component for Mantle. This component is the starting point for all
+                mantle inherited vue components that want to override property fields in a baseline vue component.
+            </description>
+            <documentation>
+                Fields set:
+                * appId (String) - Name of the Vue App
+                * data (Object) - Key value pairs of data to set on the vue app
+                * props (Object) - Key value pairs of props to set on the vue app
+            </documentation>
+            <previewType>markup</previewType>
+        </info>
+
+        <script path="/static/mantle/static/libs/js/vue.js" />
+        <script path="/static/mantle/components/common-vue-utilities/js/mntl-common-vue-configs.js" />
+        <script path="/static/mantle/static/libs/js/lodash-deepclone.js" />
+        <script evaluated="true" path="/static/mantle/components/common-vue-utilities/mntl-vue-base/js/mntl-vue-base.evaluated.js" />
+
+        <!-- You want to set the appId in the child component as per example below -->
+        <!--<property name="appId" value="MyVueComponentName" />-->
+
+        <!-- You want to provide data -->
+        <!--<map id="data"></map>-->
+
+        <!-- You want to provide props -->
+        <!--<map id="props"></map>-->
+    </component>
+</components>

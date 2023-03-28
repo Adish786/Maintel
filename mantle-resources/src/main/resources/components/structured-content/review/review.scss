@@ -1,0 +1,21 @@
+.mntl-sc-block-review,
+.mntl-sc-block-review--universal-image {
+    &__header-link {
+        max-width: 300px;
+    }
+
+    &__entity-link {
+        display: inline-block;
+    }
+
+    &__rating:before {
+        content: 'Overall Rating';
+        display: block;
+        text-transform: uppercase;
+    }
+
+    &__quick-facts:before {
+        content: 'Quick Facts';
+        text-transform: uppercase;
+    }
+}

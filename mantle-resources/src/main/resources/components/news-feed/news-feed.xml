@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-news-feed" resourcePath="/components/news-feed/news-feed.ftl">
+        <info>
+			<category>Mantle Components/Lists</category>
+			<displayName>News Feed</displayName>
+			<description>
+                This component displays a list of documents in the form of a news feed. This component uses a news feed model that allows you to specify a programmed summary doc that will be
+                used as the source of feed items. By using a programmed summary doc as a source of data, this feed can display news documents as they are published and added to the summary in realtime.
+            </description>
+			<documentation>
+                # Models
+
+                ## dynamicNewsFeedWithDefaultFilters
+                Returns a list of documents that are children of the provided progammed summary doc
+
+                # Properties
+
+                ## title
+                Title of the news feed that will be displayed
+
+                ## seeMoreLink
+                Url of link that appears at the bottom of the feed. The link should direct the user to a news taxonomy page
+
+                ## seeMoreLinkText
+                Text of link that appears at the bottom of the feed
+
+                # Locations
+
+                ## feed
+                Location that the document card list is inserted
+            </documentation>
+
+            <property name="seeMoreLink" value="/news-4795879" />
+            <for id="documentList">
+                <property name="programmedSummaryDocId" value="5560867" />
+            </for>
+
+		</info>
+
+        <stylesheet path="/static/mantle/components/news-feed/news-feed.css" />
+
+        <property name="title" value="Latest News" />
+        <property name="seeMoreLink" value="" />
+        <property name="seeMoreLinkText" value="See All News" />
+
+        <component location="feed" id="news-feed__feed" ref="mntl-document-card-list">
+
+            <component id="mntl-card-list__bottom" mode="remove" />
+
+            <for id="mntl-card-list-items">
+                <property name="cta" mode="remove" />
+                <property name="image" mode="remove" />
+
+                <component location="card__top" id="card__media" ref="mntl-universal-image">
+                    <property name="width" value="150" type="integer" views="pc, tablet" />
+                    <property name="height" value="100" type="integer" views="pc, tablet" />
+                    <property name="width" value="120" type="integer" views="mobile" />
+                    <property name="height" value="80" type="integer" views="mobile" />
+                    <property name="placeholderWidth" mode="remove" />
+                    <property name="placeholderHeight" mode="remove" />
+                </component>
+
+                <component location="content" id="card__date" ref="mntl-block">
+                    <map id="attrs">
+                        <property name="data-block-date" value="${@date != null ? renderUtils.computeUpdatedDate(@date, true) : ''}" onError="ignore">
+                            <property name="date" value="${@item.value.document.dates?.firstPublished}" onError="ignore" />
+                        </property>
+                    </map>
+                </component>
+
+                <model name="documentTaxeneList" id="listItems" onError="collapseSilent">
+                    <model name="dynamicNewsFeedWithDefaultFilters" id="documentList">
+                        <property name="limit" value="10" type="integer" />
+                        <property name="programmedSummaryDocId" value="" />
+                    </model>
+                </model>
+            </for>
+
+            <for id="card__media, card__media.alt">
+                <property name="image" value="${@document?.getImageForUsage('RECIRC')?.objectId != null ? @document.getImageForUsage('RECIRC') : @fallbackImage}">
+                    <property name="document" value="${@item.value.document}" />
+                    <property name="fallbackImage" value="${{'objectId': messages['defaultPlaceHolderImage'], 'alt': 'placeholder image'}}" />
+                </property>
+            </for>
+
+            <for id="date, document">
+                <component-list-item id="item" ref="mntl-card-list-items" />
+            </for>
+
+        </component>
+
+    </component>
+
+</components>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-primary-image" resourcePath="/components/image/view/primary-image.ftl">
+        <info>
+            <category>Mantle Components/Media</category>
+            <displayName>Primary Image</displayName>
+            <description>Primary Image of the document</description>
+            <documentation>
+                # Classes
+
+                - __.mntl-primary-image__
+
+                class of the image tag
+
+                # Models / Properties
+
+                - __providedImageSources__
+
+                Provides srcset, src and sizes (all image attributes) in one combined string
+                PS. this task is also used to get image information which is added to link header to
+                preload the primary image.
+
+                - __alt__-
+
+                Alt text for the image
+
+                - __placeholder__-
+
+                Renders the **img-placeholder** div which sets up a placeholder div for the image
+
+                - __blurryPlaceholder__-
+
+                Boolean indicating if blurry placeholder image needed while main image isn't loaded yet
+                NOTE: blurry placeholder requires that **placeholder** also be set to true in order for blurry placeholder to show
+            </documentation>
+            <tags>Complete</tags>
+
+           <for id="providedImageSources, alt, this">
+              <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}">
+                  <model name="mockDocument" id="document">
+                      <property name="template" value="structured-content-basic-one-of-each" />
+                  </model>
+               </property>
+           </for>
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/image/image.css" />
+
+        <for id="providedImageSources,alt,this">
+            <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+
+        <model name="primaryImageLinkHeader" id="providedImageSources">
+            <property name="sizes" value="" />
+            <property name="width" value="500" type="integer" />
+            <property name="height" value="350" type="integer" />
+            <property name="cropSetting" value="" />
+            <property name="forceSize" value="false" type="boolean" />
+            <property name="fitInStyle" value="" />
+            <property name="webpAuto" value="true" type="boolean" />
+
+            <list id="filters">
+                <property name="upscale" value="${imageFilter.noUpscale()}" />
+                <property name="maxBytes" value="max_bytes(150000)" />
+                <property name="stripicc" value="strip_icc()" />
+            </list>
+
+            <map id="srcset">
+                <property name="minWidth" value="400" type="integer" />
+                <property name="maxWidth" value="950" type="integer" />
+                <property name="maxHeight" value="0" type="integer" />
+                <property name="stepCount" value="3" type="integer" />
+            </map>
+        </model>
+
+        <property name="alt" value="${@image?.alt != null ? @image.alt : ''}" />
+        <property name="blurryPlaceholder" value="true" type="boolean" />
+    </component>
+
+</components>

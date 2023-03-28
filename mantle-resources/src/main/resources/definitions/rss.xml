@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+
+    <template id="mntl-rss-curated" resourcePath="/components/responses/rss/rss2.ftl">
+     	<for id="this,curatedList">
+            <property name="listName" value="rss.ref.${requestContext.requestUrl.substring(requestContext.requestUrl.indexOf('/feeds/') + 7, requestContext.requestUrl.lastIndexOf('.'))}" />
+        </for>
+        <model id="rss2" name="curatedRSS2Transformer" onError="halt">
+            <model id="curatedList" name="documentCuratedList"/>
+            <property name="maxItems" value="10" type="integer"/>
+        </model>
+    </template>
+
+    <template id="mntl-rss-curated-full" resourcePath="/components/responses/rss/rss2.ftl">
+        <for id="this,curatedList">
+            <property name="listName" value="rss.ref.${requestContext.requestUrl.substring(requestContext.requestUrl.indexOf('/feeds/full/') + 12, requestContext.requestUrl.lastIndexOf('.'))}" />
+        </for>
+        <model id="rss2" name="curatedRSS2Transformer" onError="halt">
+            <model id="curatedList" name="documentCuratedListWithDate">
+                <property name="historyDepth" value="10"/>
+                <property name="pageNum" value="1"/>
+                <property name="itemsPerPage" value="40"/>
+            </model>
+            <property name="maxItems" value="40" type="integer"/>
+        </model>
+    </template>
+
+    <template id="mntl-google-news-feed-template" ref="mntl-google-news-feed" />
+    <template id="mntl-pinterest-taxonomy-feed-template" ref="mntl-pinterest-taxonomy-feed" />
+    <template id="mntl-smart-news-feed-template" ref="mntl-smart-news-feed" />
+    <template id="mntl-flipboard-feed-template" ref="mntl-flipboard-feed" />
+
+</templates>

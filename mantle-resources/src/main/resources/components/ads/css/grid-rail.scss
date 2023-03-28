@@ -1,0 +1,19 @@
+@import "mntlVariables";
+
+/*
+1) !important is needed for right rail ads on aplus templates below $mntl-bp-lg to avoid extra empty space
+*/
+
+.mntl-article--external {
+    .mntl-sc-sticky-billboard {
+        position: static;
+        width: auto;
+        height: auto !important; // 1
+
+        @media screen and (min-width: $mntl-bp-lg) {
+            position: absolute;
+            width: 300px;
+            right: 2rem;
+        }
+    }
+}

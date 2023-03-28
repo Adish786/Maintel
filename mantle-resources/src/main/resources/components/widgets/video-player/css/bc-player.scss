@@ -1,0 +1,132 @@
+@import "mntlVariables";
+
+/*
+1) Put the Brightcove thumbnail URL as a background image on a pseudoelement,
+   to use as a placeholder before the video loads in. Sit the video on top of it with opacity: 0,
+   then turn it to 1 once it's loaded in
+2) Hero video player is not deferred, so load in the thumbnail sooner
+*/
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mntl-bcplayer {
+
+    .jumpstart-native-wrapper,
+    .jumpstart-js-wrapper {
+        // Video player based on EMs with a 16px root to properly align controls
+        font-size: 16px;
+    }
+
+    .jumpstart-native-wrapper {
+        position: relative;
+    }
+
+    .jumpstart-native-video {
+        width: 100%;
+    }
+
+    .jumpstart-js-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        background: $color-black;
+        z-index: 1;
+
+        .jumpstart-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // Styles lifted from the jumpstart video player to create a fake css only play button
+    // for the mobile experience introduced in AXIS-3545
+    .jumpstart-play-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateZ(0) translate(-50%, -50%);
+        font-size: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: rgba(0, 0, 0, 0.65);
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+
+        .jumpstart-play-placeholder-icon {
+            background-color: transparent;
+            padding: 0;
+            box-sizing: border-box;
+            border-width: 9px 0px 9px 17px;
+            border-color: transparent transparent transparent $color-white;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+        }
+
+        &.loading {
+            animation: spin 1s linear infinite;
+            border-top: 4px solid #555555;
+            top: 40%;
+            left: 45%;
+        }
+    }
+
+    &.u-autoplay-looped {
+        pointer-events: none;
+    
+        .jumpstart-native-wrapper {
+            width: 100%;
+            height: 0;
+            padding-bottom: var(--aspectRatioPaddingBottom);
+        }
+    
+        .jumpstart-native-wrapper::after {
+            content: '';
+            width: 100%;
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: 100%;
+            background-color: $color-white;
+    
+            .is-window-loaded &,
+            .video-player--hero & { // 2
+                background-image: var(--backgroundImage); // 1
+            }
+        }
+    
+        .jumpstart-native-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+    
+            &[src] { // 1
+                opacity: 1;
+            }
+        }
+    
+        .jumpstart-control,
+        .jumpstart-control-loader {
+            visibility: hidden;
+        }
+
+        .jumpstart-gif-js-wrapper {
+            background: #F2DEDE;
+        }
+    }
+}

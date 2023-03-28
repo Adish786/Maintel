@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="mntl-caeslinks" ref="mntl-group">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Caeslinks</displayName>
+			<description>
+				Loads CAES links js script on page load. CAES links js will add click handlers
+				to product links that will send the user to CAES product endpoint.
+			</description>
+		</info>
+
+		<property name="collapseIfNotCaes" value="${@isCaesEnabled.value ? true : null}" onError="collapseSilent">
+			<model name="externalConfig" id="isCaesEnabled">
+				<property name="key" value="com.about.globe.caes.enabled"/>
+                <property name="default" value="false" type="boolean" />
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+			</model>
+		</property>
+
+		<property name="collapseIfNotMonetizeable"  value="${(@document != null AND (@document.revenueGroup == 'COMMERCE' OR
+					@document.revenueGroup == 'COMMERCENEWSDEALS')) ? true : null}" onError="collapseSilent" >
+			<model name="fetchDocumentIfValid" id="document" onError="ignore" />
+		</property>
+
+		<component ref="mntl-externalize-links">
+			<property name="plugins" value="${{'window.Mntl.caesLinksHandler'}}" mode="replace"/>
+		</component>
+
+		<script group="top" path="/static/mantle/js/utilities.js"></script>
+		<script group="bottom" path="/static/mantle/components/widgets/caeslinks/js/caeslinks.js"></script>
+		<script group="bottom" evaluated="true" path="/static/mantle/components/widgets/caeslinks/js/caeslinks.evaluated.js"></script>
+	</component>
+</components>

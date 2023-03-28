@@ -1,0 +1,19 @@
+@import "mntlVariables";
+
+.mntl-right-rail {
+
+    .js-scads-inline-content {
+        position: static;
+        top: initial;
+    }
+
+    .mntl-sc-sticky-billboard {
+        @media screen and (min-width: $mntl-bp-md) {
+            position: static;
+        }
+    }
+
+    @media (min-width: $mntl-bp-md) {
+        display: none;
+    }
+}

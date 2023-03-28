@@ -1,0 +1,1454 @@
+{
+    "revisionId": "5188318_1676645185100",
+    "authorKey": "239271",
+    "lastEditingAuthorId": "156569",
+    "lastEditingUserId": "163468060587993",
+    "url": "https://www.byrdie.com/clinique-5188318",
+    "rootUrl": "https://www.byrdie.com/clinique-5188318",
+    "vertical": "BEAUTY",
+    "docId": 5188318,
+    "slug": "clinique",
+    "templateType": "LISTSC",
+    "documentState": {
+      "state": "ACTIVE",
+      "activeDate": 1664906694359
+    },
+    "dates": {
+      "created": 1623179663320,
+      "updated": 1676645185100,
+      "firstPublished": 1623352756315,
+      "lastPublished": 1664906694359,
+      "firstPending": 1623352730994,
+      "displayed": 1664906694418,
+      "lastMaterialPublished": 1664906694418
+    },
+    "medicalBoardApproved": false,
+    "noIndex": false,
+    "title": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+    "socialTitle": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+    "metaDescription": "As the #1 prestige beauty brand in the U.S., Clinique also has the top prestige facial moisturizer, cleanser, and makeup remover. See which bestsellers to add to your regimen.",
+    "heading": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+    "taggedImages": {
+      "list": [
+        {
+          "image": {
+            "caption": "",
+            "owner": "<p>Stocksy / Design by Tiana Crispino </p>",
+            "alt": "clinique ",
+            "width": 1000,
+            "height": 800,
+            "id": "cb8baeab3c1c482aaca70c2e0ade67a3",
+            "fileName": "RECIRCByrdiexClinique.jpg",
+            "objectId": "RECIRCByrdiexClinique-cb8baeab3c1c482aaca70c2e0ade67a3.jpg",
+            "sensitive": false,
+            "original": false,
+            "encodedThumbnail": "R0lGODlhCQAHAPUAAAEFBAAGBgEHBwEJCwgTFw0REBMOCigWEigbFS4dFTgbEzwfGTggFjknHUcpH14qH0gqIEopIEQyJFcvJVIxKFk0JF40JGQ6LG09KWc9MWo+MXpDL3dMO3pMPXpSOIFPRIZVRoJWSYVWTIJZR45oX5BlXJNrbKRxVK6KfqWHidGcitKvnNm1pdi0qNi5p9u/sd6+sd6+s9/Dt+DDteLCteHFuePHu+PHvOHKuubKvObKv+vPwevRxO7TwuzRyAEFBCwAAAAACQAHAEUISgBZrKhRgUMHCgEGxEChQ4IJERM2AJABY4aHEiA+RMBgg0YOFQkgWDBA4oULHAguhNBQQEGLHj4ajEiRgYCAHTce8HBwYAGDEwEBADs="
+          },
+          "tags": {
+            "list": [
+              "PRIMARY",
+              "RECIRC",
+              "PINTEREST",
+              "FACEBOOK",
+              "TWITTER"
+            ],
+            "totalSize": 5
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "primaryVideo": {
+      
+    },
+    "summary": {
+      "title": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+      "socialTitle": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+      "heading": "The 11 Best Clinique Products to Add to Your Permanent Product Rotation ",
+      "description": "As the #1 prestige beauty brand in the U.S., Clinique also has the top prestige facial moisturizer, cleanser, and makeup remover. See which bestsellers to add to your regimen.",
+      "image": {
+        "caption": "",
+        "owner": "<p>Stocksy / Design by Tiana Crispino </p>",
+        "alt": "clinique ",
+        "width": 1000,
+        "height": 800,
+        "id": "cb8baeab3c1c482aaca70c2e0ade67a3",
+        "fileName": "RECIRCByrdiexClinique.jpg",
+        "objectId": "RECIRCByrdiexClinique-cb8baeab3c1c482aaca70c2e0ade67a3.jpg",
+        "sensitive": false,
+        "original": false,
+        "encodedThumbnail": "R0lGODlhCQAHAPUAAAEFBAAGBgEHBwEJCwgTFw0REBMOCigWEigbFS4dFTgbEzwfGTggFjknHUcpH14qH0gqIEopIEQyJFcvJVIxKFk0JF40JGQ6LG09KWc9MWo+MXpDL3dMO3pMPXpSOIFPRIZVRoJWSYVWTIJZR45oX5BlXJNrbKRxVK6KfqWHidGcitKvnNm1pdi0qNi5p9u/sd6+sd6+s9/Dt+DDteLCteHFuePHu+PHvOHKuubKvObKv+vPwevRxO7TwuzRyAEFBCwAAAAACQAHAEUISgBZrKhRgUMHCgEGxEChQ4IJERM2AJABY4aHEiA+RMBgg0YOFQkgWDBA4oULHAguhNBQQEGLHj4ajEiRgYCAHTce8HBwYAGDEwEBADs="
+      },
+      "sponsor": {
+        "sponsorImage": {
+          "caption": "",
+          "owner": "",
+          "alt": "Clinique black logo ",
+          "width": 2385,
+          "height": 483,
+          "id": "124a868e19e14e07940097a01a863b60",
+          "fileName": "Clinique-Primary-Logo.jpg",
+          "objectId": "Clinique-Primary-Logo-124a868e19e14e07940097a01a863b60.jpg",
+          "sensitive": false,
+          "original": false,
+          "encodedThumbnail": "R0lGODlhEgAEAPEAAAAAAH9/f////wAAACwAAAAAEgAEAEEIHwABCBg4UGBBAQAEBjhIsCHBhAgdSnwoMKHBiRgFBAQAOw=="
+        },
+        "description": "This content was created on behalf of the advertiser by The Foundry at Dotdash Meredith",
+        "url": "https://ad.doubleclick.net/ddm/trackclk/N346010.1822180BYRDIE.COM/B28082910.344618538;dc_trk_aid=536312086;dc_trk_cid=176821277;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=",
+        "title": "Sponsored by"
+      }
+    },
+    "sponsor": {
+      "sponsorImage": {
+        "caption": "",
+        "owner": "",
+        "alt": "Clinique black logo ",
+        "width": 2385,
+        "height": 483,
+        "id": "124a868e19e14e07940097a01a863b60",
+        "fileName": "Clinique-Primary-Logo.jpg",
+        "objectId": "Clinique-Primary-Logo-124a868e19e14e07940097a01a863b60.jpg",
+        "sensitive": false,
+        "original": false,
+        "encodedThumbnail": "R0lGODlhEgAEAPEAAAAAAH9/f////wAAACwAAAAAEgAEAEEIHwABCBg4UGBBAQAEBjhIsCHBhAgdSnwoMKHBiRgFBAQAOw=="
+      },
+      "description": "This content was created on behalf of the advertiser by The Foundry at Dotdash Meredith",
+      "url": "https://ad.doubleclick.net/ddm/trackclk/N346010.1822180BYRDIE.COM/B28082910.344618538;dc_trk_aid=536312086;dc_trk_cid=176821277;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=",
+      "title": "Sponsored by"
+    },
+    "sponsors": {
+      "list": [
+        {
+          "sponsorImage": {
+            "caption": "",
+            "owner": "",
+            "alt": "Clinique black logo ",
+            "width": 2385,
+            "height": 483,
+            "id": "124a868e19e14e07940097a01a863b60",
+            "fileName": "Clinique-Primary-Logo.jpg",
+            "objectId": "Clinique-Primary-Logo-124a868e19e14e07940097a01a863b60.jpg",
+            "sensitive": false,
+            "original": false,
+            "encodedThumbnail": "R0lGODlhEgAEAPEAAAAAAH9/f////wAAACwAAAAAEgAEAEEIHwABCBg4UGBBAQAEBjhIsCHBhAgdSnwoMKHBiRgFBAQAOw=="
+          },
+          "description": "This content was created on behalf of the advertiser by The Foundry at Dotdash Meredith",
+          "url": "https://ad.doubleclick.net/ddm/trackclk/N346010.1822180BYRDIE.COM/B28082910.344618538;dc_trk_aid=536312086;dc_trk_cid=176821277;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=",
+          "title": "Sponsored by"
+        },
+        {
+          "sponsorImage": {
+            "alt": "Basil Hayden Logo",
+            "width": 3002,
+            "height": 698,
+            "id": "2690d922e30a4d36add13481165d32e0",
+            "objectId": "basilhayden_cropped_LARGE-2690d922e30a4d36add13481165d32e0.png",
+            "sensitive": false,
+            "original": false
+          },
+          "url": "https://ad.doubleclick.net/ddm/trackclk/N763.3034362DOTDASH/B28428269.344198711;dc_trk_aid=537342858;dc_trk_cid=178101363;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=",
+          "title": "PRESENTED BY"
+        }
+      ],
+      "totalSize": 2
+    },
+    "hasTableOfContents": false,
+    "audit": {
+      "clientId": "Swagger",
+      "userId": "161712471285449",
+      "authParty": "selene-swagger",
+      "lastModified": 1676645185100
+    },
+    "metaData": {
+      "url": "",
+      "docId": 5188318,
+      "entities": [
+        {
+          "id": "http://dbpedia.org/resource/Clinique",
+          "name": "Clinique",
+          "score": 63.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Norman_Orentreich",
+          "name": "Norman Orentreich",
+          "score": 24.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Lotion",
+          "name": "Lotion",
+          "score": 22.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Glucosamine",
+          "name": "Glucosamine",
+          "score": 20.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Acid",
+          "name": "Acid",
+          "score": 15.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Sayonara",
+          "name": "Sayonara",
+          "score": 11.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/100_Hours",
+          "name": "100 Hours",
+          "score": 10.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Blood_plasma",
+          "name": "Blood plasma",
+          "score": 9.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Yeast_extract",
+          "name": "Yeast extract",
+          "score": 9.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Progressed_(EP)",
+          "name": "Progressed (EP)",
+          "score": 8.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Sucrose",
+          "name": "Sucrose",
+          "score": 8.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Block_and_tackle",
+          "name": "Block and tackle",
+          "score": 7.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Eraser",
+          "name": "Eraser",
+          "score": 7.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Aloe_vera",
+          "name": "Aloe vera",
+          "score": 7.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Vogue_Italia",
+          "name": "Vogue Italia",
+          "score": 7.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Mascara",
+          "name": "Mascara",
+          "score": 7.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Vitamin_C",
+          "name": "Vitamin C",
+          "score": 6.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Light_welterweight",
+          "name": "Light welterweight",
+          "score": 6.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Cap",
+          "name": "Cap",
+          "score": 6.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Personal_Taste",
+          "name": "Personal Taste",
+          "score": 6.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Gel",
+          "name": "Gel",
+          "score": 6.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Centerfire_ammunition",
+          "name": "Centerfire ammunition",
+          "score": 5.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/New_York_City",
+          "name": "New York City",
+          "score": 5.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Sponge",
+          "name": "Sponge",
+          "score": 5.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Tiktok",
+          "name": "Tiktok",
+          "score": 5.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Concealer",
+          "name": "Concealer",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Glass",
+          "name": "Glass",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Moisturizer",
+          "name": "Moisturizer",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Pigment",
+          "name": "Pigment",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Human_skin",
+          "name": "Human skin",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Hyperpigmentation",
+          "name": "Hyperpigmentation",
+          "score": 4.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Topical_medication",
+          "name": "Topical medication",
+          "score": 3.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Hydrate",
+          "name": "Hydrate",
+          "score": 3.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Acne_vulgaris",
+          "name": "Acne vulgaris",
+          "score": 2.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Sunscreen",
+          "name": "Sunscreen",
+          "score": 2.0,
+          "source": "dbpedia"
+        },
+        {
+          "id": "http://dbpedia.org/resource/Dermatology",
+          "name": "Dermatology",
+          "score": 2.0,
+          "source": "dbpedia"
+        }
+      ],
+      "audit": {
+        "clientId": "apollo",
+        "userId": "162558213533046",
+        "authParty": "apollo",
+        "lastModified": 1664548586446
+      },
+      "contentDistribution": {
+        "destination": "ALL_PARTNERS"
+      },
+      "mTaxonomyIds": {
+        "list": [
+          "22662",
+          "11087"
+        ],
+        "totalSize": 2
+      }
+    },
+    "bylines": {
+      "list": [
+        {
+          "id": "ece352acb5f24b38bcb674b33bd80779",
+          "type": "AUTHOR",
+          "authorType": "AUTHOR",
+          "authorId": "239271",
+          "attribution": "By",
+          "descriptor": "By"
+        },
+        {
+          "id": "9448d869a1a34f33bfe67ebfb75fc8c1",
+          "type": "MEDICAL_REVIEWER",
+          "authorType": "AUTHOR",
+          "authorId": "235689",
+          "lastModified": 1647310764987,
+          "attribution": "Medically reviewed by",
+          "descriptor": "Medically reviewed by"
+        }
+      ],
+      "totalSize": 2
+    },
+    "disclaimer": {
+      "affiliate": false
+    },
+    "promoDescription": "Where science meets skincare.",
+    "revenueGroup": "SPONSOR",
+    "newsType": "NewsArticle",
+    "subheading": "",
+    "listOptions": {
+      "markerType": "numbers",
+      "sortOrder": "asc"
+    },
+    "intro": {
+      "list": [
+        {
+          "id": 1,
+          "uuid": "8c61a109-a17c-44ee-b4d5-9b3a608a9c32",
+          "type": "HTML",
+          "data": {
+            "html": "<p>“Can great skin be created?” That’s the question Carol Phillips—a special projects and beauty editor for <em>Vogue—</em>asked in 1968. Her research led her to leading New York dermatologist Dr. Norman Orentreich, and Clinique was born. Orentreich had developed a three-step skincare method for patients: cleanse, exfoliate, and <a href=\"https://www.byrdie.com/clinique-moisture-surge-100h-review-5181129\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">moisturize</a>. It was tailored to each client’s skin type, and back then, it was groundbreaking. Though their product range has greatly expanded since then, Clinique is still famous for creating dermatologist-tested products that are safe, simple, and effective, with impressive results.</p>"
+          }
+        },
+        {
+          "id": 2,
+          "uuid": "3f474502-a044-48cf-8d64-4ba1920681b1",
+          "type": "CALLOUT",
+          "data": {
+            "theme": "FFINGREDIENTS",
+            "heading": "Clinique",
+            "html": "<p><strong>Founded: </strong>Carol Phillips and Dr. Norman Orentreich started the brand in 1968.</p><p><strong>Based in: </strong>New York City</p><p><strong>Pricing: </strong>$$</p><p><strong>Best known for: </strong>Achieving great skin for all with scientifically researched products that deliver maximum efficacy yet are gentle enough for <a href=\"https://www.byrdie.com/what-is-sensitive-skin\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">sensitive skin</a>. </p><p><strong>Most popular product: </strong>Since it launched in 1968, Clinique&#39;s three-step system remains iconic; it’s still the first system many young people use when they start a skincare regimen. This system uses the Clarifying Lotion, Take the Day Off Cleansing Balm, and Moisture Surge 100-Hour Auto-Replenishing Hydrator, all of which you can read more about below.</p><p><strong>Fun fact: </strong>Last year, Clinique sold one Dramatically Different Moisturizing Lotion every eight seconds.</p>"
+          }
+        },
+        {
+          "id": 3,
+          "uuid": "ddb46b3e-681e-418d-b922-34614a8e71b6",
+          "type": "HTML",
+          "data": {
+            "html": "<p> As Clinique has evolved over the years, they’ve stayed true to their core values, formulating products that have scientific backing and bring serious results sans any irritation. The brand is constantly updating tried-and-true formulas as ingredients and technology advance, and they’ve also upgraded their packaging to become more sustainable (changing to glass or post-consumer recycled content). How the brand speaks to their customers has also progressed, since they’ve added new platforms, most recently TikTok. </p>"
+          }
+        },
+        {
+          "id": 4,
+          "uuid": "b35dcf13-7861-4d0c-823a-cb682d56c06d",
+          "type": "HTML",
+          "data": {
+            "html": "<p>Curious about Clinique? So were we. That&#39;s why we tapped the brand to spill on their formulation secrets, hero ingredients, and best-selling products.</p>"
+          }
+        },
+        {
+          "id": 5,
+          "uuid": "00721842-4471-41d5-afb6-f49df1707775",
+          "type": "HTML",
+          "data": {
+            "html": "<p><strong>Ahead, find out which Clinique best-sellers—classic and new—continue to fly off the shelves.</strong></p>"
+          }
+        }
+      ],
+      "totalSize": 5
+    },
+    "outro": {
+      "list": [
+        {
+          "id": 6,
+          "uuid": "aed8044b-d510-41fd-a18c-e87a822ba4b4",
+          "type": "FEATUREDLINK",
+          "data": {
+            "theme": "UPNEXT",
+            "uri": "https://www.byrdie.com/michelle-freyre-career-advice-level-up-5186375",
+            "document": {
+              "revisionId": "5186375_1664829142776",
+              "authorKey": "230451",
+              "url": "https://www.byrdie.com/michelle-freyre-career-advice-level-up-5186375",
+              "rootUrl": "https://www.byrdie.com/michelle-freyre-career-advice-level-up-5186375",
+              "vertical": "BEAUTY",
+              "docId": 5186375,
+              "slug": "michelle-freyre-career-advice-level-up",
+              "templateType": "STRUCTUREDCONTENT",
+              "documentState": {
+                "state": "ACTIVE",
+                "activeDate": 1664829142750
+              },
+              "dates": {
+                "created": 1622082347449,
+                "updated": 1664829142776,
+                "firstPublished": 1622230898351,
+                "lastPublished": 1664829142750,
+                "firstPending": 1622083534153,
+                "displayed": 1664829142776,
+                "lastMaterialPublished": 1664829142776
+              },
+              "medicalBoardApproved": false,
+              "noIndex": false,
+              "title": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+              "socialTitle": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+              "description": "Clinique’s Global GM Michelle Freyre discusses work-life balance, proactive mentorship, self-care, and the management trifecta. Read her interview inside.",
+              "heading": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+              "taggedImages": {
+                "list": [
+                  {
+                    "image": {
+                      "owner": "Michelle Freyre",
+                      "alt": "Michelle Freyre",
+                      "width": 800,
+                      "height": 800,
+                      "id": "eef05b0c32f4415192aaa6ddcb292f2e",
+                      "fileName": "michelle.jpg",
+                      "objectId": "michelle-eef05b0c32f4415192aaa6ddcb292f2e.jpg",
+                      "tags": {
+                        "list": [
+                          "cc-programming-"
+                        ],
+                        "totalSize": 1
+                      },
+                      "encodedThumbnail": "R0lGODlhCAAIAPUAAA4MDQQUChsSExgcHw4YJBYZIBQbJRgbIhkcIxodJBglLigdGyEmKiUoLSQ5KCQ8LjI7QjpMPkAhHlE6NHJNPZIwJY9JP59VTJ5lVKN0ar6HaL6blZu42qGxy6LG9q/L8rLP97PP9rPR97jV/brY/s2tlNKnlMzO2svX49Hd69bi8Nvn89ro9dvt+9zu+t7u+9zu/N3u/t/x/+DNxunMxOLRyeXc1+nW0Oje1enf1uDp8OLv/+Hx/+Lw/er0/w4MDSwAAAAACAAIAEUISwBzMOgxQcIFDC5grFjgoUMCCDJ0aMBRwkSFGhseROAwIgQCBCwszPCRgYKNGzR4vDghAMCAGDtSoCBAQsSBBi0cBFAA4kMBAyoCAgA7"
+                    },
+                    "tags": {
+                      "list": [
+                        "PRIMARY",
+                        "RECIRC",
+                        "PINTEREST",
+                        "FACEBOOK",
+                        "TWITTER"
+                      ],
+                      "totalSize": 5
+                    }
+                  }
+                ],
+                "totalSize": 1
+              },
+              "summary": {
+                "title": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+                "socialTitle": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+                "heading": "Level Up: Clinique’s Global GM Is Paving the Way for Latina Leaders",
+                "description": "Clinique’s Global GM Michelle Freyre discusses work-life balance, proactive mentorship, self-care, and the management trifecta. Read her interview inside.",
+                "image": {
+                  "owner": "Michelle Freyre",
+                  "alt": "Michelle Freyre",
+                  "width": 800,
+                  "height": 800,
+                  "id": "eef05b0c32f4415192aaa6ddcb292f2e",
+                  "fileName": "michelle.jpg",
+                  "objectId": "michelle-eef05b0c32f4415192aaa6ddcb292f2e.jpg",
+                  "tags": {
+                    "list": [
+                      "cc-programming-"
+                    ],
+                    "totalSize": 1
+                  },
+                  "encodedThumbnail": "R0lGODlhCAAIAPUAAA4MDQQUChsSExgcHw4YJBYZIBQbJRgbIhkcIxodJBglLigdGyEmKiUoLSQ5KCQ8LjI7QjpMPkAhHlE6NHJNPZIwJY9JP59VTJ5lVKN0ar6HaL6blZu42qGxy6LG9q/L8rLP97PP9rPR97jV/brY/s2tlNKnlMzO2svX49Hd69bi8Nvn89ro9dvt+9zu+t7u+9zu/N3u/t/x/+DNxunMxOLRyeXc1+nW0Oje1enf1uDp8OLv/+Hx/+Lw/er0/w4MDSwAAAAACAAIAEUISwBzMOgxQcIFDC5grFjgoUMCCDJ0aMBRwkSFGhseROAwIgQCBCwszPCRgYKNGzR4vDghAMCAGDtSoCBAQsSBBi0cBFAA4kMBAyoCAgA7"
+                }
+              },
+              "author": {
+                "id": "230451",
+                "type": "AUTHOR",
+                "status": "TERMINATED",
+                "displayName": "Leah Wyar",
+                "displayNamePossessive": "",
+                "contributingWriter": false,
+                "numberOfExperts": 1,
+                "socialPresence": [
+                  {
+                    "network": "instagram",
+                    "url": "https://www.instagram.com/leahwyar/"
+                  }
+                ],
+                "bioUrl": "https://www.byrdie.com/leah-wyar-4778558",
+                "shortBio": "Leah is the senior vice president and general manager for Byrdie. Previously she was the chief beauty director of Hearst, working on Cosmopolitan, Elle, Harper’s Bazaar and more.",
+                "vertical": "BEAUTY"
+              },
+              "bylines": {
+                "list": [
+                  {
+                    "id": "9de1b4af4c2d4e128d073f64ab7d1a97",
+                    "type": "AUTHOR",
+                    "authorType": "AUTHOR",
+                    "authorId": "230451",
+                    "attribution": "By",
+                    "descriptor": "By"
+                  }
+                ],
+                "totalSize": 1
+              },
+              "promoDescription": "We learned so much in just five minutes."
+            }
+          }
+        }
+      ],
+      "totalSize": 1
+    },
+    "items": {
+      "list": [
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 7,
+                "uuid": "01635029-191e-4309-a597-013702920f6a",
+                "type": "HEADING",
+                "data": {
+                  "text": "Clarifying Lotion"
+                }
+              },
+              {
+                "id": 8,
+                "uuid": "927fbb65-25f7-435e-b01c-5b94b395a735",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 9,
+                    "uuid": "dff9f31c-aeed-410e-aa66-a38aa3ce38aa",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Clarifying Lotion",
+                        "width": 1328,
+                        "height": 1328,
+                        "id": "c9d933009d43417b887674d4f63b26e8",
+                        "fileName": "cliniqueclarifyinglotion.jpg",
+                        "objectId": "cliniqueclarifyinglotion-c9d933009d43417b887674d4f63b26e8.jpg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPMAAAcEAD1MOUo8SUBVQpCDlNbM19fdz9vR2tvi0ubc5Ofi6Ovg6PDv9fLy8vXw9v///ywAAAAACAAIAEMIJAAfCAxgQKDBBwsYHBSYwMHCBwcEPByA4OGCBg8BEHhYQIHBgAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 10,
+                    "uuid": "81887a65-7bf9-4685-8653-627d19b22b82",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1573/15502/3-step/step-2-exfoliate/clarifying-lotion-2/exfoliates-to-balance-dry-combination-skins",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "29",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Clarifying Lotion"
+                }
+              },
+              {
+                "id": 11,
+                "uuid": "f732e81b-9dfa-4476-aa43-37add0aa88ca",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Part of the Three-Step Skincare System, this liquid exfoliator delicately rids skin of excess oil and flakes that can dull the skin, revealing a smoother, clearer complexion. A true Clinique classic, it also preps skin for moisturizers and other products that follow to help them absorb better.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 12,
+                "uuid": "1be563e1-d9d9-4745-bfcf-7f2c01863ddb",
+                "type": "HEADING",
+                "data": {
+                  "text": "Take the Day Off Cleansing Balm"
+                }
+              },
+              {
+                "id": 13,
+                "uuid": "dc3e7ae0-73b2-4627-a7a4-838776821449",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 14,
+                    "uuid": "96ff454e-a00a-47b6-a628-9990df1289bd",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Take the Day Off Cleansing Balm",
+                        "width": 3439,
+                        "height": 3439,
+                        "id": "83456a0f260945a78a76bbca425c5f52",
+                        "fileName": "TTDOCleansingBalm.jpg",
+                        "objectId": "TTDOCleansingBalm-83456a0f260945a78a76bbca425c5f52.jpg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPUAACMfIDwtTEQzXUkzYllEa3l4fZF0rJl+q4+Pj6mOt7KYv7icxLejyMSxzci61M+918rJzsvKz83M0dXC3tTT2NfS2NrW19rV293Y3tXH4N7R49/e4+Le3+bh5+/v7/Hw9fXx8vj09fr29/v3+Pv7+//8/f/9/iMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICMfICwAAAAACAAIAEUIPgBNCCyAQKCJAA4yLDCQoIEAACM8UAAAAQSAEhgzliABQMSHiRFCACAwQQODAwoeDLDAoQOGChc2SDBI00RAADs="
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 15,
+                    "uuid": "9b632ac2-463e-40a9-9f90-e0f7896498de",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1673/6424/skincare/cleansers-makeup-removers/take-the-day-off-cleansing-balm",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "31",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Take the Day Off Cleansing Balm"
+                }
+              },
+              {
+                "id": 16,
+                "uuid": "8941e24d-8c89-4809-8b1c-752ebb9ab24d",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Say sayonara to every trace of makeup with this delightful cleansing balm. After warming it in your fingers, the balm melts right into skin, transforming into an oil that delicately removes makeup, sunscreen, and excess dirt and oil, rinsing away clean to reveal fresh, dewy skin.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 17,
+                "uuid": "380a3640-e809-4563-b565-f39f9b1380e4",
+                "type": "HEADING",
+                "data": {
+                  "text": "Moisture Surge 100-Hour Auto-Replenishing Hydrator"
+                }
+              },
+              {
+                "id": 18,
+                "uuid": "0f4a8c70-0bcc-48e3-81db-0f9257be743b",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 19,
+                    "uuid": "c5ee190d-e00d-44f6-bfbe-9ca0e83cc2ad",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Moisture Surge 100H Auto-Replenishing Hydrator",
+                        "width": 6000,
+                        "height": 6000,
+                        "id": "11d3c1e36172478288490dfc2022859b",
+                        "fileName": "MoistureSurge100HRAutoReplenishingHydrator-50ML.jpg",
+                        "objectId": "MoistureSurge100HRAutoReplenishingHydrator-50ML-11d3c1e36172478288490dfc2022859b.jpg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPUAADU1NTY2Nj09PT8/P0c3M0w8N01NTV9LR3ZiX2dnZ2pqatSJfbW1tbe3t+Cbjva8r/e9sMbGyNDJxtjV1uDV0//NwP/Owf/Ux//Xyf/bzf/dz/7e1P/g1uDg4P/u5v/v5/fx8Pf39/jy8fnz8vr08/z29f749/v7+////zU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NSwAAAAACAAIAEUIPQBRCBw48IKHDBU2PBA44ASDBB0CCKSAgECBAxIEGgjRQEEHAQwnOFgQAYBADB80WOAAQWAJEyRAjBCBIiAAOw=="
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 20,
+                    "uuid": "0f5d1e35-1fb9-4ffc-a19d-124b4a4d2a3d",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1687/83690/skincare/moisturizers/new-moisture-surgetm-100h-auto-replenishing-hydrator",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "25",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Moisture Surge 100H Auto-Replenishing Hydrator"
+                }
+              },
+              {
+                "id": 21,
+                "uuid": "e3d8acfc-8bea-4c9f-b46c-b7e113e6fe01",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>True to its name, <a href=\"https://www.byrdie.com/clinique-moisture-surge-100h-review-5181129\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">this mega moisturizer</a> really does keep skin hydrated for up to 100 hours, yet it feels super lightweight on skin thanks to its oil-free gel texture. Designed to work for all skin types, it features an aloe bio-ferment and <a href=\"https://www.byrdie.com/what-is-hyaluronic-acid\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\">hyaluronic acid</a> to delve deep into skin. Leaving a radiant glow, it’s also great as a primer pre-makeup application.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 22,
+                "uuid": "3c3ac8cf-0847-4626-a188-323842b3d375",
+                "type": "HEADING",
+                "data": {
+                  "text": "Even Better Clinical Serum Foundation"
+                }
+              },
+              {
+                "id": 23,
+                "uuid": "804124a4-7ec1-4904-91f5-66ee76b9682f",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 24,
+                    "uuid": "a7988a51-8a7b-4582-8e1a-326d67d26e70",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "clinique even better clinical serum foundation",
+                        "width": 800,
+                        "height": 797,
+                        "id": "0f3d5186b34446af9442c6a3f7d7b8d1",
+                        "fileName": "ScreenShot2021-06-10at3.12.28PM.png",
+                        "objectId": "ScreenShot2021-06-10at3.12.28PM-0f3d5186b34446af9442c6a3f7d7b8d1.png",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPQAAFQzI2g+KWZBLnRKM3lRRHlURptuVKFwVap7Y7SAa7SCbb6KduXl5enp6erq6uvr6/Dw8PX19ff39/n5+fr6+vz8/P///1QzI1QzI1QzI1QzI1QzI1QzI1QzI1QzI1QzIywAAAAACAAIAEQIKgAtCKQwQaBBBAsOBDAoUMIDhhYIFBAAAGIFCBAdRGjAgKGCBAYGQIQYEAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 25,
+                    "uuid": "2a423897-4402-4fd4-bc26-049561fb7981",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1599/80532/makeup/foundations/new-even-better-clinicaltm-serum-foundation-broad-spectrum-spf-25?shade=WN_98_Cream_Caramel",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "42",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Even Better Clinical Serum Foundation"
+                }
+              },
+              {
+                "id": 26,
+                "uuid": "f7d01468-99fc-4eb6-af64-8472a01b8600",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Blending the line of makeup and skincare, this serum foundation combines the best of both worlds. Loaded with three types of serums—<a href=\"https://www.byrdie.com/what-is-hyaluronic-acid\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">hyaluronic acid</a> to hydrate and plump, <a href=\"https://www.byrdie.com/salicylic-acid\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\">salicylic acid</a> to smooth, and <a href=\"https://www.byrdie.com/vitamin-c-benefits\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"3\">vitamin C </a>to brighten—it improves the texture and appearance of skin over time. Available in 42 shades, the buildable formula offers medium to full coverage. The satin-matte finish looks natural and wears comfortably on skin.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 27,
+                "uuid": "aded4987-3596-4a71-9e19-1acedc0e3946",
+                "type": "HEADING",
+                "data": {
+                  "text": "Dramatically Different Moisturizing Lotion&#43;"
+                }
+              },
+              {
+                "id": 28,
+                "uuid": "2f217de1-9800-4fb2-8667-eb33e712ec68",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 29,
+                    "uuid": "ade96407-7a17-4908-abba-0a456b89b3dc",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Dramatically Different Moisturizing Lotion+",
+                        "width": 1782,
+                        "height": 1782,
+                        "id": "fca9e89e19b54c8bbdfb89b2fca399d5",
+                        "fileName": "cliniquedramaticallydifferentmoisturizinglotion.jpg",
+                        "objectId": "cliniquedramaticallydifferentmoisturizinglotion-fca9e89e19b54c8bbdfb89b2fca399d5.jpg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPMAAAEBAbO3uPHklvPlnPXoovftpvrupP3totbX2ero0+3q1+Tl5+vr6////wEBAQEBASwAAAAACAAIAEMIIQAbCBxIsEGBAQUbIFiQ0ICAhAEYJCxAIOEBAAkVJBgYEAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 30,
+                    "uuid": "8197cf90-30ee-4185-9fa2-74de54798d0d",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1574/26651/3-step/step-3-moisturize/dramatically-differenttm-moisturizing-lotion",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "30",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Dramatically Different Moisturizing Lotion+"
+                }
+              },
+              {
+                "id": 31,
+                "uuid": "38ec8bb7-fa4a-4cb8-b3ce-b717d280f75a",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>An OG favorite, the Dramatically Different Moisturizers are now available in three formulations to better serve a range of skin types. There’s the original Dramatically Different Moisturizing Lotion&#43;, a soothing lotion for <a href=\"https://www.byrdie.com/dehydrated-or-dry-skin\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">dry skin</a>; Dramatically Different Oil-Control Gel, for oily skin types who require hydration while zapping excess shine; and the newest Dramatically Different Hydrating Jelly, a lightweight formula ideal for people who can’t stand that sticky moisturizer sensation.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 32,
+                "uuid": "eee15339-6dba-4bbe-8d5c-e68433504320",
+                "type": "HEADING",
+                "data": {
+                  "text": "High Impact Mascara"
+                }
+              },
+              {
+                "id": 33,
+                "uuid": "4d22fea5-2316-4f65-9027-89c5d3a9ab67",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 34,
+                    "uuid": "ce9a65ef-c19f-401e-a33f-e278348bdc5e",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique High Impact Mascara",
+                        "width": 1148,
+                        "height": 1148,
+                        "id": "915b8727a99a417fa215d16e4cabc540",
+                        "fileName": "ScreenShot2021-06-10at1.53.34PM.png",
+                        "objectId": "ScreenShot2021-06-10at1.53.34PM-915b8727a99a417fa215d16e4cabc540.png",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPMAABESFBQVFRUXFhkaHBkdHhsdHBscHioxKSswKysyKiwzKy0yLfDy7////xESFBESFCwAAAAACAAIAEMIIgAbCBwgsKBAAwcMCiSwQGGDAAwcAnDYoIAChwISYERQMCAAOw=="
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 35,
+                    "uuid": "ae91506a-04cd-4d19-a664-94693e1367ad",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1606/5416/makeup/mascara/high-impact-mascara",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "20",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "High Impact Mascara"
+                }
+              },
+              {
+                "id": 36,
+                "uuid": "6dd44738-0337-42b4-8a1a-29aba18e53fc",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Whether you like high-drama lashes or a subtle boost, this versatile mascara brings it all: just adjust the number of coats to achieve the lashes you want. Even after three layers for maximum volume and length, the formula still won’t clump.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 37,
+                "uuid": "722ae7dd-94cf-445a-a75f-8b35bf2b8106",
+                "type": "HEADING",
+                "data": {
+                  "text": "Acne Solutions Clinical Clearing Gel"
+                }
+              },
+              {
+                "id": 38,
+                "uuid": "d3e0aa73-ecf2-41d3-b635-7bc2606665e6",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 39,
+                    "uuid": "bb865128-54a6-46e1-bceb-a6ec0bf8edba",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Acne Solutions Clinical Clearing Gel",
+                        "width": 800,
+                        "height": 800,
+                        "id": "04635c786d8c444eab5027c58d492cb0",
+                        "fileName": "cliniqueacnesolutionsclinicalclearinggel.jpeg",
+                        "objectId": "cliniqueacnesolutionsclinicalclearinggel-04635c786d8c444eab5027c58d492cb0.jpeg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPQAABAPFaXT0KbT0Kna167Y17DX0rfa1rLa2rLc2LXd3LXd3bve2rjf3rng38Hf3cLg3sbg38jh3sfh4OHi5OTl5+Xl5+rq7Orr7ezt7+3t7+7u8O/v8fPz8/T09PT09v///ywAAAAACAAIAEQIMwA/fLDA4cIEgQIbHBAQAeGHDR4wUHDIAEGBBw41dMhQwaECAgEgUAQwQILDBAsMOBAYEAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 40,
+                    "uuid": "8b7d9c34-b38f-45e5-9906-a8b6b532b56b",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1672/29793/skincare/acne/treatment-specialists/acne-solutionstm-clinical-clearing-gel?size=1_fl._oz._%2F_30_ml",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "28",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Acne Solutions Clinical Clearing Gel"
+                }
+              },
+              {
+                "id": 41,
+                "uuid": "62992919-3eec-4a6d-a14a-2f8589cb9974",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Bust breakouts with a topical treatment that won’t irritate skin. This clearing gel uses <a href=\"https://www.byrdie.com/salicylic-acid\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">salicylic acid</a> and is as potent as a prescription, as studies showed it only takes three days to see a 37 percent average improvement in your complexion.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 42,
+                "uuid": "d6bc3da2-9be0-465d-887d-85f04a852c20",
+                "type": "HEADING",
+                "data": {
+                  "text": "Even Better All-Over Concealer &#43; Eraser"
+                }
+              },
+              {
+                "id": 43,
+                "uuid": "29b4cf5b-cca3-4598-891a-9759f7b73bd6",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 44,
+                    "uuid": "400de675-be46-4aaa-a472-ae82ae0da952",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Even Better  All-Over Concealer + Eraser",
+                        "width": 6000,
+                        "height": 6000,
+                        "id": "3f6a3a8416f94317b938d2d7eae050c7",
+                        "fileName": "EvenBetterAll-OverConcealerEraserCN52NeutralClosed.jpeg",
+                        "objectId": "EvenBetterAll-OverConcealerEraserCN52NeutralClosed-3f6a3a8416f94317b938d2d7eae050c7.jpeg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPAAAP///////ywAAAAACAAIAEAIDwABCBxIsKDBgwgTKkwYEAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 45,
+                    "uuid": "423f05ea-7492-4d0e-a1f2-eed75ce6ef66",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1596/76702/makeup/concealers/even-bettertm-all-over-concealer-eraser",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "26",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Even Better All Over Concealer + Eraser"
+                }
+              },
+              {
+                "id": 46,
+                "uuid": "bca04c8a-b4d0-4f15-a3b7-9a24f945a14e",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Thanks to the range of 42 shades, pretty much everyone can find their perfect match in this lightweight, full-coverage concealer. Chock full of skin-loving ingredients, it improves the appearance of <a href=\"https://www.byrdie.com/what-causes-dark-circles-under-eyes-5202813\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">dark circles</a> over time. The clever blurring sponge hidden inside the cap makes it ideal for on-the-go—no brush required.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 47,
+                "uuid": "2e3556e4-8c38-4c33-9162-4fd0aee3e8db",
+                "type": "HEADING",
+                "data": {
+                  "text": "Even Better Clinical Radical Dark Spot Corrector &#43; Interrupter Serum"
+                }
+              },
+              {
+                "id": 48,
+                "uuid": "f2ada3d0-58ee-425f-827a-5048f3882f9d",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 49,
+                    "uuid": "0fb48420-0288-4356-940f-bbcb85785289",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Even Better Clinical Radical Dark Spot Corrector + Interrupter",
+                        "width": 800,
+                        "height": 800,
+                        "id": "520aa144ceec44f791910ceb3f46bb12",
+                        "fileName": "cliniqueevenbetterclinicalradicaldarkspotcorrectorinterrupter.jpeg",
+                        "objectId": "cliniqueevenbetterclinicalradicaldarkspotcorrectorinterrupter-520aa144ceec44f791910ceb3f46bb12.jpeg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPQAAAomGiYhHqrtyqzl37vvydfX19/t4ND35OLi4uvr6+zs7P/u/fb38v398/7+9P39+////womGgomGgomGgomGgomGgomGgomGgomGgomGgomGgomGgomGgomGgomGgomGiwAAAAACAAIAEQIJAAhCExQQKBBCA0EHBTIwMBCCA8OPFSA4KEDAg8DAHi4YIDBgAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 50,
+                    "uuid": "013546c9-4106-4ef0-874f-720b1483e073",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1693/68008/skincare/uneven-skin-tone/even-better-clinicaltm-radical-dark-spot-corrector-interrupter",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "55",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Even Better Clinical Radical Dark Spot Corrector + Interrupter Serum"
+                }
+              },
+              {
+                "id": 51,
+                "uuid": "1a6f8e30-1506-40e5-a3df-6116c63a7a53",
+                "type": "HTML",
+                "data": {
+                  "html": "<p><a href=\"https://www.byrdie.com/hyperpigmentation-treatment\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">Hyperpigmentation</a> doesn&#39;t stand a chance against this effective serum. Impressively, in addition to correcting existing discoloration, it helps to prevent future marks as well. The ingredients list spotlights yeast extract to break up and exfoliate clusters of uneven pigment, glucosamine to weaken the bonds that bind dead skin cells together, and salicylic acid to exfoliate skin cells.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 52,
+                "uuid": "0246a23e-7b5b-458c-9b8f-d9132adad842",
+                "type": "HEADING",
+                "data": {
+                  "text": "Smart Custom-Repair Serum"
+                }
+              },
+              {
+                "id": 53,
+                "uuid": "667ece16-2d3d-4624-b6f7-0d01bb2e4091",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 54,
+                    "uuid": "fa135d28-2383-493d-b66f-ab786e21602a",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique Smart Clinical Repair Wrinkle Correcting Serum",
+                        "width": 1200,
+                        "height": 1500,
+                        "id": "0d8a1d167f8b4b14baac7ea23a30fbd0",
+                        "fileName": "smartrepairwrinklecorrectingserum.jpg",
+                        "objectId": "smartrepairwrinklecorrectingserum-0d8a1d167f8b4b14baac7ea23a30fbd0.jpg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhBwAJAPMAAAAAAEAOcUANdkcPelc8c14VopF5rezp8v///wAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAABwAJAEMIGwARCBxI8ABBgQYOIgCgUIBCAgoLKAygcMDAgAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 55,
+                    "uuid": "898e3194-4b97-4dd8-bcd2-53e9c2d3b89e",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/4034/87057/skincare/serum/clinique-smart-clinical-repairtm-wrinkle-correcting-serum?size=1.7_oz._%2F_50_ml",
+                            "type": "other"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "99",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "Smart Clinical Repair™ Wrinkle Correcting Serum"
+                }
+              },
+              {
+                "id": 56,
+                "uuid": "06f6c5bc-0880-41a8-905e-dc9c9386ec21",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>From fine lines to dark spots to discoloration, this game-changing serum tackles a range of signs of aging. A combination of <a href=\"https://www.byrdie.com/polypeptides-in-skincare\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">peptides</a>, glucosamine, salicylic acid, vitamin C, and botanicals do the work, leaving skin looking more even with a smooth, refined texture.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        },
+        {
+          "contents": {
+            "list": [
+              {
+                "id": 57,
+                "uuid": "971b287b-bd83-44c7-911e-8cee6c84e90c",
+                "type": "HEADING",
+                "data": {
+                  "text": "All About Clean Liquid Facial Soap"
+                }
+              },
+              {
+                "id": 58,
+                "uuid": "51b63966-990e-4493-86d4-427108203fc0",
+                "type": "PRODUCT",
+                "data": {
+                  "image": {
+                    "id": 59,
+                    "uuid": "263a8038-a78c-4c1a-95f8-3f199eca5b29",
+                    "type": "IMAGE",
+                    "data": {
+                      "image": {
+                        "caption": "",
+                        "owner": "<p>Clinique</p>",
+                        "alt": "Clinique All About Clean Liquid Facial Soap",
+                        "width": 800,
+                        "height": 800,
+                        "id": "a8c14764ea7c4b0daa27b32a110fd92e",
+                        "fileName": "cliniqueallaboutcleanliquidfacialsoap.jpeg",
+                        "objectId": "cliniqueallaboutcleanliquidfacialsoap-a8c14764ea7c4b0daa27b32a110fd92e.jpeg",
+                        "sensitive": false,
+                        "original": false,
+                        "encodedThumbnail": "R0lGODlhCAAIAPQAAAEDAM/c0tTf1+3E1PDM2unz6+rx6uv17e337/D59PP59fT69vf8+Pn7+Pv/+/7//f///wEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDAAEDACwAAAAACAAIAEQIJAAhCCQwQKBBCA4AHBRYwMBCCAoSPBQQ4OEBBA8bPHi4gIHBgAA7"
+                      }
+                    }
+                  },
+                  "commerceButton": {
+                    "id": 60,
+                    "uuid": "15dba482-24c5-4e77-8e79-111f98d13bb7",
+                    "type": "COMMERCE",
+                    "data": {
+                      "commerceInfo": {
+                        "list": [
+                          {
+                            "id": "https://www.clinique.com/product/1572/8279/3-step/step-1-cleanse/all-about-cleantm-liquid-facial-soap",
+                            "type": "skimlinks"
+                          }
+                        ],
+                        "totalSize": 1
+                      }
+                    }
+                  },
+                  "salePrice": {
+                    "price": "",
+                    "currency": "USD"
+                  },
+                  "price": {
+                    "price": "19",
+                    "currency": "USD"
+                  },
+                  "brand": "Clinique",
+                  "styleName": "All About Clean Liquid Facial Soap"
+                }
+              },
+              {
+                "id": 61,
+                "uuid": "25e3a7d2-3493-494b-876e-9ce9534f293b",
+                "type": "HTML",
+                "data": {
+                  "html": "<p>Cleanse <em>and </em>condition with this soft, non-drying soap that works up a lather to loosen surface flakes, remove dirt and pollution, and safeguard skin’s natural moisture balance. With hyaluronic acid, aloe barbadensis leaf extract, and sucrose, it leaves skin super soft and never stripped.</p>"
+                }
+              }
+            ],
+            "totalSize": 3
+          }
+        }
+      ],
+      "totalSize": 11
+    },
+    "hiddenFields": {
+      
+    }
+  }

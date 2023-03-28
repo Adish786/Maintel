@@ -1,0 +1,55 @@
+@import "mntlVariables";
+
+//Social Share
+.share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    order: 3;
+
+    &-item {
+        flex: 1;
+
+        &.is-featured {
+            flex: 2;
+        }
+    }
+}
+
+.share-link {
+    display: block;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    overflow: hidden;
+
+    &-facebook {
+        background: $color-social-facebook;
+
+        &:hover,
+        &:focus {
+            background: $color-social-facebook-tint;
+        }
+    }
+
+    &-pinterest {
+        background: $color-social-pinterest;
+
+        &:hover,
+        &:focus {
+            background: $color-social-pinterest-tint;
+        }
+    }
+
+    &-flipboard {
+        background: $color-social-flipboard;
+
+        &:hover,
+        &:focus {
+            background: $color-social-flipboard-tint;
+        }
+    }
+}

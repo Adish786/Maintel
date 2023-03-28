@@ -1,0 +1,32 @@
+@import "mntlVariables";
+
+
+/*
+	ROLLAWAY BLOCK
+
+ */
+
+
+$height-transition: max-height 0.5s linear, min-height 0.5s linear;
+
+
+.mntl-rollaway-block {
+    display: block;
+    margin-bottom: 2rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    position: fixed;
+
+    &.is-scrolling {
+        transform: translate(0, 0);
+        transition: #{$height-transition}, transform 0.2s ease-out; /* quick LB entry */
+    }
+
+    &.is-collapsing {
+        transform: translate(0, -200%);
+        transition: #{$height-transition}, transform 0.8s ease-out;
+    }
+}
+

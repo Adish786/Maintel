@@ -1,0 +1,224 @@
+@import "mntlVariables";
+
+.mntl-sc-block-gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    // remove default mntl-sc-block-image styles on portrait images and constrain height to slide container which is set in JS
+    .mntl-sc-block-image.figure-portrait {
+        max-width: none;
+
+        .figure-media {
+            position: static;
+            max-height: 100%;
+        }
+
+        img {
+            position: absolute;
+            max-height: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
+
+.mntl-sc-block-gallery__heading {
+    margin-bottom: 1rem;
+}
+
+.mntl-sc-block-gallery__info {
+    bottom: 0;
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    order: 1;
+    padding: 0.5rem 0.5rem 0;
+    width: 100%;
+}
+
+.slide-caption {
+    // line-clamp relies on an old flexbox spec in order to work correctly.
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 2.25rem;
+    overflow: hidden;
+}
+
+.slide-caption__desc,
+.slide-caption__owner {
+    display: inline;
+}
+
+.slide-counter {
+    order: 1;
+    flex-shrink: 0;
+    padding-left: 0.5rem;
+}
+
+.slide-counter__current,
+.slide-counter__total {
+    font-weight: bold;
+}
+
+.left-arrow,
+.right-arrow {
+    svg {
+        pointer-events: none; // IE11: prevent SVG from being target of arrow
+    }
+}
+
+.slides {
+    position: relative;
+    overflow: hidden;
+}
+
+.current {
+    transform: translateX(0%);
+}
+
+.mntl-sc-block-galleryslide {
+    width: 100%;
+    background: $color-gray;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+// slides to the left of current slide
+.mntl-sc-block-galleryslide:not(.current) {
+    transform: translateX(-100%);
+}
+
+// slides to the right of current slide
+.current~.mntl-sc-block-galleryslide {
+    transform: translateX(100%);
+}
+
+.previous,
+.current {
+    z-index: 1;
+
+    .js-animatable & {
+        // don't render transitions when initially loaded
+        transition: transform 0.5s ease;
+    }
+}
+
+.mntl-sc-block-gallery__info,
+.slides__left-arrow,
+.slides__right-arrow {
+    z-index: 2;
+}
+
+.slides__left-arrow,
+.slides__right-arrow {
+    position: absolute;
+    top: calc(50% - 1.125rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: $color-white;
+    border-radius: 50%;
+}
+
+.slides__left-arrow {
+    left: 1.25rem;
+}
+
+.slides__right-arrow {
+    right: 1.25rem;
+}
+
+.icon-gallery-arrow {
+    width: 20px;
+    height: 20px;
+    fill: black;
+
+    .right-arrow & {
+        transform: rotate(180deg);
+    }
+}
+
+/* carousel */
+
+.carousel {
+    align-items: center;
+    display: flex;
+    order: 1;
+    width: 100%;
+}
+
+.carousel__slider-wrapper {
+    order: 1;
+    overflow: hidden;
+}
+
+.carousel__slider {
+    display: flex;
+    position: relative;
+    transition: transform 0.5s ease-out;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.carousel__item {
+    cursor: pointer;
+    display: block;
+    flex-shrink: 0;
+    line-height: 0;
+
+    &:after {
+        transition: all 0.25s ease-out;
+        content: '';
+        display: block;
+        position: relative;
+        height: 3px;
+        top: 0;
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        background: none;
+    }
+
+    &:hover,
+    &.active {
+        &:after {
+            background: #CCCCCC;
+        }
+    }
+}
+
+.carousel__image {
+    padding: 10px;
+    max-width: 100%;
+}
+
+.carousel__right-arrow,
+.carousel__left-arrow {
+    cursor: pointer;
+}
+
+.carousel__right-arrow {
+    order: 2;
+}
+
+.no-scroll {
+    .carousel__right-arrow,
+    .carousel__left-arrow {
+        display: none;
+    }
+
+    .carousel__slider {
+        justify-content: center;
+    }
+}

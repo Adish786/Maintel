@@ -1,0 +1,24 @@
+@import "mntlVariables";
+
+.mntl-bylines__group {
+    line-height: 1;
+}
+
+.mntl-bylines__group--with-image {
+    &.mntl-bylines__group {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        padding-left: 5.125rem;
+        justify-content: left;
+        max-width: 300px;
+        min-width: 300px;
+
+        @media (min-width: $mntl-bp-sm) {
+            justify-content: center;
+            width: 100%;
+            max-width: none;
+            min-width: initial;
+        }
+    }
+}

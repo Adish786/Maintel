@@ -1,0 +1,8 @@
+.mntl-sc-block-faq {
+    /**
+     * Allows for inline citations in faq accordions
+     */
+    .accordion__item.is-active .accordion__body {
+        overflow: visible;
+    }
+}

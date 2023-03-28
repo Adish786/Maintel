@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="common.xsd"></xs:include>
+
+    <xs:element name="components">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="component" type="componentDefinition" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:group name="componentChildren">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="stylesheet" type="resourceHandle" />
+                <xs:element name="script" type="resourceHandle" />
+                <xs:element name="svg" type="resourceHandle" />
+                <xs:element name="property" type="property" />
+                <xs:element name="model" type="model" />
+                <xs:element name="map" type="map" />
+                <xs:element name="list" type="list" />
+                <xs:element name="config" type="config" />
+                <xs:element name="message" type="message" />
+                <xs:element name="for" type="for" />
+                <xs:element name="component" type="component" />
+                <xs:element name="component-list" type="component-list" />
+                <xs:element name="component-list-item" type="component-list-item" />
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="resourceHandle">
+        <xs:complexContent>
+            <xs:extension base="filterable">
+                <xs:attribute name="optional" type="xs:boolean"></xs:attribute>
+                <xs:attribute name="group" type="xs:string"></xs:attribute>
+                <xs:attribute name="evaluated" type="xs:boolean"></xs:attribute>
+                <xs:attribute name="path" type="xs:string"></xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="componentDefinition" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="filterable">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="info" type="info" minOccurs="1" maxOccurs="1" />
+                    <xs:group ref="componentChildren" />
+                </xs:choice>
+                <xs:attribute name="ref" use="optional" type="xs:string" />
+                <xs:attribute name="overrides" use="optional" type="xs:string" />
+                <xs:attribute name="location" use="optional" type="xs:string" />
+                <xs:attribute name="source" use="optional" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Identifier for data source used by component. If this component requires model(s) then source must be set. This will default to same as id if not
+                            provided.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="defer" use="optional" type="xs:string" />
+                <xs:attribute name="resourcePath" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="component" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="filterable">
+                <xs:group ref="componentChildren" />
+                <xs:attribute name="ref" use="optional" type="xs:string" />
+                <xs:attribute name="overrides" use="optional" type="xs:string" />
+                <xs:attribute name="location" use="optional" type="xs:string" />
+                <xs:attribute name="source" use="optional" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Identifier for data source used by component. If this component requires model(s) then source must be set. This will default to same as id if not
+                            provided.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="defer" use="optional" type="xs:string" />
+                <xs:attribute name="resourcePath" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="component-list">
+       <xs:complexContent>
+           <xs:extension base="component">
+               <xs:attribute name="iterable" use="required" type="xs:string" />
+               <xs:attribute name="modelItemName" use="optional" type="xs:string">
+                   <xs:annotation>
+                       <xs:documentation>
+                           Defaults to "item" if unspecified.
+                       </xs:documentation>
+                   </xs:annotation>
+               </xs:attribute>
+           </xs:extension>
+       </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="mantleComponentsRequired">
+		<xs:restriction base="xs:string">
+		  <xs:pattern value="Mantle Components/([a-zA-Z0-9/\s])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+    <xs:complexType name="info">
+        <xs:sequence>
+            <xs:element name="category" type="mantleComponentsRequired" minOccurs="1" maxOccurs="1" />
+            <xs:element name="displayName" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="previewType" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="documentation" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="tags" type="xs:string" />
+                <xs:element name="previewType" type="previewType" />
+                <xs:element name="resizable" type="xs:boolean" />
+                <xs:element name="bgColor" type="xs:string" />
+            </xs:choice>
+            <xs:group ref="componentChildren" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="previewType">
+       <xs:restriction base="xs:string">
+           <xs:enumeration value="default"/>
+           <xs:enumeration value="markup"/>
+           <xs:enumeration value="none"/>
+       </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="for">
+        <xs:complexContent>
+            <xs:extension base="filterable">
+                <xs:group ref="componentChildren" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

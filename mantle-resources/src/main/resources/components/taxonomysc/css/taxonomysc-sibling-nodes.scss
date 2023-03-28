@@ -1,0 +1,22 @@
+@import "mntlVariables";
+
+.mntl-taxonomysc-sibling-nodes {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+        flex-basis: 100%;
+    }
+
+    .mntl-taxonomysc-sibling-node {
+        flex-basis: 100%;
+
+        @media (min-width: $bp-small2) {
+            flex-basis: 50%;
+        }
+
+        @media (min-width: $bp-med2) {
+            flex-basis: 25%;
+        }
+    }
+}

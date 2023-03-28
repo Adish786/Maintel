@@ -1,0 +1,42 @@
+.result {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    margin-top: 40px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    .quiz-recirc {
+        margin-left: 0;
+    }
+
+    .circ-list {
+        padding-top: 5px;
+        margin-top: 30px;
+        margin-bottom: 0;
+
+        .widget-heading {
+            border: none;
+            text-align: left;
+
+            h5 {
+                padding: 0;
+                text-transform: capitalize;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .quiz-disclaimer {
+        padding-bottom: 10px;
+    }
+}

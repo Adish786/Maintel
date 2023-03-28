@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-toc" resourcePath="/components/digital-issue/di-toc/di-toc.ftl">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Table of Contents</displayName>
+            <description>
+                A table of contents for a digital issue, for plug-and-play on Carbon sites. Can still be used on non-Carbon sites.
+            </description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "toc-background-color": set the color for the background (Ex: "#FFFFFF")
+                - "toc-text-color": override the text color for the toc text (Ex: "#FFFFFF")
+                - "toc-text-accent-color": set the border color (Ex: "#000000")
+
+                # REQUIRED PROPERTIES/COMPONENTS
+
+                ## shortHeading
+                Table of contents list item text
+
+                ## digitalIssueRootConfigs
+                Pulls from the root config list in the BOVD
+
+                # OPTIONAL PROPERTIES/COMPONENTS
+                
+                ## digitalIssueCssVariables
+                The map of css variables to apply to the toc component, pulling from the 
+                root config list in the BOVD
+
+                ## editorLetterDisplayIndex
+                Where in the TOC to display the Letter from the Editors link
+                Default: placed at the end of links list
+
+                ## editorLetterTitleConfig
+                Letter from the Editors title text
+                Default: "Letter from the Editors"
+            </documentation>
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-toc/di-toc.css" />
+
+        <property name="tocItems" value="${@journeyStructure.sections}">
+            <model name="journeyStructure" />
+        </property>
+
+        <property name="editorLetterDisplayIndex" value="${@digitalIssueRootConfigs.get('editor-letter-display-index')}" onError="ignore" />
+
+        <property name="editorLetterTitle" value="${@editorLetterTitleConfig ?: 'Letter from the Editors'}" mode="replace">
+            <property name="editorLetterTitleConfig" value="${@digitalIssueRootConfigs?.get('editor-letter-section-title')}" onError="ignore" />
+        </property>
+
+        <list id="class">
+            <property name="mntl-di-toc--border" value="${@digitalIssueRootConfigs.get('toc-text-accent-color') != null ? 'mntl-di-toc--border' : null}" onError="ignore" />
+        </list>
+
+        <map id="digitalIssueCssVariables">
+            <property name="toc-text-color" value="${@digitalIssueRootConfigs.get('toc-text-color')}" onError="ignore" />
+            <property name="toc-text-accent-color" value="${@digitalIssueRootConfigs.get('toc-text-accent-color')}" onError="ignore" />
+            <property name="toc-background-color" value="${@digitalIssueRootConfigs.get('toc-background-color')}" onError="ignore" />
+        </map>
+
+        <for id="digitalIssueCssVariables.p*, editorLetterDisplayIndex, editorLetterTitleConfig, mntl-di-toc--border">
+            <model name="digitalIssueRootConfigs" />
+        </for>
+    </component>
+
+</components>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-three-column-block" ref="mntl-di-module">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Three Column Block</displayName>
+            <description>A digital issue module with three columns of cards</description>
+            <documentation />
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-three-column-block/di-three-column-block.css" />
+
+        <!-- 3:2, 2x render resolution -->
+        <for id="card__media">
+            <!-- full content well width -->
+            <property name="width" value="840" type="integer" views="mobile" />
+            <property name="height" value="560" type="integer" views="mobile" />
+            <!-- 1/3 content well width -->
+            <property name="width" value="642" type="integer" views="tablet" />
+            <property name="height" value="428" type="integer" views="tablet" />
+            <!-- 1/3 content well width -->
+            <property name="width" value="816" type="integer" views="pc" />
+            <property name="height" value="544" type="integer" views="pc" />
+        </for>
+    </component>
+
+</components>

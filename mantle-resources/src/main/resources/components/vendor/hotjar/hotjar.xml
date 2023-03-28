@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-hotjar" ref="mntl-group" tests="hotjarScript" buckets="active">
+
+        <info>
+            <category>Mantle Components/Third Party</category>
+            <displayName>Hotjar Intergration</displayName>
+            <description>Script needed to add Hotjar code to documents</description>
+            <documentation>Due to performance concerns we what to be selective on when and where this script is added, that's why this code lived behind a proctor test. Proctor tests should be added to verticals along with the creation of hotjar ids in the hotjar UI.</documentation>
+        </info>
+
+        <script group="bottom" evaluated="true" path="/static/mantle/js/hotjar.evaluated.js" />
+
+        <property id="siteID" value="${@externalConfig.value}" onError="collapseSilent">
+            <model id="externalConfig" name="externalConfig">
+                <property name="key" value="com.about.globe.hotjarSiteID" />
+            </model>
+        </property>
+    </component>
+
+</components>

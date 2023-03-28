@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-amazon-affiliate-tagger" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Affiliate</category>
+            <displayName>Amazon Affiliate Tagger</displayName>
+            <description>
+                Adds Amazon affiliate tags to Amazon links.
+
+                Intended to be used as a plugin for the Externalize Links component.
+            </description>
+            <documentation>
+                ### amazon-affiliate-tagger.evaluated.js
+
+                **Mntl.amazon-affiliate-tagger.init(model.amazonId, model.document.documentId, requestContext.requestId)**
+
+                ###Arguments
+
+                - __model.amazonId__ **string** required
+
+                - __model.document__ **Document**
+
+                Sets the default docId to be used when one cannot be determined through context.
+
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+
+            <property name="document" value="${null}" mode="replace" onError="ignore" />
+            <property name="amazonId" value="aboutcom02thundercats-20" mode="replace" />
+        </info>
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="bottom" evaluated="true" path="/static/mantle/components/amazon-affiliate-tagger/js/amazon-affiliate-tagger.evaluated.js" />
+        <script group="bottom" path="/static/mantle/components/amazon-affiliate-tagger/js/amazon-affiliate-tagger.js" />
+        
+        <!-- Include Amazon tagging when commerce info or affiliate -->
+        <property name="display" value="${((@document != null AND (@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')) OR
+                (@document?.disclaimer?.affiliate ?: false)) ? true : null}" onError="collapseSilent" />
+
+        <for id="this,display">
+            <model name="DOCUMENT" id="document" onError="ignore" />
+        </for>
+        
+        <config name="amazonId" key="amazonId" onError="collapseSilent" />
+    </component>
+
+</components>

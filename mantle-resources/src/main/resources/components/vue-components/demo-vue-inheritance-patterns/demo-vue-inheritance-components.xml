@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-demo-vue-props-component" ref="mntl-vue-base">
+        <info>
+            <category>Mantle Components/VueJS Demo Components/Inheritance</category>
+            <displayName>VueJS Props Example</displayName>
+
+            <description>
+This is a demo vue component in Mantle to for GLBE-7389. This component should be used for reference material
+and eventually deleted once we have better examples of Vue Components in Mantle and other verticals.
+            </description>
+
+            <documentation>
+This example uses evaluated js and a single file vue component to allow verticals to override properties in a inherited vue component. This setup assumes only one vue app of this type is on the page.
+
+The component has the following properties:
+
+* text `object` - The data object set in the Vue app/parent component. The child component uses demo-vue-header.vue and the fields are specified in the vue file
+            </documentation>
+
+            <for id="data">
+                <property name="header" value="Vue Info Tag Override Example" />
+                <property name="subHeader" value="This is an example of a VueJs app running withing globe that has this field overidden in the info tag." />
+            </for>
+        </info>
+
+        <script path="/static/mantle/components/vue-components/demo-vue-inheritance-patterns/demo-vue-inheritance-props/demo-vue-props.min.js"></script>
+
+        <property name="appId" value="demoVuePropsApp" />
+
+        <map id="data">
+            <property name="header" value="Vue Example Override from XML" />
+            <property name="subHeader" value="This is an example of a VueJs app running within Globe that has this field overidden from XML." />
+        </map>
+    </component>
+</components>

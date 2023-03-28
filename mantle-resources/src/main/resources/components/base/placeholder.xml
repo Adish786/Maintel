@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-placeholder" resourcePath="/components/base/view/placeholder.ftl">
+        <info>
+            <category>Mantle Components/Base</category>
+            <displayName>Placeholder</displayName>
+            <description>
+Add simple placeholder that highlights the component's location.
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+		<stylesheet path="/static/mantle/components/base/css/placeholder.css"></stylesheet>
+		
+	</component>
+
+</components>

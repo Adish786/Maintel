@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-card-list" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Card List</displayName>
+            <description>
+A generic list of cards.
+            </description>
+            <documentation>
+# Properties
+
+- __listItems__
+
+The list used as the iterable for the component list of mntl-cards.
+
+- __listStart__
+
+The index specifying where to start iterating over the listItems in the iterable.
+
+- __listEnd__
+
+The index specifying where to end iterating over the listItems in the iterable.
+
+- __chunk__
+
+The number of cards to show. Anything beyond this number will be hidden.
+            </documentation>
+            <for id="mntl-card-list-items">
+                <property name="listItems" value="${utils.range(0, 20)}" />
+                <property name="listEnd" value="5" type="integer" />
+                <!-- below is copied from card.xml (I wish these got inherited somehow) -->
+                <property name="title" value="This is the article title which needs to be between 20 &amp; 70 characters" />
+                <property name="kicker" value="Lorem Ipsum" />
+                <map id="image" mode="replace">
+                    <property name="caption" value="" />
+                    <property name="owner" value="saimai saelim/Getty Images" />
+                    <property name="alt" value="Namche Bazaar village in the morning, Everest region, Nepal" />
+                    <property name="width" value="2120" type="integer" />
+                    <property name="height" value="1415" type="integer" />
+                    <property name="objectId" value="GettyImages-640836084-58b5d7c65f9b586046ddb29c.jpg" />
+                </map>
+                <list name="taxonomy">
+                    <property name="tax1" value="${{'shortHeading':'Tax 1'}}" />
+                    <property name="tax2" value="${{'shortHeading':'Tax 2'}}" />
+                    <property name="tax3" value="${{'shortHeading':'Tax 3'}}" />
+                    <property name="tax4" value="${{'shortHeading':'Tax 4'}}" />
+                </list>
+                <property name="docId" value="12345" />
+                <property name="taxTag" value="2" type="integer" />
+                <property name="taxLevels" value="${{1, 2}}" />
+                <property name="taxLevelSep" value=" | " />
+                <property name="cta" value="Read More!" />
+                <property name="url" value="http://www.dotdash.com" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/card-list/card-list.css" />
+
+        <for id="attrs.data-chunk,
+        attrs.style,
+        mntl-card-list-items.class.is-hidden,
+        mntl-card-list__button.arbitraryDependency
+        ">
+            <property name="chunk" value="36" type="integer" />
+        </for>
+
+        <for id="mntl-card-list-items.class.is-hidden">
+            <component-list-item id="item" ref="mntl-card-list-items" />
+        </for>
+
+        <map id="attrs">
+            <property name="data-chunk" value="${@chunk}" />
+        </map>
+
+        <component-list id="mntl-card-list-items" location="content" ref="mntl-card" iterable="${utils.subList(@listItems, @listStart, @listEnd) ?: {}}}">
+            <list id="class">
+                <property name="is-hidden" value="${@item.index + 1 > @chunk ? 'is-hidden' : ''}" />
+            </list>
+
+            <property name="listStart" value="0" type="integer" />
+            <property name="listEnd" value="500" type="integer" />
+        </component-list>
+
+        <component location="content" id="mntl-card-list__bottom" ref="mntl-block">
+            <component id="mntl-card-list__button" location="content" ref="mntl-button">
+                <script path="/static/mantle/js/animation-utilities.js" />
+                <script path="/static/mantle/components/card-list/card-list.js" />
+                <list id="class">
+                    <property name="js-chop-button" value="js-chop-button" />
+                </list>
+
+                <property name="arbitraryDependency" value="${@listItems.size() > @chunk ? 'true' : null}" onError="collapseSilent" />
+                <property name="text" value="View More" />
+            </component>
+        </component>
+    </component>
+
+    <component id="mntl-document-card-list" ref="mntl-card-list">
+        <info>
+            <category>Mantle Components/Lists</category>
+            <displayName>Document Card List</displayName>
+            <description>
+A list of document cards.
+            </description>
+            <documentation>
+# Properties
+
+- __listItems__
+
+The items in the list are expected to be an object containing a document, e.g. TaxeneNodeEx, DocumentTaxeneComposite, etc.
+            </documentation>
+            <for id="mntl-card-list-items">
+                <model name="mockDocumentTaxeneList" id="listItems">
+                    <property name="mockName" value="sample-document-taxene-list" />
+                </model>
+            </for>
+        </info>
+
+        <component-list id="mntl-card-list-items" location="content" ref="mntl-document-card" iterable="${utils.subList(@listItems, @listStart, @listEnd) ?: {}}" mode="replace">
+            <property name="listStart" value="0" type="integer" />
+            <property name="listEnd" value="500" type="integer" />
+            <property name="index" value="${@item.index}" />
+            <property name="ordinal" value="${@item.index + 1}" />
+            <property name="taxTag" value="deepest" />
+            <property name="taxonomy" value="${@item.value instanceof T(com.about.mantle.model.extended.docv2.BaseDocumentEx) ? {} : (@item.value.ancestors ?: {})}" />
+            <property name="kicker" mode="remove" /> <!-- remove template type on these cards (showing taxonomy instead) -->
+            <property name="height" value="300" type="integer" views="pc, tablet" />
+
+            <for id="p*">
+                <property name="document" value="${@item.value instanceof T(com.about.mantle.model.extended.docv2.BaseDocumentEx) ?  @item.value : @item.value.document}">
+                    <component-list-item id="item" ref="mntl-card-list-items" />
+                </property>
+                <component-list-item id="item" ref="mntl-card-list-items" />
+            </for>
+        </component-list>
+    </component>
+
+</components>

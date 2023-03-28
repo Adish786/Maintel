@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-social-nav" resourcePath="/components/navigation/social-nav/view/social-nav.ftl">
+        <info>
+            <category>Mantle Components/Navigation</category>
+            <displayName>Social Nav</displayName>
+            <description>This component displays links, in the form of svg icons, to an author's or vertical's social media profiles</description>
+            <documentation>
+                # Properties
+                ## trackingContainer
+                Determines if it is a tracking container
+
+                ## title
+                Text that will be displayed before the list of social links
+
+                ## owner
+                Text that gives screen readers context as to whose social links are being viewed (ex. 'Author' or 'Vertical')
+
+                ## networks
+                List of social networks to be displayed. Each item in the list is a map with the required keys 'networkName' and 'url', and optional keys 'text' and 'accessibleLabel'. Descriptions of each are below
+
+                ### networkName
+                The name of the social network. This is used for getting the proper svg icon and for the screen reader accessible label
+
+                ### url
+                The url of the social profile
+
+                ### text
+                Optional text that can prepend or append the svg icon using a data attribute. The default placement is before the icon, but this can be changed by overriding the base styles
+
+                ### accessibleLabel
+                Optional text that will be used for the screen reader accessible label. If not specified the label will fall back to {owner} plus {networkName}. If owner is also not specified the field will fall back to networkName (ex. if owner='Author' and the current network is 'facebook', the fallback value will be 'Author's Facebook', if owner is not specified the fallback value would be 'Facebook')
+            </documentation>
+
+            <svg id="icon-facebook" path="/static/mantle/svg/icon-more-info.svg" />
+            <svg id="icon-linkedin" path="/static/mantle/svg/icon-edit.svg" />
+            <svg id="icon-twitter" path="/static/mantle/svg/icon-circle-plus.svg" />
+            <svg id="icon-flipboard" path="/static/mantle/svg/icon-magnifying-glass.svg" />
+            <svg id="icon-pinterest" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+
+            <property name="title" value="Follow us" />
+            <property name="owner" value="Author" />
+
+            <list id="networks">
+                <map id="facebook">
+                    <property name="url" value="https://www.facebook.com" />
+                    <property name="text" value="Follow" />
+                </map>
+                <map id="flipboard">
+                    <property name="url" value="https://www.flipboard.com" />
+                </map>
+                <map id="pinterest">
+                    <property name="url" value="https://www.pinterest.com" />
+                </map>
+                <map id="linkedin">
+                    <property name="url" value="https://www.linkedin.com" />
+                    <property name="accessibleLabel" value="Follow us on LinkedIn!" />
+                </map>
+                <map id="twitter">
+                    <property name="url" value="https://www.twitter.com" />
+                </map>
+            </list>
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/navigation/social-nav/css/social-nav.css" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="title" value="" />
+        <property name="owner" value="" />
+
+        <list id="networks">
+            <map id="facebook">
+                <property name="networkName" value="Facebook" />
+                <property name="url" value="" />
+            </map>
+            <map id="flipboard">
+                <property name="networkName" value="Flipboard" />
+                <property name="url" value="" />
+            </map>
+            <map id="instagram">
+                <property name="networkName" value="Instagram" />
+                <property name="url" value="" />
+            </map>
+            <map id="linkedin">
+                <property name="networkName" value="LinkedIn" />
+                <property name="url" value="" />
+            </map>
+            <map id="newsletter">
+                <property name="networkName" value="Newsletter" />
+                <property name="url" value="" />
+            </map>
+            <map id="pinterest">
+                <property name="networkName" value="Pinterest" />
+                <property name="url" value="" />
+            </map>
+            <map id="reddit">
+                <property name="networkName" value="Reddit" />
+                <property name="url" value="" />
+            </map>
+            <map id="snapchat">
+                <property name="networkName" value="Snapchat" />
+                <property name="url" value="" />
+            </map>
+            <map id="tiktok">
+                <property name="networkName" value="TikTok" />
+                <property name="url" value="" />
+            </map>
+            <map id="twitter">
+                <property name="networkName" value="Twitter" />
+                <property name="url" value="" />
+            </map>
+            <map id="website">
+                <property name="networkName" value="Website" />
+                <property name="url" value="" />
+            </map>
+            <map id="youtube">
+                <property name="networkName" value="YouTube" />
+                <property name="url" value="" />
+            </map>
+        </list>
+
+    </component>
+
+</components>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-sponsorship" ref="mntl-block">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship</displayName>
+	        <description>Linkable image and text indicating a given document is sponsored</description>
+	        <documentation />
+	        <property name="display" mode="remove" />
+
+	        <for id="mntl-sponsorship__title">
+	        	<property name="text" value="Sponsored by" mode="replace" />
+	        </for>
+
+	        <for id="mntl-sponsorship__logo-wrapper">
+	        	<property name="uri" value="https://www.target.com" />
+	        </for>
+
+	        <for id="mntl-sponsorship__logo">
+	        	<property name="imageObjectId" value="about-us-mrb-5b7efad9c9e77c0024cee5a1.png" />
+			    <property name="width" value="752" type="integer" />
+			    <property name="height" value="160" type="integer" />
+				<property name="alt" value="alt" onError="ignore" />
+	        </for>
+
+	        <for id="mntl-sponsorship__disclaimer">
+				<map id="attrs">
+					<property name="data-tooltip" value="Here is some sample description text." />
+				</map>
+	        </for>
+        </info>
+
+		<stylesheet path="/static/mantle/components/widgets/sponsorship/sponsorship.css" />
+
+		<for id="display, text, data-tooltip, imageObjectId, width, height, uri, alt">
+			<property name="sponsor" value="${@document?.sponsor}" onError="collapseSilent">
+				<model name="DOCUMENT" id="document" onError="collapseSilent" />
+			</property>
+		</for>
+
+		<property name="display" value="${@sponsor != null ? 'true' : null}" onError="collapseSilent" />
+
+		<component location="content" ref="mntl-sponsorship__title" />
+		<component location="content" ref="mntl-sponsorship__content" />
+	</component>
+
+	<component id="mntl-sponsorship--universal-image" ref="mntl-sponsorship">
+		<for id="mntl-sponsorship__content.mntl-sponsorship__logo-wrapper">
+			<component location="content" ref="mntl-universal-image" id="mntl-sponsorship__logo" mode="replace">
+				<property name="class" value="mntl-sponsorship__logo" />
+				
+				<for id="this, alt, height, width, placeholderWidth, placeholderHeight">
+					<property name="image" value="${@sponsor?.sponsorImage ?: null}">
+						<property name="sponsor" value="${@document?.sponsor}" onError="collapseSilent">
+							<model name="DOCUMENT" id="document" onError="collapseSilent" />
+						</property>
+					</property>
+				</for>
+			</component>
+		</for>
+	</component>
+
+	<!--
+		The following components only exist to be used in the `mntl-sponsorship` component,
+		and are separate so they can be shuffled around by the vertical for any layout changes.
+
+		If being used from outside of `mntl-sponsorship`, create a pattern library entry for it.
+	-->
+    <component id="mntl-sponsorship__title" ref="mntl-text-block">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship Title</displayName>
+		</info>
+
+        <property name="text" value="${@sponsor?.title ?: 'Sponsored by'}" />
+        <property name="tag" value="span" />
+    </component>
+
+    <component id="mntl-sponsorship__logo-wrapper" ref="mntl-text-link">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship Logo Wrapper</displayName>
+		</info>
+
+        <property name="uri" value="${@sponsor?.pixelTrackingUrl ?: @sponsor?.url}" />
+        <property name="external" value="true" type="boolean" />
+
+        <component location="content" ref="mntl-image" id="mntl-sponsorship__logo">
+            <property name="imageObjectId" value="${@sponsor?.sponsorImage ?: null}" onError="collapseSilent" />
+            <property name="width" value="${@sponsor?.sponsorImage?.width ?: null}" onError="collapseSilent" />
+            <property name="height" value="${@sponsor?.sponsorImage?.height ?: null}" onError="collapseSilent" />
+            <property name="alt" value="${@sponsor?.sponsorImage?.alt ?: ''}" onError="ignore" />
+        </component>
+    </component>
+
+    <component id="mntl-sponsorship__disclaimer" ref="mntl-text-block">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship Logo Disclaimer</displayName>
+		</info>
+
+        <map id="attrs">
+            <property name="data-tooltip" value="${@sponsor?.description}" onError="collapseSilent" />
+        </map>
+        <property name="text" value="What's this?" />
+        <property name="tag" value="span" />
+
+        <component ref="mntl-tooltip" />
+    </component>
+
+    <component id="mntl-sponsorship__content" ref="mntl-block">
+    	<info>
+	        <category>Mantle Components/Widgets</category>
+	        <displayName>Sponsorship Content</displayName>
+		</info>
+
+        <component location="content" ref="mntl-sponsorship__logo-wrapper" />
+        <component location="content" ref="mntl-sponsorship__disclaimer" />
+    </component>
+</components>

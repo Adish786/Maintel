@@ -1,0 +1,19 @@
+//Button form container
+.mntl-print-button {
+    &__btn {
+        line-height: 1.6;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: none;
+        padding: 0;
+        border: none;
+    }
+
+    &__icon {
+        position: relative;
+        top: 4px;
+        width: 19px;
+        height: 19px;
+        margin: 0 2px;
+    }
+}

@@ -1,0 +1,1 @@
+Add ads support for visual test [AUDE-244](https://dotdash.atlassian.net/browse/AUDE-244)

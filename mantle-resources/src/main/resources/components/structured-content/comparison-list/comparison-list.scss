@@ -1,0 +1,11 @@
+@import "mntlVariables";
+
+.mntl-sc-block-comparisonlist {
+    @media (min-width: 29em) {
+        display: flex;
+    }
+
+    &__wrapper {
+        flex-grow: 1;
+    }
+}

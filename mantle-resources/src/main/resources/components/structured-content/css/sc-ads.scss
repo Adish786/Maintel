@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #STRUCTURED CONTENT
+\*------------------------------------*/
+
+/**
+ * 1. Container for injected components should be hidden
+ * 2. Inline ads need a defined size before being injected
+ */
+
+.js-scads-inline-content { /* 1 */
+    position: absolute;
+    top: -10000in;
+}
+
+// To be deprecated in 3.13
+.billboard { /* 2 */
+    min-width: 300px;
+    min-height: 250px;
+
+    &[data-ad-height='0'] {
+        display: none;
+    }
+
+    &[data-ad-height='fluid'] {
+        min-height: 0;
+        padding: 0;
+    }
+}

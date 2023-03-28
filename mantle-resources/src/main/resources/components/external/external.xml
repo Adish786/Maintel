@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+	<component id="mntl-external-component" resourcePath="/components/external/view/external.ftl">
+		<info>
+			<category>Mantle Components/External</category>
+			<displayName>External Component</displayName>
+			<description>Render a component (html, css, js) provided by a remote server</description>
+			<documentation>
+				### externalComponent task model
+
+				#### Arguments
+
+				- __serviceId__ _maps to a registered external service_
+				- __componentId__ _maps to a component on the service specified by serviceId_
+
+				#### Example
+
+				```
+				<![CDATA[
+				```
+				<component location="body" ref="mntl-external-component">
+					<model name="externalComponent">
+						<property name="serviceId" value="commerce" />
+						<property name="componentId" value="commerce-body" />
+					</model>
+				</component>
+				```
+				]]>
+				```
+
+				### External Component Service Registration
+
+				### Example
+
+				```java
+				@Bean
+				public ExternalComponentService commerceExternalComponentService() {
+
+					Service commerceSvc = propertyFactory.getService("commerce",
+							MantleExternalConfigKeys.getServiceDiscoveryFallbackUrlKey("commerce"));
+
+					if (commerceSvc == null) {
+						throw new GlobeException("Could not resolve commerce server");
+					}
+
+					return new GlobeBasedExternalComponentService("commerce", commerceSvc, externalComponentServiceRegistry());
+				}
+				```
+			</documentation>
+			<previewType>none</previewType>
+		</info>
+
+		<stylesheet evaluated="true" path="/static/mantle/components/external/css/external.evaluated.css" />
+		<script evaluated="true" path="/static/mantle/components/external/js/external.evaluated.js" />
+	</component>
+</components>

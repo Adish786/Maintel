@@ -1,0 +1,71 @@
+@import 'spriteMap';
+
+// Override this variable at vertical level
+$projectVersion: 'DEVELOPMENT' !default;
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+.sprite {
+    background-repeat: no-repeat;
+    background-image: url(/image/#{$projectVersion}/images/sprite.png);
+    display: inline-block;
+    overflow: hidden;
+
+    &.knockout {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: ' ';
+            display: block;
+            font-size: 0;
+            position: absolute;
+        }
+
+        &:before {
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+        }
+
+        &:after {
+            background: inherit;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+@mixin knockout-sprite($color) {
+    @extend .sprite.knockout;
+
+    &:before {
+        background-color: $color;
+    }
+}
+
+@each $sprite, $properties in $spriteMap {
+    .sprite.#{$sprite} {
+        @each $prop, $val in $properties {
+            #{$prop}: $val;
+        }
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .sprite {
+        background-image: url(/image/#{$projectVersion}/images/sprite@2x.png);
+        background-size: #{$spriteSize};
+    }
+}

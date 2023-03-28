@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+    <template id="serverStatus" resourcePath="/components/responses/serverstatus/view/serverStatus.ftl">
+        <model name="moduleVersions">
+            <property name="stripLastChar" value="true" type="boolean"/>
+        </model>
+        <model name="buildToolVersions"/>
+    </template>
+</templates>

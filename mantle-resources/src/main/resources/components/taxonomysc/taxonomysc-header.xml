@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-taxonomysc-header" ref="mntl-block">
+        <info>
+            <category>Mantle Components/TaxonomySC</category>
+            <displayName>TaxonomySC Header</displayName>
+            <description>Header component to be used for rendering the header section of a TAXONOMYSC page.</description>
+            <previewType>none</previewType>
+        </info>
+        <stylesheet path="/static/mantle/components/taxonomysc/css/taxonomysc-header.css" />
+
+        <for id="mntl-taxonomysc-heading.text, mntl-taxonomysc-subheading.text,
+        mntl-review-byline.collapse">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <component location="content" id="mntl-taxonomysc-header__top" ref="mntl-block">
+            <component location="content" id="mntl-taxonomysc-image-wrapper" ref="mntl-block">
+                <property name="collapseIfNoImage" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? 'true' : null}" onError="collapseSilent">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+                <component location="content" id="mntl-taxonomysc-image" ref="mntl-primary-image" />
+            </component>
+
+            <component location="content" id="mntl-taxonomysc-header-group" ref="mntl-block">
+                <component location="content" ref="mntl-breadcrumbs">
+                    <for id="mntl-breadcrumbs__item">
+                        <!-- Show only parent and grandparent node but always exclude tax 0 node-->
+                        <property name="items" value="${utils.subList(@ancestors, @listStart, @listEnd)}" onError="collapseSilent" mode="replace">
+                            <property name="listStart" value="${@ancestors.size() > @depth ? @ancestors.size() - @depth : 1}" />
+                            <property name="listEnd" value="${@ancestors.size() - 1}" />
+                        </property>
+                    </for>
+
+                    <for id="items, items.listStart, items.listEnd">
+                        <property name="depth" value="3" type="integer" />
+                        <model name="ancestors">
+                            <model name="breadcrumb" />
+                        </model>
+                    </for>
+                </component>
+
+                <component location="content" id="mntl-taxonomysc-heading" ref="mntl-text-block">
+                    <property name="tag" value="h1" />
+                    <property name="text" value="${@document.heading}" />
+                </component>
+
+                <component location="content" id="mntl-taxonomysc-subheading" ref="mntl-text-block">
+                    <property name="tag" value="p" />
+                    <property name="text" value="${str.stripToNull(@document.subheading)}" onError="collapseSilent" />
+                </component>
+
+                <component location="content" id="mntl-taxonomysc-sponsorship" ref="mntl-sponsorship">
+                    <property name="collapseUntilEnabled" value="${null}" onError="collapseSilent" />
+                </component>
+
+                <component location="content" id="mntl-taxonomysc-header__info" ref="mntl-block">
+                    <component location="content" ref="mntl-review-byline">
+                        <property name="collapseOnAttributionEnabled" value="${ @attributionEnabled == true ? null : true }" onError="collapseSilent" />
+                        <property name="collapse" value="${@document.metaData?.review?.authorId ?: null}" onError="collapseSilent" />
+                    </component>
+
+                    <component location="content" ref="mntl-updated-stamp">
+                        <property name="collapseOnAttributionEnabled" value="${ @attributionEnabled == true ? null : true }" onError="collapseSilent" />
+                    </component>
+
+                    <component location="content" ref="mntl-bylines">
+                        <for id="mntl-bylines__group">
+                            <property name="collapseOnAuthorGroup" value="${'AUTHOR'.equals(@groupName.key.toString()) ? null : false }" onError="collapseSilent">
+                                <component-list-item id="groupName" ref="mntl-bylines__group" />
+                            </property>
+                        </for>
+                        
+                        <!-- all documents have an author, so on taxSC since the author group is collapsed, we display date next to first displayed group (index == 1) -->
+                        <for id="date">
+                            <property name="shouldDisplayDate" value="${ @groupName.index == 1 }" mode="replace">
+                                <component-list-item id="groupName" ref="mntl-bylines__group" />
+                            </property>
+                        </for>
+                    </component>
+
+                    <for id="collapseOnAttributionDisabled, collapseOnAttributionEnabled">
+                        <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+                    </for>
+                </component>
+            </component>
+        </component>
+
+        <component location="content" id="mntl-taxonomysc-header__bottom" ref="mntl-block">
+            <component location="content" ref="mntl-taxonomysc-intro" />
+        </component>
+    </component>
+
+    <component id="mntl-taxonomysc-intro" ref="mntl-sc-page">
+        <for id="mntl-sc-page-contents.contents">
+            <property name="blockList" value="${@document.intro.list}" mode="replace" onError="collapseSilent" />
+            <property name="adInsertionStrategyName" value="noAdsStructuredContentAdInsertionStrategy" />
+        </for>
+
+        <for id="collapseIfNoIntro, mntl-sc-page-contents.contents.blockList">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <property name="collapseIfNoIntro" value="${@document.intro.empty ? null : 'true'}" onError="collapseSilent" />
+    </component>
+</components>

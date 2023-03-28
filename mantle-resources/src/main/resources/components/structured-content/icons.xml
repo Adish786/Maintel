@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-sc-icons" resourcePath="/components/structured-content/icons.ftl" />
+
+</components>

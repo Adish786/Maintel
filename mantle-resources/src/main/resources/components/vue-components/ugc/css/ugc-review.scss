@@ -1,0 +1,13 @@
+@import 'partials/add-feedback';
+@import 'partials/feedback';
+@import 'partials/feedback-form';
+@import 'partials/feedback-summary';
+@import 'partials/photo-upload';
+@import 'partials/ratings-histogram';
+@import 'partials/sort';
+@import 'partials/stars';
+@import 'partials/star-rating';
+@import 'partials/ugc';
+
+/* Add styles specific styles to reviews only */
+/* In the future, we will create ugc-comment to store styles only specific to comments */

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-affiliate-link-rewriter" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Affiliate</category>
+            <displayName>Affiliate Link Rewriter</displayName>
+            <description>
+Processes query parameters mentioned in "data-affiliate-link-rewriter" data-attribute by replacing string tokens provided in tokenMappings and appending it to affiliate links.  
+
+Intended to be used as a plugin for the Externalize Links component.
+            </description>
+            <documentation>
+###affiliate-link-rewriter.evaluated.js
+
+```Mntl.affiliateLinkRewriter.setMappings(model.tokenMappings)```
+
+###Arguments
+
+- __model.tokenMappings__ ```Map``` required
+
+Provides mapping for tokens to be replaced with actual values for e.g. ${DOCID} must be replaced by actual document ID
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>none</previewType>
+        </info>
+        <script group="bottom" path="/static/mantle/components/affiliate-link-rewriter/js/affiliate-link-rewriter.js" />
+        <script group="bottom" evaluated="true" path="/static/mantle/components/affiliate-link-rewriter/js/affiliate-link-rewriter.evaluated.js" />
+        
+        <map id="tokenMappings">
+        	<property name="DOC_ID" value="${@document != null ? @document.documentId.toString() : null}" onError="ignore" >
+        		<model name="DOCUMENT" id="document" />
+        	</property>
+        	<property name="REQUEST_ID" value="${requestContext.requestId}" />
+        	<property name="SITE" value="${str.removeEnd(requestContext.urlData.domain, '.com')}" />
+        </map>
+    </component>
+
+</components>

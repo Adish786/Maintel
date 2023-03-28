@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-save" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Auth</category>
+            <displayName>Save</displayName>
+            <description>Integrate saving of a content with authentication</description>
+            <documentation />
+        </info>
+        <stylesheet path="/static/mantle/components/save/save.css" />
+        <script path="/static/mantle/components/save/save.js" />
+        <svg id="save-icon-favorite" path="/static/mantle/svg/icon-favorite.svg" />
+
+        <component location="content" id="mntl-save__auth0" ref="mntl-auth0">
+            <property name="tag" value="button" />
+            <property name="cta" value="" />
+            <for id="mntl-ugc-vue-with-auth-auth0.attrs">
+                <property name="data-click-tracked" value="false" />
+            </for>
+        </component>
+
+        <component location="content" id="mntl-save__link" ref="mntl-button">
+            <map id="attrs">
+                <property name="data-doc-id" value="${@document.documentId.toString()}" />
+                <property name="data-check-on-load" value="true" />
+                <property name="data-click-tracked" value="false" />
+            </map>
+
+            <property name="trackingContainer" value="false" type="boolean" />
+            <property name="text" value="&lt;span&gt;Save&lt;/span&gt;" />
+            <property name="svgIcon" value="save-icon-favorite" />
+
+            <for id="attrs.data-doc-id">
+                <model name="DOCUMENT" id="document" />
+            </for>
+        </component>
+
+        <component location="content" id="mntl-save__confirmation" ref="mntl-save__confirmation-dialog" />
+    </component>
+
+    <component id="mntl-save__confirmation-dialog" ref="mntl-dialog">
+        <map id="attrs">
+            <property name="data-a11y-dialog" value="mntl-save__dialog" />
+        </map>
+
+        <property name="heading" value="" />
+
+        <component location="content" id="mntl-save__confirmation-icon" ref="mntl-svg">
+            <property name="name" value="save-icon-favorite" />
+        </component>
+        <component location="content" id="mntl-save__confirmation-text" ref="mntl-text-block">
+            <list id="class">
+                <property name="typography" value="type--zebra" />
+            </list>
+
+            <property name="text" value="Saved!" />
+        </component>
+    </component>
+</components>

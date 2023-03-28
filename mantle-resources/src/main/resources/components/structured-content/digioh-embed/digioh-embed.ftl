@@ -1,0 +1,9 @@
+<@component>
+    <div 
+        id="lightbox-inline-form-${model.digiohGUID}"
+        class="mntl-sc-block-digiohembed__container"
+        data-guid="lightbox-inline-form-${model.digiohGUID}"
+        data-title="${model.digiohTitle}"
+        >
+    </div>
+</@component>

@@ -1,0 +1,9 @@
+.mntl-breadcrumbs__item {
+    display: inline-block;
+}
+
+.mntl-breadcrumbs__item + .mntl-breadcrumbs__item:before {
+    content: '>';
+    display: inline-block;
+    margin: 0 0.5rem;
+}

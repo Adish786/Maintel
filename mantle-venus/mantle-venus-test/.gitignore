@@ -1,0 +1,12 @@
+/target/
+/.classpath
+/.project
+/.settings
+/bizcategoryreport.json
+/failedTestRoundOne.txt
+/failedTestRoundOneFailedTestReport.html
+/failedTestRoundOneReport.html
+/failedTestRoundOneTestReport.html
+/.apt_generated/
+/.apt_generated_tests/
+/.factorypath

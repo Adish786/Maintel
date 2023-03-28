@@ -1,0 +1,67 @@
+.ratings-histogram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid $color-black-15;
+    width: 100%;
+
+    &__average {
+        display: flex;
+        align-items: center;
+
+        &-text {
+            margin-left: 0.6044rem;
+        }
+
+        &-star {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: $color-gray;
+        }
+    }
+
+    &__total {
+        margin-top: 0.5rem;
+        margin-bottom: 0.625rem;
+    }
+
+    &__rows {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__score {
+        margin-right: 0.3331rem;
+
+        &-star {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5831rem; 
+            fill: $color-gray;
+        }
+    }
+
+    &__progress {
+        background:  $color-black-15;
+        height: 0.625rem;
+        width: 8rem;
+        margin-right: .5rem; 
+        
+        &-bar {
+            display: block;
+            background: $color-gray;
+            height: 100%;
+        }
+    }
+
+    &__count {
+        color: $color-black-65;
+    }
+
+}

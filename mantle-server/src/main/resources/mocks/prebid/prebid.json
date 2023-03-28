@@ -1,0 +1,40 @@
+{
+	"billboard": [{
+		"bidder": "ix",
+		"params": {
+			"siteId": "324027",
+			"size": [300, 250]
+		}
+	}, {
+		"bidder": "criteo",
+		"params": {
+			"networkId": 1220863
+		}
+	}, {
+		"bidder": "rubicon",
+		"params": {
+			"accountId": "7499",
+			"siteId": "13945",
+			"zoneId": "23948"
+		}
+	}],
+	"billboard2": [{
+		"bidder": "ix",
+		"params": {
+			"siteId": "324028",
+			"size": [300, 250]
+		}
+	}, {
+		"bidder": "criteo",
+		"params": {
+			"networkId": 1220863
+		}
+	}, {
+		"bidder": "rubicon",
+		"params": {
+			"accountId": "7499",
+			"siteId": "13945",
+			"zoneId": "23949"
+		}
+	}]
+}

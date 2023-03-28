@@ -1,0 +1,31 @@
+{
+  "name": "@dotdash/mantle-resources",
+  "version": "3.13.792",
+  "description": "Yarn package of mantle-resources",
+  "author": "Dotdash - Globe Core",
+  "scripts": {
+    "build": "echo 'yarn install ran already'",
+    "test": "echo 'no tests to run' && exit"
+  },
+  "files": [
+    "src/main/resources/components/**/*.js",
+    "src/main/resources/js/**/*.js",
+    "src/main/resources/static/js/prebidjs/**/*.js",
+    "src/main/resources/static/js/prebidjs/**/*.js.map",
+    "src/main/resources/static/libs/**/*.js",
+    "src/main/resources/components/**/*.vue",
+    "src/main/resources/components/**/*.evaluated.css",
+    "src/main/resources/components/**/*.scss",
+    "src/main/resources/css/**/*.scss",
+    "src/main/resources/components/**/*.png",
+    "src/main/resources/images/**/*.png",
+    "src/main/resources/components/**/*.svg",
+    "src/main/resources/svg/**/*.svg",
+    "src/main/resources/fonts/**/*.ttf",
+    "src/main/resources/fonts/**/*.woff*",
+    "/src/main/resources/static/**/*.css"
+  ],
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
+}

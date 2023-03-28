@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-instructions-steps" ref="mntl-block">
+        <info>
+            <category>Mantle Components/How To</category>
+            <displayName>Instruction Steps Section</displayName>
+            <description>Shows the steps needed for a how-to template.</description>
+        </info>
+        <stylesheet path="/static/mantle/components/how-to/steps/steps.css" />
+
+        <component location="content" id="mntl-instructions-steps__heading" ref="mntl-text-block">
+            <property name="tag" value="h2" />
+            <property name="text" value="Instructions" />
+        </component>
+
+        <component location="content" id="mntl-instructions-steps__list" ref="mntl-sc-page">
+            <for id="mntl-sc-page-contents">
+                <model name="processStructuredContentBlocksInSliceableList" id="contents" mode="replace">
+                    <property name="blockSliceableListEx" value="${@document.getInstructionContents()}">
+                        <model name="DOCUMENT" id="document" />
+                    </property>
+                    <property name="sliceHtmlAtCharCount" value="1000" type="integer" />
+                    <!-- value is the Spring bean name of an instance of StructuredContentAdInsertionStrategy -->
+                    <property name="adInsertionStrategyName" value="defaultStructuredContentAdInsertionStrategy" />
+                </model>
+            </for>
+        </component>
+    </component>
+
+</components>

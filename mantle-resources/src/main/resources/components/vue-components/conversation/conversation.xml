@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-vue-conversation" ref="mntl-vue-base">
+        <info>
+            <category>Mantle Components/VueJS Components/</category>
+            <displayName>Conversation</displayName>
+            <description>
+                This is a base conversation app. It's intended to be extended by verticals who want to personalize it for
+                a specific topic.
+            </description>
+            <documentation>
+* data (Object) - Key value pairs of data to set on the vue app including:
+### `iconPrePath` Property (String)
+    Beginning of path to all icons used. Icon values given in data will be appended to this. Default is '/static/mantle/${projectInfo.version}'.
+
+### `appClasses` Property (String)
+    Class(es) for the app's main containing div. This div already has class 'mntl-conversation' from template. Default is empty (adding no additional classes).
+
+### `script` Property (Array) REQUIRED
+    An array of pages that build the conversation script. This data is empty by default but required for app functionality. Example of correct format in data map below.
+
+### `timeline` Property (Array)
+    Conversation pieces that have occured already. These pieces will be displayed on load (in same structure as script). Default is empty array to indicate no conversation has happened yet.
+            </documentation>
+
+            <map id="data">
+                <property name="iconPrePath" value="/static/mantle/${projectInfo.version}" />
+
+                <model id="script" name="json" >
+                    <property name="string" value='[
+                        {
+                            "id": 0,
+                            "text": [{
+                                "type": "advice",
+                                "user": {
+                                    "name": "Dotdash",
+                                    "image": "/icons/favicons/apple-touch-icon-120x120.png"
+                                },
+                                "data": "&lt;p&gt;Let’s simulate a discussion with your friend or relative.&lt;/p&gt;"
+                            }],
+                            "choices": [{
+                                "text": "Get Started",
+                                "target": 1
+                            }]
+                        }, {
+                            "id": 1,
+                            "text": [{
+                                "type": "advice",
+                                "user": {
+                                    "name": "Dotdash",
+                                    "image": "/icons/favicons/apple-touch-icon-120x120.png"
+                                },
+                                "data": "&lt;p&gt;Okay, let’s start the conversation!&lt;/p&gt;"
+                            }, {
+                                "heading": "Friend",
+                                "data": "You were late again today. What’s going on?",
+                                "type": "text"
+                            }],
+                            "heading": "Choose your response",
+                            "choices": [{
+                                "text": "Will you stop with the third degree?",
+                                "target": 2
+                            }, {
+                                "text": "Sorry about that. I’ll try to get here earlier next time.",
+                                "target": 3
+                            }, {
+                                "text": "Honestly? My RA is flaring up. I’m in pain and feeling really tired.",
+                                "target": 4
+                            }]
+                        }, {
+                            "id": 2,
+                            "text": [{
+                                "heading": "Friend",
+                                "data": "No need to get touchy. I was just asking if you were OK.",
+                                "type": "text"
+                            }, {
+                                "type": "advice",
+                                "user": {
+                                    "name": "Dotdash",
+                                    "image": "/icons/favicons/apple-touch-icon-120x120.png"
+                                },
+                                "icon": "icon-x",
+                                "data": "&lt;p&gt;Don’t say this. Your friend or relative likely doesn’t have a clue how much pain you’re in or how tired you are. So from their perspective, your negative tone could seem like it’s coming out of nowhere. This can make them feel defensive or want to change the subject. And if you do end up asking for help, they might be less apt to give it.&lt;/p&gt;"
+                            }],
+                            "heading": "Choose this instead",
+                            "choices": [{
+                                "text": "Honestly? My RA is flaring up. I’m in pain and feeling really tired.",
+                                "target": 4
+                            }]
+                        }, {
+                            "id": 3,
+                            "text": [{
+                                "heading": "Friend",
+                                "data": "OK. Well, let me know if there’s something you want to talk about.",
+                                "type": "text"
+                            }, {
+                                "type": "advice",
+                                "user": {
+                                    "name": "Dotdash",
+                                    "image": "/icons/favicons/apple-touch-icon-120x120.png"
+                                },
+                                "icon": "icon-x",
+                                "data": "&lt;p&gt;Don’t say this. You might feel like talking about what you’re going through is whiny or complaining, but brushing it aside isn’t the answer. Your friend or relative is giving you an opportunity to ask for help here. Take it.&lt;/p&gt;"
+                            }],
+                            "heading": "Choose this instead",
+                            "choices": [{
+                                "text": "Honestly? My RA is flaring up. I’m in pain and feeling really tired.",
+                                "target": 4
+                            }]
+                        }, {
+                            "id": 4,
+                            "text": [{
+                                "type": "advice",
+                                "user": {
+                                    "name": "Dotdash",
+                                    "image": "/icons/favicons/apple-touch-icon-120x120.png"
+                                },
+                                "icon": "icon-check",
+                                "data": "&lt;p&gt;This is the right direction. Your friend or relative suspects something is going on and is inviting you to open up about it. Confiding in them about how you’re feeling allows them to see things from your perspective. It also provides some context for why you are behaving differently lately (for example, showing up late), which can make them more likely to help you in the future if you ask.&lt;/p&gt;"
+                            }, {
+                                "type": "takeaway",
+                                "heading": "A Word From Dotdash",
+                                "data": "&lt;p&gt;For more information and practical tips on living well with rheumatoid arthritis, see our section on hoe RA changes your life. To explore treatments for your symptoms, see our RA treatment path. And for tips on how to navigate common issues when discussing RA, see our article Rheumatoid Arthritis.&lt;/p&gt;&lt;p&gt;Make sure to download the script of the above conversation for reference. You can also download our doctor discussion guide below to ensure you have the most informed and proactive chat with your medical team, who will help you find effective therapies for RA.&lt;/p&gt;",
+                                "buttons": [{
+                                    "url": "https://files.verywellhealth.com/Talking+About+Rheumatoid+Arthritis.pdf",
+                                    "buttonText": "Conversation Script",
+                                    "fileType": "PDF"
+                                }, {
+                                    "url": "https://files.verywellhealth.com/doctor-discussion-guides/Rheumatoid+Arthritis+Doctor+Discussion+Guide.pdf",
+                                    "buttonText": "Doctor Discussion Guide",
+                                    "fileType": "PDF"
+                                }]
+                            }]
+                        }]' />
+                    <property name="class" value="org.json.simple.JSONArray" />
+                </model>
+            </map>
+        </info>
+
+        <!-- Load Vue App JS -->
+        <script path="/static/mantle/components/vue-components/conversation/conversation.js" />
+
+        <!-- App properties -->
+        <property name="appId" value="conversationApp" />
+
+        <!-- App Data Mapping -->
+        <map id="data">
+            <property name="iconPrePath" value="/static/${projectInfo.version}" />
+        </map>
+    </component>
+</components>

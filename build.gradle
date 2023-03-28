@@ -1,0 +1,43 @@
+plugins {
+    id "com.about.plugins.globe-platform-plugin" version "${globeGradlePluginsVersion}"
+}
+
+allprojects {
+    apply from: "${rootProject.projectDir}/dependencies.gradle"
+}
+
+apply plugin: "com.about.plugins.mantle-tasks-plugin"
+
+dependencies {
+    //import dependencyManagement section of globe-core and venus here.
+    api platform("com.about:globe-core:${aboutGlobeCoreVersion}")
+    api platform("com.about:venus:${aboutVenusVersion}") {
+        exclude group: 'io.netty', module: 'netty-codec-http'
+        exclude group: 'io.netty', module: 'netty-common'
+    }
+
+    constraints {
+        api "io.netty:netty-codec-http:${ioNettyVersion}"
+        api "io.netty:netty-common:${ioNettyVersion}"
+        api "io.netty:netty-all:${ioNettyAllVersion}"
+        api "com.about:mantle-server:${version}"
+        api "com.about:mantle-resources:${version}"
+        api "org.jsoup:jsoup:${orgJsoupVersion}"
+        api "com.about:amazon-product-advert-api:${aboutAmazonProductAdvertApiVersion}"
+        api "com.amazon.paapi5:paapi5-java-sdk:${aboutAmazonPaapi5Version}"
+        api "org.threeten:threetenbp:${orgThreetenVersion}"
+        api "com.squareup.okhttp:okhttp:${comSquareupOkhttp}"
+        api "io.gsonfire:gson-fire:${ioGsonfireVersion}"
+        api "com.dotdash:dotdash-walmart-productlookup:${aboutWalmartProductapiVersion}"
+        api "com.google.maps:google-maps-services:${comGoogleGoogleMapsServicesVersion}"
+        api "org.antlr:antlr-runtime:${orgAntlrVersion}"
+        api "commons-beanutils:commons-beanutils:${apacheCommonsBeanutilsVersion}"
+        api "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+        api "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+        api "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+        api "javax.validation:validation-api:2.0.1.Final"
+        api "org.jolokia:jolokia-spring:${jolokiaSpringVersion}"
+        api "org.springframework.security:spring-security-web:${springSecurityVersion}"
+    }
+}
+

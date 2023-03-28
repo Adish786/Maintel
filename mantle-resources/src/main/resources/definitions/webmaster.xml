@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+
+	<template id="mntl-webmaster-bing-template" ref="mntl-webmaster-bing" />
+	
+	<template id="mntl-webmaster-google-template" ref="mntl-webmaster-google" />
+	
+</templates>

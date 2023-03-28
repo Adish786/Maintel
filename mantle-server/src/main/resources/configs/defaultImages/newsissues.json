@@ -1,0 +1,41 @@
+{
+	"id": "image.default.newsissues",
+	"name": "image.default.newsissues",
+	"displayName": "News & Issues Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/newsissues/0/105657839.jpg",
+			"owner" : "Mike Tauber/Blend Images/Getty Images",
+			"width" : "2121",
+			"height" : "1414"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/newsissues/0/160926907.jpg",
+			"owner" : "Vladimir Godnik/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/newsissues/0/170574727.jpg",
+			"owner" : "Paul Bradbury/OJO Images/Getty Images",
+			"width" : "1255",
+			"height" : "837"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/newsissues/0/175547044.jpg",
+			"owner" : "4FR/Vetta/Getty Images",
+			"width" : "1228",
+			"height" : "856"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/newsissues/0/200469426-001.jpg",
+			"owner" : "Jochen Sand/Photodisc/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+	]
+}

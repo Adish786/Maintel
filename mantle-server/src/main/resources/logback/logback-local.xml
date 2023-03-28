@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <conversionRule conversionWord="stack" converterClass="net.logstash.logback.stacktrace.ShortenedThrowableConverter" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${encoderPattern:-%d{HH:mm:ss.SSS} [%15.15thread] %highlight(%-5level) %logger{65} %marker - %msg%n%stack{full,full,full,inlineHash,${STE_EXCLUSIONS}}}</pattern>
+        </encoder>
+    </appender>
+    <appender name="ASYNC_CONSOLE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <appender-ref ref="CONSOLE"/>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/tmp/mantle-logs/mantle.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/tmp/mantle-logs/mantle-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>14</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${encoderPattern:-%d{HH:mm:ss.SSS} [%15.15thread] %highlight(%-5level) %logger{65} %marker - %msg%n}</pattern>
+        </encoder>
+    </appender>
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ASYNC_CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE"/>
+    </root>
+
+    <logger name="com.about" level="DEBUG"/>
+    <logger name="com.dotdash" level="DEBUG"/>
+
+    <!-- The following loggers are too noisy to be useful at DEBUG level.  Should revisit how / what they
+         are logging to adjust -->
+
+    <logger name="com.about.globe.core.definition.common.Model" level="INFO"/>
+    <logger name="com.about.globe.core.definition.template.TemplateComponent" level="INFO"/>
+    <logger name="com.about.globe.core.definition.loader.TemplateComponentLoader" level="INFO"/>
+    <logger name="com.about.globe.core.definition.template.TemplateComponentResolverImpl" level="INFO"/>
+    <logger name="com.about.globe.core.task.registry.DefaultTasksRegistry" level="INFO"/>
+    <logger name="com.about.hippodrome.url.VerticalUrlData" level="INFO"/>
+    <logger name="com.about.mantle.app.SecureTransparentProxyServlet" level="INFO"/>
+    <logger name="com.about.mantle.web.filter.CrossOriginFilter" level="INFO"/>
+    <logger name="com.about.mantle.app.MantleTransparentProxyServlet" level="INFO"/>
+    <logger name="com.about.mantle.spring.jetty.gzip" level="INFO"/>
+</included>

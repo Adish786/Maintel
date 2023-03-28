@@ -1,0 +1,11 @@
+@import "mntlVariables";
+
+.mntl-sc-list-item {
+    clear: both;
+    overflow: hidden;
+
+    &-title {
+        display: flex;
+        word-wrap: break-word;
+    }
+}

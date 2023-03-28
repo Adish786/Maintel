@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-commerce-disclosure" resourcePath="/components/widgets/commerce-disclosure/mntl-commerce-disclosure.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Commerce Disclosure</displayName>
+            <description>Block to precede article text when disclosing product recommendations.</description>
+            <documentation>
+                Describes recommendation for products, links to review process, and mentions commission.
+
+                # Classes
+
+                - __.mntl-commerce-disclosure__review-process-link__
+
+                Wraps the review process link
+
+                # Models / Properties
+
+                - __reviewProcessLink__
+
+                HTML address for review process page.
+
+                - __tag__
+
+                The HTML tag used. Defaults to **div**.
+			</documentation>
+
+			<property name="reviewProcessLink" value="https://www.google.com" />
+			<property name="arbitraryDependency" mode="remove" />
+            <property name="isMedicallyReviewed" value="false" type="boolean" />
+        </info>
+        
+        <!-- Only show commerce disclosure if revenueGroup is COMMERCE or PERFORMANCEMARKETING -->
+        <property name="arbitraryDependency" value="${(@document != null AND
+            (@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')) ? 'true' : null}" onError="collapseSilent">
+        	<model name="DOCUMENT" id="document" />
+        </property>
+        
+        <property name="isMedicallyReviewed" value="${@filteredAttributions != null}">
+            <model name="FILTEREDATTRIBUTIONS" id="filteredAttributions" onError="ignore">
+                <model name="BYLINES" id="attributions">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+                <property name="attributionTypes" value="${{'MEDICAL_REVIEWER'}}" />
+            </model>
+        </property>
+
+    </component>
+
+</components>

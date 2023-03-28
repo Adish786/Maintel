@@ -1,0 +1,13 @@
+.iframe-embed {
+    &__toggle {
+        cursor: pointer;
+    }
+
+    &__toggle-icon {
+        transform: rotate(0deg);
+
+        .iframe-embed__toggle.opened & {
+            transform: rotate(180deg);
+        }
+    }
+}

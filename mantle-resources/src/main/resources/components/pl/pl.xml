@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-pl-body" resourcePath="/components/pl/view/pl-body.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Body</displayName>
+		</info>
+
+		<stylesheet path="/static/mantle/components/pl/css/pl.css" />
+
+        <script group="top" path="/static/mantle/js/maybe.js" />
+        <script group="top" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="top" path="/static/mantle/js/vendor/vkbeautify.js" />
+        <script group="top" path="/static/mantle/js/vendor/xml-parser-xo.js" />
+        <script group="top" path="/static/mantle/js/vendor/xml-formatter.js" />
+        <script group="top" path="/static/mantle/js/cookies.js" />
+        <script group="top" path="/static/mantle/components/pl/js/pl-edit.js" />
+        <script group="top" path="/static/mantle/components/pl/js/pl-tmog.js" />
+		<script path="/static/mantle/static/libs/js/markdown-it.js" />>
+		<script path="/static/mantle/static/libs/js/highlight.js" />
+
+		<component location="content" ref="mntl-pl-header" />
+
+		<component location="content" ref="mntl-pl-sidebar" />
+
+		<component location="content" id="mntl-pl-main" ref="mntl-block">
+			<list id="class">
+				<property name="mntl-pl-main" value="mntl-pl-main" />
+			</list>
+			<property name="tag" value="main" />
+			<component location="content" ref="mntl-pl-heading" />
+			<component location="content" ref="mntl-pl-components-wrapper" />
+		</component>
+
+		<component location="content" ref="mntl-pl-nav" />
+		<component location="content" ref="mntl-pl-footer" />
+
+		<for id="this, mntl-pl-main.mntl-pl-heading">
+			<model name="plCurrentComponent" id="c" onError="ignore" />
+		</for>
+
+    </component>
+
+	<component id="mntl-pl-header" resourcePath="/components/pl/view/pl-header.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Header</displayName>
+		</info>
+
+        <svg id="icon-design-link" path="/static/mantle/svg/icon-gallery-arrow.svg" />
+
+        <property name="designLink" value="https://www.figma.com/proto/cbXTY521WBJBUZuByMg3R7/Liquor-Design-Guidelines?node-id=1%3A2" />
+
+		<component id="mntl-pl-header__logo" location="logo" ref="mntl-svg">
+			<property name="name" value="mntl-pl-header__logo--dotdash" />
+
+			<svg id="mntl-pl-header__logo--dotdash" path="/static/mantle/svg/logo-dotdash-meredith-white.svg" />
+		</component>
+	</component>
+
+	<component id="mntl-pl-heading" resourcePath="/components/pl/view/pl-heading.ftl">
+		<info>
+			<category>Mantle Components/Pattern Library</category>
+			<displayName>Heading</displayName>
+		</info>
+	</component>
+
+	<component id="mntl-pl-sidebar" resourcePath="/components/pl/view/pl-sidebar.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Nav</displayName>
+		</info>
+
+		<script path="/static/mantle/components/pl/js/pl-accordion.js" />
+		<script path="/static/mantle/components/pl/js/pl-sidebar.js" />
+		<svg id="icon-magnifying-glass" path="/static/mantle/svg/icon-magnifying-glass.svg" />
+
+		<model name="plNavigation" />
+		<model name="plLabels" id="labels" />
+		<model id="patternLibraryCoverage" name="countPatternLibraryEntries" />
+	</component>
+
+	<component id="mntl-pl-footer" resourcePath="/components/pl/view/pl-footer.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Footer</displayName>
+		</info>
+
+		<model id="patternLibraryCoverage" name="countPatternLibraryEntries" />
+	</component>
+
+	<component id="mntl-pl-nav" resourcePath="/components/pl/view/pl-nav.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Nav</displayName>
+		</info>
+
+		<model name="plPagination" id="pagination" onError="ignore" />
+	</component>
+
+    <!-- component referencing pl-component.ftl is magically created via PatternLibraryTask.java, for reasons  -->
+	<component id="mntl-pl-components-wrapper" resourcePath="/components/pl/view/pl-wrapper.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Components Wrapper</displayName>
+		</info>
+
+		<script path="/static/mantle/components/pl/js/pl-components.js" />
+
+		<component location="components" ref="mntl-pl-components" />
+	</component>
+
+	<component id="mntl-pl-components" resourcePath="/components/pl/view/pl-components.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Components</displayName>
+		</info>
+
+		<property name="brandGuidelines" value="" />
+
+		<model name="plComponent" id="pl">
+			<model name="plComponentsByCategory" id="components" onError="ignore" />
+		</model>
+	</component>
+
+    <!-- Component window -->
+	<component id="mntl-pl-rendered-component" resourcePath="/components/pl/view/pl-components.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Rendered Component</displayName>
+		</info>
+
+		<script path="/static/mantle/components/pl/js/pl-iframe.js" />
+
+		<model name="plRenderedComponentLibrary" id="pl">
+			<model name="plComponentByCategory" id="component" onError="ignore">
+				<property name="id" queryOverride="id" />
+			</model>
+		</model>
+	</component>
+
+	<component id="mntl-pl-fonts" resourcePath="/components/pl/view/pl-fonts.ftl">
+		<info>
+            <category>Mantle Components/Pattern Library</category>
+			<displayName>Fonts</displayName>
+		</info>
+	</component>
+
+	<component id="mntl-pl-colors" resourcePath="/components/pl/view/pl-colors.ftl">
+		<info>
+			<category>Mantle Components/Pattern Library</category>
+			<displayName>Color Palette</displayName>
+			<tags>Complete,In Progress,Needs Work</tags>
+			<resizable>false</resizable>
+		</info>
+
+		<model name="plColors" id="colors" onError="collapseSilent" />
+	</component>
+</components>

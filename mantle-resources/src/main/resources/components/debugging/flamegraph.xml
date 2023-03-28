@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+    <component id="mntl-flamegraph"
+               resourcePath="/components/debugging/flamegraph.ftl">
+               <info>
+                    <category>Mantle Components/Debugging</category>
+                    <displayName>Flamegraph</displayName>
+                </info>
+               <model id="towait" name="collectFlamegraph"/>
+    </component>
+</components>

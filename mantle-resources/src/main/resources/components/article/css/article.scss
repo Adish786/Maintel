@@ -1,0 +1,153 @@
+@import "mntlVariables";
+
+$left-rail-width: 14rem;
+$right-rail-width: 18.75rem;
+$content-max-width: 37.5rem;
+
+.mntl-article {
+    display: grid;
+    position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+    grid-template-columns: minmax(0, $content-max-width);
+    grid-template-areas:
+        'header'
+        'post-header'
+        'left-rail'
+        'pre-content'
+        'content'
+        'post-content'
+        'footer';
+
+    @media (min-width: $mntl-bp-sm) {
+        padding: 0 1.5rem;
+    }
+
+    @media (min-width: $mntl-bp-md) {
+        padding: 0 2rem;
+    }
+
+    &--full-width {
+        grid-template-columns: minmax(0, 80.25rem);
+    }
+
+    &--two-column-left-rail {
+        @media (min-width: $mntl-bp-md) {
+            grid-template-columns: $left-rail-width minmax(0, $content-max-width);
+            column-gap: 4rem;
+            grid-template-areas:
+                'header header'
+                'post-header post-header'
+                'left-rail pre-content'
+                'left-rail content '
+                'left-rail post-content'
+                'footer footer';
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            grid-template-columns: 16.5rem minmax(0, $content-max-width);
+            column-gap: 6rem;
+        }
+
+        @media (min-width: $mntl-bp-xl) {
+            column-gap: 8.25rem;
+        }
+    }
+
+    &--two-column-right-rail {
+        @media (min-width: $mntl-bp-md) {
+            grid-template-columns: minmax(0, $content-max-width) $right-rail-width;
+            column-gap: 2.5rem;
+            grid-template-areas:
+                'header header'
+                'post-header right-rail'
+                'left-rail right-rail'
+                'pre-content right-rail'
+                'content right-rail'
+                'post-content right-rail'
+                'footer footer';
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            column-gap: 3rem;
+        }
+
+        @media (min-width: $mntl-bp-xl) {
+            column-gap: 6rem;
+        }
+    }
+
+    &--three-column {
+        @media (min-width: $mntl-bp-md) {
+            grid-template-columns: minmax(0, $content-max-width) $right-rail-width;
+            column-gap: 2.5rem;
+            grid-template-areas:
+                'header header'
+                'post-header right-rail'
+                'left-rail right-rail'
+                'pre-content right-rail'
+                'content right-rail'
+                'post-content right-rail'
+                'footer footer';
+        }
+
+        @media (min-width: $mntl-bp-lg) {
+            column-gap: 3rem;
+        }
+
+        @media (min-width: $mntl-bp-xl) {
+            grid-template-columns: $left-rail-width minmax(0, $content-max-width) $right-rail-width;
+            grid-template-areas:
+                'header header header'
+                'post-header post-header right-rail'
+                'left-rail pre-content right-rail'
+                'left-rail content right-rail'
+                'left-rail post-content right-rail'
+                'footer footer footer';
+        }
+    }
+}
+
+.article-header {
+    grid-area: header;
+}
+
+.article-post-header {
+    grid-area: post-header;
+}
+
+.article-left-rail {
+    grid-area: left-rail;
+}
+
+.article-pre-content {
+    grid-area: pre-content;
+}
+
+.article-content {
+    grid-area: content;
+}
+
+.article-post-content {
+    grid-area: post-content;
+}
+
+.article-right-rail {
+    grid-area: right-rail;
+    position: absolute;
+    top: -10000in;
+    visibility: hidden;
+    max-height: 0;
+
+    @media (min-width: $mntl-bp-md) {
+        display: block;
+        position: static;
+        top: initial;
+        visibility: visible;
+        max-height: initial;
+    }
+}
+
+.article-footer {
+    grid-area: footer;
+}

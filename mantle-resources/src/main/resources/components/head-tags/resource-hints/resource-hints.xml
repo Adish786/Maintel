@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-preconnect" resourcePath="/components/head-tags/resource-hints/view/preconnect.ftl">
+        <info>
+            <category>Mantle Components/Head Tags/Resource Hints</category>
+            <displayName>Preconnect</displayName>
+            <description>
+                Component that indicates a list of hosts that will be used to fetch required resources. Initiating an early connection, 
+                which includes the DNS lookup, TCP handshake, and optional TLS negotiation, allows the user agent to mask the high latency 
+                costs of establishing a connection. See https://www.w3.org/TR/resource-hints/#dfn-preconnect for details.
+            </description>
+            <documentation>
+                The default list can be extended at the vertical level by providing a *list* with id="domains" in the inclusion of this component.
+
+                Default Configs:
+                * ixid - ixId plugin in RTB.js, used for Index Exchange identitiy adapter
+                * amazon - Amazon plugin in RTB.js, used for header bidding for amazon
+                * dfp - Used for GPT ad requests
+                * skimlinks - Used for third party monetization on non-amazon links
+            </documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+            <list id="domains">
+                <property name="foo" value="www.bar.com" />
+            </list>
+        </info>
+        <list id="domains">
+            <!-- RTB libraries -->
+            <property name="ixid" value="js-sec.indexww.com" />
+            <property name="amazon" value="c.amazon-adsystem.com" />
+            <!-- Ads -->
+            <property name="dfp" value="securepubads.g.doubleclick.net" />
+            <!-- Include Skimlinks when commerce info or affiliate -->
+            <property name="skimlinks" value="${((@document != null AND (@document.revenueGroup == 'COMMERCE' OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')) OR
+                (@document?.disclaimer?.affiliate ?: false)) ? 's.skimresources.com' : null}" onError="ignore">
+                <model name="DOCUMENT" id="document" onError="ignore" />
+            </property>
+        </list>
+    </component>
+
+</components>

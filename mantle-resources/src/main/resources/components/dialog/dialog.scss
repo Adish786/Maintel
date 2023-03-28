@@ -1,0 +1,170 @@
+@import "mntlVariables";
+
+$mntl-half-max-content-well-width: 38.125rem;
+
+//Dialog/Modal
+$mntl-dialog-header-height: 3rem;
+$mntl-dialog-background-border: 2rem;
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+// This class on html disables the scrolling behind the dialog.
+.dialog-is-shown {
+    overflow: hidden;
+    // To compensate for the scrollbar width.
+    // --scrollbar-width is set by dialog.js
+    padding-right: var(--scrollbar-width);
+
+    @media (min-width: $mntl-bp-md) {
+        // Make sure header doesn't shift
+        .header {
+            --half-scrollbar-width: calc(var(--scrollbar-width) / 2);
+            max-width: calc(100vw - var(--scrollbar-width));
+            padding-left: MAX(2rem,calc(50% - #{$mntl-half-max-content-well-width} - var(--half-scrollbar-width)));
+            padding-right: MAX(2rem,calc(50% - #{$mntl-half-max-content-well-width} - var(--half-scrollbar-width)));
+
+            & + .mntl-leaderboard-header {
+                width: calc(100vw - var(--scrollbar-width));
+            }
+        }
+    }
+}
+
+[data-a11y-dialog-native] .dialog__overlay {
+    display: none;
+}
+
+.dialog[aria-hidden='true'] {
+    display: none;
+}
+
+.dialog:not([data-a11y-dialog-native]),
+.dialog__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.dialog {
+    display: flex;
+
+    &__overlay {
+        background-color: $color-black-65;
+        animation: fade-in 0.1s both;
+    }
+
+    &__background {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: calc(100% + #{$mntl-dialog-background-border});
+        height: calc(100% + #{$mntl-dialog-background-border});
+    }
+
+    &__content {
+        background-color: $color-white;
+        animation: fade-in 0.3s 0.1s both;
+        margin: auto;
+        position: relative;
+        z-index: 102;
+        height: 100%;
+
+        // For small the modal should expand to full viewport width
+        // but the content well is narrowed.
+        @media (min-width: $mntl-bp-sm) {
+            width: 100vw;
+        }
+
+        @media (min-width: $mntl-bp-md) {
+            width: auto;
+            height: auto;
+        }
+
+        .dialog--background & {
+            width: auto;
+            height: auto;
+            max-width: calc(100vw - #{$mntl-dialog-background-border});
+
+            @media (min-width: $mntl-bp-sm) {
+                max-width: 100vw;
+            }
+        }
+    }
+
+    &__heading {
+        height: $mntl-dialog-header-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $primary;
+        color: $color-white;
+        padding: 0 1rem;
+    }
+
+    &__close {
+        background-color: transparent;
+        border-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+
+        svg {
+            fill: $color-white;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__main {
+        padding: 1.5rem;
+        overflow: auto;
+        height: calc(100% - #{$mntl-dialog-header-height});
+
+        // For small the modal should expand to full viewport width
+        // but the content well is narrowed to 344px.
+        /* stylelint-disable function-name-case */
+        @media (min-width: $mntl-bp-sm) {
+            // Using padding instead of max width to allow scrollbar to be on the outside
+            //Use case sensitive Max to signal browser max instead of gulp-sass max
+            padding-left: Max(1.5rem, calc(50% - 11rem));
+            padding-right: Max(1.5rem, calc(50% - 11rem));
+            margin: 0 auto;
+        }
+
+        @media (min-width: $mntl-bp-md) {
+            width: 25rem;
+            height: 80vh;
+        }
+
+        .dialog--background & {
+            height: auto;
+            max-height: calc(100vh - #{$mntl-dialog-background-border});
+
+            @media (min-width: $mntl-bp-md) {
+                max-height: 80vh;
+            }
+        }
+    }
+}
+
+.mntl-dialog--campaign {
+    display: none;
+
+    &.dialog--visible {
+        display: flex;
+    }
+}

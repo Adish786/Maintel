@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-sponsor-tracking-codes" resourcePath="/components/tracking/sponsor-tracking-codes/view/sponsor-tracking-codes.ftl">
+		<info>
+			<category>Mantle Components/Tracking</category>
+			<displayName>Sponsor Tracking Codes</displayName>
+			<description>
+				Dumps arbitrary markup onto the page.
+				For trusted sources the markup is dropped directly onto the page.
+				For untrusted sources the markup is served through an iframe.
+				---
+				Note: intentionally separate from mntl-sponsorship component because that
+				is used for the visible sponsorship badge and depends on other properties,
+				e.g. title, image, description, etc.
+				---
+				Disclaimer: we are at the mercy of the editors with this component, i.e.
+				IF SOMEONE PUTS MALICIOUS CONTENT IN HERE, THEN WE WILL SERVE MALICIOUS CONTENT.
+			</description>
+			<documentation></documentation>
+			<tags>Complete</tags>
+			<previewType>markup</previewType>
+			<list name="trustedTrackingCodes" mode="replace">
+				<property name="alert" value="&lt;script type=&quot;text/javascript&quot;&gt;window.alert('All your base are belong to us');&lt;/script&gt;" />
+			</list>
+
+			<property name="hasUntrustedTrackingCodes" value="false" type="boolean" mode="replace" />
+		</info>
+
+		<for id="trustedTrackingCodes, hasUntrustedTrackingCodes">
+			<property name="sponsor" value="${@document?.sponsor != null ? @document.sponsor : null}" onError="collapseSilent">
+				<model name="DOCUMENT" id="document" onError="collapseSilent" />
+			</property>
+		</for>
+
+		<property name="untrustedTrackingCodesUrl" value="${renderUtils.untrustedTrackingCodesBaseUrl()}/sponsor-tracking-codes?url=${renderUtils.base64encode(requestContext.canonicalUrl)}" onError="ignore" />
+		<property name="trustedTrackingCodes" value="${@sponsor?.trustedTrackingCodes}" onError="ignore" />
+		<property name="hasUntrustedTrackingCodes" value="${@sponsor?.hasUntrustedTrackingCodes()}" onError="ignore" />
+	</component>
+
+</components>

@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <!-- Deprecated for 3.12+/4.xx Mantle. Dont create any new schemas ref'ing mntl-schema-document -->
+    <component id="mntl-schema-document" resourcePath="/components/schema/schema-document.ftl">
+        <model name="authorAttributions" onError="ignore"/>
+        <property name="datePublished" value="${@document.dates.firstPublished ?: ''}" onError="ignore" />
+        <property name="dateModified" value="${@document.dates.displayed ?: ''}" onError="ignore" />
+        <property name="image" value="${@schemaImage ?: {}}" onError="ignore">
+            <model name="jsonLdSchemaImage" id="schemaImage" onError="ignore" />
+        </property>
+        <property name="numOfImages" value="${@document.calculateImageCount()}" onError="ignore" />
+
+        <for id="this, authorAttributions, datePublished, dateModified, image.schemaImage, numOfImages">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <!-- add property name "verticalName" in vertical -->
+        <!-- add property name "imageId" in vertical -->
+        <!-- add property name "logoWidth" in vertical -->
+        <!-- add property name "logoHeight" in vertical -->
+    </component>
+
+    <component id="mntl-schema-article" ref="mntl-schema-document">
+        <property name="type" value="Article" />
+    </component>
+
+    <component id="mntl-schema-webpage" ref="mntl-schema-document">
+        <property name="type" value="WebPage" />
+    </component>
+
+    <component id="mntl-schema-home" ref="mntl-schema-webpage">
+        <property name="addressFlag" value="true" type="boolean" />
+
+        <map id="potentialAction">
+            <property name="type" value="SearchAction" />
+            <property name="queryInput" value="required name=search_term_string'" />
+            <!-- add property name "target" in vertical -->
+        </map>
+        <map name="parentOrganization">
+            <property name="imageId" value="dotdash-logo-e9cde67f713a45c68ce5def51d3ca409.jpg" />
+            <property name="logoWidth" value="234" type="integer" />
+            <property name="logoHeight" value="60" type="integer" />
+        </map>
+    </component>
+
+    <component id="mntl-schema-table" resourcePath="/components/schema/schema-table.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-video" resourcePath="/components/schema/schema-video.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-flex" ref="mntl-schema-article">
+        <component location="articleBody" ref="mntl-article-body-with-pages" />
+        <component location="articleBody" ref="mntl-article-body-sources" />
+    </component>
+
+    <component id="mntl-schema-sbs" ref="mntl-schema-flex">
+        <component location="inlineImages" ref="mntl-schema-sbs-image" />
+    </component>
+
+    <component id="mntl-schema-list" ref="mntl-schema-article">
+        <component location="articleBody" ref="mntl-schema-intro" />
+        <component location="articleBody" ref="mntl-article-body-with-items" />
+        <component location="articleBody" ref="mntl-schema-closing-thoughts-link" />
+        <component location="articleBody" ref="mntl-article-body-sources" />
+        <component location="inlineImages" ref="mntl-schema-list-image" />
+    </component>
+
+    <!-- use this if you need intro to be document's description  -->
+    <component id="mntl-schema-intro" ref="mntl-text-block">
+        <property name="text" value="${str.htmlEscape(@document.description)}">
+            <model name="DOCUMENT" id="document" />
+        </property>
+        <property name="tag" value="" />
+    </component>
+
+    <!-- use this if you need outro to be document userfeedback's annotation  -->
+    <!-- p.s. userFeedback is legacy name, actually it contains closing-thoughts -->
+    <component id="mntl-schema-outro" ref="mntl-text-block">
+        <property name="text" value="${str.htmlEscape(@document?.userFeedback?.annotation)}">
+            <model name="DOCUMENT" id="document" />
+        </property>
+        <property name="tag" value="" />
+    </component>
+
+    <component id="mntl-schema-closing-thoughts-link" resourcePath="/components/schema/schema-closing-thoughts-link.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <!-- deprecated - use mntl-schema-unified-recipe instead -->
+    <component id="mntl-schema-recipe" resourcePath="/components/schema/schema-recipe.ftl">
+        <model name="DOCUMENT" id="document" />
+        <model name="authorAttributions" onError="ignore"/>
+
+        <for id="this, authorAttributions">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <for id="ratingValue.aggregateRating, ratingCount.aggregateRating">
+            <property name="documentId" value="${@document.documentId}">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+        <property name="ratingValue" value="${@aggregateRating != null ? @aggregateRating['starRating'].averageRoundedToTenth : 0}">
+            <model name="getAggregateRating" id="aggregateRating" onError="ignore" />
+        </property>
+        <property name="ratingCount" value="${@aggregateRating != null ? @aggregateRating['starRating'].count : 0}">
+            <model name="getAggregateRating" id="aggregateRating" onError="ignore" />
+        </property>
+        <!-- add property name "verticalName" in vertical -->
+        <!-- add property name "imageId" in vertical -->
+        <!-- add property name "logoWidth" in vertical -->
+        <!-- add property name "logoHeight" in vertical -->
+    </component>
+
+    <component id="mntl-schema-search" resourcePath="/components/schema/schema-search.ftl">
+        <!-- add property name "searchUrl" in vertical for the search schema -->
+        <!-- add property name "domain" in vertical for the search schema -->
+        <!-- add property name "verticalName" in vertical -->
+        <!-- add property name "imageId" in vertical -->
+        <!-- add property name "logoWidth" in vertical -->
+        <!-- add property name "logoHeight" in vertical -->
+    </component>
+
+    <component id="mntl-schema-sbs-itemlist" resourcePath="/components/schema/schema-sbs-itemlist.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-list-itemlist" resourcePath="/components/schema/schema-list-itemlist.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-breadcrumblist" resourcePath="/components/schema/schema-breadcrumblist.ftl">
+        <model name="schemaBreadcrumb" id="schemaBreadcrumb" onError="collapseSilent" />
+    </component>
+
+    <component id="mntl-article-body-with-items" resourcePath="/components/schema/article-body-with-items.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-article-body-with-pages" resourcePath="/components/schema/article-body-with-pages.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-list-image" resourcePath="/components/schema/inline-images-list.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-sbs-image" resourcePath="/components/schema/inline-images-sbs-list.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-static" resourcePath="/components/schema/schema-static.ftl">
+        <!-- add property name "verticalName" in vertical -->
+        <!-- add property name "imageId" in vertical -->
+        <!-- add property name "logoWidth" in vertical -->
+        <!-- add property name "logoHeight" in vertical -->
+    </component>
+
+    <component id="mntl-schema-static-breadcrumblist" resourcePath="/components/schema/schema-static-breadcrumblist.ftl" />
+
+    <component id="mntl-article-body-sources" resourcePath="/components/schema/article-body-sources.ftl">
+        <for id="this, display">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <property name="title" value="Article Sources" />
+        <property name="display" value="${@document.sources.empty ? null : true}" onError="collapseSilent" />
+    </component>
+
+    <component id="mntl-schema-unified-document-attribution-based-info" resourcePath="/components/schema/schema-unified-attribution-based-document-info.ftl">
+
+        <for id="this, authorAttributions, editorAttributions, reviewerAttributions, contributorAttributions, datePublished, dateModified">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <model name="authorAttributions" onError="ignore" />
+
+        <model name="editorAttributions" onError="ignore" />
+
+        <model name="contributorAttributions" onError="ignore" />
+
+        <property name="datePublished" value="${@document?.dates?.firstPublished != null ? @document?.dates?.firstPublished.withZone(T(org.joda.time.DateTimeZone).forID(@timeZone)) : ''}" onError="ignore" />
+
+        <model name="newestDateBasedOnReview" id="dateModified">
+            <property name="isForLastReviewedDateField" value="false" type="boolean" />
+        </model>
+
+        <for id="datePublished, dateModified">
+            <property name="timeZone" value="America/New_York" />
+        </for>
+    </component>
+
+    <component id="mntl-schema-unified" resourcePath="/components/schema/schema-unified.ftl">
+        <component location="rootSchema" ref="mntl-schema-unified-${@selectedComponent}">
+            <model id="selectedComponent" name="jsonLdSchemaComponent" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </model>
+        </component>
+        <component location="separateEntities" ref="mntl-schema-unified-liveblogpost" />
+    </component>
+
+    <component id="mntl-schema-unified-recipe" ref="mntl-schema-unified-article">
+        <component id="mntl-schema-unified-about-property-howto" mode="remove" />
+        <component id="mntl-schema-unified-keywords" mode="remove" />
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="Recipe" />
+        </list>
+        <component location="extraProperties" ref="mntl-schema-unified-recipe-properties" />
+        <component location="extraProperties" ref="mntl-schema-unified-ugc-review-properties" />
+    </component>
+
+    <component id="mntl-schema-unified-review" ref="mntl-schema-unified-article">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="Review"/>
+            <property name="secondaryType" value="Article"/> 
+        </list>
+        <component location="extraProperties" ref="mntl-schema-unified-review-properties" />
+    </component>
+
+    <component id="mntl-schema-unified-creditcardroundup" ref="mntl-schema-unified-article">
+        <component id="mntl-schema-unified-about-property-item-list" mode="remove" />
+        <component id="mntl-schema-unified-about-property-howto" mode="remove" />
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-credit-card-list" />
+    </component>
+
+    <component id="mntl-schema-unified-taxonomy" resourcePath="/components/schema/schema-unified-taxonomy.ftl">
+        <model name="DOCUMENT" id="document" />
+
+        <!-- "Documents" should be for-targeted by verticals to include all documents displayed on taxonomy pages. -->
+        <!-- Elements in documents array should be of type BaseDocumentEx or DocumentTaxeneComposite. -->
+        <property id="documents" value="${new java.util.ArrayList()}" />
+
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="ItemList" />
+        </list>
+
+        <component location="extraProperties" ref="mntl-schema-unified-citation" />
+
+        <component location="mainEntityOfPage" ref="mntl-schema-unified-main-entity-of-page" />
+    </component>
+
+    <component id="mntl-schema-unified-taxonomysc" ref="mntl-schema-unified-taxonomy">
+        <list id="primarySchemaTypes" mode="replace">
+            <property name="primaryType" value="ItemList" />
+            <property name="primaryType" value="CollectionPage" />
+        </list>
+
+        <property name="documents" value="${@listItems.size() > @maxDocuments ? utils.subList(@listItems, 0, @maxDocuments) : @listItems}" mode="replace">
+            <model id="listItems" name="filterArticles">
+                <model id="articles" name="descendantArticles">
+                    <property name="relationships" value="primaryParent,secondaryParent" />
+                    <property name="limit" value="500" type="integer" />
+                    <property name="maxDocPopulation" value="500" />
+                </model>
+                <model id="articlesToFilterOut" name="documentsReferencedByContentBlocks">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+            </model>
+            <property name="maxDocuments" value="64" type="integer" />
+        </property>
+
+        <model name="documentsReferencedByContentBlocks" id="docsFromScBlocks">
+            <model name="DOCUMENT" id="document" />
+        </model>
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-faqs" />
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-keyterms" />
+    </component>
+
+    <component id="mntl-schema-unified-taxonomy-collection-page" ref="mntl-schema-unified-collection-page">
+        <component location="extraProperties" ref="mntl-schema-unified-document-attribution-based-info" />
+        <component location="extraProperties" ref="mntl-schema-unified-taxonomy-properties" />
+        <component location="extraProperties" ref="mntl-schema-unified-publisher" />
+    </component>
+
+    <component id="mntl-schema-unified-bio" ref="mntl-schema-unified-profile-page">
+        <component location="extraProperties" ref="mntl-schema-unified-bio-properties" />
+        <component location="extraProperties" ref="mntl-schema-unified-publisher" />
+    </component>
+
+    <component id="mntl-schema-unified-about" ref="mntl-schema-unified-about-page">
+        <component location="extraProperties" ref="mntl-schema-unified-document-attribution-based-info" />
+        <component location="extraProperties" ref="mntl-schema-unified-image" />
+        <component location="extraProperties" ref="mntl-schema-unified-video" />
+        <component location="extraProperties" ref="mntl-schema-unified-publisher" />
+    </component>
+
+    <component id="mntl-schema-unified-article" resourcePath="/components/schema/schema-unified-article.ftl">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="${@sanitizedNewsType != null ? null : 'Article'}" onError="ignore">
+                <model name="sanitizedNewsType" onError="ignore">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+            </property>
+
+            <property name="newsType" value="${@sanitizedNewsType}" onError="ignore">
+                <model name="sanitizedNewsType" onError="ignore">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+            </property>
+        </list>
+
+        <component location="extraProperties" ref="mntl-schema-unified-document-attribution-based-info" />
+        <component location="extraProperties" ref="mntl-schema-unified-image" />
+        <component location="extraProperties" ref="mntl-schema-unified-video" />
+        <component location="extraProperties" ref="mntl-schema-unified-publisher" />
+        <component location="extraProperties" ref="mntl-schema-unified-audience" />
+        <component location="extraProperties" ref="mntl-schema-unified-citation" />
+        <component location="extraProperties" ref="mntl-schema-unified-keywords" />
+
+        <component location="mainEntityOfPage" id="main-entity-of-page" ref="mntl-schema-unified-main-entity-of-page" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-item-list">
+            <for id="this, display, itemType">
+                <model name="DOCUMENT" id="document" />
+            </for>
+            <property name="display" value="${(@document.infoCatProductRecords != null AND !@document.infoCatProductRecords.isEmpty())? null : true}" onError="collapseSilent" />
+            <property name="itemType" value="${
+                    (@document.revenueGroup != null AND
+                    @document.revenueGroup == 'PERFORMANCEMARKETING')
+                    ? (@document.vertical.toString().toLowerCase() == 'finance')
+                        ? 'FinancialProduct'
+                        : 'Service'
+                    : 'ListItem'
+                }" onError="ignore" />
+        </component>
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-product-item-list">
+            <for id="this, display, productType, hideReviewBlock">
+                <model name="DOCUMENT" id="document" />
+            </for>
+            <property name="display" value="${(@document.infoCatProductRecords != null AND !@document.infoCatProductRecords.isEmpty())? true : null}" onError="collapseSilent" />
+            <property name="hideReviewBlock" value="${
+                    (@document.revenueGroup != null AND
+                    @document.revenueGroup == 'PERFORMANCEMARKETING' AND
+                    @document.vertical.toString().toLowerCase() == 'finance')
+                    ? true
+                    : false
+            }" onError="ignore" />
+            <property name="productType" value="${
+                    (@document.revenueGroup != null AND
+                    @document.revenueGroup == 'PERFORMANCEMARKETING')
+                    ? (@document.vertical.toString().toLowerCase() == 'finance')
+                        ? 'FinancialProduct'
+                        : 'Service'
+                    : 'Product'
+            }" onError="ignore" />
+        </component>
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-definitions" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-howto" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-doc" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-faqs" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-keyterms" />
+
+        <component location="aboutProperties" ref="mntl-schema-unified-about-property-drug" />
+
+    </component>
+
+    <component id="mntl-schema-unified-main-entity-of-page" resourcePath="/components/schema/schema-unified-main-entity-of-page.ftl">
+        <component location="mainEntityOfPage" id="mntl-schema-unified-main-entity" ref="mntl-schema-unified-${@entityOfPage}">
+            <model name="jsonLdSchemaMainEntityOfPage" id="entityOfPage">
+                <model name="DOCUMENT" id="document" />
+            </model>
+        </component>
+    </component>
+
+    <component id="mntl-schema-unified-web-page" resourcePath="/components/schema/schema-unified-web-page.ftl">
+        <model name="DOCUMENT" id="document" />
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="WebPage" />
+        </list>
+
+        <component location="breadcrumb" ref="mntl-schema-breadcrumblist">
+            <property name="unified" value="true" type="boolean" />
+        </component>
+
+        <component location="extraProperties" ref="mntl-schema-unified-reviewer-attributions" />
+
+    </component>
+
+    <component id="mntl-schema-unified-medical-web-page" ref="mntl-schema-unified-web-page">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="MedicalWebPage" />
+        </list>
+    </component>
+
+    <component id="mntl-schema-unified-collection-page" ref="mntl-schema-unified-web-page">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="CollectionPage" />
+        </list>
+    </component>
+
+    <component id="mntl-schema-unified-profile-page" ref="mntl-schema-unified-web-page">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="ProfilePage" />
+        </list>
+    </component>
+
+    <component id="mntl-schema-unified-about-page" ref="mntl-schema-unified-web-page">
+        <list id="primarySchemaTypes">
+            <property name="primaryType" value="AboutPage" />
+        </list>
+    </component>
+
+    <component id="mntl-schema-unified-about-property-item-list" resourcePath="/components/schema/schema-unified-about-property-item-list.ftl">
+        <for id="name, description, items, items.schemaListItems.document, items.schemaListItems.items, listOptions">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <property name="name" value="${@document.heading}" />
+        <property name="description" value="${@document.summary.description}" />
+        <property name="items" value="${{'LIST'}.contains(@document.templateType.toString()) ? @document.items.list : @schemaListItems}" onError="collapseSilent">
+            <model name="schemaListItems" id="schemaListItems" onError="ignore">
+                <property name="document" value="${@document}" />
+                <property name="items" value="${{'LISTSC'}.contains(@document.templateType.toString()) ? @document.items : null}" onError="ignore" />
+            </model>
+        </property>
+        <property name="listOptions" value="${{'LIST','LISTSC'}.contains(@document.templateType.toString()) ? @document.listOptions: null}" onError="ignore" />
+    </component>
+
+    <component id="mntl-schema-unified-about-property-product-item-list" resourcePath="/components/schema/schema-unified-about-property-product-item-list.ftl">
+        <for id="name, description, items, items.schemaListItems.document, items.schemaListItems.items, listOptions, authorAttributions, productRecords, useImageHeight">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <property name="name" value="${@document.heading}" />
+        <property name="description" value="${@document.summary.description}" />
+        <property name="items" value="${{'LIST','LISTSC'}.contains(@document.templateType.toString()) ? @document.items.list : null}" onError="collapseSilent" />
+        <property name="productRecords" value="${@document.infoCatProductRecords}" onError="collapseSilent" />
+        <property name="listOptions" value="${{'LIST','LISTSC'}.contains(@document.templateType.toString()) ? @document.listOptions: null}" onError="ignore" />
+        <model name="authorAttributions" onError="ignore"/>
+        <property name="hideReviewRating" value="true" type="boolean" tests="hideReviewRating" buckets="hide" onError="ignore" />
+        <property name="fitInStyle" value="NORMAL" />
+        <property name="useImageHeight" value="${@document.revenueGroup == 'COMMERCE'}" />
+        <list id="filters">
+            <property name="upscale" value="${imageFilter.noUpscale()}" />
+            <property name="maxBytes" value="max_bytes(150000)" />
+            <property name="stripicc" value="strip_icc()" />
+        </list>
+    </component>
+
+    <!-- this is only used for documents with viewtype == CREDITCARDROUNDUP: https://bitbucket.prod.aws.about.com/projects/FRON/repos/mantle/browse/mantle-server/src/ma[…]JsonLdSchemaTask.java?at=refs%2Fheads%2Frelease%2F3.12 -->
+    <component id="mntl-schema-unified-about-property-credit-card-list" resourcePath="/components/schema/schema-unified-about-property-credit-card-item-list.ftl">
+        <for id="this, name, description, items, listOptions, docId, authorAttributions">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <property name="name" value="${@document.heading}" />
+        <property name="description" value="${@document.summary.description}" />
+        <property name="items" value="${{'LIST','LISTSC'}.contains(@document.templateType.toString()) ? @document.items.list : null}" onError="collapseSilent" />
+        <property name="listOptions" value="${{'LIST','LISTSC'}.contains(@document.templateType.toString()) ? @document.listOptions : null}" onError="ignore" />
+        <property name="docId" value="${@document.documentId}" onError="ignore" />
+        <model name="authorAttributions" onError="ignore"/>
+    </component>
+
+    <component id="mntl-schema-unified-about-property-definitions" resourcePath="/components/schema/schema-unified-about-property-definitions.ftl">
+        <model name="definitions" onError="collapseSilent">
+            <model name="DOCUMENT" id="document" />
+        </model>
+    </component>
+
+    <component id="mntl-schema-unified-about-property-keyterms" resourcePath="/components/schema/schema-unified-about-property-keyterms.ftl">
+        <property name="display" value="${@document.getContentsListOfType('KEYTERMS').size() == 0 ? null : true}" onError="collapseSilent" />
+        <property name="listOfKeyTerms" value="${@document.getContentsListOfType('KEYTERMS').![data.keyTerms?.list]}" onError="collapseSilent" />
+        <for id="display, listOfKeyTerms">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+
+    <component id="mntl-schema-unified-about-property-faqs" resourcePath="/components/schema/schema-unified-about-property-faqs.ftl">
+        <for id="this, display">
+            <model name="listOfSchemaQuestionAndAnswers">
+                <model name="DOCUMENT" id="document" />
+            </model>
+        </for>
+
+        <property name="display" value="${@listOfSchemaQuestionAndAnswers.isEmpty() ? null : true}" onError="collapseSilent" />
+    </component>
+
+    <component id="mntl-schema-unified-image" resourcePath="/components/schema/schema-unified-image.ftl">
+        <for id="this, focal">
+            <model name="jsonLdSchemaImage" id="image" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </model>
+        </for>
+
+        <list id="filters">
+            <property name="upscale" value="${imageFilter.noUpscale()}" />
+            <property name="maxBytes" value="max_bytes(150000)" />
+            <property name="stripicc" value="strip_icc()" />
+        </list>
+    </component>
+
+    <component id="mntl-schema-unified-video" resourcePath="/components/schema/schema-unified-video.ftl">
+        <model name="jsonLdSchemaVideos" id="videos">
+            <model name="DOCUMENT" id="document" />
+        </model>
+    </component>
+
+    <component id="mntl-schema-unified-publisher" resourcePath="/components/schema/schema-unified-publisher.ftl">
+        <property name="verticalName" value="Dotdash" />
+        <property name="imageId" value="dotdash-test-5901faf35f9b5810dc4a54ec.jpg" />
+        <property name="logoWidth" value="234" type="integer" />
+        <property name="logoHeight" value="60" type="integer" />
+        <property name="publishingPrinciples" value="https://www.dotdash.com/dash-terms/" />
+        <!-- Add list with id=sameAs in the verticals inheriting this -->
+    </component>
+
+    <component id="mntl-schema-unified-reviewer-attributions" resourcePath="/components/schema/schema-unified-reviewer-attribution.ftl">
+
+        <for id="reviewers, lastReviewedDate">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <model name="reviewerAttributions" id="reviewers" onError="collapseSilent" />
+
+        <model name="newestDateBasedOnReview" id="lastReviewedDate" onError="ignore">
+            <property name="timeZone" value="America/New_York" />
+            <property name="isForLastReviewedDateField" value="true" type="boolean" />
+        </model>
+
+    </component>
+
+    <component id="mntl-schema-unified-keywords" resourcePath="/components/schema/schema-unified-keywords.ftl">
+        <for id="docId, isCommerce">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <property name="secondaryParents" value="${@taxeneResponse != null ? @taxeneResponse?.relationships?.list : null}" onError="ignore">
+            <model name="taxeneRelation" id="taxeneResponse" onError="ignore">
+                <property name="docId" value="${@document.documentId}" />
+                <property name="relationships" value="secondaryParent" />
+                <property name="direction" value="OUT" />
+                <property name="includeDocumentSummaries" value="true" type="boolean" />
+            </model>
+        </property>
+
+        <model name="ancestors" id="nodes" onError="collapseSilent">
+            <model name="breadcrumb" id="breadcrumb" onError="ignore" />
+        </model>
+
+        <!-- Add 'affiliate' to keywords for commerce content -->
+        <property name="isCommerce" value="${((@document != null AND (@document.revenueGroup == 'COMMERCE'
+            OR @document.revenueGroup == 'PERFORMANCEMARKETING' OR @document.revenueGroup == 'COMMERCENEWSDEALS')))}" />
+    </component>
+
+    <component id="mntl-schema-unified-citation" resourcePath="/components/schema/schema-unified-citation.ftl">
+
+        <property name="citationSources" value="${@document?.citations?.list}" onError="ignore"/>
+
+        <for id="this, citationSources, citationDependency">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <property name="citationDependency" value="${@document != null AND @document.sources.list.isEmpty() AND @document.citations.list.isEmpty() ? null : true}" onError="collapseSilent" />
+    </component>
+
+    <component id="mntl-schema-unified-audience" resourcePath="/components/schema/schema-unified-audience.ftl">
+        <property name="audienceType" value="Audience" />
+        <list id="audience" />
+    </component>
+
+    <!-- For bio pages - though we are getting all attributions here there should only be one: the bio pages attribution
+         so it is safe to just get the first item in the list -->
+    <component id="mntl-schema-unified-bio-properties" resourcePath="/components/schema/schema-unified-bio-entity.ftl">
+        <property id="author" value="${@authorAttributions.get(0).author}">
+            <model name="authorAttributions" onError="ignore"/>
+        </property>
+        <for id="this, author.authorAttributions">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+    </component>
+
+    <component id="mntl-schema-unified-recipe-properties" resourcePath="/components/schema/schema-unified-recipe.ftl">
+        <for id="this, recipeInstructions, nutritionFacts, nutritionAnalysis">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <for id="ratingValue, ratingCount">
+            <model name="getAggregateRating" id="aggregateRating" onError="ignore">
+                <property name="documentId" value="${@document.documentId}">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+            </model>
+        </for>
+
+        <property name="simplifiedRecipeYield" value="false" type="boolean" />
+        <property name="nutritionFacts" value="${@nutritionInfo ?: @document.nutritionInfo?.display == false ? null : @document.nutritionInfo?.nutritionFacts}" onError="ignore">
+            <model name="pruneUnusedFields" id="nutritionInfo" onError="ignore">
+                <property name="nutritionAnalysis" value="${@document.nutritionAnalysis}" onError="ignore" />
+            </model>
+        </property>
+        <property name="ratingValue" value="${@aggregateRating != null ? @aggregateRating['starRating'].averageRoundedToTenth : 0}" />
+        <property name="ratingCount" value="${@aggregateRating != null ? @aggregateRating['starRating'].count : 0}" />
+        <model id="recipeInstructions" name="jsonLdSchemaHowToSections" onError="ignore" />
+    </component>
+
+    <component id="mntl-schema-unified-about-property-howto" resourcePath="/components/schema/schema-unified-about-property-howto.ftl">
+        <for id="this, howToInstructions">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <model id="howToInstructions" name="jsonLdSchemaHowToSections" onError="collapseSilent" />
+    </component>
+
+    <component id="mntl-schema-unified-about-property-doc" resourcePath="/components/schema/schema-unified-about-property-doc.ftl">
+        <model name="docSchema" id="docSchema" onError="collapseSilent">
+            <property name="docId" value="${requestContext.urlData.docId}" />
+        </model>
+    </component>
+
+    <component id="mntl-schema-unified-review-properties" resourcePath="/components/schema/schema-unified-review.ftl">
+        <property name="entityType" value="${@document?.entity?.data?.type?.toString() ?: 'thing'}" />
+        <property name="itemReviewedType" value="${(@reviewTypes[@document?.entity?.data?.type?.toString()]) ?: 'Thing'}" onError="ignore">
+            <map name="reviewTypes">
+                <property name="PRODUCT" value="Product" />
+                <property name="CREDITCARD" value="Product" />
+                <property name="PRODUCTRECORD" value="Product" />
+            </map>
+        </property>
+        <property name="productRecords" value="${@document.infoCatProductRecords}" onError="ignore" />
+
+        <for id="this, itemReviewedType, review-item, entityType, authorAttributions, productRecords">
+            <model name="DOCUMENT" id="document" />
+        </for>
+        <model name="authorAttributions" onError="ignore"/>
+
+        <!-- Dynamic Location using the `itemReviewedType` suffix to add custom fields for entity types. -->
+        <component id="review-item" location="entityCustomFields-product" ref="mntl-schema-unified-review-product" />
+        <component id="review-item" location="entityCustomFields-creditcard" ref="mntl-schema-unified-review-creditcard" />
+        <component id="review-item" location="entityCustomFields-productrecord" ref="mntl-schema-unified-review-product" />
+    </component>
+
+    <component id="mntl-schema-unified-ugc-review-properties" resourcePath="/components/schema/schema-unified-ugc-review.ftl">
+        <property name="enabled" value="${@ugcFeedbackReviewSchemaEnabled.value ? true : null}" onError="collapseSilent">
+            <model name="externalConfig" id="ugcFeedbackReviewSchemaEnabled">
+                <property name="key" value="com.about.globe.ugcFeedback.reviewSchema.enabled" />
+                <property name="default" value="false" type="boolean" />
+                <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+            </model>
+        </property>
+        <model id="originalComments" name="aggregatedFeedbacks">
+            <property name="docId" value="${requestContext.urlData.docId}" />
+        </model>
+    </component>
+
+    <component id="mntl-schema-unified-disqus-review-properties" resourcePath="/components/schema/schema-unified-disqus-review.ftl">
+        <model id="originalComments" name="disqusOriginalComments">
+            <property name="docId" value="${requestContext.urlData.docId}" />
+            <property name="numberOfOriginalComments" value="5" />
+        </model>
+    </component>
+
+    <component id="mntl-schema-unified-review-product" resourcePath="/components/schema/schema-unified-product.ftl">
+        <property name="entityData" value="${@document.entity.data}" onError="ignore" />
+        <property name="gtin" value="${@prodRec?.primaryGtin != null ? @prodRec.primaryGtin[0] : null}" onError="ignore" />
+        <property name="mpn" value="${@prodRec?.primaryMpn != null ? @prodRec.primaryMpn[0] : null}" onError="ignore" />
+        <property name="vendorBrand" value="${@prodRec?.getPropertyValue('brand') != null ? @prodRec.getPropertyValue('brand').primaryValue : @entityBrand}" onError="ignore" />
+
+        <for id="this, entityData">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <for id="gtin, mpn, vendorBrand">
+            <property name="prodRec" value="${@document.infoCatProductRecords?.isEmpty() ? null : @document.infoCatProductRecords[0].product}" onError="ignore">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+
+        <for id="vendorBrand">
+            <property name="entityBrand" value="${@document?.entity?.data instanceof T(com.about.mantle.model.product.GenericProductEx) AND @document?.entity?.data?.brand != null ? @document.entity.data.brand : ''} " onError="ignore">
+                <model name="DOCUMENT" id="document" />
+            </property> 
+        </for>
+    </component>
+
+    <component id="mntl-schema-unified-review-creditcard" resourcePath="/components/schema/schema-unified-creditcard.ftl" />
+
+    <component id="mntl-schema-unified-taxonomy-properties" resourcePath="/components/schema/schema-unified-taxonomy-properties.ftl">
+        <model name="DOCUMENT" id="document" />
+    </component>
+
+    <component id="mntl-schema-unified-about-property-drug" resourcePath="/components/schema/schema-unified-about-property-drug.ftl">
+        <model id="jsondoc" name="entityReferenceMetadata" onError="collapseSilent" />
+        <for id="this, jsondoc">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+
+    <component id="mntl-schema-unified-liveblogpost" resourcePath="/components/schema/schema-unified-liveblogpost.ftl" >
+        <for id="this, isLiveBlogPostDataAvailable, authorAttributions, datePublished, dateModified">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <for id="datePublished, dateModified">
+            <property name="timeZone" value="America/New_York" />
+        </for>
+
+        <model name="authorAttributions" onError="ignore" />
+
+        <!-- Keeping same logic & format for dates as main document schema -->
+        <property name="datePublished" value="${@document?.dates?.firstPublished != null ? @document?.dates?.firstPublished.withZone(T(org.joda.time.DateTimeZone).forID(@timeZone)) : ''}" onError="ignore" />
+        <model name="newestDateBasedOnReview" id="dateModified">
+            <property name="isForLastReviewedDateField" value="false" type="boolean" />
+        </model>
+
+        <component location="extraProperties" ref="mntl-schema-unified-publisher" />
+        <component location="extraProperties" ref="mntl-schema-unified-image" />
+        <component location="mainEntityOfPage" ref="mntl-schema-unified-main-entity-of-page" />
+
+        <property name="display" value="${@isLiveBlogPostDataAvailable ? true : null}" onError="collapseSilent" >
+            <model name="isLiveBlogPostDataAvailable" />
+        </property>
+    </component>
+
+</components>

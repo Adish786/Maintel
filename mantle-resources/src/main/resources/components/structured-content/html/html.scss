@@ -1,0 +1,14 @@
+.mntl-sc-block-html {
+    &:not(.mntl-sc-block-html-sliced) {
+        counter-reset: section;
+    }
+
+    & > ol {
+        counter-reset: none;
+    }
+
+    // Support ads inside inline ad blocks
+    .mntl-sc-block-adslot-inline > .mntl-block {
+        display: inline;
+    }
+}

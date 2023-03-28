@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-pinterest-taxonomy-feed" ref="mntl-rss-feed">
+
+        <for id="rssAttributes" mode="replace">
+            <property name="xmlns:content" value="http://purl.org/rss/1.0/modules/content/" />
+        </for>
+
+        <for id="mntl-pinterest-item">
+            <property name="pinterestChannel" value="${@feed.channel}" onError="halt" />
+        </for>
+
+        <for id="channel, pinterestChannel">
+            <model name="feed" id="feed" onError="halt">
+                <property name="feedName" value="pinterest-taxonomy" />
+            </model>
+        </for>
+
+        <component-list location="channel-items" ref="mntl-pinterest-item" iterable="${@pinterestChannel.items}">
+            <for id="title, link, description, inlineImagesAndPinterestImages">
+                <component-list-item id="thisItem" ref="mntl-pinterest-item" />
+            </for>
+
+            <property name="title" value="${@thisItem.value.title ?: null}" onError="ignore" />
+            <property name="link" value="${@thisItem.value.link ?: null}" onError="ignore" />
+            <property name="description" value="${@thisItem.value.description ?: null}" onError="ignore" />
+            <property name="inlineImagesAndPinterestImages" value="${@thisItem.value.enclosures ?: null}" onError="ignore" />
+
+        </component-list>
+
+    </component>
+
+    <component id="mntl-pinterest-item" resourcePath="/components/rssfeed/pinterest/item/item.ftl" />
+
+</components>

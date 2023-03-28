@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-nutrition-facts" ref="mntl-block">
+        <component location="content" ref="mntl-nutrition-facts-summary" />
+        <component location="content" ref="mntl-nutrition-facts-label" />
+    </component>
+
+    <component id="mntl-nutrition-facts-summary" resourcePath="/components/recipe/nutrition-facts/nutrition-facts-summary.ftl">
+        <stylesheet path="/static/mantle/components/recipe/nutrition-facts/nutrition-facts-summary.css" />
+
+        <property name="nutritionFacts" value="${@nutritionInfo ?: @document.nutritionInfo?.display == false ? null : @document.nutritionInfo?.nutritionFacts}" onError="collapseSilent">
+            <model name="DOCUMENT" id="document" />
+            <model name="pruneUnusedFields" id="nutritionInfo" onError="ignore">
+                <property name="nutritionAnalysis" value="${@document.nutritionAnalysis}" onError="ignore">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+            </model>
+        </property>
+
+        <property name="nutrientUnitClass" value="type--dog-bold" />
+        <property name="nutrientNameClass" value="type--dog" />
+        <property name="headingClass" value="type--zebra" />
+        <property name="headingAsideClass" value="type--dog" />
+    </component>
+
+    <component id="mntl-nutrition-facts-label" resourcePath="/components/recipe/nutrition-facts/nutrition-facts-label.ftl">
+        <script path="/static/mantle/components/recipe/nutrition-facts/nutrition-facts-label.js" />
+        <stylesheet path="/static/mantle/components/recipe/nutrition-facts/nutrition-facts-label.css" />
+
+        <model name="DOCUMENT" id="document" />
+
+        <property name="trackingContainer" value="true" type="boolean" />
+        <property name="buttonClass" value="type--dog" />
+        <property name="tableHeaderTitleClass" value="type--goat-bold" />
+        <property name="tableHeaderSubtitleClass" value="type--dog" />
+        <property name="tableBodyClass" value="type--cat" />
+        <property name="tableDvClass" value="type--dog" />
+        <property name="nutritionFacts" value="${@nutritionInfo ?: @document.nutritionInfo?.display == false ? null : @document.nutritionInfo?.nutritionFacts}" onError="collapseSilent">
+            <model name="DOCUMENT" id="document" />
+            <model name="pruneUnusedFields" id="nutritionInfo" onError="ignore">
+                <property name="nutritionAnalysis" value="${@document.nutritionAnalysis}" onError="ignore">
+                    <model name="DOCUMENT" id="document" />
+                </property>
+            </model>
+        </property>
+    </component>
+
+</components>

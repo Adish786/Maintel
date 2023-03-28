@@ -1,0 +1,11 @@
+<@component>
+    <iframe 
+        id="ngxFrame${model.cheetahId}"
+        class="mntl-sc-block-cheetahembed__iframe"
+        allowfullscreen="false"
+        scrolling="no"
+        width="100%"
+        frameborder="0"
+        data-src="https://us-d.wayin.com/display/container/dc/${model.cheetahId}?mode=responsive">
+    </iframe>
+</@component>

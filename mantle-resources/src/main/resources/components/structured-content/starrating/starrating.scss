@@ -1,0 +1,48 @@
+.mntl-sc-block-starrating {
+    display: inline-block;
+
+    a {
+        display: inline-block;
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+    }
+
+    &__background,
+    &__bar {
+        position: absolute;
+        top: 50%;
+        height: 95%;
+        transform: translateY(-50%);
+    }
+
+    &__background {
+        width: 100%;
+        background-color: #D8D8D8;
+    }
+
+    &__bar {
+        background-color: #FFCC00;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        fill: #FFFFFF;
+        display: block;
+    }
+
+    &__label {
+        vertical-align: top;
+        display: inline-block;
+        font-family: Arial;
+        padding-left: 5px;
+        padding-top: 2px;
+    }
+}

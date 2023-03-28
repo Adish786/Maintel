@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-sc-block-sponsored" ref="mntl-sponsorship--universal-image">
+        <info>
+            <category>Mantle Components/Blocks</category>
+            <displayName>Sponsored</displayName>
+            <description>Sponsored block for Structured content Template</description>
+            <documentation>
+                This component references **mntl-sponsorship--universal-image** and removes **display** to always display the block.
+            
+                # Inner components
+
+                - __mntl-sponsorship__title__
+
+                - Title. Inherited from **mntl-sponsorship--universal-image**
+
+                - __mntl-sponsorship__logo-wrapper__
+
+                Wraps around **mntl-sponsorship__logo** which is the sponsored logo. Inherited from **mntl-sponsorship--universal-image**
+
+                - __mntl-sponsorship__logo__
+
+                Logo of the sponsor. Inherited from **mntl-sponsorship--universal-image**
+            </documentation>
+
+	        <for id="mntl-sponsorship__title">
+	        	<property name="text" value="Presented by" mode="replace" />
+	        </for>
+
+	        <for id="mntl-sponsorship__logo-wrapper">
+	        	<property name="uri" value="https://www.target.com" mode="replace"/>
+	        </for>
+
+            <for id="mntl-sponsorship__logo, mntl-sponsorship__logo.alt, mntl-sponsorship__logo.height, mntl-sponsorship__logo.width, mntl-sponsorship__logo.placeholderWidth, mntl-sponsorship__logo.placeholderHeight">
+                <property name="image" value="${@document.getImageForUsage('PRIMARY')?.objectId != null ? @document.getImageForUsage('PRIMARY') : null}" mode="replace">
+                    <model name="mockDocument" id="document">
+                        <property name="template" value="structured-content-basic-one-of-each" />
+                    </model>
+                </property>
+            </for>
+
+            <for id="mntl-sponsorship__logo">
+                <property name="lazyload" value="false" type="boolean" />
+            </for>
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/sponsored/sponsored.css" />
+
+        <property name="display" mode="remove"/>
+
+        <for id="mntl-sponsorship__content">
+            <component id="mntl-sponsorship__disclaimer" mode="remove"/>
+        </for>
+
+        <for id="mntl-sponsorship__logo-wrapper">
+            <property name="uri" value="${@block?.value?.data?.uri}" mode="replace" />
+        </for>
+
+        <for id="mntl-sponsorship__logo, mntl-sponsorship__logo.alt, mntl-sponsorship__logo.height, mntl-sponsorship__logo.width, mntl-sponsorship__logo.placeholderWidth, mntl-sponsorship__logo.placeholderHeight">
+            <property name="image" value="${@block?.value?.data?.image}" mode="replace" />
+        </for>
+
+        <for id="text">
+            <property name="sponsor" value="${@block?.value?.data}" onError="collapseSilent" />
+        </for>
+    </component>
+</components>

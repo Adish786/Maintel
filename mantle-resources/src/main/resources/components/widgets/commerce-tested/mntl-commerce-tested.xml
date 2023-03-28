@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-commerce-tested" ref="mntl-svg">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Commerce Tested Header</displayName>
+            <description>Block to precede article title showing that products have been throughly tested.</description>
+            <documentation>
+
+                # Models / Properties
+
+                - __name__
+
+                Checks if the document has the commerceTested taxene config set.  The value commerce-tested__badge is for the svg used to display the tested iconography that appears above the article's title.
+			</documentation>
+        </info>
+
+        <property name="name" value="${configs['commerceTested'] == true ? 'commerce-tested__badge' : null}" onError="collapseSilent" />
+    </component>
+
+</components>

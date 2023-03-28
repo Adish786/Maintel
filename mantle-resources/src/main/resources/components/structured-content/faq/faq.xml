@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-sc-block-faq" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Structured Content</category>
+            <displayName>FAQ</displayName>
+            <description>Frequently Asked Questions Accordion</description>
+
+            <documentation>
+                ### **mntl-sc-block-faq__title** location
+
+                This location is always visible and shows the title of the faq at the top. default to "Frequently Asked Questions"
+
+                ### **mntl-sc-block-faq__content** location
+
+                This location is an accordion that shows all faq questions questions and show 1 answer with a feature link being shown at a time. by default all questions are collapsed
+
+                ### **mntl-sc-block-faq__toc-anchor** location
+
+                This location is for the toc-anchor, a span that is used for navigation via table of contents.
+
+                ### **mntl-sc-block-faq-accordion__item featurePrefix** property
+
+                prefix for feature link. defaults to "Learn More:"
+
+                ### **isExpanded** property
+
+                This property determines if the expanded theme is applied to this block, and if so, removes the **js-accordion** class from the items, so the JS no longer opens/closes them
+            </documentation>
+
+            <model id="list" name="json">
+                <property name="string" value="[
+                        {
+                            'question' : 'Meal Types',
+                            'featureLink': 'http://www.example.com',
+                            'featureTitle': 'Meal Types you should know',
+                            'answer': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh. Feugiat in ante metus dictum at tempor. Tincidunt augue interdum velit euismod in pellentesque massa. Urna neque viverra justo nec ultrices dui. Libero volutpat sed cras ornare arcu dui vivamus arcu. Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Adipiscing bibendum est ultricies integer quis. Tincidunt arcu non sodales neque sodales ut etiam sit. Mi bibendum neque egestas congue quisque egestas. Platea dictumst quisque sagittis purus. A scelerisque purus semper eget duis at tellus at.'
+                        },{
+                            'question' : 'Cuisine',
+                            'featureTitle': '10 Cuisines from places ',
+                            'answer': 'Metus vulputate eu scelerisque felis imperdiet proin fermentum. Blandit turpis cursus in hac habitasse. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Orci eu lobortis elementum nibh tellus molestie nunc non. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Enim praesent elementum facilisis leo vel fringilla est ullamcorper. Non blandit massa enim nec dui nunc mattis enim. Porttitor rhoncus dolor purus non enim praesent. Arcu cursus euismod quis viverra nibh cras. Adipiscing commodo elit at imperdiet dui. At ultrices mi tempus imperdiet. Magna fringilla urna porttitor rhoncus dolor purus. Et malesuada fames ac turpis egestas. Non tellus orci ac auctor augue mauris augue. Vitae purus faucibus ornare suspendisse sed nisi lacus sed.'
+                        },{
+                            'question' : 'Ingredient',
+                            'featureLink': 'http://www.example.com',
+                            'answer': 'Vulputate ut pharetra sit amet aliquam id diam maecenas. Imperdiet massa tincidunt nunc pulvinar sapien. Aenean vel elit scelerisque mauris. Lacinia quis vel eros donec ac. Ullamcorper morbi tincidunt ornare massa. Eget nunc scelerisque viverra mauris in aliquam sem fringilla. Nec tincidunt praesent semper feugiat nibh. Arcu non odio euismod lacinia. Non pulvinar neque laoreet suspendisse interdum. Sed viverra ipsum nunc aliquet.'
+                        }]" />
+                <property name="class" value="java.util.List" />
+            </model>
+
+            <for id="mntl-toc-anchor">
+                <property name="tocId" value="FAQ" />
+            </for>
+
+        </info>
+
+        <stylesheet path="/static/mantle/components/structured-content/faq/faq.css" />
+        <script path="/static/mantle/components/structured-content/faq/faq.js" />
+
+        <for id="mntl-sc-block-faq__content, accordionItemClass, icon">
+            <property name="isExpanded" value="${'expanded'.equalsIgnoreCase(@block.value.data.theme)}" onError="ignore" />
+        </for>
+
+        <list id="class">
+            <property name="theme" value="${str.stripToNull(@block.value.data.theme) != null ? 'theme-'.concat(@block.value.data.theme?.toString().toLowerCase()) : '' }" onError="ignore" />
+        </list>
+
+        <component location="content" ref="mntl-toc-anchor">
+            <property name="tocId" value="${T(com.about.mantle.model.tasks.TableOfContentsTask).generateAnchorId(@block.value)}" />
+        </component>
+
+        <component location="content" id="mntl-sc-block-faq__title" ref="mntl-text-block">
+            <property name="text" value="Frequently Asked Questions"/>
+        </component>
+
+        <component location="content" id="mntl-sc-block-faq__content" ref="mntl-accordion">
+            <property name="itemHeadingMap" value="question" />
+            <property name="list" value="${@block?.value?.data?.faqs?.list}" />
+            <property name="accordionItemClass" value="${ @isExpanded ? 'is-active' : ''}" onError="ignore" />
+            <property name="icon" value="${ @isExpanded ? '' : 'icon-arrow-down' }" mode="replace" />
+
+            <component id="mntl-sc-block-faq__accordion-content" location="accordion-content" resourcePath="/components/structured-content/faq/faq__accordion-content.ftl">
+                <property name="featurePrefix" value="Learn More"/>
+                <component id="accordion-content__feature-link" location="feature-link" ref="mntl-text-link">
+                    <list id="class">
+                        <property name="theme" value="learnmore-link" mode="replace" />
+                    </list>
+                </component>
+            </component>
+        </component>
+    </component>
+</components>

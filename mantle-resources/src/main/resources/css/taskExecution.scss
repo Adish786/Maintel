@@ -1,0 +1,62 @@
+#mntltaskexecution {
+    z-index: 9999999;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    overflow: scroll;
+    box-shadow: 2px 2px 3px #333333;
+    border: 1px #888888 solid;
+    min-height: 400px;
+
+    .close {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .chart {
+        font: 10px sans-serif;
+
+        rect {
+            stroke: #FFFFFF;
+            fill: #0099CC;
+        }
+
+        .exception {
+            fill: #E50000;
+        }
+
+        text.bar {
+            fill: #333333;
+        }
+    }
+
+    .chart-title {
+        font-size: 16px;
+    }
+
+    .yAxisLine {
+        stroke: #000000;
+    }
+
+    .xAxisLine {
+        stroke: #CCCCCC;
+    }
+
+    .perf-tooltip {
+        position: absolute;
+        min-width: 100px;
+        max-width: 550px;
+        min-height: 55px;
+        padding: 5px;
+        font: 12px sans-serif;
+        background: #B3E3F2;
+        border-radius: 8px;
+        border: solid 1px #333333;
+    }
+}

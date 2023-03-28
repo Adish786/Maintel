@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-taglines" resourcePath="/components/taglines/view/taglines.ftl">
+        <info>
+			<category>Mantle Components/Article</category>
+			<displayName>Taglines</displayName>
+			<description>
+                This component displays a list of contributors OTHER THAN authors / fact checkers / reviewers on a document, their associated attribution text, and tooltips.
+                It is presented as a list of lists - a list of groups (by author type) containing individuals belonging to that group and is made to work with all author types.
+                The data is pulled from the "Secondary Roles" section on a document in Apollo.
+            </description>
+			<documentation>
+                # Models
+
+                ## GROUPEDATTRIBUTIONS
+                Returns a list of contributors grouped by their type (UPDATER, ORIGINAL WRITER, EDITOR, etc.)
+
+                # Locations
+
+                ## taglinesGroups
+                Location to insert the list of groups containing the individual byline items
+
+                # Dependencies/References
+
+                ## attributionsByGroup
+                The list of groups containing contributors
+
+                ## groupName.value
+                The list of individual contributors of a certain group
+
+                ## mntl-taglines\_\_item
+                The lists generated are containing a list of mntl-taglines\_\_item components
+
+                ## mntl-author-tooltip
+                The tooltip component that will be displayed on hover of the tagline
+            </documentation>
+
+            <for id="mntl-taglines__group">
+                <model name="GROUPEDATTRIBUTIONS" id="attributionsByGroup" mode="replace">
+                    <model name="TAGLINES" id="attributions">
+                        <model name="mockDocument" id="document" mode="replace">
+                            <property name="template" value="structured-content-single-basic-attribution" />
+                        </model>
+                    </model>
+                </model>
+            </for>
+
+            <for id="attributions">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="structured-content-single-basic-attribution" />
+                </model>
+            </for>
+
+            <for id="mntl-taglines__item">
+                <property name="dataTooltip" mode="remove" />
+                <component id="mntl-author-tooltip" mode="remove" />
+            </for>
+		</info>
+
+        <for id="collapseIfNoTaglines, mntl-taglines__group">
+            <model name="GROUPEDATTRIBUTIONS" id="attributionsByGroup">
+                <model name="TAGLINES" id="attributions">
+                    <model name="DOCUMENT" id="document" />
+                </model>
+            </model>
+        </for>
+
+        <stylesheet path="/static/mantle/components/taglines/css/taglines.css" />
+
+        <property name="collapseOnAttributionDisabled" value="${ @attributionEnabled == true ? true : null }" onError="collapseSilent">
+            <model id="attributionEnabled" name="ATTRIBUTIONENABLED" />
+        </property>
+
+        <property name="collapseIfNoTaglines" value="${@attributionsByGroup != null AND @attributionsByGroup.size() > 0 ? true : null }" onError="collapseSilent" />
+
+        <component-list id="mntl-taglines__group" location="taglinesGroups" ref="mntl-block" iterable="${ @attributionsByGroup ?: {} }">
+            <component-list id="mntl-taglines__item" location="content" ref="mntl-attribution__item" iterable="${ @groupName.value ?: {} }">
+                <property name="collapseIfGuestAuthor" mode="remove" />
+                <property name="name" value="${ @attributionItem.value.author.displayName }" mode="replace" />
+                <property name="uri" value="${ @attributionItem.value.author.bioUrl }" mode="replace" onError="ignore" />
+                <property name="dataTooltip" value="${ str.stripToNull(@attributionItem?.value?.author?.shortBio) }" mode="replace" onError="ignore" />
+
+                <for id="this, isCommaSeparatedListItem, isLastItemInGroup">
+                    <component-list-item id="groupName" ref="mntl-taglines__group" />
+                </for>
+
+                <for id="isCommaSeparatedListItem,
+                         isLastItemInGroup,
+                         descriptor,
+                         name,
+                         uri,
+                         dataTooltip,
+                         bio,
+                         image,
+                         collapseIfAuthor,
+                         learnMoreLinkText,
+                         learnMoreLink">
+                    <component-list-item id="attributionItem" ref="mntl-taglines__item" />
+                </for>
+
+                <component location="tooltip" ref="mntl-author-tooltip">
+                    <property name="bio" value="${ @attributionItem.value?.author?.shortBio }" onError="collapseSilent" mode="replace" />
+
+                    <component location="preBio" id="mntl-author-tooltip__name" ref="mntl-attribution__item" mode="replace">
+                        <property name="descriptor" value="" mode="replace" />
+                        <property name="isCommaSeparatedListItem" value="false" type="boolean" mode="replace" />
+                        <property name="name" value="${@attributionItem.value.author.displayName}" mode="replace" />
+                        <property name="uri" value="${@attributionItem.value.author.bioUrl}" mode="replace" onError="ignore" />
+                        <property name="dataTooltip" mode="remove" />
+                        <property name="dataTriggerLink" mode="remove" />
+                        <property name="collapseIfGuestAuthor" mode="remove" />
+                        <property name="isFirstItemInNonAuthorGroup" mode="remove" />
+                    </component>
+                </component>
+            </component-list>
+        </component-list>
+    </component>
+
+</components>

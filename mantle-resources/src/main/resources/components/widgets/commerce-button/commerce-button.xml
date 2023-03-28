@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+	<component id="mntl-commerce-button" ref="mntl-text-link">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Commerce Button</displayName>
+        </info>
+
+		<list id="class">
+			<property name="js-extended-commerce__button" value="js-extended-commerce__button" />
+		</list>
+	</component>
+
+	<component id="mntl-commerce-button-list-block" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Commerce Buttons</displayName>
+			<description>A list of commerce button components which also includes Commerce JS scripts for Amazon/Skimlink pricing for Infocat powered buttons.</description>
+			<documentation>
+				#Properties
+
+				__priorityDomains__
+
+				List of domains that are coming from the vertical's config. Displays the retailers of
+				highest priority first. Defaults to Amazon.
+
+				__safelistDomains__
+
+				List of domains that are coming from the vertical's config. Displays retailers after the **priorityDomains**. Removes the **.com** from the retailer and displays retailer name if is found in **safelistDomains**. Defaults to Walmart.
+
+				--retailerLimit__
+
+				Limits the number of retailers being shown. Defaults to 1 retailer.
+
+				__pricingDisabled__
+
+				Disables pricing. Pricing enabled by default
+
+				__filterOOS__
+
+				Filtering of OOS is on by default. Setting to false will turn off Out Of Stock filtering.
+
+				# Implementation
+
+				- Place the component in the template.
+				- Inject the **priorityDomains** and **safelistDomains** with the ones from the vertical's
+				config.
+				- Target **retailerLimit** for more or less retailers
+				- Target **pricingDisabled** for disabling pricing.
+            </documentation>
+        </info>
+
+        <stylesheet id="mntl-commerce-button-list-block-css" path="/static/mantle/components/widgets/commerce-button/commerce-button.css" />
+
+        <script id="mntl-extended-commerce-evaluated-js" group="top" evaluated="true" path="/static/mantle/js/mntl-extended-commerce.evaluated.js" />
+        <script id="mntl-extended-commerce-js" group="bottom" path="/static/mantle/js/mntl-extended-commerce.js" />
+
+		<!-- If config is set, disable pricing for commerce buttons -->
+		<property name="pricingDisabled" value="${configs['disableRetailerPricing'] != null AND configs['disableRetailerPricing'] ? true : null}" onError="ignore" />
+
+		<for id="this, retailers">
+            <property name="campaignUrls" value="${@url == null ? null : utils.list(new com.about.mantle.infocat.model.Retailer(@url, @cta))}" onError="ignore">
+				<property name="url" value="${@product.getPropertyValue('campaignUrl').isEmpty() ? null : @product.getPropertyValue('campaignUrl').href}" onError="ignore">
+					<property name="product" value="${@block.value.data.product}" />
+				</property>
+				<property name="cta" value="${@product.getPropertyValue('campaignUrl').isEmpty() ? null : @product.getPropertyValue('campaignUrl').text}" onError="ignore">
+					<property name="product" value="${@block.value.data.product}" />
+				</property>
+			</property>
+
+			<property name="priorityDomains" value="${@externalConfig?.value == null ? str.tokenize(@defaultDomains) : str.tokenize(@externalConfig.value)}" onError="ignore">
+				<model name="externalConfig">
+					<property name="key" value="com.about.globe.product.priorityDomains" />
+				</model>
+				<list name="defaultDomains">
+					<property name="amazon.com" value="amazon.com" />
+				</list>
+			</property>
+
+			<property name="safelistDomains" value="${@externalConfig?.value == null ? str.tokenize(@defaultDomains) : str.tokenize(@externalConfig.value)}" onError="ignore">
+				<model name="externalConfig">
+					<property name="key" value="com.about.globe.product.safelistDomains" />
+				</model>
+				<list name="defaultDomains">
+					<property name="walmart.com" value="walmart.com" />
+				</list>
+			</property>
+
+			<property name="retailers" value="${@product.getPropertyValue('retailers').primaryValue}">
+				<property name="product" value="${@block.value.data.product}" />
+			</property>
+
+            <property name="limit" value="1" type="integer" />
+		</for>
+
+		<component-list id="mntl-commerce-button-list" iterable="${@retailers}" ref="mntl-group" location="content">
+
+			<model id="retailers" name="retailerSort" />
+
+			<component id="button" ref="mntl-commerce-button" location="content">
+				<model name="DOCUMENT" id="document" />
+
+				<property name="uri" value="${@vendor.value.url != null ? @vendor.value.url : null}" onError="ignore">
+					<component-list-item id="vendor" ref="mntl-commerce-button-list" />
+				</property>
+
+				<map id="attrs">
+					<property name="data-retailer-type" value="${@vendor.value.type != null ? @vendor.value.type  : null}" onError="ignore" >
+						<component-list-item id="vendor" ref="mntl-commerce-button-list" />
+					</property>
+
+					<property name="data-amazon-asin" value="${@vendor.value.type == 'AMAZON' ? @product.getPropertyValue('retailers').asin : null}" onError="ignore" >
+						<property name="product" value="${@block.value.data.product}" />
+						<component-list-item id="vendor" ref="mntl-commerce-button-list" />
+					</property>
+				</map>
+
+				<property name="text" value="${renderUtils.getCallToAction(@vendor.value.cta, @vendor.value.url)}">
+					<component-list-item id="vendor" ref="mntl-commerce-button-list" />
+				</property>
+
+
+				<property name="rel" value="${@retailersEnabledForSkimlinks.contains(@vendor.value.type) ? '' : 'noskim'}">
+					<component-list-item id="vendor" ref="mntl-commerce-button-list" />
+					<list name="retailersEnabledForSkimlinks">
+						<property name="SKIMLINKS" value="SKIMLINKS" />
+					</list>
+				</property>
+			</component>
+		</component-list>
+	</component>
+</components>

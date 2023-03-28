@@ -1,0 +1,37 @@
+/*
+Only applies the inner styles to IE browsers
+*/
+@mixin isIE {
+    @media (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+/*
+Only applies the inner styles to pre-Chromium Edge browsers
+*/
+@mixin isEdge {
+    @supports (-ms-ime-align: auto) {
+        @content;
+    }
+}
+
+/*
+Only applies the inner styles to Firefox
+*/
+@mixin isFirefox {
+    @-moz-document url-prefix() {
+        @content;
+    }
+}
+
+/*
+Only applies the inner styles to desktop Safari browsers
+*/
+@mixin isSafari {
+    @media not all and (min-resolution: .001dpcm) {
+        @supports (-webkit-appearance: none) {
+            @content;
+        }
+    }
+}

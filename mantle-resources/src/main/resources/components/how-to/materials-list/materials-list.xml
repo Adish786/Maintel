@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-materials-list" resourcePath="/components/how-to/materials-list/materials-list.ftl">
+        <info>
+            <category>Mantle Components/How To</category>
+            <displayName>Materials List</displayName>
+            <description>Displays a list of materials/tools, as used in a how to template</description>
+            <property name="heading" value="Sample heading" />
+            <property name="materials" value="${@json}">
+                <model name="json" id="json">
+                    <property name="string" value="[{
+                            'unit': 'yards',
+                            'description': 'yarn',
+                            'quantityRange': {
+                                'min': {
+                                    'numerator': 4,
+                                    'denominator': 3
+                                }
+                            }
+                    }, {
+                        'unit': '',
+                        'description': 'nails',
+                        'quantityRange': {
+                            'min': {
+                                'numerator': 1,
+                                'denominator': 1
+                            },
+                            'max': {
+                                'numerator': 5,
+                                'denominator': 1
+                            }
+                        }
+                    }]" />
+                    <property name="class" value="java.util.List" />
+                </model>
+            </property>
+        </info>
+        <stylesheet path="/static/mantle/components/how-to/materials-list/materials-list.css" />
+    </component>
+
+    <component id="mntl-materials-group" ref="mntl-block">
+        <info>
+            <category>Mantle Components/How To</category>
+            <displayName>Materials Group</displayName>
+            <description>Displays a group of lists (with a heading) of materials/tools, used in a how to template</description>
+        </info>
+        <component location="content" ref="mntl-text-block" id="mntl-materials-group__heading">
+            <property name="tag" value="h3" />
+        </component>
+        <component-list location="content" ref="mntl-group" id="mntl-material__item" iterable="${@groups}">
+            <component location="content" ref="mntl-materials-list">
+                <for id="materials, heading">
+                    <component-list-item id="item" ref="mntl-material__item" />
+                </for>
+                <property name="materials" value="${@item?.value?.materials?.list}" onError="ignore" />
+                <property name="heading" value="${@item.value.heading}" onError="ignore" />
+            </component>
+        </component-list>
+    </component>
+</components>

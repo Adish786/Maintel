@@ -1,0 +1,292 @@
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-bcplayer" resourcePath="/components/widgets/video-player/view/bc-player.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>BC Player</displayName>
+            <description>Adds the Jumpstart video player for brightcove videos</description>
+            <documentation>
+                # Jumpstart video player properties
+
+                ## __model.accountId__ **string**
+                Brightcove account ID the video is associated with
+
+                ## __model.videoId__ **string**
+                Brightcove video ID for the video
+
+                ## __model.brand__ **string**
+                The vertical currently playing the video
+
+                ##  __model.isLeadVideo__ **boolean**
+                Should be set to true for the primary video on a page for additional Jumpstart processing
+
+                ##  __model.nativePlayer__ **boolean**
+                Uses a minimal native player limited controls and functionality
+
+                ##  __model.lazyLoad__ **boolean**
+                Only initialize the video player when in view, must use -deferred script
+
+                ##  __model.preventStart__ **boolean**
+                Prevent the player from loading on page load so it can be manually loaded
+
+                ##  __model.autoplay__ **boolean**
+                Autoplay the video when it loads. 
+
+                ##  __model.mobileAutoplay__ **boolean**
+                Autoplay the video when it loads for mobile. We want to default to true for UX to prevent a double click needed to play a video.
+
+                ##  __model.stickyplay__ **boolean**
+                Dock the video player on the bottom right when scolled out of view
+
+                ## __model.videoMetadata__ **string**
+                Should be stringified JSON object containing the video data, example [here](https://jumpstart.video.meredithcorp.io) (view source and search for data-metadata)
+            
+                ## __model.dynamicEmbed__ **string**
+                String representing a tag from Brightcove that can be used in the absence of a video id to play a series of videos containing that tag
+
+                # Additional custom settings
+
+                ## __model.thumbnailUrl__ **string**
+                Sets the initial video element thumbnail using the poster property
+
+                ## __model.clickLoad__ **boolean**
+                Sets a boolean of true/false for the bc-video-player javascript to setup if we want to load on click. Default is false.
+
+                ## __model.posterLazyLoad__ **boolean**
+                Sets a boolean of true/false for the bc-video-player data-poster property. Default is false. When false, loads in the thumbnail in the poster property directly (immediate load). When true puts poster url in the data property to be controlled by the javascript side.
+                
+                # Locations
+                ## pre-video
+                Location to insert documents within video wrapper but before actual video
+            </documentation>
+
+            <property name="accountId" value="1033249144001" />
+            <property name="videoId" value="1560991360001" />
+            <property name="brand" value="mantle" />
+        </info>
+
+        <script path="/static/mantle/components/widgets/video-player/js/bc-player-rtb.js" />
+        <script path="/static/mantle/components/widgets/video-player/js/bc-player.js" />
+        <stylesheet path="/static/mantle/components/widgets/video-player/css/bc-player.css" />
+
+        <property name="accountId" value="${@videoDocument.accountId}" onError="collapseSilent" />
+        <property name="brand" value="${(messages['videoBrand'] ?: 'mantle')}" onError="collapseSilent" />
+        <property name="preventStart" value="false" type="boolean" />
+        <property name="lazyLoad" value="false" type="boolean" />
+        <property name="autoplay" value="false" type="boolean" />
+        <property name="isLeadVideo" value="false" type="boolean" />
+        <property name="nativePlayer" value="${@videoDocument.nativePlayer == 'true' ? true : false}" onError="ignore" />
+        <property name="stickyplay" value="false" type="boolean" />
+        <property name="videoId" value="${@videoDocument.videoId}" onError="collapseSilent" />
+        <property name="videoMetadata" value="${(@videoDocument?.templateType?.toString() == 'BRIGHTCOVEVIDEO') ? str.htmlEscape(@videoDocument.getVideoMetaData()) : ''}" onError="ignore" />
+        <property name="thumbnailUrl" value="${@videoDocument?.thumbnailUrl}" onError="ignore" />
+        <property name="clickLoad" value="false" type="boolean" />
+        <property name="posterLazyLoad" value="false" type="boolean" />
+        <property name="isBroadVideo" value="false" type="boolean" />
+
+        <for id="accountId, nativePlayer, videoId, videoMetadata, thumbnailUrl">
+            <property name="videoDocument" value="${@document?.primaryVideo?.document}" onError="collapseSilent">
+                <model name="DOCUMENT" id="document" />
+            </property>
+        </for>
+    </component>
+
+
+    <component id="mntl-bcplayer-deferred" ref="mntl-bcplayer">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>BC Player - Deferred</displayName>
+            <description>
+                This is the BC Player but initilizaed using the bc-player-deferred.js script. This extends the mntl-bc-player component with a few tweeks for deferreed videos
+            </description>
+            <documentation>
+                Additional notes about mntl-bcplayer settings:
+                *  __model.mobileAutoplay__ **boolean**
+
+                As of AXIS-3545 since we gate the loading of the video and video library by click we want to use 
+                data-mobile-autoplay to auto play the video after the first click to prevent a double click experience. 
+                Mobile browsers block all auto play after loading so we need to invoke a play event
+
+                * __model.clickLoad__ **boolean**
+
+                Set per the devices to the spec of AXIS-3545 for the thumbnail loading.
+            </documentation>
+        </info>
+
+        <for id="this">
+            <script id="/static/mantle/components/widgets/video-player/js/bc-player_js" mode="replace" path="/static/mantle/components/widgets/video-player/js/bc-player-deferred.js" />
+        </for>
+
+        <property name="autoplay" value="true" type="boolean" views="mobile, tablet" />
+        <property name="clickLoad" value="false" type="boolean" views="pc" />
+        <property name="clickLoad" value="true" type="boolean" views="mobile, tablet" />
+        <property name="lazyLoad" value="true" type="boolean" />
+        <property name="mobileAutoplay" value="true" type="boolean" />
+    </component>
+
+    <component id="mntl-bcplayer-mobile-adhesive" ref="mntl-bcplayer" views="mobile">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>BC Player - mobile adhesive</displayName>
+            <description>Replaces the mobile adhesive ad with primary video 20 seconds after it loads</description>
+        </info>
+        
+        <stylesheet path="/static/mantle/components/widgets/video-player/css/bc-player-mobile-adhesive.css" />
+        <script path="/static/mantle/components/widgets/video-player/js/bc-player-mobile-adhesive.js" />
+
+        <svg id="icon-close" path="/static/mantle/svg/close.svg" />
+
+        <list id="innerClass">
+            <property name="display" value="is-hidden" />
+            <property name="modifier" value="jumpstart-js-wrapper--mobile-adhesive" />
+        </list>
+        
+        <property name="lazyLoad" value="false" type="boolean" />
+        <property name="preventStart" value="true" type="boolean" />
+        <property name="autoplay" value="true" type="boolean" />
+    </component>
+
+    <component id="mntl-bcplayer-broad-mobile" ref="mntl-bcplayer-mobile-adhesive"> 
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>BC Player - Broad Video Mobile Adhesive</displayName>
+            <description>Replaces the mobile adhesive ad with broadvideo 20 seconds after it loads if primary video does not exists</description>
+        </info>
+
+        <property name="collapseIfRevenueGroup" value="${@document?.revenueGroup == null OR @document?.revenueGroup.isEmpty() ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfPrimaryVideo" value="${@document?.primaryVideo?.document == null ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfNotBroadVideo" value="${'BROADVIDEO'.equals(@document?.viewType?.toString()) ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfNotSCorListSC" value="${({'STRUCTUREDCONTENT','LISTSC'}.contains(@document?.templateType?.toString())) ? true : null}" onError="collapseSilent" />
+        <property name="videoId" mode="remove" />
+        <property name="dynamicEmbed" value="brightcove.tags:'gallery-right-rail'" />
+        <property name="isBroadVideo" value="true" type="boolean" />
+        <property name="mobileAutoplay" value="true" type="boolean" />
+
+        <for id="collapseIfRevenueGroup, collapseIfPrimaryVideo, collapseIfNotBroadVideo, collapseIfNotSCorListSC">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+
+    <component id="mntl-bcplayer-broad" ref="mntl-bcplayer">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>BC Player - Broad Video</displayName>
+            <description>Sticky video docked to the bottom right corner when page is scrolled</description>
+        </info>
+
+        <for id="this">
+            <script id="/static/mantle/components/widgets/video-player/js/bc-player_js" mode="replace" path="/static/mantle/components/widgets/video-player/js/bc-player-deferred.js" />
+        </for>
+
+        <stylesheet path="/static/mantle/components/widgets/video-player/css/bc-player-broad.css" />
+        
+        <svg id="trending-icon" path="/static/mantle/svg/icon-trending.svg" />
+        <svg id="close-icon" path="/static/mantle/svg/close.svg" />
+
+        <map id="attrs">
+            <property name="data-pixel-depth" value="100" />
+        </map>
+
+        <list id="class">
+            <property name="is-hidden" value="is-hidden" />
+        </list>
+
+        <property name="collapseIfRevenueGroup" value="${@document?.revenueGroup == null OR @document?.revenueGroup.isEmpty() ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfPrimaryVideo" value="${@document?.primaryVideo?.document == null ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfNotBroadVideo" value="${'BROADVIDEO'.equals(@document?.viewType?.toString()) ? true : null}" onError="collapseSilent" />
+        <property name="collapseIfNotListSC" value="${'LISTSC'.equals(@document?.templateType?.toString()) ? true : null}" onError="collapseSilent" />
+        <property name="preventStart" value="true" type="boolean" />
+        <property name="autoplay" value="true" type="boolean" />
+        <property name="videoId" mode="remove" />
+        <property name="dynamicEmbed" value="brightcove.tags:'gallery-right-rail'" />
+        <property name="isBroadVideo" value="true" type="boolean" />
+        
+        <for id="collapseIfRevenueGroup, collapseIfPrimaryVideo, collapseIfNotBroadVideo, collapseIfNotListSC">
+            <model name="DOCUMENT" id="document" />
+        </for>
+
+        <component location="pre-video" id="mntl-bcplayer-broad__title" ref="mntl-block">
+            <component location="content" id="mntl-bcplayer-broad__title-icon--trending" ref="mntl-svg">
+                <property name="class" value="mntl-bcplayer-broad__title-icon--trending" />
+                <property name="name" value="trending-icon" />
+            </component>
+            <component location="content" id="mntl-bcplayer-broad__title--text" ref="mntl-text-block">
+                <list id="class">
+                    <property name="type--monkey-bold" value="type--monkey-bold" />
+                </list>
+                <property name="text" value="Trending Videos" />
+            </component>
+            <component location="content" id="mntl-bcplayer-broad__title-icon--close" ref="mntl-svg">
+                <property name="class" value="mntl-bcplayer-broad__title-icon--close" />
+                <property name="name" value="close-icon" />
+            </component>
+        </component>
+    </component>
+
+    <component id="mntl-bcplayer-hero" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Hero Video Player</displayName>
+            <description>
+                A looping video that plays at the top of an exclusive article, Brightcove only.
+                When a video is not present, it will be replaced with a primary image on pc and tablet,
+                and with a recirc image on mobile.
+            </description>
+            <documentation />
+        </info>
+
+        <stylesheet path="/static/mantle/components/widgets/video-player/css/bc-player-hero.css" />
+
+        <component location="content" id="mntl-bcplayer-hero__video" ref="mntl-bcplayer" views="tablet, pc">
+            <map id="attrs">
+                <property name="style" value="--aspectRatioPaddingBottom: ${renderUtils.getVideoContainerPaddingBottomFromUrl(@video.thumbnailUrl)}; --backgroundImage: url('${@video.thumbnailUrl}')" onError="ignore" />
+            </map>
+    
+            <list id="class">
+                <property name="u-autoplay-looped" value="u-autoplay-looped" />
+            </list>
+    
+            <property name="nativePlayer" value="true" type="boolean" />
+            <property name="isLeadVideo" value="true" type="boolean" />
+    
+            <for id="this, style">
+                <property name="video" value="${@document.primaryVideo?.document}" onError="collapseSilent">
+                    <model id="document" name="DOCUMENT" />
+                </property>
+            </for>    
+        </component>
+
+        <component location="content" id="mntl-bcplayer-hero__figure-article" ref="mntl-universal-primary-image">
+            <component id="primary-image__figcap" mode="remove" />
+
+            <list id="class">
+                <property name="orientation" value="figure-${@image.imageOrientation.toString().toLowerCase()}" />
+            </list>
+
+            <for id="providedImageSources">
+                <list id="filters">
+                    <property name="maxBytes" value="max_bytes(200000)" />
+                </list>
+
+                <!-- full-bleed, 2x render resolution -->
+                <property name="srcset" value="${{'minWidth': 750, 'maxWidth': 750, 'maxHeight': 0, 'stepCount': 0}}" views="mobile" />
+                <property name="sizes" value="750px" views="mobile" />
+                <property name="srcset" value="${{'minWidth': 2000, 'maxWidth': 2000, 'maxHeight': 0, 'stepCount': 0}}" views="tablet" />
+                <property name="sizes" value="2000px" views="tablet" />
+                <property name="srcset" value="${{'minWidth': 3000, 'maxWidth': 3000, 'maxHeight': 0, 'stepCount': 0}}" views="pc" />
+                <property name="sizes" value="3000px" views="pc" />
+            </for>
+
+            <for id="this, providedImageSources, orientation, alt, width, placeholderHeight, placeholderWidth">
+                <property name="image" value="${@document.primaryVideo?.document == null ? @document.getImageForUsage('PRIMARY') : null}" onError="collapseSilent" views="pc, tablet" />
+                <property name="image" value="${@document.getImageForUsage('RECIRC')}" onError="collapseSilent" views="mobile" />
+            </for>
+
+            <for id="image">
+                <model name="DOCUMENT" id="document" />
+            </for>
+        </component>    
+    
+    </component>
+
+</components>

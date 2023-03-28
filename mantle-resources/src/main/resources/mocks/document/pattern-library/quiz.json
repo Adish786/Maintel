@@ -1,0 +1,2164 @@
+{
+  "key": "315798e9f5102064460374f5",
+  "revisionKey": "3958bd91fe209573a4762a1a",
+  "revisionId": "4067067_1497464228878",
+  "authorKey": "7815",
+  "lastEditingAuthorId": "7815",
+  "lastEditingUserId": "148122552371372",
+  "url": "https://www.thoughtco.com/science-fact-or-fiction-quiz-4067067",
+  "rootUrl": "http://chemistry.about.com/qz/Science-Fact-or-Fiction-Quiz",
+  "vertical": "REFERENCE",
+  "docID": 4067067,
+  "docId": 4067067,
+  "slug": "science-fact-or-fiction-quiz",
+  "templateType": "QUIZ",
+  "documentState": {
+    "state": "ACTIVE",
+    "activeDate": 1488825247000
+  },
+  "dates": {
+    "created": 1469639157000,
+    "updated": 1474412132000,
+    "firstPublished": 1469713143000,
+    "lastPublished": 1488825247000
+  },
+  "title": "Science Fact or Fiction Quiz",
+  "socialTitle": "Can You Tell Science Facts from Science Fiction?",
+  "metaDescription": "Take this fun quiz to see whether you can tell science facts from science fiction or urban legend.",
+  "heading": "Science Fact or Fiction Quiz",
+  "primaryImage": {
+    "url": "http://0.tqn.com/d/chemistry/1/0/c/v/2/hand-access-energy-connections-521899105.jpg",
+    "caption": "This quiz tests whether you can tell whether a science fact is true or whether it's fiction.",
+    "owner": "Yagi Studio / Getty Images",
+    "alt": "This quiz tests whether you can tell whether a science fact is true or whether it's fiction.",
+    "width": 4900,
+    "height": 3653,
+    "objectId": "hand-access-energy-connections-521899105-579952c05f9b589aa9187a94.jpg"
+  },
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "summary": {
+    "title": "Science Fact or Fiction Quiz",
+    "socialTitle": "Can You Tell Science Facts from Science Fiction?",
+    "heading": "Science Fact or Fiction Quiz",
+    "description": "Take this fun quiz to see whether you can tell science facts from science fiction or urban legend.",
+    "image": {
+      "url": "http://0.tqn.com/d/chemistry/1/0/c/v/2/hand-access-energy-connections-521899105.jpg",
+      "caption": "This quiz tests whether you can tell whether a science fact is true or whether it's fiction.",
+      "owner": "Yagi Studio / Getty Images",
+      "alt": "This quiz tests whether you can tell whether a science fact is true or whether it's fiction.",
+      "width": 4900,
+      "height": 3653,
+      "objectId": "hand-access-energy-connections-521899105-579952c05f9b589aa9187a94.jpg"
+    }
+  },
+  "audit": {
+    "lastModified": 1497464228878
+  },
+  "metaData": {
+    "url": "",
+    "docId": 4067067,
+    "entities": [
+      {
+        "id": "http://dbpedia.org/resource/Critical_thinking",
+        "name": "Critical thinking",
+        "score": 16,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Simple_Science",
+        "name": "Simple Science",
+        "score": 11,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Magic_in_fiction",
+        "name": "Magic in fiction",
+        "score": 11,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Steve_Aoki",
+        "name": "Steve Aoki",
+        "score": 11,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Cockroach",
+        "name": "Cockroach",
+        "score": 10,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Smog",
+        "name": "Smog",
+        "score": 9,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Great_Wall_of_China",
+        "name": "Great Wall of China",
+        "score": 9,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Dry_ice",
+        "name": "Dry ice",
+        "score": 9,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Fun_(band)",
+        "name": "Fun (band)",
+        "score": 8,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Jellyfish",
+        "name": "Jellyfish",
+        "score": 8,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Scientific_method",
+        "name": "Scientific method",
+        "score": 8,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Nice",
+        "name": "Nice",
+        "score": 7,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Stomach",
+        "name": "Stomach",
+        "score": 7,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/Carbon_dioxide",
+        "name": "Carbon dioxide",
+        "score": 6,
+        "source": "dbpedia"
+      },
+      {
+        "id": "http://dbpedia.org/resource/China",
+        "name": "China",
+        "score": 5,
+        "source": "dbpedia"
+      }
+    ],
+    "audit": {
+      "clientId": "dotdash-sci",
+      "lastModified": 1551949877092
+    }
+  },
+  "resultsShown": 0,
+  "resultsCalc": "PERCENT_CORRECT",
+  "results": {
+    "list": [
+      {
+        "id": "d30c6537-939d-4757-87b7-e3936d31b06a",
+        "title": "You're Too Gullible About Science",
+        "description": "<p>Nice try! You didn't know many of the answers to the questions, yet you made it to the end of the quiz, so now you know more about what's true in science (and what's not).</p> \n<p>Think critically when presented with science &quot;facts&quot;. It's okay to be skeptical. You can <a href=\"https://www.thoughtco.com/scientific-method-steps-608183\" zt=\"-o1/XJ\" target=\"_blank\">apply the scientific method</a> to help identify what is true.</p> \n<p>From here, you can test the critical thinking ability of others, by seeing whether they can understand <a href=\"https://www.thoughtco.com/top-science-magic-tricks-606073\" zt=\"-o1/XJ\" target=\"_blank\">simple science magic tricks</a>.&nbsp;</p>",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/a/v/2/young-man-with-cityscape-reflected-on-to-him-509202341.jpg",
+          "owner": "Mads Perch / Getty Images",
+          "width": 3865,
+          "height": 2576,
+          "objectId": "young-man-with-cityscape-reflected-on-to-him-509202341-57994c955f9b589aa90994b9.jpg"
+        },
+        "dimensions": {
+          "list": [
+            {
+              "key": "Percent Correct",
+              "min": 0,
+              "max": 5
+            }
+          ],
+          "totalSize": 1
+        },
+        "linkboxes": {
+          "list": [
+            {
+              "heading": "Science and Critical Thinking",
+              "links": {
+                "list": [
+                  {
+                    "text": "Science Experiments to Try at Home",
+                    "uri": "https://www.thoughtco.com/science-experiments-you-can-do-at-home-604275",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "500577e62f00608c6d8184a4",
+                      "revisionKey": "3158cac51807aaf3d0769148",
+                      "revisionId": "604275_1551642460065",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/science-experiments-you-can-do-at-home-604275",
+                      "rootUrl": "http://chemistry.about.com/od/chemistryexperiments/tp/scienceexperiments.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 604275,
+                      "docId": 604275,
+                      "slug": "science-experiments-you-can-do-at-home",
+                      "templateType": "LISTSC",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1551642460010
+                      },
+                      "dates": {
+                        "created": 1241484747000,
+                        "updated": 1551642460065,
+                        "firstPublished": 1241484758000,
+                        "lastPublished": 1551642460010
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "Science Experiments You Can Do at Home",
+                      "socialTitle": "Science Experiments You Can Do at Home",
+                      "metaDescription": "This is a collection of science experiments that you can do at home, using materials you either already have or should be able to find easily.",
+                      "heading": "Science Experiments You Can Do at Home",
+                      "summary": {
+                        "title": "Science Experiments You Can Do at Home",
+                        "socialTitle": "Science Experiments You Can Do at Home",
+                        "heading": "Science Experiments You Can Do at Home",
+                        "description": "This is a collection of science experiments that you can do at home, using materials you either already have or should be able to find easily.",
+                        "image": {
+                          "url": "https://fthmb.tqn.com/dcGmgBKrvF0_P2POxcEAW-EZDQg=/soap-bubble-floating-in-a-blue-sky-904216448-5c7c245946e0fb000140a463.jpg",
+                          "owner": "Imagevixen / Getty Images",
+                          "alt": "Soap bubble floating in a blue sky",
+                          "width": 6000,
+                          "height": 4000,
+                          "objectId": "soap-bubble-floating-in-a-blue-sky-904216448-5c7c245946e0fb000140a463.jpg",
+                          "authorId": "null"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Today I Learned in Science",
+                    "uri": "https://www.thoughtco.com/today-i-learned-in-science-fun-facts-609451",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "31542d881148e237e7035497",
+                      "revisionKey": "3958c057df28dd4202767533",
+                      "revisionId": "609451_1540233737256",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/today-i-learned-in-science-fun-facts-609451",
+                      "rootUrl": "http://chemistry.about.com/od/weirdscience/tp/Today-I-Learned-in-Science-TIL.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 609451,
+                      "docId": 609451,
+                      "slug": "today-i-learned-in-science-fun-facts",
+                      "templateType": "LISTSC",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1540233737229
+                      },
+                      "dates": {
+                        "created": 1412270097000,
+                        "updated": 1540233737256,
+                        "firstPublished": 1412271377000,
+                        "lastPublished": 1489000416000
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "Today I Learned in Science (TIL)",
+                      "socialTitle": "Science Facts That Will Surprise You",
+                      "metaDescription": "Science holds many mysteries, but sometimes these are facts other people already know that are news to you. Here is a collection of &#34;today I learned&#34; science facts that may surprise you.",
+                      "heading": "Today I Learned in Science (TIL)",
+                      "summary": {
+                        "title": "Today I Learned in Science (TIL)",
+                        "socialTitle": "Science Facts That Will Surprise You",
+                        "heading": "Today I Learned in Science (TIL)",
+                        "description": "Science holds many mysteries, but sometimes these are facts other people already know that are news to you. Here is a collection of &#34;today I learned&#34; science facts that may surprise you.",
+                        "image": {
+                          "url": "http://0.tqn.com/d/chemistry/1/0/L/V/2/103741992.jpg",
+                          "caption": "As long as you don&#39;t hold your breath, you could survive a couple of minutes in space without a spacesuit.",
+                          "owner": "Steve Bronstein, Getty Images",
+                          "alt": "You could survive a couple of minutes in space without a spacesuit.",
+                          "width": 5500,
+                          "height": 3300,
+                          "objectId": "103741992-56a130cf3df78cf772684552.jpg"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Which Alchemy Element Are You?",
+                    "uri": "https://www.thoughtco.com/which-alchemy-element-are-you-609622",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "3156957a3e0815624b036b1d",
+                      "revisionKey": "3958c058fe2a5e420276770f",
+                      "revisionId": "609622_1489000709299",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/which-alchemy-element-are-you-609622",
+                      "rootUrl": "http://chemistry.about.com/qz/Which-Alchemy-Element-Are-You",
+                      "vertical": "REFERENCE",
+                      "docID": 609622,
+                      "docId": 609622,
+                      "slug": "which-alchemy-element-are-you",
+                      "templateType": "QUIZ",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1489000704000
+                      },
+                      "dates": {
+                        "created": 1452636733000,
+                        "updated": 1474411302000,
+                        "firstPublished": 1454969610000,
+                        "lastPublished": 1489000704000
+                      },
+                      "title": "Which Alchemy Element Are You?",
+                      "socialTitle": "Which Alchemy Element Are You?",
+                      "metaDescription": "Which alchemy element best represents your personalty? There were 5 elements in alchemy: earth, fire, air, water and aether. Let's find out which is you!",
+                      "heading": "Which Alchemy Element Are You?",
+                      "primaryImage": {
+                        "url": "http://0.tqn.com/d/chemistry/1/0/A/k/2/GettyImages-170622718.jpg",
+                        "caption": "The four best-known alchemy elements are earth, air, fire, and water. A fifth element is known in most cultures. It's usually metal, wood, or aether.",
+                        "owner": "ThomasVogel, Getty Images",
+                        "alt": "The four best-known alchemy elements are earth, air, fire, and water. A fifth element is known in most cultures. It's usually metal, wood, or aether.",
+                        "width": 3867,
+                        "height": 2578,
+                        "objectId": "GettyImages-170622718-56ae355a3df78cf772ba45c3.jpg"
+                      },
+                      "paging": {
+                        "current": 1,
+                        "total": 1
+                      },
+                      "summary": {
+                        "title": "Which Alchemy Element Are You?",
+                        "socialTitle": "Which Alchemy Element Are You?",
+                        "heading": "Which Alchemy Element Are You?",
+                        "description": "Which alchemy element best represents your personalty? There were 5 elements in alchemy: earth, fire, air, water and aether. Let's find out which is you!",
+                        "image": {
+                          "url": "http://0.tqn.com/d/chemistry/1/0/A/k/2/GettyImages-170622718.jpg",
+                          "caption": "The four best-known alchemy elements are earth, air, fire, and water. A fifth element is known in most cultures. It's usually metal, wood, or aether.",
+                          "owner": "ThomasVogel, Getty Images",
+                          "alt": "The four best-known alchemy elements are earth, air, fire, and water. A fifth element is known in most cultures. It's usually metal, wood, or aether.",
+                          "width": 3867,
+                          "height": 2578,
+                          "objectId": "GettyImages-170622718-56ae355a3df78cf772ba45c3.jpg"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Learn About the Sciences",
+                    "uri": "https://www.thoughtco.com/learn-about-science-608332",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "500577f22f011e8c6d829ffc",
+                      "revisionKey": "3958bd8fb41acb73a47623f6",
+                      "revisionId": "608332_1551104548889",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/learn-about-science-608332",
+                      "rootUrl": "http://chemistry.about.com/od/mathsciencefundamentals/tp/learn-science.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 608332,
+                      "docId": 608332,
+                      "slug": "learn-about-science",
+                      "templateType": "LISTSC",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1551104548855
+                      },
+                      "dates": {
+                        "created": 1269202317000,
+                        "updated": 1551104548889,
+                        "firstPublished": 1269202350000,
+                        "lastPublished": 1551104548855
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "An Introduction to Science",
+                      "socialTitle": "Introduction to Science and the Different Branches and Areas of Study",
+                      "metaDescription": "Get information about the different branches of science, astronomy, geology, physics, chemistry, biology, using these introductions.",
+                      "heading": "An Introduction to Science",
+                      "primaryImage": {
+                        "url": "http://0.tqn.com/d/chemistry/1/0/r/K/3/mother-watching-daughter-assembling-electronics-at-science-center-554992835.jpg",
+                        "owner": "Hero Images / Getty Images",
+                        "alt": "Mother watching daughter assembling electronics at science center",
+                        "width": 5760,
+                        "height": 3840,
+                        "objectId": "mother-watching-daughter-assembling-electronics-at-science-center-554992835-58b5bc623df78cdcd8b6da1a.jpg"
+                      },
+                      "summary": {
+                        "title": "An Introduction to Science",
+                        "socialTitle": "Introduction to Science and the Different Branches and Areas of Study",
+                        "heading": "An Introduction to Science",
+                        "description": "Get information about the different branches of science, astronomy, geology, physics, chemistry, biology, using these introductions.",
+                        "image": {
+                          "url": "http://0.tqn.com/d/chemistry/1/0/r/K/3/mother-watching-daughter-assembling-electronics-at-science-center-554992835.jpg",
+                          "owner": "Hero Images / Getty Images",
+                          "alt": "Mother watching daughter assembling electronics at science center",
+                          "width": 5760,
+                          "height": 3840,
+                          "objectId": "mother-watching-daughter-assembling-electronics-at-science-center-554992835-58b5bc623df78cdcd8b6da1a.jpg"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  }
+                ],
+                "totalSize": 4
+              }
+            }
+          ],
+          "totalSize": 1
+        }
+      },
+      {
+        "id": "19104226-7109-47f3-b92d-207c2ca03ff7",
+        "title": "A True Science Detective",
+        "description": "<p>Good job! You have the investigative and critical thinking skills needed to separate what's true and what's false. You don't just believe everything you're told.</p> \n<p>Where can you go next? Master <a href=\"https://www.thoughtco.com/fire-magic-science-tricks-606072\" zt=\"-o1/XJ\" target=\"_blank\">fire science magic tricks</a> and see if your friends can figure out how they work.</p> \n<p>Ready for another quiz? See how much <a href=\"https://www.thoughtco.com/weird-science-trivia-quiz-4061651\" zt=\"-o1/XJ\" target=\"_blank\">weird science trivia</a> you know.</p>",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/d/v/2/little-boy-using-magnifying-glass-171583588.jpg",
+          "owner": "woraput / Getty Images",
+          "width": 4256,
+          "height": 2832,
+          "objectId": "little-boy-using-magnifying-glass-171583588-579952e63df78c32761d4111.jpg"
+        },
+        "dimensions": {
+          "list": [
+            {
+              "key": "Percent Correct",
+              "min": 6,
+              "max": 10
+            }
+          ],
+          "totalSize": 1
+        },
+        "linkboxes": {
+          "list": [
+            {
+              "heading": "More Science Facts and Fun",
+              "links": {
+                "list": [
+                  {
+                    "text": "Quiz: Real Element or Fake Element?",
+                    "uri": "https://www.thoughtco.com/real-or-fake-element-quiz-4049859",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "31574b12c80b44e9a0036d85",
+                      "revisionKey": "3958c0596d2ab34202767821",
+                      "revisionId": "4049859_1494270195633",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/real-or-fake-element-quiz-4049859",
+                      "rootUrl": "http://chemistry.about.com/qz/Real-or-Fake-Element-Quiz",
+                      "vertical": "REFERENCE",
+                      "docID": 4049859,
+                      "docId": 4049859,
+                      "slug": "real-or-fake-element-quiz",
+                      "templateType": "QUIZ",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1489000814000
+                      },
+                      "dates": {
+                        "created": 1464537800000,
+                        "updated": 1474411137000,
+                        "firstPublished": 1464706164000,
+                        "lastPublished": 1489000814000
+                      },
+                      "title": "Real or Fake Element Quiz",
+                      "socialTitle": "Is This a Real Element or a Fake One?",
+                      "metaDescription": "Let's see whether you can tell whether a chemical element is the real deal or else fictional or a compound.",
+                      "heading": "Real or Fake Element Quiz",
+                      "primaryImage": {
+                        "url": "http://0.tqn.com/d/chemistry/1/0/c/o/2/kriptonita-183146393.jpg",
+                        "caption": "Kryptonite is a real element in Superman movies, but you won't find it on the periodic table.",
+                        "owner": "Jordi Grasiot Ruiz - Photo / Getty Images",
+                        "alt": "Kryptonite is a real element in Superman movies, but you won't find it on the periodic table.",
+                        "width": 4564,
+                        "height": 3043,
+                        "objectId": "kriptonita-183146393-574b12825f9b5851654233eb.jpg"
+                      },
+                      "paging": {
+                        "current": 1,
+                        "total": 1
+                      },
+                      "summary": {
+                        "title": "Real or Fake Element Quiz",
+                        "socialTitle": "Is This a Real Element or a Fake One?",
+                        "heading": "Real or Fake Element Quiz",
+                        "description": "Let's see whether you can tell whether a chemical element is the real deal or else fictional or a compound.",
+                        "image": {
+                          "url": "http://0.tqn.com/d/chemistry/1/0/c/o/2/kriptonita-183146393.jpg",
+                          "caption": "Kryptonite is a real element in Superman movies, but you won't find it on the periodic table.",
+                          "owner": "Jordi Grasiot Ruiz - Photo / Getty Images",
+                          "alt": "Kryptonite is a real element in Superman movies, but you won't find it on the periodic table.",
+                          "width": 4564,
+                          "height": 3043,
+                          "objectId": "kriptonita-183146393-574b12825f9b5851654233eb.jpg"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Try a Science Pick Up Line for a Date",
+                    "uri": "https://www.thoughtco.com/funny-chemistry-pick-up-lines-609353",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "31529de06d0004886f032831",
+                      "revisionKey": "3158c9d49a61d763ce768e3d",
+                      "revisionId": "609353_1538747361601",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/funny-chemistry-pick-up-lines-609353",
+                      "rootUrl": "http://chemistry.about.com/od/valentinesdaychemistry/a/Chemistry-Pick-Up-Lines.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 609353,
+                      "docId": 609353,
+                      "slug": "funny-chemistry-pick-up-lines",
+                      "templateType": "STRUCTUREDCONTENT",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1538747361572
+                      },
+                      "dates": {
+                        "created": 1386078317000,
+                        "updated": 1538747361601,
+                        "firstPublished": 1386078342000,
+                        "lastPublished": 1538747361572
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "Chemistry Pick Up Lines to Try on Your Crush",
+                      "socialTitle": "Chemistry Pick Up Lines to Try on Your Crush",
+                      "description": "This collection of corny and funny chemistry pick up lines is sure to set off the reaction for chemical attraction.",
+                      "heading": "Chemistry Pick Up Lines",
+                      "primaryImage": {
+                        "url": "http://0.tqn.com/d/chemistry/1/0/m/t/3/GettyImages-588495757.jpg",
+                        "caption": "If you stop to think about it, love is a matter of chemistry",
+                        "owner": "Westend61/Getty Images",
+                        "alt": "Love is a matter of chemistry!",
+                        "width": 1500,
+                        "height": 1002,
+                        "objectId": "GettyImages-588495757-58c9d4745f9b581d72267ff5.jpg"
+                      },
+                      "paging": {
+                        "current": 1,
+                        "total": 1
+                      },
+                      "summary": {
+                        "title": "Chemistry Pick Up Lines to Try on Your Crush",
+                        "socialTitle": "Chemistry Pick Up Lines to Try on Your Crush",
+                        "heading": "Chemistry Pick Up Lines",
+                        "description": "This collection of corny and funny chemistry pick up lines is sure to set off the reaction for chemical attraction.",
+                        "image": {
+                          "url": "http://0.tqn.com/d/chemistry/1/0/m/t/3/GettyImages-588495757.jpg",
+                          "caption": "If you stop to think about it, love is a matter of chemistry",
+                          "owner": "Westend61/Getty Images",
+                          "alt": "Love is a matter of chemistry!",
+                          "width": 1500,
+                          "height": 1002,
+                          "objectId": "GettyImages-588495757-58c9d4745f9b581d72267ff5.jpg"
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Hard Science vs Soft Science",
+                    "uri": "https://www.thoughtco.com/hard-vs-soft-science-3975989",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "37538d53a500015dbd033473",
+                      "revisionKey": "3958bd8541017b73a4760aa6",
+                      "revisionId": "3975989_1546969355811",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/hard-vs-soft-science-3975989",
+                      "rootUrl": "http://chemistry.about.com/b/2014/02/14/difference-between-hard-science-and-soft-science.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 3975989,
+                      "docId": 3975989,
+                      "slug": "hard-vs-soft-science",
+                      "templateType": "STRUCTUREDCONTENT",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1546969355782
+                      },
+                      "dates": {
+                        "created": 1392381627000,
+                        "updated": 1546969355811,
+                        "firstPublished": 1392381627000,
+                        "lastPublished": 1546969355782
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "What Is the Difference Between Hard and Soft Science?",
+                      "socialTitle": "What Is the Difference Between Hard and Soft Science?",
+                      "description": "Discover what differentiates hard sciences from soft sciences. You might be surprised when you learn what the difference is.",
+                      "heading": "What Is the Difference Between Hard and Soft Science?",
+                      "primaryImage": {
+                        "url": "https://fthmb.tqn.com/o8nvQV-k3blw2dY48oenHctb3Ps=/GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                        "owner": "<p>Andrew Brookes / Getty Images </p>",
+                        "alt": "Scientist Using Pipette and MultiWell Dish in Laboratory",
+                        "width": 1500,
+                        "height": 1125,
+                        "id": "",
+                        "fileName": "",
+                        "objectId": "GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                        "authorId": "",
+                        "user": ""
+                      },
+                      "paging": {
+                        "current": 1,
+                        "total": 1
+                      },
+                      "summary": {
+                        "title": "What Is the Difference Between Hard and Soft Science?",
+                        "socialTitle": "What Is the Difference Between Hard and Soft Science?",
+                        "heading": "What Is the Difference Between Hard and Soft Science?",
+                        "description": "Discover what differentiates hard sciences from soft sciences. You might be surprised when you learn what the difference is.",
+                        "image": {
+                          "url": "https://fthmb.tqn.com/o8nvQV-k3blw2dY48oenHctb3Ps=/GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                          "owner": "<p>Andrew Brookes / Getty Images </p>",
+                          "alt": "Scientist Using Pipette and MultiWell Dish in Laboratory",
+                          "width": 1500,
+                          "height": 1125,
+                          "id": "",
+                          "fileName": "",
+                          "objectId": "GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                          "authorId": "",
+                          "user": ""
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      }
+                    }
+                  },
+                  {
+                    "text": "Try a Mad Scientist Science Project",
+                    "uri": "https://www.thoughtco.com/black-light-projects-607639",
+                    "frame": "ad",
+                    "external": false,
+                    "document": {
+                      "key": "500577f12f010a8c6d82a433",
+                      "revisionKey": "3158c42744266463ce768961",
+                      "revisionId": "607639_1550696715110",
+                      "authorKey": "7815",
+                      "url": "https://www.thoughtco.com/black-light-projects-607639",
+                      "rootUrl": "http://chemistry.about.com/od/glowinthedarkprojects/tp/black-light-projects.htm",
+                      "vertical": "REFERENCE",
+                      "docID": 607639,
+                      "docId": 607639,
+                      "slug": "black-light-projects",
+                      "templateType": "LISTSC",
+                      "documentState": {
+                        "state": "ACTIVE",
+                        "activeDate": 1550696715081
+                      },
+                      "dates": {
+                        "created": 1273764370000,
+                        "updated": 1550696715110,
+                        "firstPublished": 1273764373000,
+                        "lastPublished": 1550696715081
+                      },
+                      "medicalBoardApproved": false,
+                      "noIndex": false,
+                      "title": "15 Fun Glow in the Dark Black Light Projects",
+                      "socialTitle": "15 Fun Glow in the Dark Black Light Projects",
+                      "metaDescription": "You can make tons of things glow in the dark using a black light or ultraviolet lamp. Discover 15 science projects that you can attempt.",
+                      "heading": "15 Fun Glow in the Dark Black Light Projects",
+                      "primaryImage": {
+                        "url": "https://fthmb.tqn.com/0NVo1nShU-b9h-CWJzhwngVz4wo=/GettyImages-600688967-5c6dbf2d46e0fb0001719836.jpg",
+                        "owner": "<p>Krisztian Hazi/EyeEm/Getty Images </p>",
+                        "alt": "Abstract Image of Illuminated Flowers",
+                        "width": 1500,
+                        "height": 844,
+                        "id": "",
+                        "fileName": "",
+                        "objectId": "GettyImages-600688967-5c6dbf2d46e0fb0001719836.jpg",
+                        "authorId": "",
+                        "user": ""
+                      },
+                      "summary": {
+                        "title": "15 Fun Glow in the Dark Black Light Projects",
+                        "socialTitle": "15 Fun Glow in the Dark Black Light Projects",
+                        "heading": "15 Fun Glow in the Dark Black Light Projects",
+                        "description": "You can make tons of things glow in the dark using a black light or ultraviolet lamp. Discover 15 science projects that you can attempt.",
+                        "image": {
+                          "url": "https://fthmb.tqn.com/0NVo1nShU-b9h-CWJzhwngVz4wo=/GettyImages-600688967-5c6dbf2d46e0fb0001719836.jpg",
+                          "owner": "<p>Krisztian Hazi/EyeEm/Getty Images </p>",
+                          "alt": "Abstract Image of Illuminated Flowers",
+                          "width": 1500,
+                          "height": 844,
+                          "id": "",
+                          "fileName": "",
+                          "objectId": "GettyImages-600688967-5c6dbf2d46e0fb0001719836.jpg",
+                          "authorId": "",
+                          "user": ""
+                        }
+                      },
+                      "author": {
+                        "id": "7815",
+                        "type": "AUTHOR",
+                        "status": "LIVE",
+                        "displayName": "Anne Marie Helmenstine, Ph.D.",
+                        "displayNamePossessive": "",
+                        "contributingWriter": false,
+                        "numberOfExperts": 1,
+                        "socialPresence": [
+                          {
+                            "network": "facebook",
+                            "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                          },
+                          {
+                            "network": "twitter",
+                            "url": "https://twitter.com/azareal"
+                          },
+                          {
+                            "network": "linkedin",
+                            "url": "https://www.linkedin.com/in/azareal/"
+                          }
+                        ],
+                        "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                        "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                      },
+                      "stamp": {
+                        "docId": 607639,
+                        "stampValue": "1351",
+                        "adValue": "pid1351",
+                        "audit": {
+                          "lastModified": 1471287508261
+                        }
+                      }
+                    }
+                  }
+                ],
+                "totalSize": 4
+              }
+            }
+          ],
+          "totalSize": 1
+        }
+      }
+    ],
+    "totalSize": 2
+  },
+  "questions": {
+    "list": [
+      {
+        "text": "Some spiders have 6 legs rather than 8.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/S/v/2/portrait-of-a-hairy-tarantula-in-the-studio-95744064.jpg",
+          "owner": "Michael Blann / Getty Images",
+          "width": 5197,
+          "height": 3901,
+          "objectId": "portrait-of-a-hairy-tarantula-in-the-studio-95744064-5798f7ba5f9b589aa9aff5b1.jpg"
+        },
+        "reveal": {
+          "text": "<p>All spiders have 8 legs, although sometimes they may appear to have more because of the length of specialized appendages called chelicerae. Insects, on the other hand, have 6 legs.</p>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/h/v/2/close-up-of-tube-web-spider-segestria-florentina-on-white-background-501881247.jpg",
+            "owner": "Alan Baker / Getty Images",
+            "alt": "Close up of Tube web spider, Segestria florentina, on white background",
+            "width": 4232,
+            "height": 4129,
+            "objectId": "close-up-of-tube-web-spider-segestria-florentina-on-white-background-501881247-579a113c5f9b589aa9ffdc00.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "Days are getting longer over time.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/T/v/2/man-sitting-on-back-of-suv-parked-at-field-537450141.jpg",
+          "owner": "Morsa Images / Getty Images",
+          "width": 5125,
+          "height": 3417,
+          "objectId": "man-sitting-on-back-of-suv-parked-at-field-537450141-5798f7da5f9b589aa9aff62c.jpg"
+        },
+        "reveal": {
+          "text": "<p>Days are <a href=\"https://www.nasa.gov/topics/solarsystem/features/extra-second.html\">gradually getting longer</a>. The rotation of the Earth is slowing slightly over time. The increase is about 1.4 milliseconds every hundred years.</p>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/i/v/2/digital-planet-490780131.jpg",
+            "owner": "Henrik Sorensen / Getty Images",
+            "alt": "Digital planet",
+            "width": 3676,
+            "height": 4902,
+            "objectId": "digital-planet-490780131-579a12083df78c327605e891.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "The Great Wall of China is visible from space.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/_/v/2/great-wall-479696009.jpg",
+          "owner": "Steve Peterson Photography / Getty Images",
+          "alt": "Great Wall",
+          "width": 3865,
+          "height": 2576,
+          "objectId": "great-wall-479696009-5798fa6e3df78c3276b47529.jpg"
+        },
+        "reveal": {
+          "text": "<p>The Great Wall of China is not visible from space. The Apollo astronauts could not see it from the Moon.&nbsp;<span>International Space Station Commander Leroy Chiao <a href=\"https://www.universetoday.com/25364/can-you-see-the-great-wall-of-china-from-space/\">did take a photograph</a> from the ISS in which you can just barely make out the Wall, but that's low Earth orbit and not actually space. It might be more accurate to say that the Great Wall is not visible from space <em>without magnification</em>.</span></p>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/j/v/2/planet-earth-against-black-background-577158213.jpg",
+            "owner": "Vitalij Cerepok / EyeEm / Getty Images",
+            "alt": "Planet Earth from Space",
+            "width": 5616,
+            "height": 3742,
+            "objectId": "planet-earth-against-black-background-577158213-579a12c95f9b589aa901d5bb.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "Most people use only 10% of their brains.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/Z/v/2/human-brain-computer-artwork-530451054.jpg",
+          "owner": "PASIEKA / Getty Images",
+          "alt": "Human brain",
+          "width": 5000,
+          "height": 3750,
+          "objectId": "human-brain-computer-artwork-530451054-5798fa4f5f9b589aa9b02bb4.jpg"
+        },
+        "reveal": {
+          "text": "<p>You use all of your brain, just not all at once. This widely held science myth was disproved once scientists started imaging brain activity.</p>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/k/v/2/collective-consciousness-artwork-185760104.jpg",
+            "owner": "KTSDESIGN / Getty Images",
+            "width": 4252,
+            "height": 4252,
+            "objectId": "collective-consciousness-artwork-185760104-579a13983df78c327606c740.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "Dry ice melts into liquid carbon dioxide as it warms in a room.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/6/v/2/dry-ice-116031610.jpg",
+          "owner": "H?l?ne Vall?e / Getty Images",
+          "alt": "Dry Ice",
+          "width": 1800,
+          "height": 1245,
+          "objectId": "dry-ice-116031610-579627c75f9b58173bb63630.jpg"
+        },
+        "reveal": {
+          "text": "<div>\n <p>At ordinary temperature and pressure, dry ice <a href=\"https://www.thoughtco.com/what-is-dry-ice-607880\">sublimates directly into carbon dioxide gas</a>, without a liquid phase. Liquid carbon dioxide can exist, but only if the pressure is controlled.</p>\n</div>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/V/-/3/dryiceinwater.jpg",
+            "caption": "The dry ice in this photo is sublimating in blue-colored water.",
+            "owner": "Steve Jurvetson",
+            "alt": "The dry ice in this photo is sublimating in blue-colored water.",
+            "width": 407,
+            "height": 282,
+            "objectId": "dryiceinwater-57e1be635f9b58651636a6fe.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "If you swallow gum, it stays in your stomach/intestines for 7 years.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/U/v/2/twins-eating-chewing-gum-77375850.jpg",
+          "owner": "STOCK4B / Getty Images",
+          "alt": "Twins eating chewing gum",
+          "width": 5158,
+          "height": 3434,
+          "objectId": "twins-eating-chewing-gum-77375850-5798f8ba5f9b589aa9b005d3.jpg"
+        },
+        "reveal": {
+          "text": "<div>\n <p>Most modern <a href=\"https://www.thoughtco.com/what-is-in-chewing-gum-604296\">chewing gum is made from</a> indigestible polymers. If you swallow it, it passes through your digestive system unchanged. While rare, it's possible for gum or other undigestable matter to get stuck in the intestines and form a calcified body called a bezoar. Bezoars form in ruminants much more often than in humans.</p>\n</div>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/l/v/2/caucasian-woman-blowing-large-bubble-gum-bubble-519516891.jpg",
+            "owner": "Colin Anderson / Getty Images",
+            "width": 4520,
+            "height": 3863,
+            "objectId": "caucasian-woman-blowing-large-bubble-gum-bubble-519516891-579a14995f9b589aa9024391.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "The sky can appear green during some thunderstorms.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/V/v/2/kansas-green-storm-507861535.jpg",
+          "owner": "john finney photography / Getty Images",
+          "alt": "Kansas green storm",
+          "width": 3863,
+          "height": 2578,
+          "objectId": "kansas-green-storm-507861535-5798f8fc3df78c3276b44cea.jpg"
+        },
+        "reveal": {
+          "text": "<p>Green clouds are due to the scattering of light by water. Green seems most common when ice or hail is present in cumulus clouds. It's not common, but it does occur (and usually signifies a severe storm).</p>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/m/v/2/supercell-storm-92173184.jpg",
+            "owner": "Samuel D. Barricklow / Getty Images",
+            "alt": "Supercell storm",
+            "width": 3956,
+            "height": 2517,
+            "objectId": "supercell-storm-92173184-579a15685f9b589aa902709e.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "A cockroach can live up to a couple of weeks without a head.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/W/v/2/blaberus-giganteus-giant-cockroach-522017726.jpg",
+          "owner": "Paul Starosta / Getty Images",
+          "alt": "Blaberus giganteus (giant cockroach)",
+          "width": 3807,
+          "height": 2616,
+          "objectId": "blaberus-giganteus-giant-cockroach-522017726-5798f95a5f9b589aa9b013d5.jpg"
+        },
+        "reveal": {
+          "text": "<div>\n <p>Yes, it's true. Cockroaches <a href=\"https://www.thoughtco.com/fascinating-facts-about-cockroaches-1968524\">can live for weeks</a> without their heads. Another interesting fact is that the insects can go for 6 weeks without eating, and then, they can eat just about anything. Soap, hair, leather... you name it.</p>\n</div>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/g/v/2/dead-cockroach-147879484.jpg",
+            "owner": "Burazin / Getty Images",
+            "alt": "Dead cockroach",
+            "width": 4756,
+            "height": 3675,
+            "objectId": "dead-cockroach-147879484-579a0d895f9b589aa9f951ed.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "Urinating on a jellyfish sting is an effective remedy.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/X/v/2/jellyfish-swimming-in-sea-597280447.jpg",
+          "owner": "Feria Hikmet Noraddin / EyeEm / Getty Images",
+          "alt": "Jellyfish Swimming In Sea",
+          "width": 3041,
+          "height": 2203,
+          "objectId": "jellyfish-swimming-in-sea-597280447-5798f99f5f9b589aa9b01a36.jpg"
+        },
+        "reveal": {
+          "text": "<div>\n <p>Peeing on a jellyfish sting <a href=\"https://www.thoughtco.com/jellyfish-and-man-of-war-stings-608404\">will not help</a> and may even make the situation worse, if the sting is from a Man o' War. Heat, as from hot sand, or an acid or base (vinegar or baking soda) can inactivate the toxic protein.</p>\n</div>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/J/s/2/-vinegar-for-use-on-marine-stings-sign-and-first-aid-kit-523564688.jpg",
+            "owner": "FLPA/Gianpiero Ferrari / Getty Images",
+            "width": 4960,
+            "height": 3825,
+            "objectId": "-vinegar-for-use-on-marine-stings-sign-and-first-aid-kit-523564688-577f9b3c5f9b5831b53614b1.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      },
+      {
+        "text": "Smog causes reddish sunsets.",
+        "image": {
+          "url": "http://0.tqn.com/d/chemistry/1/0/Y/v/2/sunset-through-the-smog-over-shanghai-china-521416770.jpg",
+          "owner": "Matt Mawson / Getty Images",
+          "alt": "Sunset through the smog over Shanghai China",
+          "width": 5200,
+          "height": 3467,
+          "objectId": "sunset-through-the-smog-over-shanghai-china-521416770-5798fa263df78c3276b46edc.jpg"
+        },
+        "reveal": {
+          "text": "<div>\n <p>Particles in smog scatter light, which can make <a href=\"https://www.thoughtco.com/why-the-sky-is-blue-experiment-606169\">sunrises and sunsets appear more red</a>.&nbsp;</p>\n</div>",
+          "image": {
+            "url": "http://0.tqn.com/d/chemistry/1/0/Q/_/2/GettyImages_BA18301.jpg",
+            "caption": "Red Sunset",
+            "owner": "Anup Shah, Getty Images",
+            "alt": "Red Sunset",
+            "width": 3828,
+            "height": 2604,
+            "objectId": "GettyImages_BA18301-56a1329b3df78cf7726852b5.jpg"
+          }
+        },
+        "answers": {
+          "list": [
+            {
+              "text": "true",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 1
+                  }
+                ],
+                "totalSize": 1
+              }
+            },
+            {
+              "text": "false",
+              "values": {
+                "list": [
+                  {
+                    "key": "Percent Correct",
+                    "score": 0
+                  }
+                ],
+                "totalSize": 1
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      }
+    ],
+    "totalSize": 10
+  },
+  "subheading": "Can You Tell Science Facts from Science Fiction?",
+  "linkboxes": {
+    "list": [
+      {
+        "heading": "",
+        "links": {
+          "list": [
+            {
+              "text": "General Science Facts Quiz",
+              "uri": "https://www.thoughtco.com/general-science-facts-quiz-4066812",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "315798d1af0f1264460374e9",
+                "revisionKey": "3958bd91ed207d73a4762a02",
+                "revisionId": "4066812_1494282728045",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/general-science-facts-quiz-4066812",
+                "rootUrl": "http://chemistry.about.com/qz/General-Science-Facts-Quiz",
+                "vertical": "REFERENCE",
+                "docID": 4066812,
+                "docId": 4066812,
+                "slug": "general-science-facts-quiz",
+                "templateType": "QUIZ",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1488825207000
+                },
+                "dates": {
+                  "created": 1469632940000,
+                  "updated": 1469638054000,
+                  "firstPublished": 1469637933000,
+                  "lastPublished": 1488825207000
+                },
+                "title": "General Science Facts Quiz",
+                "socialTitle": "This Quiz Checks How Well You Know General Science",
+                "metaDescription": "Take this quiz to see how well you understand basic general science facts. Questions are drawn from biology, chemistry, geology, and physics.",
+                "heading": "General Science Facts Quiz",
+                "primaryImage": {
+                  "url": "http://0.tqn.com/d/chemistry/1/0/J/v/2/boy-dressed-as-an-astronaut-cartoon-space-scene-525848911.jpg",
+                  "caption": "This quiz tests how well you know general science trivia and facts",
+                  "owner": "Brand New Images / Getty Images",
+                  "alt": "This quiz tests how well you know general science trivia and facts.",
+                  "width": 5008,
+                  "height": 3849,
+                  "objectId": "boy-dressed-as-an-astronaut-cartoon-space-scene-525848911-5798d5d63df78c32768976ef.jpg"
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "General Science Facts Quiz",
+                  "socialTitle": "This Quiz Checks How Well You Know General Science",
+                  "heading": "General Science Facts Quiz",
+                  "description": "Take this quiz to see how well you understand basic general science facts. Questions are drawn from biology, chemistry, geology, and physics.",
+                  "image": {
+                    "url": "http://0.tqn.com/d/chemistry/1/0/J/v/2/boy-dressed-as-an-astronaut-cartoon-space-scene-525848911.jpg",
+                    "caption": "This quiz tests how well you know general science trivia and facts",
+                    "owner": "Brand New Images / Getty Images",
+                    "alt": "This quiz tests how well you know general science trivia and facts.",
+                    "width": 5008,
+                    "height": 3849,
+                    "objectId": "boy-dressed-as-an-astronaut-cartoon-space-scene-525848911-5798d5d63df78c32768976ef.jpg"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            },
+            {
+              "text": "Find a Cool Science Fair Project Idea",
+              "uri": "https://www.thoughtco.com/cool-science-fair-project-ideas-609036",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "4ffc8339190298e353828068",
+                "revisionKey": "3958bd91231de373a476270e",
+                "revisionId": "609036_1529692842127",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/cool-science-fair-project-ideas-609036",
+                "rootUrl": "http://chemistry.about.com/od/sciencefairprojectideas/a/cool-science-fair-projects.htm",
+                "vertical": "REFERENCE",
+                "docID": 609036,
+                "docId": 609036,
+                "slug": "cool-science-fair-project-ideas",
+                "templateType": "STRUCTUREDCONTENT",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1529692842103
+                },
+                "dates": {
+                  "created": 1256724097000,
+                  "updated": 1529692842127,
+                  "firstPublished": 1256725008000,
+                  "lastPublished": 1514421234991
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "Cool Science Fair Project Ideas List",
+                "socialTitle": "Try These Ideas for Cool Science Fair Projects",
+                "description": "Here&#39;s a look at some cool science fair project ideas as well as a collection of reader-submitted cool project ideas.",
+                "heading": "Cool Science Fair Projects",
+                "primaryImage": {
+                  "url": "http://0.tqn.com/d/chemistry/1/0/f/4/1/humaneye.jpg",
+                  "caption": "Can you change your eye color by changing your diet? That one example of a cool science fair project you can try.",
+                  "owner": "Juliet White/Getty Images",
+                  "alt": "Can you change your eye color by changing your diet?",
+                  "width": 724,
+                  "height": 483,
+                  "objectId": "humaneye-56a12b373df78cf772680ed8.jpg"
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "Cool Science Fair Project Ideas List",
+                  "socialTitle": "Try These Ideas for Cool Science Fair Projects",
+                  "heading": "Cool Science Fair Projects",
+                  "description": "Here&#39;s a look at some cool science fair project ideas as well as a collection of reader-submitted cool project ideas.",
+                  "image": {
+                    "url": "http://0.tqn.com/d/chemistry/1/0/f/4/1/humaneye.jpg",
+                    "caption": "Can you change your eye color by changing your diet? That one example of a cool science fair project you can try.",
+                    "owner": "Juliet White/Getty Images",
+                    "alt": "Can you change your eye color by changing your diet?",
+                    "width": 724,
+                    "height": 483,
+                    "objectId": "humaneye-56a12b373df78cf772680ed8.jpg"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                },
+                "stamp": {
+                  "docId": 609036,
+                  "stampValue": "1351",
+                  "adValue": "pid1351",
+                  "audit": {
+                    "lastModified": 1471289287295
+                  }
+                }
+              }
+            },
+            {
+              "text": "Silly Science Pranks",
+              "uri": "https://www.thoughtco.com/science-pranks-and-practical-jokes-608249",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "500577fd2f01b48c6d82dfb5",
+                "revisionKey": "3958c0536e19444202766586",
+                "revisionId": "608249_1540234453688",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/science-pranks-and-practical-jokes-608249",
+                "rootUrl": "http://chemistry.about.com/od/madscientistlab/tp/Science-Pranks.htm",
+                "vertical": "REFERENCE",
+                "docID": 608249,
+                "docId": 608249,
+                "slug": "science-pranks-and-practical-jokes",
+                "templateType": "LISTSC",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1540234453656
+                },
+                "dates": {
+                  "created": 1286821329000,
+                  "updated": 1540234453688,
+                  "firstPublished": 1286821333000,
+                  "lastPublished": 1532353912379
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "9 Science Pranks and Practical Jokes",
+                "socialTitle": "Make a Homemade Stink Bomb and 8 Other Science Pranks",
+                "metaDescription": "Learn how to make stink bombs, color someone&#39;s urine, change the color of coins, and more with this collection of 9 science pranks.",
+                "heading": "9 Science Pranks and Practical Jokes",
+                "primaryImage": {
+                  "url": "http://0.tqn.com/d/chemistry/1/0/X/C/3/laughing-girl-9-10-638550962.jpg",
+                  "owner": "Elva Etienne / Getty Images",
+                  "alt": "Laughing girl (9-10)",
+                  "width": 3865,
+                  "height": 2576,
+                  "objectId": "laughing-girl-9-10-638550962-58a3adcd5f9b58819c928682.jpg"
+                },
+                "summary": {
+                  "title": "9 Science Pranks and Practical Jokes",
+                  "socialTitle": "Make a Homemade Stink Bomb and 8 Other Science Pranks",
+                  "heading": "9 Science Pranks and Practical Jokes",
+                  "description": "Learn how to make stink bombs, color someone&#39;s urine, change the color of coins, and more with this collection of 9 science pranks.",
+                  "image": {
+                    "url": "http://0.tqn.com/d/chemistry/1/0/X/C/3/laughing-girl-9-10-638550962.jpg",
+                    "owner": "Elva Etienne / Getty Images",
+                    "alt": "Laughing girl (9-10)",
+                    "width": 3865,
+                    "height": 2576,
+                    "objectId": "laughing-girl-9-10-638550962-58a3adcd5f9b58819c928682.jpg"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            }
+          ],
+          "totalSize": 3
+        }
+      },
+      {
+        "heading": "",
+        "links": {
+          "list": [
+            {
+              "text": "Are You a Science Trivia Whiz?",
+              "uri": "https://www.thoughtco.com/are-you-science-trivia-quiz-whiz-609619",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "315669f3e726f3a790036ac1",
+                "revisionKey": "3958c058e82a5342027676a9",
+                "revisionId": "609619_1494257932343",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/are-you-science-trivia-quiz-whiz-609619",
+                "rootUrl": "http://chemistry.about.com/qz/Are-You-a-Science-Trivia-Quiz-Whiz",
+                "vertical": "REFERENCE",
+                "docID": 609619,
+                "docId": 609619,
+                "slug": "are-you-science-trivia-quiz-whiz",
+                "templateType": "QUIZ",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1489000681000
+                },
+                "dates": {
+                  "created": 1449784290000,
+                  "updated": 1474411395000,
+                  "firstPublished": 1455145030000,
+                  "lastPublished": 1489000681000
+                },
+                "title": "Are You a Science Trivia Quiz Whiz?",
+                "socialTitle": "Are You a Science Trivia Quiz Whiz?",
+                "metaDescription": "Time to find out whether you were paying attention in science class. Here's a 10 question quiz that checks your general science knowledge.",
+                "heading": "Are You a Science Trivia Quiz Whiz? - General Science Test",
+                "primaryImage": {
+                  "url": "http://0.tqn.com/d/chemistry/1/0/K/-/3/GettyImages-563374187.jpg",
+                  "caption": "Are you a science trivia whiz? Here's a fun quiz you can take to measure your mastery of science.",
+                  "owner": "Tom Werner, Getty Images",
+                  "alt": "Are you a science trivia whiz? Here's a fun quiz you can take to measure your mastery of science.",
+                  "width": 3869,
+                  "height": 2579,
+                  "objectId": "GettyImages-563374187-57e1bb653df78c9cce33a13f.jpg"
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "Are You a Science Trivia Quiz Whiz?",
+                  "socialTitle": "Are You a Science Trivia Quiz Whiz?",
+                  "heading": "Are You a Science Trivia Quiz Whiz? - General Science Test",
+                  "description": "Time to find out whether you were paying attention in science class. Here's a 10 question quiz that checks your general science knowledge.",
+                  "image": {
+                    "url": "http://0.tqn.com/d/chemistry/1/0/K/-/3/GettyImages-563374187.jpg",
+                    "caption": "Are you a science trivia whiz? Here's a fun quiz you can take to measure your mastery of science.",
+                    "owner": "Tom Werner, Getty Images",
+                    "alt": "Are you a science trivia whiz? Here's a fun quiz you can take to measure your mastery of science.",
+                    "width": 3869,
+                    "height": 2579,
+                    "objectId": "GettyImages-563374187-57e1bb653df78c9cce33a13f.jpg"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            },
+            {
+              "text": "Ideas to Work from Home in Science",
+              "uri": "https://www.thoughtco.com/working-from-home-in-science-606438",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "4ffc835f19052de353818d9e",
+                "revisionKey": "3958c04c6d0d21420276592f",
+                "revisionId": "606438_1550030181441",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/working-from-home-in-science-606438",
+                "rootUrl": "http://chemistry.about.com/od/educationemployment/a/workfromhomeinscience.htm",
+                "vertical": "REFERENCE",
+                "docID": 606438,
+                "docId": 606438,
+                "slug": "working-from-home-in-science",
+                "templateType": "STRUCTUREDCONTENT",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1550030181413
+                },
+                "dates": {
+                  "created": 1241469973000,
+                  "updated": 1550030181441,
+                  "firstPublished": 1241469973000,
+                  "lastPublished": 1550030181413
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "Working From Home in a Scientific Career",
+                "socialTitle": "There Are Several Ways to Work From Home in Scientific Career Field",
+                "description": "It is possible to work remotely in the scientific industry. This career path is versatile enough to support multiple work from home positions.",
+                "heading": "Working From Home in a Scientific Career",
+                "primaryImage": {
+                  "url": "https://fthmb.tqn.com/WN03qN5hKjFMvgjKcJDMG3ihls0=/blur-business-close-up-287227-5c638661c9e77c0001662839.jpg",
+                  "owner": "<p>Daniel Frank/Pexels</p>",
+                  "alt": "Hand outstretched toward home office space with scientific objects floating on screen.",
+                  "width": 3888,
+                  "height": 2592,
+                  "id": "",
+                  "fileName": "",
+                  "objectId": "blur-business-close-up-287227-5c638661c9e77c0001662839.jpg",
+                  "authorId": "",
+                  "user": ""
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "Working From Home in a Scientific Career",
+                  "socialTitle": "There Are Several Ways to Work From Home in Scientific Career Field",
+                  "heading": "Working From Home in a Scientific Career",
+                  "description": "It is possible to work remotely in the scientific industry. This career path is versatile enough to support multiple work from home positions.",
+                  "image": {
+                    "url": "https://fthmb.tqn.com/WN03qN5hKjFMvgjKcJDMG3ihls0=/blur-business-close-up-287227-5c638661c9e77c0001662839.jpg",
+                    "owner": "<p>Daniel Frank/Pexels</p>",
+                    "alt": "Hand outstretched toward home office space with scientific objects floating on screen.",
+                    "width": 3888,
+                    "height": 2592,
+                    "id": "",
+                    "fileName": "",
+                    "objectId": "blur-business-close-up-287227-5c638661c9e77c0001662839.jpg",
+                    "authorId": "",
+                    "user": ""
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            },
+            {
+              "text": "Molecules with Weird Names",
+              "uri": "https://www.thoughtco.com/molecules-with-funny-or-weird-names-608523",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "31533c18260004e29803324d",
+                "revisionKey": "3958c0573f28224202767478",
+                "revisionId": "608523_1539970647680",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/molecules-with-funny-or-weird-names-608523",
+                "rootUrl": "http://chemistry.about.com/od/moleculescompounds/tp/10-Molecules-with-Funny-or-Weird-Names.htm",
+                "vertical": "REFERENCE",
+                "docID": 608523,
+                "docId": 608523,
+                "slug": "molecules-with-funny-or-weird-names",
+                "templateType": "LISTSC",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1539970647652
+                },
+                "dates": {
+                  "created": 1396447269000,
+                  "updated": 1539970647680,
+                  "firstPublished": 1396447309000,
+                  "lastPublished": 1514862477899
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "10 Molecules With Funny or Weird Names",
+                "socialTitle": "10 Molecules With Funny or Weird Names",
+                "metaDescription": "Meet 10 molecules with funny or downright weird names, including arsole, SEX, diurea and others.",
+                "heading": "10 Molecules With Funny or Weird Names",
+                "summary": {
+                  "title": "10 Molecules With Funny or Weird Names",
+                  "socialTitle": "10 Molecules With Funny or Weird Names",
+                  "heading": "10 Molecules With Funny or Weird Names",
+                  "description": "Meet 10 molecules with funny or downright weird names, including arsole, SEX, diurea and others.",
+                  "image": {
+                    "url": "http://0.tqn.com/d/chemistry/1/0/e/K/3/penguinone.jpg",
+                    "caption": "This is the chemical structure of penguinone or 3,4,4,5-tetramethylcyclohexa-2,5-dien-1-one.",
+                    "owner": "Todd Helmenstine",
+                    "alt": "This is the chemical structure of penguinone or 3,4,4,5-tetramethylcyclohexa-2,5-dien-1-one.",
+                    "width": 400,
+                    "height": 474,
+                    "objectId": "penguinone-58b5bc265f9b586046c5c2b4.jpg"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            }
+          ],
+          "totalSize": 3
+        }
+      },
+      {
+        "heading": "",
+        "links": {
+          "list": [
+            {
+              "text": "Weird Chemistry Facts",
+              "uri": "https://www.thoughtco.com/weird-chemistry-facts-609442",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "4ffc83931908e2e35382e84b",
+                "revisionKey": "3158ee8b9c000fc89d769d89",
+                "revisionId": "604321_1548892349254",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/fun-and-interesting-chemistry-facts-604321",
+                "rootUrl": "http://chemistry.about.com/od/chemistryforkids/a/Fun-And-Interesting-Chemistry-Facts.htm",
+                "vertical": "REFERENCE",
+                "docID": 604321,
+                "docId": 604321,
+                "slug": "fun-and-interesting-chemistry-facts",
+                "templateType": "STRUCTUREDCONTENT",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1548892349228
+                },
+                "dates": {
+                  "created": 1293202444000,
+                  "updated": 1548892349254,
+                  "firstPublished": 1293202448000,
+                  "lastPublished": 1548892349228
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "Fun and Interesting Chemistry Facts and Trivia",
+                "socialTitle": "Interesting Chemistry Facts",
+                "description": "Here are some of the most fun, interesting and overlooked facts of the fascinating science of chemistry.",
+                "heading": "Fun and Interesting Chemistry Facts",
+                "primaryImage": {
+                  "url": "https://fthmb.tqn.com/CmZPrYtYw_97j2_honm2u8GWfTM=/dry-ice-116031610-5c523743c9e77c00016f3c8c.jpg",
+                  "owner": "Instants / Getty Images",
+                  "alt": "Dry Ice in a bucket producing steam.",
+                  "width": 1800,
+                  "height": 1245,
+                  "objectId": "dry-ice-116031610-5c523743c9e77c00016f3c8c.jpg",
+                  "authorId": "kfrench@dotdash.com"
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "Fun and Interesting Chemistry Facts and Trivia",
+                  "socialTitle": "Interesting Chemistry Facts",
+                  "heading": "Fun and Interesting Chemistry Facts",
+                  "description": "Here are some of the most fun, interesting and overlooked facts of the fascinating science of chemistry.",
+                  "image": {
+                    "url": "https://fthmb.tqn.com/CmZPrYtYw_97j2_honm2u8GWfTM=/dry-ice-116031610-5c523743c9e77c00016f3c8c.jpg",
+                    "owner": "Instants / Getty Images",
+                    "alt": "Dry Ice in a bucket producing steam.",
+                    "width": 1800,
+                    "height": 1245,
+                    "objectId": "dry-ice-116031610-5c523743c9e77c00016f3c8c.jpg",
+                    "authorId": "kfrench@dotdash.com"
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            },
+            {
+              "text": "Hard vs Soft Science",
+              "uri": "https://www.thoughtco.com/hard-vs-soft-science-3975989",
+              "frame": "ad",
+              "external": false,
+              "document": {
+                "key": "37538d53a500015dbd033473",
+                "revisionKey": "3958bd8541017b73a4760aa6",
+                "revisionId": "3975989_1546969355811",
+                "authorKey": "7815",
+                "url": "https://www.thoughtco.com/hard-vs-soft-science-3975989",
+                "rootUrl": "http://chemistry.about.com/b/2014/02/14/difference-between-hard-science-and-soft-science.htm",
+                "vertical": "REFERENCE",
+                "docID": 3975989,
+                "docId": 3975989,
+                "slug": "hard-vs-soft-science",
+                "templateType": "STRUCTUREDCONTENT",
+                "documentState": {
+                  "state": "ACTIVE",
+                  "activeDate": 1546969355782
+                },
+                "dates": {
+                  "created": 1392381627000,
+                  "updated": 1546969355811,
+                  "firstPublished": 1392381627000,
+                  "lastPublished": 1546969355782
+                },
+                "medicalBoardApproved": false,
+                "noIndex": false,
+                "title": "What Is the Difference Between Hard and Soft Science?",
+                "socialTitle": "What Is the Difference Between Hard and Soft Science?",
+                "description": "Discover what differentiates hard sciences from soft sciences. You might be surprised when you learn what the difference is.",
+                "heading": "What Is the Difference Between Hard and Soft Science?",
+                "primaryImage": {
+                  "url": "https://fthmb.tqn.com/o8nvQV-k3blw2dY48oenHctb3Ps=/GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                  "owner": "<p>Andrew Brookes / Getty Images </p>",
+                  "alt": "Scientist Using Pipette and MultiWell Dish in Laboratory",
+                  "width": 1500,
+                  "height": 1125,
+                  "id": "",
+                  "fileName": "",
+                  "objectId": "GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                  "authorId": "",
+                  "user": ""
+                },
+                "paging": {
+                  "current": 1,
+                  "total": 1
+                },
+                "summary": {
+                  "title": "What Is the Difference Between Hard and Soft Science?",
+                  "socialTitle": "What Is the Difference Between Hard and Soft Science?",
+                  "heading": "What Is the Difference Between Hard and Soft Science?",
+                  "description": "Discover what differentiates hard sciences from soft sciences. You might be surprised when you learn what the difference is.",
+                  "image": {
+                    "url": "https://fthmb.tqn.com/o8nvQV-k3blw2dY48oenHctb3Ps=/GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                    "owner": "<p>Andrew Brookes / Getty Images </p>",
+                    "alt": "Scientist Using Pipette and MultiWell Dish in Laboratory",
+                    "width": 1500,
+                    "height": 1125,
+                    "id": "",
+                    "fileName": "",
+                    "objectId": "GettyImages-176636656-589ddfd25f9b58819c87f729-5c34dcee46e0fb000125c15c.jpg",
+                    "authorId": "",
+                    "user": ""
+                  }
+                },
+                "author": {
+                  "id": "7815",
+                  "type": "AUTHOR",
+                  "status": "LIVE",
+                  "displayName": "Anne Marie Helmenstine, Ph.D.",
+                  "displayNamePossessive": "",
+                  "contributingWriter": false,
+                  "numberOfExperts": 1,
+                  "socialPresence": [
+                    {
+                      "network": "facebook",
+                      "url": "http://www.facebook.com/pages/Aboutcom-Chemistry/244818558903541"
+                    },
+                    {
+                      "network": "twitter",
+                      "url": "https://twitter.com/azareal"
+                    },
+                    {
+                      "network": "linkedin",
+                      "url": "https://www.linkedin.com/in/azareal/"
+                    }
+                  ],
+                  "bioUrl": "https://www.thoughtco.com/anne-marie-helmenstine-ph-d-601916",
+                  "shortBio": "Dr. Helmenstine holds a Ph.D. in biomedical sciences and is a science writer, educator, and consultant. She has taught science courses at the high school, college, and graduate levels."
+                }
+              }
+            }
+          ],
+          "totalSize": 2
+        }
+      }
+    ],
+    "totalSize": 3
+  }
+}

@@ -1,0 +1,11 @@
+@import "mntlVariables";
+
+.mntl-jump-to-recipe {
+    background: linear-gradient(to bottom, transparent calc(50% - 1px), $color-black-15 calc(50%), transparent calc(50% + 1px));
+    margin-bottom: 3rem;
+
+    &__button {
+        margin: 0 auto;
+        text-transform: uppercase;
+    }
+}

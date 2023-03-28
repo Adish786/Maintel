@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-sc-block-entityreference" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Structured Content</category>
+			<displayName>Entity Reference</displayName>
+			<description>The content of this block is sourced externally, e.g. BOVD, etc.</description>
+			<previewType>none</previewType>
+			<documentation>
+				Verticals supporting this content block should provide an override that populates the `propertyNameComponentMap`.
+				The initial consumer of this component is expected to be the health vertical for Drug and Supplements. They would add an override
+				of this component in their `HealthRenderUtils.resolveScBlockName` to say `health-sc-block-entityreference`. That component should
+				provide the mapping of `propertyName` to the component that should be rendered inside the `content` location.
+			</documentation>
+			<component id="mntl-sc-block-entityreference-content" mode="remove" />
+		</info>
+
+		<list name="class">
+			<property name="propertyName" value="${@block?.value?.data?.propertyName}" onError="ignore" />
+		</list>
+
+		<component location="content" id="mntl-sc-block-entityreference-content" ref="${@entityReferenceComponent}">
+			<property name="entityReferenceComponent" value="${@propertyNameComponentMap[@block.value.data.propertyName]}" onError="collapse">
+				<map name="propertyNameComponentMap" />
+			</property>
+		</component>
+	</component>
+
+</components>

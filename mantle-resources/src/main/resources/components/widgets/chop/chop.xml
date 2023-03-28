@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-chop" resourcePath="/components/widgets/chop/chop.ftl">
+        <info>
+            <category>Mantle Components/Widgets</category>
+            <displayName>Chop</displayName>
+            <description>Add a height-limiting fade-to-white "chop", and a visual trigger element that will remove both chop and trigger on click.</description>
+            <documentation>
+                <![CDATA[
+                # FTL
+
+                The **chop-content** location is an optional convenience location for situations where the dev wants to tightly bundle the content and chop (or prototype). As a
+                built-in optimization, using this location adds the "max-height" style to the **chop-content** server-side to avoid the jump of unstyled content during JS initialization.
+
+                By default this widget uses the **mntl-chop-button** component as its **chop-trigger**.
+
+                # CSS
+
+                ## .chop-content
+
+                Set to overflow.  Using the "chop-content" location automatically gets this treatment; it would need to be manually added to other targets.
+
+                ## .mntl-chop
+
+                Adds the fade-out via ::before pseudoelement. Uses negative top margin to partially overlay (what's expected to be) the chop content.
+
+                # JS
+
+                ## API
+
+                ### __Mntl.Chop.init($container)__
+
+                Opinionated initialization of all extant "chop" widgets within the container.  Chops are identified as chop (**.mntl-chop**) components (**.comp**) with
+                an extant **data-chop-height** attribute, and passed in without further arguments to **makeChop** below.  This method is wired into **Mntl.utilities.readyAndDeferred** automatically.
+
+                ### __Mntl.Chop.makeChop(chop, [chopContent], [chopHeight])__
+
+                Fully flexible initialization of chop behavior. The optional **$chopContent** and **chopHeight** arguments, in unspecified, fall back as follows:
+
+                * __**chopContent**__
+                    1. an element whose ID is specified in the **data-chop-content-id** property
+                    1. the next previous sibling with the class **.chop-content**.
+                * __**chopHeight**__
+                    1. the value of the **data-chop-height** attribute (in px). Also accepts "none", to signify that the height will be entirely controlled in CSS.
+                    1. the value of the **--chop-height** CSS variable
+                    1. 1000px
+
+                ## __Chop obj initialization *(private)*__
+
+                Adds **click** event handler to **$chopTrigger** and sets the **.chop-content** class (if not already specified).
+                If the content is taller than the allowed max-height:
+
+                * Sets **.is-chopped** class and **max-height** style on **$chopContent**.
+                * Removes class **.is-hidden** from **$chop**
+
+                ## Events
+
+                __mntl:chopOpen__ is emitted on the **$chop** element when the trigger is clicked.  This automatically triggers the **Chop.open** function, but is available
+                for other listeners' use.
+
+                # Example Implementations
+
+                * An all-in-one approach using the (optional) "content" location included with the component:
+
+                ```xml
+                <component name="myChop" ref="mntl-chop">
+                    <component location="chop-content" ref="myContent" />
+                    <property name="chop-height" value="500" />
+                </component>
+                ```
+
+                * A situation where the content component is separated from the chop by several other components:
+                ```xml
+                <component location="somewhere" ref="myContent">
+                <list id="class">
+                    <property name="chop-content" value="chop-content" />
+                </list>
+                    <map id="attrs">
+                        <property name="style" value="height: 500px" />
+                    </map>
+                </component>
+                <component location="somewhere" ref="bar" />
+                <component location="somewhere" ref="foo" />
+                <component location="somewhere" ref="mntl-chop">
+                    <property name="chop-height" value="500" />
+                </component>
+                ```
+                ]]>
+			</documentation>
+            <for id="mntl-chop-button">
+                <property name="title" value="Continue Reading" />
+                <property name="text" value="5 minute read" />
+            </for>
+            <property name="chop-height" value="300" />
+            <component ref="mntl-placeholder" location="chop-content">
+               <map id="attrs">
+                   <property name="style" value="height: 600px" />
+               </map>
+            </component>
+        </info>
+        <stylesheet path="/static/mantle/components/widgets/chop/chop.css" />
+        <script group="top" path="/static/mantle/js/utilities.js"></script>
+        <script group="top" path="/static/mantle/js/dom-utilities.js"></script>
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js"></script>
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js"></script>
+        <script group="bottom" path="/static/mantle/components/widgets/chop/chop.js" />
+        <component location="chop-trigger" ref="mntl-chop-button" />
+    </component>
+
+</components>

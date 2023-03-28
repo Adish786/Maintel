@@ -1,0 +1,337 @@
+@import 'projectVersion';
+@import 'mntlVariables';
+
+/*------------------------------------*\
+    #MNTL-SC-BLOCK-IMAGE
+    1. Inline portrait images will be constrained to avoid
+       having too tall images
+    2. Portrait and square images that comes after the list title
+       will float to the left and have the text wrap around it.
+       This will override the max-height and width to 280px.
+    3. Commerce Images will have a set max width and height for both
+       portrait and landscape images. (same max values as 2.)
+    4. Images after the Heading in a commerce document should behave like #3
+       to avoid flash of unstyled content, since it's very likely to be replaced.
+    5. Text-align is set to "left" to prevent CLS when the image starts at the center (usually from when
+       it inherits text-align from a parent element like mntl-sc-page) and then shifts to the left after it is fully loaded.
+\*------------------------------------*/
+
+.mntl-sc-block-image {
+    overflow: hidden;
+    text-align: left; /* 5 */
+
+    a {
+        box-shadow: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &.figure-portrait { /* 1 */
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        .figure {
+            &-media {
+                max-height: 80vh;
+            }
+
+            &-article-caption {
+                text-align: left;
+                background-color: transparent;
+            }
+        }
+
+        img {
+            max-height: 80vh;
+        }
+    }
+
+    .figure-media {
+        position: relative;
+    }
+
+    .mntl-sc-list-item h3:first-of-type + &.figure-portrait, /* 2 */
+    .mntl-sc-list-item h3:first-of-type + &.figure-square, /* 2 */
+    .mntl-sc-page--commerce h3:first-of-type + &, /* 3, 4 */
+    &.mntl-sc-block-commerce__image { /* 3 */
+        @media (min-width: $bp-small2) {
+            float: left;
+            max-width: 280px;
+            margin: 0 1.25rem 1rem 0;
+            width: auto;
+
+            img {
+                max-width: 280px;
+                width: auto;
+            }
+        }
+    }
+
+    &.mntl-sc-block-commerce__image { /* 3 */
+        img {
+            cursor: pointer;
+            max-height: 280px;
+        }
+    }
+}
+
+/*
+* Lightbox
+* Styles for Inline Image with Lightbox features
+* 1. Commerce Images are inline images that doesn't support lightbox but links
+*    to a page therefore we'll use a pointer cursor.
+* 2. Hide all caption icons when lightbox is open.
+*/
+img[data-img-lightbox='true'] {
+    cursor: zoom-in;
+
+    .mntl-sc-block-commerce__image & { /* 1 */
+        cursor: pointer;
+    }
+}
+
+.mntl-lightbox {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $color-black-95;
+
+    &.is-closed {
+        display: none;
+    }
+}
+
+.mntl-lightbox__container {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100% - 6rem);
+    width: 100%;
+}
+
+.mntl-lightbox__img-container {
+    text-align: center;
+    overflow-y: scroll;
+    max-height: 100%;
+    width: 100%;
+}
+
+.mntl-lightbox__img {
+    max-width: calc(100vw - 6rem);
+}
+
+.mntl-lightbox__close {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2.5rem;
+    border: none;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: 22px;
+        display: block;
+        width: 40px;
+        height: 4px;
+        border-radius: 2px;
+        background: $color-white;
+    }
+
+    &::before {
+        left: -4px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        right: -4px;
+        transform: rotate(315deg);
+    }
+}
+
+.mntl-lightbox__loader {
+    position: absolute;
+    top: 49%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    &.is-hidden {
+        display: none;
+    }
+
+    span {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+        margin: 0.25rem;
+        background-color: $color-white;
+        animation: pulse 1s infinite;
+
+        &:nth-child(1) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+    }
+}
+
+.mntl-lightbox__prev-arrow,
+.mntl-lightbox__next-arrow {
+    $arrowBtnSize: 40px;
+
+    position: absolute;
+    top: calc(50% - 15px); // -15px to account for caption spacing
+    margin-top: calc($arrowBtnSize / 2 * -1);
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+
+    .light-box-arrow {
+        display: block;
+        width: $arrowBtnSize;
+        height: $arrowBtnSize;
+    }
+}
+
+.mntl-lightbox__prev-arrow {
+    left: 15px;
+    transform: rotate(180deg);
+}
+
+.mntl-lightbox__next-arrow {
+    right: 15px;
+}
+
+.mntl-lightbox__caption {
+    flex-basis: 100%;
+    text-align: center;
+    color: $color-white;
+
+    svg {
+        display: none; /* 2 */
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*
+ * Img Placeholder Behavior
+ */
+.img-placeholder {
+    background-color: #C7C7C7;
+    position: relative;
+    width: 100%;
+}
+
+/*
+ * Blurry image alternative for primary images
+ */
+.mntl-primary-image {
+    &--blurry {
+        background-image: var(--blurry);
+        background-size: 100% 100%;
+        transition: 0.15s filter linear;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &.loaded {
+            background-image: none;
+        }
+    }
+
+    &--blurry:not(.loaded) {
+        filter: blur(4px);
+    }
+}
+
+/*
+* Multi Image Behavior
+* Styles for Image blocks when stacked in the content
+* 1. Succeeding images should show as thumbnails, leaving the first image full size.
+*/
+.mntl-sc-block-image + .mntl-sc-block-image,
+.structured-content .mntl-sc-block-image + .mntl-sc-block-image.figure-portrait { /* 1 */
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+
+    .figure-article-caption {
+        display: none;
+    }
+
+    .figure-media {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-placeholder {
+        height: 100%;
+        padding-bottom: 0;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/*
+* Image styles with new converged image component
+*/
+.mntl-universal-image {
+    &.mntl-sc-block-commerce__image {
+        @media (min-width: $bp-small2) {
+            float: left;
+            max-width: 280px;
+            margin: 0 1.25rem 1rem 0;
+            width: auto;
+
+            img {
+                max-width: 280px;
+                width: auto;
+            }
+        }
+    }
+
+    &.mntl-sc-block-commerce__image {
+        img {
+            cursor: pointer;
+            max-height: 280px;
+        }
+    }
+}

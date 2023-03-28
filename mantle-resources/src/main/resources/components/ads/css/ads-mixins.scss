@@ -1,0 +1,14 @@
+// Hide advertisement label when ad is collapsed
+@mixin hideAdLabel {
+    &[data-ad-width='1'] {
+        min-height: auto;
+
+        .wrapper {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+

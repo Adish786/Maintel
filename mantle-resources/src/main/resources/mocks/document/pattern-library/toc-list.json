@@ -1,0 +1,533 @@
+{
+  "key": "4ffd3d3a190032e154800f47",
+  "revisionKey": "31580e63e8077530b70217f1",
+  "revisionId": "2249363_1530124940065",
+  "authorKey": "41387",
+  "lastEditingAuthorId": "41387",
+  "lastEditingUserId": "148484222683549",
+  "url": "https://www.verywellhealth.com/lung-adenocarcinoma-symptoms-treatment-and-prognosis-2249363",
+  "rootUrl": "http://lungcancer.about.com/od/typesoflungcancer/a/Lung-Adenocarcinoma.htm",
+  "vertical": "HEALTH",
+  "docID": 2249363,
+  "docId": 2249363,
+  "slug": "lung-adenocarcinoma-symptoms-treatment-and-prognosis",
+  "templateType": "STRUCTUREDCONTENT",
+  "documentState": {
+    "state": "ACTIVE",
+    "activeDate": 1530124940021
+  },
+  "dates": {
+    "created": 1277437735000,
+    "updated": 1530124940065,
+    "firstPublished": 1277840687000,
+    "lastPublished": 1511962372640
+  },
+  "medicalBoardApproved": true,
+  "noIndex": false,
+  "title": "Diagnosis and Treatment of Lung Adenocarcinoma",
+  "socialTitle": "Why the Symptoms of Lung Adenocarcinoma Are So Easy to Miss",
+  "description": "Lung adenocarcinoma is the most common type of lung cancer but one that is often missed, particularly in young women who have never smoked. Find out why.",
+  "heading": "Diagnosing Lung Adenocarcinoma",
+  "primaryImage": {
+    "url": "https://fthmb.tqn.com/UeQBmXTNxoWOUOmsp9CcR8aCwWI=/GettyImages-491540934-59ca788b054ad900106b03d1.jpg",
+    "caption": "What should you know about lung adenocarcinoma?",
+    "owner": "franckreporter/E&#43;/Getty Images",
+    "alt": "Doctor with stethoscope doing exam",
+    "width": 2000,
+    "height": 1334,
+    "objectId": "GettyImages-491540934-59ca788b054ad900106b03d1.jpg"
+  },
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "sources": {
+    "list": [
+      "American Cancer Society. &#34;Lung Cancer (Non-Small Cell.) <a href=\"https://www.cancer.org/cancer/non-small-cell-lung-cancer/detection-diagnosis-staging/survival-rates.html\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"41\">Non-Small Cell Lung Cancer Survival Rates</a> by Stage.&#34; Atlanta, Georgia; updated May 16, 2016.",
+      "Chalela, R., Curull, V., Enriquez, C. et al. <a href=\"https://doi.org/10.21037/jtd.2017.06.20\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"42\">Lung Adenocarcinoma: From Molecular Basis to Genome-Guided Therapy and Immunotherapy</a>. <em>Journal of Thoracic Diseases</em>. 2017. 9(7):2142-2158.",
+      "DiBardino, D., Sagi, A., Elvin, J. et al. <a href=\"https://doi.org/10.1016/j.cllc.2016.05.017\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"43\">Yield and Clinical Utility of Next-Generation Sequencing in Selected Patients With Lung Adenocarcinoma</a>. <em>Clinical Lung Cancer</em>. 2016. 17(6):517-522.e3.",
+      "Sholl, L. <a href=\"https://doi.org/10.21037/tlcr.2017.08.03\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"44\">Molecular Diagnostics of Lung Cancer in the Clinic</a>. <em>Translational Lung Cancer Research</em>. 2017. 6(5):560-569."
+    ],
+    "totalSize": 4
+  },
+  "metaData": {
+    "url": "https://www.verywell.com/lung-adenocarcinoma-symptoms-treatment-and-prognosis-2249363",
+    "docId": 2249363,
+    "entities": [
+      {
+        "id": "01jfnv",
+        "name": "Adenocarcinoma",
+        "score": 11.746896382505849
+      },
+      {
+        "id": "04p3w",
+        "name": "Lung cancer",
+        "score": 10.812961878081357
+      },
+      {
+        "id": "0fgjh0",
+        "name": "Non-small cell lung cancer",
+        "score": 7.3196465945850235
+      },
+      {
+        "id": "03gvnpp",
+        "name": "Anaplastic lymphoma kinase",
+        "score": 6.998852203521874
+      },
+      {
+        "id": "03w5gv",
+        "name": "Gefitinib",
+        "score": 6.773042267478926
+      },
+      {
+        "id": "09dwr8",
+        "name": "Medical genetics",
+        "score": 6.7057376756752785
+      },
+      {
+        "id": "04z9k3",
+        "name": "Pemetrexed",
+        "score": 6.7057376756752785
+      },
+      {
+        "id": "0c418c1",
+        "name": "Crizotinib",
+        "score": 6.7057376756752785
+      },
+      {
+        "id": "02rbh4n",
+        "name": "Bronchioloalveolar carcinoma",
+        "score": 6.645531666727949
+      },
+      {
+        "id": "064z4d",
+        "name": "Epidermal growth factor receptor",
+        "score": 6.540219325579014
+      },
+      {
+        "id": "07jk8h",
+        "name": "Erlotinib",
+        "score": 6.540219325579014
+      },
+      {
+        "id": "04xnqp",
+        "name": "Cisplatin",
+        "score": 6.268230440950919
+      },
+      {
+        "id": "063_0vw",
+        "name": "S9",
+        "score": 5.9462314200867405
+      },
+      {
+        "id": "08q81_",
+        "name": "Targeted therapy",
+        "score": 5.904362505535321
+      },
+      {
+        "id": "018nrl",
+        "name": "Bronchoscopy",
+        "score": 5.761210233175942
+      },
+      {
+        "id": "046j_r",
+        "name": "Cancer staging",
+        "score": 5.420452623977318
+      },
+      {
+        "id": "04zls",
+        "name": "Mutation",
+        "score": 5.254139957656953
+      },
+      {
+        "id": "01svvk",
+        "name": "Bronchus",
+        "score": 5.249904789374118
+      },
+      {
+        "id": "025scmp",
+        "name": "Radon",
+        "score": 5.179846319607072
+      },
+      {
+        "id": "023kv_",
+        "name": "General anaesthesia",
+        "score": 5.11480950610651
+      },
+      {
+        "id": "05_lp",
+        "name": "Positron emission tomography",
+        "score": 5.094277527401733
+      },
+      {
+        "id": "023dzn",
+        "name": "Squamous cell carcinoma",
+        "score": 5.06838312956628
+      },
+      {
+        "id": "06kmz",
+        "name": "Radiation therapy",
+        "score": 4.982657190440277
+      },
+      {
+        "id": "0217g",
+        "name": "Chemotherapy",
+        "score": 4.951763932090954
+      },
+      {
+        "id": "01t4sz",
+        "name": "Genetic testing",
+        "score": 4.78376221642996
+      },
+      {
+        "id": "02wrdv",
+        "name": "Nissan Altima",
+        "score": 4.781568629968722
+      },
+      {
+        "id": "02l6ql",
+        "name": "American Cancer Society",
+        "score": 4.65750101244582
+      },
+      {
+        "id": "0l4hh",
+        "name": "Lymph node",
+        "score": 4.616134586182395
+      },
+      {
+        "id": "096bg",
+        "name": "Lung",
+        "score": 4.580156823222367
+      },
+      {
+        "id": "013wmg",
+        "name": "Metastasis",
+        "score": 4.457736583019895
+      },
+      {
+        "id": "0hl17",
+        "name": "Oncology",
+        "score": 4.375716279157725
+      },
+      {
+        "id": "03622p",
+        "name": "Prognosis",
+        "score": 4.239448799346086
+      },
+      {
+        "id": "0qcr0",
+        "name": "Cancer",
+        "score": 4.213943729641508
+      },
+      {
+        "id": "03nw5g",
+        "name": "National Cancer Institute",
+        "score": 4.167079814823669
+      },
+      {
+        "id": "0dg0w",
+        "name": "Computed tomography",
+        "score": 4.05732111097263
+      },
+      {
+        "id": "087gx",
+        "name": "X-ray",
+        "score": 3.949757029403447
+      },
+      {
+        "id": "01b_21",
+        "name": "Cough",
+        "score": 3.8446378387040103
+      },
+      {
+        "id": "0bscct",
+        "name": "Gene",
+        "score": 3.7233640174714457
+      },
+      {
+        "id": "01k22z",
+        "name": "Clinical trial",
+        "score": 3.6994739156728405
+      },
+      {
+        "id": "01cbd",
+        "name": "Cell",
+        "score": 3.5344957553631446
+      },
+      {
+        "id": "013yq",
+        "name": "Atlanta",
+        "score": 3.2258517054873685
+      },
+      {
+        "id": "05wvs",
+        "name": "Protein",
+        "score": 3.142719500867951
+      },
+      {
+        "id": "0k_9",
+        "name": "Anxiety",
+        "score": 3.0920458840469616
+      },
+      {
+        "id": "09c7w0",
+        "name": "United States of America",
+        "score": 1.4532450872947655
+      }
+    ],
+    "hasTableOfContents": true,
+    "review": {
+      "authorId": "",
+      "userId": 150790878098186,
+      "type": "|medical_approved|",
+      "lastReviewed": 1
+    },
+    "audit": {
+      "clientId": "CommJS Utility - Initialize Medical Review Data",
+      "lastModified": 1508940616001
+    }
+  },
+  "audit": {
+    "clientId": "Helios",
+    "userId": "148484222683549",
+    "lastModified": 1530124940065
+  },
+  "summary": {
+    "title": "Diagnosis and Treatment of Lung Adenocarcinoma",
+    "socialTitle": "Why the Symptoms of Lung Adenocarcinoma Are So Easy to Miss",
+    "heading": "Diagnosing Lung Adenocarcinoma",
+    "description": "Lung adenocarcinoma is the most common type of lung cancer but one that is often missed, particularly in young women who have never smoked. Find out why.",
+    "image": {
+      "url": "https://fthmb.tqn.com/UeQBmXTNxoWOUOmsp9CcR8aCwWI=/GettyImages-491540934-59ca788b054ad900106b03d1.jpg",
+      "caption": "What should you know about lung adenocarcinoma?",
+      "owner": "franckreporter/E&#43;/Getty Images",
+      "alt": "Doctor with stethoscope doing exam",
+      "width": 2000,
+      "height": 1334,
+      "objectId": "GettyImages-491540934-59ca788b054ad900106b03d1.jpg"
+    }
+  },
+  "pages": {
+    "list": [
+      {
+        "contents": {
+          "list": [
+            {
+              "id": 0,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Lung adenocarcinoma is a form of <a href=\"https://www.verywellhealth.com/non-small-cell-lung-cancer-2249281\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"1\">non-small cell lung cancer</a>, the most common type of lung cancer. Non-small cell lung cancers account for 80 percent of lung malignancies, and of these, roughly 50 percent are <span data-tts=\"true\">adenocarcinomas</span>.</p>"
+              }
+            },
+            {
+              "id": 1,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Adenocarcinoma is today the most common form of lung cancer in women, Asians, and <a href=\"https://www.verywellhealth.com/lung-cancer-in-young-adults-2248879\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"2\">people under the age of 45</a>. Confoundingly, it is more likely to strike non-smokers (either never smokers or former smokers) than people who currently smoke.</p>"
+              }
+            },
+            {
+              "id": 2,
+              "type": "HTML",
+              "data": {
+                "html": "<p>While the rate has been decreasing in men and leveling off in women, the numbers continue to rise in young, nonsmoking women, and we&apos;re not entirely sure why. It is largely believed that genetics, <a href=\"https://www.verywellhealth.com/the-health-risks-of-secondhand-smoke-915020\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"3\">secondhand smoke</a>, and <a href=\"https://www.verywellhealth.com/radon-and-lung-cancer-2248978\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"4\">exposure to radon</a> in the home are all contributing factors.</p>"
+              }
+            },
+            {
+              "id": 3,
+              "type": "HEADING",
+              "data": {
+                "text": "Symptoms"
+              }
+            },
+            {
+              "id": 4,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Lung adenocarcinomas usually begin in tissues near the outer portion of the lungs and may be there for a long time before symptoms appear. When they finally appear, the signs are often less obvious than other forms of lung cancer, manifesting with a <a href=\"https://www.verywellhealth.com/persistent-cough-causes-evaluation-2249305\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"5\">chronic cough</a> and <a href=\"https://www.verywellhealth.com/coughing-up-blood-possible-causes-2249394\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"6\">bloody sputum</a> only in later, more advanced stages.</p>"
+              }
+            },
+            {
+              "id": 5,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Because of this, some of the more generalized, <a href=\"https://www.verywellhealth.com/lung-cancer-symptoms-4014389\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"7\">early symptoms</a> (such as fatigue, subtle shortness of breath, or upper back and chest pain) may be missed or attributed to other causes. As a result, diagnoses are often late, particularly among young people and non-smokers who may have never considered cancer as a threat.</p>"
+              }
+            },
+            {
+              "id": 6,
+              "type": "HEADING",
+              "data": {
+                "text": "Diagnosis"
+              }
+            },
+            {
+              "id": 7,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Lung cancer is often first detected when abnormalities are seen on an X-ray, usually in the form of a <a href=\"https://www.verywellhealth.com/shadow-on-the-lung-meaning-and-causes-2248903\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"8\">poorly defined shadow</a>. While distressing, the finding at least offers the opportunity for early diagnosis. In as many as 25 percent of lung cancer cases, a chest X-ray will not detect any irregularities and return a perfectly &quot;normal&quot; diagnosis.</p>"
+              }
+            },
+            {
+              "id": 8,
+              "type": "HTML",
+              "data": {
+                "html": "<p>If cancer is suspected, other, more sensitive diagnostics may be used, including:</p>"
+              }
+            },
+            {
+              "id": 9,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li><a href=\"https://www.verywellhealth.com/ct-scan-of-the-chest-914781\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"9\">Computed tomography (CT scan)</a>, a chest scan which can detect much smaller abnormalities than a chest x-ray</li><li><a href=\"https://www.verywellhealth.com/what-is-an-mri-and-what-does-it-do-3157069\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"10\">Magnetic resonance imaging (MRI)</a> which uses magnetic fields to render images</li><li><span data-tts=\"true\"><a href=\"https://www.verywellhealth.com/what-is-a-bronchoscopy-2249369\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"11\">Bronchoscopy</a></span>, a procedure in which a flexible scope is inserted through into the throat for a visual examination of the large airways in the lungs</li><li><a href=\"https://www.verywellhealth.com/pet-scan-positron-emission-tomography-2249151\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"12\">Positron emission tomography (PET scan)</a> which can visualize areas of metabolic hyperactivity, such as can happen with cancer cells</li></ul>"
+              }
+            },
+            {
+              "id": 10,
+              "type": "HTML",
+              "data": {
+                "html": "<p><span data-tts=\"true\"><a href=\"https://www.verywellhealth.com/sputum-cytology-2249193\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"13\">Sputum cytology</a></span>, in which a sample of coughed up saliva and mucus are evaluated, may also be used but is considered less useful in diagnosing early cancer.</p>"
+              }
+            },
+            {
+              "id": 11,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Depending upon the results, your doctor may want to obtain a sample of lung tissue to confirm the diagnosis. In addition to more invasive <a href=\"https://www.verywellhealth.com/understanding-your-lung-biopsy-2248900\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"14\">lung tissue biopsies</a>, a newer blood test called a <a href=\"https://www.verywellhealth.com/liquid-biopsy-for-lung-cancer-4047434\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"15\">liquid biopsy</a> may be able to follow specific genetic abnormalities in lung cancer cells such as EGFR mutations.</p>"
+              }
+            },
+            {
+              "id": 12,
+              "type": "HEADING",
+              "data": {
+                "text": "Genetic Profiling and PD-L1 Testing"
+              }
+            },
+            {
+              "id": 13,
+              "type": "HTML",
+              "data": {
+                "html": "<p>One of the more exciting advances has been the use of <a href=\"https://www.verywellhealth.com/genetic-testing-for-people-with-lung-cancer-2248945\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"16\">genetic testing</a> to profile cancer cells. By doing so, doctors can select treatments able to target those specific genetic variants. This targeted approach is far less generalized than earlier generation treatments which broadly attacked both healthy and unhealthy cells, resulting in severe and even intolerable side effects.</p>"
+              }
+            },
+            {
+              "id": 14,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Current guidelines recommend that <em>all </em>persons with advanced or <span data-tts=\"true\"><a href=\"https://www.verywellhealth.com/metastatic-cancer-2249128\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"17\">metastatic</a></span> lung adenocarcinoma be genetically tested and have PD-L1 testing to profile their specific cancer.</p>"
+              }
+            },
+            {
+              "id": 15,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Specific treatments are available not only for those who have <a href=\"https://www.verywellhealth.com/lung-cancer-with-an-egfr-mutation-4097338\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"18\">EGFR mutations</a>, <a href=\"https://www.verywellhealth.com/alk-positive-lung-cancer-definition-and-treatment-2248944\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"19\">ALK rearrangements</a>, and <a href=\"https://www.verywellhealth.com/ros1-positive-lung-cancer-2248947\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"20\">ROS1 rearrangements</a>, but BRAF, ERBB2, MET splice mutations and amplifications, RET rearrangements, and more. In addition, clinical trials are in process looking at further mutations and targeted therapies.</p>"
+              }
+            },
+            {
+              "id": 16,
+              "type": "HTML",
+              "data": {
+                "html": "<p>PD-L1 testing is done in order to predict the potential effectiveness of the three immunotherapy drugs now approved for lung cancer. Discussing your molecular testing and PD-L1 testing is one of the most important steps when you are first diagnosed with advanced lung adenocarcinoma, as this area is rapidly changing. For example, the first immunotherapy drug was approved in 2015.</p>"
+              }
+            },
+            {
+              "id": 17,
+              "type": "HEADING",
+              "data": {
+                "text": "Stages"
+              }
+            },
+            {
+              "id": 18,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Once a cancer diagnosis is confirmed, the doctor will stage the disease based on a series of standard tests. The aim of staging is to determine how advanced the cancer is, whether it has spread, and what, if any, other tissues may be involved. Staging helps direct treatment in a more appropriate manner, neither undertreating a malignancy or overtreating in and causing more harm than good.</p>"
+              }
+            },
+            {
+              "id": 19,
+              "type": "HTML",
+              "data": {
+                "html": "<p>The four stages are classified as follow:</p>"
+              }
+            },
+            {
+              "id": 20,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li><a href=\"https://www.verywellhealth.com/stage-0-non-small-cell-lung-cancer-2249377\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"21\">Stage 0</a>: The cancer is not yet invasive, but is rather <a href=\"https://www.verywellhealth.com/definition-of-carcinoma-in-situ-2249071\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"22\">carcinoma-in-situ</a>.</li><li>Occult lung cancer: An occult lung cancer is considered to be present if cancer cells are found in sputum but a tumor cannot be found in the lungs by imaging studies.</li><li><a href=\"https://www.verywellhealth.com/stage-1-non-small-cell-lung-cancer-2249378\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"23\">Stage 1</a>: The cancer is localized and has not spread to any lymph nodes. This is the earliest stage of &quot;invasive&quot; lung cancer.</li><li><a href=\"https://www.verywellhealth.com/stage-2-non-small-cell-lung-cancer-2249379\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"24\">Stage 2</a>: The cancer has spread to lymph nodes, the lining of the lungs, or the major passageways of the lungs.</li><li><a href=\"https://www.verywellhealth.com/stage-3a-non-small-cell-lung-cancer-2249381\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"25\">Stage 3</a>: The cancer has spread to nearby tissue. Stage 3 is again broken down into <a href=\"https://www.verywellhealth.com/stage-3a-non-small-cell-lung-cancer-2249381\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"26\">stage 3A</a> and <a href=\"https://www.verywellhealth.com/stage-3b-non-small-cell-lung-cancer-2249382\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"27\">stage 3B</a> which are often treated very differently.</li><li><a href=\"https://www.verywellhealth.com/stage-4-non-small-cell-lung-cancer-2249383\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"28\">Stage 4</a>: The cancer has spread (metastasized) to other regions of the body or there is a <a href=\"https://www.verywellhealth.com/malignant-pleural-effusion-2249334\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"29\">malignant pleural effusion</a>. Lung cancer metastasizes most often spreads to the bones, brain, liver, and adrenal glands.</li></ul>"
+              }
+            },
+            {
+              "id": 21,
+              "type": "HTML",
+              "data": {
+                "html": "<p>When learning about treatment options you are likely to hear of lung cancer being defined in a one of the following ways:</p>"
+              }
+            },
+            {
+              "id": 22,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li><a href=\"https://www.verywellhealth.com/what-is-early-stage-lung-cancer-2249025\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"30\">Early stage lung cancer</a>: The term early stage is used to describe lung cancers which are stage 1, stage 2, and stage 3A. These are tumors which are potentially curable with surgery.</li><li>Locally advanced lung cancer: This term is most often used to describe cancers which are stage 3A. Surgery may be possible, but adjuvant treatment with chemotherapy and radiation therapy is usually required to control the tumor.</li><li><a href=\"https://www.verywellhealth.com/all-about-advanced-lung-cancer-3956363\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"31\">Advanced lung cancer</a>: The term advanced lung cancer is often used for stage 3B and stage 4 cancers, and is a stage at which non-surgical treatments are the best option.</li></ul>"
+              }
+            },
+            {
+              "id": 23,
+              "type": "HEADING",
+              "data": {
+                "text": "Treatment Options"
+              }
+            },
+            {
+              "id": 24,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Depending upon the stage of disease, treatment may include one or a combination of the following:</p>"
+              }
+            },
+            {
+              "id": 25,
+              "type": "HTML",
+              "data": {
+                "html": "<ul><li><a href=\"https://www.verywellhealth.com/surgery-for-lung-cancer-2249333\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"32\">Surgery</a> may be offered in the early stages, either alone or accompanied by chemotherapy and/or radiation therapy.</li><li><a href=\"https://www.verywellhealth.com/chemotherapy-for-lung-cancer-2249321\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"33\">Chemotherapy</a> may be used alone, in conjunction with radiation therapy, or before or after surgery.</li><li><a href=\"https://www.verywellhealth.com/targeted-therapies-for-lung-cancer-2249346\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"34\">Targeted therapies</a> are medications designed to attack specific genetic mutations. They work by recognizing specific proteins on cancer cells and blocking the cell&apos;s ability to replicate. Options include Tarceva (erlotinib), Iressa (gefitinib), Gilotrif (afatinib), Xalkori (crizotinib), Zykadia (ceritinib), Alectinib (alecnensa), and Tagrisso (osimertinib).</li><li><a href=\"https://www.verywellhealth.com/radiation-therapy-for-lung-cancer-2249343\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"35\">Radiation therapy</a> may be used either to treat cancer or to control symptoms in those with metastatic cancer. More targeted forms of treatment, known as <a href=\"https://www.verywellhealth.com/what-is-sbrt-2249187\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"36\">stereotactic body radiotherapy (SBRT)</a>, or <a href=\"https://www.verywellhealth.com/proton-beam-therapy-for-lung-cancer-4147409\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"37\">proton therapy</a> may be used for smaller cancers which surgery cannot reach.</li><li><a href=\"https://www.verywellhealth.com/immunotherapy-for-cancer-what-it-is-and-how-it-works-4057117\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"38\">Immunotherapy</a> is a form of treatment which aims to harness the body&apos;s immune system to fight cancer. Current options include Opdivo (nivolumab), Keytruda (pembrolizumab), and Tecentriq (atezolizumab).</li></ul>"
+              }
+            },
+            {
+              "id": 26,
+              "type": "HTML",
+              "data": {
+                "html": "<p><strong>A Word From Verywell</strong></p>"
+              }
+            },
+            {
+              "id": 27,
+              "type": "HTML",
+              "data": {
+                "html": "<p>Because the early symptoms of lung adenocarcinoma are often difficult to spot, the average five-year <a href=\"https://www.verywellhealth.com/lung-cancer-survival-rates-by-type-and-stage-2249401\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"39\">survival rate</a> is only around 18 percent. For those diagnosed in the early stages, the outlook is far more promising.</p>"
+              }
+            },
+            {
+              "id": 28,
+              "type": "HTML",
+              "data": {
+                "html": "<p>What this highlights is the need for greater awareness about the nonspecific or atypical symptoms of lung cancer. On their own, the symptoms may be easy to miss. Together, they may trigger a red flag that can lead to both early diagnosis and earlier, more effective treatment.</p>"
+              }
+            },
+            {
+              "id": 29,
+              "type": "HTML",
+              "data": {
+                "html": "<p>The treatment of lung adenocarcinoma is improving rapidly and survival rates are improving as well. In some cases, even advanced tumors can be kept in check for quite some time with targeted therapies. For a smaller percentage of people, immunotherapy treatments have resulted in a &quot;durable response&quot; meaning physicians cautiously wonder if it may even be cured. With the complexity of molecular findings, it&apos;s very helpful to find an oncologist who specializes in lung cancer. It&apos;s also critically important to <a href=\"https://www.verywellhealth.com/how-to-be-your-own-advocate-as-a-cancer-patient-2248881\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"internalLink\" data-ordinal=\"40\">be your own advocate in your cancer care</a>.</p>"
+              }
+            }
+          ],
+          "totalSize": 30
+        }
+      }
+    ],
+    "totalSize": 1
+  },
+  "subheading": "Symptoms and Advances in Cancer Treatment"
+}

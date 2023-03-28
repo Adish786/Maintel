@@ -1,0 +1,41 @@
+{
+	"id": "image.default.compute",
+	"name": "image.default.compute",
+	"displayName": "Technology Default Images",
+	"data": [
+		{
+			"url" : "http://0.tqn.com/d/default/compute/0/149625589.jpg",
+			"owner" : "Lilly Roadstones/Taxi/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/compute/0/151088574.jpg",
+			"owner" : "Cavan Images/The Image Bank/Getty Images",
+			"width" : "2122",
+			"height" : "1415"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/compute/0/156023705.jpg",
+			"owner" : "John Lamb/Digital Vision/Getty Images",
+			"width" : "2124",
+			"height" : "1413"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/compute/0/187928720.jpg",
+			"owner" : "Tara Moore/Taxi/Getty Images",
+			"width" : "2121",
+			"height" : "1416"
+		}
+		,
+		{
+			"url" : "http://0.tqn.com/d/default/compute/0/93187316.jpg",
+			"owner" : "Jetta Productions/Stone/Getty Images",
+			"width" : "2121",
+			"height" : "1413"
+		}
+	]
+}

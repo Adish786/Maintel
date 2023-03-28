@@ -1,0 +1,17 @@
+@import 'mntlVariables';
+
+.feedback {
+    &__stars {
+        display: flex;
+    
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: $color-black-65;
+        }
+    }
+
+    &__star {
+        height: 1.25rem;
+    }
+}

@@ -1,0 +1,1 @@
+window.Mntl.caesLinksHandler.init("${(requestContext.urlData.docId?c)!''}", "${(requestContext.requestId)!''}");

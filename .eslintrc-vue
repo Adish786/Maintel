@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "./node_modules/@dotdash/mantle-frontend-build/.eslintrc-vue.js"
+    ]
+}

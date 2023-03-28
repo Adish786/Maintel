@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+    <component id="mntl-flexible-leaderboard" ref="mntl-flexible-ad">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Leaderboard</displayName>
+            <description>
+                Flexible size ad unit
+            </description>
+            <documentation>
+                This component references **mntl-gpt-adunit** and includes basic scripts and styles to support flexible ad sizes.
+                The original size values came from L-DD.  The centralized mantle leaderboard components override the sizes.
+            </documentation>
+            <tags>In Progress</tags>
+        </info>
+        <for id="gptAd">
+            <property name="type" value="leaderboard" />
+            <property name="id" value="leaderboard" />
+            <property name="sizes" value="[[970, 250], [728, 90], [1, 1], 'fluid']" views="pc" />
+            <property name="sizes" value="[[728, 90], [1, 1], 'fluid']" views="tablet" />
+            <property name="sizes" value="[[300, 250]]" views="mobile" />
+            <property name="pos" value="atf" />
+            <property name="priority" value="1" />
+            <model name="gptAdSet" />
+        </for>
+        <stylesheet path="/static/mantle/components/ads/css/leaderboard.css" />
+    </component>
+
+    <component id="mntl-flexible-leaderboard-lazy" ref="mntl-flexible-leaderboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Leaderboard Lazy</displayName>
+            <description>
+                A Lazy Flexible Leaderboard unit.
+            </description>
+            <documentation>
+                This component adds the required scripts and classes to make the Flexible Leaderboard lazy.
+            </documentation>
+        </info>
+        <script group="bottom" path="/static/mantle/components/ads/js/lazy-ad.js" tests="vanillaJSLazyAd" buckets="inactive, control" />
+        <script group="bottom" path="/static/mantle/components/ads/js/vanilla-lazy-ad.js" tests="vanillaJSLazyAd" buckets="active" />
+        <list id="class">
+            <property name="lazy" value="js-lazy-ad" />
+        </list>
+        <for id="gptAd">
+            <property name="isDynamic" value="true" type="boolean" mode="replace" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboard-header-group" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Rollaway Leaderboard</displayName>
+            <description>
+                Flexible size leaderboard that sticks to the header and rolls away on scroll
+            </description>
+            <documentation>
+
+                This component references **mntl-flexible-leaderboard** and includes basic scripts and styles to support flexible ad sizes.
+
+                The following attributes are configurable:
+
+                * **data-collapse-point** **Integer**. The minimum scrolling point that triggers when we should add the 'is-collapse' class for the sticky leaderboard. The default is 1 px in JS.
+
+                * **data-timeout** **Integer** attribute with the value being the timeout in milliseconds for initializing rollaway functionality. Default is 5000 in JS.
+            </documentation>
+            <tags>In Progress</tags>
+        </info>
+
+        <script path="/static/mantle/js/vendor/throttle.js" />
+        <script path="/static/mantle/js/mntl-vanilla-scroll.js" />
+        <script path="/static/mantle/components/ads/js/rollaway.js" />
+
+        <component id="mntl-leaderboard-header" ref="mntl-flexible-leaderboard" location="content">
+            <for id="gptAd">
+                <property name="sizes" value="[[728, 90], [970, 250], [1, 1], 'fluid']" views="pc" />
+            </for>
+        </component>
+
+        <component id="mntl-leaderboard-spacer" ref="mntl-block" location="content">
+            <list id="class">
+                <property name="js-rollaway-spacer" value="js-rollaway-spacer" />
+            </list>
+        </component>
+    </component>
+
+    <component id="mntl-leaderboard-flex-header-group" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Rollaway leaderboard-flex-1</displayName>
+            <description>
+                Flexible leaderboard (leaderboard-flex-1) that sticks to the header and rolls away on scroll.
+            </description>
+            <documentation>
+                This component references **mntl-leaderboard-flex-1** and includes basic scripts and styles to support flexible ad sizes.
+
+                The verticals should not override the size or id settings of this ad slot.
+
+                The following attributes are configurable:
+
+                * **data-collapse-point** **Integer**. The minimum scrolling point that triggers when we should add the 'is-collapse' class for the sticky leaderboard. The default is 1 px in JS.
+
+                * **data-timeout** **Integer** attribute with the value being the timeout in milliseconds for initializing rollaway functionality. Default is 5000 in JS.
+            </documentation>
+        </info>
+
+        <script path="/static/mantle/js/vendor/throttle.js" />
+        <script path="/static/mantle/js/mntl-vanilla-scroll.js" />
+        <script path="/static/mantle/components/ads/js/rollaway.js" />
+
+        <component id="mntl-leaderboard-header" ref="mntl-leaderboard-flex-1" location="content">
+            <property name="class" value="has-right-label" />
+        </component>
+
+        <component id="mntl-leaderboard-spacer" ref="mntl-block" location="content">
+            <list id="class">
+                <property name="js-rollaway-spacer" value="js-rollaway-spacer" />
+            </list>
+        </component>
+    </component>
+
+    <component id="mntl-leaderboard-refresh-header-group" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Fixed refresh leaderboard-fixed-0</displayName>
+            <description>
+                Leaderboard Ad unit that stays in place as we scroll down the page, 
+                holds leaderboard-fixed-0 which is expected to refresh after a set number of seconds
+            </description>
+            <documentation>
+                This component references **mntl-leaderboard-fixed-0**
+            </documentation>
+        </info>
+
+        <component id="mntl-leaderboard-header" ref="mntl-leaderboard-fixed-0" location="content" />
+        <component id="mntl-leaderboard-spacer" ref="mntl-block" location="content" />
+    </component>
+
+    <component id="mntl-leaderboard-fixed-0" ref="mntl-leaderboard-fixed">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-fixed-0</displayName>
+            <description>
+                Fixed leaderboard that is expected to refresh after a set number of seconds (passed in as milliseconds)
+            </description>
+            <documentation>
+                This component references the necessary script needed for ads that refresh.
+                
+                The verticals should not override the size or id settings of this ad slot.
+
+                The value of timedRefresh can be configured on the vertical ref to this component or through the vertical external configs                
+            </documentation>
+        </info>
+
+        <script group="top" path="/static/mantle/js/refreshableAds.js" />
+
+        <for id="gptAd">
+            <property name="id" value="leaderboard-fixed-0" />
+            <property name="sizes" value="[[728, 90]]" views="pc, tablet" />
+            <property name="timedRefresh" value="${@refreshInterval.value}" onError="ignore">
+                <model name="externalConfig" id="refreshInterval">
+                    <property name="key" value="com.about.globe.stickyLeaderboard.refreshInterval" />
+                    <property name="default" value="30000" />
+                </model>
+            </property>
+        </for>
+    </component>
+
+    <component id="mntl-leaderboard-flex-1" ref="mntl-flexible-leaderboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-flex-1</displayName>
+            <description>
+                A Flexible Leaderboard unit with updated slot id and centralized sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <for id="gptAd">
+            <property name="id" value="leaderboard-flex-1" />
+            <property name="sizes" value="[[728, 90], [970,90], [970, 250]]" views="pc, tablet" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboard-flex-2" ref="mntl-flexible-leaderboard">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-flex-2</displayName>
+            <description>
+                A Flexible Leaderboard unit with updated slot id and centralized sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <for id="gptAd">
+            <property name="id" value="leaderboard-flex-2" />
+            <property name="sizes" value="[[728, 90], [970,90], [970, 251]]" views="pc, tablet" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboard-fixed" ref="mntl-gpt-adunit">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-fixed</displayName>
+            <description>
+                A Fixed Leaderboard unit with updated slot id and centralized sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <for id="gptAd">
+            <property name="type" value="leaderboard" />
+            <property name="id" value="leaderboard-fixed" />
+            <property name="sizes" value="[[728, 90]]" views="pc, tablet" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboard-fixed-lazy" ref="mntl-leaderboard-fixed">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-fixed Lazy</displayName>
+            <description>
+                A lazy Fixed Leaderboard unit with updated slot id and centralized sizes.
+            </description>
+            <documentation>
+                This component adds the required scripts and classes to make the Fixed Leaderboard lazy.
+            </documentation>
+        </info>
+        <script group="bottom" path="/static/mantle/components/ads/js/lazy-ad.js" tests="vanillaJSLazyAd" buckets="inactive, control" />
+        <script group="bottom" path="/static/mantle/components/ads/js/vanilla-lazy-ad.js" tests="vanillaJSLazyAd" buckets="active" />
+        <list id="class">
+            <property name="lazy" value="js-lazy-ad" />
+        </list>
+        <for id="gptAd">
+            <property name="isDynamic" value="true" type="boolean" mode="replace" />
+        </for>
+    </component>
+
+    <component id="mntl-scads-leaderboard-fixed" ref="mntl-leaderboard-fixed-lazy">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboard-fixed for scads</displayName>
+            <description>
+                A Lazy Fixed Leaderboard unit with updated slot id and centralized sizes,
+                and the scads-to-load class so it can be used on the Exclusive template which
+                utilizes scs-ads to inject the ads into the content of the page.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="scads-to-load" value="scads-to-load" />
+        </list>
+    </component>
+
+    <component id="mntl-leaderboardac" ref="mntl-flexible-leaderboard-lazy">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>leaderboardac</displayName>
+            <description>
+                A lazy Flexible Leaderboard unit with updated slot id of leaderboardac and sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <map id="attrs" views="pc, tablet">
+            <property name="data-lazy-percentage-view" value="0.5" tests="delayLeaderboardac" buckets="active" />
+        </map>
+        <for id="gptAd">
+            <property name="id" value="leaderboardac" />
+            <property name="sizes" value="[[728, 90], [970, 250], [1, 11], [1200, 450], 'fluid']" views="pc" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboardfooter-flex-1-lazy" ref="mntl-flexible-leaderboard-lazy">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Leaderboard leaderboardfooter-flex-1</displayName>
+            <description>
+                A Lazy Flexible Leaderboard unit with updated slot id of leaderboardfooter-flex-1 and centralized sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <for id="gptAd">
+            <property name="id" value="leaderboardfooter-flex-1" />
+            <property name="sizes" value="[[728, 90], [728, 98], [970, 250], [970, 258], [1, 9], 'fluid']" views="pc" />
+        </for>
+    </component>
+
+    <component id="mntl-leaderboardfooter-flex-2-lazy" ref="mntl-flexible-leaderboard-lazy">
+        <info>
+            <category>Mantle Components/Ads/Display</category>
+            <displayName>Flexible Leaderboard leaderboardfooter-flex-2</displayName>
+            <description>
+                A Lazy Flexible Leaderboard unit with updated slot id of leaderboardfooter-flex-2 and centralized sizes.
+            </description>
+            <documentation>
+                The verticals should not override the size or id settings of this ad slot.
+            </documentation>
+        </info>
+        <list id="class">
+            <property name="label" value="has-right-label" />
+            <property name="leaderboard" value="leaderboard" />
+        </list>
+        <for id="gptAd">
+            <property name="id" value="leaderboardfooter-flex-2" />
+            <property name="sizes" value="[[728, 90], [728, 98], [970, 250], [970, 258], [1, 9], 'fluid']" views="pc" />
+        </for>
+    </component>
+</components>

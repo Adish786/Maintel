@@ -1,0 +1,32 @@
+@import "mntlVariables";
+
+.mntl-sc-block-journeynav__top,
+.mntl-sc-block-journeynav__content,
+.mntl-sc-block-journeynav__list {
+    display: flex;
+}
+
+.mntl-sc-block-journeynav__top {
+    margin-bottom: 1rem;
+}
+
+.mntl-sc-block-journeynav__content {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mntl-sc-block-journeynav__list-item {
+    &:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+}
+
+.mntl-sc-block-journeynav__link {
+    display: block;
+    background: $color;
+    border: 1px solid $color;
+    color: $color-white;
+    line-height: 1;
+    padding: 1rem;
+    text-decoration: none;
+}

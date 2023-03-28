@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-byline" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Article</category>
+			<displayName>Byline</displayName>
+			<description />
+			<documentation />
+
+			<for id="mntl-byline__link.text">
+				<property name="authorName" value="Jane Doe" mode="replace" />
+			</for>
+
+			<for id="mntl-byline__link.uri">
+				<property name="bioUrl" value="https://www.verywellhealth.com" mode="replace" />
+			</for>
+
+			<for id="author, bioUrl, shortBio, text, uri, authorName, data-text">
+                <model name="mockDocument" id="document" mode="replace">
+                    <property name="template" value="structured-content-basic-one-of-each"/>
+                </model>
+			</for>
+		</info>
+
+		<for id="mntl-byline__link.text, mntl-byline__span.text, mntl-byline__tooltip-link.text">
+			<property name="authorName" value="${str.stripToNull(@document.guestAuthor?.link?.text) ?: @author?.displayName}" />
+		</for>
+
+		<for id="mntl-byline__link.uri, mntl-byline__span.arbitraryDependency, mntl-byline__tooltip-link.uri">
+			<!-- check existence of guestAuthor.link.text first as we ONLY want to fallback to author.bioUrl if guestAuthor is null or empty string.
+			We don't want to link a guest author that's missing their own bio url to terminated author's bio url) -->
+			<property name="bioUrl" value="${str.isNotEmpty(@document.guestAuthor?.link?.text) ? @document.guestAuthor.link.uri : @author?.bioUrl}" onError="ignore" />
+		</for>
+
+		<for id="displayName, bioUrl, shortBio, mntl-byline__link.text, mntl-byline__span.text, mntl-byline__link.uri, uri, authorName, data-text">
+			<model name="AUTHOR" id="author" onError="ignore"/>
+		</for>
+
+		<for id="author, bioUrl, shortBio, mntl-byline__link.text, mntl-byline__span.text, mntl-byline__link.uri, authorName, data-text">
+			<model name="DOCUMENT" id="document" />
+		</for>
+
+		<component location="content" id="mntl-byline__text" ref="mntl-text-block">
+			<property name="tag" value="span" />
+			<property name="text" value="By" />
+		</component>
+
+		<component location="content" id="mntl-byline__name" ref="mntl-block">
+			<component ref="mntl-tooltip" />
+
+			<map id="attrs">
+                <property name="data-tooltip" value="${str.stripToNull(@document?.guestAuthor?.link?.text) != null ? (str.stripToNull(@document?.guestAuthor?.shortBio) ?: null) : (str.stripToNull(@author?.shortBio) ?: null)}" onError="ignore">
+                    <model name="DOCUMENT" id="document" />
+                    <model name="AUTHOR" id="author" />
+                </property>
+			</map>
+
+			<component location="content" ref="mntl-bio-tooltip" />
+
+			<component location="content" id="mntl-byline__link" ref="mntl-text-link">
+				<map id="attrs">
+					<property name="data-trigger-link" value="true" views="mobile, tablet" /> <!-- when enabled, will prevent default anchor click on byline link and show tooltip instead -->
+				</map>
+
+				<property name="text" value="${@authorName}" />
+				<!-- if bio url is present, show <a> linking to author url) -->
+
+				<property name="uri" value="${str.isNotEmpty(@bioUrl) ? @bioUrl : null}" onError="collapseSilent" />
+			</component>
+
+			<component location="content" id="mntl-byline__span" ref="mntl-text-block">
+				<property name="tag" value="span" />
+				<property name="text" value="${@authorName}" />
+				<!-- if bio url is NOT present, show text only <span> -->
+				<property name="arbitraryDependency" value="${str.isNotEmpty(@bioUrl) ? null : 'true'}" onError="collapseSilent" />
+			</component>
+
+		</component>
+	</component>
+</components>

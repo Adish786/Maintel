@@ -1,0 +1,14 @@
+.mntl-sc-block-inlinevideo__video-container {
+    position: relative;
+}
+
+.mntl-sc-block-inlinevideo__duration {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+
+    .jw-state-idle + & {
+        display: block;
+    }
+}

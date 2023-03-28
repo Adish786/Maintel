@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-lrs-ingredients" ref="mntl-block">
+        <info>
+            <category>Mantle Components/Recipe</category>
+            <displayName>Mantle LRS Ingredients</displayName>
+            <description>
+                Local Retailer Scroller: Displays Structured Ingredients for Carbonized Recipe SC Templates with ad units
+                such as Branded Ingredient Units (BIU), May We Suggest, (MWS), and Local Offers
+            </description>
+            <documentation>
+                ### Note
+
+                - When using this component, you should for-target your `mntl-preconnect.domains` with the necessary subdomains
+                in the template which you're using this component.
+
+                ### Properties
+
+                - __useLRS__ **boolean**
+
+                Adds a data attribute for each ingredient for the LRS script based on meredithId field, default to true
+
+                - __data-vertical__ **string**
+
+                Vertical initial (such as fw for food and wine) to be prefixed to call for appropriate calvera script,
+                default is empty string to throw Javascript Error.
+
+                - __data-load-offset__ **string**
+
+                How many pixels the LRS component is offscreen to start loading the LRS script. This should act as a middle ground with deferring,
+                while still fetching the ad script earlier to help with ad impression performance. Default to 300px.
+                On the vertical side this will be overridden and powered by a proctor test on launch.
+            </documentation>
+
+            <for id="list">
+                <model name="mockDocument" id="document">
+                    <property name="template" value="carbonized-recipe-sc" />
+                </model>
+            </for>
+
+            <map id="attrs">
+                <property name="data-vertical-prefix" value="fw" />
+            </map>
+        </info>
+
+        <stylesheet path="/static/mantle/components/recipe/lrs-ingredients/lrs-ingredients.css" />
+        <script path="/static/mantle/components/recipe/lrs-ingredients/lrs-ingredients.js" />
+
+        <map id="attrs">
+            <property name="data-vertical-prefix" value="" />
+            <property name="data-load-offset" value="300" />
+        </map>
+
+        <component location="content" ref="mntl-structured-ingredients">
+            <property name="useLRS" value="true" type="boolean" />
+        </component>
+
+    </component>
+
+</components>

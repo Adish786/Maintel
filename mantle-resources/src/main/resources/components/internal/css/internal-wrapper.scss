@@ -1,0 +1,12 @@
+.mntl-internal-wrapper {
+    position: relative;
+
+    &:before {
+        content: 'Internal use only';
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        color: red;
+        border-bottom: 1px solid red;
+    }
+}

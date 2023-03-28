@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-social-share" resourcePath="/components/widgets/social-share/view/social-share.ftl">
+        <info>
+            <category>Mantle Components/Social</category>
+            <displayName>Social Sharing</displayName>
+            <description></description>
+            <documentation>
+                # attrs
+
+                - __data-title__
+
+                Social title
+
+                - __data-description__
+
+                Description
+
+                - __data-sms-body__
+
+                Text inside the "body" of an SMS share
+
+                - __data-email-subject__
+
+                Text for subject of email share
+
+                - __data-email-body__
+
+                Text for body of email share
+
+                - __data-whatsapp-body__
+
+                Text for body of WhatsApp share
+            </documentation>
+            <tags>Complete</tags>
+            <resizable>true</resizable>
+            <bgColor>#fff</bgColor>
+        </info>
+        <stylesheet path="/static/mantle/components/widgets/social-share/css/mntl-social-share.css" />
+        <script group="top" path="/static/mantle/js/utilities.js" />
+        <script group="top" path="/static/mantle/js/maybe.js" />
+        <script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+        <script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+        <script group="bottom" path="/static/mantle/components/widgets/social-share/js/social-share.js" />
+        <model name="json" id="socialLinks">
+            <property name="string" value="{ 'FACEBOOK':'#fb', 'PINTEREST':'#pin', 'EMAILSHARE':'#email', 'FLIPBOARD':'#flipboard' }" />
+            <property name="class" value="java.util.Map" />
+        </model>
+        <property name="networks" value="FACEBOOK,PINTEREST,EMAILSHARE,FLIPBOARD" />
+    </component>
+
+</components>

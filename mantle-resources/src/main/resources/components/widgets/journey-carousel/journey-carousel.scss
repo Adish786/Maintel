@@ -1,0 +1,54 @@
+@import "mntlVariables";
+
+.mntl-journey-carousel {
+    &__items {
+        display: flex;
+        overflow: hidden;
+
+        &.js-animatable .mntl-journey-carousel__item {
+            transition: transform 0.5s ease;
+        }
+    }
+
+    &__item {
+        flex: 0 0 250px;
+        display: inline-block;
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        padding: 0 50px;
+    }
+
+    &__arrow {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: calc(50% - 25px);
+
+        &.is-active {
+            display: block;
+            cursor: pointer;
+        }
+
+        &-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            transform: rotate(180deg);
+            right: 0;
+        }
+    }
+}

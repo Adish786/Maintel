@@ -1,0 +1,21 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  height: 2.75rem;
+  
+  &__stars {
+    display: inline-flex;
+    border-right: 0.0625rem solid $color-black-15;
+    width: 14.8125rem;
+  }
+
+  &__star {
+    cursor: pointer;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  &__text {
+    align-items: center;
+  }
+}

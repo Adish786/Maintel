@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+    <component id="mntl-rss-feed" resourcePath="/components/rssfeed/rssfeed.ftl">
+
+        <for id="title,link,description,language">
+            <property id="channel" value="${@feed.channel ?: null}" onError="halt">
+			
+			<!-- Note: By default Mantle assumes that feedname will be provided via 
+				url query param. Extending vertical override this by hard-coding feedname 
+				in its extending xml Refer to 'rssfeed.xml' components in Beauty or Finance 
+				for reference. You will also not find template definition for this component 
+				in Mantle either and any corresponding action in Mantle's 'actions/xml'. 
+				Reason being, rss feeds are not activated out of the box from Mantle. Extending 
+				verticals must provide.cessary plumbing and integration for Mantle's passive 
+				code to work. Refer to Beauty and Finance verticals for reference as well. -->
+                <model name="feed" id="feed" onError="halt">
+        			<property name="feedName" queryOverride="feedName" />
+        		</model>
+            </property>
+        </for>
+        
+        <map id="xmlHeader">
+            <property name="version" value="1.0"/>
+            <property name="encoding" value="UTF-8"/>
+        </map>
+
+        <map id="rssAttributes">
+            <property name="version" value="2.0"/>
+            <property name="xmlns:dc" value="http://purl.org/dc/elements/1.1/"/>
+        </map>
+
+        <property name="title" value="${@channel.title ?: null}" onError="halt" />
+        <property name="link" value="${@channel.link ?: null}" onError="collapse" />
+        <property name="description" value="${@channel.description ?: null}" onError="collapse" />
+        <property name="language" value="${@channel.language != null ? @channel.language : 'en'}" onError="collapse" />
+     
+     </component>   
+</components>

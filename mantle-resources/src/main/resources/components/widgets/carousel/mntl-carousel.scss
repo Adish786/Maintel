@@ -1,0 +1,146 @@
+@import "mntlVariables";
+
+.mntl-carousel--inline {
+    @media (min-width: $bp-small2) {
+        width: 50%;
+    }
+}
+
+.mntl-carousel__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.mntl-carousel__items {
+    display: flex;
+    overflow: hidden;
+
+    &.js-animatable .mntl-carousel__item {
+        transition: transform 0.5s ease;
+    }
+
+    .mntl-carousel--inline & {
+        order: 0;
+        width: 100%;
+    }
+}
+
+.mntl-carousel__item {
+    flex: 0 0 250px;
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .mntl-carousel--inline & {
+        @media (min-width: $bp-small2) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.mntl-carousel__slider {
+    position: relative;
+    padding: 0 50px;
+}
+
+.mntl-carousel__arrow {
+    display: block;
+    opacity: 0.4;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: calc(50% - 25px);
+
+    &.is-active {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.mntl-carousel__arrow--left {
+    left: 0;
+
+    .mntl-carousel--inline & {
+        order: 1;
+        margin-left: calc(50% - 120px/2);
+    }
+}
+
+.mntl-carousel__arrow--right {
+    transform: rotate(180deg);
+    right: 0;
+
+    .mntl-carousel--inline & {
+        order: 2;
+    }
+}
+
+.mntl-carousel__arrow-icon {
+    position: absolute;
+    width: 16px;
+    height: 18px;
+    left: 19px;
+    top: 16px;
+}
+
+.mntl-carousel.allow-free-scroll {
+    margin-bottom: 34.8125rem;
+
+    .mntl-carousel__wrapper {
+        padding: 0;
+    }
+
+    .mntl-carousel__items {
+        overflow: scroll;
+
+        &:after {
+            // on scroll, margin/padding doesn't work on last item, this adds 16px to the end
+            content: '';
+            flex: 0 0 1rem;
+            height: 1px;
+        }
+    }
+
+    .mntl-carousel__item:first-child {
+        margin-left: 1rem;
+    }
+
+    &.scroll-snap {
+        .mntl-carousel__items {
+            scroll-snap-type: x mandatory;
+        }
+
+        .mntl-carousel__item {
+            scroll-snap-align: start;
+        }
+    }
+}
+
+.mntl-carousel__card {
+    padding: 0.5rem;
+    background-color: $color-gray;
+}
+
+.mntl-carousel__indicator {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.mntl-carousel__indicator-item {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 20px;
+    border: 1px solid $color-gray;
+}
+
+.mntl-carousel__indicator-item--active {
+    background-color: $primary;
+}

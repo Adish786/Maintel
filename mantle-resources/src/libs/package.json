@@ -1,0 +1,13 @@
+{
+    "name": "@dotdash/mantle-libs",
+    "version": "1.0.0",
+    "description": "Mantle libs directory",
+    "author": "Dotdash - Globe Core",
+    "engines": {
+      "yarn": ">= 1.0.0"
+    },
+    "dependencies": {
+      "justified-columns": "git://github.com/Dotdashcom/justified-columns.git#0.3.7"
+    }
+  }
+  

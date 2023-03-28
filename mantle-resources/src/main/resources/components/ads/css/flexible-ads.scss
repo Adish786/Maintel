@@ -1,0 +1,43 @@
+/**
+ * 1) Overall site biz rule
+ * 2) Delete extra space at bottom of ad
+ * 3) Ad element to hold open correct height
+ * 4) Set aspect ratio height
+ * 5) Move the ad back to the expcted position; ad offset by pseudo-element (3,4)
+ */
+div[data-iab-container$='flex'] {
+    position: relative;
+    width: 100%;
+    max-width: 1252px; /* 1 */
+    font-size: 0; /* 2 */
+
+    /* 3 */
+    &[data-iabc-aspect]::before {
+        content: ' ';
+        display: block;
+    }
+
+    /* 4 */
+    @each $width in 10 8 6 4 3 {
+        &[data-iabc-aspect='#{$width}x1']::before {
+            padding-top: #{(1/$width)*100%};
+        }
+    }
+
+    @each $height in 1 2 3 {
+        &[data-iabc-aspect='1x#{$height}']::before {
+            padding-top: #{($height)*100%};
+        }
+    }
+
+    /* 5 */
+    & > iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

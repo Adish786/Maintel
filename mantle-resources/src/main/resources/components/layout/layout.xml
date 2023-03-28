@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/components.xsd">
+
+	<component id="mntl-html" resourcePath="/components/layout/view/layout-html.ftl">
+		<info>
+			<category>Mantle Components/Layout</category>
+			<displayName>Boilerplate HTML</displayName>
+			<description>A more opinionated baseline html component to reduce duplicative code across verticals.</description>
+			<documentation></documentation>
+			<tags>Complete</tags>
+			<previewType>markup</previewType>
+			<for id="*">
+				<model name="mockDocument" id="document" mode="replace">
+					<property name="template" value="pattern-library/meta" />
+				</model>
+			</for>
+		</info>
+
+		<property name="trackingContainer" value="true" type="boolean" />
+
+		<model name="moduleVersions">
+			<property name="stripLastChar" value="true" type="boolean" />
+		</model>
+
+		<stylesheet path="/static/mantle/css/state.css" />
+		<stylesheet path="/static/mantle/css/image-placeholder.css" />
+
+		<map id="attrs">
+			<property name="lang" value="en" />
+		</map>
+
+		<list id="class">
+			<property name="no-js" value="no-js" />
+		</list>
+
+		<!-- Evaluated JS location for other scripts that need to be first in the head tag -->
+		<component location="head" id="mntl-javascript-resources-prioritized" ref="mntl-javascript-resources">
+			<property name="group" value="prioritized" />
+			<property name="inline" value="true" type="boolean" />
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+		<component location="head" ref="qaScripts">
+			<property name="includeQaScripts" value="${requestContext.headers.debugJsCheck ? true : null}" onError="collapseSilent" />
+		</component>
+
+		<component location="head" id="baseScripts" ref="mntl-group">
+			<script group="top" path="/static/mantle/components/layout/js/js-check.js" />
+			<script group="top" path="/static/mantle/js/lazysizes-config.js" />
+			<script group="top" path="/static/mantle/static/libs/js/lazysizes.js" />
+			<script group="top" path="/static/mantle/js/loaded.js" />
+			<script group="top" path="/static/mantle/js/vendor/modernizr-mantle.js" />
+			<script group="top" path="/static/mantle/js/cookies.js" />
+			<script group="top" path="/static/mantle/static/libs/js/querystring.js" />
+			<script group="top" path="/static/mantle/js/utilities.js" />
+			<script group="top" path="/static/mantle/js/fn-utilities.js" />
+			<script group="top" path="/static/mantle/js/dom-utilities.js" />
+			<script group="top" path="/static/mantle/js/adMetricsTracker.js" tests="orion" buckets="active" />
+			<script group="top" path="/static/mantle/js/GPT.js" />
+			<script group="top" path="/static/mantle/js/vendor/throttle.js" />
+			<script group="top" path="/static/mantle/js/revenueTracking.js" />
+			<script group="bottom" path="/static/mantle/static/libs/js/jquery.js" />
+			<script group="bottom" path="/static/mantle/js/utilities-built-with-jquery.js" />
+			<script group="bottom" path="/static/mantle/js/mntl-vanilla-scroll.js" />
+			<script group="bottom" path="/static/mantle/components/internal/defer/js/deferred.js" />
+
+			<component location="content" id="picturefill" ref="mntl-group">
+				<script group="bottom" path="/static/mantle/static/libs/js/picturefill.js" />
+				<property name="arbitraryDependency" value="${requestContext.userAgent.getFamilyName() == 'IE' OR requestContext.userAgent.getFamilyName() == 'Opera Mini' ? true : null}" onError="collapseSilent" />
+			</component>
+		</component>
+
+		<component location="head" ref="mntl-csrf" />
+		<component location="head" ref="mntl-caeslinks" />
+		<component location="head" ref="mntl-preconnect" />
+		<component location="head" ref="mntl-meta" />
+
+		<component location="head" ref="mntl-stylesheet-resources" />
+
+		<component location="head" ref="${@externalConfig.value ? 'mntl-stylesheet-resources' : 'mntl-group'}">
+			<property name="group" value="async" />
+			<model name="externalConfig">
+				<property name="key" value="com.about.globe.assets.css.async.enabled" />
+				<property name="default" value="false" type="boolean" />
+				<property name="type" value="${T(java.lang.Boolean).TYPE}" />
+			</model>
+		</component>
+
+		<component location="head" ref="mntl-stylesheet-resources">
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+		<component location="head" ref="mntl-javascript-resources" views="pc, tablet">
+			<property name="group" value="top" />
+			<property name="inline" value="false" type="boolean" />
+			<property name="evaluatedOnly" value="false" type="boolean" />
+		</component>
+
+		<component location="head" ref="mntl-javascript-resources" views="pc, tablet">
+			<property name="group" value="top" />
+			<property name="inline" value="true" type="boolean" />
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+		<component location="body" ref="mntl-svg-resources" />
+
+        <component location="body" id="mntl-productrecord-block-resources" ref="mntl-external-component">
+            <model name="externalComponent">
+                <property name="serviceId" value="commerce" />
+                <property name="componentId" value="${'productrecord-block-resources'}">
+                    <property name="collapseIfNotExternalProductrecord" value="${@isExternalProductrecordEnabled.value AND @document != null AND (@document instanceof T( com.about.mantle.model.extended.docv2.sc.StructuredContentBaseDocumentEx)) AND @document.getContentsListOfType('PRODUCTRECORD').size() gt 0 ? true : null}" onError="collapseSilent">
+                        <model name="externalConfig" id="isExternalProductrecordEnabled">
+                            <property name="key" value="com.about.globe.externalProductrecord.enabled"/>
+                            <property name="default" value="false" type="boolean" />
+                            <property name="type" value="${T(java.lang.Boolean).TYPE}" />
+                        </model>
+                        <model name="fetchDocumentIfValid" id="document" onError="ignore" />
+                    </property>
+                </property>
+            </model>
+        </component>
+
+		<component location="postBody" ref="mntl-javascript-resources" views="mobile">
+			<property name="group" value="top" />
+			<property name="inline" value="false" type="boolean" />
+			<property name="evaluatedOnly" value="false" type="boolean" />
+		</component>
+
+		<component location="postBody" ref="mntl-javascript-resources" views="mobile">
+			<property name="group" value="top" />
+			<property name="inline" value="true" type="boolean" />
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+		<component location="postBody" ref="mntl-javascript-resources">
+			<property name="group" value="bottom" />
+			<property name="inline" value="false" type="boolean" />
+			<property name="evaluatedOnly" value="false" type="boolean" />
+		</component>
+
+		<component location="postBody" ref="mntl-javascript-resources">
+			<property name="group" value="bottom" />
+			<property name="inline" value="true" type="boolean" />
+			<property name="evaluatedOnly" value="true" type="boolean" />
+		</component>
+
+		<component id="mntl-sponsor-tracking-codes-wrapper" location="postBody" ref="mntl-group">
+			<!-- ONLY include this on pages associated with a document -->
+			<property name="arbitraryDependency1" value="${(requestContext.urlData instanceof
+				T(com.about.hippodrome.url.VerticalUrlData) AND requestContext.urlData.docId != null
+				AND requestContext.urlData.docId != 404) ? true : null}" onError="collapseSilent" />
+			<!-- ONLY include this outside the GDPR zone -->
+			<property name="arbitraryDependency2" value="${requestContext.geoData == null OR !requestContext.geoData.isInEuropeanUnion() ? true : null}" onError="collapseSilent" />
+			<!-- NOTE the defer=load because we don't want the tracking codes ruining our page performance -->
+			<component location="content" ref="mntl-sponsor-tracking-codes" defer="load" />
+		</component>
+
+	</component>
+
+	<component id="mntl-layout-body" resourcePath="/components/layout/view/layout-body.ftl">
+		<info>
+			<category>Mantle Components/Layout</category>
+			<displayName>Body</displayName>
+			<description></description>
+			<documentation>Provides template areas `header`, `main`, `footer`, `prioritizedFooterScripts`, `footerScripts` and `postFooter`.</documentation>
+			<tags>Complete</tags>
+			<previewType>none</previewType>
+		</info>
+		<component location="main" ref="mntl-height-change-listener" />
+		<component location="postFooter" ref="mntl-sc-icons" />
+		<component location="postFooter" ref="mntl-outofpage" />
+	</component>
+
+	<component id="mntl-layout-row" ref="mntl-block">
+				<info>
+						<category>Mantle Components/Layout</category>
+						<displayName>Row</displayName>
+						<description></description>
+						<documentation>Extends `/components/base/group.xml#mntl-block`.</documentation>
+						<tags>Complete</tags>
+						<previewType>markup</previewType>
+				</info>
+		<stylesheet path="/static/mantle/components/layout/css/layout-row.css" />
+	</component>
+
+	<component id="mntl-layout-print" resourcePath="/components/layout/view/layout-print.ftl">
+		<component location="head" ref="mntl-favicons" />
+		<component location="head" ref="mntl-stylesheet-resources" />
+	</component>
+
+	<component id="mntl-external-layout-body" ref="mntl-layout-body">
+		<info>
+			<category>Mantle Components/Layout</category>
+			<displayName>External Basic</displayName>
+			<description></description>
+			<documentation>Provides template areas `article-header`, `post-header`, `left-rail`, `pre-content`, `content` `right-rail` and `post-content`.</documentation>
+			<tags>Complete</tags>
+			<previewType>none</previewType>
+		</info>
+
+		<component location="main" id="mntl-external-basic-sublayout" resourcePath="/components/layout/view/sublayout-external-base.ftl">
+
+			<stylesheet id="mntl-sublayout-external-basic-styles" path="/static/mantle/css/layout/sublayout-external-basic.css" />
+
+			<map id="attrs">
+				<!-- ads config -->
+			</map>
+
+			<component location="content" id="mntl-external-basic-sublayout-content" resourcePath="/components/layout/view/sublayout-external-base-content.ftl">
+
+				<list id="class">
+					<property name="sc-ad-container" value="sc-ad-container" />
+					<property name="right-rail" value="right-rail" />
+				</list>
+
+				<map id="attrs"></map>
+
+				<component location="content-body" id="external-content" ref="mntl-external-component">
+					<model name="externalComponent">
+						<!-- REQUIRED -->
+						<!-- serviceId -->
+						<!-- componentId -->
+					</model>
+
+				</component>
+			</component>
+		</component>
+	</component>
+</components>

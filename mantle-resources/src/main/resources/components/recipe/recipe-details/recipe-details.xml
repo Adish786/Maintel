@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../xsd/components.xsd">
+    <component id="mntl-recipe-details" resourcePath="/components/recipe/recipe-details/recipe-details.ftl">
+        <info>
+            <category>Mantle Components/Recipe</category>
+            <displayName>Recipe Details</displayName>
+            <description>
+                Displays prep time, cook time, total time, servings, yield, and a custom time field. 
+                Will also render a link to jump to the nutrition facts component if that exists. 
+            </description>
+        </info>
+
+        <stylesheet path="/static/components/recipe/recipe-details/recipe-details.css" />
+
+        <property name="customTimeLabel" value="${@document?.customTime?.label}" onError="ignore" />
+
+        <component location="nutrition-link" id="mntl-recipe-details__nutrition-link" ref="mntl-text-block">
+            <script path="/static/components/recipe/recipe-details/recipe-details.js" />
+            <property name="tag" value="span" />
+            <property name="text" value="Jump to Nutrition Facts" />
+
+            <property name="hasNutritionFacts" value="${@nutritionInfo ?: @document.nutritionInfo?.display == false ? null : @document.nutritionInfo?.nutritionFacts}" onError="collapseSilent">
+                <model name="pruneUnusedFields" id="nutritionInfo" onError="ignore">
+                    <property name="nutritionAnalysis" value="${@document.nutritionAnalysis}" onError="ignore" />
+                </model>
+            </property>
+        </component>
+
+        <for id="this, customTimeLabel, hasNutritionFacts, nutritionAnalysis">
+            <model name="DOCUMENT" id="document" />
+        </for>
+    </component>
+</components>

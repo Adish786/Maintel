@@ -1,0 +1,120 @@
+@import "mntlVariables";
+@import 'ads-mixins';
+
+$default-leaderboard-height: 90px;
+
+.leaderboard {
+    display: none;
+    min-height: $default-leaderboard-height;
+    width: 100%;
+    overflow: hidden;
+
+    @media (min-width: 720px) {
+        display: block;
+    }
+
+    .mntl-leaderboard-fixed-0 {
+        max-height: 90px;
+    }
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before,
+        &::after {
+            content: 'Advertisement';
+            height: 20px;
+            margin: 0 -2.5em;
+            transform: rotate(270deg);
+            transform-origin: center center 0;
+            visibility: hidden;
+        }
+
+        @include hideAdLabel();
+    }
+
+    // Targetting for verticals where the data-ad-width attribute is not on the wrapper
+    @include hideAdLabel();
+
+    &[data-ad-height].has-left-label .wrapper::before,
+    &[data-ad-height].has-right-label .wrapper::after {
+        visibility: visible;
+    }
+
+    &.mntl-leaderboard-header {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        $height-transition: max-height 0.1s linear, min-height 0.1s linear;
+
+        &,
+        &.is-collapsed[data-ad-height='90']:hover {
+            transform: translate(0, 0);
+            transition: #{$height-transition}, transform 0.2s ease-out;
+        }
+
+        &.is-collapsed {
+            transform: translate(0, -200%);
+            /* From GLBE-7460 we found 0.8s was the sweet spot to keep viewability high and have a decent UX */
+            transition: #{$height-transition}, transform 0.8s ease-in 0.8s;
+        }
+
+        & + .mntl-leaderboard-spacer {
+            min-height: $default-leaderboard-height;
+            transition: none;
+        }
+
+        &[data-ad-height='250'] + .mntl-leaderboard-spacer {
+            min-height: 250px;
+        }
+
+        &.not-sticky {
+            position: absolute;
+        }
+    }
+}
+
+.mntl-leaderboard-header {
+    &__closing-elm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        color: $color-white;
+        background-color: black;
+        right: 0;
+        height: 20px;
+        width: 20px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
+
+/*
+	The leaderboard is hidden on smaller breakpoint so this should be too,
+	selector granularity is at the lowest class selector to allow easier overrides by 3rd party ads i.e specless.
+*/
+.mntl-leaderboard-spacer {
+    display: none;
+
+    @media (min-width: 720px) {
+        display: block;
+    }
+}
+
+/*
+    When a halo ad product is served, the haloShown class is added to the body tag
+*/
+.haloShown {
+    .mntl-leaderboard-spacer {
+        aspect-ratio: 4 / 1;
+    }
+}

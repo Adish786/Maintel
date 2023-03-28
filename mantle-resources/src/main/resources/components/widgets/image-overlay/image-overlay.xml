@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-image-overlay" ref="mntl-block">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Image Overlay</displayName>
+			<documentation>
+                # Usage
+
+                ## Overlay for images tagged as "sensitive" which will require a button click in order to show
+
+                Add overlay component as a sibling to an image in a container with position: relative. The overlay will be absolutely positioned
+                on top of the image.
+
+                ### Classes
+
+                - **.mntl-image-overlay** the overlay element
+                - **.js-hidden** applied to .mntl-image-overlay when .mntl-image-overlay__button is clicked. This adds display: none to the overlay
+                which allows the sensitive image to be visible.
+			</documentation>
+			<tags>Complete</tags>
+			<previewType>none</previewType>
+        </info>
+        
+		<stylesheet path="/static/mantle/components/widgets/image-overlay/image-overlay.css" />
+        <script path="/static/mantle/components/widgets/image-overlay/image-overlay.js" />
+
+        <component location="content" ref="mntl-svg">
+		    <svg id="icon-eye" path="/static/mantle/svg/icon-eye.svg" />
+            <property name="name" value="icon-eye" />
+            <property name="class" value="mntl-image-overlay__icon" />
+        </component>
+
+        <component location="content" id="mntl-image-overlay__text" ref="mntl-text-block">
+            <property name="tag" value="p" />
+            <property name="text" value="This photo contains content that some people may find graphic or disturbing." />
+        </component>
+
+        <component location="content" id="mntl-image-overlay__button" ref="mntl-button">
+            <property name="text" value="See Photo" />
+        </component>
+    </component>
+
+</components>

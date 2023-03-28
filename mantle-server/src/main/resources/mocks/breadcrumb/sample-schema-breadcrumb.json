@@ -1,0 +1,2324 @@
+[
+  {
+    "docId": 4127989,
+    "nodeAttributes": {},
+    "nodeType": null,
+    "document": {
+      "key": null,
+      "revisionKey": null,
+      "authorKey": null,
+      "actorId": null,
+      "actorGid": null,
+      "lastEditingAuthorId": null,
+      "lastEditingUserId": null,
+      "ownerKey": null,
+      "url": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+      "rootUrl": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+      "templateType": "TAXONOMY",
+      "documentState": {
+        "state": "ACTIVE"
+      },
+      "medicalBoardApproved": null,
+      "editingAuthorKey": null,
+      "noIndex": null,
+      "title": "Color, Paint & Wallpaper",
+      "socialTitle": null,
+      "keywords": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "metaDescription": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+      "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+      "promoDescription": null,
+      "heading": "Color, Paint & Wallpaper",
+      "paging": null,
+      "author": null,
+      "stamp": {
+        "docId": 4127989,
+        "stampValue": "spr_color-paint-and-wallpaper",
+        "adValue": "pidspr_color-paint-and-wallpaper",
+        "tags": null
+      },
+      "summary": {
+        "title": "Color, Paint & Wallpaper",
+        "socialTitle": "Color, Paint & Wallpaper",
+        "heading": "Color, Paint & Wallpaper",
+        "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+        "image": {
+          "url": null,
+          "caption": null,
+          "owner": null,
+          "alt": null,
+          "width": null,
+          "height": null,
+          "id": null,
+          "fileName": null,
+          "objectPath": null,
+          "objectId": null,
+          "sensitive": null,
+          "original": false
+        },
+        "sponsor": null
+      },
+      "metaData": {
+        "url": null,
+        "docId": null,
+        "hasTableOfContents": false,
+        "entities": [],
+        "recircKeywords": {
+          "limit": null,
+          "offset": null,
+          "totalSize": 0,
+          "list": []
+        },
+        "review": null,
+        "appleArticleId": null,
+        "badge": null
+      },
+      "slug": "color-paint-and-wallpaper",
+      "primaryVideo": null,
+      "primaryImage": {
+        "url": null,
+        "caption": null,
+        "owner": null,
+        "alt": null,
+        "width": null,
+        "height": null,
+        "id": null,
+        "fileName": null,
+        "objectPath": null,
+        "objectId": null,
+        "sensitive": null,
+        "original": false
+      },
+      "sponsor": null,
+      "sources": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "citations": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "vertical": "LIFESTYLE",
+      "tickers": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "viewType": null,
+      "taggedImages": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "hasTableOfContents": null,
+      "disclaimer": null,
+      "methodology": null,
+      "revenueGroup": null,
+      "newsType": null,
+      "guestAuthor": null,
+      "shortHeading": "Color, Paint & Wallpaper",
+      "thumbImage": null,
+      "pages": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "subheading": null,
+      "docId": 4127989
+    },
+    "configuration": {},
+    "relationships": {
+      "limit": null,
+      "offset": null,
+      "totalSize": 1,
+      "list": [
+        {
+          "name": "primaryParent",
+          "weight": 20,
+          "targetNode": {
+            "docId": 4127997,
+            "nodeAttributes": {},
+            "nodeType": null,
+            "document": {
+              "key": null,
+              "revisionKey": null,
+              "authorKey": null,
+              "actorId": null,
+              "actorGid": null,
+              "lastEditingAuthorId": null,
+              "lastEditingUserId": null,
+              "ownerKey": null,
+              "url": "https://www.thespruce.com/interior-decorating-4127997",
+              "rootUrl": "https://www.thespruce.com/interior-decorating-4127997",
+              "templateType": "TAXONOMY",
+              "documentState": {
+                "state": "ACTIVE"
+              },
+              "medicalBoardApproved": null,
+              "editingAuthorKey": null,
+              "noIndex": null,
+              "title": "Home Decorating & Interior Design Ideas",
+              "socialTitle": null,
+              "keywords": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "metaDescription": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+              "description": "Looking to update your home decor? We can show you how. We&#39;ve got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+              "promoDescription": null,
+              "heading": "Home Decorating & Interior Design Ideas",
+              "paging": null,
+              "author": null,
+              "stamp": {
+                "docId": 4127997,
+                "stampValue": "spr_interior-decorating",
+                "adValue": "pidspr_interior-decorating",
+                "tags": null
+              },
+              "summary": {
+                "title": "Home Decorating & Interior Design Ideas",
+                "socialTitle": "Home Decorating & Interior Design Ideas",
+                "heading": "Home Decorating & Interior Design Ideas",
+                "description": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                "image": {
+                  "url": null,
+                  "caption": null,
+                  "owner": null,
+                  "alt": null,
+                  "width": null,
+                  "height": null,
+                  "id": null,
+                  "fileName": null,
+                  "objectPath": null,
+                  "objectId": null,
+                  "sensitive": null,
+                  "original": false
+                },
+                "sponsor": null
+              },
+              "metaData": {
+                "url": null,
+                "docId": null,
+                "hasTableOfContents": false,
+                "entities": [],
+                "recircKeywords": {
+                  "limit": null,
+                  "offset": null,
+                  "totalSize": 0,
+                  "list": []
+                },
+                "review": null,
+                "appleArticleId": null,
+                "badge": null
+              },
+              "slug": "interior-decorating",
+              "primaryVideo": null,
+              "primaryImage": {
+                "url": null,
+                "caption": null,
+                "owner": null,
+                "alt": null,
+                "width": null,
+                "height": null,
+                "id": null,
+                "fileName": null,
+                "objectPath": null,
+                "objectId": null,
+                "sensitive": null,
+                "original": false
+              },
+              "sponsor": null,
+              "sources": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "citations": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "vertical": "LIFESTYLE",
+              "tickers": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "viewType": null,
+              "taggedImages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "hasTableOfContents": null,
+              "disclaimer": null,
+              "methodology": null,
+              "revenueGroup": null,
+              "newsType": null,
+              "guestAuthor": null,
+              "shortHeading": "Interior Decorating",
+              "thumbImage": null,
+              "pages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "subheading": null,
+              "docId": 4127997
+            },
+            "configuration": {},
+            "relationships": {
+              "limit": null,
+              "offset": null,
+              "totalSize": 1,
+              "list": [
+                {
+                  "name": "primaryParent",
+                  "weight": 21,
+                  "targetNode": {
+                    "docId": 4127998,
+                    "nodeAttributes": {},
+                    "nodeType": null,
+                    "document": {
+                      "key": null,
+                      "revisionKey": null,
+                      "authorKey": null,
+                      "actorId": null,
+                      "actorGid": null,
+                      "lastEditingAuthorId": null,
+                      "lastEditingUserId": null,
+                      "ownerKey": null,
+                      "url": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                      "rootUrl": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                      "templateType": "TAXONOMY",
+                      "documentState": {
+                        "state": "ACTIVE"
+                      },
+                      "medicalBoardApproved": null,
+                      "editingAuthorKey": null,
+                      "noIndex": null,
+                      "title": "Home Design",
+                      "socialTitle": null,
+                      "keywords": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "metaDescription": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                      "description": "Whether you&#39;re decorating your first home or are simply looking to make a few updates, we&#39;ve rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                      "promoDescription": null,
+                      "heading": "Home Design",
+                      "paging": null,
+                      "author": null,
+                      "stamp": {
+                        "docId": 4127998,
+                        "stampValue": "spr_home-design-and-decorating",
+                        "adValue": "pidspr_home-design-and-decorating",
+                        "tags": null
+                      },
+                      "summary": {
+                        "title": "Home Design",
+                        "socialTitle": "Home Design",
+                        "heading": "Home Design",
+                        "description": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                        "image": {
+                          "url": null,
+                          "caption": null,
+                          "owner": null,
+                          "alt": null,
+                          "width": null,
+                          "height": null,
+                          "id": null,
+                          "fileName": null,
+                          "objectPath": null,
+                          "objectId": null,
+                          "sensitive": null,
+                          "original": false
+                        },
+                        "sponsor": null
+                      },
+                      "metaData": {
+                        "url": null,
+                        "docId": null,
+                        "hasTableOfContents": false,
+                        "entities": [],
+                        "recircKeywords": {
+                          "limit": null,
+                          "offset": null,
+                          "totalSize": 0,
+                          "list": []
+                        },
+                        "review": null,
+                        "appleArticleId": null,
+                        "badge": null
+                      },
+                      "slug": "home-design-and-decorating",
+                      "primaryVideo": null,
+                      "primaryImage": {
+                        "url": null,
+                        "caption": null,
+                        "owner": null,
+                        "alt": null,
+                        "width": null,
+                        "height": null,
+                        "id": null,
+                        "fileName": null,
+                        "objectPath": null,
+                        "objectId": null,
+                        "sensitive": null,
+                        "original": false
+                      },
+                      "sponsor": null,
+                      "sources": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "citations": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "vertical": "LIFESTYLE",
+                      "tickers": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "viewType": null,
+                      "taggedImages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "hasTableOfContents": null,
+                      "disclaimer": null,
+                      "methodology": null,
+                      "revenueGroup": null,
+                      "newsType": null,
+                      "guestAuthor": null,
+                      "shortHeading": "Home Decor",
+                      "thumbImage": null,
+                      "pages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "subheading": null,
+                      "docId": 4127998
+                    },
+                    "configuration": {},
+                    "relationships": {
+                      "limit": null,
+                      "offset": null,
+                      "totalSize": 1,
+                      "list": [
+                        {
+                          "name": "primaryParent",
+                          "weight": 20,
+                          "targetNode": {
+                            "docId": 4117266,
+                            "nodeAttributes": {},
+                            "nodeType": null,
+                            "document": {
+                              "key": null,
+                              "revisionKey": null,
+                              "authorKey": null,
+                              "actorId": null,
+                              "actorGid": null,
+                              "lastEditingAuthorId": null,
+                              "lastEditingUserId": null,
+                              "ownerKey": null,
+                              "url": "https://www.thespruce.com/",
+                              "rootUrl": "https://www.thespruce.com/root-4117266",
+                              "templateType": "TAXONOMY",
+                              "documentState": {
+                                "state": "ACTIVE"
+                              },
+                              "medicalBoardApproved": null,
+                              "editingAuthorKey": null,
+                              "noIndex": null,
+                              "title": "The Spruce - Make Your Best Home",
+                              "socialTitle": null,
+                              "keywords": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "metaDescription": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                              "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you&#39;ve always wanted easy and fun.",
+                              "promoDescription": null,
+                              "heading": "The Spruce - Make Your Best Home",
+                              "paging": null,
+                              "author": null,
+                              "stamp": {
+                                "docId": 4117266,
+                                "stampValue": "spr_root",
+                                "adValue": "pidspr_root",
+                                "tags": null
+                              },
+                              "summary": {
+                                "title": "The Spruce - Make Your Best Home",
+                                "socialTitle": "The Spruce - Make Your Best Home",
+                                "heading": "The Spruce - Make Your Best Home",
+                                "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                                "image": {
+                                  "url": null,
+                                  "caption": null,
+                                  "owner": null,
+                                  "alt": null,
+                                  "width": null,
+                                  "height": null,
+                                  "id": null,
+                                  "fileName": null,
+                                  "objectPath": null,
+                                  "objectId": null,
+                                  "sensitive": null,
+                                  "original": false
+                                },
+                                "sponsor": null
+                              },
+                              "metaData": {
+                                "url": null,
+                                "docId": null,
+                                "hasTableOfContents": false,
+                                "entities": [],
+                                "recircKeywords": {
+                                  "limit": null,
+                                  "offset": null,
+                                  "totalSize": 0,
+                                  "list": []
+                                },
+                                "review": null,
+                                "appleArticleId": null,
+                                "badge": null
+                              },
+                              "slug": "root",
+                              "primaryVideo": null,
+                              "primaryImage": {
+                                "url": null,
+                                "caption": null,
+                                "owner": null,
+                                "alt": null,
+                                "width": null,
+                                "height": null,
+                                "id": null,
+                                "fileName": null,
+                                "objectPath": null,
+                                "objectId": null,
+                                "sensitive": null,
+                                "original": false
+                              },
+                              "sponsor": null,
+                              "sources": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "citations": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "vertical": "LIFESTYLE",
+                              "tickers": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "viewType": null,
+                              "taggedImages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "hasTableOfContents": null,
+                              "disclaimer": null,
+                              "methodology": null,
+                              "revenueGroup": null,
+                              "newsType": null,
+                              "guestAuthor": null,
+                              "shortHeading": "The Spruce",
+                              "thumbImage": null,
+                              "pages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "subheading": null,
+                              "docId": 4117266
+                            },
+                            "configuration": {},
+                            "relationships": {
+                              "limit": null,
+                              "offset": null,
+                              "totalSize": 0,
+                              "list": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "docId": 4127987,
+    "nodeAttributes": {},
+    "nodeType": null,
+    "document": {
+      "key": null,
+      "revisionKey": null,
+      "authorKey": null,
+      "actorId": null,
+      "actorGid": null,
+      "lastEditingAuthorId": null,
+      "lastEditingUserId": null,
+      "ownerKey": null,
+      "url": "https://www.thespruce.com/color-paint-and-wallpaper-ideas-4127987",
+      "rootUrl": "https://www.thespruce.com/color-paint-and-wallpaper-ideas-4127987",
+      "templateType": "TAXONOMY",
+      "documentState": {
+        "state": "ACTIVE"
+      },
+      "medicalBoardApproved": null,
+      "editingAuthorKey": null,
+      "noIndex": null,
+      "title": "Color, Paint & Wallpaper Ideas",
+      "socialTitle": null,
+      "keywords": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "metaDescription": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you'll find ideas for everything related to color in your home.",
+      "description": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you&#39;ll find ideas for everything related to color in your home.",
+      "promoDescription": null,
+      "heading": "Color, Paint & Wallpaper Ideas",
+      "paging": null,
+      "author": null,
+      "stamp": {
+        "docId": 4127987,
+        "stampValue": "spr_color-paint-and-wallpaper-ideas",
+        "adValue": "pidspr_color-paint-and-wallpaper-ideas",
+        "tags": null
+      },
+      "summary": {
+        "title": "Color, Paint & Wallpaper Ideas",
+        "socialTitle": "Color, Paint & Wallpaper Ideas",
+        "heading": "Color, Paint & Wallpaper Ideas",
+        "description": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you'll find ideas for everything related to color in your home.",
+        "image": {
+          "url": null,
+          "caption": null,
+          "owner": null,
+          "alt": null,
+          "width": null,
+          "height": null,
+          "id": null,
+          "fileName": null,
+          "objectPath": null,
+          "objectId": null,
+          "sensitive": null,
+          "original": false
+        },
+        "sponsor": null
+      },
+      "metaData": {
+        "url": null,
+        "docId": null,
+        "hasTableOfContents": false,
+        "entities": [],
+        "recircKeywords": {
+          "limit": null,
+          "offset": null,
+          "totalSize": 0,
+          "list": []
+        },
+        "review": null,
+        "appleArticleId": null,
+        "badge": null
+      },
+      "slug": "color-paint-and-wallpaper-ideas",
+      "primaryVideo": null,
+      "primaryImage": {
+        "url": null,
+        "caption": null,
+        "owner": null,
+        "alt": null,
+        "width": null,
+        "height": null,
+        "id": null,
+        "fileName": null,
+        "objectPath": null,
+        "objectId": null,
+        "sensitive": null,
+        "original": false
+      },
+      "sponsor": null,
+      "sources": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "citations": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "vertical": "LIFESTYLE",
+      "tickers": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "viewType": null,
+      "taggedImages": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "hasTableOfContents": null,
+      "disclaimer": null,
+      "methodology": null,
+      "revenueGroup": null,
+      "newsType": null,
+      "guestAuthor": null,
+      "shortHeading": "Paint & Wallpaper Ideas",
+      "thumbImage": null,
+      "pages": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "subheading": null,
+      "docId": 4127987
+    },
+    "configuration": {},
+    "relationships": {
+      "limit": 1,
+      "offset": 0,
+      "totalSize": 1,
+      "list": [
+        {
+          "name": "primaryParent",
+          "weight": 18,
+          "targetNode": {
+            "docId": 4127989,
+            "nodeAttributes": {},
+            "nodeType": null,
+            "document": {
+              "key": null,
+              "revisionKey": null,
+              "authorKey": null,
+              "actorId": null,
+              "actorGid": null,
+              "lastEditingAuthorId": null,
+              "lastEditingUserId": null,
+              "ownerKey": null,
+              "url": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+              "rootUrl": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+              "templateType": "TAXONOMY",
+              "documentState": {
+                "state": "ACTIVE"
+              },
+              "medicalBoardApproved": null,
+              "editingAuthorKey": null,
+              "noIndex": null,
+              "title": "Color, Paint & Wallpaper",
+              "socialTitle": null,
+              "keywords": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "metaDescription": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+              "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+              "promoDescription": null,
+              "heading": "Color, Paint & Wallpaper",
+              "paging": null,
+              "author": null,
+              "stamp": {
+                "docId": 4127989,
+                "stampValue": "spr_color-paint-and-wallpaper",
+                "adValue": "pidspr_color-paint-and-wallpaper",
+                "tags": null
+              },
+              "summary": {
+                "title": "Color, Paint & Wallpaper",
+                "socialTitle": "Color, Paint & Wallpaper",
+                "heading": "Color, Paint & Wallpaper",
+                "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+                "image": {
+                  "url": null,
+                  "caption": null,
+                  "owner": null,
+                  "alt": null,
+                  "width": null,
+                  "height": null,
+                  "id": null,
+                  "fileName": null,
+                  "objectPath": null,
+                  "objectId": null,
+                  "sensitive": null,
+                  "original": false
+                },
+                "sponsor": null
+              },
+              "metaData": {
+                "url": null,
+                "docId": null,
+                "hasTableOfContents": false,
+                "entities": [],
+                "recircKeywords": {
+                  "limit": null,
+                  "offset": null,
+                  "totalSize": 0,
+                  "list": []
+                },
+                "review": null,
+                "appleArticleId": null,
+                "badge": null
+              },
+              "slug": "color-paint-and-wallpaper",
+              "primaryVideo": null,
+              "primaryImage": {
+                "url": null,
+                "caption": null,
+                "owner": null,
+                "alt": null,
+                "width": null,
+                "height": null,
+                "id": null,
+                "fileName": null,
+                "objectPath": null,
+                "objectId": null,
+                "sensitive": null,
+                "original": false
+              },
+              "sponsor": null,
+              "sources": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "citations": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "vertical": "LIFESTYLE",
+              "tickers": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "viewType": null,
+              "taggedImages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "hasTableOfContents": null,
+              "disclaimer": null,
+              "methodology": null,
+              "revenueGroup": null,
+              "newsType": null,
+              "guestAuthor": null,
+              "shortHeading": "Color, Paint & Wallpaper",
+              "thumbImage": null,
+              "pages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "subheading": null,
+              "docId": 4127989
+            },
+            "configuration": {},
+            "relationships": {
+              "limit": null,
+              "offset": null,
+              "totalSize": 1,
+              "list": [
+                {
+                  "name": "primaryParent",
+                  "weight": 20,
+                  "targetNode": {
+                    "docId": 4127997,
+                    "nodeAttributes": {},
+                    "nodeType": null,
+                    "document": {
+                      "key": null,
+                      "revisionKey": null,
+                      "authorKey": null,
+                      "actorId": null,
+                      "actorGid": null,
+                      "lastEditingAuthorId": null,
+                      "lastEditingUserId": null,
+                      "ownerKey": null,
+                      "url": "https://www.thespruce.com/interior-decorating-4127997",
+                      "rootUrl": "https://www.thespruce.com/interior-decorating-4127997",
+                      "templateType": "TAXONOMY",
+                      "documentState": {
+                        "state": "ACTIVE"
+                      },
+                      "medicalBoardApproved": null,
+                      "editingAuthorKey": null,
+                      "noIndex": null,
+                      "title": "Home Decorating & Interior Design Ideas",
+                      "socialTitle": null,
+                      "keywords": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "metaDescription": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                      "description": "Looking to update your home decor? We can show you how. We&#39;ve got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                      "promoDescription": null,
+                      "heading": "Home Decorating & Interior Design Ideas",
+                      "paging": null,
+                      "author": null,
+                      "stamp": {
+                        "docId": 4127997,
+                        "stampValue": "spr_interior-decorating",
+                        "adValue": "pidspr_interior-decorating",
+                        "tags": null
+                      },
+                      "summary": {
+                        "title": "Home Decorating & Interior Design Ideas",
+                        "socialTitle": "Home Decorating & Interior Design Ideas",
+                        "heading": "Home Decorating & Interior Design Ideas",
+                        "description": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                        "image": {
+                          "url": null,
+                          "caption": null,
+                          "owner": null,
+                          "alt": null,
+                          "width": null,
+                          "height": null,
+                          "id": null,
+                          "fileName": null,
+                          "objectPath": null,
+                          "objectId": null,
+                          "sensitive": null,
+                          "original": false
+                        },
+                        "sponsor": null
+                      },
+                      "metaData": {
+                        "url": null,
+                        "docId": null,
+                        "hasTableOfContents": false,
+                        "entities": [],
+                        "recircKeywords": {
+                          "limit": null,
+                          "offset": null,
+                          "totalSize": 0,
+                          "list": []
+                        },
+                        "review": null,
+                        "appleArticleId": null,
+                        "badge": null
+                      },
+                      "slug": "interior-decorating",
+                      "primaryVideo": null,
+                      "primaryImage": {
+                        "url": null,
+                        "caption": null,
+                        "owner": null,
+                        "alt": null,
+                        "width": null,
+                        "height": null,
+                        "id": null,
+                        "fileName": null,
+                        "objectPath": null,
+                        "objectId": null,
+                        "sensitive": null,
+                        "original": false
+                      },
+                      "sponsor": null,
+                      "sources": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "citations": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "vertical": "LIFESTYLE",
+                      "tickers": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "viewType": null,
+                      "taggedImages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "hasTableOfContents": null,
+                      "disclaimer": null,
+                      "methodology": null,
+                      "revenueGroup": null,
+                      "newsType": null,
+                      "guestAuthor": null,
+                      "shortHeading": "Interior Decorating",
+                      "thumbImage": null,
+                      "pages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "subheading": null,
+                      "docId": 4127997
+                    },
+                    "configuration": {},
+                    "relationships": {
+                      "limit": null,
+                      "offset": null,
+                      "totalSize": 1,
+                      "list": [
+                        {
+                          "name": "primaryParent",
+                          "weight": 21,
+                          "targetNode": {
+                            "docId": 4127998,
+                            "nodeAttributes": {},
+                            "nodeType": null,
+                            "document": {
+                              "key": null,
+                              "revisionKey": null,
+                              "authorKey": null,
+                              "actorId": null,
+                              "actorGid": null,
+                              "lastEditingAuthorId": null,
+                              "lastEditingUserId": null,
+                              "ownerKey": null,
+                              "url": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                              "rootUrl": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                              "templateType": "TAXONOMY",
+                              "documentState": {
+                                "state": "ACTIVE"
+                              },
+                              "medicalBoardApproved": null,
+                              "editingAuthorKey": null,
+                              "noIndex": null,
+                              "title": "Home Design",
+                              "socialTitle": null,
+                              "keywords": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "metaDescription": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                              "description": "Whether you&#39;re decorating your first home or are simply looking to make a few updates, we&#39;ve rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                              "promoDescription": null,
+                              "heading": "Home Design",
+                              "paging": null,
+                              "author": null,
+                              "stamp": {
+                                "docId": 4127998,
+                                "stampValue": "spr_home-design-and-decorating",
+                                "adValue": "pidspr_home-design-and-decorating",
+                                "tags": null
+                              },
+                              "summary": {
+                                "title": "Home Design",
+                                "socialTitle": "Home Design",
+                                "heading": "Home Design",
+                                "description": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                                "image": {
+                                  "url": null,
+                                  "caption": null,
+                                  "owner": null,
+                                  "alt": null,
+                                  "width": null,
+                                  "height": null,
+                                  "id": null,
+                                  "fileName": null,
+                                  "objectPath": null,
+                                  "objectId": null,
+                                  "sensitive": null,
+                                  "original": false
+                                },
+                                "sponsor": null
+                              },
+                              "metaData": {
+                                "url": null,
+                                "docId": null,
+                                "hasTableOfContents": false,
+                                "entities": [],
+                                "recircKeywords": {
+                                  "limit": null,
+                                  "offset": null,
+                                  "totalSize": 0,
+                                  "list": []
+                                },
+                                "review": null,
+                                "appleArticleId": null,
+                                "badge": null
+                              },
+                              "slug": "home-design-and-decorating",
+                              "primaryVideo": null,
+                              "primaryImage": {
+                                "url": null,
+                                "caption": null,
+                                "owner": null,
+                                "alt": null,
+                                "width": null,
+                                "height": null,
+                                "id": null,
+                                "fileName": null,
+                                "objectPath": null,
+                                "objectId": null,
+                                "sensitive": null,
+                                "original": false
+                              },
+                              "sponsor": null,
+                              "sources": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "citations": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "vertical": "LIFESTYLE",
+                              "tickers": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "viewType": null,
+                              "taggedImages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "hasTableOfContents": null,
+                              "disclaimer": null,
+                              "methodology": null,
+                              "revenueGroup": null,
+                              "newsType": null,
+                              "guestAuthor": null,
+                              "shortHeading": "Home Decor",
+                              "thumbImage": null,
+                              "pages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "subheading": null,
+                              "docId": 4127998
+                            },
+                            "configuration": {},
+                            "relationships": {
+                              "limit": null,
+                              "offset": null,
+                              "totalSize": 1,
+                              "list": [
+                                {
+                                  "name": "primaryParent",
+                                  "weight": 20,
+                                  "targetNode": {
+                                    "docId": 4117266,
+                                    "nodeAttributes": {},
+                                    "nodeType": null,
+                                    "document": {
+                                      "key": null,
+                                      "revisionKey": null,
+                                      "authorKey": null,
+                                      "actorId": null,
+                                      "actorGid": null,
+                                      "lastEditingAuthorId": null,
+                                      "lastEditingUserId": null,
+                                      "ownerKey": null,
+                                      "url": "https://www.thespruce.com/",
+                                      "rootUrl": "https://www.thespruce.com/root-4117266",
+                                      "templateType": "TAXONOMY",
+                                      "documentState": {
+                                        "state": "ACTIVE"
+                                      },
+                                      "medicalBoardApproved": null,
+                                      "editingAuthorKey": null,
+                                      "noIndex": null,
+                                      "title": "The Spruce - Make Your Best Home",
+                                      "socialTitle": null,
+                                      "keywords": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "metaDescription": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                                      "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you&#39;ve always wanted easy and fun.",
+                                      "promoDescription": null,
+                                      "heading": "The Spruce - Make Your Best Home",
+                                      "paging": null,
+                                      "author": null,
+                                      "stamp": {
+                                        "docId": 4117266,
+                                        "stampValue": "spr_root",
+                                        "adValue": "pidspr_root",
+                                        "tags": null
+                                      },
+                                      "summary": {
+                                        "title": "The Spruce - Make Your Best Home",
+                                        "socialTitle": "The Spruce - Make Your Best Home",
+                                        "heading": "The Spruce - Make Your Best Home",
+                                        "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                                        "image": {
+                                          "url": null,
+                                          "caption": null,
+                                          "owner": null,
+                                          "alt": null,
+                                          "width": null,
+                                          "height": null,
+                                          "id": null,
+                                          "fileName": null,
+                                          "objectPath": null,
+                                          "objectId": null,
+                                          "sensitive": null,
+                                          "original": false
+                                        },
+                                        "sponsor": null
+                                      },
+                                      "metaData": {
+                                        "url": null,
+                                        "docId": null,
+                                        "hasTableOfContents": false,
+                                        "entities": [],
+                                        "recircKeywords": {
+                                          "limit": null,
+                                          "offset": null,
+                                          "totalSize": 0,
+                                          "list": []
+                                        },
+                                        "review": null,
+                                        "appleArticleId": null,
+                                        "badge": null
+                                      },
+                                      "slug": "root",
+                                      "primaryVideo": null,
+                                      "primaryImage": {
+                                        "url": null,
+                                        "caption": null,
+                                        "owner": null,
+                                        "alt": null,
+                                        "width": null,
+                                        "height": null,
+                                        "id": null,
+                                        "fileName": null,
+                                        "objectPath": null,
+                                        "objectId": null,
+                                        "sensitive": null,
+                                        "original": false
+                                      },
+                                      "sponsor": null,
+                                      "sources": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "citations": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "vertical": "LIFESTYLE",
+                                      "tickers": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "viewType": null,
+                                      "taggedImages": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "hasTableOfContents": null,
+                                      "disclaimer": null,
+                                      "methodology": null,
+                                      "revenueGroup": null,
+                                      "newsType": null,
+                                      "guestAuthor": null,
+                                      "shortHeading": "The Spruce",
+                                      "thumbImage": null,
+                                      "pages": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "subheading": null,
+                                      "docId": 4117266
+                                    },
+                                    "configuration": {},
+                                    "relationships": {
+                                      "limit": null,
+                                      "offset": null,
+                                      "totalSize": 0,
+                                      "list": []
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "docId": 4706540,
+    "nodeAttributes": {},
+    "nodeType": null,
+    "document": {
+      "key": null,
+      "revisionKey": null,
+      "authorKey": "202389",
+      "actorId": null,
+      "actorGid": null,
+      "lastEditingAuthorId": null,
+      "lastEditingUserId": null,
+      "ownerKey": null,
+      "url": "https://www.thespruce.com/hallway-paint-colors-4706540",
+      "rootUrl": "https://www.thespruce.com/hallway-paint-colors-4706540",
+      "templateType": "LISTSC",
+      "documentState": {
+        "state": "ACTIVE"
+      },
+      "medicalBoardApproved": false,
+      "editingAuthorKey": null,
+      "noIndex": false,
+      "title": "Best Hallway Paint Colors",
+      "socialTitle": "10 Hallway Paint Colors to Dress Up Any Space",
+      "keywords": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "metaDescription": "If you&#39;ve neglected your hallways, it&#39;s time to give them a facelift. Here are the best colors to bring out the most of these often-forgotten spaces.",
+      "description": null,
+      "promoDescription": null,
+      "heading": "10 Best Hallways Paint Colors",
+      "paging": null,
+      "author": {
+        "id": "202389",
+        "type": "AUTHOR",
+        "status": "LIVE",
+        "displayName": "Ashley Knierim",
+        "displayNamePossessive": "",
+        "contributingWriter": false,
+        "language": null,
+        "promotionDate": null,
+        "liveDate": null,
+        "terminationDate": null,
+        "numberOfExperts": 1,
+        "socialPresence": [
+          {
+            "network": "facebook",
+            "url": "https://www.facebook.com/ashley.knierim"
+          }
+        ],
+        "bioUrl": "https://www.thespruce.com/ashley-knierim-4154864",
+        "imageUrl": null,
+        "image": {
+          "url": null,
+          "caption": null,
+          "owner": null,
+          "alt": null,
+          "width": null,
+          "height": null,
+          "id": null,
+          "fileName": null,
+          "objectPath": null,
+          "objectId": null,
+          "sensitive": null,
+          "original": false
+        },
+        "shortBio": "Ashley Knierim covers home decor for The Spruce. She has over 10 years of experience in writing and editing and has held positions at Time and AOL."
+      },
+      "stamp": null,
+      "summary": {
+        "title": "Best Hallway Paint Colors",
+        "socialTitle": "10 Hallway Paint Colors to Dress Up Any Space",
+        "heading": "10 Best Hallways Paint Colors",
+        "description": "If you&#39;ve neglected your hallways, it&#39;s time to give them a facelift. Here are the best colors to bring out the most of these often-forgotten spaces.",
+        "image": {
+          "url": "https://fthmb.tqn.com/QyVCbaDXJVWFACua32XeY3qLT8E=/IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+          "caption": "",
+          "owner": "<p><a href=\"https://themamanotes.com/our-hallway-makeover/\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">The Mama Notes</a></p>",
+          "alt": "Hallway with a rug and framed pictures",
+          "width": 2000,
+          "height": 3000,
+          "id": "",
+          "fileName": "",
+          "objectPath": null,
+          "objectId": "IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+          "sensitive": null,
+          "original": false
+        },
+        "sponsor": null
+      },
+      "metaData": {
+        "url": null,
+        "docId": null,
+        "hasTableOfContents": false,
+        "entities": [],
+        "recircKeywords": {
+          "limit": null,
+          "offset": null,
+          "totalSize": 0,
+          "list": []
+        },
+        "review": null,
+        "appleArticleId": null,
+        "badge": null
+      },
+      "slug": "hallway-paint-colors",
+      "primaryVideo": null,
+      "primaryImage": {
+        "url": "https://fthmb.tqn.com/QyVCbaDXJVWFACua32XeY3qLT8E=/IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+        "caption": "",
+        "owner": "<p><a href=\"https://themamanotes.com/our-hallway-makeover/\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">The Mama Notes</a></p>",
+        "alt": "Hallway with a rug and framed pictures",
+        "width": 2000,
+        "height": 3000,
+        "id": "",
+        "fileName": "",
+        "objectPath": null,
+        "objectId": "IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+        "sensitive": null,
+        "original": false
+      },
+      "sponsor": null,
+      "sources": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "citations": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "vertical": "LIFESTYLE",
+      "tickers": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "viewType": null,
+      "taggedImages": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 1,
+        "list": [
+          {
+            "image": {
+              "url": "https://fthmb.tqn.com/QyVCbaDXJVWFACua32XeY3qLT8E=/IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+              "caption": "",
+              "owner": "<p><a href=\"https://themamanotes.com/our-hallway-makeover/\" data-component=\"link\" data-source=\"inlineLink\" data-type=\"externalLink\" data-ordinal=\"1\" rel=\"nofollow\">The Mama Notes</a></p>",
+              "alt": "Hallway with a rug and framed pictures",
+              "width": 2000,
+              "height": 3000,
+              "id": "",
+              "fileName": "",
+              "objectPath": null,
+              "objectId": "IMG_5452-b2a8c08c5fe34c6d81a4e39496b53799.jpg",
+              "sensitive": null,
+              "original": false
+            },
+            "tags": {
+              "limit": null,
+              "offset": null,
+              "totalSize": 6,
+              "list": [
+                "FACEBOOK",
+                "PINTEREST",
+                "PRIMARY",
+                "RECIRC",
+                "TWITTER",
+                "SCHEMA"
+              ]
+            }
+          }
+        ]
+      },
+      "hasTableOfContents": null,
+      "disclaimer": null,
+      "methodology": null,
+      "revenueGroup": null,
+      "newsType": null,
+      "guestAuthor": null,
+      "subheading": null,
+      "userFeedback": null,
+      "listOptions": null,
+      "intro": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "items": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "outro": {
+        "limit": null,
+        "offset": null,
+        "totalSize": 0,
+        "list": []
+      },
+      "docId": 4706540
+    },
+    "configuration": {},
+    "relationships": {
+      "limit": 1,
+      "offset": 0,
+      "totalSize": 1,
+      "list": [
+        {
+          "name": "primaryParent",
+          "weight": 70811,
+          "targetNode": {
+            "docId": 4127987,
+            "nodeAttributes": {},
+            "nodeType": null,
+            "document": {
+              "key": null,
+              "revisionKey": null,
+              "authorKey": null,
+              "actorId": null,
+              "actorGid": null,
+              "lastEditingAuthorId": null,
+              "lastEditingUserId": null,
+              "ownerKey": null,
+              "url": "https://www.thespruce.com/color-paint-and-wallpaper-ideas-4127987",
+              "rootUrl": "https://www.thespruce.com/color-paint-and-wallpaper-ideas-4127987",
+              "templateType": "TAXONOMY",
+              "documentState": {
+                "state": "ACTIVE"
+              },
+              "medicalBoardApproved": null,
+              "editingAuthorKey": null,
+              "noIndex": null,
+              "title": "Color, Paint & Wallpaper Ideas",
+              "socialTitle": null,
+              "keywords": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "metaDescription": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you'll find ideas for everything related to color in your home.",
+              "description": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you&#39;ll find ideas for everything related to color in your home.",
+              "promoDescription": null,
+              "heading": "Color, Paint & Wallpaper Ideas",
+              "paging": null,
+              "author": null,
+              "stamp": {
+                "docId": 4127987,
+                "stampValue": "spr_color-paint-and-wallpaper-ideas",
+                "adValue": "pidspr_color-paint-and-wallpaper-ideas",
+                "tags": null
+              },
+              "summary": {
+                "title": "Color, Paint & Wallpaper Ideas",
+                "socialTitle": "Color, Paint & Wallpaper Ideas",
+                "heading": "Color, Paint & Wallpaper Ideas",
+                "description": "Get inspired with our ideas, image galleries, DIY projects and more. From wall stencils and accents to painting old furniture, you'll find ideas for everything related to color in your home.",
+                "image": {
+                  "url": null,
+                  "caption": null,
+                  "owner": null,
+                  "alt": null,
+                  "width": null,
+                  "height": null,
+                  "id": null,
+                  "fileName": null,
+                  "objectPath": null,
+                  "objectId": null,
+                  "sensitive": null,
+                  "original": false
+                },
+                "sponsor": null
+              },
+              "metaData": {
+                "url": null,
+                "docId": null,
+                "hasTableOfContents": false,
+                "entities": [],
+                "recircKeywords": {
+                  "limit": null,
+                  "offset": null,
+                  "totalSize": 0,
+                  "list": []
+                },
+                "review": null,
+                "appleArticleId": null,
+                "badge": null
+              },
+              "slug": "color-paint-and-wallpaper-ideas",
+              "primaryVideo": null,
+              "primaryImage": {
+                "url": null,
+                "caption": null,
+                "owner": null,
+                "alt": null,
+                "width": null,
+                "height": null,
+                "id": null,
+                "fileName": null,
+                "objectPath": null,
+                "objectId": null,
+                "sensitive": null,
+                "original": false
+              },
+              "sponsor": null,
+              "sources": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "citations": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "vertical": "LIFESTYLE",
+              "tickers": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "viewType": null,
+              "taggedImages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "hasTableOfContents": null,
+              "disclaimer": null,
+              "methodology": null,
+              "revenueGroup": null,
+              "newsType": null,
+              "guestAuthor": null,
+              "shortHeading": "Paint & Wallpaper Ideas",
+              "thumbImage": null,
+              "pages": {
+                "limit": null,
+                "offset": null,
+                "totalSize": 0,
+                "list": []
+              },
+              "subheading": null,
+              "docId": 4127987
+            },
+            "configuration": {},
+            "relationships": {
+              "limit": 1,
+              "offset": 0,
+              "totalSize": 1,
+              "list": [
+                {
+                  "name": "primaryParent",
+                  "weight": 18,
+                  "targetNode": {
+                    "docId": 4127989,
+                    "nodeAttributes": {},
+                    "nodeType": null,
+                    "document": {
+                      "key": null,
+                      "revisionKey": null,
+                      "authorKey": null,
+                      "actorId": null,
+                      "actorGid": null,
+                      "lastEditingAuthorId": null,
+                      "lastEditingUserId": null,
+                      "ownerKey": null,
+                      "url": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+                      "rootUrl": "https://www.thespruce.com/color-paint-and-wallpaper-4127989",
+                      "templateType": "TAXONOMY",
+                      "documentState": {
+                        "state": "ACTIVE"
+                      },
+                      "medicalBoardApproved": null,
+                      "editingAuthorKey": null,
+                      "noIndex": null,
+                      "title": "Color, Paint & Wallpaper",
+                      "socialTitle": null,
+                      "keywords": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "metaDescription": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+                      "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+                      "promoDescription": null,
+                      "heading": "Color, Paint & Wallpaper",
+                      "paging": null,
+                      "author": null,
+                      "stamp": {
+                        "docId": 4127989,
+                        "stampValue": "spr_color-paint-and-wallpaper",
+                        "adValue": "pidspr_color-paint-and-wallpaper",
+                        "tags": null
+                      },
+                      "summary": {
+                        "title": "Color, Paint & Wallpaper",
+                        "socialTitle": "Color, Paint & Wallpaper",
+                        "heading": "Color, Paint & Wallpaper",
+                        "description": "Color is a major element of interior design and the walls in your home are the ultimate canvas. Learn how to choose the right colors for your walls, furniture and decor and get inspired by trends, how-tos and more.",
+                        "image": {
+                          "url": null,
+                          "caption": null,
+                          "owner": null,
+                          "alt": null,
+                          "width": null,
+                          "height": null,
+                          "id": null,
+                          "fileName": null,
+                          "objectPath": null,
+                          "objectId": null,
+                          "sensitive": null,
+                          "original": false
+                        },
+                        "sponsor": null
+                      },
+                      "metaData": {
+                        "url": null,
+                        "docId": null,
+                        "hasTableOfContents": false,
+                        "entities": [],
+                        "recircKeywords": {
+                          "limit": null,
+                          "offset": null,
+                          "totalSize": 0,
+                          "list": []
+                        },
+                        "review": null,
+                        "appleArticleId": null,
+                        "badge": null
+                      },
+                      "slug": "color-paint-and-wallpaper",
+                      "primaryVideo": null,
+                      "primaryImage": {
+                        "url": null,
+                        "caption": null,
+                        "owner": null,
+                        "alt": null,
+                        "width": null,
+                        "height": null,
+                        "id": null,
+                        "fileName": null,
+                        "objectPath": null,
+                        "objectId": null,
+                        "sensitive": null,
+                        "original": false
+                      },
+                      "sponsor": null,
+                      "sources": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "citations": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "vertical": "LIFESTYLE",
+                      "tickers": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "viewType": null,
+                      "taggedImages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "hasTableOfContents": null,
+                      "disclaimer": null,
+                      "methodology": null,
+                      "revenueGroup": null,
+                      "newsType": null,
+                      "guestAuthor": null,
+                      "shortHeading": "Color, Paint & Wallpaper",
+                      "thumbImage": null,
+                      "pages": {
+                        "limit": null,
+                        "offset": null,
+                        "totalSize": 0,
+                        "list": []
+                      },
+                      "subheading": null,
+                      "docId": 4127989
+                    },
+                    "configuration": {},
+                    "relationships": {
+                      "limit": null,
+                      "offset": null,
+                      "totalSize": 1,
+                      "list": [
+                        {
+                          "name": "primaryParent",
+                          "weight": 20,
+                          "targetNode": {
+                            "docId": 4127997,
+                            "nodeAttributes": {},
+                            "nodeType": null,
+                            "document": {
+                              "key": null,
+                              "revisionKey": null,
+                              "authorKey": null,
+                              "actorId": null,
+                              "actorGid": null,
+                              "lastEditingAuthorId": null,
+                              "lastEditingUserId": null,
+                              "ownerKey": null,
+                              "url": "https://www.thespruce.com/interior-decorating-4127997",
+                              "rootUrl": "https://www.thespruce.com/interior-decorating-4127997",
+                              "templateType": "TAXONOMY",
+                              "documentState": {
+                                "state": "ACTIVE"
+                              },
+                              "medicalBoardApproved": null,
+                              "editingAuthorKey": null,
+                              "noIndex": null,
+                              "title": "Home Decorating & Interior Design Ideas",
+                              "socialTitle": null,
+                              "keywords": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "metaDescription": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                              "description": "Looking to update your home decor? We can show you how. We&#39;ve got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                              "promoDescription": null,
+                              "heading": "Home Decorating & Interior Design Ideas",
+                              "paging": null,
+                              "author": null,
+                              "stamp": {
+                                "docId": 4127997,
+                                "stampValue": "spr_interior-decorating",
+                                "adValue": "pidspr_interior-decorating",
+                                "tags": null
+                              },
+                              "summary": {
+                                "title": "Home Decorating & Interior Design Ideas",
+                                "socialTitle": "Home Decorating & Interior Design Ideas",
+                                "heading": "Home Decorating & Interior Design Ideas",
+                                "description": "Looking to update your home decor? We can show you how. We've got tips and tutorials to help you decorate every room in your home plus hundreds of photo galleries to inspire you.",
+                                "image": {
+                                  "url": null,
+                                  "caption": null,
+                                  "owner": null,
+                                  "alt": null,
+                                  "width": null,
+                                  "height": null,
+                                  "id": null,
+                                  "fileName": null,
+                                  "objectPath": null,
+                                  "objectId": null,
+                                  "sensitive": null,
+                                  "original": false
+                                },
+                                "sponsor": null
+                              },
+                              "metaData": {
+                                "url": null,
+                                "docId": null,
+                                "hasTableOfContents": false,
+                                "entities": [],
+                                "recircKeywords": {
+                                  "limit": null,
+                                  "offset": null,
+                                  "totalSize": 0,
+                                  "list": []
+                                },
+                                "review": null,
+                                "appleArticleId": null,
+                                "badge": null
+                              },
+                              "slug": "interior-decorating",
+                              "primaryVideo": null,
+                              "primaryImage": {
+                                "url": null,
+                                "caption": null,
+                                "owner": null,
+                                "alt": null,
+                                "width": null,
+                                "height": null,
+                                "id": null,
+                                "fileName": null,
+                                "objectPath": null,
+                                "objectId": null,
+                                "sensitive": null,
+                                "original": false
+                              },
+                              "sponsor": null,
+                              "sources": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "citations": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "vertical": "LIFESTYLE",
+                              "tickers": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "viewType": null,
+                              "taggedImages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "hasTableOfContents": null,
+                              "disclaimer": null,
+                              "methodology": null,
+                              "revenueGroup": null,
+                              "newsType": null,
+                              "guestAuthor": null,
+                              "shortHeading": "Interior Decorating",
+                              "thumbImage": null,
+                              "pages": {
+                                "limit": null,
+                                "offset": null,
+                                "totalSize": 0,
+                                "list": []
+                              },
+                              "subheading": null,
+                              "docId": 4127997
+                            },
+                            "configuration": {},
+                            "relationships": {
+                              "limit": null,
+                              "offset": null,
+                              "totalSize": 1,
+                              "list": [
+                                {
+                                  "name": "primaryParent",
+                                  "weight": 21,
+                                  "targetNode": {
+                                    "docId": 4127998,
+                                    "nodeAttributes": {},
+                                    "nodeType": null,
+                                    "document": {
+                                      "key": null,
+                                      "revisionKey": null,
+                                      "authorKey": null,
+                                      "actorId": null,
+                                      "actorGid": null,
+                                      "lastEditingAuthorId": null,
+                                      "lastEditingUserId": null,
+                                      "ownerKey": null,
+                                      "url": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                                      "rootUrl": "https://www.thespruce.com/home-design-and-decorating-4127998",
+                                      "templateType": "TAXONOMY",
+                                      "documentState": {
+                                        "state": "ACTIVE"
+                                      },
+                                      "medicalBoardApproved": null,
+                                      "editingAuthorKey": null,
+                                      "noIndex": null,
+                                      "title": "Home Design",
+                                      "socialTitle": null,
+                                      "keywords": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "metaDescription": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                                      "description": "Whether you&#39;re decorating your first home or are simply looking to make a few updates, we&#39;ve rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                                      "promoDescription": null,
+                                      "heading": "Home Design",
+                                      "paging": null,
+                                      "author": null,
+                                      "stamp": {
+                                        "docId": 4127998,
+                                        "stampValue": "spr_home-design-and-decorating",
+                                        "adValue": "pidspr_home-design-and-decorating",
+                                        "tags": null
+                                      },
+                                      "summary": {
+                                        "title": "Home Design",
+                                        "socialTitle": "Home Design",
+                                        "heading": "Home Design",
+                                        "description": "Whether you're decorating your first home or are simply looking to make a few updates, we've rounded up our favorite design ideas, must-have products and more to help make interior design simple (and fun!).",
+                                        "image": {
+                                          "url": null,
+                                          "caption": null,
+                                          "owner": null,
+                                          "alt": null,
+                                          "width": null,
+                                          "height": null,
+                                          "id": null,
+                                          "fileName": null,
+                                          "objectPath": null,
+                                          "objectId": null,
+                                          "sensitive": null,
+                                          "original": false
+                                        },
+                                        "sponsor": null
+                                      },
+                                      "metaData": {
+                                        "url": null,
+                                        "docId": null,
+                                        "hasTableOfContents": false,
+                                        "entities": [],
+                                        "recircKeywords": {
+                                          "limit": null,
+                                          "offset": null,
+                                          "totalSize": 0,
+                                          "list": []
+                                        },
+                                        "review": null,
+                                        "appleArticleId": null,
+                                        "badge": null
+                                      },
+                                      "slug": "home-design-and-decorating",
+                                      "primaryVideo": null,
+                                      "primaryImage": {
+                                        "url": null,
+                                        "caption": null,
+                                        "owner": null,
+                                        "alt": null,
+                                        "width": null,
+                                        "height": null,
+                                        "id": null,
+                                        "fileName": null,
+                                        "objectPath": null,
+                                        "objectId": null,
+                                        "sensitive": null,
+                                        "original": false
+                                      },
+                                      "sponsor": null,
+                                      "sources": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "citations": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "vertical": "LIFESTYLE",
+                                      "tickers": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "viewType": null,
+                                      "taggedImages": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "hasTableOfContents": null,
+                                      "disclaimer": null,
+                                      "methodology": null,
+                                      "revenueGroup": null,
+                                      "newsType": null,
+                                      "guestAuthor": null,
+                                      "shortHeading": "Home Decor",
+                                      "thumbImage": null,
+                                      "pages": {
+                                        "limit": null,
+                                        "offset": null,
+                                        "totalSize": 0,
+                                        "list": []
+                                      },
+                                      "subheading": null,
+                                      "docId": 4127998
+                                    },
+                                    "configuration": {},
+                                    "relationships": {
+                                      "limit": null,
+                                      "offset": null,
+                                      "totalSize": 1,
+                                      "list": [
+                                        {
+                                          "name": "primaryParent",
+                                          "weight": 20,
+                                          "targetNode": {
+                                            "docId": 4117266,
+                                            "nodeAttributes": {},
+                                            "nodeType": null,
+                                            "document": {
+                                              "key": null,
+                                              "revisionKey": null,
+                                              "authorKey": null,
+                                              "actorId": null,
+                                              "actorGid": null,
+                                              "lastEditingAuthorId": null,
+                                              "lastEditingUserId": null,
+                                              "ownerKey": null,
+                                              "url": "https://www.thespruce.com/",
+                                              "rootUrl": "https://www.thespruce.com/root-4117266",
+                                              "templateType": "TAXONOMY",
+                                              "documentState": {
+                                                "state": "ACTIVE"
+                                              },
+                                              "medicalBoardApproved": null,
+                                              "editingAuthorKey": null,
+                                              "noIndex": null,
+                                              "title": "The Spruce - Make Your Best Home",
+                                              "socialTitle": null,
+                                              "keywords": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "metaDescription": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                                              "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you&#39;ve always wanted easy and fun.",
+                                              "promoDescription": null,
+                                              "heading": "The Spruce - Make Your Best Home",
+                                              "paging": null,
+                                              "author": null,
+                                              "stamp": {
+                                                "docId": 4117266,
+                                                "stampValue": "spr_root",
+                                                "adValue": "pidspr_root",
+                                                "tags": null
+                                              },
+                                              "summary": {
+                                                "title": "The Spruce - Make Your Best Home",
+                                                "socialTitle": "The Spruce - Make Your Best Home",
+                                                "heading": "The Spruce - Make Your Best Home",
+                                                "description": "Browse beautiful home design ideas, useful how-to articles and easy-to-follow recipes to help you make your best home. Our expert advice makes creating the home you've always wanted easy and fun.",
+                                                "image": {
+                                                  "url": null,
+                                                  "caption": null,
+                                                  "owner": null,
+                                                  "alt": null,
+                                                  "width": null,
+                                                  "height": null,
+                                                  "id": null,
+                                                  "fileName": null,
+                                                  "objectPath": null,
+                                                  "objectId": null,
+                                                  "sensitive": null,
+                                                  "original": false
+                                                },
+                                                "sponsor": null
+                                              },
+                                              "metaData": {
+                                                "url": null,
+                                                "docId": null,
+                                                "hasTableOfContents": false,
+                                                "entities": [],
+                                                "recircKeywords": {
+                                                  "limit": null,
+                                                  "offset": null,
+                                                  "totalSize": 0,
+                                                  "list": []
+                                                },
+                                                "review": null,
+                                                "appleArticleId": null,
+                                                "badge": null
+                                              },
+                                              "slug": "root",
+                                              "primaryVideo": null,
+                                              "primaryImage": {
+                                                "url": null,
+                                                "caption": null,
+                                                "owner": null,
+                                                "alt": null,
+                                                "width": null,
+                                                "height": null,
+                                                "id": null,
+                                                "fileName": null,
+                                                "objectPath": null,
+                                                "objectId": null,
+                                                "sensitive": null,
+                                                "original": false
+                                              },
+                                              "sponsor": null,
+                                              "sources": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "citations": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "vertical": "LIFESTYLE",
+                                              "tickers": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "viewType": null,
+                                              "taggedImages": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "hasTableOfContents": null,
+                                              "disclaimer": null,
+                                              "methodology": null,
+                                              "revenueGroup": null,
+                                              "newsType": null,
+                                              "guestAuthor": null,
+                                              "shortHeading": "The Spruce",
+                                              "thumbImage": null,
+                                              "pages": {
+                                                "limit": null,
+                                                "offset": null,
+                                                "totalSize": 0,
+                                                "list": []
+                                              },
+                                              "subheading": null,
+                                              "docId": 4117266
+                                            },
+                                            "configuration": {},
+                                            "relationships": {
+                                              "limit": null,
+                                              "offset": null,
+                                              "totalSize": 0,
+                                              "list": []
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+]

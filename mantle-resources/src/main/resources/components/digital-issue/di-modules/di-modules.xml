@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-modules" ref="mntl-group">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Modules List</displayName>
+            <description>Iterates through a journey and renders themed modules based on its sections</description>
+            <documentation>
+                # SUPPORTED BOVD PROPERTIES
+                - "editor-letter-display-index": specify the index for the `Letter from the Editors` component to be displayed if its to be
+                  inserted in between the modules (journey sections). Not set by default so component appears after the modules.
+                  If set, component appears before the indexed section in the journey. (Ex: 0)
+
+                Displays each section of a journey as a module of cards. Module layout is controlled by the `module-layout`
+                config in BOVD. Fallback `mntl-di-module` is used if no layout is specified
+            </documentation>
+        </info>
+
+        <component-list location="content" id="mntl-di-modules__wrapper" ref="mntl-group" iterable="${@journeySections}">
+            <property name="journeySections" value="${@journeyRoot?.sections}" onError="collapseSilent">
+                <model id="journeyRoot" name="journeyStructure" />
+            </property>
+
+            <component location="content" id="mntl-di-modules__letter-editor" ref="mntl-di-letter-from-the-editor">
+                <property name="display" value="${@index == @digitalIssueRootConfigs?.get('editor-letter-display-index') ? true : null}" onError="collapseSilent" />
+            </component>
+
+            <component location="content" id="mntl-di-modules__module" ref="${@moduleLayout != null ? @moduleLayout : 'mntl-di-module'}">
+                <property name="moduleLayout" value="${@digitalIssueSectionConfigs?.get('module-layout')}" onError="ignore">
+                    <model name="digitalIssueSectionConfigs" />
+                </property>
+            </component>
+
+            <for id="journeySection, digitalIssueSectionConfigs, mntl-di-modules__letter-editor.display">
+                <property name="index" value="${@section.index}">
+                    <component-list-item id="section" ref="mntl-di-modules__wrapper" />
+                </property>
+            </for>
+        </component-list>
+
+        <!-- This is needed so component can be inserted at the bottom of the page instead of in between "modules" -->
+        <component location="content" id="mntl-di-modules__letter-editor-bottom" ref="mntl-di-letter-from-the-editor">
+            <property name="display" value="${@digitalIssueRootConfigs?.get('editor-letter-display-index') != null ? null : true}" onError="collapseSilent" />
+        </component>
+
+        <for id="mntl-di-modules__letter-editor.display, mntl-di-modules__letter-editor-bottom.display">
+            <model name="digitalIssueRootConfigs" />
+        </for>
+    </component>
+
+</components>

@@ -1,0 +1,110 @@
+@import 'mntlVariables';
+@import 'mntlMixins';
+
+/*
+1) Prevent macOS and iOS from making the logo smaller than the image placeholder
+*/
+
+.mntl-di-hero {
+    @include fullWidth();
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--di-hero-background-color, transparent);
+
+    @media (min-width: $mntl-bp-lg) {
+        align-items: flex-start;
+    }
+
+    &--right {
+        @media (min-width: $mntl-bp-lg) {
+            align-items: flex-end;
+        }
+    }
+
+    .mntl-sponsorship {
+        margin-top: 1rem;
+        column-gap: .5rem;
+
+        &__content,
+        &__logo-wrapper,
+        .img-placeholder { // 1
+            width: fit-content;
+        }
+
+        &__title {
+            color: $color-black-65;
+        }
+
+        &__logo {
+            max-height: 2.5rem;
+            width: auto;
+        }
+    }
+}
+
+.mntl-di-hero__image-wrapper {
+    width: 100%;
+
+    .mntl-universal-primary-image {
+        margin: 0
+    }
+
+    .primary-image__image {
+        width: 100%;
+        margin: 0;
+        object-fit: cover;
+    }
+}
+
+.mntl-di-hero__text {
+    position: relative;
+    top: -4.0625rem;
+    margin: 0 1rem -4.0625rem;
+    padding: 1.5rem;
+    width: calc(100% - 2rem);
+    background-color: $color-white;
+    color: var(--di-text-color, $color-black-95);
+    box-shadow: 0 .25rem .75rem 0 rgba(0, 0, 0, 0.15);
+
+    @media (min-width: $mntl-bp-sm) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    @media (min-width: $mntl-bp-md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding: 2rem 4rem;
+        width: calc(100% - 4rem);
+    }
+
+    @media (min-width: $mntl-bp-lg) {
+        position: absolute;
+        top: auto;
+        bottom: 2rem;
+        width: 100%;
+        max-width: 30.5rem;
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+
+    &-title {
+        color: var(--di-hero-title-color, var(--di-text-color, $color-black-95));
+    }
+
+    &-subtitle {
+        margin-top: .5rem;
+        font-weight: normal;
+    }
+}
+
+.mntl-di-hero__cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.875rem 2rem;
+    color: var(--di-cta-text-color, $color-white);
+    background-color: var(--di-cta-background-color, $color-carbon-primary);
+}

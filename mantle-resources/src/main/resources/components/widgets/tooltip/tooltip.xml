@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+	<component id="mntl-tooltip" ref="mntl-group">
+		<info>
+			<category>Mantle Components/Widgets</category>
+			<displayName>Tooltip</displayName>
+			<documentation>
+				# Usage
+
+				## Text-only based on data attribute
+
+				Simply set **data-tooltip** attribute to the content you wish to display inside the tooltip
+
+				## Full-featured dynamically generated
+
+				Call **Mntl.Tooltip.createDynamicTooltip(element, config)** for every **element** you wish to trigger a tooltip.
+				**config** is a properties object containing the following:
+				**config.contentFactory()** is a function returning the **HTMLElement** or **innerHTML** you wish to display inside the tooltip body.
+				**config.tracking** is an object containing the tracking values you wish to overlay atop the default tooltip tracking values.
+				**config.secondaryTriggerEl** is an additional element that will trigger the tooltip but in the context of **element** (so the tooltip will still point to **element**)
+
+				### Classes / Attributes
+
+				- **.mntl-dynamic-tooltip** the element wrapping the entirety of the tooltip
+
+				- **.mntl-dynamic-tooltip--content:before** the pseudo element for the carat displayed above the tooltip body
+
+				- **.mntl-dynamic-tooltip--content** the element that contains the body of the tooltip
+
+				- **.mntl-dynamic-tooltip--trigger** the element that triggers display of the tooltip
+
+				- **[data-inline-tooltip]** data attribute flagging inline level element that can cause tooltip trigger to wrap to multiple lines
+
+				### Examples
+
+				See [mantle-ref test page](https://www.mantle-ref-stable-us-east-1.external1.continual.app.qa.aws.about.com/tooltips)
+			</documentation>
+			<tags>Complete</tags>
+			<previewType>none</previewType>
+		</info>
+		<stylesheet path="/static/mantle/components/widgets/tooltip/tooltip.css" />
+		<script path="/static/mantle/components/widgets/tooltip/tooltip.js" />
+		<script evaluated="true" path="/static/mantle/components/widgets/tooltip/tooltip-init.evaluated.js" />
+	</component>
+</components>

@@ -1,0 +1,9 @@
+.mntl-recipe-details {
+    &__nutrition-link {
+        text-decoration-line: underline;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

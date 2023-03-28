@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/templates.xsd">
+
+    <template id="mntl-browser-config" resourcePath="/components/responses/browserconfig/mntl-browserconfig.ftl">
+        <info>
+            <category>Mantle Components/Head Tags</category>
+            <displayName>Favicons / Browser Config</displayName>
+            <description>
+Creates a browserconfig.xml file for Windows 8/10 Tile icons
+            </description>
+            <documentation></documentation>
+            <tags>Complete</tags>
+            <previewType>markup</previewType>
+        </info>
+        <property name="path" value="${renderUtils.staticPath}/icons/favicons" />
+        <property name="tileColor" value="#000000" />
+
+    </template>
+
+</templates>

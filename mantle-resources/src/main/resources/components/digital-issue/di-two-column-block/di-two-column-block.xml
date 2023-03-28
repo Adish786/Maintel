@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/components.xsd">
+
+    <component id="mntl-di-two-column-block" ref="mntl-di-module">
+        <info>
+            <category>Mantle Components/Digital Issue</category>
+            <displayName>Digital Issue Two Column Block</displayName>
+            <description>A digital issue module with two columns of cards</description>
+            <documentation />
+        </info>
+
+        <stylesheet path="/static/mantle/components/digital-issue/di-two-column-block/di-two-column-block.css" />
+
+        <!-- 3:2, 2x render resolution -->
+        <for id="card__media">
+            <!-- 1/2 content well width -->
+            <property name="width" value="800" type="integer" views="tablet" />
+            <property name="height" value="534" type="integer" views="tablet" />
+        </for>
+    </component>
+
+</components>

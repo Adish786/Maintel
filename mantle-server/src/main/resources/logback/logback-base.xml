@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <!-- Stack trace exclusion patterns. Based off of
+    https://github.com/logfellow/logstash-logback-encoder/blob/logstash-logback-encoder-7.0/stack-hash.md#recommended-exclusion-patterns -->
+    <property name="STE_EXCLUSIONS" value="\$\$FastClassBySpringCGLIB\$\$,\$\$FastClassByCGLIB\$\$,\$\$EnhancerBySpringCGLIB\$\$,^sun\.reflect\..*\.invoke,^com\.sun\.,^sun\.net\.,^net\.sf\.cglib\.proxy\.MethodProxy\.invoke,^org\.springframework\.cglib\.,^org\.springframework\.transaction\.,^org\.springframework\.validation\.,^org\.springframework\.app\.,^org\.springframework\.aop\.,^java\.lang\.reflect\.Method\.invoke,^org\.springframework\.ws\..*\.invoke,^org\.springframework\.ws\.transport\.,^org\.springframework\.ws\.soap\.saaj\.SaajSoapMessage\.,^org\.springframework\.ws\.client\.core\.WebServiceTemplate\.,^org\.springframework\.web\.filter\.,^org\.apache\.tomcat\.,^org\.apache\.catalina\.,^org\.apache\.coyote\.,^java\.util\.concurrent\.ThreadPoolExecutor\.runWorker,^java\.lang\.Thread\.run$"/>
+
+    <!-- awsAccountName is provided in deployed environments only -->
+    <if condition='isDefined("awsAccountName")'>
+        <then>
+            <include resource="logback/logback-deployed.xml"/>
+        </then>
+        <else>
+            <include resource="logback/logback-local.xml"/>
+        </else>
+    </if>
+
+    <logger name="org.eclipse.jetty.server.ServerConnector" level="INFO"/>
+    <logger name="org.apache.kafka.clients.consumer.ConsumerConfig" level="ERROR"/>
+    
+    <!-- Show accepted cache clearing requests requests  -->
+    <logger name="com.about.mantle.cache.clearance.CacheClearanceCandidateRepo" level="INFO"/>
+
+    <!-- GLBE-7302 investigation into null fields in access logs -->
+    <logger name="com.about.globe.accessLogInvestigation" level="INFO"/>
+    
+    <!-- FIN-2051 support extra logging for legacy urls troubleshooting in Kibana -->
+    <logger name="com.about.mantle.app.LegacyUrlMapImpl" level="INFO"/>
+
+    <logger name="com.indeed" level="OFF"/>
+</included>
